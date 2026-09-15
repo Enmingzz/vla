@@ -154,7 +154,7 @@ def build_tables(records, config, allow_partial=False):
         s_density = sum(r["policy_calls"] for r in srows) / sum(r["controlled_environment_steps"] for r in srows)
         gap = {"teacher_H": config["teacher_horizon"], "student_H": h, "paired_episodes": len(pairs),
                "teacher_success_rate": mean(trows, "success"), "student_success_rate": mean(srows, "success"),
-               "replanning_gap": mean(trows, "success") - mean(srows, "success"),
+               "replanning_gap": (teacher_only - student_only) / len(pairs),
                "gap_ci95_low": low, "gap_ci95_high": high,
                "teacher_only_successes": teacher_only, "student_only_successes": student_only,
                "policy_calls_saved_per_episode": mean(trows, "policy_calls") - mean(srows, "policy_calls"),
@@ -167,6 +167,8 @@ def build_tables(records, config, allow_partial=False):
             tpairs = [(t, s) for t, s in pairs if t["task_id"] == task_id]
             task_gaps.append({"student_H": h, "task_id": task_id,
                               "task_description": tpairs[0][0]["task_description"], "paired_episodes": len(tpairs),
+                              "teacher_success_rate": sum(t["success"] for t, s in tpairs) / len(tpairs),
+                              "student_success_rate": sum(s["success"] for t, s in tpairs) / len(tpairs),
                               "replanning_gap": sum(int(t["success"]) - int(s["success"]) for t, s in tpairs) / len(tpairs)})
     adjusted = holm({g["student_H"]: g["mcnemar_p_two_sided"] for g in gaps if "mcnemar_p_two_sided" in g})
     for g in gaps:
@@ -253,14 +255,22 @@ def findings(summaries, gaps, task_gaps, config, suite, mode, native_p, complete
     substantial = [g for g in gaps if g["replanning_gap"] >= config["substantial_absolute_drop"]]
     convincing = [g for g in substantial if g["gap_ci95_low"] > 0 and g.get("mcnemar_p_holm", 0) < 0.05]
     if gaps:
+        for g in gaps:
+            if g["replanning_gap"] == 0:
+                lines.append("Measured success at H={} equalled H=5.".format(g["student_H"]))
+            else:
+                lines.append("Measured success at H={} was {:.1f} percentage points {} than H=5.".format(
+                    g["student_H"], 100*abs(g["replanning_gap"]), "lower" if g["replanning_gap"] > 0 else "higher"))
         lines.append("The measured difference {} a monotonic decrease over all requested H values; H>{} was not measurable under this protocol.".format("does not establish", native_p))
         lines.append("Substantial degradation (predeclared ≥5 percentage points): {}.".format(", ".join("H="+str(g["student_H"]) for g in substantial) or "none of the measured horizons"))
-        lines.append("Tasks with the largest observed positive gaps (exploratory; no task-wise significance claim):")
-        positives = sorted([g for g in task_gaps if g["replanning_gap"] > 0], key=lambda g: -g["replanning_gap"])
-        for g in positives[:5]:
-            lines.append("- Task {} at H={}: {:.1f} pp — {}.".format(g["task_id"], g["student_H"], 100*g["replanning_gap"], g["task_description"]))
-        if not positives:
-            lines.append("- No task has a positive measured gap.")
+        lines.append("Tasks with the largest absolute changes (exploratory; positive gaps favour H=5, negative gaps favour the larger H; no task-wise significance claim):")
+        sensitive = sorted([g for g in task_gaps if g["replanning_gap"] != 0], key=lambda g: -abs(g["replanning_gap"]))
+        for g in sensitive[:5]:
+            lines.append("- Task {} at H={}: gap {:+.1f} pp (H=5 {:.1%}, H={} {:.1%}) — {}.".format(
+                g["task_id"], g["student_H"], 100*g["replanning_gap"], g["teacher_success_rate"],
+                g["student_H"], g["student_success_rate"], g["task_description"]))
+        if not sensitive:
+            lines.append("- Every measured task has equal success rates across the compared horizons.")
     candidates = [g for g in convincing if baseline_ok and g["relative_call_density_saved"] >= 0.3 and 0 < g["replanning_gap"] <= 0.25]
     if candidates and complete and mode == "main":
         candidate = max(candidates, key=lambda g: g["relative_call_density_saved"])
