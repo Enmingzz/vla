@@ -294,6 +294,8 @@ def main():
             if expected_n is None or coverage != {(t, e) for t in range(10) for e in range(expected_n)}:
                 complete = False
     manifests = [json.loads(path.read_text()) for path in source.rglob("*.manifest.json")]
+    if any(m.get("project_config") != config for m in manifests):
+        raise ValueError("Analysis configuration differs from the recorded protocol; restore the recorded config before aggregation")
     if not manifests or any(m["status"] != "complete" for m in manifests):
         complete = False
     if not complete and not args.allow_partial:
