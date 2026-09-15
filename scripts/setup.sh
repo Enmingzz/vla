@@ -25,9 +25,9 @@ if [[ ! -d "$OPENPI_DIR/.git" ]]; then
 fi
 [[ "$(git -C "$OPENPI_DIR" rev-parse HEAD)" == "$OPENPI_COMMIT" ]] || { echo 'Unexpected OpenPI revision; refusing to reset an existing checkout.' >&2; exit 1; }
 GIT_LFS_SKIP_SMUDGE=1 git -C "$OPENPI_DIR" submodule update --init --recursive
-"$UV" python install 3.8 3.11
-[[ -x "$SERVER_VENV/bin/python" ]] || "$UV" venv --python 3.11 --managed-python "$SERVER_VENV"
-[[ -x "$LIBERO_VENV/bin/python" ]] || "$UV" venv --python 3.8 --managed-python "$LIBERO_VENV"
+"$UV" python install 3.8.20 3.11.13
+[[ -x "$SERVER_VENV/bin/python" ]] || "$UV" venv --python 3.11.13 --managed-python "$SERVER_VENV"
+[[ -x "$LIBERO_VENV/bin/python" ]] || "$UV" venv --python 3.8.20 --managed-python "$LIBERO_VENV"
 GIT_LFS_SKIP_SMUDGE=1 UV_PROJECT_ENVIRONMENT="$SERVER_VENV" UV_LINK_MODE=copy \
   "$UV" sync --project "$OPENPI_DIR" --frozen --no-dev --python "$SERVER_VENV/bin/python"
 "$UV" pip install --python "$SERVER_VENV/bin/python" -e "$FREQUENCY_PROJECT" google-crc32c==1.7.1

@@ -1,0 +1,25 @@
+{
+  "purpose": "synthetic-input diagnostic only; not an evaluation episode",
+  "fingerprints": [
+    "4d1eeed54f2b62ac5d9da4c2451c257ac3eeb19b55f31d330a5417b87d0010aa",
+    "4d1eeed54f2b62ac5d9da4c2451c257ac3eeb19b55f31d330a5417b87d0010aa"
+  ],
+  "within_server_max_abs_diff": [
+    0.0,
+    0.0
+  ],
+  "between_servers_max_abs_diff": 0.0021720366849899975,
+  "slurm_jobs": [
+    60008811,
+    60009027
+  ],
+  "calls_per_server": 3,
+  "input_description": {
+    "image": "224x224x3 uint8 zeros, both cameras",
+    "state": "8 float32 zeros",
+    "prompt": "put both the alphabet soup and the tomato sauce in the basket",
+    "episode_seed": 7,
+    "call_index": 0
+  },
+  "interpretation": "Identical fixed-seed queries matched within each running server but differed between server instances. This is not a benchmark episode. Each horizon comparison uses one continuously running server."
+}

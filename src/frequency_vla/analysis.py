@@ -311,6 +311,20 @@ def main():
         "paired_checks_passed": True, "native_prediction_horizon": native_p, "inference_fingerprint": records[0]["inference_fingerprint"]})
     plots(summaries, gaps, root / "figures" / args.mode / args.suite, args.suite, args.mode, native_p, config)
     text = findings(summaries, gaps, task_gaps, config, args.suite, args.mode, native_p, complete)
+    probe_file = root / "diagnostics" / "inference_reproducibility.json"
+    if probe_file.exists():
+        probe = json.loads(probe_file.read_text())
+        if set(probe["fingerprints"]) == {records[0]["inference_fingerprint"]}:
+            text += ("\nA separate fixed-input/seed diagnostic made {} repeated queries per server. "
+                     "Maximum within-server action differences were {}; the difference between "
+                     "the smoke and main server instances was {:.6g}. The precise numerical cause "
+                     "was not isolated. GPU/server restarts therefore were not bitwise reproducible "
+                     "in this run despite matching model/config fingerprints. Each H comparison "
+                     "uses one continuously running server; smoke and main episodes are analyzed "
+                     "separately. This diagnostic is not a benchmark episode. Details: "
+                     "`results/diagnostics/inference_reproducibility.json`.\n").format(
+                         probe["calls_per_server"], probe["within_server_max_abs_diff"],
+                         probe["between_servers_max_abs_diff"])
     (out / "FINDINGS.md").write_text(text)
     if args.findings_out:
         Path(args.findings_out).write_text(text)

@@ -37,8 +37,8 @@ FREQUENCY_CC=/usr/bin/gcc FREQUENCY_CXX=/usr/bin/g++ bash scripts/setup.sh
 source scripts/env.sh
 ```
 
-Setup pins OpenPI and its LIBERO submodule, installs separate managed Python 3.11
-(policy) and 3.8 (official simulator) environments, uses OpenPI's frozen `uv.lock`
+Setup pins OpenPI and its LIBERO submodule, installs separate managed Python 3.11.13
+(policy) and 3.8.20 (official simulator) environments, uses OpenPI's frozen `uv.lock`
 and official LIBERO requirements, and creates a private LIBERO path config to
 avoid interactive dataset prompts. It does not download training demonstrations.
 `configs/libero.constraints.txt` additionally pins the resolved simulator's
@@ -107,6 +107,15 @@ and previous episode lengths. This provides paired sampling streams without
 changing the native Gaussian sampler or its integration steps. It differs from
 the stock server's single continuously advancing key initialized at zero.
 The same protocol is used for every measured H, including the reproduction gate.
+
+Seeds do not guarantee bitwise reproducibility across independent GPU server
+starts. In this Fir run, three identical fixed-input/seed requests matched exactly
+within each server, but the two servers differed by up to 0.002172 in an action
+component; some repeated rollouts also differed. The precise numerical
+cause was not isolated. See
+[`results/diagnostics/inference_reproducibility.json`](results/diagnostics/inference_reproducibility.json).
+All H values within each smoke/main comparison use one continuously running
+server. Smoke and main records are never pooled as independent episodes.
 
 ## Smoke test and one-H evaluation
 
