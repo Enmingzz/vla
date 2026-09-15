@@ -12,6 +12,11 @@ horizons remain in `configs/frequency_sweep.yaml`; they are never silently dropp
 The intended large-H teacher/student premise cannot be answered without revising
 the protocol. A supported two-horizon run is clearly labelled a partial experiment.
 
+The completed main result (seed 7, 50 episodes/task) is **H=5: 92.0%, H=10: 95.0%**,
+with 51.8% fewer policy calls per episode at H=10. See [FINDINGS.md](FINDINGS.md)
+and the [result archive](results/README.md). The measured comparison does not
+support H=5 as the stronger teacher.
+
 Inspected upstream sources:
 
 - [Official LIBERO instructions and 92.4% LIBERO-10 reference](https://github.com/Physical-Intelligence/openpi/blob/215abfb217dbac7d5f1273282331b9b1866c0479/examples/libero/README.md)
@@ -131,7 +136,7 @@ source scripts/env.sh
 bash scripts/run_smoke_test.sh
 
 # Explicit supported partial smoke test: 100 episodes/H, H=5 then H=10.
-bash scripts/run_smoke_test.sh --horizons 5 10
+bash scripts/run_smoke_test.sh --horizons 5 10 --results-dir results/rerun
 
 # One H, 50 episodes/task (use a separate results root to avoid duplicates).
 env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
@@ -145,6 +150,11 @@ benchmark result. The evaluator refuses overwriting existing runs/videos; use
 an explicit new `--results-dir` for retries. Do not combine overlapping all-task
 and task-subset runs: aggregation rejects duplicate episodes.
 
+This repository includes the completed benchmark records under `results/`.
+Fresh-rollout examples use `results/rerun`; choose another new directory for
+subsequent attempts. Regenerating statistics from archived records uses the
+original `results/` directory and does not run the model again.
+
 ## Main sweep and additional suites/seeds
 
 ```bash
@@ -152,7 +162,7 @@ and task-subset runs: aggregation rejects duplicate episodes.
 bash scripts/run_frequency_sweep.sh
 
 # Valid partial main validation: 50 episodes/task, seed 7, H=5 then H=10.
-bash scripts/run_frequency_sweep.sh --horizons 5 10
+bash scripts/run_frequency_sweep.sh --horizons 5 10 --results-dir results/rerun
 
 # Optional: four independent task processes share one policy server.
 bash scripts/run_frequency_sweep.sh --horizons 5 10 --workers 4 \
@@ -191,24 +201,29 @@ Run `sbatch` from the repository directory, or export `FREQUENCY_PROJECT` to its
 absolute path. Replace the account with a GPU account you are authorized to use:
 
 ```bash
+# Preserve the included measurements; choose a new directory for fresh rollouts.
+export RUN_RESULTS="$PWD/results/rerun"
+mkdir -p "$RUN_RESULTS/logs"
+
 # One-episode real GPU/environment check.
 sbatch --account=rrg-btaati --job-name=freq-check --nodes=1 --ntasks=1 \
   --gpus-per-node=h100:1 --cpus-per-task=8 --mem=96G --time=01:00:00 \
-  --output=results/logs/slurm-%j.log scripts/fir_job.sh diagnostic
+  --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_job.sh diagnostic
 
 # The scripts start/stop one policy server and collect both horizons sequentially.
 sbatch --account=rrg-btaati --job-name=freq-smoke --nodes=1 --ntasks=1 \
   --gpus-per-node=h100:1 --cpus-per-task=8 --mem=96G --time=03:00:00 \
-  --output=results/logs/slurm-%j.log scripts/fir_job.sh smoke --horizons 5 10
+  --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_job.sh smoke --horizons 5 10
 
 sbatch --account=rrg-btaati --job-name=freq-main --nodes=1 --ntasks=1 \
-  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=96G --time=12:00:00 \
-  --output=results/logs/slurm-%j.log scripts/fir_job.sh main --horizons 5 10
+  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=96G --time=04:00:00 \
+  --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_job.sh main --horizons 5 10 --workers 4
 ```
 
-Create `results/logs` before submission (`mkdir -p results/logs`). `POLICY_PORT`
-and `RUN_RESULTS` can override the batch job's automatically chosen local port
-and results directory. No GPU computation runs on login nodes.
+Create the output log directory before submission, as above. `POLICY_PORT`
+can override the automatically chosen local port. No GPU computation runs on
+login nodes. The exact commands and job IDs for the included runs are recorded
+in [results/README.md](results/README.md).
 
 ## Aggregate results and reproduce plots
 
@@ -224,6 +239,9 @@ The same command regenerates the CSVs, findings, and all three PNGs from saved
 JSONL. No GPU is needed. For an incomplete run, explicitly add `--allow-partial`;
 the report then labels its evidence partial. No rows or plots are fabricated for
 unsupported or unmeasured horizons.
+
+To aggregate a fresh rollout instead, add `--results-dir results/rerun` and choose
+its own findings destination, for example `--findings-out results/rerun/FINDINGS.md`.
 
 Outputs, separately for each mode and suite:
 

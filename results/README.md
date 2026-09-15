@@ -7,10 +7,12 @@ Only H=5 and H=10 are supported by the unchanged official `pi05_libero` config
 | Mode | Slurm job | Episodes per task per H | Seed | Task workers | Status |
 |---|---:|---:|---:|---:|---|
 | Smoke | 60008811 | 10 | 7 | 1 | Complete: 200 episodes |
-| Main | 60009027 | 50 | 7 | 4 | In progress |
+| Main | 60009027 | 50 | 7 | 4 | Complete: 1,000 episodes |
 
 Each job used one H100 80 GB GPU, 8 allocated CPU cores and 96 GB host memory.
-The smoke job completed in 27 minutes 57 seconds. Each mode keeps one policy
+The smoke job completed in 27 minutes 57 seconds; the main job in 1 hour 1 minute
+2 seconds. Both exited successfully (`0:0`); scheduler records are in
+`provenance/slurm_jobs.psv`. Each mode keeps one policy
 server running across both horizons. The main command was:
 
 ```bash

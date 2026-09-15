@@ -1,0 +1,2 @@
+teacher_H,student_H,paired_episodes,teacher_success_rate,student_success_rate,replanning_gap,gap_ci95_low,gap_ci95_high,teacher_only_successes,student_only_successes,policy_calls_saved_per_episode,relative_policy_calls_saved,relative_call_density_saved,mcnemar_p_two_sided,mcnemar_p_holm
+5,10,500,0.92,0.95,-0.03,-0.056,-0.004,15,30,28.904,0.5179742661553349,0.4946012224032784,0.035697803555194696,0.035697803555194696

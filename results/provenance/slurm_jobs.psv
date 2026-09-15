@@ -1,0 +1,3 @@
+JobID|JobName|Account|State|ExitCode|Start|End|Elapsed|AllocTRES
+60008811|freq-vla-smoke|rrg-btaati_gpu|COMPLETED|0:0|2026-09-15T15:25:44|2026-09-15T15:53:41|00:27:57|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=96G,node=1
+60009027|freq-vla-main|rrg-btaati_gpu|COMPLETED|0:0|2026-09-15T15:29:13|2026-09-15T16:30:15|01:01:02|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=96G,node=1

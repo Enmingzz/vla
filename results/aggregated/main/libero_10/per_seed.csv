@@ -1,0 +1,3 @@
+H,total_episodes,total_successes,success_rate,ci95_low,ci95_high,mean_policy_calls,mean_episode_length,mean_environment_steps_including_settling,policy_calls_per_environment_step,mean_executed_actions_per_policy_call,mean_wall_clock_seconds,seed
+5,500,460,0.92,0.8928936834221488,0.9407018705901475,55.802,277.252,287.252,0.2012681603739558,4.9646024071679395,13.231356078908778,7
+10,500,475,0.95,0.9272318388284524,0.9659062547561506,26.898,264.43,274.43,0.10172068222213819,9.814374825667915,8.138716330156662,7

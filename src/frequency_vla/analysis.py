@@ -216,7 +216,7 @@ def plots(summaries, gaps, output, suite, mode, native_p, config):
         # Percentile intervals can exclude a discrete point estimate; render bounds directly.
         ax.plot([5] + gx, [0] + gy, "o-", label="Paired gap; 95% bootstrap CI")
         ax.vlines(gx, [100 * g["gap_ci95_low"] for g in gaps], [100 * g["gap_ci95_high"] for g in gaps])
-        ax.legend(fontsize=8)
+        ax.legend(fontsize=8, loc="upper right")
     else:
         ax.text(0.5, 0.5, "No paired comparison measured yet", ha="center", transform=ax.transAxes)
     ax.set(xlabel="Replanning horizon H (actions)", ylabel="Success(5) − Success(H) (percentage points)", title=title)
