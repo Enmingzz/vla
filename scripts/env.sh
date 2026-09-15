@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Source this file; override FREQUENCY_WORK / OPENPI_DIR before sourcing if needed.
+FREQUENCY_PROJECT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+export FREQUENCY_PROJECT
+export FREQUENCY_WORK="${FREQUENCY_WORK:-${SCRATCH:-$HOME/scratch}/frequency_vla}"
+export OPENPI_DIR="${OPENPI_DIR:-$FREQUENCY_WORK/deps/openpi}"
+export SERVER_VENV="${SERVER_VENV:-$FREQUENCY_WORK/venvs/server}"
+export LIBERO_VENV="${LIBERO_VENV:-$FREQUENCY_WORK/venvs/libero}"
+export CHECKPOINT_DIR="${CHECKPOINT_DIR:-$FREQUENCY_WORK/checkpoints/pi05_libero}"
+export OPENPI_DATA_HOME="${OPENPI_DATA_HOME:-$FREQUENCY_WORK/cache/openpi}"
+export UV_CACHE_DIR="${UV_CACHE_DIR:-$FREQUENCY_WORK/cache/uv}"
+export UV_PYTHON_INSTALL_DIR="${UV_PYTHON_INSTALL_DIR:-$FREQUENCY_WORK/python}"
+export LIBERO_CONFIG_PATH="${LIBERO_CONFIG_PATH:-$FREQUENCY_WORK/libero_config}"
+export MUJOCO_GL="${MUJOCO_GL:-egl}"
+export PYOPENGL_PLATFORM="${PYOPENGL_PLATFORM:-egl}"
+export TOKENIZERS_PARALLELISM=false
+export OMP_NUM_THREADS="${OMP_NUM_THREADS:-1}"
+export MPLBACKEND=Agg
+export XLA_PYTHON_CLIENT_MEM_FRACTION="${XLA_PYTHON_CLIENT_MEM_FRACTION:-0.65}"

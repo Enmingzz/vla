@@ -1,0 +1,23 @@
+openpi_repository: https://github.com/Physical-Intelligence/openpi.git
+openpi_commit: 215abfb217dbac7d5f1273282331b9b1866c0479
+libero_commit: f78abd68ee283de9f9be3c8f7e2a9ad60246e95c
+checkpoint: gs://openpi-assets/checkpoints/pi05_libero
+training_config: pi05_libero
+# Preserve the requested experiment. Preflight MUST reject H > native P (currently 10).
+horizons: [5, 10, 20, 30, 40, 50]
+suite: libero_10
+supported_suites: [libero_10, libero_spatial, libero_object, libero_goal]
+seeds: [7]
+modes:
+  smoke: 10
+  main: 50
+resize_size: 224
+num_steps_wait: 10
+flow_steps: 10
+teacher_horizon: 5
+official_libero_10_success: 0.924
+# Predeclared diagnostic gate, not a claim of statistical equivalence.
+baseline_max_absolute_drop: 0.05
+substantial_absolute_drop: 0.05
+bootstrap_replicates: 10000
+analysis_seed: 20260915
