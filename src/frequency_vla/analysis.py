@@ -203,6 +203,7 @@ def plots(summaries, gaps, output, suite, mode, native_p, config):
         ax.axhline(config["official_libero_10_success"] * 100, color="gray", linestyle="--", label="Official reference: 92.4%")
     ax.set(xlabel="Replanning horizon H (actions)", ylabel="Success rate (%)", title=title, ylim=(0, 100))
     ax.set_xticks(config["horizons"])
+    ax.set_xlim(min(config["horizons"]) - 2, max(config["horizons"]) + 2)
     ax.legend(fontsize=8)
     ax.grid(alpha=0.25)
     save(fig, "success_vs_replan_horizon.png")
@@ -213,21 +214,24 @@ def plots(summaries, gaps, output, suite, mode, native_p, config):
         gx = [g["student_H"] for g in gaps]
         gy = [100 * g["replanning_gap"] for g in gaps]
         # Percentile intervals can exclude a discrete point estimate; render bounds directly.
-        ax.plot([5] + gx, [0] + gy, "o-")
+        ax.plot([5] + gx, [0] + gy, "o-", label="Paired gap; 95% bootstrap CI")
         ax.vlines(gx, [100 * g["gap_ci95_low"] for g in gaps], [100 * g["gap_ci95_high"] for g in gaps])
+        ax.legend(fontsize=8)
     else:
         ax.text(0.5, 0.5, "No paired comparison measured yet", ha="center", transform=ax.transAxes)
     ax.set(xlabel="Replanning horizon H (actions)", ylabel="Success(5) − Success(H) (percentage points)", title=title)
     ax.set_xticks(config["horizons"])
+    ax.set_xlim(min(config["horizons"]) - 2, max(config["horizons"]) + 2)
     ax.grid(alpha=0.25)
     save(fig, "relative_performance_drop.png")
 
     fig, ax = plt.subplots(figsize=(7, 4.5))
     calls = [s["mean_policy_calls"] for s in summaries]
-    ax.errorbar(calls, y, yerr=errors, fmt="o", capsize=4)
+    ax.errorbar(calls, y, yerr=errors, fmt="o", capsize=4, label="Success; 95% Wilson CI")
     for cx, cy, h in zip(calls, y, x):
         ax.annotate("H={}".format(h), (cx, cy), xytext=(5, -12), textcoords="offset points")
     ax.set(xlabel="Mean policy calls per episode", ylabel="Success rate (%)", title=title, ylim=(0, 100))
+    ax.legend(fontsize=8)
     ax.grid(alpha=0.25)
     save(fig, "success_vs_policy_calls.png")
 
@@ -264,6 +268,7 @@ def findings(summaries, gaps, task_gaps, config, suite, mode, native_p, complete
         lines.append("The measured difference {} a monotonic decrease over all requested H values; H>{} was not measurable under this protocol.".format("does not establish", native_p))
         lines.append("Substantial degradation (predeclared ≥5 percentage points): {}.".format(", ".join("H="+str(g["student_H"]) for g in substantial) or "none of the measured horizons"))
         lines.append("Tasks with the largest absolute changes (exploratory; positive gaps favour H=5, negative gaps favour the larger H; no task-wise significance claim):")
+        lines.append("")
         sensitive = sorted([g for g in task_gaps if g["replanning_gap"] != 0], key=lambda g: -abs(g["replanning_gap"]))
         for g in sensitive[:5]:
             lines.append("- Task {} at H={}: gap {:+.1f} pp (H=5 {:.1%}, H={} {:.1%}) — {}.".format(
@@ -271,6 +276,7 @@ def findings(summaries, gaps, task_gaps, config, suite, mode, native_p, complete
                 g["student_H"], g["student_success_rate"], g["task_description"]))
         if not sensitive:
             lines.append("- Every measured task has equal success rates across the compared horizons.")
+        lines.append("")
     candidates = [g for g in convincing if baseline_ok and g["relative_call_density_saved"] >= 0.3 and 0 < g["replanning_gap"] <= 0.25]
     if candidates and complete and mode == "main":
         candidate = max(candidates, key=lambda g: g["relative_call_density_saved"])
@@ -328,7 +334,7 @@ def main():
             text += ("\nA separate fixed-input/seed diagnostic made {} repeated queries per server. "
                      "Maximum within-server action differences were {}; the difference between "
                      "the smoke and main server instances was {:.6g}. The precise numerical cause "
-                     "was not isolated. GPU/server restarts therefore were not bitwise reproducible "
+                     "was not isolated. Independent GPU server instances were not bitwise reproducible "
                      "in this run despite matching model/config fingerprints. Each H comparison "
                      "uses one continuously running server; smoke and main episodes are analyzed "
                      "separately. This diagnostic is not a benchmark episode. Details: "

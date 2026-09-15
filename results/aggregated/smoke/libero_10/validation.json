@@ -1,0 +1,17 @@
+{
+  "baseline_gate_passed": true,
+  "complete_for_measured_horizons": true,
+  "inference_fingerprint": "4d1eeed54f2b62ac5d9da4c2451c257ac3eeb19b55f31d330a5417b87d0010aa",
+  "measured_horizons": [
+    5,
+    10
+  ],
+  "native_prediction_horizon": 10,
+  "paired_checks_passed": true,
+  "unsupported_requested_horizons": [
+    20,
+    30,
+    40,
+    50
+  ]
+}

@@ -1,0 +1,3 @@
+H,total_episodes,total_successes,success_rate,ci95_low,ci95_high,mean_policy_calls,mean_episode_length,mean_environment_steps_including_settling,policy_calls_per_environment_step,mean_executed_actions_per_policy_call,mean_wall_clock_seconds,task_0_success_rate,task_1_success_rate,task_2_success_rate,task_3_success_rate,task_4_success_rate,task_5_success_rate,task_6_success_rate,task_7_success_rate,task_8_success_rate,task_9_success_rate
+5,100,91,0.91,0.837737871472837,0.9519274599974348,56.04,278.42,288.42,0.20127864377559082,4.964132863239876,8.607739498228765,1.0,1.0,1.0,0.9,0.9,1.0,0.9,1.0,0.5,0.9
+10,100,97,0.97,0.9154806357094724,0.9897454759759611,26.41,259.58,269.58,0.101741274366284,9.813800057619046,6.370162533996627,1.0,1.0,1.0,1.0,0.9,1.0,1.0,1.0,0.8,1.0
