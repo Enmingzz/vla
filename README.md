@@ -145,6 +145,10 @@ bash scripts/run_frequency_sweep.sh
 # Valid partial main validation: 50 episodes/task, seed 7, H=5 then H=10.
 bash scripts/run_frequency_sweep.sh --horizons 5 10
 
+# Optional: four independent task processes share one policy server.
+bash scripts/run_frequency_sweep.sh --horizons 5 10 --workers 4 \
+  --results-dir results/parallel_run
+
 # Optional repeated seeds, isolated from the first completed single-seed run.
 bash scripts/run_frequency_sweep.sh --horizons 5 10 --seeds 7 17 27 \
   --results-dir results/three_seeds
@@ -161,6 +165,13 @@ debugging. This predeclared gate is a practical diagnostic, not an equivalence
 claim. Smoke-test sampling uncertainty is larger than main-test uncertainty.
 The other suites remain runnable, but this LIBERO-10-specific gate is not applied
 to them.
+
+`--workers` changes task scheduling only. Each task still executes the official
+loop, ordered initial states, and identical per-episode sampling seeds. The
+upstream WebSocket server processes inference serially. Each task writes a
+separate raw shard and log; aggregation verifies complete, non-overlapping
+coverage before the H=5 gate or a comparison. Wall-clock durations with concurrent
+clients include server queueing, so they are not standalone latency benchmarks.
 
 ## Fir batch jobs
 
