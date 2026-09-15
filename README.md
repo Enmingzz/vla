@@ -184,6 +184,9 @@ clients include server queueing, so they are not standalone latency benchmarks.
 
 ## Fir batch jobs
 
+The inspected GPU types, user account associations, interactive allocation command
+and fairshare snapshot are in [FIR_NOTES.md](FIR_NOTES.md) (Chinese).
+
 Run `sbatch` from the repository directory, or export `FREQUENCY_PROJECT` to its
 absolute path. Replace the account with a GPU account you are authorized to use:
 

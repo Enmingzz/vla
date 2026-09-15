@@ -26,6 +26,10 @@ Aggregates, paired comparisons and generated findings are under
 Videos and runtime logs are saved locally and excluded from Git; raw records,
 manifests, CSVs, findings and figures are included. Smoke and main observations
 overlap in initial states and seeds and must not be pooled as independent data.
+`provenance/checkpoint_manifest.json` preserves the exact public GCS object
+generations and checksums used by both benchmark servers; its canonical digest
+matches the value recorded in their inference manifests. Checkpoint weights are
+stored outside this repository at the configurable `CHECKPOINT_DIR`.
 
 The inference reproducibility probe in `diagnostics/` uses synthetic fixed
 inputs and is explicitly excluded from benchmark episode counts. It documents
