@@ -1,0 +1,22 @@
+{
+  "job_id": 60035109,
+  "project_commit": "5130a60ab119fdf459f60e1c8fd4a00751490cc2",
+  "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+  "checkpoint": "gs://openpi-assets/checkpoints/pi05_libero",
+  "checkpoint_object_manifest_sha256": "434da05c6b5ac51c28222ca1bd9b77b77fa733a7b16955cbe98ac09786845dcf",
+  "native_prediction_horizon": 10,
+  "prediction_horizon": 50,
+  "model_configuration_changes": {
+    "action_horizon": {
+      "native": 10,
+      "extension": 50
+    }
+  },
+  "same_checkpoint_object_manifest": true,
+  "same_upstream_sources": true,
+  "flow_steps": 10,
+  "sample_kwargs": {},
+  "native_inference_fingerprint": "4d1eeed54f2b62ac5d9da4c2451c257ac3eeb19b55f31d330a5417b87d0010aa",
+  "extension_inference_fingerprint": "97aae698acfdb3f933b44fcc0ac0c6de9bb538515118bef6ba12e41f96f4aa54",
+  "note": "Official loader successfully restored required parameter shapes at P=50. This records unchanged checkpoint object provenance, not a second full checksum of every local parameter byte."
+}

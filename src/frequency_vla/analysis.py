@@ -286,7 +286,10 @@ def findings(summaries, gaps, task_gaps, config, suite, mode, native_p, complete
             else:
                 lines.append("Measured success at H={} was {:.1f} percentage points {} than H=5.".format(
                     g["student_H"], 100*abs(g["replanning_gap"]), "lower" if g["replanning_gap"] > 0 else "higher"))
-        lines.append("The measured difference {} a monotonic decrease over all requested H values; H>{} was not measurable under this protocol.".format("does not establish", native_p))
+        if extension:
+            lines.append("Only the measured horizons are compared; a monotonic trend over a wider sweep is not established. P is fixed across these conditions, so H is the experimental variable, but the conclusion applies to this extrapolated P={} inference setting. This experiment does not isolate the quality of later extrapolated actions from the benefit of more frequent feedback.".format(effective_p))
+        else:
+            lines.append("The measured difference does not establish a monotonic decrease over all requested H values; H>{} was not measurable under this protocol.".format(native_p))
         lines.append("Substantial degradation (predeclared ≥5 percentage points): {}.".format(", ".join("H="+str(g["student_H"]) for g in substantial) or "none of the measured horizons"))
         lines.append("Tasks with the largest absolute changes (exploratory; positive gaps favour H=5, negative gaps favour the larger H; no task-wise significance claim):")
         lines.append("")

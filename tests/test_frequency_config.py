@@ -251,3 +251,4 @@ def test_fixed_p50_executes_thirty_then_discards_twenty_and_pairs_with_h5(offici
     text = (out / "FINDINGS.md").read_text()
     assert "Explicit fixed-P extension" in text
     assert "No model/config override" not in text
+    assert "not measurable under this protocol" not in text

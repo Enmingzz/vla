@@ -20,6 +20,14 @@ support H=5 as the stronger teacher.
 
 ## Explicit P=50 extension
 
+The completed paired smoke test (seed 7, 10 episodes/task) measured **H=5: 86%,
+H=30: 12%**, with 71.9% fewer policy calls per episode at H=30. The paired gap is
+74 percentage points (95% CI 67–81). This is a large diagnostic failure at H=30,
+and the P=50/H=5 baseline itself failed the predeclared reference screen. These
+results do not establish the desired moderate, recoverable teacher/student gap.
+See the separate [P=50 findings](results/p50/FINDINGS.md) and
+[P=50 archive](results/p50/README.md). The original main result above is unchanged.
+
 Following the native-P experiment, a separate requested extension fixes inference
 P=50 and compares H=5 with H=30. Select `configs/prediction50.yaml` explicitly;
 the default `frequency_sweep.yaml` and original results remain the native-P protocol.
