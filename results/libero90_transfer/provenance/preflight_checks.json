@@ -1,8 +1,23 @@
 {
-  "cpu_integration_passed": true,
-  "cpu_only": true,
-  "integration_log_sha256": "1c80ea6a5e4ffb7460f243e42aab1330279d0f4880474fcc301d3f0e4c418bb3",
-  "native_snapshot_equality_and_training_rejection_passed": true,
-  "plan_digest": "9210cfbafdfd46f535ed7825072689fd75198dd38144eb6fcb4f93faaa8b75ad",
-  "pytest_tests_passed": 28
+  "complete": true,
+  "pytest_tests_passed": 30,
+  "pytest_seconds": 7.01,
+  "plan_sha256": "0bdca02a7d9027de22a2663c840a255ae013adb4965adfcb61fbe9b2decf807f",
+  "renderer": "osmesa",
+  "renderer_library_sha256": "bef74da9e93e7e9557fecd7efe35eb77f3eddcd36a6c836b49153d1f4b085bf7",
+  "render_probe_steps": 400,
+  "exact_action_replay_steps": 261,
+  "native_inference_and_training_cpu_integration": "Previously passed; model backend unchanged. See cpu_integration.txt and preflight_initial_egl_checks.json.",
+  "formal_evaluation_episodes_before_runtime_amendment": 0,
+  "source_sha256": {
+    "src/frequency_vla/evaluator.py": "5b00fb468569f3708b2486053ba239b67001a338b7a9e1f83aaad8f0ce86b056",
+    "src/frequency_vla/opsd_evaluate.py": "e2f710a22c9d35269b69d48bba49e438e71699a3acd50eaa0dbb9faedb3e59a4",
+    "src/frequency_vla/libero90_transfer.py": "7ceaf7b9a6715c7f4b13a6fc9e356c2f6cff4e33247e078108cb1489adf1de90",
+    "src/frequency_vla/libero90_analysis.py": "3d3fd23fb8c52974ec42cf97b48c04a5e4de2f99c1008849755d7d6778f88c28",
+    "src/frequency_vla/frozen_comparison.py": "fc930f1cdf1c10739c518d6acf3849ace7fefc1e476b249e6ee2c8be9c7b79dd",
+    "scripts/fir_libero90_job.sh": "6887e2e646f0b809a765fb14d491ccfd1275c3393f83a68ed6d6731b4f83b01c",
+    "scripts/setup_osmesa_fir.sh": "855a5e3a573cacf733e21ee21832ed299b23c3cad2020e99fa7ad26882540a51",
+    "configs/libero90_transfer.yaml": "1e65323be2bcbff169eca85ff01d2f24caa6e1ce4db8d5b60bfc41eaf7147e87",
+    "configs/prediction50_libero90.yaml": "2f9dcf3d1de7bdf71847ae188b23975278b197a6dab4a34d80d933f6427ca7ab"
+  }
 }

@@ -1,0 +1,10 @@
+{
+  "job_id": 60100455,
+  "state": "FAILED",
+  "formal_episodes": 0,
+  "completed_pilot_episodes": 0,
+  "allocation_released": true,
+  "attempted_workaround": "XLA_PYTHON_CLIENT_PREALLOCATE=false; OPENBLAS_NUM_THREADS=1",
+  "result": "Same SIGABRT in NVIDIA EGL pixel read; no formal result.",
+  "next_step": "Uniform OSMesa software rendering for all three conditions; increase CPU simulator concurrency on one H100."
+}

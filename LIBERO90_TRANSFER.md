@@ -49,19 +49,41 @@ the primary subset and all 90 tasks; apply Holm to that secondary family. Task
 tables include regressions. Three layouts per task is a broad, small-per-task
 screen; individual task changes are descriptive.
 
-One H100, eight CPU cores and 48 GiB host memory; a 75-minute upper bound, with
-immediate release on completion or error. Exclude nodes with previously observed
-rendering stalls. First run single/four-worker rendering guards, each at most
-180 seconds, using layout 0 and including task ID 89. These five pilot episodes
-are excluded from formal statistics. Saved parameters/assets are checksum-checked;
+One H100, 12 CPU cores and 64 GiB host memory; a 2h45m upper bound, with
+immediate release on completion or error. Eight simulator workers each use one
+software rasterizer thread. First run single/eight-worker rendering guards
+(180/300-second bounds), using layout 0 and including task ID 89. These nine pilot
+episodes are excluded from formal statistics. Each formal condition has a
+3,000-second runtime bound. Saved parameters/assets are checksum-checked;
 the frozen backbone and normalization assets must match the original checkpoint.
 The comparison has no optimizer or training endpoints. Record any failed GPU time.
-Python fault handling is enabled to retain stack traces for native simulator
-crashes. The first attempt (job 60096722 on fc10517) aborted in the single-worker
-pilot with SIGABRT before any complete episode. Its exact cause is unresolved;
-the archive is under `results/diagnostics/libero90_transfer_attempt1`, and its
-7m05s of one-GPU time counts toward this study's total resource use. The rerun
-keeps every model/task/seed setting unchanged and excludes that node as well.
+
+### Rendering amendment before formal evaluation
+
+Three EGL attempts aborted during their single-worker pilot, before any complete
+episode or formal outcome. Native GDB tracing located `abort()` inside NVIDIA
+`libnvidia-eglcore.so.580.159.03`, called by MuJoCo's `mjr_readPixels`. Exact action
+replay without the policy model passed; disabling JAX preallocation did not fix
+the co-resident model/renderer failure. The precise driver cause remains unresolved.
+Diagnostics are retained under `results/diagnostics/libero90_*`; every GPU attempt
+counts toward resource use, including GDB jobs whose Slurm status alone is misleading.
+
+All formal conditions therefore use **the same OSMesa software renderer**, while
+keeping the model, ten flow steps, official execution loop, image preprocessing,
+task list, ordered states and statistical comparisons fixed. The runtime-only plan
+amendment has digest `0bdca02a7d9027de22a2663c840a255ae013adb4965adfcb61fbe9b2decf807f`;
+the earlier plan is archived with the failed attempts. Renderer identity, its
+library checksum, and thread settings enter every evaluation fingerprint.
+
+The pinned EL9 Mesa 25.0.7 build is extracted into user-owned scratch storage;
+the system and Python dependencies are not replaced. It requires compatible
+system LLVM 20 libraries. The cluster's CVMFS OSMesa has a different glibc and
+cannot be used with this standalone Python. See `scripts/setup_osmesa_fir.sh`.
+Software rendering passed 400 random-action steps and the exact 261-action crash
+prefix. Comparing five corresponding frames from both cameras across GPU/CPU
+nodes gave mean absolute channel differences of 0.83–1.54 on the 0–255 scale.
+They are **not pixel-identical**, so the measured result is specific to this
+documented renderer. No EGL measurements are mixed into the formal statistics.
 
 ## Reproduce
 
@@ -70,6 +92,7 @@ step-500 checkpoint and both training archives. Choose a new result directory.
 
 ```bash
 source scripts/env.sh
+bash scripts/setup_osmesa_fir.sh
 export FREQUENCY_CONFIG="$PWD/configs/prediction50_libero90.yaml"
 export RUN_RESULTS="$PWD/results/libero90_transfer-rerun"
 export COMPARISON_CHECKPOINT="$FREQUENCY_WORK/runs/autoresearch_round2_attempt2/step_500"
@@ -82,8 +105,8 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
   --prior-results results/opsd_h20_100 results/autoresearch_round2
 
 sbatch --job-name=vla-libero90-transfer --account=rrg-btaati --nodes=1 --ntasks=1 \
-  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=48G --time=01:15:00 \
-  --exclude=fc10511,fc10517,fc10519,fc10605 --output="$RUN_RESULTS/logs/slurm-%j.log" \
+  --gpus-per-node=h100:1 --cpus-per-task=12 --mem=64G --time=02:45:00 \
+  --output="$RUN_RESULTS/logs/slurm-%j.log" \
   scripts/fir_libero90_job.sh
 
 # CPU aggregation after all 810 episodes complete.
@@ -101,5 +124,15 @@ bash scripts/serve_policy.sh --port 8000 \
 ```
 
 Then run `frequency_vla.libero90_transfer run --port 8000 --results-dir "$RUN_RESULTS"`
-with the LIBERO Python above. The dedicated driver evaluates every task through
+with the LIBERO Python and these simulator settings:
+
+```bash
+export FREQUENCY_OSMESA_LIBRARY_DIR="$FREQUENCY_WORK/native_osmesa/root/usr/lib64"
+env -u PYTHONPATH -u PYTHONHOME MUJOCO_GL=osmesa PYOPENGL_PLATFORM=osmesa \
+  LP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 LD_LIBRARY_PATH="$FREQUENCY_OSMESA_LIBRARY_DIR" \
+  "$LIBERO_VENV/bin/python" -m frequency_vla.libero90_transfer run \
+  --port 8000 --results-dir "$RUN_RESULTS"
+```
+
+The dedicated driver evaluates every task through
 `opsd_evaluate`, including IDs above 9, and selects both frozen snapshots.

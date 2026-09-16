@@ -19,8 +19,9 @@ def main():
     parser.add_argument("--initial-state-start", type=int, default=0)
     parser.add_argument("--task-ids", type=int, nargs="+")
     args = parser.parse_args()
-    if not 1 <= args.workers <= 4:
-        raise ValueError("The first training comparison uses at most four simulator workers")
+    maximum_workers = 8 if os.environ.get("MUJOCO_GL") == "osmesa" else 4
+    if not 1 <= args.workers <= maximum_workers:
+        raise ValueError("Use at most {} simulator workers for this renderer".format(maximum_workers))
     command = [sys.executable, "-m", "frequency_vla.evaluator", "--mode", "smoke",
                "--horizon", str(args.horizon), "--required-horizon", str(args.horizon),
                "--episodes", str(args.episodes), "--seed", str(args.seed),

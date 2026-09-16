@@ -76,6 +76,8 @@ def analyze(root):
                 raise ValueError("Wrong official LIBERO-90 episode budget")
         for m in manifests:
             server = m["server"]
+            if server["evaluation_spec"].get("rendering", {}).get("backend") != plan["renderer"]:
+                raise ValueError("Renderer differs from the fixed runtime amendment")
             spec = copy.deepcopy(server["experiment_spec"])
             if digest(spec) != server["inference_fingerprint"] or any(r["inference_fingerprint"] != server["inference_fingerprint"] for r in rows):
                 raise ValueError("Changed inference fingerprint within a condition")
@@ -252,8 +254,11 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
              "episode/call RNG and the official LIBERO-90 400-step limit. Both frozen snapshots share one continuous native sampler. "
              "No optimizer or teacher updates are available in this comparison server. This evaluates the temporal OPSD Gaussian velocity-matching "
              "adaptation, not a new reproduction of the image-generation Flow-OPD algorithm.","",
-             "The 500-update checkpoint was selected before any LIBERO-90 outcome. Single/four-worker rendering pilot episodes are excluded. "
+             "The 500-update checkpoint was selected before any LIBERO-90 outcome. Rendering pilot episodes are excluded. "
              "All formal episodes, including failed tasks, are retained; simulator/inference exceptions abort evaluation.","",
+             "After repeated native NVIDIA EGL aborts before any formal episode, all three conditions use the same pinned OSMesa software renderer. "
+             "A separate exact-action replay passed; archived EGL/OSMesa images were not pixel-identical. The result is therefore specific to "
+             "this documented rendering environment. No formal EGL measurements are mixed into these statistics.","",
              "Raw JSONL/manifests and videos are under evaluations/. Tables include every task and paired episode. "
              "See provenance/ for the split audit, checkpoint hashes, code, checks and GPU accounting; see LIBERO90_TRANSFER.md for exact rerun commands.",""]
     (root/"FINDINGS.md").write_text("\n".join(text))

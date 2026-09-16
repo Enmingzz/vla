@@ -1,0 +1,38 @@
+[
+  {
+    "egl_index": 0,
+    "extensions": "EGL_NV_device_cuda EGL_EXT_device_drm EGL_EXT_device_drm_render_node EGL_EXT_device_query_name EGL_EXT_device_persistent_id",
+    "drm_device": "/dev/dri/card1",
+    "cuda_index": 0
+  },
+  {
+    "egl_index": 1,
+    "extensions": "EGL_EXT_device_drm EGL_EXT_device_drm_render_node",
+    "drm_device": "/dev/dri/card4",
+    "cuda_index": null
+  },
+  {
+    "egl_index": 2,
+    "extensions": "EGL_EXT_device_drm EGL_EXT_device_drm_render_node",
+    "drm_device": "/dev/dri/card3",
+    "cuda_index": null
+  },
+  {
+    "egl_index": 3,
+    "extensions": "EGL_EXT_device_drm EGL_EXT_device_drm_render_node",
+    "drm_device": "/dev/dri/card2",
+    "cuda_index": null
+  },
+  {
+    "egl_index": 4,
+    "extensions": "EGL_EXT_device_drm EGL_EXT_device_drm_render_node",
+    "drm_device": "/dev/dri/card1",
+    "cuda_index": null
+  },
+  {
+    "egl_index": 5,
+    "extensions": "EGL_MESA_device_software EGL_EXT_device_drm_render_node",
+    "drm_device": null,
+    "cuda_index": null
+  }
+]

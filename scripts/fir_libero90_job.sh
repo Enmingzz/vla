@@ -11,7 +11,13 @@ if [[ -e "$RUN_RESULTS/provenance/frozen_comparison.json" || ! -e "$RUN_RESULTS/
   exit 2
 fi
 POLICY_PORT="${POLICY_PORT:-$((20000 + ${SLURM_JOB_ID:-0} % 20000))}"
-export PYTHONUNBUFFERED=1 PYTHONFAULTHANDLER=1 MUJOCO_EGL_DEVICE_ID=0
+export PYTHONUNBUFFERED=1 PYTHONFAULTHANDLER=1
+export MUJOCO_GL=osmesa PYOPENGL_PLATFORM=osmesa LP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+export FREQUENCY_OSMESA_LIBRARY_DIR="${FREQUENCY_OSMESA_LIBRARY_DIR:-$FREQUENCY_WORK/native_osmesa/root/usr/lib64}"
+if [[ ! -f "$FREQUENCY_OSMESA_LIBRARY_DIR/libOSMesa.so.8" ]]; then
+  echo "Install the pinned software renderer with scripts/setup_osmesa_fir.sh first." >&2
+  exit 2
+fi
 mkdir -p "$RUN_RESULTS/logs"
 nvidia-smi
 bash "$FREQUENCY_PROJECT/scripts/serve_policy.sh" --port "$POLICY_PORT" \
@@ -37,6 +43,6 @@ while time.monotonic() < deadline:
 else:
     raise SystemExit('Comparison server startup exceeded 420 seconds')
 PY
-env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+env -u PYTHONPATH -u PYTHONHOME LD_LIBRARY_PATH="$FREQUENCY_OSMESA_LIBRARY_DIR" "$LIBERO_VENV/bin/python" \
   -m frequency_vla.libero90_transfer run --plan "$FREQUENCY_PROJECT/configs/libero90_transfer.yaml" \
   --port "$POLICY_PORT" --results-dir "$RUN_RESULTS"

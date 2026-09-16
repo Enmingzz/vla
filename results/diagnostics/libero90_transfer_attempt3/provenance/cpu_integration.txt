@@ -1,0 +1,5 @@
+/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+PASS: native trace, nonzero detached-target update, frozen backbone, exact rollback, and complete checkpoint inference round-trip
+PASS: original/trained frozen snapshots equal native inference, preserve the base, and reject training
+PASS: FP32/EMA/Adam resume, identical next update, and frozen milestone evaluation

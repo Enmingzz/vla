@@ -46,6 +46,23 @@ def check_chunk(actions, prediction_length, required_horizon):
         raise RuntimeError("Non-finite policy actions")
 
 
+def rendering_spec(config):
+    backend = os.environ.get("MUJOCO_GL", "egl")
+    if backend != config.get("renderer", "egl"):
+        raise ValueError("Renderer differs from the declared evaluation config")
+    spec = {"backend": backend, "pyopengl_platform": os.environ.get("PYOPENGL_PLATFORM"),
+            "openblas_threads": os.environ.get("OPENBLAS_NUM_THREADS"),
+            "llvmpipe_threads": os.environ.get("LP_NUM_THREADS")}
+    if backend == "osmesa":
+        library = Path(os.environ["FREQUENCY_OSMESA_LIBRARY_DIR"]) / "libOSMesa.so.8"
+        spec["library_sha256"] = file_digest(library)
+        if spec["library_sha256"] != config["osmesa_library_sha256"]:
+            raise ValueError("OSMesa library changed from the validated build")
+        if spec["pyopengl_platform"] != "osmesa" or spec["llvmpipe_threads"] != "1":
+            raise ValueError("Require the fixed OSMesa platform and one rasterizer thread per worker")
+    return spec
+
+
 class EpisodeTracker:
     def __init__(self, args, metadata):
         self.args, self.metadata = args, metadata
@@ -149,6 +166,7 @@ class FatalUpstreamErrors(logging.Handler):
 def run(args):
     args.initial_state_start = getattr(args, "initial_state_start", 0)
     config = load_config()
+    renderer = rendering_spec(config)
     spec = upstream_spec(args.openpi_dir, config)
     validate_horizons([args.horizon, args.required_horizon] if args.horizon != args.required_horizon else [args.horizon], prediction_horizon(spec))
     if args.suite not in config["supported_suites"]:
@@ -185,6 +203,7 @@ def run(args):
         raise ValueError("Invalid server fingerprint")
     evaluator_packages = {d.metadata["Name"]: d.version for d in importlib.metadata.distributions()}
     metadata["evaluation_spec"] = {
+        "rendering": renderer,
         "source_sha256": {name: file_digest(Path(__file__).parent / name) for name in ["evaluator.py", "config.py", "logging_utils.py"]},
         "packages": evaluator_packages, "python_version": platform.python_version(),
         "suite": args.suite, "resize_size": config["resize_size"], "num_steps_wait": config["num_steps_wait"],

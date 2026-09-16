@@ -15,3 +15,9 @@ primary_comparison: step500_H20_minus_original_H20
 bootstrap_replicates: 10000
 analysis_seed: 20260917
 maximum_concurrent_gpus: 1
+# Runtime amendment made before any formal episode; model/task/statistical matrix unchanged.
+renderer: osmesa
+workers: 8
+parallel_pilot_task_ids: [0, 15, 30, 45, 60, 75, 77, 89]
+parallel_pilot_timeout_seconds: 300
+condition_timeout_seconds: 3000

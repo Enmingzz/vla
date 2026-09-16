@@ -14,6 +14,8 @@ modes:
 resize_size: 224
 num_steps_wait: 10
 flow_steps: 10
+renderer: osmesa
+osmesa_library_sha256: bef74da9e93e7e9557fecd7efe35eb77f3eddcd36a6c836b49153d1f4b085bf7
 teacher_horizon: 5
 official_libero_10_success: 0.924
 baseline_max_absolute_drop: 0.05
