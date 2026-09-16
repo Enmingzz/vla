@@ -10,7 +10,11 @@ The completed first pilot measured **46% → 58%** at H=20 after 100 updates
 (100 paired episodes, +12 pp, paired 95% CI +2 to +22 pp, McNemar p=0.0428).
 See [FINDINGS](results/opsd_h20_100/FINDINGS.md) and the
 [run archive](results/opsd_h20_100/README.md). The actual training covered 18
-initial states at indices 10–11; evaluation used indices 0–9. These results are
+task/start-layout combinations at zero-based indices 10–11; evaluation used
+indices 0–9. These are layout identifiers, not optimizer steps or a count of
+intermediate observations: the 100 updates used 400 action blocks and 7,961
+executed actions. This describes our added OPSD, not the checkpoint's original
+training data. These results are
 preliminary and are not a fully held-out evaluation of all 50 official states.
 
 Reuse the setup and base checkpoint from README.md. The original OpenPI checkout,
@@ -95,3 +99,58 @@ settings, and exported parameter/asset checksums. Use the standard evaluator at
 H=20 with a fresh result path. Reloaded runs remain separate from the same-server
 before/after comparison because independent GPU compilations were not bitwise
 reproducible in the earlier diagnostics.
+
+## Round 2: continue to 500 updates and test transfer
+
+The fixed protocol is in [AUTORESEARCH_ROUND2.md](AUTORESEARCH_ROUND2.md).
+It restores FP32 parameters, EMA and Adam state from the completed step-100
+checkpoint, saves milestones 300 and 500, evaluates deployment H=15/20/25,
+and screens spatial/object/goal. Training stays at H=20. The 1,310-episode
+matrix includes a separate 100-pair confirmation split; step 500 is preselected.
+
+```bash
+source scripts/env.sh
+export FREQUENCY_CONFIG="$PWD/configs/prediction50_round2.yaml"
+export RUN_RESULTS="$PWD/results/autoresearch_round2-rerun"
+export OPSD_CHECKPOINT_ROOT="$FREQUENCY_WORK/runs/autoresearch_round2-rerun"
+export PARENT_CHECKPOINT="$FREQUENCY_WORK/runs/opsd_h20_100_attempt2/step_100"
+export PARENT_RESULTS="$PWD/results/opsd_h20_100"
+export XLA_PYTHON_CLIENT_MEM_FRACTION=0.75
+mkdir -p "$RUN_RESULTS/logs"
+
+# CPU only: check actual state hashes and the parent checkpoint identity first.
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+  -m frequency_vla.study_plan --plan configs/autoresearch_round2.yaml \
+  --training-config configs/opsd_continuation_500.yaml \
+  --parent-results "$PARENT_RESULTS" --parent-checkpoint "$PARENT_CHECKPOINT" \
+  --output "$RUN_RESULTS/provenance/split_audit.json"
+
+# One GPU throughout; the two-hour request is a limit, with immediate exit on completion.
+sbatch --job-name=vla-opsd-round2 --account=rrg-btaati --nodes=1 --ntasks=1 \
+  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=64G --time=02:00:00 \
+  --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_study_job.sh
+
+# After completion, validate all records and recreate tables, figures and FINDINGS.
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+  -m frequency_vla.study_analysis --results-dir "$RUN_RESULTS"
+```
+
+The parent checkpoint's manifest digest is pinned in the study plan. Paths may
+change without changing its identity. A newly trained parent is a different
+experiment: declare that identity in a separate plan before evaluating it.
+The current batch script uses the round-two configs named above.
+
+To serve a saved milestone independently, use the preceding student-loading
+command with `--trained-checkpoint "$OPSD_CHECKPOINT_ROOT/step_500"` and this
+round's `FREQUENCY_CONFIG`. To evaluate one condition at a different horizon,
+use the official wrapper with explicit layout offset:
+
+```bash
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+  -m frequency_vla.opsd_evaluate --port 8000 --suite libero_10 --horizon 25 \
+  --episodes 5 --seed 17 --initial-state-start 20 --workers 4 \
+  --results-dir "$PWD/results/step500-H25-rerun"
+```
+
+This standalone check is kept separate from the matrix, whose snapshots all
+share one continuous server to control the observed cross-compilation variation.

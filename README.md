@@ -17,6 +17,12 @@ See the [training findings](results/opsd_h20_100/FINDINGS.md),
 [before/after figure](results/opsd_h20_100/figures/success_before_after_100.png),
 and [complete run archive](results/opsd_h20_100/README.md).
 
+The follow-up tests 100→300→500 updates, deployment H=15/20/25, and transfer
+to spatial/object/goal, with a separate confirmation split. Its fixed design is
+in [AUTORESEARCH_ROUND2.md](AUTORESEARCH_ROUND2.md), commands in
+[TRAINING.md](TRAINING.md#round-2-continue-to-500-updates-and-test-transfer), and
+outputs in the separate [round-two archive](results/autoresearch_round2/README.md).
+
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures
 **P=10**, not 50. Therefore only **H=5 and H=10** from the requested sweep are

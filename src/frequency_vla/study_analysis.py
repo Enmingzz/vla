@@ -98,9 +98,18 @@ def analyze(root):
     comparisons = []
 
     def compare(kind, left, right, family):
+        left_calls = sum(r["policy_calls"] for r in data[left])
+        right_calls = sum(r["policy_calls"] for r in data[right])
+        left_density = left_calls / sum(r["controlled_environment_steps"] for r in data[left])
+        right_density = right_calls / sum(r["controlled_environment_steps"] for r in data[right])
         comparisons.append({"comparison": kind, "split": left[0], "suite": left[1],
             "left_step": left[2], "left_H": left[3], "right_step": right[2], "right_H": right[3],
-            "family": family, **paired_change(data[left], data[right], plan)})
+            "family": family, "left_calls_per_episode": left_calls / len(data[left]),
+            "right_calls_per_episode": right_calls / len(data[right]),
+            "left_calls_per_controlled_step": left_density, "right_calls_per_controlled_step": right_density,
+            "relative_right_calls_saved": 1 - right_calls / left_calls,
+            "relative_right_call_density_saved": 1 - right_density / left_density,
+            **paired_change(data[left], data[right], plan)})
 
     for key in sorted(data):
         split, suite, step, horizon = key
@@ -207,6 +216,7 @@ def plots(root, summaries, training, validation):
 
 def findings(root, summaries, comparisons, tasks, validation):
     p, extra = validation["primary"], validation["additional_updates_confirmation"]
+    gap = next(r for r in comparisons if r["split"] == "confirmation" and r["comparison"] == "replanning_gap")
     lookup = {(r["split"], r["suite"], r["step"], r["horizon"]): r for r in summaries}
     confirmation = [lookup["confirmation", "libero_10", s, h] for s, h in [(0, 5), (0, 20), (100, 20), (500, 20)]]
     text = ["# Round 2 findings", "", "## Primary confirmation on different initial layouts", "",
@@ -219,7 +229,16 @@ def findings(root, summaries, comparisons, tasks, validation):
         "| Snapshot | Deployment H | Successes/episodes | Success | Calls/episode |", "|---|---:|---:|---:|---:|"]
     for s in confirmation:
         text.append("| {} | {} | {}/{} | {:.0%} | {:.2f} |".format("Original" if s["step"] == 0 else str(s["step"]) + " updates", s["horizon"], s["total_successes"], s["total_episodes"], s["success_rate"], s["mean_policy_calls"]))
-    text += ["", "## Do more steps help?", "",
+    verdict = ("The primary comparison provides evidence of improved task success on these held-out layouts."
+               if p["success_change"] > 0 and p["ci95_low"] > 0 and p["p_exact"] < .05 else
+               "The primary comparison does not establish a positive improvement at the 5% level; do not interpret a positive point estimate alone as proof of recovery.")
+    text += ["", verdict, "",
+        "On the same confirmation layouts, the original H=5 minus H=20 replanning gap was **{:.1f} pp**, "
+        "paired CI **[{:.1f}, {:.1f}] pp**, Holm-adjusted frequency-family p={:.4g}. "
+        "H=20 saved **{:.1%}** of calls per episode and **{:.1%}** of calls per controlled environment step. "
+        "Episode-level savings also depend on how early a policy completes the task.".format(100*gap["success_change"],
+         100*gap["ci95_low"], 100*gap["ci95_high"], gap["p_holm"], gap["relative_right_calls_saved"],
+         gap["relative_right_call_density_saved"]), "", "## Do more steps help?", "",
         "On confirmation, 500 versus 100 updates changed success by **{:+.1f} pp**, paired CI **[{:+.1f}, {:+.1f}] pp**; "
         "raw p={:.4g}, Holm-adjusted secondary-family p={:.4g}.".format(100*extra["success_change"],
          100*extra["ci95_low"], 100*extra["ci95_high"], extra["p_exact"], extra["p_holm"]), "",
