@@ -103,6 +103,44 @@ def main():
         assert Path(saved["path"]).joinpath("training_manifest.json").is_file()
         assert trainer.set_phase("student")["phase"] == "student"
         print("PASS: native trace, nonzero detached-target update, frozen backbone, exact rollback, and complete checkpoint inference round-trip")
+        # A second tiny, synthetic-only experiment checks a real optimizer resume:
+        # one update, save, restore all state, then equal next updates in both copies.
+        small_config = dict(config, optimizer_steps=3, checkpoint_steps=[1, 2, 3])
+        def make_trainer(name):
+            value = TemporalOPSD(TinyPolicy(), {"experiment_spec": dict(metadata["experiment_spec"])},
+                small_config, root / name / "results", root / name / "checkpoints", root)
+            rollout = value.rollout(batch, {"expected_step": 0, "diagnostic": True})
+            value.learn(views, {"rollout_token": rollout["rollout_token"], "valid_steps": [20, 17, 5, 1]})
+            value.reset_after_diagnostic()
+            return value
+
+        def advance(value):
+            rollout = value.rollout(batch, {"expected_step": value.step})
+            return value.learn(views, {"rollout_token": rollout["rollout_token"], "valid_steps": [20, 17, 5, 1]})
+
+        def equal_trees(left, right):
+            assert jax.tree.structure(left) == jax.tree.structure(right)
+            assert all(np.array_equal(a, b) for a, b in zip(jax.tree.leaves(left), jax.tree.leaves(right)))
+
+        uninterrupted = make_trainer("continuation-original")
+        advance(uninterrupted)
+        saved_one = uninterrupted.save()
+        resumed = make_trainer("continuation-restored")
+        resume_info = resumed.resume(saved_one["path"])
+        assert resume_info["adam_update_counters"] == [1] and resumed.step == 1
+        for key in ["master", "ema", "opt_state", "frozen"]:
+            equal_trees(getattr(uninterrupted, key), getattr(resumed, key))
+        frozen_one = jax.tree.map(lambda x: np.array(x), resumed.snapshots[1]["params"])
+        advance(uninterrupted)
+        advance(resumed)
+        for key in ["master", "ema", "opt_state"]:
+            equal_trees(getattr(uninterrupted, key), getattr(resumed, key))
+        resumed.save()
+        resumed.set_phase("step_1")
+        equal_trees(frozen_one, resumed.evaluation_parameters)
+        resumed.set_phase("step_2")
+        equal_trees(resumed.master, resumed.evaluation_parameters)
+        print("PASS: FP32/EMA/Adam resume, identical next update, and frozen milestone evaluation")
 
 
 if __name__ == "__main__":

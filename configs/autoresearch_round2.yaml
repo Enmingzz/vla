@@ -1,0 +1,37 @@
+# Predeclared before new task-success results. All training remains H=20.
+training_config: configs/opsd_continuation_500.yaml
+resume_step: 100
+resume_manifest_sha256: a7d6b7cb8cf42e2285721c007515b4a6526e4bb8c1874028f1dae841b5238a8c
+milestones: [100, 300, 500]
+screen:
+  suite: libero_10
+  initial_state_start: 20
+  episodes_per_task: 5
+  seed: 17
+  horizons:
+    0: [5, 15, 20, 25]
+    100: [15, 20, 25]
+    300: [20]
+    500: [15, 20, 25]
+transfer:
+  suites: [libero_spatial, libero_object, libero_goal]
+  initial_state_start: 20
+  episodes_per_task: 3
+  seed: 17
+  horizons:
+    0: [5, 20]
+    100: [20]
+    500: [20]
+confirmation:
+  suite: libero_10
+  initial_state_start: 30
+  episodes_per_task: 10
+  seed: 27
+  horizons:
+    0: [5, 20]
+    100: [20]
+    500: [20]
+primary_comparison: confirmation_libero10_H20_step500_minus_step0
+secondary_comparison: confirmation_libero10_H20_step500_minus_step100
+bootstrap_replicates: 10000
+analysis_seed: 20260916

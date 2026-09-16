@@ -1,0 +1,23 @@
+{
+  "pytest": {
+    "passed": 23,
+    "failed": 0,
+    "command": "env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH \"$LIBERO_VENV/bin/python\" -m pytest -q"
+  },
+  "cpu_jax_integration": {
+    "passed": true,
+    "command": "env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH \"$SERVER_VENV/bin/python\" tests/check_opsd_jax.py",
+    "checks": [
+      "native flow trace",
+      "nonzero detached-target gradient",
+      "frozen backbone",
+      "diagnostic rollback",
+      "complete checkpoint roundtrip",
+      "FP32 master/EMA/Adam resume",
+      "identical next update after resume",
+      "frozen milestone evaluation"
+    ]
+  },
+  "split_audit": "split_audit.json",
+  "gpu_allocated_for_preflight": false
+}

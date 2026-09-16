@@ -40,6 +40,9 @@ class TemporalOPSD:
         self.graph, self.frozen = graph, frozen
         self.initial = jax.tree.map(lambda x: x.astype(jnp.float32), trainable)
         self.master, self.ema = self.initial, self.initial
+        self.snapshots = {0: {"params": self.initial, "checkpoint": None}}
+        self.checkpoint_steps = config.get("checkpoint_steps", [config["optimizer_steps"]])
+        self.resume_provenance = None
         self.tx = optax.chain(optax.clip_by_global_norm(config["clip_gradient_norm"]),
             optax.adamw(config["learning_rate"], weight_decay=config["weight_decay"]))
         self.opt_state = self.tx.init(self.master)
@@ -105,16 +108,24 @@ class TemporalOPSD:
     def set_phase(self, phase):
         if self.pending is not None:
             raise RuntimeError("Cannot switch evaluation phase with a pending training rollout")
-        if phase == "student" and (self.step != 100 or self.saved_checkpoint is None):
-            raise RuntimeError("Only the saved step-100 student is evaluated")
-        if phase not in {"baseline", "student"}:
+        if phase == "baseline":
+            selected_step = 0
+        elif phase == "student":
+            selected_step = self.step
+        elif phase.startswith("step_"):
+            selected_step = int(phase.split("_", 1)[1])
+        else:
             raise ValueError("Unknown evaluation phase")
+        if selected_step not in self.snapshots or (phase != "baseline" and selected_step == 0):
+            raise RuntimeError("Only a saved, frozen parameter snapshot can be evaluated")
+        snapshot = self.snapshots[selected_step]
+        self.evaluation_parameters = snapshot["params"]
         self.phase = phase
         spec = copy.deepcopy(self.base_spec)
         spec["temporal_opsd"] = {
             "algorithm": self.config["algorithm"], "sources": self.sources,
-            "phase": phase, "optimizer_step": 0 if phase == "baseline" else self.step,
-            "checkpoint": None if phase == "baseline" else self.saved_checkpoint,
+            "phase": phase, "optimizer_step": selected_step,
+            "checkpoint": copy.deepcopy(snapshot["checkpoint"]),
             "evaluation_sampler": "unchanged Pi0.sample_actions; dynamic parameter arguments"}
         self.metadata["experiment_spec"] = spec
         self.metadata["inference_fingerprint"] = digest(spec)
@@ -134,10 +145,13 @@ class TemporalOPSD:
                 return self.reset_after_diagnostic()
             if operation == "save":
                 return self.save()
+            if operation == "resume":
+                return self.resume(control["checkpoint"])
             if operation == "set_phase":
                 return self.set_phase(control["phase"])
             if operation == "status":
-                return {"step": self.step, "phase": self.phase, "diagnostic_complete": self.diagnostic_complete}
+                return {"step": self.step, "phase": self.phase, "diagnostic_complete": self.diagnostic_complete,
+                        "saved_snapshots": sorted(self.snapshots)}
             raise ValueError("Unknown OPSD request")
         control = observation.pop("_frequency_vla", None)
         if control is None:
@@ -145,7 +159,7 @@ class TemporalOPSD:
         inputs = self.observations([observation])
         rng = jax.random.fold_in(jax.random.key(int(control["episode_seed"])), int(control["call_index"]))
         _, rng = jax.random.split(rng)  # Exactly the native Policy.infer RNG protocol.
-        params = self.initial if self.phase == "baseline" else self.master
+        params = self.evaluation_parameters
         result = self.environment_actions(inputs, self.native(params, self.frozen, inputs, rng))[0]
         return {"actions": result, "inference_fingerprint": self.metadata["inference_fingerprint"]}
 
@@ -279,10 +293,66 @@ class TemporalOPSD:
         write_json(self.root / "provenance/diagnostic.json", result)
         return result
 
+    def resume(self, checkpoint):
+        """Restore FP32 master weights, EMA and Adam moments, never restart Adam."""
+        if self.step != 0 or self.pending is not None or not self.diagnostic_complete:
+            raise RuntimeError("Resume only once, after the fresh-model diagnostic and rollback")
+        path = Path(checkpoint).resolve()
+        manifest = json.loads((path / "training_manifest.json").read_text())
+        step = int(manifest["step"])
+        if not 0 < step < self.config["optimizer_steps"] or step not in self.checkpoint_steps:
+            raise ValueError("Resume checkpoint must be a declared earlier milestone")
+        if manifest["base_object_manifest_sha256"] != self.base_spec["checkpoint_object_manifest_sha256"]:
+            raise ValueError("Resume source checkpoint differs")
+        unchanged = ["algorithm", "prediction_horizon", "student_horizon", "teacher_horizon", "flow_steps",
+                     "batch_size", "learning_rate", "weight_decay", "clip_gradient_norm", "teacher_strategy",
+                     "ema_decay", "train_seed", "trainable_parameters", "compute_dtype", "master_dtype",
+                     "loss_action_dimensions", "loss_covariance", "flow_time_sampling", "teacher_tail"]
+        if any(manifest["config"][k] != self.config[k] for k in unchanged):
+            raise ValueError("Resume changed the optimizer, inference or distillation method")
+        if manifest["sources"]["opsd_flow.py"] != self.sources["opsd_flow.py"]:
+            raise ValueError("The native flow/velocity implementation changed")
+        for name, expected in manifest["files"].items():
+            if file_digest(path / name) != expected:
+                raise ValueError("Resume checksum mismatch: " + name)
+        # dtype=None preserves FP32 master weights and the original BF16 backbone.
+        restored = model_lib.restore_params(path / "params")
+        state = nnx.state(self.policy._model)
+        state.replace_by_pure_dict(restored)
+        _, master, frozen = nnx.split(nnx.merge(self.graph, state), self.teacher_filter, ...)
+        if not jax.tree.all(jax.tree.map(lambda a, b: bool(jnp.array_equal(a, b)), self.frozen, frozen)):
+            raise ValueError("The supposedly frozen backbone changed in the parent checkpoint")
+        if any(x.dtype != jnp.float32 for x in jax.tree.leaves(master)):
+            raise ValueError("Resume must retain FP32 master parameters")
+        template = {"ema": self.ema, "optimizer": self.opt_state, "step": np.asarray(0)}
+        sharding = jax.sharding.SingleDeviceSharding(jax.devices()[0])
+        restore_args = jax.tree.map(lambda x: ocp.ArrayRestoreArgs(sharding=sharding, restore_type=jax.Array)
+            if isinstance(x, jax.Array) else ocp.RestoreArgs(restore_type=np.ndarray), template)
+        with ocp.PyTreeCheckpointer() as checkpointer:
+            training = checkpointer.restore(path / "training_state",
+                args=ocp.args.PyTreeRestore(item=template, restore_args=restore_args))
+        counts = [int(np.asarray(v)) for keys, v in jax.tree_util.tree_flatten_with_path(training["optimizer"])[0]
+                  if getattr(keys[-1], "name", None) == "count"]
+        if int(training["step"]) != step or not counts or any(c != step for c in counts):
+            raise ValueError("Adam update counters do not match the saved optimizer step")
+        self.master, self.ema, self.opt_state, self.step = master, training["ema"], training["optimizer"], step
+        self.saved_checkpoint = {"path": str(path), "manifest_sha256": digest(manifest)}
+        self.snapshots[step] = {"params": self.master, "checkpoint": dict(self.saved_checkpoint)}
+        self.resume_provenance = {**self.saved_checkpoint, "step": step, "adam_update_counters": counts,
+            "fp32_master_restored": True, "ema_and_optimizer_restored": True, "frozen_backbone_equal": True,
+            "config_changes": {k: {"before": manifest["config"].get(k), "after": v}
+                               for k, v in self.config.items() if manifest["config"].get(k) != v}}
+        probe = self.native(self.master, self.frozen, self.diagnostic_observation, jax.random.key(123))
+        if not np.isfinite(np.asarray(probe)).all():
+            raise RuntimeError("Invalid restored-student native inference")
+        write_json(self.root / "provenance/resume.json", self.resume_provenance)
+        write_json(self.root / "provenance" / ("step_" + str(step) + ".json"), self.saved_checkpoint)
+        return dict(self.resume_provenance)
+
     def save(self):
-        if self.step != 100 or self.pending is not None:
-            raise RuntimeError("Only the completed 100-step student can be exported")
-        path = (self.checkpoint_root / "step_100").resolve()
+        if self.step not in self.checkpoint_steps or self.pending is not None:
+            raise RuntimeError("Only predeclared completed milestones can be exported")
+        path = (self.checkpoint_root / ("step_" + str(self.step))).resolve()
         path.mkdir(parents=True, exist_ok=False)
         params = nnx.merge(self.graph, self.master, self.frozen)
         with ocp.PyTreeCheckpointer() as checkpointer:
@@ -303,12 +373,14 @@ class TemporalOPSD:
         if reload_difference != 0:
             raise RuntimeError("Exported checkpoint inference round-trip differs: " + str(reload_difference))
         manifest = {"step": self.step, "config": self.config, "sources": self.sources,
+                    "resumed_from": self.resume_provenance,
                     "base_checkpoint": self.base_spec["checkpoint"],
                     "base_object_manifest_sha256": self.base_spec["checkpoint_object_manifest_sha256"],
                     "reloaded_native_inference_max_abs_difference": reload_difference,
                     "files": {str(p.relative_to(path)): file_digest(p) for p in sorted(path.rglob("*")) if p.is_file()}}
         write_json(path / "training_manifest.json", manifest)
         self.saved_checkpoint = {"path": str(path), "manifest_sha256": digest(manifest)}
-        write_json(self.root / "provenance/step_100.json", self.saved_checkpoint)
+        self.snapshots[self.step] = {"params": self.master, "checkpoint": dict(self.saved_checkpoint)}
+        write_json(self.root / "provenance" / ("step_" + str(self.step) + ".json"), self.saved_checkpoint)
         # Native WebSocket transport mutates replies to append server timing.
         return dict(self.saved_checkpoint)

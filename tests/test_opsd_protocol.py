@@ -8,6 +8,7 @@ import pytest
 
 from frequency_vla.config import load_config
 from frequency_vla.opsd_protocol import align_teacher_latent, require_measured_gap, validate_training_config
+from frequency_vla.study_plan import conditions
 
 
 def test_temporal_alignment_preserves_the_student_suffix_and_samples_only_missing_tail():
@@ -30,6 +31,30 @@ def test_training_indices_must_not_overlap_held_out_evaluation():
     config["train_initial_state_start"] = 9
     with pytest.raises(ValueError, match="overlap"):
         validate_training_config(config)
+
+
+def test_continuation_split_protects_confirmation_and_caps_updates():
+    config = load_config(Path(__file__).resolve().parents[1] / "configs/opsd_continuation_500.yaml")
+    validate_training_config(config)
+    config["train_initial_state_stop"] = 31
+    with pytest.raises(ValueError, match="overlap"):
+        validate_training_config(config)
+    config["train_initial_state_stop"] = 20
+    config["optimizer_steps"] = 501
+    with pytest.raises(ValueError, match="at-most-500"):
+        validate_training_config(config)
+
+
+def test_research_matrix_keeps_confirmation_separate_and_preselects_final_step():
+    plan = load_config(Path(__file__).resolve().parents[1] / "configs/autoresearch_round2.yaml")
+    matrix = conditions(plan)
+    assert sum(c["episodes_per_task"] * 10 for c in matrix) == 1310
+    screen = {i for c in matrix if c["split"] != "confirmation"
+              for i in range(c["initial_state_start"], c["initial_state_start"] + c["episodes_per_task"])}
+    confirmation = {i for c in matrix if c["split"] == "confirmation"
+                    for i in range(c["initial_state_start"], c["initial_state_start"] + c["episodes_per_task"])}
+    assert not screen & confirmation
+    assert {c["step"] for c in matrix if c["split"] == "confirmation"} == {0, 100, 500}
 
 
 def test_training_gate_rejects_inconclusive_and_incomplete_frequency_results(tmp_path):

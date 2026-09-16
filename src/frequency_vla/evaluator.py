@@ -62,6 +62,7 @@ class EpisodeTracker:
         self.started = time.monotonic()
         self.current = {"task_suite": self.args.suite, "task_id": self.task_id,
                         "task_description": self.task_description, "episode_index": self.episode_index,
+                        "initial_state_index": self.args.initial_state_start + self.episode_index,
                         "seed": self.args.seed, "replan_steps": self.args.horizon, "mode": self.args.mode,
                         "environment_steps": 0, "controlled_environment_steps": 0, "settling_steps": 0,
                         "policy_calls": 0, "policy_call_control_steps": [], "success": False,
@@ -69,7 +70,8 @@ class EpisodeTracker:
                         "evaluation_fingerprint": self.metadata["evaluation_fingerprint"],
                         "native_prediction_horizon": self.metadata["experiment_spec"]["native_prediction_horizon"],
                         "prediction_horizon": prediction_horizon(self.metadata["experiment_spec"]),
-                        "episode_rng_seed": episode_seed(self.args.seed, self.args.suite, self.task_id, self.episode_index)}
+                        "episode_rng_seed": episode_seed(self.args.seed, self.args.suite, self.task_id,
+                                                         self.args.initial_state_start + self.episode_index)}
 
 
 class TrackedEnv:
@@ -145,13 +147,14 @@ class FatalUpstreamErrors(logging.Handler):
 
 
 def run(args):
+    args.initial_state_start = getattr(args, "initial_state_start", 0)
     config = load_config()
     spec = upstream_spec(args.openpi_dir, config)
     validate_horizons([args.horizon, args.required_horizon] if args.horizon != args.required_horizon else [args.horizon], prediction_horizon(spec))
     if args.suite not in config["supported_suites"]:
         raise ValueError("Unsupported suite")
-    if args.episodes < 1 or args.episodes > 50:
-        raise ValueError("Use the first 1..50 official initial states without cycling")
+    if args.episodes < 1 or args.initial_state_start < 0 or args.initial_state_start + args.episodes > 50:
+        raise ValueError("Select an ordered, non-cycling range within the 50 official initial states")
     args.num_steps_wait = config["num_steps_wait"]
     root = Path(args.results_dir).resolve()
     relative = Path(args.mode) / args.suite / ("seed_" + str(args.seed)) / ("H_" + str(args.horizon))
@@ -184,7 +187,8 @@ def run(args):
     metadata["evaluation_spec"] = {
         "source_sha256": {name: file_digest(Path(__file__).parent / name) for name in ["evaluator.py", "config.py", "logging_utils.py"]},
         "packages": evaluator_packages, "python_version": platform.python_version(),
-        "suite": args.suite, "resize_size": config["resize_size"], "num_steps_wait": config["num_steps_wait"]}
+        "suite": args.suite, "resize_size": config["resize_size"], "num_steps_wait": config["num_steps_wait"],
+        "initial_state_start": args.initial_state_start}
     metadata["evaluation_fingerprint"] = digest(metadata["evaluation_spec"])
     tracker = EpisodeTracker(args, metadata)
     original_suite_class = official.benchmark.get_benchmark_dict()[args.suite]
@@ -192,7 +196,7 @@ def run(args):
     original_mimwrite = official.imageio.mimwrite
     manifest = {"status": "running", "arguments": vars(args), "server": metadata, "project_config": config,
                 "evaluator_packages": evaluator_packages,
-                "initial_state_protocol": "official get_task_init_states(task_id)[episode_index], no cycling",
+                "initial_state_protocol": "official ordered states[initial_state_start + episode_index], no cycling",
                 "error_policy": "abort; never score simulator/inference exceptions as failures"}
     write_json(manifest_file, manifest)
 
@@ -211,9 +215,9 @@ def run(args):
 
         def get_task_init_states(self, i):
             states = self.base.get_task_init_states(self.ids[i])
-            if len(states) < args.episodes:
+            if len(states) < args.initial_state_start + args.episodes:
                 raise ValueError("Not enough official initial states")
-            return states
+            return states[args.initial_state_start:args.initial_state_start + args.episodes]
 
     def get_env(task, resolution, seed):
         if tracker.env is not None:
@@ -284,6 +288,7 @@ def main():
     p.add_argument("--horizon", type=int, required=True)
     p.add_argument("--required-horizon", type=int)
     p.add_argument("--episodes", type=int)
+    p.add_argument("--initial-state-start", type=int, default=0)
     p.add_argument("--seed", type=int, default=7)
     p.add_argument("--task-ids", type=int, nargs="+")
     p.add_argument("--results-dir", default=str(Path(__file__).resolve().parents[2] / "results"))

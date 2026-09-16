@@ -13,6 +13,8 @@ import platform
 import subprocess
 import sys
 import time
+import socket
+import uuid
 from unittest.mock import patch
 
 from .config import load_config, prediction_horizon, upstream_spec
@@ -122,6 +124,7 @@ def main():
                     trained_checkpoint_local_path=str(active_checkpoint))
     fingerprint = digest(spec)
     metadata = {"experiment_spec": spec, "inference_fingerprint": fingerprint,
+                "server_instance_id": str(uuid.uuid4()), "hostname": socket.gethostname(),
                 "checkpoint_local_path": str(active_checkpoint),
                 "warmup": {"seconds": warmup_seconds, "synthetic": True, "benchmark_episode": False},
                 "server_packages": packages,

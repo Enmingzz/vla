@@ -97,6 +97,7 @@ def official_fixture(monkeypatch, request):
     class FakeEnv:
         def __init__(self, **kwargs):
             self.actions, self.episodes = [], []
+            self.initial_states = []
             self.closed = False
             created.append(self)
 
@@ -109,6 +110,7 @@ def official_fixture(monkeypatch, request):
             return observation()
 
         def set_init_state(self, state):
+            self.initial_states.append(np.array(state))
             return observation()
 
         def step(self, action):
@@ -201,6 +203,18 @@ def test_official_exception_handler_cannot_silently_score_errors_as_failures(off
     manifest = json.loads(next(tmp_path.rglob("*.manifest.json")).read_text())
     assert manifest["status"] == "error"
     assert created[0].closed
+
+
+def test_official_state_offset_changes_actual_environment_states_and_noise_identity(official_fixture, tmp_path):
+    root, created, _, _ = official_fixture
+    args = arguments(root, tmp_path, 5)
+    args.initial_state_start = 20
+    evaluator.run(args)
+    assert [x.tolist() for x in created[0].initial_states] == [[40, 41], [42, 43]]
+    rows = [json.loads(x) for p in tmp_path.rglob("*.jsonl") for x in p.read_text().splitlines()]
+    assert [r["initial_state_index"] for r in rows] == [20, 21]
+    assert rows[0]["episode_rng_seed"] == episode_seed(7, "libero_10", 0, 20)
+    assert rows[0]["initial_state_sha256"] == evaluator.array_hash(np.asarray([40, 41]))
 
 
 def test_aggregation_and_all_three_plots_from_actual_loop_fixtures(official_fixture, tmp_path, monkeypatch):
