@@ -1,0 +1,7 @@
+JobID|JobName|State|Elapsed|ElapsedRaw|AllocCPUS|ReqMem|MaxRSS|TotalCPU|AllocTRES|ExitCode|NodeList
+60078880|vla-opsd-round2|CANCELLED by 3158914|00:13:52|832|8|64G||28:44.620|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0|fc10511
+60078880.batch|batch|CANCELLED|00:14:09|849|8||29231236K|28:37.620|cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:15|fc10511
+60078880.extern|extern|COMPLETED|00:14:13|853|8||35788K|00:00:07|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0|fc10511
+60080314|vla-opsd-round2|COMPLETED|01:42:58|6178|8|64G||04:00:36|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0|fc10601
+60080314.batch|batch|COMPLETED|01:42:58|6178|8||47570444K|04:00:36|cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0|fc10601
+60080314.extern|extern|COMPLETED|01:42:58|6178|8|||00:00:00|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0|fc10601

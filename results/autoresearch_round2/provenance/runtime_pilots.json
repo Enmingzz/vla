@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "excluded_from_research_statistics": true,
+  "initial_state_index": 10,
+  "single_and_parallel_task0_identical_fields": [
+    "success",
+    "controlled_environment_steps",
+    "policy_calls",
+    "initial_state_sha256",
+    "first_observation_sha256",
+    "episode_rng_seed",
+    "inference_fingerprint"
+  ],
+  "episode_counts": {
+    "single": 1,
+    "parallel": 4
+  },
+  "stages": [
+    {
+      "event": "complete",
+      "seconds": 145.4271834315732,
+      "stage": "runtime_pilot_single",
+      "unix_time": 1789571816.5852952
+    },
+    {
+      "event": "complete",
+      "seconds": 26.096913577988744,
+      "stage": "runtime_pilot_parallel",
+      "unix_time": 1789571842.6852522
+    }
+  ]
+}

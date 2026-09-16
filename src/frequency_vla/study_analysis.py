@@ -80,6 +80,7 @@ def analyze(root):
         all_rows += [dict(condition=condition_id(c), split=c["split"], optimizer_step=c["step"], **row) for row in rows]
         for task in range(10):
             subset = [r for r in rows if r["task_id"] == task]
+            summary["task_{}_success_rate".format(task)] = sum(r["success"] for r in subset) / len(subset)
             task_rows.append(dict(c, task_id=task, task_description=subset[0]["task_description"],
                                   **summarize(c["horizon"], subset)))
     if len(servers) != 1:
@@ -139,12 +140,14 @@ def analyze(root):
         "new_training_action_blocks": sum(len(r["initial_states"]) for r in rollouts),
         "new_training_executed_actions": sum(s["executed_steps"] for r in rollouts for s in r["initial_states"]),
         "all_initial_states_match_audit": True, "training_evaluation_disjoint": True,
+        "comparison_family_sizes": {family: sum(r["family"] == family for r in comparisons)
+                                    for family in ["primary", "secondary", "frequency"]},
         "primary": primary, "additional_updates_confirmation": extra}
     write_json(output / "validation.json", validation)
     return plan, summaries, comparisons, task_rows, training, validation
 
 
-def plots(root, summaries, training, validation):
+def plots(root, summaries, training, comparisons):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -174,8 +177,21 @@ def plots(root, summaries, training, validation):
     ax.set(xlabel="Deployment horizon H", ylabel="LIBERO-10 success (%)", ylim=(0, 100),
            title="Horizon transfer screen · P=50 · 50 episodes/condition", xticks=[5, 15, 20, 25])
     ax.grid(alpha=.2)
-    ax.legend(fontsize=8)
+    ax.legend(fontsize=8, title="95% Wilson intervals", title_fontsize=8)
     save(fig, "success_vs_replan_horizon.png")
+    gaps = sorted([r for r in comparisons if r["split"] == "screen" and r["comparison"] == "replanning_gap"],
+                  key=lambda r: r["right_H"])
+    if gaps:
+        fig, ax = plt.subplots(figsize=(7, 4.5))
+        changes = np.array([100*r["success_change"] for r in gaps])
+        errors = np.array([[100*(r["success_change"]-r["ci95_low"]) for r in gaps],
+                           [100*(r["ci95_high"]-r["success_change"]) for r in gaps]])
+        ax.errorbar([r["right_H"] for r in gaps], changes, yerr=errors, fmt="o-", capsize=4, color=colors[0])
+        ax.axhline(0, color="gray", linestyle="--", linewidth=.8)
+        ax.set(xlabel="Deployment horizon H", ylabel="Original H=5 success − original H success (pp)",
+               title="Initial replanning gap · paired 95% bootstrap intervals", xticks=[15, 20, 25])
+        ax.grid(alpha=.2)
+        save(fig, "replanning_gap.png")
     fig, ax = plt.subplots(figsize=(7, 4.5))
     for split, color, label in [("screen", "#64748b", "Screen: states 20–24, seed 17, n=50"),
                                 ("confirmation", "#059669", "Confirmation: states 30–39, seed 27, n=100")]:
@@ -183,7 +199,7 @@ def plots(root, summaries, training, validation):
     ax.set(xlabel="Total optimizer updates", ylabel="LIBERO-10 success (%)", ylim=(0, 100),
            title="More temporal OPSD updates · P=50, H=20", xticks=[0, 100, 300, 500])
     ax.grid(alpha=.2)
-    ax.legend(fontsize=8)
+    ax.legend(fontsize=8, title="95% Wilson intervals", title_fontsize=8)
     save(fig, "success_vs_training_steps.png")
     fig, ax = plt.subplots(figsize=(8, 4.5))
     suites = ["libero_spatial", "libero_object", "libero_goal"]
@@ -193,9 +209,13 @@ def plots(root, summaries, training, validation):
         ax.bar(x, [100*s["success_rate"] for s in values], width=.23,
                label="Original" if step == 0 else "{} updates".format(step), color=colors[step])
         ax.vlines(x, [100*s["ci95_low"] for s in values], [100*s["ci95_high"] for s in values], color="black")
+    reference = [next(s for s in summaries if s["split"] == "transfer" and s["suite"] == suite and s["step"] == 0 and s["horizon"] == 5) for suite in suites]
+    ax.scatter(np.arange(3), [100*s["success_rate"] for s in reference], marker="D", s=26,
+               color="#111827", label="Original H=5 reference", zorder=5)
     ax.set(xticks=np.arange(3), xticklabels=[s.replace("libero_", "") for s in suites],
-           ylabel="Success (%)", ylim=(0, 100), title="LIBERO suite transfer · P=50, H=20 · n=30 each")
-    ax.legend(fontsize=8)
+           ylabel="Success (%)", ylim=(0, 105), title="LIBERO suite transfer · P=50, H=20 · n=30 each")
+    ax.legend(fontsize=8, title="H=20 bars: 95% Wilson intervals", title_fontsize=8,
+              loc="upper center", bbox_to_anchor=(.5, -.09), ncol=2)
     save(fig, "success_across_suites.png")
     fig, ax = plt.subplots(figsize=(7, 4.5))
     for step in [0, 100, 500]:
@@ -203,9 +223,15 @@ def plots(root, summaries, training, validation):
         ax.scatter([s["policy_calls_per_environment_step"] for s in rows], [100*s["success_rate"] for s in rows],
                    label="Original" if step == 0 else "{} updates".format(step), color=colors[step])
         for s in rows:
+            offset = {0: (5, 5), 100: (5, -13), 500: (-40, -10)}[step]
+            if step == 0 and s["horizon"] in [5, 25]:
+                offset = (-39, 5)
+            if step == 500 and s["horizon"] == 15:
+                offset = (5, 5)
             ax.annotate("H={}".format(s["horizon"]), (s["policy_calls_per_environment_step"], 100*s["success_rate"]),
-                        xytext=(4, 3), textcoords="offset points", fontsize=8)
-    ax.set(xlabel="Policy calls / controlled environment step", ylabel="Success (%)", ylim=(0, 100),
+                        xytext=offset,
+                        textcoords="offset points", fontsize=8, color=colors[step])
+    ax.set(xlabel="Policy calls / controlled environment step", ylabel="Success (%)", ylim=(0, 100), xlim=(0, .22),
            title="Compute and accuracy · LIBERO-10 horizon screen")
     ax.legend(fontsize=8)
     save(fig, "success_vs_policy_calls.png")
@@ -221,6 +247,7 @@ def plots(root, summaries, training, validation):
 def findings(root, summaries, comparisons, tasks, validation):
     p, extra = validation["primary"], validation["additional_updates_confirmation"]
     gap = next(r for r in comparisons if r["split"] == "confirmation" and r["comparison"] == "replanning_gap")
+    early = next(r for r in comparisons if r["split"] == "confirmation" and r["comparison"] == "training_benefit" and r["left_step"] == 100)
     lookup = {(r["split"], r["suite"], r["step"], r["horizon"]): r for r in summaries}
     confirmation = [lookup["confirmation", "libero_10", s, h] for s, h in [(0, 5), (0, 20), (100, 20), (500, 20)]]
     text = ["# Round 2 findings", "", "## Primary confirmation on different initial layouts", "",
@@ -246,6 +273,10 @@ def findings(root, summaries, comparisons, tasks, validation):
         "Episode-level savings also depend on how early a policy completes the task.".format(100*gap["success_change"],
          100*gap["ci95_low"], 100*gap["ci95_high"], gap["p_holm"], gap["relative_right_calls_saved"],
          gap["relative_right_call_density_saved"]), "", "## Do more steps help?", "",
+        "The 100-update snapshot versus the original changed success by **{:+.1f} pp**, paired CI **[{:+.1f}, {:+.1f}] pp**, "
+        "Holm-adjusted secondary-family p={:.4g}. The earlier 100-update pilot used a different evaluation split; "
+        "its outcomes are not pooled with this confirmation.".format(100*early["success_change"],
+            100*early["ci95_low"], 100*early["ci95_high"], early["p_holm"]), "",
         "On confirmation, 500 versus 100 updates changed success by **{:+.1f} pp**, paired CI **[{:+.1f}, {:+.1f}] pp**; "
         "raw p={:.4g}, Holm-adjusted secondary-family p={:.4g}.".format(100*extra["success_change"],
          100*extra["ci95_low"], 100*extra["ci95_high"], extra["p_exact"], extra["p_holm"]), "",
@@ -261,15 +292,59 @@ def findings(root, summaries, comparisons, tasks, validation):
     text += ["", "## Transfer to other LIBERO suites", "",
         "Only LIBERO-10 supplied our OPSD rollouts. These suites assess transfer/retention of the added OPSD; they are not claimed unseen by the official base checkpoint. "
         "Each screen has only 30 paired episodes (3/task), so small changes are inconclusive.", "",
-        "| Suite | Original H=5 | Original H=20 | 100 updates H=20 | 500 updates H=20 |", "|---|---:|---:|---:|---:|"]
+        "| Suite | Original H=5 | Original H=20 | 100 updates H=20 | 500 updates H=20 | 500 − original (paired 95% CI) | Adjusted p |",
+        "|---|---:|---:|---:|---:|---:|---:|"]
     for suite in ["libero_spatial", "libero_object", "libero_goal"]:
         values = [lookup["transfer", suite, step, h]["success_rate"] for step, h in [(0, 5), (0, 20), (100, 20), (500, 20)]]
-        text.append("| {} | {:.1%} | {:.1%} | {:.1%} | {:.1%} |".format(suite, *values))
+        c = next(c for c in comparisons if c["split"] == "transfer" and c["suite"] == suite and c["comparison"] == "training_benefit" and c["left_step"] == 500)
+        text.append("| {} | {:.1%} | {:.1%} | {:.1%} | {:.1%} | {:+.1f} [{:+.1f}, {:+.1f}] pp | {:.4g} |".format(
+            suite, *values, 100*c["success_change"], 100*c["ci95_low"], 100*c["ci95_high"], c["p_holm"]))
     text += ["", "## Task-level confirmation", "", "Exploratory, 10 episodes/task; no task-wise significance claim.", "",
              "| Task | Original H=5 | Original H=20 | 100 updates H=20 | 500 updates H=20 | Description |", "|---:|---:|---:|---:|---:|---|"]
     for task in range(10):
         values = [next(r for r in tasks if r["split"] == "confirmation" and r["step"] == s and r["horizon"] == h and r["task_id"] == task) for s, h in [(0, 5), (0, 20), (100, 20), (500, 20)]]
         text.append("| {} | {:.0%} | {:.0%} | {:.0%} | {:.0%} | {} |".format(task, *(v["success_rate"] for v in values), values[0]["task_description"]))
+    task_changes = []
+    for task in range(10):
+        rates = {r["step"]: r["success_rate"] for r in tasks if r["split"] == "confirmation" and r["horizon"] == 20 and r["task_id"] == task}
+        task_changes.append((task, rates[500] - rates[0]))
+    regressions = ["task {} ({:+.0f} pp)".format(task, 100*change) for task, change in task_changes if change < 0]
+    if regressions:
+        text += ["", "The average recovery does not extend to every task: step 500 versus original H=20 declined on " +
+                 ", ".join(regressions) + ". Broader layout coverage and retention checks on these tasks are useful next controls; "
+                 "the small task samples do not identify the cause of these regressions."]
+    sensitivity = []
+    for task in range(10):
+        rates = {r["horizon"]: r["success_rate"] for r in tasks if r["split"] == "confirmation" and r["step"] == 0 and r["task_id"] == task}
+        sensitivity.append((rates[5] - rates[20], task))
+    sensitivity.sort(reverse=True)
+    largest = ["task {} ({:.0f} pp)".format(task, 100*change) for change, task in sensitivity if change >= sensitivity[2][0] and change > 0]
+    sensitivity_text = ("The largest observed original H=5 → H=20 drops were on " + ", ".join(largest) + "."
+                        if largest else "No task had a positive observed original H=5 minus H=20 gap.")
+    text += ["", sensitivity_text + " This ranking is descriptive; the table above gives task descriptions and all outcomes.", "",
+             "## Teacher/student setting and next-stage evidence", ""]
+    if p["ci95_low"] > 0 and p["p_exact"] < .05 and gap["ci95_low"] > 0 and gap["p_holm"] < .05:
+        text += ["**H_T=5, H_S=20 is the strongest validated setting in this round.** It has a confirmed initial replanning gap "
+                 "and a predeclared independent confirmation of recovery after training. H=15 has less initial headroom in the screen; "
+                 "H=25 is a deployment test of a model trained only at H=20, so it needs its own training and confirmation before a fair comparison."]
+    else:
+        text += ["This round does not establish both a clear replanning gap and successful independent recovery at H=20. "
+                 "No teacher/student pair is validated for scaling the recovery method from these results alone. "
+                 "H=15/25 and the other suites remain exploratory deployment tests of H=20-trained parameters."]
+    teacher, original, final = [lookup["confirmation", "libero_10", s, h]["success_rate"] for s, h in [(0, 5), (0, 20), (500, 20)]]
+    if teacher > original:
+        text += ["", "The step-500 point estimate recovered {:.1%} of the original confirmation gap; "
+                 "the remaining difference from the original H=5 reference is {:.1f} pp. "
+                 "This is not an equivalence test against H=5.".format((final-original)/(teacher-original), 100*(teacher-final))]
+    reference, recovered = confirmation[0], confirmation[-1]
+    text += ["", "The step-500 H=20 policy used {:.2f} calls/episode versus {:.2f} for original H=5: "
+             "{:.1%} fewer calls/episode and {:.1%} fewer calls per controlled environment step.".format(
+                 recovered["mean_policy_calls"], reference["mean_policy_calls"],
+                 1 - recovered["mean_policy_calls"] / reference["mean_policy_calls"],
+                 1 - recovered["policy_calls_per_environment_step"] / reference["policy_calls_per_environment_step"])]
+    text += ["", "The extra 400 updates are " + ("supported as an improvement over 100 updates after the secondary-family correction."
+             if extra["ci95_low"] > 0 and extra["p_holm"] < .05 else
+             "not established as an improvement over 100 updates after the secondary-family correction; keep the point estimate and uncertainty separate.")]
     text += ["", "## Limits and reproducibility", "",
         "This tests temporal OPSD with Gaussian velocity matching, an experimental continuous-action adaptation of the local OPSD pipeline; "
         "it is not the image-generation Flow-OPD clipped policy-gradient algorithm. All conditions extrapolate the official checkpoint's native P=10 to P=50, "
@@ -282,8 +357,9 @@ def findings(root, summaries, comparisons, tasks, validation):
         "each trajectory supplies many intermediate observations.".format(validation["new_training_distinct_task_layouts"],
          validation["new_training_layout_indices"], validation["new_training_action_blocks"], validation["new_training_executed_actions"]), "",
         "Wilson intervals describe individual rates; paired differences use 10,000 within-task initial-state bootstrap replicates. "
-        "Secondary/screen training comparisons form one Holm family; frequency comparisons form a separate Holm family. "
-        "The fixed task set and small single-seed screens do not establish generalization to unseen tasks. Every condition, including regressions, is retained.", "",
+        "The {} secondary/screen training comparisons form one Holm family; {} frequency comparisons form a separate Holm family. "
+        "The fixed task set and small single-seed screens do not establish generalization to unseen tasks. Every condition, including regressions, is retained.".format(
+            validation["comparison_family_sizes"]["secondary"], validation["comparison_family_sizes"]["frequency"]), "",
         "See aggregated/conditions.csv, comparisons.csv, per_task.csv and episodes.csv; raw records/videos under evaluations/; "
         "all new losses and rollout identities in training.jsonl and rollouts.jsonl. Checkpoint paths and hashes, plan, split audit and "
         "resource accounting are in provenance/. No further hyperparameter sweep was triggered by these outcomes.", ""]
@@ -295,7 +371,7 @@ def main():
     p.add_argument("--results-dir", required=True)
     args = p.parse_args()
     plan, summaries, comparisons, tasks, training, validation = analyze(args.results_dir)
-    plots(args.results_dir, summaries, training, validation)
+    plots(args.results_dir, summaries, training, comparisons)
     findings(args.results_dir, summaries, comparisons, tasks, validation)
     print(json.dumps(validation, indent=2))
 

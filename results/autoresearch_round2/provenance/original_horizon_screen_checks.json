@@ -1,0 +1,13 @@
+{
+  "episodes": 200,
+  "exact_policy_call_schedules": true,
+  "horizons": [
+    5,
+    15,
+    20,
+    25
+  ],
+  "identical_model_inference_and_evaluation_settings": true,
+  "paired_initial_states_first_observations_rng": true,
+  "passed": true
+}

@@ -1,0 +1,139 @@
+{
+  "base_checkpoint": "gs://openpi-assets/checkpoints/pi05_libero",
+  "base_object_manifest_sha256": "434da05c6b5ac51c28222ca1bd9b77b77fa733a7b16955cbe98ac09786845dcf",
+  "config": {
+    "algorithm": "temporal_opsd_gaussian_velocity_matching",
+    "batch_size": 4,
+    "checkpoint_steps": [
+      100,
+      300,
+      500
+    ],
+    "clip_gradient_norm": 1.0,
+    "compute_dtype": "bfloat16",
+    "ema_decay": 0.9999,
+    "evaluation_episodes_per_task": 5,
+    "evaluation_seed": 17,
+    "flow_steps": 10,
+    "flow_time_sampling": "uniform_over_native_10_step_grid",
+    "learning_rate": 1e-05,
+    "loss_action_dimensions": 7,
+    "loss_covariance": "unit_isotropic_velocity_probe",
+    "master_dtype": "float32",
+    "optimizer_steps": 500,
+    "prediction_horizon": 50,
+    "protected_eval_ranges": [
+      [
+        0,
+        10
+      ],
+      [
+        20,
+        50
+      ]
+    ],
+    "reference_opsd_commit": "28d04e440350df2037fdd34ce703f088fb4ffd97",
+    "student_horizon": 20,
+    "teacher_horizon": 5,
+    "teacher_strategy": "ema",
+    "teacher_tail": "ema_native_flow_latent_at_same_time",
+    "train_initial_state_cursor": 12,
+    "train_initial_state_start": 10,
+    "train_initial_state_stop": 20,
+    "train_seed": 17,
+    "trainable_parameters": "action_expert_and_action_time_projections",
+    "weight_decay": 0.0
+  },
+  "files": {
+    "assets/physical-intelligence/libero/norm_stats.json": "b3a44bb2810436fb62917decaea58bd4d9110255df527dea21e8fd40c960bd84",
+    "params/_CHECKPOINT_METADATA": "861d8a051eb2aeaf935e0651f66762143aa6813413332a36ea721ca4fc5ab975",
+    "params/_METADATA": "250d0ad0f6540a5e4bdd70442d6864cef729724f2d23e2dd2cc669563a668d70",
+    "params/_sharding": "38efd4f20bfc656b138c3009fa6156b1199c29a3ccf020769e3726605f1c51ca",
+    "params/array_metadatas/process_0": "987d6c82745514f7ae68d1d6fa238129e23a6d90f10a6d3f6b24eafc94383ade",
+    "params/d/f2cf07726a235d5568133f12c0b61562": "66fa65120642ed579b4833d5b25c1ca1db8563a7c82d7b7b7cc3738bc580ca7c",
+    "params/manifest.ocdbt": "408876aabc0fcbb38e04ceb069afb58e62ef328b65955df4328a1957072800a2",
+    "params/ocdbt.process_0/d/4f254f4535bfd1dea5dbc597a9bd385c": "fc67fb493dad921566f3f9b3e970747a7c3c2df356aa907646b9c80a273e1b38",
+    "params/ocdbt.process_0/d/62c533ddfdf827df6fc219cca44a95af": "ef007dcf3522200de536f288d8b47ee9f69fdddcd3f477e4ec8daf8b5b5181ef",
+    "params/ocdbt.process_0/d/68d8aabc32fac9cfd7b6f431d3f4c52b": "0afce4f91d0d64f75113120b6553ddb91e1393de5e6a0a447a41728f1697e6d0",
+    "params/ocdbt.process_0/d/6c1f1e8a2bb1c232ee49ff087db09f52": "989938161a890305d8cf6ddeb336c8b0c1041389b6e4bccc40bd3f75099b9bd0",
+    "params/ocdbt.process_0/d/76e5b0ce94a9022e168d5bafc0cca294": "c6c76738b7a7cc7b0c11f7756b003ba399dfcaac61f0acec3be2768094326e5c",
+    "params/ocdbt.process_0/d/a2be0e31ef19af1b18e82ab5b4214bbf": "86f1f849f64cbbcb7353f2bce614a44f504b43b33dbc5e03d704f00d5fe23363",
+    "params/ocdbt.process_0/manifest.ocdbt": "5f89343c41336cf2402cbc18fc67d7fa85a922399299ac51808e20be2fab0fd5",
+    "training_state/_CHECKPOINT_METADATA": "9c06c88654c57831b215f5dc4d403f00da9e160ca5c979906496827d4b8eec57",
+    "training_state/_METADATA": "444d16e481303a27ec95a730affe2e440f0fbdc120058b920183447a06ae21fd",
+    "training_state/_sharding": "1ea246b3fee1b23b349dfa34b35d4e35e460b28bd65a90b7d6dabdf9bc21a67c",
+    "training_state/array_metadatas/process_0": "04ad61b1fe775f29d7c04fa81cad627701ec2e5f71b7f741c4990464c58b6d0c",
+    "training_state/d/1181d60e74306a4f287fbc7bbec684b9": "9810d11281873339c7a4d05c910478ee15009db880129ce56eb117b1561652d7",
+    "training_state/manifest.ocdbt": "a245310c03815d5f31c1c833c4431c9f80c19f5ba6ec8e5eff6549dc3dfb4f57",
+    "training_state/ocdbt.process_0/d/26020a6fca9d8384fca1da5cc8d40314": "c0a6cfcd1a59bc331c1cb10ac02c4da9434b588cfa0f8d19b046d584c2164c0e",
+    "training_state/ocdbt.process_0/d/2c99cbf5b878a0ab87579b69affe0853": "c0169de6d863f2f02c4c5958ed5bc0a216ac95a25e3d0494759588e26e7e5c91",
+    "training_state/ocdbt.process_0/d/2e627ecec7899ddc0592b57ce935ce62": "14d00cfaf4b69b92542c65609d56f39c3ffa314752cb06680b2722b91031fa92",
+    "training_state/ocdbt.process_0/d/3e17422e73e7e57b64ab66dc2bb96124": "8e758e09f667cca8411efc584ef6a7678f81b625d845c57574dcb9c6622e8cc1",
+    "training_state/ocdbt.process_0/d/760629b1a016777f2ae8af73a4e62428": "117c28cfaf9f967cd288ab54c09c798922999a166156a3919cc9dcf08d931010",
+    "training_state/ocdbt.process_0/d/b27ce5507d94ab0d3d9688a2a6a87f5e": "db32678de355f2b08c3f93725a161e4348cec94e3d71db613f07e5ccb21b784d",
+    "training_state/ocdbt.process_0/d/d1931854e8ff8fb685b7f9345dd78557": "535e452a831d54d4d494b9882ea97c46b717636327f4612578bb9706ec2ca773",
+    "training_state/ocdbt.process_0/d/dd34136fb6bd67e61849c84f488b589b": "a4df09e64c62d1ccd94242eb540be68e97a25b51a29225559e9704baae5eef8e",
+    "training_state/ocdbt.process_0/manifest.ocdbt": "b981f304dad9680b44f28856ad08a01299cd6c8583d06b0b2f546c660bbab900"
+  },
+  "reloaded_native_inference_max_abs_difference": 0.0,
+  "resumed_from": {
+    "adam_update_counters": [
+      100
+    ],
+    "config_changes": {
+      "checkpoint_steps": {
+        "after": [
+          100,
+          300,
+          500
+        ],
+        "before": null
+      },
+      "evaluation_episodes_per_task": {
+        "after": 5,
+        "before": 10
+      },
+      "evaluation_seed": {
+        "after": 17,
+        "before": 7
+      },
+      "optimizer_steps": {
+        "after": 500,
+        "before": 100
+      },
+      "protected_eval_ranges": {
+        "after": [
+          [
+            0,
+            10
+          ],
+          [
+            20,
+            50
+          ]
+        ],
+        "before": null
+      },
+      "train_initial_state_cursor": {
+        "after": 12,
+        "before": null
+      },
+      "train_initial_state_stop": {
+        "after": 20,
+        "before": 50
+      }
+    },
+    "ema_and_optimizer_restored": true,
+    "fp32_master_restored": true,
+    "frozen_backbone_equal": true,
+    "manifest_sha256": "a7d6b7cb8cf42e2285721c007515b4a6526e4bb8c1874028f1dae841b5238a8c",
+    "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/step_100",
+    "step": 100
+  },
+  "sources": {
+    "opsd_backend.py": "61c1a0280378d59f767196e936badc330fdc82f5d90ba282e53ef7d4728d8d1d",
+    "opsd_flow.py": "c0e85665f5fce10e0afffe185763d07008cb16aa2d97a04a164a18e725eaa45c",
+    "opsd_protocol.py": "12b4cb91ffe208d3df30f44d9e013aafa750b851264cb2b0f7552ef1c3d32c10"
+  },
+  "step": 300
+}

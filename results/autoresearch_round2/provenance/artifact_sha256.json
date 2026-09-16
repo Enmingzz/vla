@@ -1,0 +1,3005 @@
+{
+  "files": [
+    {
+      "bytes": 7523,
+      "path": "FINDINGS.md",
+      "sha256": "3ca5edc1d59d3a12f45f47f6aed354940bd75bd0bde0e5cc7f2c0ea7bed4a6a0"
+    },
+    {
+      "bytes": 6118,
+      "path": "README.md",
+      "sha256": "de6af5d6f4f124a34d6b55aef2391a2413307bcd19d3c3a6b8097ab49a3a3edc"
+    },
+    {
+      "bytes": 7403,
+      "path": "aggregated/comparisons.csv",
+      "sha256": "b9aeaaab084394714faae250c066f9795ee9b625e9fbbedecb37e2ff31bea768"
+    },
+    {
+      "bytes": 7229,
+      "path": "aggregated/conditions.csv",
+      "sha256": "d8841d6e468b6b1bbe743da178d2cfa5886968be8da7deedbe86c1213ed2f1c5"
+    },
+    {
+      "bytes": 865743,
+      "path": "aggregated/episodes.csv",
+      "sha256": "9666c5ebb94e5e5c3423c57e691f455b0c07a8fe0e01f5a79df6a1f22398ce63"
+    },
+    {
+      "bytes": 61795,
+      "path": "aggregated/per_task.csv",
+      "sha256": "1bb4275c6f167b2c534cbf70d732635b41a07b68ec86c8626af73bf7296bbac9"
+    },
+    {
+      "bytes": 2298,
+      "path": "aggregated/validation.json",
+      "sha256": "2174fe0362ae0cdae43de92d374be4e94bca9e1ed56726f8f7b82f877c511e69"
+    },
+    {
+      "bytes": 2143,
+      "path": "diagnostic_rollouts.jsonl",
+      "sha256": "7848cfde7f94a6c0e8d8cc40fc63afa884cfe284e391d577dac97160e028d50e"
+    },
+    {
+      "bytes": 425,
+      "path": "diagnostic_training.jsonl",
+      "sha256": "fcd02656e895f0d623b4e1c8a0573c17054bd323f6cf9245c94441eb8314647c"
+    },
+    {
+      "bytes": 12117,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_0.jsonl",
+      "sha256": "a90bee3a1f328538b6a4c33793a3c137b1d23980ad94c68a2ec576c755a03fcb"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_0.manifest.json",
+      "sha256": "f23467a4851977a897f295bf1e34037a0b2ade4eb27aa5a26a88a4daf5150aef"
+    },
+    {
+      "bytes": 12096,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_1.jsonl",
+      "sha256": "03b1821520bfb5cfaa1fe6878649a90d121eb60b04ff96963485b1762b74e511"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_1.manifest.json",
+      "sha256": "c6c92efd98bd658d5bf4750129aa7ebb72e682842b23be98c7241d2ef9a57d71"
+    },
+    {
+      "bytes": 11899,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_2.jsonl",
+      "sha256": "2a4ead23568ce5dddb1e18711d9891bd14d191381ef8186f8b90ebb2a7fbfdac"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_2.manifest.json",
+      "sha256": "a357af40734b9ddb62ff45dc472bbdde03149d376602e7e95dbf21ae86c0ba31"
+    },
+    {
+      "bytes": 11976,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_3.jsonl",
+      "sha256": "f63656e03dbabf808970882b214643372c16a1d331fdaabdbe67d353e41f49c9"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_3.manifest.json",
+      "sha256": "d36d095ed1743185fd0b432992cf99fb67c6876c1a3e778749cfaa9d480ee905"
+    },
+    {
+      "bytes": 12415,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_4.jsonl",
+      "sha256": "8c132a9f612dac5dece54523d4eb6c2ddeb275246e8dd0aaf574b175ad7249d5"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_4.manifest.json",
+      "sha256": "13a19c5dc59cde96558a78877ab6178d04b61fcfea1df7f94e03deaa962589fa"
+    },
+    {
+      "bytes": 11880,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_5.jsonl",
+      "sha256": "a7b1398a16a393e83faee41fdf43f19278015533c2ec816e0eb8e69a5babbd39"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_5.manifest.json",
+      "sha256": "7737c02c4a3122dae4904c98921d52d6558ba326c6bf57e7696db7d238de2bfb"
+    },
+    {
+      "bytes": 12344,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_6.jsonl",
+      "sha256": "752a2de3416cbecdf00e06e7837b1e91fca74b730e695d775d906b2b9c437803"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_6.manifest.json",
+      "sha256": "156dc3db638197db28a3ccc717c07934fec4be53e649c709e60f1623184def8a"
+    },
+    {
+      "bytes": 12106,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_7.jsonl",
+      "sha256": "9d63ddc023892aaf46c71704841fd59c12d663c6f0c7640a6d49213e1b875bb1"
+    },
+    {
+      "bytes": 20171,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_7.manifest.json",
+      "sha256": "bdcbca414d5b50fb01e1dcc4d7cbac1a4a1496f37cbb2d10d0905329d6723ecc"
+    },
+    {
+      "bytes": 11851,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_8.jsonl",
+      "sha256": "2aaa06e582fe82619f8b812cdec77d85c097e5da30a0f49b867d6b48dfd9f7e9"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_8.manifest.json",
+      "sha256": "4391562cefd72703146ec9de45cb23397ea01abfa6491d6611bede53416b877d"
+    },
+    {
+      "bytes": 12091,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_9.jsonl",
+      "sha256": "d907ce5676b7f805099ea5e16d17f30baaf1256cfdba0321daacc34ead2af56c"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_20/tasks_9.manifest.json",
+      "sha256": "e78356367759df2e78c08e728bf11324a6b51bed299e61a981065fa1495a17f1"
+    },
+    {
+      "bytes": 14013,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_0.jsonl",
+      "sha256": "a81f1a2198192bc16e8e3952a2182da06efb32b047c8e332f5a0c2ba0ccb7757"
+    },
+    {
+      "bytes": 20169,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_0.manifest.json",
+      "sha256": "b5ba117a330286485b266e2986f11376d5d502c7bb5bd5a30b04990de264b61c"
+    },
+    {
+      "bytes": 13527,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_1.jsonl",
+      "sha256": "0e45a542e1ecd2e460cf22642ff839b75a95d561bdad6aa56e28780490b91bc8"
+    },
+    {
+      "bytes": 20169,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_1.manifest.json",
+      "sha256": "682ecc3899143f578d3dfea4b7033b98c82a9aeb433a45e8b7a9f33a753f4f1a"
+    },
+    {
+      "bytes": 13336,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_2.jsonl",
+      "sha256": "e27762c3c17ab3f41d97337ddce14340772720022e318a9e0ed2abbda54549bf"
+    },
+    {
+      "bytes": 20169,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_2.manifest.json",
+      "sha256": "24bc298d5278ef112d073bda15b1937c6e42228bca06b0104e499c5d3ebe993a"
+    },
+    {
+      "bytes": 13260,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_3.jsonl",
+      "sha256": "3dacb7e5e918bace6b66432e12a754f0bbc3e8b4638239b2e987afec01151b39"
+    },
+    {
+      "bytes": 20169,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_3.manifest.json",
+      "sha256": "df9caf7c82b8307c157af0de840dfcc118abebf51c2615ab51d3a521726b8237"
+    },
+    {
+      "bytes": 13689,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_4.jsonl",
+      "sha256": "4d69c55f1233dd3ff312992ee65cb534c50d80fbbd7c0f7d8874c6beb5211880"
+    },
+    {
+      "bytes": 20169,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_4.manifest.json",
+      "sha256": "f70dd23f24a1813d2a862f812853dd3c2b9be8a0e9c9c1c233b17be222eaca5d"
+    },
+    {
+      "bytes": 13169,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_5.jsonl",
+      "sha256": "ac398759d39b2fe48a51e298992e2a5d75fb033873f29b75ac38ffc5da4f524b"
+    },
+    {
+      "bytes": 20169,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_5.manifest.json",
+      "sha256": "60644946cec026f037df9cb1e9a0698a88df1976c65a1fd49ea75b813636b7a2"
+    },
+    {
+      "bytes": 14240,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_6.jsonl",
+      "sha256": "896d0e69e4e98bc1bd8c46f9432737786940e17785e41327304176a9ba49de99"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_6.manifest.json",
+      "sha256": "40ed04320e48e46adce11130508bfb0f1a1fa332855e40beb72ab04038ff3c29"
+    },
+    {
+      "bytes": 13849,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_7.jsonl",
+      "sha256": "3bc33b93854ced790424954351065cd7549c17a8127d32ff9f7cf795a67a9e18"
+    },
+    {
+      "bytes": 20169,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_7.manifest.json",
+      "sha256": "7079fc47c323e3a402f15870a24c7276c39652c3424ddd2519c14cf23ad00ca8"
+    },
+    {
+      "bytes": 15180,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_8.jsonl",
+      "sha256": "1e97ed1e843d6e4810c65a72c0aa2321ccd432ae0d3ffbf0f3951cdff42a9265"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_8.manifest.json",
+      "sha256": "4e4c405d7b10105100a7e63adf21d22ea169ad47b586e4632c57249632638153"
+    },
+    {
+      "bytes": 13953,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_9.jsonl",
+      "sha256": "20bae33259d7612782dfb2284056e0122be64c20b72330a419abaff184ec93cf"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/confirmation/step_0/raw/smoke/libero_10/seed_27/H_5/tasks_9.manifest.json",
+      "sha256": "7bd5e70f34753a9f8d7a6ee4445a4a0c09dfccfc87a8977638b8c5f62e131c83"
+    },
+    {
+      "bytes": 12141,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_0.jsonl",
+      "sha256": "5abe6c8c7648dd3b5e1364c001d370ec39ffd396e2916b40668e359ba31d8534"
+    },
+    {
+      "bytes": 20366,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_0.manifest.json",
+      "sha256": "177c961a171f50ac2d3c0271cde952677ba4b289a58afb38da4a1d27aefdd405"
+    },
+    {
+      "bytes": 12044,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_1.jsonl",
+      "sha256": "3ef5299f3fe3010efd954656a72761ccbfe7b125ac15724ebf54d6d7eaaddc0b"
+    },
+    {
+      "bytes": 20366,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_1.manifest.json",
+      "sha256": "16bf2b8452acc138778e2fd1938cb40e0cc46848c7cc63bb7602cfef7d45c520"
+    },
+    {
+      "bytes": 11921,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_2.jsonl",
+      "sha256": "34a882f009a5be35c4d99d0202671557c83229047f439aa5e76961d22fe5e125"
+    },
+    {
+      "bytes": 20366,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_2.manifest.json",
+      "sha256": "6089647297a897d7e48de9a59227fb51f2c56a9abe13ea3433681383a8a06aef"
+    },
+    {
+      "bytes": 11948,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_3.jsonl",
+      "sha256": "705925bf155ac3aae76646b2c8a6b0eef3d7aedb195abbc7eb570e4d4d961f7e"
+    },
+    {
+      "bytes": 20366,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_3.manifest.json",
+      "sha256": "357bc03f3d1183c4ab9ac41726b916fd8370b6cff13f5b93a2ff3f8e131519fb"
+    },
+    {
+      "bytes": 12287,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_4.jsonl",
+      "sha256": "d84da4b65ba5d2d46f9b82f35aecd9d0237d9a7a9a1f8fca7e4ff83b22c1c50d"
+    },
+    {
+      "bytes": 20366,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_4.manifest.json",
+      "sha256": "bbf4807afb6e44b38f4365d0404d52eb8052b77e949c7354c4ca369dbae81405"
+    },
+    {
+      "bytes": 11892,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_5.jsonl",
+      "sha256": "1868a95eaa5b285688040d96fabe50554aa785a4251c3cff9138881d102e1696"
+    },
+    {
+      "bytes": 20366,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_5.manifest.json",
+      "sha256": "5ff57622ee46cbd23fd0c236f9f5ffc0347f69ea20ab4d1cfe37adfc0069c112"
+    },
+    {
+      "bytes": 12307,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_6.jsonl",
+      "sha256": "2fcc73d70568a4ac3aca4bd91845d1a42365d64ff2178fc899c227582600bb90"
+    },
+    {
+      "bytes": 20366,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_6.manifest.json",
+      "sha256": "4d0cd4d09987cb63dc3680c5fdbbf3031806825163ac23970782a7000c77bf70"
+    },
+    {
+      "bytes": 12031,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_7.jsonl",
+      "sha256": "d4f0229e6ec95840bf3b5a194df2dd705c46b4db85225376210424b664e35716"
+    },
+    {
+      "bytes": 20367,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_7.manifest.json",
+      "sha256": "bd08b2bd76670c6721c75cda4cb2541c920bf8c0c45a356bc78fd37c29bfd6b2"
+    },
+    {
+      "bytes": 11814,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_8.jsonl",
+      "sha256": "9e591e73c56ae9e4687f4a7d5891a38593cae303f8792ca22715eddc3f791a58"
+    },
+    {
+      "bytes": 20366,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_8.manifest.json",
+      "sha256": "6195164352c6bfa03311a7440a4bcb62aba104a7bb4c1ec70d66a037d4734a32"
+    },
+    {
+      "bytes": 12067,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_9.jsonl",
+      "sha256": "923155963b8aa3369c5faecf96fd80b95421e5465e4d2defe81ec88fe50acd21"
+    },
+    {
+      "bytes": 20366,
+      "path": "evaluations/confirmation/step_100/raw/smoke/libero_10/seed_27/H_20/tasks_9.manifest.json",
+      "sha256": "7b6f54d4ac8d9d4d08a8865e79b0a7187f93d96fd9ac4ace49c6336e348012aa"
+    },
+    {
+      "bytes": 11904,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_0.jsonl",
+      "sha256": "915db2c6b87030962dfc1cefd0a0c739c7b7cee773ba0cee417b1fe603a65124"
+    },
+    {
+      "bytes": 20374,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_0.manifest.json",
+      "sha256": "fb0aba22d94ddee329c7fd5d3f2b23e2d579f70874007637ea097fce638bcff5"
+    },
+    {
+      "bytes": 11885,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_1.jsonl",
+      "sha256": "7123a5f304941866d25f2a74952b7bdeec9c238bede6256abf8a7a1d224a5e7c"
+    },
+    {
+      "bytes": 20373,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_1.manifest.json",
+      "sha256": "410c29f4796847fdaee2bc6bc5ee7be48ec22a4b424cc3838ee609ea23dda6bf"
+    },
+    {
+      "bytes": 11652,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_2.jsonl",
+      "sha256": "d8aa5c4637d9d5c586b1a586afcdbb5e5babaf2e9bcbe9472f89d2d35f2cde3a"
+    },
+    {
+      "bytes": 20373,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_2.manifest.json",
+      "sha256": "be7150e4d1a4c316c5a9315e4a6d1adfcb8428f92cc68c83b13fd94e4150f805"
+    },
+    {
+      "bytes": 11847,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_3.jsonl",
+      "sha256": "55a3e1e16aa25b6500191bda7422be9acf11de0a2a5e3c268852a0e0a55c947d"
+    },
+    {
+      "bytes": 20373,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_3.manifest.json",
+      "sha256": "601b23487e02ac6161fb439908a60b619f872ee55685e19b2c0e18e87087bd5d"
+    },
+    {
+      "bytes": 12142,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_4.jsonl",
+      "sha256": "dcf19e13f2b210a0e7ce37c5090089d8d8e0e459a45f12733e5934b78a63ee1e"
+    },
+    {
+      "bytes": 20373,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_4.manifest.json",
+      "sha256": "68f8e8812cbc2817774106ac32594be073ace847e4b92d1f578c98c0f139123f"
+    },
+    {
+      "bytes": 11827,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_5.jsonl",
+      "sha256": "514048c41378b80c60b02f12927bb2e0760be33e319373802f53484767c85d35"
+    },
+    {
+      "bytes": 20373,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_5.manifest.json",
+      "sha256": "c6e303c9db25614bca96bac96ff7ec7c34a5df1d46ce17e493587e005984670f"
+    },
+    {
+      "bytes": 12395,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_6.jsonl",
+      "sha256": "057dffc1e251b9c17281a094bb23c11fe54c951a3f5a03b1f71b2e0122ca75a6"
+    },
+    {
+      "bytes": 20373,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_6.manifest.json",
+      "sha256": "15f1200a58a79b323743b3864a3705d92aea7d32bfc02c663a681a5699d2f2b8"
+    },
+    {
+      "bytes": 11990,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_7.jsonl",
+      "sha256": "a1ae4d7712633b24890e6f98ac5a6ea3b2b22bf6fd17ea3da50cda5134ce5519"
+    },
+    {
+      "bytes": 20374,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_7.manifest.json",
+      "sha256": "0196740b0f45658ad048c7eae2d76ef6c2ca7d2fc52a50ef66ca2646824035f4"
+    },
+    {
+      "bytes": 11847,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_8.jsonl",
+      "sha256": "1a5b320ffee3eb3bf58e77dd25e48dbcc57720f813d24055ef0c9f3ea11d92e3"
+    },
+    {
+      "bytes": 20373,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_8.manifest.json",
+      "sha256": "c59eb1463df9305737cee85b0c6fecc4a836ec9d6e7a8a4abce98a8701a04b31"
+    },
+    {
+      "bytes": 11891,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_9.jsonl",
+      "sha256": "a9f0488195cfd54c7855cff16ac8debe164513858412dabf504fd866bcca6d27"
+    },
+    {
+      "bytes": 20373,
+      "path": "evaluations/confirmation/step_500/raw/smoke/libero_10/seed_27/H_20/tasks_9.manifest.json",
+      "sha256": "f8f1c3989a90f3408bfd9793a913c21da50f6fb8a916e2a8836da2c13a17ea39"
+    },
+    {
+      "bytes": 6204,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_0.jsonl",
+      "sha256": "5cd280c72fd7c046b45584b53dcc52e521bb72b3169e9193a6cf904248a33280"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_0.manifest.json",
+      "sha256": "8c2512b7bc8759a55275813662d837fb057017bfc586be2ee38afc6a5bc1a232"
+    },
+    {
+      "bytes": 6052,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_1.jsonl",
+      "sha256": "2aa484f0ae0ff6de7e508835939763755ef2e77fde0bf748026e1e555d22dc21"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_1.manifest.json",
+      "sha256": "d8f3a8d32338d91a32335771dc27aa572232304e82a2ea938accda39d66b543a"
+    },
+    {
+      "bytes": 6007,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_2.jsonl",
+      "sha256": "d7c794f53bd16bb54ef0b0271e19cfa46c821e1df588c4bf813c833638fb9457"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_2.manifest.json",
+      "sha256": "99693f364d4aa27b804ddbaf8b5b06d147d38703a8efd3f2b0cd577ec0df51b3"
+    },
+    {
+      "bytes": 6003,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_3.jsonl",
+      "sha256": "2593293f8c1955c173263e31498f50b770f8749d30444d067e00c52bf9f6c2c4"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_3.manifest.json",
+      "sha256": "c495ec226f587ace1dd84e2a34157853c23570baa4c11748e36ad68024663c7d"
+    },
+    {
+      "bytes": 6218,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_4.jsonl",
+      "sha256": "37c4068be44734b509cd7de44fa03f77fe9189e1ff5f5fa080fc18c85fc2c8f2"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_4.manifest.json",
+      "sha256": "c45507b4a1dcd2e9ccb4afccf1638e5c553cce36a1849bf6d750bd7d0c680e1c"
+    },
+    {
+      "bytes": 6001,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_5.jsonl",
+      "sha256": "dd6b0053db42f76894070d9f8dc390a399a957e5801ebaec6a886b1b121f8e12"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_5.manifest.json",
+      "sha256": "aca1867ce5b752a504120a1e7edffbba1801a584a1557cc6f3303dfc90edcbb5"
+    },
+    {
+      "bytes": 6195,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_6.jsonl",
+      "sha256": "1d8fd085bdb319ef7b9ccf300ea10ba1331bf921239d0dfe8bf4ac1303838d13"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_6.manifest.json",
+      "sha256": "2ce5d7114784ae240bb7b6d324536aa7474263e645f692dd615fb1a2cc0197f9"
+    },
+    {
+      "bytes": 6048,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_7.jsonl",
+      "sha256": "5e24623e61d1299cdbfff4e4476d542a00b847951a1a6b9c45eb853398101f79"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_7.manifest.json",
+      "sha256": "64a1d5e071b674146b86d42f2d05d45e94d2d058c92c78fdd512e9bd3faa32ef"
+    },
+    {
+      "bytes": 6221,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_8.jsonl",
+      "sha256": "bf45af869fe0d4e1231fcb95747d6f6f3df9b29c1b30742b080a8f272fe4518b"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_8.manifest.json",
+      "sha256": "e97245e71c492b2a21943e13b704991e61dbea694b14f430986f56082fe68490"
+    },
+    {
+      "bytes": 6228,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_9.jsonl",
+      "sha256": "ec6eba124714bfbb85bb6e3d5a28a696803d98f586cef0a1eca117cada926337"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_15/tasks_9.manifest.json",
+      "sha256": "7959de8aee346543ebc5a23f61fbd4dfe8d147b5437d2bea04a5aa3855db8ade"
+    },
+    {
+      "bytes": 6070,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "83d8d77f50206cf71b770b23f5445155f56da3ae9dc336a4698e798a09f464e8"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "b6cae56abed84bd66e11b51ae6f609dc6673d7fe47dc34c521aa5667dc222f5a"
+    },
+    {
+      "bytes": 6007,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "78f9124fab4dda9852565f57b9e0e15171cd801a3b7c68fadd7aea8c23eb6fa1"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "2247d7875e0e48701aaebcf69761ee498a5ee025d17b5523823b1980c349b4e8"
+    },
+    {
+      "bytes": 5949,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "c9a2f8d04c3a8dd09c6de0ad0b78f9dc32957ec54ed3267a6de3177a883772f8"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "47269fd73f7e624d1aac08b6f9076149ab05006f09988cb03b57aca9e8e416f2"
+    },
+    {
+      "bytes": 5970,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "dc05b1ad52c3696198caf69b8e983c4be14a57bceb8669df61fbc43246c67e10"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "a30188cfba7f0e12b464959e40b300e217632c7ff925c20f072f2162b3ee17de"
+    },
+    {
+      "bytes": 6160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "f11b3d239f74ae1d5205e9ab2e01f77d0cc7fae35cd8dd7f8fdfc590444c2ce8"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "63a26d1e4c64327381cfc993c32a0b2c077d2845e41bc8088932c930704fbcd6"
+    },
+    {
+      "bytes": 5825,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "e30c6b35d992cf9dfcfee1a11392be29a7b1526a43c77aeb10bea87100890d80"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "651d4e27c2bb2f89f6a25fa6ccc4a5d09afecde901d190d36f043aff5ed7d5a5"
+    },
+    {
+      "bytes": 6152,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "03c71df92d9a4fe17c933dc93a7be6f6bed546c57831710ca3c39c18517c673f"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "b649152e605eb130b2e47e813f83cc90545d91245455489f192ae605eab3c6cd"
+    },
+    {
+      "bytes": 6007,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "1f33843a1fc5a61db199b425ee9425b44dfbca5a2d0e9312f6b2150dd6ecbfcd"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "95c76bd583bba54563fcb8441eb0d6e8e395d20a6c831434a066c1e62872c969"
+    },
+    {
+      "bytes": 5918,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "b9aac27164438006bf3399ebcc8f7a1af7f68934b7fdad018d4c5f077b2cad3c"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "e35bd3c14d7ab31279dd56df6040441c3e33ed84ddfd6d44297ea25249308f39"
+    },
+    {
+      "bytes": 6034,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "56870a5fb592fbd2413b9080d34b9871689257b99a6acf4028b9e82dd9e9e7da"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "a3a9eba05cddc734f27bb0a65001e7cfb7fcd6756b8699bed036369da948becd"
+    },
+    {
+      "bytes": 6087,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_0.jsonl",
+      "sha256": "12b87b656893de8d7c28f8b126ea1985c1443540c66f269e1b9fd00bfc165649"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_0.manifest.json",
+      "sha256": "d9a5d3172e542da351c0ebcb9ace78c3dccb32bfcb6cc99cae61d6ff4f996d5e"
+    },
+    {
+      "bytes": 6075,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_1.jsonl",
+      "sha256": "e962abcefe413f13dd90adca5a6b6b1e68e47c8a71c158ac0a7b703acc52b831"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_1.manifest.json",
+      "sha256": "2a46561a4bfa67ca6570fe8195faf274ed8ce88878e56cf13b253d0d55fb7d5e"
+    },
+    {
+      "bytes": 5942,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_2.jsonl",
+      "sha256": "397072235be79213869402b1665ba593b61ba9cc7b3dfa0ec13c150a268cfb86"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_2.manifest.json",
+      "sha256": "ee7ab13e67c6d76e455f094f967e51e87742bc29b7b3001c6dfe728d76c17f97"
+    },
+    {
+      "bytes": 6106,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_3.jsonl",
+      "sha256": "d4a5358e3c46f9792f5cfa5d5f974a351c9561ba885441e99c561269a0ad8816"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_3.manifest.json",
+      "sha256": "4e485f332ae3555b65f94b7a422e7c694311438a9519c9169c5ff12047cc0e29"
+    },
+    {
+      "bytes": 6219,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_4.jsonl",
+      "sha256": "87df15f9b23f0c0f0af49eee3b9d002c4665bae78900fe643c9c6575ec0f4926"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_4.manifest.json",
+      "sha256": "7601d92244705667a5c3a2f03d40e360f95dfd2d0c214331e144b50f77254b72"
+    },
+    {
+      "bytes": 5984,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_5.jsonl",
+      "sha256": "bf8a13c564078e01fea729e785faf72aeb76b8ee4f756a01aed0af0624d39cda"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_5.manifest.json",
+      "sha256": "f05c332c1609cc42deb377bc137d5aad746ec7eb650c5158b7b9885fa29410bf"
+    },
+    {
+      "bytes": 6162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_6.jsonl",
+      "sha256": "ba1f373307bfa4512794aa77aec35e4775682209a9c701641b1459276d10edd9"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_6.manifest.json",
+      "sha256": "261ae5b63b49ea017f77310a40273be8ce6fc17bcc321792986109e692a42c39"
+    },
+    {
+      "bytes": 6083,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_7.jsonl",
+      "sha256": "bc559baa44518c4b260cbcfef67c1ce3f9027c3fad08f88fb0b421d3157a82a4"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_7.manifest.json",
+      "sha256": "172b83870de47314b1750871f1f6c1e557242a75a66d200b4417d46dc05bdd7e"
+    },
+    {
+      "bytes": 5935,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_8.jsonl",
+      "sha256": "aaeec5e93a5ae41a54513fbb199a9965cd29e20cd31b5f456e478f01effeff9b"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_8.manifest.json",
+      "sha256": "1d85e0bca34081c9f8e8c35b525b303d5d94ac1466e94d2f1d9bfe461a633b45"
+    },
+    {
+      "bytes": 5983,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_9.jsonl",
+      "sha256": "309a61e1217ea635049aad17502cfae86bfd059dcacff8c2325b05a42239a334"
+    },
+    {
+      "bytes": 20162,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_25/tasks_9.manifest.json",
+      "sha256": "497b675ef9b90c5cc1c6a722fb0f3e1b860168c9e0f9a6634c7a90c92e9be2ce"
+    },
+    {
+      "bytes": 7077,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_0.jsonl",
+      "sha256": "8bb62d254fa61ca394dc189bf82142c90a17485f03606dec98a158e5e243e78a"
+    },
+    {
+      "bytes": 20160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_0.manifest.json",
+      "sha256": "76635d098919bb54327d50c29483277645d26b577069d796b4d8d3585cb79e39"
+    },
+    {
+      "bytes": 6949,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_1.jsonl",
+      "sha256": "6af05f214ab05e1faf253909ea6327a691341c61723e6ec3ed82b2d389f8a96e"
+    },
+    {
+      "bytes": 20160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_1.manifest.json",
+      "sha256": "54c5e6aa27e55a807e5fc048039cff2c1c750abb8e845b5b9a619bafd0fabaa5"
+    },
+    {
+      "bytes": 6625,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_2.jsonl",
+      "sha256": "c311b4c37664e12f3843bc0b4697b1ea2fc7b829bdefdee6382c107343715f8b"
+    },
+    {
+      "bytes": 20160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_2.manifest.json",
+      "sha256": "60792cd14993e1966e9f9d8b9ab7effb46dcddb687c53588be455772d8e7d0ea"
+    },
+    {
+      "bytes": 6651,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_3.jsonl",
+      "sha256": "309d6d950cebabb3405835b87579b0ba6253798473cc816daf348341f8d4a3cf"
+    },
+    {
+      "bytes": 20160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_3.manifest.json",
+      "sha256": "1757a9d484a79c70543d8f346f8e0891483a4805e350f2e85d84bb81d099f1ff"
+    },
+    {
+      "bytes": 6841,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_4.jsonl",
+      "sha256": "60971c1eec001016f272142688eef0f70b3948ca61fe6e9b07df427050e85d9e"
+    },
+    {
+      "bytes": 20160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_4.manifest.json",
+      "sha256": "d119eebc751f8e3e52d110045431c0657f0d48b4d5f9f74c6e15e34ec2a1d760"
+    },
+    {
+      "bytes": 6300,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_5.jsonl",
+      "sha256": "ceba994377a383b45292b38f4f45fabe78f5384660590e67d2ff6a166bd179b2"
+    },
+    {
+      "bytes": 20160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_5.manifest.json",
+      "sha256": "9516fe60dcf01194877682d663b62096dd5034b69df99ce9eb62b56361f20441"
+    },
+    {
+      "bytes": 7229,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_6.jsonl",
+      "sha256": "12017212f769ac5899e6c17b30ef013528076fcf6faa64988af3b9494f84251e"
+    },
+    {
+      "bytes": 20160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_6.manifest.json",
+      "sha256": "87a659c435eabd1a38b7118d8e4c3d6a9ed6ec2e1297e2c484d3173ebe031f79"
+    },
+    {
+      "bytes": 6897,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_7.jsonl",
+      "sha256": "6b4985d1860de5ff34d939ec0d4f296eb8825eedf26a50ffe9b06908774a08ef"
+    },
+    {
+      "bytes": 20160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_7.manifest.json",
+      "sha256": "1055c044b49d4150ee223d02fde90052bd752203f4b38e19c275aefb8a52c238"
+    },
+    {
+      "bytes": 7698,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_8.jsonl",
+      "sha256": "e91de6e12400cc434394599a4717d2e81e2be1d4de66065a73536124e00b80e4"
+    },
+    {
+      "bytes": 20160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_8.manifest.json",
+      "sha256": "7e1090dc0fae8d54ad7b2c0af2c2645cc18bc11b66e06a3d056e04c1f667e894"
+    },
+    {
+      "bytes": 6985,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_9.jsonl",
+      "sha256": "f25705afe8ad8fb65047aba44750033b2e48d5188fbdae542368e27b2242da46"
+    },
+    {
+      "bytes": 20160,
+      "path": "evaluations/screen/step_0/raw/smoke/libero_10/seed_17/H_5/tasks_9.manifest.json",
+      "sha256": "940f3513e2f7e2ecc11b05cef5db4b319d30e0e174154fd1dc02c9d8221f1523"
+    },
+    {
+      "bytes": 6046,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_0.jsonl",
+      "sha256": "79a96526ee667a26a70f108cb583c8b0cb2740818af8d9e09cc2f89af4c05355"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_0.manifest.json",
+      "sha256": "51bb28c7c0867b508fa5ca08ee976ee18b16a69cda09b2c015e44c082ca00e3d"
+    },
+    {
+      "bytes": 6012,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_1.jsonl",
+      "sha256": "74bb96a6f65fdca2e10e57a2d13c7b780f54b84be46b1dfedad0d26918122f5e"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_1.manifest.json",
+      "sha256": "c4e12ce99a9ab69abf0c8ec318b34ef8772b3d0ef5ce637ad8402f786a5479ed"
+    },
+    {
+      "bytes": 6001,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_2.jsonl",
+      "sha256": "ebf9c30251e973dafe052bcf275688d434eca0271e755492a3e33ded41ed6618"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_2.manifest.json",
+      "sha256": "bf80db5efb2f844402c06d16879ac597a93f5229772dd13256c52a71862d7e90"
+    },
+    {
+      "bytes": 6027,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_3.jsonl",
+      "sha256": "0ac9715c252ffbe42a0ab314fd662d9c9932605a681bb3789e755c0df1e3face"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_3.manifest.json",
+      "sha256": "5d92565448b8ef40f43cbbdb7d5bed81267caebefd45b43666bb784a064d09b3"
+    },
+    {
+      "bytes": 6115,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_4.jsonl",
+      "sha256": "41cb6e8edafe4f8e9711d12dc8f445fb78687e287fae5444a0228b1aa2ea4ec8"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_4.manifest.json",
+      "sha256": "06413eed8157c7121810a96feead87f91ae9bc53b1bcdf558aefd6a1bdcb5bf1"
+    },
+    {
+      "bytes": 5866,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_5.jsonl",
+      "sha256": "60e81e3176ed71055fe171c90e1ebd179fce92d6f50967a43a38a551087a9d63"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_5.manifest.json",
+      "sha256": "15fe5ac7e9e57f453d1c5aba5a9f170be095970e651318fb0ae32ebf43e0a88e"
+    },
+    {
+      "bytes": 6462,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_6.jsonl",
+      "sha256": "4c653d1ae5e8a2fc11bec86c6b3fd93f7d8e459c7544921c82c17810e67cdf87"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_6.manifest.json",
+      "sha256": "69e59b7c040db24e05c4c0e3b34e9fec260e9c1a337cb991f542b035513ed9ca"
+    },
+    {
+      "bytes": 6034,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_7.jsonl",
+      "sha256": "848a499beaad5e05ad0744fd314b3aefe4a779a37f8f5d1ceda0f00d520ae156"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_7.manifest.json",
+      "sha256": "8739661aaf9ac15a28cb48465eb55a71e0bb283d87e65c8abb337b6d4315848a"
+    },
+    {
+      "bytes": 6268,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_8.jsonl",
+      "sha256": "3e2304463ac9e393b2139a506b0fdcbd36332d425b6d86fe85d2fb1bb8506781"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_8.manifest.json",
+      "sha256": "0d60decbae547c8250697b377f8d6658bcabc8ddde736e34f341ab73aa801e88"
+    },
+    {
+      "bytes": 6131,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_9.jsonl",
+      "sha256": "79690e17655358060df64868f5ab77dd88500017c47a2be4b97e0244541cfd28"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_15/tasks_9.manifest.json",
+      "sha256": "019bd40ac7f170b5e95ce701b2808f7b2b538a152128ce73fbdc32397bcb46dd"
+    },
+    {
+      "bytes": 6063,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "6ec0306472282263214c8d953c831ac2aa17838d44578b7d6b0260156376f8c9"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "12579c5842197a65cdc48acda377e9132237dfa13311e167bf2036aed80d60fc"
+    },
+    {
+      "bytes": 5968,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "59f80d57b30b6fba9c8932c6405f085754e13435b5582929fc7f789d84f0a236"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "e2d0c8a49c02868dfa9d1bba3686049041b95850d6e90a2d86fe53ae9c395cb4"
+    },
+    {
+      "bytes": 5931,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "cac077f663bec97d9b21a8096ce209a1defb046e7e5bd4fef9b33852c0cdd8a2"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "f9e3c018c6105205d8070343d7f59c35899cf6645553707ebbaf86129bd3abf4"
+    },
+    {
+      "bytes": 6018,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "04654d3d0140f2955cc46fa321af6f51f077cbc38858f7cda3f78989bbe5ce7b"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "0d4ca54537e610ee44c52bfec4956c9bf9776872e4c2b731bce3ecd3e079c2f6"
+    },
+    {
+      "bytes": 6196,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "e0c744973e634917400e262b38ab3f5e4461b5bac9b9b9071822bb0c4398b436"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "9bb58e4e8e0f472f21bbc2e643ad65de5ee8a4f17095617980b929e481a36e83"
+    },
+    {
+      "bytes": 5965,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "be707eb551fcc4a6c37a9a468820423f9cad6d966b46c45e5491b46d53656029"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "86971414ae39ae9f3c7ea51781d2379e7e776d969acd9bd6c6681c4ffa54ef49"
+    },
+    {
+      "bytes": 6190,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "03ac80596198f8dbf233ddcafb1a99a36640b7fd5d6e64d313f9a6e8232e6215"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "88fc9f3121aeb648aca705dee7d9c0ac8df9b799b05d47d0ac5444ba68fdea67"
+    },
+    {
+      "bytes": 6042,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "50f3a049c8ac190ecf7090d4f737393fee84ff7b233e087b01403e7455a50477"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "1e57e8221810daf2eadf0d0f313fddf3bd6b1b8f0ec732f12d88f8ce90d6b649"
+    },
+    {
+      "bytes": 5914,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "bcffd07075e3e684b2cde0e40c28ae7b4fb8752f3be2ade6c03418b3607334af"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "cded82aee0c9c79a60209f66354e3ddadf7deb0c5fc186af085ceb514905a984"
+    },
+    {
+      "bytes": 6012,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "f3b7f9f5ddad22d1034123ab661b7c8ff1a632a4366e6f8f17de5b4b3e646f49"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "265311961744795ba75efc249d69e04fdb6527a77545666ad6eb95380510767c"
+    },
+    {
+      "bytes": 6084,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_0.jsonl",
+      "sha256": "02caa2724e4e2ba4928c16660818ae9bd03deea0bda3b472ab03fe18f84247f7"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_0.manifest.json",
+      "sha256": "1233eae91e4d79de026d51ab407dec45a432d2ef9ce4cab94637f57fa17db15a"
+    },
+    {
+      "bytes": 6075,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_1.jsonl",
+      "sha256": "0a72d72b54220017d2e39d3977064283343bbb14fa62be213a52fb6573551dd7"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_1.manifest.json",
+      "sha256": "965ee6dc2cf3747a0ca93d147b94643ab27acbacc36a1f3ced0bb9d3f4fff8ff"
+    },
+    {
+      "bytes": 5943,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_2.jsonl",
+      "sha256": "90b9deb164f0f03a15860260c3a755f3cdac13465f794be08f21337dfd5b31cc"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_2.manifest.json",
+      "sha256": "e6c3f54d712f3cdcfc777af788b72db756dcee80132751c4a60f09dcdcb6d3fd"
+    },
+    {
+      "bytes": 6041,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_3.jsonl",
+      "sha256": "b860eb58f6a69dac16f556a6daf5394d95b868b0829a55ee917e56afde1ee357"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_3.manifest.json",
+      "sha256": "4642d553135aa36bdf8ed0c7d5018b1b260942d352350e8621f2094fcf8c49e2"
+    },
+    {
+      "bytes": 6135,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_4.jsonl",
+      "sha256": "de9d3ec0a368c1b7e843c167894d90c7b9fbf1e0da0670946e2eee42fd2907b3"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_4.manifest.json",
+      "sha256": "f517835f9e2990348b0ee5be156d8112c4a47d8988e1c2bc8094b7b6b2da567d"
+    },
+    {
+      "bytes": 5905,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_5.jsonl",
+      "sha256": "87b95f4f47d635d585fd7b6af7816f09d59524c8c0183524a5f4f44bf37a467f"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_5.manifest.json",
+      "sha256": "6aeae160481ad6a0bdd457d15bcb2d696d64f99f38674cf8b31458b33800198f"
+    },
+    {
+      "bytes": 6213,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_6.jsonl",
+      "sha256": "fc3d1c1143f7e698492b2cee5aeaf83fc00c09da6c149171be9156e2bbf8839d"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_6.manifest.json",
+      "sha256": "3e3de0bf8c45fb015ae60e0fee149effc8bdd0a2ef33bb02b28981c06f07c759"
+    },
+    {
+      "bytes": 6055,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_7.jsonl",
+      "sha256": "01f444d04725e16df6e9361b48615faab59c7d3eaba492d794a3767195d3b53c"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_7.manifest.json",
+      "sha256": "c8855477e29c6a3f73391295770d22ae83cc05a9b3384e48df26d7ba4d084f46"
+    },
+    {
+      "bytes": 5936,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_8.jsonl",
+      "sha256": "8f3bbce514db1729597119854aeee44add873b6d75f60b3ae01a61cb8d11f6b1"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_8.manifest.json",
+      "sha256": "0e8357783a991244c3a8df835fc8413c518a8d8f0bd24d25bb151c0811f5d74f"
+    },
+    {
+      "bytes": 6072,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_9.jsonl",
+      "sha256": "a790adb69f8246cc2c86c9e778303a7d2a2f6337564ac7513011278ee5173d75"
+    },
+    {
+      "bytes": 20358,
+      "path": "evaluations/screen/step_100/raw/smoke/libero_10/seed_17/H_25/tasks_9.manifest.json",
+      "sha256": "f68c9c49f04e93d2b8f8f07ae9c04cf51d4c0b9b4db77d8911ecde7aca598f42"
+    },
+    {
+      "bytes": 6069,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "38dd67e6bd015f6e3b515b955737a976626885c9982c6a564e300a73384951e0"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "c9efcb68bbde589be5f5421813bf64c5b4822292fbd734375634dc5b2857f4b8"
+    },
+    {
+      "bytes": 5995,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "f75bab61ec09267a02e5abc2d66e5447862617834232c622e55964829c4f12d8"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "e35073ceb5d3a00c0b81c0f153b14ea61aedb5ba3fa072a9d0eede91f25fe8d9"
+    },
+    {
+      "bytes": 5793,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "9d6c348194783357514ec320e291392f47cf975c51f180d08e39c1d063eb0b1b"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "bf1f6f836d40eb60657d2d1b5b99e838da460fc0601f9e3fbe5a34528a31340c"
+    },
+    {
+      "bytes": 5912,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "b3a215975e4467c8daac845307ff7d29fe5be8437e6118160199ed4a8c32e33a"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "2e32ad584f29688bfc9045a8d23bd9fd837c13bb29baebd7500f31e2038fd8bd"
+    },
+    {
+      "bytes": 6101,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "122a988b60e8eabf24c03ecc18cc36433642275768c3221565480ade52c0050b"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "2baa2f1f484e99ebf1a54a470cc6112b0612e6b02cf1ecb96df49faf9cd11b82"
+    },
+    {
+      "bytes": 5893,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "be51c441e0a2fa8ecbbc8dc4d64a0f1f481c7db24bd1256c47c8ee287f01660c"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "2ac94f841f189a4b5615f6047cd2f6e4bd99aa7af3253ce42391fc6c5b9c3070"
+    },
+    {
+      "bytes": 6216,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "635d6da7879947067a8bc972d942ce0df063e68fe3e1dab5b1f2327847d476e1"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "87db103335de58ba133820d2237df9b25961404caf60215e26668f7a7e01501f"
+    },
+    {
+      "bytes": 6004,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "648ea57fca00ac6f17f43c1ae90f61167c398d011d706c4c50bece48ec576c36"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "d6e683cd9f684cde2530e7a757add4e97822da3f2637a98f6315b0cb8bb98923"
+    },
+    {
+      "bytes": 5913,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "b01ad55e3eeb23377a2fe4f5845d6dc74a3050a083aa2b004587065a355126c0"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "9a347a398d1a2d177b0e24e2225a1e3b087f9fd3d6e849bdf1c1a6f80b827d59"
+    },
+    {
+      "bytes": 5934,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "1dd62cca6d44689d1437f33cccdf338cd49ec7629387a65cc838aec1efdcd25e"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_300/raw/smoke/libero_10/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "6bc321983c6e22da73fdadbb66a334bd1b723ba0b99b89f880f3a42bcdb73c1d"
+    },
+    {
+      "bytes": 6014,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_0.jsonl",
+      "sha256": "22fea0d0dcfe6bb24b1c23ac7bb772aab9b34e07abb6a4287e6cb9e6066fdad0"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_0.manifest.json",
+      "sha256": "9dc19a096cb85610cca0919e6ba4876ae07733d6152d29986eda34e2f22e6118"
+    },
+    {
+      "bytes": 5970,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_1.jsonl",
+      "sha256": "c866d7d84b9f895dc86931312f72873087e4040925fae17f724edb3c6c142f1e"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_1.manifest.json",
+      "sha256": "75ec16307f6194183afdb133b8975578e8f693a8df57135890f01e96052d0d43"
+    },
+    {
+      "bytes": 5984,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_2.jsonl",
+      "sha256": "272e8738098128f8cb2643007cbb962b29e08d37f083e43ccc69ff1d1269bdc4"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_2.manifest.json",
+      "sha256": "5d4c43315f6ceaaf6a92564559bfadf5817a3fbaef6b1a1b56e9ba6d5bedf61d"
+    },
+    {
+      "bytes": 5986,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_3.jsonl",
+      "sha256": "24a2abf338a3823efca3215ff1b88b1ae36f3bb766dda5b59fdd1d2efe8bc567"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_3.manifest.json",
+      "sha256": "650a5648b8d85f1dfbbff0d58f8726fc90e54959637255c133988a4f07f4939f"
+    },
+    {
+      "bytes": 6103,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_4.jsonl",
+      "sha256": "ce99be7c06e1a7ab176c010906f01675d4649c3c79a1f7fff2c9460da1c8ee4e"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_4.manifest.json",
+      "sha256": "4a1223afdf01de252a8ec650785c943f6aedffe3b63636c75966869ddcc1dc6a"
+    },
+    {
+      "bytes": 6036,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_5.jsonl",
+      "sha256": "b53d9c9ec2ab899556ac07fad0f8719b06062342a1ecb748f29bed14d3344a4a"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_5.manifest.json",
+      "sha256": "a453d6139385d63cd5cc48691684e89f9fc46248cb7b817ea65e59746eced95b"
+    },
+    {
+      "bytes": 6362,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_6.jsonl",
+      "sha256": "228c9f61f50ded88c6796d822c37e4c771e4e528c7c42449441f9b4e4124e21f"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_6.manifest.json",
+      "sha256": "eabff70f79f48f45cd6eb57dcec5356adfc41cc234a51e7adb883fb2f4769f7d"
+    },
+    {
+      "bytes": 6029,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_7.jsonl",
+      "sha256": "41c432bd6905e751902baff6ba7f8571eb772c48105e304a1aedd6b0b75e4064"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_7.manifest.json",
+      "sha256": "779ea0bc12621eaef0fbe7115c23d6165c967e0ce5f4aac41bdc26a00a85013f"
+    },
+    {
+      "bytes": 6200,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_8.jsonl",
+      "sha256": "a56ebe494970094f6305df265dbd69932e8714fcc1ee9cf70d49605d00c6798b"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_8.manifest.json",
+      "sha256": "4ccfec1ee208c55e31947cac8bf5bcd77d21f4c3e9178fe6dff66342a3b1afeb"
+    },
+    {
+      "bytes": 6003,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_9.jsonl",
+      "sha256": "420149cf514d0f7452c59572246cea049666ce26ef538bfe0630de76aacb0101"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_15/tasks_9.manifest.json",
+      "sha256": "a4cc2c1d23396e4147850381e804492f39e4a750feb7dad42c5b587887770507"
+    },
+    {
+      "bytes": 5987,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "252a4619b1fafc79dc235f8a263c6d8bc7d1580252c62226969ea1a84ed0b1ea"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "369cbe3fce8ba5ca416074ecfd08445590819a168890b2fae4958c6f99beb57c"
+    },
+    {
+      "bytes": 5925,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "755472af2fbeb26ab54774e6be64f9e064c0b35904c7ff616bc342a76964f552"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "20eee38b301239f23dcbd73252c87d439b3f265cb71ce01a0a4ab1e5448508bf"
+    },
+    {
+      "bytes": 5806,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "011d6198881be9dcbbb60167c2dae1935acbcaab75a9cacbcc00ee516d2de0ae"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "677a2d79e73052397b778cbae9cb30bd707272f3c869c11276300c0c4777bf01"
+    },
+    {
+      "bytes": 5927,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "593e847811f5ecea3d679fce622e60d416136f507f8e7634872c06c7ba20d6cc"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "4aed27a86f1a440b56a48c4049336994739995fd55e017614b8552a497a376ed"
+    },
+    {
+      "bytes": 6122,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "3753c4826328ca9a3a8bf82bf8defc312ba363d6f2745dd350a4692837c932ab"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "4afc272590b2d2af1e7b3dcd20c2bea10e9072469888e859fdb0d0e212532e77"
+    },
+    {
+      "bytes": 5895,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "dd576a6e5afdd9c6e41d0089199e9b4efb909d1b99dd4b917d2ed898cd954282"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "2fcb5ad363ec10c252e9b9a983c1ad8fd2af8dbfae3e1cb9ed679c9e2642f1f9"
+    },
+    {
+      "bytes": 6188,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "220c7357ebff5f350444cebb92885aeba56f36d9930dd82e76b5d76e33201bfd"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "c751e1196036988ca7bcda01ee665a4b338ce494c6b1ab53fecd7070e2f670d1"
+    },
+    {
+      "bytes": 5964,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "04996f677588224c2f5f44bf59fc15a5d389de9aa242930c3279f6d279e622b7"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "f86ce6a13e4623158ebfa577d4f302b0a73d9dabb37aa5e243a0f8fa7442fc4e"
+    },
+    {
+      "bytes": 5914,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "44a5c06c1161ed1b5c13876ae5e22e4d4873bf314f5d1d5016d349d96c0ecbdf"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "d28440e97859e2fad28da2631ad75586632b0cad66216fdacca20e2c7fc6010d"
+    },
+    {
+      "bytes": 5948,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "3125dc09bcdd7fb2e07fcf0da63169bcf75255064b8e7a845e44240d3d7360d5"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "ff4909336dcce573c6da7b82d52b048633a8baa7db84081c57898219550d3ff3"
+    },
+    {
+      "bytes": 5969,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_0.jsonl",
+      "sha256": "8b815c26ee0e24b74ce51a691bffa294500d27b319e821cb9eabd541202f120f"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_0.manifest.json",
+      "sha256": "f74aafcca74db368fceffe4357e2c255dbf2321c08a316291e5b5deebfa43c26"
+    },
+    {
+      "bytes": 5944,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_1.jsonl",
+      "sha256": "c4195543a58e95a46b8ece8494eb989083c617d56042803cf476faa02a7a1962"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_1.manifest.json",
+      "sha256": "54a1c7d4456430784d1d94cd3845f3f520a63ec500014f8e248f76a2c2c90ad7"
+    },
+    {
+      "bytes": 5896,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_2.jsonl",
+      "sha256": "243e5ec3ad9b62ecae663eae989a054dfee3c7452bde74c3b8cb0e7b896e7253"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_2.manifest.json",
+      "sha256": "10c782f5e777f86f5f7c35eb35794e12f59149f71c014b8494861ae6824e5d3f"
+    },
+    {
+      "bytes": 6057,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_3.jsonl",
+      "sha256": "faa5f66d3c2ae51f4b313dc07e123ea3fa548345e8bef407cb420e250d98d505"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_3.manifest.json",
+      "sha256": "18a3c5ce5bcd76817871e94d6996d662f50879e7a2d19a31ba6d72687a0656ff"
+    },
+    {
+      "bytes": 6144,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_4.jsonl",
+      "sha256": "159b1707f1ce7a4bb5f010f1089c1b24fd1336a5df00054eb160bb179abd997b"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_4.manifest.json",
+      "sha256": "53f6d80597f2c41b2c8a235cd26576d979c810bc27c3c0701a2f9bd1a4d65356"
+    },
+    {
+      "bytes": 5916,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_5.jsonl",
+      "sha256": "89d212fa74f98293cb10d918bf4754675cd29c6c019f644d3c973005de2c2186"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_5.manifest.json",
+      "sha256": "53ed1096c547797facdc1e24b10b17a7993ac7067b87c7f227943ef6612f93ce"
+    },
+    {
+      "bytes": 6197,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_6.jsonl",
+      "sha256": "a7e996aaaa485cb6c455eb743e2dc207e26a51d1caaa0f740dfdac8c8a9d53b1"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_6.manifest.json",
+      "sha256": "d5eada402baf9e721b2577efded45badc8fdbe7de8d20849431cbad5351c53e3"
+    },
+    {
+      "bytes": 6001,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_7.jsonl",
+      "sha256": "76502fce8b323e5cf6b5c268aad223ba53400f9c4c334024d6de59ba90e3e215"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_7.manifest.json",
+      "sha256": "77922a788949a61d9502e8503ad904aa28bde7aab7f92274c0478d9656cc821b"
+    },
+    {
+      "bytes": 5939,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_8.jsonl",
+      "sha256": "35df73d307d79230ba826bfb5d72ae83792d5cd10ccf4c4543a73cb47a912dce"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_8.manifest.json",
+      "sha256": "ee61e0a34e1c369cfbd1e89072477fa5e56e56be23060f98461a7cc7016d89ac"
+    },
+    {
+      "bytes": 5984,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_9.jsonl",
+      "sha256": "be3e7d4c4290b4e05bbfee824aabd33398f29b61594250dac3d98697c97832af"
+    },
+    {
+      "bytes": 20365,
+      "path": "evaluations/screen/step_500/raw/smoke/libero_10/seed_17/H_25/tasks_9.manifest.json",
+      "sha256": "16f60729f9ffc1c56d3bbd963c4753d08ebe5312764b1faf937f0cab2ddafd44"
+    },
+    {
+      "bytes": 3404,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "05e563e87c41dc9f0374918f1a588d36ea8bb529a8721a7b880486006aaec020"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "6db294d58bb229f34d55e304f37dd55e399abdacf27c801484c5a1f62ec9d871"
+    },
+    {
+      "bytes": 3321,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "5a3821b1a1ce70ce8efcb43bdec39a71d5d716afb9fe053a8ea913c18e4f6322"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "42cbf5b51aa94f30fc3730b2b0865e605e59b504d567158e3452f046d2e6001d"
+    },
+    {
+      "bytes": 3431,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "9ae17769c2f78581c7c97f40d2b51d57369b0ac5be7c2dbe1d497b3d66d45608"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "452ab15114b84353284fedd08e7e4d0357fc139b551583c6620e0fb2c0b1ac8b"
+    },
+    {
+      "bytes": 3422,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "8d5df4c8b7e10c485107156e904922ccae4f1131e3327935bc9d104a3c2eb6fd"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "e3f65a79ce6cb67c78f66d3b8f463f67e76c5a5a91c4340f670afa6cebe4e3fd"
+    },
+    {
+      "bytes": 3345,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "98362d96105751ae53cb28b4756ef061dee0142b8812434a8c4384f5782de2b5"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "cd886e529c7d4e5ebc8782aea74a8cea1798dd8c49b1bcfe9b887ec83d23c135"
+    },
+    {
+      "bytes": 3365,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "1e2db1acf0902140b9e601f0c354ac92def2e1c3c13790dbf8aa000039a1809b"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "429a6f2ce4685a814456648adbd8c641e3c0bf0eca3f7a982f502ea6aef2ff35"
+    },
+    {
+      "bytes": 3396,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "7a01ee406dd49b3015dbecd48c6e044b24d50d570028b6b96abdeb2669ba997a"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "a308c1c9261d830618e10487e69c544c1d3ea953f982f02d2ba6f3bbbe5f79f3"
+    },
+    {
+      "bytes": 3249,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "f25f77a04e7e1a1e2beda70233df43582c051fb7b9be7801965793bff16c79f8"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "7ddedf9bc2b134cf87353d44e4930834dd0484b9a93ddb9ac86588ca67821966"
+    },
+    {
+      "bytes": 3384,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "86a814dd30692a748bed713fee7a310272b9d9c6c80ade15a6f9145ded59e503"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "752d230016fd83af1c8bef9cc7a6676da2972dc3974c4141f5f0afdcf446e3de"
+    },
+    {
+      "bytes": 3395,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "677686bc8b2a0d3fcda09b3d4d0a88ab68057ea13b3cc4882877aa40b98ee0a3"
+    },
+    {
+      "bytes": 20168,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "667602f8fb5959dc0db58f4940f70dbeffd9eb93d8464e15432397678f384239"
+    },
+    {
+      "bytes": 3577,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_0.jsonl",
+      "sha256": "625282cb10da91ef13e3041b9d23036c99c2e5f847f974e1e36c4e919c294ea7"
+    },
+    {
+      "bytes": 20166,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_0.manifest.json",
+      "sha256": "5f6dd4fd5c7ad2a70890125ea2cd388f808864209b3f89ce54a75289861ceca1"
+    },
+    {
+      "bytes": 3399,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_1.jsonl",
+      "sha256": "337fa008fc1995015646c7d639ceebe06cbb2911675cd645efd088ad6d2548d0"
+    },
+    {
+      "bytes": 20166,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_1.manifest.json",
+      "sha256": "27dd24fbac1b6b2a30b5eca606016683362e0a25793738e91cc010613955e2fe"
+    },
+    {
+      "bytes": 3514,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_2.jsonl",
+      "sha256": "3e0bd83aece4d54deaa315ba90f964375cb7e932614e90c762b50689b61466b1"
+    },
+    {
+      "bytes": 20166,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_2.manifest.json",
+      "sha256": "5dbce28d4821adff5b33e9e9e5f234313dce4d6b01be221ba50c0fa5b25d9738"
+    },
+    {
+      "bytes": 3895,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_3.jsonl",
+      "sha256": "de7259d622e755083cf3ca47a44960d1e22f487d0cd1e5209450bfe4c788627e"
+    },
+    {
+      "bytes": 20166,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_3.manifest.json",
+      "sha256": "da943592b3e6ced18151e9811e49eee2b3b07def5c5e0cace857cf41fca92e02"
+    },
+    {
+      "bytes": 3475,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_4.jsonl",
+      "sha256": "4f6a3e6ac3a59a4e8be24048e25b00ec658f40182990023cb62cf9699a75c0ab"
+    },
+    {
+      "bytes": 20166,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_4.manifest.json",
+      "sha256": "961d8edd22ca1aebb8c8775f70d112a16663d2740e147f72be5b5b295cd38f1d"
+    },
+    {
+      "bytes": 3631,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_5.jsonl",
+      "sha256": "6e0dae1bb700907fe4841a95f28df149400382cbab648bce26f9d7a692c5161a"
+    },
+    {
+      "bytes": 20166,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_5.manifest.json",
+      "sha256": "d77e33d324bf6abaf8e9eda526b96a1487124ffa078542642e81d631ce79069e"
+    },
+    {
+      "bytes": 3448,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_6.jsonl",
+      "sha256": "af1c8bdf133fefa0714cdddd0a2d40be01c96b78073a47caa447a13271aa3dd4"
+    },
+    {
+      "bytes": 20166,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_6.manifest.json",
+      "sha256": "a7904234b6dc23dd651ebc00ba028f3d55bdfb0bb72be9f7ae714494d9c99c17"
+    },
+    {
+      "bytes": 3328,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_7.jsonl",
+      "sha256": "5e8ce9f45bfa18fc067dd3b913087cf585a39eecf000aaf3da5289e7a1de6885"
+    },
+    {
+      "bytes": 20166,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_7.manifest.json",
+      "sha256": "4f122676b708f0a4a8c631d76aaaa9047c9c418f85fb200d3a556c51958d07f1"
+    },
+    {
+      "bytes": 3411,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_8.jsonl",
+      "sha256": "b4c692ed95c0abe35a79ece4ea461fbd7b7cd508a1194aec75a9a45fb3b4deb5"
+    },
+    {
+      "bytes": 20166,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_8.manifest.json",
+      "sha256": "f66d620a11f1bbe2160b19f18abb7602b151cf6927533b1458f575c6d8984906"
+    },
+    {
+      "bytes": 3630,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_9.jsonl",
+      "sha256": "e2ab45f11c60d5ada89dca3d376db3fb95b6339d4837f7dfb1c42903e17a5947"
+    },
+    {
+      "bytes": 20166,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_goal/seed_17/H_5/tasks_9.manifest.json",
+      "sha256": "67d103099c103a1f53fd404e3a8bf325ddd64d56bd953e7b961a8cf62748648c"
+    },
+    {
+      "bytes": 3470,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "545c67990bdad412f9c38075fb29a4146a66dda4b505db4955d6338526270a35"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "20ece5b9c6bd05bfcc52ec453d5ef53aac85ab3a7aed3d4279dba3d1022ef515"
+    },
+    {
+      "bytes": 3442,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "fa99803fd3bade90a8f7bbd88ac1523178f76473fd4b7f8c6d638c35cca8c7a8"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "c79c032a00c1632e9ed40bf75af103bb78f4b0a3ced6fae381e8f75a19172b84"
+    },
+    {
+      "bytes": 3502,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "275fee51c2de9622f4b95ca4a9edf1be7446d7301f2a5ca41adc83d92034d5bf"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "b0c00bbad1230b544dcb762ca1921a48ded38fbc2be1e05bcf64c6761ebce6c5"
+    },
+    {
+      "bytes": 3411,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "e3fb264188899fa27799a7d87e85eddf72e30ccdee21c69938de1b2a762020f4"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "9c7105b3aad826207b3a2b0df156603055e2536dddfb64691b8cbfc2d3ec08f7"
+    },
+    {
+      "bytes": 3446,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "d12e666b9a8b67750aedb3c83c877b4acb846040a4d742ef3bb6289cb254e15c"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "2972eec05748bc93242d5bfbfccca6ebd727b7cb9b8e458377b11d20e24de873"
+    },
+    {
+      "bytes": 3466,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "57b1d450e67a21e9b0f954b259ec6bc925625048ddd398578eee7224b18c045f"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "09257953b30ea84604dec3401bd2f688cfc76eb382e170ae8dcc485b68dd7a46"
+    },
+    {
+      "bytes": 3465,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "ee6ed27e01381043341c33a64d54c7308fcad56f24e5b86133e7b7c52af97e31"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "5a18810d6e1d80b4bae1acc35aed1c7cab7ed8572ac47e2ed6b50376de64b6f5"
+    },
+    {
+      "bytes": 3445,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "0da058adfcb3ebfec1a989aae70f9bb28bb166d15f48e3285b4b1a998d0d4e32"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "deca9b86dc2c339b516f97c7bfd8ca8d18032aa8a12260b929951dc4838d5e09"
+    },
+    {
+      "bytes": 3471,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "91d101b8e0b4d3a550766218827dfccc3ddf3ea8489f3a1c0076f1bd204ddad2"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "782a86a1badabac071437e4c2b7e3f2c86b18cf7972d6262976ce5e8e27c71f4"
+    },
+    {
+      "bytes": 3466,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "47d939957caab79ad1eba095455e5ae41a1c9dc442ef47b502f3c9304298a405"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "ff0486dab7eef907a46f44daefde61bdc17ec2a23a0023505f25ac49700f3534"
+    },
+    {
+      "bytes": 3797,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_0.jsonl",
+      "sha256": "1f35237cedefcf51f9356a5e22824d40850e92daaf22aa48411b0ea9c3a75914"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_0.manifest.json",
+      "sha256": "273b91d45359a808c18eae8ed90a653b23dabf267d7c3a92a664a4855258e9b0"
+    },
+    {
+      "bytes": 3797,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_1.jsonl",
+      "sha256": "3c4651e8dd18254bd36a3a1402b98aea1b3400d1bc95a2b01bfd25aa1001b1cd"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_1.manifest.json",
+      "sha256": "b3f6423395d43a300d58bad4d433185f6edc6891254c28efaf54176a4d99bb83"
+    },
+    {
+      "bytes": 3660,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_2.jsonl",
+      "sha256": "c54b47e7b9fd3a69a3f3ddb93f90972b26d3057880ef3922517f26eec83eefe7"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_2.manifest.json",
+      "sha256": "d9d52be937e097673be2cb378ef9aaa406c01a985fb53b7153380438679b052b"
+    },
+    {
+      "bytes": 3700,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_3.jsonl",
+      "sha256": "242536121552d31dd32c43917282497cf98465cbf9a7a9493a449b94303ea23d"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_3.manifest.json",
+      "sha256": "e74ccf2b0c311e3c190ea7fae1f4bd8cc9f29872aae7fe7d4ffe1e25a60a3db0"
+    },
+    {
+      "bytes": 3734,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_4.jsonl",
+      "sha256": "e6fc1c0254f9a141134e36f3e46ac0b74ad765ae459c39f186e9d466cc828c37"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_4.manifest.json",
+      "sha256": "67c13da0097da6d5f70e212d7fdccb45b53e79f7f9ff9015975dfaecdb3304a4"
+    },
+    {
+      "bytes": 3835,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_5.jsonl",
+      "sha256": "35cdc15b8169914c6a463d2d88b0fbfe98414b6cd51196abaaf4c715e9476065"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_5.manifest.json",
+      "sha256": "5aa8032b9f323d333a36cc43d43aa857227fc09dd49f469bcccaf1c4f1297653"
+    },
+    {
+      "bytes": 3818,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_6.jsonl",
+      "sha256": "e73ca97444346f1586969edb795a8964c8f5c8ad4488796aedb2caec0b53b262"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_6.manifest.json",
+      "sha256": "6fb490789bc6004386cc3ac667dc7bc945e0489ed46c6ad593b14d11f04fe8fd"
+    },
+    {
+      "bytes": 3653,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_7.jsonl",
+      "sha256": "7e7d3e956c8e90082e6d729cc9da7cda086bd09bc6e66a20efa50c727c4ddba8"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_7.manifest.json",
+      "sha256": "d1a94d53fc0ee3ba2e83c031c98c98e345e961718e4ffa4cc418b4ad93aef298"
+    },
+    {
+      "bytes": 3835,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_8.jsonl",
+      "sha256": "c88b2f54d7ad7d918b576649f07fc0a4be7a794f1a7de9b3018c822954451d96"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_8.manifest.json",
+      "sha256": "6717f683502973af4335516a37cedc5e30e9f10879b32df0f34af2569fff6746"
+    },
+    {
+      "bytes": 3782,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_9.jsonl",
+      "sha256": "ec183acc3f89f921940fbf4b836379593649a32443f67ec914b237c8a2b725fc"
+    },
+    {
+      "bytes": 20170,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_object/seed_17/H_5/tasks_9.manifest.json",
+      "sha256": "fab0f84204f4a78896be2c8bff930c057b480bf2dbf334272cb86419127cb4df"
+    },
+    {
+      "bytes": 3514,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "964730e1829c6bbd7153883af9c49cf21217d29c1ed9c8332204af87f5db7bfe"
+    },
+    {
+      "bytes": 20174,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "d3f06e7bedb23dd13245a656a2bf09a35709afb93c5c7c98e6710c7568f1fbe3"
+    },
+    {
+      "bytes": 3460,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "3b032dcd23a187bdb1a0295b9d5bd76645b79a71f02bceedd7572e3f7ca10aea"
+    },
+    {
+      "bytes": 20174,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "f54ac026eaab50266009b57ccf5d3583fad3edbdaaec7f1206e76fa6b36390a2"
+    },
+    {
+      "bytes": 3473,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "ca1ff9277c288ebe13a2dab7a54c0632452209238c51716b084de79b1f708612"
+    },
+    {
+      "bytes": 20174,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "af809f34d42306c365b2ab970bc168fd5320cc7880db45cbb95c3de64aa6adb6"
+    },
+    {
+      "bytes": 3442,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "d53bdedfffd4ed5f8dc13a35d69e8466f394e0208543c1a7962e255a82621399"
+    },
+    {
+      "bytes": 20174,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "b19dba458569a939eda7a6a2fc1bf5ececf9949cee757c8ebf32a2e5256b4c91"
+    },
+    {
+      "bytes": 3535,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "65ddf9919edd64780dbe8e12e996c0f518e8c3e1fb8eafd8edd00a82cf571275"
+    },
+    {
+      "bytes": 20174,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "e2f0ca32091a1ab656ef72e21d63d223e837573a39245bdad0e72d489b8ea4e2"
+    },
+    {
+      "bytes": 3476,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "707581905106e43b383a24498b2e411badc86419f125542b23caf4b9151a0850"
+    },
+    {
+      "bytes": 20174,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "12f58b4dcce7ee0f22f37387c445433c65a04165e223f6f94a8e331662b7e7c6"
+    },
+    {
+      "bytes": 3479,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "c9ba49f319978e1cb9ef11119f8fc8604c8f3cf1d65781d4b0752f1db41639c0"
+    },
+    {
+      "bytes": 20174,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "1d237f4e47631779d88f63a53a04236751157f11dd8f1c53b280d3fc7c68d9cc"
+    },
+    {
+      "bytes": 3445,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "dcc1ac9267893412fe3c902cceb0729a63cb2b6125799db721dfebb14969470d"
+    },
+    {
+      "bytes": 20174,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "5fb122ae95f7c316fdc36e434b2125428c30c91d1d3515c073cc3e41ff1b521c"
+    },
+    {
+      "bytes": 3463,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "5efd0585241105ad3fab571b0c778982e0ba90cc6c562a791d0c85ccb723880d"
+    },
+    {
+      "bytes": 20174,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "6829b7495beea388e27813be8250be8c72d138ab400f428aeb102700e7213d9a"
+    },
+    {
+      "bytes": 3465,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "6ee461135ea2071b952402e5a1cb286dfaaa28f6f93d418637e4d9598b98c909"
+    },
+    {
+      "bytes": 20174,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "acdc1dfa31a051f6fe0e16d01ca5ca6c65581220fcb2be57dc8ede52617b19fc"
+    },
+    {
+      "bytes": 3593,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_0.jsonl",
+      "sha256": "bc5217633bbbf12c00dc1fdc80a0d058ddf2923ee364190d7640f2b46560e414"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_0.manifest.json",
+      "sha256": "8c918332b246d948564b5cd121cc8ef190ef489aae3e0dc7f906e15098aaff16"
+    },
+    {
+      "bytes": 3665,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_1.jsonl",
+      "sha256": "d850ecb883d536257e69c4eb84a51d0cd09c677efcfd7fd47c83e37cd225d02c"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_1.manifest.json",
+      "sha256": "2171b490e0c03bb4d32b4fe416f02d3d886cb22ab89fa8c337e563b5250314f9"
+    },
+    {
+      "bytes": 3652,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_2.jsonl",
+      "sha256": "ede478c5be1061edf427b72ffe67219930b8570ba821c15a4d009d32b1770409"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_2.manifest.json",
+      "sha256": "30c5de9d9aab7d166ac7b8b7457424267977e10f0f64fa50cfef30434c12f2ae"
+    },
+    {
+      "bytes": 3600,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_3.jsonl",
+      "sha256": "39b14142fd50e515225e412505cd6c09cfea5df79b277a972ecc90a5b949018c"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_3.manifest.json",
+      "sha256": "3867ad0d4bd3b6560d285f19f6d34a4086219ff0737337dbd06ff63ee8db037e"
+    },
+    {
+      "bytes": 3771,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_4.jsonl",
+      "sha256": "1aa0d59a7cd2470a16be5fe6bbfb29f04cc7867c001acdf87def63bb9fcadb69"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_4.manifest.json",
+      "sha256": "a914174983e75298d75bb0d97fda976ef8a3514c37c4c639d0c8c26a12d14a5b"
+    },
+    {
+      "bytes": 3546,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_5.jsonl",
+      "sha256": "9e79e504ab4680166ecf48adf906dad79aa2ac3c390ba7029c3434c7a21d154f"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_5.manifest.json",
+      "sha256": "99f2e37847dcad8492772394cb685fada251dd62ca060d0389efb3b9f0eef9c4"
+    },
+    {
+      "bytes": 3647,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_6.jsonl",
+      "sha256": "434aecb44793b88f254c11e3247217188e33fab00f03d9afad03620c7f7efdc1"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_6.manifest.json",
+      "sha256": "8e121b2f8d1014503e17d4629c3b4c821e7d862e601b37c78f00d4cf72df68ef"
+    },
+    {
+      "bytes": 3675,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_7.jsonl",
+      "sha256": "404d21176a8cd8450b561d2e334b0117ba4d94e17d73db522a86eb15000e877f"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_7.manifest.json",
+      "sha256": "e3e956c5285c9d07735d867583ce50b3aa0e77cc61f914a88d90f41834ab78f5"
+    },
+    {
+      "bytes": 3595,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_8.jsonl",
+      "sha256": "9e07ce7603b537d55e9cfd65371bbe2e4ac6e0644e25d5357a069341287ed773"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_8.manifest.json",
+      "sha256": "04dac430df501a044de201910237a7ec2bd9a8284f5d8950825caf55026188c6"
+    },
+    {
+      "bytes": 3741,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_9.jsonl",
+      "sha256": "fb465ed3a483026bf62dbcda8a7fbd267ca6a01fc2c0ae27aa9e2fdb37a4971a"
+    },
+    {
+      "bytes": 20172,
+      "path": "evaluations/transfer/step_0/raw/smoke/libero_spatial/seed_17/H_5/tasks_9.manifest.json",
+      "sha256": "466a0fde1169b4d248e81921ed6092a35031c2731da629c7cc760027ed46d020"
+    },
+    {
+      "bytes": 3370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "afdb58515c0edee8abe7e4fec7b0c4d87433519fda45832e36292b30cfa6ab68"
+    },
+    {
+      "bytes": 20364,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "d4a8d875d4050274499459aa08a42908e089dd6483e3d2b94fe428db78fd684f"
+    },
+    {
+      "bytes": 3319,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "5de2d903583c2c02656fe3291b7d77a5a089bafed36db6772ff1bbc59146cb1a"
+    },
+    {
+      "bytes": 20364,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "d421c77d8b4cc13decc65edfc37da5c829b19d35fc8ad4a418eee2769ed00bf1"
+    },
+    {
+      "bytes": 3351,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "e788c23fc8b977346d50b3845826a33fb173e09ae11b3b8369c671c5cddbab34"
+    },
+    {
+      "bytes": 20364,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "b7662bbad4b682a247216ee1190f798244ccfa0933e4c5888ce337de1473c994"
+    },
+    {
+      "bytes": 3438,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "e4f6a891fa7a310cdab8d1e8eb48b53d3e0f7cb90bc693b577722846c821b61d"
+    },
+    {
+      "bytes": 20364,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "3835eefc2f245c640eff92eadf5c8cb6879af7e902f4c754d224b24db0e18d05"
+    },
+    {
+      "bytes": 3314,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "cd8429317ad48739927660e0bfb6c9dd493afeec7b303fc56ae91ed2513eb555"
+    },
+    {
+      "bytes": 20364,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "e1c71233c6d72cfb0ef2fbb49f0317df073b4f63a0427a24e3fed060ed1bb60f"
+    },
+    {
+      "bytes": 3403,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "80ad127e1a1f78d2005d15fe5ac83a0cb863c0270b0af2e15b13b37f09845c53"
+    },
+    {
+      "bytes": 20364,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "6b7ee82dcddb07cc88a08998b4dc5f976460d10bfdde16e72f347ee86f423c46"
+    },
+    {
+      "bytes": 3384,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "cb61094260507fcf62286c4eea9d2d7168a1cdce03f25ed2564e32e951386e56"
+    },
+    {
+      "bytes": 20364,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "301d862af3fb66197231122fd229184bf671cf4ce70e9df54d5349372dbe0192"
+    },
+    {
+      "bytes": 3232,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "ef996aebd41b3c37da95dc10c93898214841a67c30ab1e3643ea50826abf2db9"
+    },
+    {
+      "bytes": 20364,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "a37cb8b26ef5907c948a6e7e81ea74ac928513e8038b6b74187339e0aa933e1d"
+    },
+    {
+      "bytes": 3294,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "0bac312b52e00da7c7bf77f356213532151490d99ef6f6171d2aca2890851b32"
+    },
+    {
+      "bytes": 20364,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "369d841f48167b8a1a400527e7d13453a48b144027fbea68b3c5830ca2dbe92d"
+    },
+    {
+      "bytes": 3412,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "06f6a13f556126c8310f30a33ffe6d0e35f8fac977c0f51f7aa6a8c1be8e3d7f"
+    },
+    {
+      "bytes": 20364,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_goal/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "bd3e018b2cc0469da231a0d2115d82190d26fa4b61175bead8d06a6639d9f2b7"
+    },
+    {
+      "bytes": 3480,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "a3f847904efe276291cdddaa13ac3a6022346bde8c57fc793cd2667132d89440"
+    },
+    {
+      "bytes": 20368,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "67e036f078ac4313ffdb49745810a400c6e802f8ba103dcb3f7a81eb1adb1d8c"
+    },
+    {
+      "bytes": 3479,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "876581a678e058c76b0901b8b913aaca788aadcb031e5d450ef1816b61f3173b"
+    },
+    {
+      "bytes": 20368,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "dd55e2bee339e812e6f5866456204ea6d2ce86187a8484a12380ccb99b216ab7"
+    },
+    {
+      "bytes": 3459,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "b00b7c76eea702cf3bab132bcc616a01e73cbd5c5dc4676ec4584a24d307e017"
+    },
+    {
+      "bytes": 20368,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "e22c0298d6f7838fff2a6e92a3f8d351a540e5d036c3d1c97a2e35169850d2cf"
+    },
+    {
+      "bytes": 3425,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "3e73b777890c68edf3678089cd137307046e3127a84aef44edca860bf10c646d"
+    },
+    {
+      "bytes": 20368,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "f61c91764624ee189337207305af285c25ae405c6692804b0424c2eeb008f2c9"
+    },
+    {
+      "bytes": 3432,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "c576e5a5a96a55a9ccf1d25f2aaad145e76f5a0f24dc632a56d33fa0848890d0"
+    },
+    {
+      "bytes": 20368,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "bc8bd644bddc2299ca08370eec30b233ebe79cb3f8e1d2e38571960faddb42ff"
+    },
+    {
+      "bytes": 3474,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "155eac803fa347493f22b146aff7e3816ea211d36dbda79ac151003324d77694"
+    },
+    {
+      "bytes": 20368,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "f86ee413058c790e1257b26661d5e5c1436f76ac012ae30a97d051e605f12d32"
+    },
+    {
+      "bytes": 3415,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "5e2f9eafcfd5040b5eb0435797a57c56475084105619f22b6473f2cec5ed87e1"
+    },
+    {
+      "bytes": 20368,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "914e082216b003325e67ca0d48f21b2d25659e75d3a1ab46e26e265f3110b5e9"
+    },
+    {
+      "bytes": 3457,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "823901e31b4760dde21a78117e4c5bb3d02cce383db6f0a98c2e3785128e2ec8"
+    },
+    {
+      "bytes": 20368,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "b1c546efe315fb1b8004e428c6747ee6a572cf6ca22be0d91e90cdd8b16f9ccb"
+    },
+    {
+      "bytes": 3481,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "5904628c70456f1b2a1c8884731297c14293e3237fb88adddb64e028a13c127a"
+    },
+    {
+      "bytes": 20368,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "796196cc051ba2f862238af2deeaa5760ea5868e54812f84005613462093d424"
+    },
+    {
+      "bytes": 3454,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "160c7e387a119dce68df45f29a6aa8d59fa8bc162aa2dfe9064ccd88f35025ac"
+    },
+    {
+      "bytes": 20368,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_object/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "b85319a39d8f49b281d86dde5bf8f250008ba7d3954c216c28c957b8facbc589"
+    },
+    {
+      "bytes": 3548,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "1800204c6dac7aefe03f0afe88762cd3b6b584f2479de3528d02ffb0f4b1dbc7"
+    },
+    {
+      "bytes": 20370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "ccd2bd3b2bb06e200ce6736c1b75feddd950afc2ee3d698f1a9d0c7c9a7e0a22"
+    },
+    {
+      "bytes": 3516,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "0e8844f69a57fce9c27d188dd382d46fe5dc63775a260dba0b225642585882ec"
+    },
+    {
+      "bytes": 20370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "60df39e62f7d18b3c4e14ac4c8882dd7f3f3ba977890d45c336919dd8b4be902"
+    },
+    {
+      "bytes": 3464,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "2b7f091477093455276ec0966f8cc29b55f9ca0eca890ecc3ce86bf4d043cc54"
+    },
+    {
+      "bytes": 20370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "61b6b688824aade341c3bfe8e107d19a0de383fad8fa175cb02421ea48a3260b"
+    },
+    {
+      "bytes": 3480,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "d4201c261ff79330892a8092bf9f8d221b9b317939453afe9046707c20f37316"
+    },
+    {
+      "bytes": 20370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "e607716eb96d58a4d576b90b81a62bace11a576be9753403403025b1c9200ffc"
+    },
+    {
+      "bytes": 3539,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "aaf5caee75da9f72dfee506909521a8b3c0860abce3547f756a1464eb2db3729"
+    },
+    {
+      "bytes": 20370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "f0a526767b72775e7a297a6935f93ffc9cf03f4a08b9ce543c6d9fde0d19a51f"
+    },
+    {
+      "bytes": 3446,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "45d8ec701893c997cfef12334fb89bd7b680512beae920aa6833cbe64fa31566"
+    },
+    {
+      "bytes": 20370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "ab1ebc3b0c997b10a67e1439e16398de00204679cfa857c1eb32235bdea4ee84"
+    },
+    {
+      "bytes": 3486,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "887472b12678e96801271e4e76ff911f66dc5cb4e8f0e2b1c2a1df0589d34133"
+    },
+    {
+      "bytes": 20370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "2e5370994627299c3a1e38252a85ab2e89509854636f92193d1428b1d6503c2e"
+    },
+    {
+      "bytes": 3479,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "8993e05efd4121bdf379d14cf54b0237752580de357a8c302dd0e796ffd88964"
+    },
+    {
+      "bytes": 20370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "b23dd79982ee7c8e342f0d255d6116df0ddd09b3d4dffe55224e82db9ba74958"
+    },
+    {
+      "bytes": 3471,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "ccf01f89ced5d097ccd7511ccdd1710e3facda04a5720a75c89621877c65ccbf"
+    },
+    {
+      "bytes": 20370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "ada1ca49a92259129e70e64b18a2b26b7485785cca0970412dfb3f1ef88314c3"
+    },
+    {
+      "bytes": 3490,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "458e53d510be28af43ecf0e8dd363ecf3c52a5e6dc752f217087822b64e9356d"
+    },
+    {
+      "bytes": 20370,
+      "path": "evaluations/transfer/step_100/raw/smoke/libero_spatial/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "068a5f1d883c701e28ddf99c95deacf749b10513308df4ce2bc02dbcbebd97b8"
+    },
+    {
+      "bytes": 3368,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "e06e7a87f1ae39597364df967d0429daccbfd669620a4ce9544a3b4037bba8e4"
+    },
+    {
+      "bytes": 20371,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "60228e97f5b5d2974bc6f4aa7f0e25a3d30f7d4abf13dd80f15b6c5ead6a70ca"
+    },
+    {
+      "bytes": 3324,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "40e89beb0ba3bf37283248f8e17100c2eff37f7e872518613144207d7b116f3d"
+    },
+    {
+      "bytes": 20371,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "ad879bbbfb820864efab970c1f9a56278010889634733dc6b0140a3bd8b1b22c"
+    },
+    {
+      "bytes": 3327,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "875639c75a01d2773798c9ee249a0d1d555aee0ba9e33f3bc0ca04649d2c410e"
+    },
+    {
+      "bytes": 20371,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "1f4b00e6bfe7c5e90afec4d2c3d966c1c2cc4cbdf5e5cff97124c2ef6e8e4362"
+    },
+    {
+      "bytes": 3452,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "25392e5d7e5790f54d1cb8939a8fef85c341e3b25a2d723c8c798564b3d65523"
+    },
+    {
+      "bytes": 20371,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "d539efda7517fd661cc6fa990f70aee91b4b0e7f5226a88c92b6d72221cb9382"
+    },
+    {
+      "bytes": 3365,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "6275c09272d0d0ea57bf88a18e8e6ffe9448fcb1fba94c745dca4c4492623049"
+    },
+    {
+      "bytes": 20371,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "27f5dd5946bc7a7f62046a3a75c085e661cfc801203990142b6e995a0a6c630b"
+    },
+    {
+      "bytes": 3419,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "19a9b95494d7db62f2ba9b9d5791a9562d1072210b3eca3a3afafb41ad10689b"
+    },
+    {
+      "bytes": 20371,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "82d62c9bf18c3d042b62c76d4ecd788a66b74eee8a946d6b9b675efc31995efd"
+    },
+    {
+      "bytes": 3332,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "15a4e61aa8ed38ec0ac3402b21028e851108e5853baec6647b9e9cc37904c951"
+    },
+    {
+      "bytes": 20371,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "e0397822a0302b3575f98826ff66cfd5a90e1cc10c49c24059cc4410bf92747c"
+    },
+    {
+      "bytes": 3304,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "59eb487832c20e8f48b1ed88e00b8311c6890657d86ad458e7f7d6f2b8497f41"
+    },
+    {
+      "bytes": 20371,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "ceca6f4356947a975edbd1324aa5b24c6c20dc9c6abd6179845f43bad9ca9470"
+    },
+    {
+      "bytes": 3333,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "3db10efb0e34799a36fa8fa5f2c8a3c8cea740e2889ff532766151f0e889aa26"
+    },
+    {
+      "bytes": 20371,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "d0ef227e4616980d047be8190ee59f1a95f107f4982c6042d08a5888ee306470"
+    },
+    {
+      "bytes": 3366,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "070020e4f2dafcf65da1862cd5b187f3653d967b49f9d55534243911fa013290"
+    },
+    {
+      "bytes": 20371,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_goal/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "50f3c24951c897ec6ee2c27dd0037b2f82273a2a36b3766505cff1c52f3b8efe"
+    },
+    {
+      "bytes": 3458,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "2a2443d516f958216a53bd31340ed6a2f79ff67068437357d5fd0b4acf3f8f08"
+    },
+    {
+      "bytes": 20375,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "094f4252c58dbfb284a66dc98530dce4d42fda10317953c818445388b6b37219"
+    },
+    {
+      "bytes": 3439,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "a12bc20b421ed65383e9d2a80982e721b1886ffcd7d0e8cb52727abe5535b0d6"
+    },
+    {
+      "bytes": 20375,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "bfd43c31629a1e209c04385ccb95f5feca2aa987d416b69254ffaa695bd00716"
+    },
+    {
+      "bytes": 3409,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "1bedb386c20859d8b89904c5be7ed2964ec832105edd36b54925b6bcd9a35e77"
+    },
+    {
+      "bytes": 20375,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "f809b59fa3643bfe84752980552f0502f312f43a61a9651efc713023029db830"
+    },
+    {
+      "bytes": 3408,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "fff11d36f4bd8161f76603929eab47fd8a9db11d24c09970e3811415309c914e"
+    },
+    {
+      "bytes": 20375,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "24ada7ed2f7a6b9316ebfbaaebe36a0ae5780730b152d2160e12b357d0cafcac"
+    },
+    {
+      "bytes": 3421,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "d2e3b67240928971890bdaeabae38605b35f9a31bf26280c0de73cf1b656461d"
+    },
+    {
+      "bytes": 20375,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "a3dab7bb480661adf2058b6b85e3534e6e4fb8a2fe054da46835a416de19ad72"
+    },
+    {
+      "bytes": 3429,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "2324edf139e43ca7534fa2e039fe1435d9413298797528e39afc2c89e3267863"
+    },
+    {
+      "bytes": 20375,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "56ef4729adcaac9e9f3f72e596033d06f2d0ae8b0cd0a85cfdd65ce4c0907449"
+    },
+    {
+      "bytes": 3430,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "a3789040410250010109ecedcc5d6511b02e283f8037a01c081ba7cbb461905b"
+    },
+    {
+      "bytes": 20375,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "6a63a8dbcf1d2b50e165a6319c4716fb152179445725939ec98c82d8817aeec3"
+    },
+    {
+      "bytes": 3402,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "97adbdbe45de1a743e2f944788c26eb89ef386a2924406fad3a65dd2a1e7f475"
+    },
+    {
+      "bytes": 20375,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "b1822cc31756c9bc741267900b7ba18d1ec12963f22dca533fc0a273c520ac3e"
+    },
+    {
+      "bytes": 3469,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "5c1c2be5fd870b1844fd4bac202b1d391c024143a64166c41ba445ba151a0918"
+    },
+    {
+      "bytes": 20375,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "8ff6821cc51ea3e009eb6aba487dfdf69bec6552d91a30e050f555f4eb40a7b5"
+    },
+    {
+      "bytes": 3422,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "cdeb67064ce845c4041a4bce4898c0dd8b1f6a615d07f3afcd804ad3cfccd1dc"
+    },
+    {
+      "bytes": 20375,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_object/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "22bd26eeb23c837f06cc353fe4f60d63af0b5541839cb20dba29db7ef0b599f5"
+    },
+    {
+      "bytes": 3501,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_0.jsonl",
+      "sha256": "824a3680abb0ddc4a498f4ba06453c0bb9873711b92d8ae562316dd7dd9e7037"
+    },
+    {
+      "bytes": 20377,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_0.manifest.json",
+      "sha256": "56d1ecefd7b4dd2c7184f281ca2836e9671e6370909e2923a86b3b6d20ed1866"
+    },
+    {
+      "bytes": 3460,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_1.jsonl",
+      "sha256": "f8ca992640c65eacd63ce47e551cf6ad067937d9f5b5167b6139a05d2d2e1bc1"
+    },
+    {
+      "bytes": 20377,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_1.manifest.json",
+      "sha256": "e632e1524752cf82604755d069e2880e5156052e07e88b9060c1f4774e27d4a0"
+    },
+    {
+      "bytes": 3425,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_2.jsonl",
+      "sha256": "23d961dfdc13cc7213c6cdebc623e127c4a7bc4d1f533b469e7e3750366a88e9"
+    },
+    {
+      "bytes": 20377,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_2.manifest.json",
+      "sha256": "6c0334f3b4f25649d3793114df66f471242916616d0c3cbc3baa85a768c49e49"
+    },
+    {
+      "bytes": 3459,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_3.jsonl",
+      "sha256": "9e4fc041fa0c6e654cd5a369daee0bd00e46045228ac8a3ebe358488d338700f"
+    },
+    {
+      "bytes": 20377,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_3.manifest.json",
+      "sha256": "d461866fffe14b8622c76427decf6a91118411b572d45d32106fe81236a7bca9"
+    },
+    {
+      "bytes": 3547,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_4.jsonl",
+      "sha256": "2a1e14826a1b5b34b592a938a117f2ef91a76c9c120517ff84e5fce7ed9a5c82"
+    },
+    {
+      "bytes": 20377,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_4.manifest.json",
+      "sha256": "58dc8bb4a861ea81c1840ef29ceb7f8953f4421709cb1c3fce277741a34e8a4c"
+    },
+    {
+      "bytes": 3445,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_5.jsonl",
+      "sha256": "ed0895a10201894dcf4da2d5b3699d16f824270a1a96546b6c57e15141667f5e"
+    },
+    {
+      "bytes": 20377,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_5.manifest.json",
+      "sha256": "ad6ee93bd294f2ddf360997be7698b7eb1e2288c7ed74e21a2c6a939b82d1885"
+    },
+    {
+      "bytes": 3486,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_6.jsonl",
+      "sha256": "b3c43fddb8b648640dc1d20626f222327eebb944e25750196a4904c2dda8b68e"
+    },
+    {
+      "bytes": 20377,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_6.manifest.json",
+      "sha256": "cfe2572bd0eff1834c9d009ddbc551b499eb2760431dfd521584fa3bb470be07"
+    },
+    {
+      "bytes": 3432,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_7.jsonl",
+      "sha256": "7bf7a1d5ee80f4e352c8343bd58e55c53b5a9d49c84cee1b6fadae64cbaba453"
+    },
+    {
+      "bytes": 20377,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_7.manifest.json",
+      "sha256": "f232bb7bf379dcd9a0b477000ed252c06de86660cef061e6aab3524d93385c5b"
+    },
+    {
+      "bytes": 3465,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_8.jsonl",
+      "sha256": "2f1e65e874595eb98e0134314b071784b51b42923612d4b2f2288e344f817061"
+    },
+    {
+      "bytes": 20377,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_8.manifest.json",
+      "sha256": "5d9d284ce3b7cea1eee84a3f32806facc25e98e8af2be5aa2ae97749845f4324"
+    },
+    {
+      "bytes": 3481,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_9.jsonl",
+      "sha256": "40bd2f4a4d502d856cb31c3918c73311dc29f37962f0469c27df44a0534ba820"
+    },
+    {
+      "bytes": 20377,
+      "path": "evaluations/transfer/step_500/raw/smoke/libero_spatial/seed_17/H_20/tasks_9.manifest.json",
+      "sha256": "a71b859fffeacb2dd79c516703b6660e54b8cc2685fb5463db1b9aa9b4a8919b"
+    },
+    {
+      "bytes": 65139,
+      "path": "figures/replanning_gap.png",
+      "sha256": "1c4394cdaccb11a80e0ff3b2d5427d1e1de9bda2a1b815aab6181f38bb56428e"
+    },
+    {
+      "bytes": 52681,
+      "path": "figures/success_across_suites.png",
+      "sha256": "37299c920ab1b510176231aa854fabfebda85d7ed41ac134bbd31bd01f2a88b3"
+    },
+    {
+      "bytes": 62964,
+      "path": "figures/success_vs_policy_calls.png",
+      "sha256": "f71ed1ec0bb482f292eed9e88407ac21433dc82bc4eab8ef9395550275df8148"
+    },
+    {
+      "bytes": 94921,
+      "path": "figures/success_vs_replan_horizon.png",
+      "sha256": "76687ce25c735784849e302c58505fea0d426972dc232de18efce770f748178e"
+    },
+    {
+      "bytes": 76987,
+      "path": "figures/success_vs_training_steps.png",
+      "sha256": "d3095cbd188ac194ad7f0014f4c520f4d81b17747020d481b87e48a3ed6ca085"
+    },
+    {
+      "bytes": 163242,
+      "path": "figures/training_loss.png",
+      "sha256": "0a1d221deaad17a0f796c4a5bed0cd1dab481ddf479426b0c8e6cd2c4bd386c2"
+    },
+    {
+      "bytes": 297,
+      "path": "provenance/continuation_training_checks.json",
+      "sha256": "025c700874758516d89e198a9c790b4e48d44d8fa7b909288987745e2e376be1"
+    },
+    {
+      "bytes": 301,
+      "path": "provenance/diagnostic.json",
+      "sha256": "e705c3ee3a58e49cdc77d958128fe0c58dcdfebf56ef268469f3695ba77391c9"
+    },
+    {
+      "bytes": 300,
+      "path": "provenance/efficiency.txt",
+      "sha256": "db0f04ce9cd3cb944b3e10f0a148a46bfbe58ed012d5c5ace3705920cd582cd4"
+    },
+    {
+      "bytes": 6439,
+      "path": "provenance/exported_training_manifest_step_300.json",
+      "sha256": "1d937c199df55a69876b80147d6a9afc8cbba9fe70fe1225529dc0d4ae72a661"
+    },
+    {
+      "bytes": 6306,
+      "path": "provenance/exported_training_manifest_step_500.json",
+      "sha256": "3f51b609bd579885f03f0b5a3c99c6b6457b0a375f71e379a864254ec553adfc"
+    },
+    {
+      "bytes": 1758,
+      "path": "provenance/final_checks.json",
+      "sha256": "c403def16cb14ba7589f32407604b5601503e6f2c0f17977939d0a0e4796cfe3"
+    },
+    {
+      "bytes": 538,
+      "path": "provenance/jax_memory_at_500.json",
+      "sha256": "da519d1433eed3e1e7a54b913c447a6388cfd2874fa31c7b1d70b97995f9e84f"
+    },
+    {
+      "bytes": 531,
+      "path": "provenance/numeric_diagnostic.json",
+      "sha256": "957d6aacb09ceb4a1f07043ee6bd1180172ad6c10e5090d33016b9bcd01f13f8"
+    },
+    {
+      "bytes": 247,
+      "path": "provenance/original_horizon_screen_checks.json",
+      "sha256": "4a876d9f6b6c21b3a06eb2715fce9d493e4e214a3b4c9750c82f6905b50f5799"
+    },
+    {
+      "bytes": 835,
+      "path": "provenance/preflight_checks.json",
+      "sha256": "b41f7ae7d83efe88e6b9efd17ec8e27643246ffbbef3d0ee5d835ea49ced56e9"
+    },
+    {
+      "bytes": 1587,
+      "path": "provenance/resource_accounting.json",
+      "sha256": "4d4fc021d17922bd6b6675a1796c039e83bc772439a7ca7d61be38215ccb1875"
+    },
+    {
+      "bytes": 1742,
+      "path": "provenance/resource_plan.json",
+      "sha256": "c6081e3335c5d98418bd315ab566068c4c839651aae90290a423e9ed975718b7"
+    },
+    {
+      "bytes": 1040,
+      "path": "provenance/resume.json",
+      "sha256": "207b27ebbde15d5be12ab62fa6fb8a4528a660431699fffb7af988a1ef2edebe"
+    },
+    {
+      "bytes": 109399,
+      "path": "provenance/rollout_files.json",
+      "sha256": "4dd9d3357961aae25086a9e81dda06fb4c16898e43d25854d2c42ee932c6d881"
+    },
+    {
+      "bytes": 722,
+      "path": "provenance/runtime_pilots.json",
+      "sha256": "439d0e73ac1033db50dc4673b785c531b4f311a388404b2a755d9b02c6aa44a4"
+    },
+    {
+      "bytes": 9382,
+      "path": "provenance/server_baseline.json",
+      "sha256": "427508584cbffa0efe11ea9fc526956eef073f1d8a9f2f6a04d045d783b8c668"
+    },
+    {
+      "bytes": 9570,
+      "path": "provenance/server_step_100.json",
+      "sha256": "0ebec924f36ccfaa300a3d6d1e2b6498aab0a916ce93a29cc553904dd536b039"
+    },
+    {
+      "bytes": 9577,
+      "path": "provenance/server_step_300.json",
+      "sha256": "8fdf7b3daa18f185599fe27423c46192105ed3c454d3ecbe0550712ccebdbcb3"
+    },
+    {
+      "bytes": 9577,
+      "path": "provenance/server_step_500.json",
+      "sha256": "efd8f2f5d233903c5426090493165b2ae9e191118a8c7d4e9909c680ce1fd05a"
+    },
+    {
+      "bytes": 917,
+      "path": "provenance/slurm_jobs.psv",
+      "sha256": "d4de3fddf73dbe32b1651dad583cafadb08ade0e6836faaa2d83a0cb820de107"
+    },
+    {
+      "bytes": 42149,
+      "path": "provenance/split_audit.json",
+      "sha256": "a4341287cd2b68c94cc2b909229956efc46adc44d3665f746d1e17d5b9c086c8"
+    },
+    {
+      "bytes": 9382,
+      "path": "provenance/startup_server.json",
+      "sha256": "427508584cbffa0efe11ea9fc526956eef073f1d8a9f2f6a04d045d783b8c668"
+    },
+    {
+      "bytes": 173,
+      "path": "provenance/step_100.json",
+      "sha256": "9200d9a6dac54ecaa64912ccd36a7511d2104185956412020027be5cf7794f9b"
+    },
+    {
+      "bytes": 180,
+      "path": "provenance/step_300.json",
+      "sha256": "a1edddeb0fe81fbaddbd6801384496502f0c83fe0cabd0fb3498fbbe18ff94de"
+    },
+    {
+      "bytes": 180,
+      "path": "provenance/step_500.json",
+      "sha256": "9b9bcfbe8df94c495022d915e69462dba32810d9283e4e68c92af7579028517f"
+    },
+    {
+      "bytes": 1238,
+      "path": "provenance/study_complete.json",
+      "sha256": "8044a1c46b1aed3f22cb28682e6d78e055ff2f2f75d6f686ed05f5773b31fe80"
+    },
+    {
+      "bytes": 1392,
+      "path": "provenance/study_plan.json",
+      "sha256": "3a745fc6db7bed4bafa1768cc8701234d6dca98cd9f9603ddce031784ea328cd"
+    },
+    {
+      "bytes": 4733,
+      "path": "provenance/training_layout_coverage.csv",
+      "sha256": "043890b0ee022f8d3833bc65a0e75d5b627e43d84bc5be819335c9e22b5fc6bc"
+    },
+    {
+      "bytes": 1111,
+      "path": "provenance/training_layout_coverage.json",
+      "sha256": "50489ab6ad3c46fb487a39382bae1403adf8c13625a1d1f26361f64a8becf776"
+    },
+    {
+      "bytes": 5147,
+      "path": "provenance/training_setup.json",
+      "sha256": "083e9eb1ae4fdf99a58b57b4629b14e350fe7c81862bfe40d745bec12153916e"
+    },
+    {
+      "bytes": 16143,
+      "path": "provenance/video_checks.json",
+      "sha256": "c389a5a4aefd5836c53dc04842ea89776466ce886f3bd2ec94b390f3c7029a44"
+    },
+    {
+      "bytes": 658347,
+      "path": "rollout_inputs.jsonl",
+      "sha256": "75006169a83ab858b6f2e8f6b6a307e92545c1d97c265dd8c86b1d76470ba568"
+    },
+    {
+      "bytes": 872386,
+      "path": "rollouts.jsonl",
+      "sha256": "075c7502feba0ddf16f83708c7e8363f98b0fe435c7de1b04911b80c700eecd9"
+    },
+    {
+      "bytes": 1402,
+      "path": "runtime_pilot_parallel/raw/smoke/libero_10/seed_17/H_5/tasks_0.jsonl",
+      "sha256": "510d584b54ab09a2f04081f38e2ecfc8727ff113c91105b77f05464bfd5687a3"
+    },
+    {
+      "bytes": 20157,
+      "path": "runtime_pilot_parallel/raw/smoke/libero_10/seed_17/H_5/tasks_0.manifest.json",
+      "sha256": "b8f6dca7609c1db32bd146049fef7f9b7148591bb07e97134fd96794c6997068"
+    },
+    {
+      "bytes": 1349,
+      "path": "runtime_pilot_parallel/raw/smoke/libero_10/seed_17/H_5/tasks_1.jsonl",
+      "sha256": "c923a51808daa96cacb96a7675d30fa0a8d3cd76ed38e29b864d065a09b93435"
+    },
+    {
+      "bytes": 20157,
+      "path": "runtime_pilot_parallel/raw/smoke/libero_10/seed_17/H_5/tasks_1.manifest.json",
+      "sha256": "6417951b2c9d79be5892e0d0893c9921423643e51dbfba6f3ffd3f1ae2a8dc78"
+    },
+    {
+      "bytes": 1566,
+      "path": "runtime_pilot_parallel/raw/smoke/libero_10/seed_17/H_5/tasks_2.jsonl",
+      "sha256": "a96d71d1d5a02a22c53b582a676420dfcacd60cd89318daf30b7d919d2350e31"
+    },
+    {
+      "bytes": 20157,
+      "path": "runtime_pilot_parallel/raw/smoke/libero_10/seed_17/H_5/tasks_2.manifest.json",
+      "sha256": "f61dd57fa18f1679792a24a34d32610708ee3f149b8b63bab696ad8abfe51263"
+    },
+    {
+      "bytes": 1351,
+      "path": "runtime_pilot_parallel/raw/smoke/libero_10/seed_17/H_5/tasks_3.jsonl",
+      "sha256": "f1d5b48bc37fd784c41e4882abd18ff51dea99f6cd32304e36eeb44112ba8405"
+    },
+    {
+      "bytes": 20157,
+      "path": "runtime_pilot_parallel/raw/smoke/libero_10/seed_17/H_5/tasks_3.manifest.json",
+      "sha256": "6f1a79f461b3b11f7e8a3c27968d73942d500d8bce2db061af16f87ce903f378"
+    },
+    {
+      "bytes": 1402,
+      "path": "runtime_pilot_single/raw/smoke/libero_10/seed_17/H_5/tasks_0.jsonl",
+      "sha256": "ed649541790f4fdfce30c94428b3a5cbc01249db3cbe65215fc7937f96645b07"
+    },
+    {
+      "bytes": 20155,
+      "path": "runtime_pilot_single/raw/smoke/libero_10/seed_17/H_5/tasks_0.manifest.json",
+      "sha256": "58fd16429d92e80bacb18ef83aa573d0a75f0797e809f861cc26f8b2fab253f2"
+    },
+    {
+      "bytes": 27438,
+      "path": "stages.jsonl",
+      "sha256": "ea73715eb2221f39ab701def6bf7209734dcc485b1c1fb2df3fea9eaaaf8333b"
+    },
+    {
+      "bytes": 172325,
+      "path": "training.jsonl",
+      "sha256": "35d29153ffbea4876f7e73821b721d7b9653cd0f3d46d4eb80f7515ac33417d2"
+    }
+  ],
+  "note": "Videos are local and audited in video_checks.json. External weights and training arrays have their own manifests. Logs are excluded."
+}

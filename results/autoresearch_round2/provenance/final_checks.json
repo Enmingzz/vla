@@ -1,0 +1,45 @@
+{
+  "actual_action_chunk_length": 50,
+  "allocation_released": true,
+  "analysis_command": "env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH \"$LIBERO_VENV/bin/python\" -m frequency_vla.study_analysis --results-dir results/autoresearch_round2",
+  "analysis_source_sha256": {
+    "src/frequency_vla/analysis.py": "5bc0e071f843e9fc19048cfdd586cf1c8ef60b519d673ee8aef6bc9b91faad3c",
+    "src/frequency_vla/study_analysis.py": "95ee6b9d1cabcba74facb68131d7d4b9bde99a6a213709b6f5010b112cc88a83"
+  },
+  "checkpoint_native_inference_reload_max_abs_difference": {
+    "300": 0.0,
+    "500": 0.0
+  },
+  "complete": true,
+  "cpu_native_sampler_gradient_frozen_backbone_orbax_resume_checks_passed": true,
+  "evaluation_conditions": 27,
+  "evaluation_episodes": 1310,
+  "evaluation_videos": 1310,
+  "exact_policy_call_schedule_verified_every_episode": true,
+  "exit_code": "0:0",
+  "figures_visually_checked": [
+    "replanning_gap.png",
+    "success_across_suites.png",
+    "success_vs_policy_calls.png",
+    "success_vs_replan_horizon.png",
+    "success_vs_training_steps.png",
+    "training_loss.png"
+  ],
+  "formal_optimizer_updates_added": 400,
+  "job_id": 60080314,
+  "job_state": "COMPLETED",
+  "native_prediction_horizon": 10,
+  "pytest_tests_passed": 24,
+  "runtime_pilot_episodes_excluded": 5,
+  "single_continuous_server_verified": true,
+  "total_optimizer_updates": 500,
+  "train_eval_initial_states_disjoint": true,
+  "training_evaluation_source_commit": "1916f4c885e1fe0724bea6ea779487a2b11d8038",
+  "unchanged_flow_steps": 10,
+  "upstream_worktrees_clean": {
+    "libero": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+    "openpi": "215abfb217dbac7d5f1273282331b9b1866c0479"
+  },
+  "verified_new_rollout_files": 400,
+  "video_metadata_spot_checks": 27
+}

@@ -1,0 +1,575 @@
+{
+  "checks": [
+    {
+      "condition": "screen_libero_10_step0_H5",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 520,
+      "spot_check_path": "evaluations/screen/step_0/videos/smoke/libero_10/seed_17/H_5/task_00_episode_000_failure.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "52.000000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "520",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "screen_libero_10_step0_H15",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 394,
+      "spot_check_path": "evaluations/screen/step_0/videos/smoke/libero_10/seed_17/H_15/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "39.400000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "394",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "screen_libero_10_step0_H20",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 520,
+      "spot_check_path": "evaluations/screen/step_0/videos/smoke/libero_10/seed_17/H_20/task_00_episode_000_failure.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "52.000000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "520",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "screen_libero_10_step0_H25",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 520,
+      "spot_check_path": "evaluations/screen/step_0/videos/smoke/libero_10/seed_17/H_25/task_00_episode_000_failure.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "52.000000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "520",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "screen_libero_10_step100_H15",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 339,
+      "spot_check_path": "evaluations/screen/step_100/videos/smoke/libero_10/seed_17/H_15/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "33.900000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "339",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "screen_libero_10_step100_H20",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 490,
+      "spot_check_path": "evaluations/screen/step_100/videos/smoke/libero_10/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "49.000000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "490",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "screen_libero_10_step100_H25",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 520,
+      "spot_check_path": "evaluations/screen/step_100/videos/smoke/libero_10/seed_17/H_25/task_00_episode_000_failure.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "52.000000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "520",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "screen_libero_10_step300_H20",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 399,
+      "spot_check_path": "evaluations/screen/step_300/videos/smoke/libero_10/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "39.900000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "399",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "screen_libero_10_step500_H15",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 309,
+      "spot_check_path": "evaluations/screen/step_500/videos/smoke/libero_10/seed_17/H_15/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "30.900000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "309",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "screen_libero_10_step500_H20",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 336,
+      "spot_check_path": "evaluations/screen/step_500/videos/smoke/libero_10/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "33.600000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "336",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "screen_libero_10_step500_H25",
+      "episodes": 50,
+      "existing_nonempty_videos": 50,
+      "expected_controlled_steps": 349,
+      "spot_check_path": "evaluations/screen/step_500/videos/smoke/libero_10/seed_17/H_25/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "34.900000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "349",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_spatial_step0_H5",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 88,
+      "spot_check_path": "evaluations/transfer/step_0/videos/smoke/libero_spatial/seed_17/H_5/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "8.800000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "88",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_spatial_step0_H20",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 186,
+      "spot_check_path": "evaluations/transfer/step_0/videos/smoke/libero_spatial/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "18.600000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "186",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_object_step0_H5",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 136,
+      "spot_check_path": "evaluations/transfer/step_0/videos/smoke/libero_object/seed_17/H_5/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "13.600000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "136",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_object_step0_H20",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 221,
+      "spot_check_path": "evaluations/transfer/step_0/videos/smoke/libero_object/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "22.100000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "221",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_goal_step0_H5",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 131,
+      "spot_check_path": "evaluations/transfer/step_0/videos/smoke/libero_goal/seed_17/H_5/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "13.100000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "131",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_goal_step0_H20",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 173,
+      "spot_check_path": "evaluations/transfer/step_0/videos/smoke/libero_goal/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "17.300000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "173",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_spatial_step100_H20",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 161,
+      "spot_check_path": "evaluations/transfer/step_100/videos/smoke/libero_spatial/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "16.100000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "161",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_object_step100_H20",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 272,
+      "spot_check_path": "evaluations/transfer/step_100/videos/smoke/libero_object/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "27.200000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "272",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_goal_step100_H20",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 162,
+      "spot_check_path": "evaluations/transfer/step_100/videos/smoke/libero_goal/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "16.200000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "162",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_spatial_step500_H20",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 155,
+      "spot_check_path": "evaluations/transfer/step_500/videos/smoke/libero_spatial/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "15.500000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "155",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_object_step500_H20",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 196,
+      "spot_check_path": "evaluations/transfer/step_500/videos/smoke/libero_object/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "19.600000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "196",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "transfer_libero_goal_step500_H20",
+      "episodes": 30,
+      "existing_nonempty_videos": 30,
+      "expected_controlled_steps": 141,
+      "spot_check_path": "evaluations/transfer/step_500/videos/smoke/libero_goal/seed_17/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "14.100000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "141",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "confirmation_libero_10_step0_H5",
+      "episodes": 100,
+      "existing_nonempty_videos": 100,
+      "expected_controlled_steps": 378,
+      "spot_check_path": "evaluations/confirmation/step_0/videos/smoke/libero_10/seed_27/H_5/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "37.800000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "378",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "confirmation_libero_10_step0_H20",
+      "episodes": 100,
+      "existing_nonempty_videos": 100,
+      "expected_controlled_steps": 520,
+      "spot_check_path": "evaluations/confirmation/step_0/videos/smoke/libero_10/seed_27/H_20/task_00_episode_000_failure.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "52.000000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "520",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "confirmation_libero_10_step100_H20",
+      "episodes": 100,
+      "existing_nonempty_videos": 100,
+      "expected_controlled_steps": 484,
+      "spot_check_path": "evaluations/confirmation/step_100/videos/smoke/libero_10/seed_27/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "48.400000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "484",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    },
+    {
+      "condition": "confirmation_libero_10_step500_H20",
+      "episodes": 100,
+      "existing_nonempty_videos": 100,
+      "expected_controlled_steps": 320,
+      "spot_check_path": "evaluations/confirmation/step_500/videos/smoke/libero_10/seed_27/H_20/task_00_episode_000_success.mp4",
+      "spot_check_probe": {
+        "format": {
+          "duration": "32.000000"
+        },
+        "programs": [],
+        "streams": [
+          {
+            "height": 224,
+            "nb_frames": "320",
+            "r_frame_rate": "10/1",
+            "width": 224
+          }
+        ]
+      }
+    }
+  ],
+  "complete": true,
+  "complete_conditions": 27,
+  "existing_nonempty_videos": 1310,
+  "metadata_spot_checks": 27
+}

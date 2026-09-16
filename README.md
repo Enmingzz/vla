@@ -17,8 +17,19 @@ See the [training findings](results/opsd_h20_100/FINDINGS.md),
 [before/after figure](results/opsd_h20_100/figures/success_before_after_100.png),
 and [complete run archive](results/opsd_h20_100/README.md).
 
-The follow-up tests 100→300→500 updates, deployment H=15/20/25, and transfer
-to spatial/object/goal, with a separate confirmation split. Its fixed design is
+The follow-up is complete: on 100 new paired LIBERO-10 confirmation episodes,
+original H=5 achieved **93%**; at H=20, original/100/500 updates achieved
+**49% / 50% / 72%**. The preselected 500-update model improved by **23 pp**
+(paired 95% CI 14–32 pp, exact McNemar p=0.000606), recovering 52.3% of the
+original replanning gap while using 68.3% fewer calls/episode than original H=5.
+The additional 400 updates also improved over step 100 (22 pp; adjusted p=0.0104).
+The 100-update benefit alone did not clearly replicate on this split.
+Deployment H=15/25 and spatial/object/goal were also measured, with task-level
+regressions and corrected exploratory comparisons retained. All training used H=20.
+See [round-two findings](results/autoresearch_round2/FINDINGS.md) and the
+[training-step figure](results/autoresearch_round2/figures/success_vs_training_steps.png).
+The 1,310-episode round used one H100 at a time, totaling 1h56m50s including an
+aborted rendering-stall attempt; the allocation is released. Its fixed design is
 in [AUTORESEARCH_ROUND2.md](AUTORESEARCH_ROUND2.md), commands in
 [TRAINING.md](TRAINING.md#round-2-continue-to-500-updates-and-test-transfer), and
 outputs in the separate [round-two archive](results/autoresearch_round2/README.md).

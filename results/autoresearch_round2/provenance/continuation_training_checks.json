@@ -1,0 +1,15 @@
+{
+  "added_optimizer_updates": 400,
+  "final_step": 500,
+  "new_unique_task_layouts": 36,
+  "new_initial_state_indices": [
+    12,
+    13,
+    14,
+    15
+  ],
+  "action_blocks": 1600,
+  "executed_actions": 31829,
+  "on_policy_versions_correct": true,
+  "native_checkpoint_reload_max_error": 0.0
+}

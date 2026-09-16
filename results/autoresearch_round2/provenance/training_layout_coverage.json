@@ -1,0 +1,85 @@
+{
+  "action_blocks": 2000,
+  "continuation_rollouts": "results/autoresearch_round2/rollouts.jsonl",
+  "distinct_task_layouts": 54,
+  "executed_actions": 39790,
+  "note": "A layout can start several trajectories after simulator restarts. Action blocks are not unique episodes.",
+  "optimizer_updates": 500,
+  "per_task_layout_indices": {
+    "0": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "1": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "2": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "3": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "4": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "5": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "6": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "7": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "8": [
+      10,
+      12,
+      13,
+      14
+    ],
+    "9": [
+      10,
+      12,
+      13,
+      14
+    ]
+  },
+  "prior_rollouts": "results/opsd_h20_100/rollouts.jsonl"
+}

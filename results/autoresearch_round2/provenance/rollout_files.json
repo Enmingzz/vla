@@ -1,0 +1,2409 @@
+{
+  "action_arrays_match_logged_hashes": true,
+  "files": [
+    {
+      "optimizer_step": 101,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_101.npz",
+      "sha256": "e80a57b9fdfdd82e1f414d281b4e5ee80131fa390af0a970e43ea5190c46a761",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 102,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_102.npz",
+      "sha256": "b1fcf7e86cdbda81bc80007c4a6808c39948b482c2e36fc3daba17941cd5c480",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 103,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_103.npz",
+      "sha256": "6df6a0761cb92184b25ac561fb2e8be07414db56be3d5af08369c9f9c471215f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 104,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_104.npz",
+      "sha256": "4ba3f41f26d025401b6cac2cc60484951af03ee2d9f82d4e06d5626a02aec4b0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 105,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_105.npz",
+      "sha256": "d9b846ac0309fac899da8492ba5865bf082d3f10b84ccf181ef7787843d015f5",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 106,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_106.npz",
+      "sha256": "02948c902084f0295a19d3b0607ea3ec51fdc08d6d25e11510b4f5ec7607ee11",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 107,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_107.npz",
+      "sha256": "c7c77b2caf98e7e4ee76b62903d20ac3440db0e6ff5e20efe0b54b92880098b9",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 108,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_108.npz",
+      "sha256": "d92091fb62ca949393bb3361772b93ac7aeb77a5ea2789e625bcd22d4ea67562",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 109,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_109.npz",
+      "sha256": "b826e945238bc451b7622a16db9ea983623c2dbcffbc1217d5b2a9ffdcee944c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 110,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_110.npz",
+      "sha256": "97f9abe71b793ccdf1672f7c20855b7f987301c7937537ab94a8180ccbda12d4",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 111,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_111.npz",
+      "sha256": "16136380352c801c2404f4fa460489c9d43a65eee1d8c380b1141522fcbc9617",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 112,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_112.npz",
+      "sha256": "537209b7220b5ad217bd4fcb9b87f80ecbc90d684d5e23b23b6b546edc9a315f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 113,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_113.npz",
+      "sha256": "0e844c6b936aaadaeec71081844274861f806d7ef88a868c32bfe42fb5e65041",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 114,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_114.npz",
+      "sha256": "d934df1d4e9f3a93644567504d2884a871a35860cb6f9b1c8f36d28e41adb4d0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 115,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_115.npz",
+      "sha256": "d73da9c988c93e9cfa8162ac52d44c8dbc82b8563b8d8bc23580399792830f0e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 116,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_116.npz",
+      "sha256": "1945525d91b54d8f23166a3e31fc5809f32d68c5ca6377e83036e2061bfb0c7c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 117,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_117.npz",
+      "sha256": "6024ac3c35a3d0cfc0c7120fde5b4e8925b79e67f3edf1cf249e71bb1d0e8a68",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 118,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_118.npz",
+      "sha256": "d75171985591163f143ae617e8cd535e662595251abbc82e7db10089a76a1ce4",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 119,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_119.npz",
+      "sha256": "164be3e36423f45708fce897c3fa23bd1a48f99ede43a1a0b656af2915ad8bc6",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 120,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_120.npz",
+      "sha256": "2606b03161654a92915e3dc50cd3ce39e99e2f7cb9955452e25f610f0392b31b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 121,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_121.npz",
+      "sha256": "58afaabab1d0c2020d16c27b1f591823e5adc53c5c266d51ee786ebeb7473518",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 122,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_122.npz",
+      "sha256": "f25afac11801851b09440e7e590f9412594bb136f2913f8d86169308266eeaf1",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 123,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_123.npz",
+      "sha256": "d50b93991a678f937bc8650d051bf0fd22627cc38efa414e3dd68fdb3e3d4b88",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 124,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_124.npz",
+      "sha256": "d3727f77bf28beece30c1220dd0ebf16ceaebfe7576b62252d5fd37c29c5d754",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 125,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_125.npz",
+      "sha256": "d006767f62003d6c5e3fa62056329d8706092d96c408ba14d641fbaf107b41de",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 126,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_126.npz",
+      "sha256": "53eeb2596aadfa91dde964ae5181bbb8857c5665e1dd97092a2eac1bf89f1ec2",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 127,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_127.npz",
+      "sha256": "3fd61fd7ae86637848ba71bfe4fe93528f23af4e3847ddf701a3d38e5fe1f08b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 128,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_128.npz",
+      "sha256": "2d1b82a2c4ebbae0a6e3bf501a28f4386988a7e2bf6c4e46db5541302240f9e9",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 129,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_129.npz",
+      "sha256": "e9e22c9d6e8a838a7dc5faad5d8278594eb1684ad79b37b3e2c09cbf82f5a2dc",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 130,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_130.npz",
+      "sha256": "72d4234a19f217563e7485abf69aec571628233b0b9a5ca1f4dc8ff05771d5a8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 131,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_131.npz",
+      "sha256": "727ec08638a058b897852e160fb012e04a3c9c54ccfc730aa5f47b0829187333",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 132,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_132.npz",
+      "sha256": "9e05cd9c6dd824b7a16f5ea55179f0421c29b45a0cf54709e6769598d5aa70e9",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 133,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_133.npz",
+      "sha256": "c73bcc53a8c9da10ac2591cbfebc405751c60619bcb182ddcd08658f53e8fbfb",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 134,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_134.npz",
+      "sha256": "7a9f14e1a28c314ebbeb508eee4af46e714659a0f2adcea898c17ee0f1e3ab9d",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 135,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_135.npz",
+      "sha256": "ca065cf9768a7acb02d510616f917456cb4072efadfb64d365cd741bed99dc90",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 136,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_136.npz",
+      "sha256": "43038e29ad059413ab16df5d83daced8626316bc83cfb94d9ed73895ec2d0b60",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 137,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_137.npz",
+      "sha256": "00938991e84be5a2f3856dd91decf6043236c98f61389aab6d3723e4a5dcf77c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 138,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_138.npz",
+      "sha256": "02d6ae69f2e4183596d2da1f06f85a76b57adebbc273631de0abd9c2b5aa2ae6",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 139,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_139.npz",
+      "sha256": "4e8ae91e7b54c107b283522c751b95504eeda4dfa2d9665a55b18cd4a1237607",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 140,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_140.npz",
+      "sha256": "6de09126d338fe2db2e0364fea279f31f3272d364e63bdf4e7b5920c150bf228",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 141,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_141.npz",
+      "sha256": "5f6d3c88ca847f038bb92e84596e6de64d2d920dfe9fe23026230ffceb35d6f1",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 142,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_142.npz",
+      "sha256": "f7ac697c3fe8ec1caa65d669b9097bc0115d953faad188fed0907ed3619786e3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 143,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_143.npz",
+      "sha256": "21dbcfaacfbbb92f2430f5deb19f0a6be9c417b836311358d7844f0e516eb6b3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 144,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_144.npz",
+      "sha256": "31a76be91fffd497efaffd8212da9afa598b1c9b1f8e86129601e0e163096323",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 145,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_145.npz",
+      "sha256": "fa03d3787e890bfcdfa6e5b07910af241147c43cfcfe1ff94bb273b8c084102c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 146,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_146.npz",
+      "sha256": "94f587a2982d6f0addf27f341c08d60c82b1acf9d87e0139fce837ad9dbfc7a3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 147,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_147.npz",
+      "sha256": "eeb282faf5ec1d1e563e31c76f190c652a650b04909006a75387dc02b891dc1c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 148,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_148.npz",
+      "sha256": "b45c77927c5b9aee5b348313fc2298953f7c9fc11454e3cc25841e4e2635dc8f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 149,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_149.npz",
+      "sha256": "c7d9d35420154dbfbb384c2cbd6ee31ffbaa534c713890b831a291edccab2866",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 150,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_150.npz",
+      "sha256": "1bcb1575e857a81566dacc791f1eff13dd506768001a32a798e6215dd6ab6f0b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 151,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_151.npz",
+      "sha256": "19a910b1169be7b36aad0579f72579b8dfc677a13c6ce92a4b85c46c6d6dbfa5",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 152,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_152.npz",
+      "sha256": "b72bb275e24658dce972bb2510ee0c049f4af962e82ee93c1a9655e8c386cc72",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 153,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_153.npz",
+      "sha256": "72e211d63af6d4a8f5b0c030e85b270a07a49d34feedd1cff0b52a616ecae6e4",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 154,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_154.npz",
+      "sha256": "94d7c05b0c88324a9bd5eebf02ab483efa22b23e14ebffd12353b592ef07ecac",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 155,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_155.npz",
+      "sha256": "a118178ea1712061616495768c08c36266c71cebdec894314d240e7d5abed1ae",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 156,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_156.npz",
+      "sha256": "a4890cf93e96eca7cd8134821744510dcc4fd7f7762bbb7c508b257e5b096f77",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 157,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_157.npz",
+      "sha256": "43def85ba2127aef836f8abc2e9b50fa4be56188dc8fbda49736b754caf58300",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 158,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_158.npz",
+      "sha256": "510e40637a8ad935a6a5d0cfe69a7a9ee08100952daf7fa9b267dfe9c8d94fc4",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 159,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_159.npz",
+      "sha256": "2856433c6cf802bb32df0b573c7a971f6fc9cf8a5ff14c4fe4b41c756a15bec5",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 160,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_160.npz",
+      "sha256": "a98f1dfd41d2570311573ecd39bf6fec04696a9b297d96ab7d9a16ed526a3fe7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 161,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_161.npz",
+      "sha256": "8e431eb48dad958f690920210c2ac35f04f4b8bebfce76240534e6eb6c240132",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 162,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_162.npz",
+      "sha256": "1337e78ada0adbcc817bd47e24e7b6631f9182f29b9e2c62939693516cb885fc",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 163,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_163.npz",
+      "sha256": "e936e0b756bb48621e93efec9026202aa7353aa6fab90303a890f2e6a8ca86ea",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 164,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_164.npz",
+      "sha256": "b669cca4dd00202938319a26dc53a32c0ed98840b32b2e3dcd35916346e4224a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 165,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_165.npz",
+      "sha256": "11f991a9b0cbfa22fd03e4d9c0a8f9bd540376b1ea6af4191a6cb0f9c3efa94d",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 166,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_166.npz",
+      "sha256": "f0c65421dd6ca8b35a3af1b854dc4ef5ebad5a8fc4ed27facc369cd78ad369c1",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 167,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_167.npz",
+      "sha256": "f646ea9e0ecb3522df63c4081b8d6426f22eafffd7ad4e58a388e55c12d87e91",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 168,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_168.npz",
+      "sha256": "bd921de44854f5ee816c55bdbe77494113f2e25db61be5c5aa5ac036ea096ab7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 169,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_169.npz",
+      "sha256": "e095acf0fa49161dbbb7cb274cb9531e4fb0dea3f40bbb07d48611453ef680c3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 170,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_170.npz",
+      "sha256": "5bd5c789ef61ba6b165404fd32b08d3af778c158901bb418e96f66a0d2fc6a42",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 171,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_171.npz",
+      "sha256": "202de8f22d0b16a8b5efa1a66222df0c7d42ca5f9922633a31ecc71979e1b3d7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 172,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_172.npz",
+      "sha256": "7c7facd1e668f5b0ff668bd29fec42d7513db317b04e80afb773bdd97127e85b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 173,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_173.npz",
+      "sha256": "1aeffc13d388f4879a62d302e2a853c86acf54e862310e211745cca56c89d87a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 174,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_174.npz",
+      "sha256": "ec400219d52ceac325624a20e79d12680892a663171e912869a96cd54c185467",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 175,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_175.npz",
+      "sha256": "2b515f2e752df28a41af6e31a2aaf58e490fa81a75e41f43034dfc4d3f744a40",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 176,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_176.npz",
+      "sha256": "068b1e21c47e27ba1e2e55032d943ef42ac9029af0bfbd49a7a132310d1e3e96",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 177,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_177.npz",
+      "sha256": "ea23d707bd88b539dcc694a7a2777d8820a2b2dc82ecb58eaf570b56cedcac90",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 178,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_178.npz",
+      "sha256": "7a2a5e41a249d710fff5067b3b6e4693c2c2c2fea90de32a850d34b91b8d4067",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 179,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_179.npz",
+      "sha256": "854842a6c69c316a89d864fa0b004fa0a85ba97387bfe3765804c978ea47fb4a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 180,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_180.npz",
+      "sha256": "b5d90820155ce8002403144d8480a2030b3e06da155b9e1103d379ff5cea0e2e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 181,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_181.npz",
+      "sha256": "d7650386cf61f7d7350ac2f188dbb50c182cd62525bf1541831d38052a2ce99f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 182,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_182.npz",
+      "sha256": "f31cc9da7cf3532d50d3435b7cdfb08ce068cac2553d6c2103c4b196fdcb19a5",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 183,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_183.npz",
+      "sha256": "d943e262b89c6ea2f2837fb52cebdc7384d351827b6202bbd5fad0ade2f86567",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 184,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_184.npz",
+      "sha256": "9a6af20221385a72ccf3a726f4d09ecc5aa360a3237313d6caf14efec7f683b2",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 185,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_185.npz",
+      "sha256": "f7a37b67e55b8141458640483f2c965f20ef917df6e2b01f0b9e257f69fae218",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 186,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_186.npz",
+      "sha256": "da50cc1dfe4c2f922b6c28e1ee706d32848a55f17e0d58693e584f1113cc87eb",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 187,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_187.npz",
+      "sha256": "644a3fecb09ccb97a208ae252c001487f65f251f1737d261a1423b530e378d07",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 188,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_188.npz",
+      "sha256": "27e494ecd62b669169ee82c192e0d6b79975581600b9db565aff075572a1ae27",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 189,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_189.npz",
+      "sha256": "e02a621f5db47f216dd74f142356658759e078e3c03b156d7beec186d48b6638",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 190,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_190.npz",
+      "sha256": "2e7a3c9d3c957ea296746da42bd1d3b43466d46e9013ae4641455b5cb4669ccf",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 191,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_191.npz",
+      "sha256": "b90a94b5d6d1360f127850b20de713473753cf1939e0507b18b4e98fe096f6ef",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 192,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_192.npz",
+      "sha256": "5a1cd19779ee0e308ad4577a404ce365ed98e40e9c06d3397f86baca96a0903b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 193,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_193.npz",
+      "sha256": "86922700fdce4ad4e4eaa74c5059adcd3180421d939ef518a49e00c16d442e3a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 194,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_194.npz",
+      "sha256": "0020118d07db08826ee2cbdf8a92f8628c4e8d19a1a87929e1b5c52946d4758b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 195,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_195.npz",
+      "sha256": "1c16f113bc12c0703c760eff695f5d27c4dc529d3b67657c4f0afd0fbaf1e6d4",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 196,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_196.npz",
+      "sha256": "14304803fc862ded547dfd3a16ad6d6734fa755333113e94037253b2bfbdbf39",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 197,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_197.npz",
+      "sha256": "cff83be80d5f30c0871af6310f95b08c1914e4e5843b6dcbc867397d801923a0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 198,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_198.npz",
+      "sha256": "b0570a02ed740f9b792b660fca79fad64a8dd28cdd0a03f5afba89157d21c1f2",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 199,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_199.npz",
+      "sha256": "c1acbb4604a01a173b25ff1a4cf839f6a4738305803cd8df499e1356ac52f890",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 200,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_200.npz",
+      "sha256": "9bd027fbbe514873cfe38b167662af1f4307cf4f6a2e88085c89119a77b6ac2a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 201,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_201.npz",
+      "sha256": "32eaf9475a7f88ec13db88a5e7362ae8bfb52ba827e54593bb1a15c07eff3ef5",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 202,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_202.npz",
+      "sha256": "456ba4bc3e8caf6846331c97704b19b8443ed88a74dc2e8dd7b95eab6ea19b01",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 203,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_203.npz",
+      "sha256": "6d03f996df5dc32c47da12aecedcf31eb2f0ff221a6227f27ab8055d39b2ca36",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 204,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_204.npz",
+      "sha256": "94de68bb7850d4ea073e1a67f9875bc73da15c2261f2d42e130a65067d6a1242",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 205,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_205.npz",
+      "sha256": "41a22ba2c721b910c0e1a0f4243eeda6cd464c6d6ab6a7adfd04d5c756ae18a6",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 206,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_206.npz",
+      "sha256": "9f03cba973dc60084fb43d2a2567cbac9e215652cef05315c6b48e8365d178fd",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 207,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_207.npz",
+      "sha256": "4ef24390b375101aa87dc63d2eb24eddd57ddf13b1fa6d6d6fee6edb6d4d4ee8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 208,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_208.npz",
+      "sha256": "00e916d585956fc13700e49354ce78c833dd83ee17a20d720aeac2567fc45357",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 209,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_209.npz",
+      "sha256": "dc57d9af5b2998c6fedb2bfcb2f314efabe53c49d4acfa153de63b73b2e7a313",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 210,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_210.npz",
+      "sha256": "ff73a8f633c2b75398331113e0b08466b00af44895c1522c2fbffa125932fdff",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 211,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_211.npz",
+      "sha256": "55a18b94dd13784986f6f6469792e91fcabb33d1ceeaaacf8ba75f222b8bee28",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 212,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_212.npz",
+      "sha256": "00ce7c62e5a4e84f52005babb1dd4d91fae57f4dc6e149d7f0e371f54a611d7e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 213,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_213.npz",
+      "sha256": "512fc4386838010c2018c7d31f028d4adea42b8bc8373be1d142791f7783605b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 214,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_214.npz",
+      "sha256": "1890c740b7dc37ce9c8d0d530860d9f5672287cf2b2c4bd92957063581eecc37",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 215,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_215.npz",
+      "sha256": "3d40ca4459f22abc58645033b6fe31e6f96827f96544d623e6d493c4430e69ed",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 216,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_216.npz",
+      "sha256": "3624be9d2158328d32dec877e8af6c7a758648e0faefc4c198324f47d5cad072",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 217,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_217.npz",
+      "sha256": "08b3de07b25b909442ecc0caeba189b8c758da0ab3ee9dd8a5fab37f025c6054",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 218,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_218.npz",
+      "sha256": "b53559fa43d20fe657f298365b0b251f4fc8d5830ae3d663fcfae2eaf8253b72",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 219,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_219.npz",
+      "sha256": "b8bd6b7e23424e2a52956c72261ad023520178cd950a5f93c24c5ffc84bacb63",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 220,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_220.npz",
+      "sha256": "8a4a40a4e6a87d9ac03357f108d814246c4406f6b8c7ac8abb81ca5072305843",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 221,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_221.npz",
+      "sha256": "a9a1f04c54e425c21c6349e790102f20d1d0d787875458504bac0774247ec7fa",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 222,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_222.npz",
+      "sha256": "9a8421f3014d340109c3e888f765b14bc8ba7dbbcb0cba25a66b1089f8a41c86",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 223,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_223.npz",
+      "sha256": "264077ff96ec06ca5a425f2021b433b69a00021fd806ca1f1362890820203d33",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 224,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_224.npz",
+      "sha256": "05795587f418fef097bedcbd730415f8ccf40fb2fafdf3541a4c886995400138",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 225,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_225.npz",
+      "sha256": "14db7692f00e30f74cbdfa78d84906398f6ae2113747ee4880061d06cd5ac18a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 226,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_226.npz",
+      "sha256": "61b104efc0cb26ac46b5419114016a1ed8f2caf0c1b82a65836a475119c3d41e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 227,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_227.npz",
+      "sha256": "94657ec3f358b40573973dc77b69a2fbd6114548e3d092ec3fb7cbfc32b3afe6",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 228,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_228.npz",
+      "sha256": "4273263472c43dcb452f88ff6f78b33c61ce254b939a50ecfc4df185b5e8d8e0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 229,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_229.npz",
+      "sha256": "6c13d01ad72b4259e35866ee1d20a1ca28b90b5d344a4993ea55c9ffa6e9cd75",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 230,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_230.npz",
+      "sha256": "17abd5a97010aeaf26e79f5cdfe32f0db217cd9d87bcda2df86c6ff6ccbc903a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 231,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_231.npz",
+      "sha256": "4d7b6f48add2461603e2042f94698011c485da4e455a89c03b8c0e779981e485",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 232,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_232.npz",
+      "sha256": "f9b4ac56e3bd57ee40d6f03d3ad1895d47eb106819837ca34fc54098cf4f0a6b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 233,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_233.npz",
+      "sha256": "d50b742a72a99bd57d73ca970517e1256034907d349c111002cc4bac9f4f1b96",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 234,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_234.npz",
+      "sha256": "3fdf2594f4ecd3da32d69cf4aa1d8431678e2e91a41c95b5f1b180762e3a20cc",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 235,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_235.npz",
+      "sha256": "421f77bff04a183b6d970b62b43e0ed3fdf6392647b5ad854092e9342a703363",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 236,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_236.npz",
+      "sha256": "fd2fdd23b9d325ac20f4290854bd56f739667232e8f1403dceca3c648b4c8172",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 237,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_237.npz",
+      "sha256": "ead2e69f23f2828d6e440270d7b9598a692346e04ff643426c356c657a202011",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 238,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_238.npz",
+      "sha256": "fd1237b73457079f15d59c691c6e497560bf7958c89a524c11958e70da7fe84f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 239,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_239.npz",
+      "sha256": "1e09c8587135dfa0ccba258a9e5ad1f58ddeea613fd8e932e55c890a956c0f2a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 240,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_240.npz",
+      "sha256": "a0d784911e545b27be34a43d3319d549dd007f6c564b55de4fafef6da22f6970",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 241,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_241.npz",
+      "sha256": "7884af9f7db8d70c120f361dd48f2b41e52bc138150d9b62a808993cbfd62070",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 242,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_242.npz",
+      "sha256": "45f6eac88b561aaadf7274832814dbfc9242b81528022daea8d30765219d354c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 243,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_243.npz",
+      "sha256": "30b5c69b5182bc5e56df14b83a75ebf49ee9cc7073405fefb61b089f96becfa7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 244,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_244.npz",
+      "sha256": "1bed51b42afb4c5aacf238f5b98ef5f4944a88e067217f8095480e766a84af07",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 245,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_245.npz",
+      "sha256": "9abf512e7b4e42ea35a80582575d66c0fe854a416c7000c6d33ab618ee347da0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 246,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_246.npz",
+      "sha256": "4e835ab72a59e0619903c023bcaea2b4083c5e6edf38103d9920fa4fcb8f7843",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 247,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_247.npz",
+      "sha256": "ed8a978033c8a5fe117f5fafd14828e31e9fa5f46b1f9004283d4a9744c6a664",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 248,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_248.npz",
+      "sha256": "0a99852974d3eedea0d1a441b00c484bbee4f1bf69c2570e338f54814670e338",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 249,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_249.npz",
+      "sha256": "5d64f2180da2e0937d9610a6b6bb6e1d39a40b81ead7dd3055267bb3cd9d39bf",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 250,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_250.npz",
+      "sha256": "29dd7d53870818107efc883b0fceb000b6ce3bd3cad2bf1f6de087db8240c878",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 251,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_251.npz",
+      "sha256": "eb302d985ea069d572157f92bbc2f45131d84add259eb232820182d702c682a5",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 252,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_252.npz",
+      "sha256": "3d6113377fbd74afea51ef6840a48c7d2a736c0b7d3943509454a7a59c2b308c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 253,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_253.npz",
+      "sha256": "cbfcfacae6b5a83ea5cdd78fe0cdfa8cd88dc4edae81b7cf8bf74efa507325c6",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 254,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_254.npz",
+      "sha256": "2cb1776bbc9c8589d9b1189f393a7262d860d302b78ca095f27ee5f16acf0140",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 255,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_255.npz",
+      "sha256": "d74c2b8a0df4ba1c3cebc52cbf0cf14f9edb739031aa2b57dd6746263da0b5fd",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 256,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_256.npz",
+      "sha256": "0e063ec13a646988f3b580efbdfc5ebd8a081c9a778bc9761e2b5864a97e38c0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 257,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_257.npz",
+      "sha256": "c5c2b40a31fb805d0265b29baace7546d9b77b1497810c50f14b3ddd1e3cd92a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 258,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_258.npz",
+      "sha256": "eeef2e02f3cd9e554b4f10e3dcef5d00385a44d003a9056117e398bf595e5094",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 259,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_259.npz",
+      "sha256": "d032244da9662968de16f8e0e8fb316ff9893d91f4f35f32a5305417483a252d",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 260,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_260.npz",
+      "sha256": "73bc6321e04b524ce1f870677a2a84399223dda34335349fa3931737a245e484",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 261,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_261.npz",
+      "sha256": "e5800e59f0b247f8d751262d73b0f0d82011ee909622aeb1b882d88b1ff5812a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 262,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_262.npz",
+      "sha256": "54b792a4efae0871c2b83330e2cb9b3fedc1978c8a59b7c4eea7bdfc14b46d0c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 263,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_263.npz",
+      "sha256": "eafeec975aa8a3a82be7a913025ca421109f4afa667de92334080755f49bcf18",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 264,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_264.npz",
+      "sha256": "b69b7e9c0dd314504b4665904bd8b5f8b276e331a7ee07ce1ba9c4c6a0ea42d9",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 265,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_265.npz",
+      "sha256": "2aff4f0b41f521c8357dcb8349a83ed3c5b21845fd006b24a43da906dcab8f72",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 266,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_266.npz",
+      "sha256": "86f84da15f131bdfbc3d30ef0316ac61bd1331107b57e1b933459192c7f7db7a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 267,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_267.npz",
+      "sha256": "d932c3fc3af1c663178afb4f52bd24718a1d50cec26ad4c1a0c41f237298069a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 268,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_268.npz",
+      "sha256": "2566d830e30a5f9583b123ca075e73501ef4c87101b84d7cb33815670a173fd3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 269,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_269.npz",
+      "sha256": "b6787084d35e70cf25a2560359da0bcdeb3f55a2574e5a1363832dcf318b6597",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 270,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_270.npz",
+      "sha256": "80e84ef3e1387099c1ec0a23efcbb72408c77c3d99bfbf139eb8ea1068f3e08e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 271,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_271.npz",
+      "sha256": "11dfabd57e3fc961a52351c266d262d24488a6a0cded7f010ddeedbb0a93bbcf",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 272,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_272.npz",
+      "sha256": "e73caaa5fe8e55844d7d7562ab9341d36b16fec01466058b6d841e1fa470a417",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 273,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_273.npz",
+      "sha256": "f57687ccf7a4c539539a4deb71e62cfa40076ee8ba4fe15efb4a502961412675",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 274,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_274.npz",
+      "sha256": "be5e41fdfb857dadb75bb4c53f3aa9a9a41bcfe13af014b4dec85a0139933feb",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 275,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_275.npz",
+      "sha256": "19452e884f07184702278ee54b2ff2e3d6abcc9e493a0fe73fc18d9e4cd5d7c8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 276,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_276.npz",
+      "sha256": "03e22f5bbea58680b8783ddfc91c699b3126ebb8bef8d911540fdbb33a70ba9a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 277,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_277.npz",
+      "sha256": "d80cd5e7b0bb47241aedd67de87d32633d0d11c3dc083d59b1758ce7d70fe4b2",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 278,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_278.npz",
+      "sha256": "64b17af0645f2835cd0028f0b5fbfc5b6235678fbdf8606dba121176dfffe9ba",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 279,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_279.npz",
+      "sha256": "89ffc8b44d13e2b2f6dc75d7b446be25c66459eec5de6528a7c855ee5ba9ae3a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 280,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_280.npz",
+      "sha256": "4321eab0f0e193ee56d0e5fe64bb935f73ee588645ab24d16d0a64de6cc85e04",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 281,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_281.npz",
+      "sha256": "ec7adb06dceee0500531ae88a57b5d31bb7cd6e664b074d759f9271590f5bdbb",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 282,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_282.npz",
+      "sha256": "1234b746a9c5b98cf10793982c67a2add1a9cf529f0f9e8b2d645dbcdafa782e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 283,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_283.npz",
+      "sha256": "b1fcd51bd51af795ae61e6ce04b5c1beeb2d48c052168ba86a175938d0241d58",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 284,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_284.npz",
+      "sha256": "d13948a69e8158326e5d92b9907b9d3370cc9e880179d4fbc57c85793dfa4994",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 285,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_285.npz",
+      "sha256": "b10afdd193cf6d32dc2fb0583c3f33e6e1056f4b8db1cbfdf572078eb218cc38",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 286,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_286.npz",
+      "sha256": "fb2fa8077fcbaef780b35fa01072a6229bc692da7ed2a54b6852e6171943951f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 287,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_287.npz",
+      "sha256": "721f16e14c9ac586caaaff849a0ecc8947e15ed542922ad4a5a3647ee3b66f64",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 288,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_288.npz",
+      "sha256": "35d8ea9f1f018148f9c18ca22201f19c9ba302708c36a889ba3c8f0b535ad028",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 289,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_289.npz",
+      "sha256": "c4cd73c35cfee9d7ef2d18fdf3f24dd78a198aa16b7a9aaed48d2ef162a15242",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 290,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_290.npz",
+      "sha256": "9481fd24f296b27387c4fbda5accc0accc231d92b2c90aa55233c36212f259ea",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 291,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_291.npz",
+      "sha256": "2fc4dee03768b7953c7fe05d53f7f0b4df40c7e303e93ff12c3ea12fc2493bb7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 292,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_292.npz",
+      "sha256": "4dd02a97c06c2e433f193b818605a69e031302d1c8787f2e46116bc66e9d0565",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 293,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_293.npz",
+      "sha256": "13c879e4a149a73f5b59f37bc1ac3bc0e9088b7278605e0cdba31fb483fe4720",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 294,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_294.npz",
+      "sha256": "2f7d683b681cd36e73a2b13b9f89699a92233f769be36528d21e5fb369a04ce3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 295,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_295.npz",
+      "sha256": "19b93a961566124d04912336354074e68289da4da86483aaa71f675dd2e1d6d0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 296,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_296.npz",
+      "sha256": "8de0f3dc68d56f68cd8bf2ea55d28a18ab62e4d2c19a2cd40b97792ee571bbe7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 297,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_297.npz",
+      "sha256": "8e4ef818bc251c44876978c19360d4e6417b37fe9dee7cf77ad8e2dc577be6da",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 298,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_298.npz",
+      "sha256": "0135b9197c3c843c53215ff960a13dea6d7fa175106754a3872135007592b7aa",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 299,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_299.npz",
+      "sha256": "e0110a8f1a435aa71eb9f7a37afa440fd5d79a242029d7a53f79e8fd9d665c08",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 300,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_101_300/step_300.npz",
+      "sha256": "989fc655789b76c4c11a1e583be83a51a98a9c4ef0d0529cb56584bde6078f49",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 301,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_301.npz",
+      "sha256": "ef6d38414d4130e406253dfb455e9224db3f4d85f53ed034dc70f60d8bc1b318",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 302,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_302.npz",
+      "sha256": "ff7dccdc1cf249fa7884fe90ca8950a13a6be6ca9d0b2ade88bd1ce4179b4400",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 303,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_303.npz",
+      "sha256": "ac9738634d20587b003a07e75edbe85d1843ae7e2f0eb732c1b5c80d2b4428f3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 304,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_304.npz",
+      "sha256": "f4ed9a9c6106a3699cf7f6682f668ac4816a5969af102966f88ec47a75bfa6a0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 305,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_305.npz",
+      "sha256": "e1c8f6a6d72a602f555cf5f802095d0d655d7fed651826f8f7a6af5790a18a3b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 306,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_306.npz",
+      "sha256": "1af9f67c67e319a8fb4e7afcbcc5850646b7799d311c6cd96e0b011b4da97b01",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 307,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_307.npz",
+      "sha256": "b21147312574184f792d49bccdb79c61de640835bff6d051a714b45d545f475d",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 308,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_308.npz",
+      "sha256": "5c853a5725555c43eeeb003d9b76d9424278d8b9b7428a9cdfacf69dedb6ff05",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 309,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_309.npz",
+      "sha256": "c29ea92b0ecf55d9bae94d76bf70474ffbbeafc829fca1722521b598263dbe42",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 310,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_310.npz",
+      "sha256": "a42263b1886b9a8f1a93721104206f4c920e4bea2d3d9b500b77bb5ec8286b62",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 311,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_311.npz",
+      "sha256": "e83d95f9d9a28ad44c32ea850209bce7f5c4e93c0b68fa9d88c26545dfe5b32d",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 312,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_312.npz",
+      "sha256": "59d1cd73bb7d14c33159f9b1bb23fdbf1563c2e4db62cbd66f68e4fa57d92efb",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 313,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_313.npz",
+      "sha256": "fd5e207e66b00aee1db718eb4fe7ee730fcdf5d4e0c4045684a0e685b3266ffe",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 314,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_314.npz",
+      "sha256": "7991f505814d641bd8aeacc9fd8c061ec83f6db3894effb4189de4dabe59272f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 315,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_315.npz",
+      "sha256": "48d8aaf2be6228a59ccb42e3e06845c5b76294921c3f656251afdd5f2052271e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 316,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_316.npz",
+      "sha256": "08f961b1c094b8742915ac3bf10361d38a0ce27fc94f8540b83679111cd2c0b8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 317,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_317.npz",
+      "sha256": "1c81f15d23b4d4ac26b44cdf3ce8bbfd535cbc59913327dd2d4f2d078095b642",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 318,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_318.npz",
+      "sha256": "e4823235f44dfa7596f26f72209473c42ce6605277f073457082beef86dde2f3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 319,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_319.npz",
+      "sha256": "790b6f7ec2b13f0450987b78c9c1b0c00b35d5fccbc9a9c6a26f65f935e4a626",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 320,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_320.npz",
+      "sha256": "1b6cc3b91a2fb1ba1d1fb2823e017d60efecbfe72b7d8ed7a01a47275cf78227",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 321,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_321.npz",
+      "sha256": "18e4eac67b8000f1d2b2b994cc1424ceaf87d9c457ac1e0f156eac8c334193a5",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 322,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_322.npz",
+      "sha256": "bdfb6c68a18bdfa1fcb2b3fb763bd9a47d796770729be3f2958ce442e051407d",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 323,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_323.npz",
+      "sha256": "f7fa512be2fc7157d412d0aed4d81cbff9d60b20b0da5d4deffa7ce4c09323f0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 324,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_324.npz",
+      "sha256": "3b8cad787648faa7963b941b911e5a50590d6a6c6f25d76cec6c9785f884cffc",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 325,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_325.npz",
+      "sha256": "6190944db6aa1f9647484115deac20bf03871f74a774dffe59bab66e5955404e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 326,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_326.npz",
+      "sha256": "4ad4187c00c8235f131f3c2057882fd52abcda535bbef6c9362fb1d6854717d9",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 327,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_327.npz",
+      "sha256": "801e6dbf424d2fd20bd55a80ad1015b0d428b0b5873679377e289bd41f68f2ed",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 328,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_328.npz",
+      "sha256": "2f6e3974a82bcc6bdc55354873b6076a2831189cada0fa2f53ebdc3a917a5527",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 329,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_329.npz",
+      "sha256": "cf7d4a659f531426a27e0114e8d688d6a12f0df082439a7ea792a208486127af",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 330,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_330.npz",
+      "sha256": "df5f12d3b14055bbf092f7b3dc40be22ba434b334ca450b549cc1ed2e9234bbb",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 331,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_331.npz",
+      "sha256": "782058962b8ac8399868acd955d90b749d74dd30e51bddf2bb21942311488c50",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 332,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_332.npz",
+      "sha256": "8b87bbdea1f47705ec9633341a0aae382c9089e4eb34c014e7d9e6d167bb8950",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 333,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_333.npz",
+      "sha256": "b56a82fa086fd9b766506bbd685263172a6cb1d32e7ffb2cbc668136c821acbd",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 334,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_334.npz",
+      "sha256": "0c4a9744bfe68525bc5388857d3114c06a409a9163e27f1ac2b21b11d6773e3a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 335,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_335.npz",
+      "sha256": "025cf2bab3535f55233b28999f0e5625a33d198289645bac90b304b218970ce8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 336,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_336.npz",
+      "sha256": "a67390263d2df13f38cc046dd5f165484dcf0708c147dff4e901ca1a30a75069",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 337,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_337.npz",
+      "sha256": "d7bd4ba74c103ad53ddf665f28c70ab4db4626a3eaeff80651a4415124d359ac",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 338,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_338.npz",
+      "sha256": "ba3f39082e017f1902ba9a73ca4697eb3495e7375999fa53fc449607b4535626",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 339,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_339.npz",
+      "sha256": "886b6c91e843d9170797ad33aa7dd823ef744350b8320a71c03d8288679fe61a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 340,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_340.npz",
+      "sha256": "2cc7977e2511b7406be646383cf132062d026ac265f05e61d562d5c8904915f1",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 341,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_341.npz",
+      "sha256": "05035139ba22d27458dfafe31eff6d00d953887ad541dcaf0f1b724a808e74e6",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 342,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_342.npz",
+      "sha256": "2db4dbf52d32adc49e899cc1c7a2d7a7eb98fd3d8f2873f990bc8cc326d0a75d",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 343,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_343.npz",
+      "sha256": "9250e9633e0048a67c9178924ada204d413b43cb25f4ec95626028a4774a3d43",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 344,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_344.npz",
+      "sha256": "21228a2feadfd25dfd28cecfe3e86fc7c1fca25520c400557825e0a8cd3307df",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 345,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_345.npz",
+      "sha256": "3ccad7d32a655df8ca4ca9907ab4595f3898e3336e7d6bcce3e12ae2779f229c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 346,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_346.npz",
+      "sha256": "915307c084583f6c8b6e140ecff1f28e758c8b1dbe15650caff5170c5e5d3de3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 347,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_347.npz",
+      "sha256": "e593918d4c04f95ea31f3fb17a3b77417e71f0cf5316579691094e9e20be0318",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 348,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_348.npz",
+      "sha256": "9738b43e3098aabb0392a777277b55a01d58655f8957675eb6fbfa5e5d90f9a5",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 349,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_349.npz",
+      "sha256": "309d353a84b243329080060211fcc9ba48e87a5aba62668df75ae973ed65689b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 350,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_350.npz",
+      "sha256": "f9da2044fbd50dc2954a5d394d825ac427afe2dc069dcebddbf3e5233aad754e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 351,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_351.npz",
+      "sha256": "0153f242a606b0cb23c408862961bf7c33b6ce657d6f0468dff8e8e9db0956f1",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 352,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_352.npz",
+      "sha256": "1f8ebf94108fc8ed47c6650e8d6d08f1ecbf9fa4679dd30fd5da7489eb4c1f52",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 353,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_353.npz",
+      "sha256": "90fdba7672d8951b33dd5b6196017f5aaa3277ede7425001e1207033f6a80cb0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 354,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_354.npz",
+      "sha256": "29fa8930cd2e1a4aa6268afcac6672acce3727263417afd2f6b75feb7361afc9",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 355,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_355.npz",
+      "sha256": "2cd1439e8c86afb07017f5d3fda28a1f603b55407e6aebd81b16559f55f7d0c4",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 356,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_356.npz",
+      "sha256": "26a6f359b014008459c4166602387d21e7c1bdee20466f36008f8c6fee92cb7a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 357,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_357.npz",
+      "sha256": "9c473c5aed7d879e27ede4dc7c1584cda608937617f024ffd848bf4c7b092d08",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 358,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_358.npz",
+      "sha256": "0d39dd465d6950193b9e9331e782279684b38adfa52cf4dc257a3b57dd677039",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 359,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_359.npz",
+      "sha256": "c2dcc4d6b0111acc63b049a2fdf1431ba56ee51e1099ec5b6f7a919347ce4733",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 360,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_360.npz",
+      "sha256": "a2030dd8bcf24efae92ebe7d08a1ff55ef5c8547a0be34611154544f845a33ce",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 361,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_361.npz",
+      "sha256": "d31c2b01fc2f570a152b8c3df0fd8d330d35c0e84e4d09d6987020798b2e78e5",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 362,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_362.npz",
+      "sha256": "c34c30a9c5bdbadbc95f460c16380d3968f6460493cad73ef31cec475b91798a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 363,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_363.npz",
+      "sha256": "d78356aa68c1980b7e8ef3f49a19caa5f305b875af87e35eecb6cf4352ced53d",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 364,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_364.npz",
+      "sha256": "4fc0a4ba75169447b28e88dd3bce92d6bd1d461ed596410da4774b8250b3a96a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 365,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_365.npz",
+      "sha256": "fc83973f183e076a17010e31b0968a777b1a95a2bcc508f6741286659053996a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 366,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_366.npz",
+      "sha256": "add24fd8e23c12fd48c5285131d112ebe021669b12cb2e304126b3c7a7928fc4",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 367,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_367.npz",
+      "sha256": "241ebcbd5c04df5ac1e878177a805c92bfcea1a8e259e41bbac1e4757bc82e28",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 368,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_368.npz",
+      "sha256": "32458e73ddb8ef224ad97537f69166fa283ea671a24e37e9bd8b248992865fd4",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 369,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_369.npz",
+      "sha256": "71118ff9a888e7d46c1277d0fdf85e735fb088155c17097ab8c84df56c9a7a63",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 370,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_370.npz",
+      "sha256": "8a86a65628ba0b3f134777a593be054b4b3cbf58cdaa1e90309ae1fb7f62a5a3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 371,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_371.npz",
+      "sha256": "232f7293349125ac84a27ace5e4c74d975d8a1223e3a739be9839375f9c1e417",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 372,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_372.npz",
+      "sha256": "405cf3f8fc3bd5d0029d4bccbe5613cc1815d1c40bd81c3b82cfd9a81caa43e3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 373,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_373.npz",
+      "sha256": "e8874791bc1ad0b7412e5c4de373548f9169b1d8dce47d902f6ab8f269fec67c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 374,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_374.npz",
+      "sha256": "609903733831db80edf529918a507893473b3ee493c0268a24c97b2a78248be9",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 375,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_375.npz",
+      "sha256": "73ff069146fcfe27b1c05d4569e546000f943bb4fd8cd463da198a4ebd26c8a2",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 376,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_376.npz",
+      "sha256": "d7701c7b0e34d2b1f7f5130188794dad5b46bba1c7b2f665121a78f14bfe78d3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 377,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_377.npz",
+      "sha256": "ebd5e03432f71d4b79cc24b71562d79b4ac046fb51d240b258c3fb7d255fea51",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 378,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_378.npz",
+      "sha256": "84c7ac0960d0830c6a6d62f5dc4dfaa5a16bde836edf3d0e787b94af57c47faa",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 379,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_379.npz",
+      "sha256": "4341a88c5de13362b1139bfa4611b17ac5f0deabc61e0ae664f6d2c002dc6f31",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 380,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_380.npz",
+      "sha256": "f06483c8ed224b5464721c4f0541319db2e748897a7b45e95a51c33bcf71fcf2",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 381,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_381.npz",
+      "sha256": "376bed140d09493d853f8afd88c1b47f4b4087101af02fe67ebf6b0e30969225",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 382,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_382.npz",
+      "sha256": "299136a384b04de62a4e8b3f1d36dedb1e0539e6a8e05ad081ef847758270d8c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 383,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_383.npz",
+      "sha256": "5841af5721549f97ce805ec6fb4880e5e1db003140ff2c691d9a021d96175470",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 384,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_384.npz",
+      "sha256": "52e407bc3393cd3a0c56ec90de9e156f8d662103d2599081ecfecade553ecc36",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 385,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_385.npz",
+      "sha256": "235fbe649a2d6a2b93dc0f85ce4b4881ad87e7376faf85f4b8e1fbd84c0916b8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 386,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_386.npz",
+      "sha256": "1cbff184806b7ae101775bf6a3bb58ae993d3de4ff32a00e628fa11d89f6a2dd",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 387,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_387.npz",
+      "sha256": "54bb937f9f3cb33be715958f17d5bc60685c5b32d64240662d9371efc344141f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 388,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_388.npz",
+      "sha256": "de8ef3b9e0fa51483e28c0acd13eb092d292366770fe71431bde0029af0c11fe",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 389,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_389.npz",
+      "sha256": "a3aee0e2604be44bf8dae83b42f81db005959c0e4d23337ae355f32f668d083f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 390,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_390.npz",
+      "sha256": "8868d0076e5238f968a5d125fde5dda4e506fb87f5a52a507073e0afb29af263",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 391,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_391.npz",
+      "sha256": "27f735d8629cb212e9ef22eac796a297fc066d25cd1f0df73946607e7318c3b0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 392,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_392.npz",
+      "sha256": "69aebb971596f223884594a62d9c76abb8de111396ebbdb167655de1d07a2f81",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 393,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_393.npz",
+      "sha256": "ecdc2cfd13f1b7abbeadb1dda98c8fa31e6e8d80c0662c69a9be6503c03b7237",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 394,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_394.npz",
+      "sha256": "2b20f3a0fb373eaf2f473157d898a01b2b98b46c310b2ab49ce19f3cbb351a63",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 395,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_395.npz",
+      "sha256": "e8d026259a8a1d8c26537a356484b73dd148d35455f5f52d6d47531b300e4d28",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 396,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_396.npz",
+      "sha256": "20b6c2aff797681968b0e1735bfb392bd7415f4805a68bd938c38099188a283e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 397,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_397.npz",
+      "sha256": "a9b56be1ce854e66812606595954376a25b316824083b704811bd3000bacbd47",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 398,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_398.npz",
+      "sha256": "a7d8b6c5688236976c92aed85a157550c28fdd96ac37990f307ca43a1be3c814",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 399,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_399.npz",
+      "sha256": "206fa1bc9c7383715171d59a224096966354dd762800fc41df3f965b68790832",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 400,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_400.npz",
+      "sha256": "4a185a2fbecf0588b29e6317f2d2504fd327316659fb992ff10cb0901e91b77b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 401,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_401.npz",
+      "sha256": "471e4e83ac649b82db5862b2fce671ef828839fe4b04ea82b133cbf03f782bd3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 402,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_402.npz",
+      "sha256": "afe055035cbcb8e4fd5d11360db660a34f8553520cef3eb7bbaa3388ba21b1d8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 403,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_403.npz",
+      "sha256": "66d1f62b40a75150aa4ac6da3f4a28378971ce090f4058235812e99fd28634b8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 404,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_404.npz",
+      "sha256": "0a92cdfd0c9a308685d00a5988d996096e649728173f24737a5b142e3af08c27",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 405,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_405.npz",
+      "sha256": "bf968dfedbaad85d99ee39a2fc282be8a686b00ba20cc2ae7e117397fc467852",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 406,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_406.npz",
+      "sha256": "7931c74ee81088beed3519c5633d38bebad43f7475fd740ccd3396d895dd3164",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 407,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_407.npz",
+      "sha256": "c41967c14dd217e4a2cdcb05e749015337e18aa926e8d9a0758fbd1163850f66",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 408,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_408.npz",
+      "sha256": "e7f608e9d9b6cc3c92c599ec82209652f866f0664a3a0de2e81f10b71751aa4b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 409,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_409.npz",
+      "sha256": "f4ec907ec2472a7b9313db1b5ec394ebde169f040962e630972d9f29ca4f1b39",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 410,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_410.npz",
+      "sha256": "865e1403c00612d422168ea1b67f2ab99867ef466dc2604af729ae5d1f0c019f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 411,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_411.npz",
+      "sha256": "4da54b661766a892499fe13091535d883f246d36309fd7099fe30b89acf80b5e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 412,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_412.npz",
+      "sha256": "647bd32f4e62f665f32e96a20e872df6dbdacc1b917172c50bc5d6f2e5dcdb03",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 413,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_413.npz",
+      "sha256": "c56dbf3766c5d1c103e003b7f4fe7cc753e2f6b560d38fefc7b419039def79cc",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 414,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_414.npz",
+      "sha256": "ef977db497eb7fd82f8b088570aaf615d0839af942c5e55b1ca3140186c7cfe3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 415,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_415.npz",
+      "sha256": "68722f0e83cd01de8e723a0bb7d8387c44a4f2b423d60403b902b9fe87dda5d7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 416,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_416.npz",
+      "sha256": "7e79d7ae9c6796824eb76b35f77da060f95b323e6a4ceab860b46ee296157abc",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 417,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_417.npz",
+      "sha256": "0c5c7e7398714ea1406613237e54fa81d164c75bc95db0555545cfc85b987daf",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 418,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_418.npz",
+      "sha256": "653a9871bef8d6b6f8075ce1d353e340ee48148ccd9064e449e635769363d9b1",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 419,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_419.npz",
+      "sha256": "082699bc137c84dffc66a4531e059ecc7d0bbd206dad5deadf75be15e4a8a58e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 420,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_420.npz",
+      "sha256": "760094cfc116fa21b0ec1db24c7e2b5fb898348fa2300c7419fb09cf31170217",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 421,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_421.npz",
+      "sha256": "a9850449c8fedffb359d888bbafcac9a9ca213d210441d33729fc071b518ceb3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 422,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_422.npz",
+      "sha256": "7dbeabc5fe3f53704c7d44e9e621c01bf113f091190d344c9b052c6368f2fcad",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 423,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_423.npz",
+      "sha256": "00228378a99c8a61b87e95f7bfba568089917d7058ceaa88322d09b4e51af945",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 424,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_424.npz",
+      "sha256": "ab34396be54885c0a730e476d85e2d288ac6ea60bccdbe38cce5c6d6cd58ea0f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 425,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_425.npz",
+      "sha256": "2fef27a8f6c362ab720d74dbc13c4bada133ceac6088fcd3a2d1df88d4f5a107",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 426,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_426.npz",
+      "sha256": "9317103399c274b396d2a55de1689ad262a35c43e2511d7df79768722ea11e73",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 427,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_427.npz",
+      "sha256": "a4f68d8e18df6f38602dafec2dc315d3780f4c83629fc6a66223c924948c1a31",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 428,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_428.npz",
+      "sha256": "63921b6faff64f0e965189e516b73478aa41048a0b1386d7310f007a873b6ae3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 429,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_429.npz",
+      "sha256": "5a9a996d9ef9d84d6bd9a9fded209f0d680a2de2d1a43ff94e22fd63ebcf4862",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 430,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_430.npz",
+      "sha256": "73a42d0ab1201a1f39d49bf5eb50ab2ad5366160b189fa7b082f3798911d3a25",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 431,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_431.npz",
+      "sha256": "e54f211c22009aff1a1dfa98314590c154d0e0f12e77a722c9e35e8a443ed0d9",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 432,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_432.npz",
+      "sha256": "79076a00c5c6f21b5ff363614ef7bdaa0766de3a05774cdc2d42eac363e70e17",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 433,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_433.npz",
+      "sha256": "7712c2395272b7068b7de4ae93a4195d745ba4e7331a172e05574b2eb2836b96",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 434,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_434.npz",
+      "sha256": "fc6ac6c7af7065f82c972dded1cbafcbf9bc601500577071eb969da54a2fc805",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 435,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_435.npz",
+      "sha256": "1540967553f0b67538bc2515e03ca8684bb97a6aed921a2f7395e76c451ef2c0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 436,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_436.npz",
+      "sha256": "4518e50afa6b83e91237bf663014d5c2ba87977774f180ceb5e1546eb44ae237",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 437,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_437.npz",
+      "sha256": "769ed59060535a0de542c1b8cb7e506dcf76ee5ac4cd91087e5bb4892183bc13",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 438,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_438.npz",
+      "sha256": "f95e02225e3edb8369b0495487beca52375dcb3f22f96d30d3a9efbe81818f2f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 439,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_439.npz",
+      "sha256": "e02e3aabad38db33181e763d6927303b997d72180bb3d0b6419654464cab3c69",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 440,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_440.npz",
+      "sha256": "2fdb6c6c7f131e12fc094d90d2d73a02061560f9a5bc70cce0005f80b4c6ece3",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 441,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_441.npz",
+      "sha256": "cfaac449237c1a277c6743cef9d9e8a982655a6dd9a0b4bca8643c949d33e961",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 442,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_442.npz",
+      "sha256": "6affa3f42134add0e3c9600b79902c26e49e81cbb02d4045e32f7ce9b2b6edd4",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 443,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_443.npz",
+      "sha256": "1c19241ba50e08fe7ae84ea6c6f4fbb689cfd862c523f7015dd6ba6199932b22",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 444,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_444.npz",
+      "sha256": "86be2f89e415b5beec2ffb141dd59c249824f0cb19507403eecca2c529cea0ee",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 445,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_445.npz",
+      "sha256": "0f81a589c66402111da1278fb740f7482ba60062e7b0bee5b7e0f6c235bc5e2c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 446,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_446.npz",
+      "sha256": "9335e34e591cf68e2a51628d7d1a5bdf5e3c10896c97916daeaf3d3c71e804b7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 447,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_447.npz",
+      "sha256": "4aa557e86270d6ec98ea61254e9e40aef2201056035126ca2422e66c169517cb",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 448,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_448.npz",
+      "sha256": "b9f2e7bcbcd1275fd3b8b62345c30072ab2cb645fa00a0caf89dc8812b223b5c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 449,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_449.npz",
+      "sha256": "27891f05610884ceb3bda321c779364a366334b8fe83e8b37f4be28e16368c76",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 450,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_450.npz",
+      "sha256": "ae825d4431a6734b4f300301848e980b6dfa303d7a9d35e1d35efe1569120af7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 451,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_451.npz",
+      "sha256": "7d76db72fabae13c47889579a61770d3426058399862e0b61c2235feab09d1a8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 452,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_452.npz",
+      "sha256": "2a5674359450c73633c2bf99dd4e178947548c81efe04cd79f4cbee858540028",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 453,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_453.npz",
+      "sha256": "407b7f550c76d38671d0f4720023ba10014a69eee14efa1bb97bf5d89c5fdf30",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 454,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_454.npz",
+      "sha256": "14b98dcc832e6843c5e66bf21d5d10f57ec80d9a2f67d4b144683a8464b63581",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 455,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_455.npz",
+      "sha256": "72dbe690040ffdb5038f9210807523f32eb7388e86e656b2317c82c9bd3df8b1",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 456,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_456.npz",
+      "sha256": "e8d34f665e4553ed47342e46b27e70e6e4e349a25fe877c9a37828b6a954326f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 457,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_457.npz",
+      "sha256": "55ea6b354031674db2efdb8b6357505b3f0b75f20d7308469570c97e4cc083db",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 458,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_458.npz",
+      "sha256": "fa2722d3c0567c295a9f69a1da9fb85bb3a37e5d247e5937f61d40c366bd93a2",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 459,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_459.npz",
+      "sha256": "23131251a1af658f0e17e63f6f5ca41755b96701e0fac31376b53ff98ddfa68c",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 460,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_460.npz",
+      "sha256": "f80c961f8acc4e6ee47ec0b52e8f0ef42fe1ba65a1de9b397c0913fdbee68d88",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 461,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_461.npz",
+      "sha256": "e734ff23182b400bcfba8e627c0636939da20665efdfe78d37eff9beb8a10ea7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 462,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_462.npz",
+      "sha256": "823cd662dfd05985344f9500d02f3572021397dd0e83cf02c9aca5b16997f4f1",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 463,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_463.npz",
+      "sha256": "91fb514ee2cf6c15172bd30bd04ddfd0bc63d2b2238186e878a214326af70868",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 464,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_464.npz",
+      "sha256": "5adcd27fe27810953e6a09e804f797245b88008724ffca4d6a4cff6eb64bb550",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 465,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_465.npz",
+      "sha256": "a178d4bafd1dea555809117f054db8307b2c43f168556fb991352c41b6c97386",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 466,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_466.npz",
+      "sha256": "e0c2461b5fe6af54dc391bba47035eb3aeb4594a0597437bb8d247c46e4efd75",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 467,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_467.npz",
+      "sha256": "12aae44537498857732bd4ba3676b7cfab62c6d1e71e92d4e042746b882b1066",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 468,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_468.npz",
+      "sha256": "af1552b87fb6dcfdaf0066a0501470bcf6788f66731f768ee3bcc7de354df198",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 469,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_469.npz",
+      "sha256": "ff139b61ee7097d623576ec4a0e664ef7dc23f61ff8666903689bd621d693e40",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 470,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_470.npz",
+      "sha256": "4156cc15c0e065f9c8e74e39faa2f02ec76b4e6ae73f35f13defab974be067c6",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 471,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_471.npz",
+      "sha256": "3c49e4c4ac0f78b1b06404f45c429e4a8baeff0dae6112c8dd603f63cf4478da",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 472,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_472.npz",
+      "sha256": "352c99d629f5a3d942b1b215f139d74f13327f5df1862a9e470b3c1927fed182",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 473,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_473.npz",
+      "sha256": "c625f8a9a6406e0c40f2fbd25bb353dd1877a95524018734a2dc3cf7c862bb05",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 474,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_474.npz",
+      "sha256": "345f979a59fdac0ab61977960a5001c44bd85315291ab940f3f587042d93711f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 475,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_475.npz",
+      "sha256": "b93ea6b24ad9b100ab3c9f62424c285748a32c82d030f4dac1f4474e12815197",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 476,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_476.npz",
+      "sha256": "5426073b7a6f50bc2175272e7da3c906825809f9157f9c28903dc9f7612f8b0f",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 477,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_477.npz",
+      "sha256": "467abdf66f1bcccbd2adb98b54fe9bd8c50dd5c43be19564ef93a048ded28b3e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 478,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_478.npz",
+      "sha256": "649a95ef0c99b8035e54e81dd64207410ea036124961236f919fe3a15c0ac0f8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 479,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_479.npz",
+      "sha256": "71d118f960a454f089de243a2357c32ba5372a649500cb7bff8f4c3e5d2e71ed",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 480,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_480.npz",
+      "sha256": "d81bcf82801179c87df8f175dec13a03c3b2701f7250382370afbc240da0d32e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 481,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_481.npz",
+      "sha256": "b1518629417c114d1b75ac1909be4ca684ca6c62cdc25f2835470ec9740b6b5b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 482,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_482.npz",
+      "sha256": "ded008600ac97320cdf4ccc27daca85dfd0614b789ec13068edb195db55db2b8",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 483,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_483.npz",
+      "sha256": "bdd8c8c1cd8b5d57583e942d2b6eb5da9fd856d5fd5bb269ecff3e5b56237844",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 484,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_484.npz",
+      "sha256": "e6bcccf26385480211d254f73d49248d8abdef5be922e88d7aaf770e4abed431",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 485,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_485.npz",
+      "sha256": "eb3d5d3f0a2be7028c393c6086339782f48dfee4f983821da762275a5cc33ef7",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 486,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_486.npz",
+      "sha256": "f75d2854126ac6f63c3eafdb04b39514814eb5f2d710255b49296e0f61b86cde",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 487,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_487.npz",
+      "sha256": "fc5fac07b74605859526be5bd727b474f7998fc1f21ac8a42a5b9d1038fb67cc",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 488,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_488.npz",
+      "sha256": "ddfa75329ebbe23181262e644bef62bed74e1d67fb5d12446f59c7a197c7740b",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 489,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_489.npz",
+      "sha256": "419751364eb4055fbb0ea2146b74e530fcec12fb387b4f5919ff3ad7daff709e",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 490,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_490.npz",
+      "sha256": "d16a41b625c39ad6901ad75e5851a6a374e85cdb3bb38d01f9250a4b0818e171",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 491,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_491.npz",
+      "sha256": "e80a6dbd051282fff1b3a7ee4e9eb8b67bb8dc4a3125a52a0a46b9365305c827",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 492,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_492.npz",
+      "sha256": "a25bda5c4b70389c258c70006e1315ed32f0ef0383e886fb494dd612fad0e2e0",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 493,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_493.npz",
+      "sha256": "b5734073751e428bd238e195035b36df350082ce9af43af23750d4a4fdaed45a",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 494,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_494.npz",
+      "sha256": "8bc5d090155818e5e78af2043864cdec546ffddc3b1b4a1e284d62b4eadfeb84",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 495,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_495.npz",
+      "sha256": "ae2fe4d530d06eafa792b3b87f8fea8a42df7645096c4e8b58cf9e7e4bf94686",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 496,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_496.npz",
+      "sha256": "6d111b73041c07a71efa2d015b857472da8b7dd2aa697b0ecdabd104e203f8c2",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 497,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_497.npz",
+      "sha256": "253c233be7bdba10147a6daf2a1209fd7aa02fac7321c7c3c0eab61f8eafd4bc",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 498,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_498.npz",
+      "sha256": "cacbb91f09635ee3574a4e8d76b7787c676c20894a261f2774ef47d8cff990c4",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 499,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_499.npz",
+      "sha256": "e74b45ce2c50eace6c2e6f6ae8104aeb5c1af59e8eceaada3608b784b30b12c1",
+      "size_bytes": 4833158
+    },
+    {
+      "optimizer_step": 500,
+      "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/rollouts/train_301_500/step_500.npz",
+      "sha256": "9ef885b3e357b75354bbac100737be8dc0c7d83f0a68ae7bdb186aaf32d17b29",
+      "size_bytes": 4833158
+    }
+  ],
+  "images_and_states_have_expected_shapes": true,
+  "total_bytes": 1933263200,
+  "valid_steps_match_logs": true,
+  "validated": true
+}

@@ -1,0 +1,45 @@
+{
+  "aborted_attempt_gpu_time": "00:13:52",
+  "allocation_released": true,
+  "gpu_type": "H100 80GB",
+  "gpus_per_job": 1,
+  "jax_peak_live_bytes_observed_at_step500": 29160596736,
+  "jax_preallocated_pool_bytes_at_step500": 55261368576,
+  "jobs": [
+    {
+      "AllocCPUS": "8",
+      "AllocTRES": "billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1",
+      "Elapsed": "00:13:52",
+      "ElapsedRaw": "832",
+      "ExitCode": "0:0",
+      "JobID": "60078880",
+      "JobName": "vla-opsd-round2",
+      "MaxRSS": "",
+      "NodeList": "fc10511",
+      "ReqMem": "64G",
+      "State": "CANCELLED by 3158914",
+      "TotalCPU": "28:44.620"
+    },
+    {
+      "AllocCPUS": "8",
+      "AllocTRES": "billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1",
+      "Elapsed": "01:42:58",
+      "ElapsedRaw": "6178",
+      "ExitCode": "0:0",
+      "JobID": "60080314",
+      "JobName": "vla-opsd-round2",
+      "MaxRSS": "",
+      "NodeList": "fc10601",
+      "ReqMem": "64G",
+      "State": "COMPLETED",
+      "TotalCPU": "04:00:36"
+    }
+  ],
+  "maximum_concurrent_gpus": 1,
+  "memory_requested_gib": 64,
+  "note": "GPU time counts each one-GPU top-level Slurm job once, without double-counting batch/extern steps. Earlier rounds are separate. JAX live bytes exclude the preallocated free pool and other CUDA/EGL processes; they are not total GPU memory usage.",
+  "round2_gpu_seconds_including_aborted_attempt": 7010,
+  "round2_gpu_time_including_aborted_attempt": "01:56:50",
+  "successful_job_gpu_time": "01:42:58",
+  "successful_peak_host_memory_gib": 45.3667106628418
+}
