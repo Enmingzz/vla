@@ -261,7 +261,7 @@ def run(args):
             official.eval_libero(official.Args(host=args.host, port=args.port, resize_size=config["resize_size"],
                 replan_steps=args.horizon, task_suite_name=args.suite, num_steps_wait=config["num_steps_wait"],
                 num_trials_per_task=args.episodes, video_out_path=str(video_dir), seed=args.seed))
-        expected = (len(args.task_ids) if args.task_ids else 10) * args.episodes
+        expected = (len(args.task_ids) if args.task_ids else original_suite_class().n_tasks) * args.episodes
         if len(tracker.records) != expected:
             raise RuntimeError("Incomplete evaluation: {} of {} episodes".format(len(tracker.records), expected))
         manifest.update(status="complete", total_episodes=len(tracker.records), total_successes=sum(r["success"] for r in tracker.records))

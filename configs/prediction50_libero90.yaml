@@ -1,0 +1,23 @@
+openpi_repository: https://github.com/Physical-Intelligence/openpi.git
+openpi_commit: 215abfb217dbac7d5f1273282331b9b1866c0479
+libero_commit: f78abd68ee283de9f9be3c8f7e2a9ad60246e95c
+checkpoint: gs://openpi-assets/checkpoints/pi05_libero
+training_config: pi05_libero
+prediction_horizon: 50
+horizons: [5, 20]
+suite: libero_90
+supported_suites: [libero_spatial, libero_object, libero_goal, libero_10, libero_90]
+seeds: [37]
+modes:
+  smoke: 3
+  main: 50
+resize_size: 224
+num_steps_wait: 10
+flow_steps: 10
+teacher_horizon: 5
+official_libero_10_success: 0.924
+baseline_max_absolute_drop: 0.05
+baseline_gate_policy: report_only
+substantial_absolute_drop: 0.05
+bootstrap_replicates: 10000
+analysis_seed: 20260917

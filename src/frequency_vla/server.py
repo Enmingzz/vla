@@ -32,7 +32,11 @@ def main():
     p.add_argument("--opsd-results-dir")
     p.add_argument("--opsd-checkpoint-root")
     p.add_argument("--trained-checkpoint", help="Separately exported OPSD checkpoint, with its training manifest")
+    p.add_argument("--comparison-checkpoint", help="Read-only original/trained snapshots on one native sampler")
+    p.add_argument("--comparison-results-dir")
     args = p.parse_args()
+    if args.comparison_checkpoint and (args.opsd_config or args.trained_checkpoint or not args.comparison_results_dir):
+        p.error("Comparison needs its results directory and cannot be combined with training or a replacement base")
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", force=True)
     config = load_config()
     spec = upstream_spec(args.openpi_dir, config)
@@ -130,16 +134,27 @@ def main():
                 "server_packages": packages,
                 "devices": [{"device": str(d), "kind": d.device_kind} for d in jax.devices()]}
     trainer = None
+    comparison = None
     if args.opsd_config:
         if not args.opsd_results_dir or not args.opsd_checkpoint_root:
             raise ValueError("OPSD requires separate results and checkpoint directories")
         from .opsd_backend import TemporalOPSD
         trainer = TemporalOPSD(policy, metadata, load_config(args.opsd_config),
                                args.opsd_results_dir, args.opsd_checkpoint_root, checkpoint)
+    if args.comparison_checkpoint:
+        from .frozen_comparison import FrozenComparison
+        comparison = FrozenComparison(policy, metadata, args.comparison_checkpoint,
+                                      args.comparison_results_dir, checkpoint)
+        comparison.infer({"observation/image": np.zeros((config["resize_size"], config["resize_size"], 3), dtype=np.uint8),
+            "observation/wrist_image": np.zeros((config["resize_size"], config["resize_size"], 3), dtype=np.uint8),
+            "observation/state": np.zeros(8, dtype=np.float64), "prompt": "warmup",
+            "_frequency_vla": {"episode_seed": 0, "call_index": 0}})
     write_json(args.manifest_out, metadata)
 
     class PairedPolicy:
         def infer(self, observation):
+            if comparison is not None:
+                return comparison.infer(observation)
             if trainer is not None:
                 return trainer.infer(observation)
             observation = dict(observation)

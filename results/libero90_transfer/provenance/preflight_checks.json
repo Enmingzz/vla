@@ -1,0 +1,8 @@
+{
+  "cpu_integration_passed": true,
+  "cpu_only": true,
+  "integration_log_sha256": "1c80ea6a5e4ffb7460f243e42aab1330279d0f4880474fcc301d3f0e4c418bb3",
+  "native_snapshot_equality_and_training_rejection_passed": true,
+  "plan_digest": "9210cfbafdfd46f535ed7825072689fd75198dd38144eb6fcb4f93faaa8b75ad",
+  "pytest_tests_passed": 28
+}

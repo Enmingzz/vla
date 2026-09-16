@@ -13,11 +13,11 @@ def main():
     parser.add_argument("--results-dir", required=True)
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--horizon", type=int, default=20)
-    parser.add_argument("--suite", default="libero_10", choices=["libero_10", "libero_spatial", "libero_object", "libero_goal"])
+    parser.add_argument("--suite", default="libero_10", choices=["libero_10", "libero_spatial", "libero_object", "libero_goal", "libero_90"])
     parser.add_argument("--episodes", type=int, default=10)
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--initial-state-start", type=int, default=0)
-    parser.add_argument("--task-ids", type=int, nargs="+", choices=range(10))
+    parser.add_argument("--task-ids", type=int, nargs="+")
     args = parser.parse_args()
     if not 1 <= args.workers <= 4:
         raise ValueError("The first training comparison uses at most four simulator workers")
@@ -26,7 +26,13 @@ def main():
                "--episodes", str(args.episodes), "--seed", str(args.seed),
                "--initial-state-start", str(args.initial_state_start),
                "--suite", args.suite, "--port", str(args.port), "--results-dir", args.results_dir]
-    run_task_group(command, args.task_ids if args.task_ids is not None else range(10), args.workers,
+    sys.path.insert(0, str(Path(os.environ["OPENPI_DIR"]) / "third_party/libero"))
+    from libero.libero import benchmark
+    count = benchmark.get_benchmark_dict()[args.suite]().n_tasks
+    ids = args.task_ids if args.task_ids is not None else list(range(count))
+    if len(ids) != len(set(ids)) or any(t < 0 or t >= count for t in ids):
+        parser.error("Invalid or duplicate task IDs for " + args.suite)
+    run_task_group(command, ids, args.workers,
                    Path(args.results_dir) / "logs" / args.suite / ("H_" + str(args.horizon)))
 
 

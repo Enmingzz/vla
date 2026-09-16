@@ -34,6 +34,12 @@ in [AUTORESEARCH_ROUND2.md](AUTORESEARCH_ROUND2.md), commands in
 [TRAINING.md](TRAINING.md#round-2-continue-to-500-updates-and-test-transfer), and
 outputs in the separate [round-two archive](results/autoresearch_round2/README.md).
 
+The next requested evaluation tests cross-task transfer on **all 90 LIBERO-90
+tasks**, using the existing 500-update model without further training. The fixed
+810-episode protocol, instruction-overlap audit and commands are in
+[LIBERO90_TRANSFER.md](LIBERO90_TRANSFER.md); outputs are isolated in the
+[LIBERO-90 archive](results/libero90_transfer/README.md).
+
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures
 **P=10**, not 50. Therefore only **H=5 and H=10** from the requested sweep are

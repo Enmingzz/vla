@@ -19,6 +19,7 @@ import numpy as np
 from openpi.models.pi0 import Pi0
 from frequency_vla.config import load_config
 from frequency_vla.opsd_backend import TemporalOPSD
+from frequency_vla.frozen_comparison import FrozenComparison
 
 
 class TinyLLM(nnx.Module):
@@ -103,6 +104,27 @@ def main():
         assert Path(saved["path"]).joinpath("training_manifest.json").is_file()
         assert trainer.set_phase("student")["phase"] == "student"
         print("PASS: native trace, nonzero detached-target update, frozen backbone, exact rollback, and complete checkpoint inference round-trip")
+        comparison_metadata = {"experiment_spec": {
+            "checkpoint": "SYNTHETIC_TEST_ONLY", "checkpoint_object_manifest_sha256": "SYNTHETIC_TEST_ONLY",
+            "prediction_horizon": 50, "flow_steps": 10}}
+        comparison = FrozenComparison(TinyPolicy(), comparison_metadata, saved["path"], root / "comparison", root)
+        query = dict(observation(.2), _frequency_vla={"episode_seed": 37, "call_index": 2})
+        _, key = jax.random.split(jax.random.fold_in(jax.random.key(37), 2))
+        native_inputs = trainer.observations([observation(.2)])
+        for step, parameters in [(0, trainer.initial), (100, trainer.master)]:
+            comparison.select(step)
+            actual = comparison.infer(query)["actions"]
+            expected = trainer.environment_actions(native_inputs, trainer.native(parameters, trainer.frozen, native_inputs, key))[0]
+            assert np.array_equal(actual, expected)
+        comparison.select(0)
+        assert comparison.infer({"_frozen_comparison": {"operation": "status"}})["training_operations_available"] is False
+        try:
+            comparison.infer({"_frozen_comparison": {"operation": "update"}})
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("A read-only comparison accepted a training operation")
+        print("PASS: original/trained frozen snapshots equal native inference, preserve the base, and reject training")
         # A second tiny, synthetic-only experiment checks a real optimizer resume:
         # one update, save, restore all state, then equal next updates in both copies.
         small_config = dict(config, optimizer_steps=3, checkpoint_steps=[1, 2, 3])
