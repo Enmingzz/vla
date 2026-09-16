@@ -1,8 +1,8 @@
 {
   "complete": true,
   "pytest_tests_passed": 30,
-  "pytest_seconds": 8.64,
-  "plan_sha256": "d3f293c11475f62a280f5e832e78d23f10d190537414d3154d71ae578235090d",
+  "pytest_seconds": 7.01,
+  "plan_sha256": "0bdca02a7d9027de22a2663c840a255ae013adb4965adfcb61fbe9b2decf807f",
   "renderer": "osmesa",
   "renderer_library_sha256": "bef74da9e93e7e9557fecd7efe35eb77f3eddcd36a6c836b49153d1f4b085bf7",
   "render_probe_steps": 400,
@@ -12,13 +12,12 @@
   "source_sha256": {
     "src/frequency_vla/evaluator.py": "5b00fb468569f3708b2486053ba239b67001a338b7a9e1f83aaad8f0ce86b056",
     "src/frequency_vla/opsd_evaluate.py": "e2f710a22c9d35269b69d48bba49e438e71699a3acd50eaa0dbb9faedb3e59a4",
-    "src/frequency_vla/libero90_transfer.py": "f0b6636eecd9b9afcd3a26907e2a121716f587a342a412c3f1cffa4d3e875f11",
+    "src/frequency_vla/libero90_transfer.py": "7ceaf7b9a6715c7f4b13a6fc9e356c2f6cff4e33247e078108cb1489adf1de90",
     "src/frequency_vla/libero90_analysis.py": "3d3fd23fb8c52974ec42cf97b48c04a5e4de2f99c1008849755d7d6778f88c28",
     "src/frequency_vla/frozen_comparison.py": "fc930f1cdf1c10739c518d6acf3849ace7fefc1e476b249e6ee2c8be9c7b79dd",
-    "scripts/fir_libero90_job.sh": "b461bf336f1ddb8154785023519eb051ec3f2092cf0b29a8c12d550332e045cf",
+    "scripts/fir_libero90_job.sh": "6887e2e646f0b809a765fb14d491ccfd1275c3393f83a68ed6d6731b4f83b01c",
     "scripts/setup_osmesa_fir.sh": "855a5e3a573cacf733e21ee21832ed299b23c3cad2020e99fa7ad26882540a51",
-    "configs/libero90_transfer.yaml": "bc5e25a85bd8a04852090c92b16c5a5b25ba099a54cc9dcf8382eb05d8aa24e0",
+    "configs/libero90_transfer.yaml": "1e65323be2bcbff169eca85ff01d2f24caa6e1ce4db8d5b60bfc41eaf7147e87",
     "configs/prediction50_libero90.yaml": "2f9dcf3d1de7bdf71847ae188b23975278b197a6dab4a34d80d933f6427ca7ab"
-  },
-  "runtime_bound_amendment": "Before formal data: cold imports + 385 software-rendered steps exceeded the old 180s pilot deadline. Now single/parallel/condition guards are 360/600/5400s; environment budget stays 400 actions."
+  }
 }

@@ -20,6 +20,12 @@ if [[ ! -f "$FREQUENCY_OSMESA_LIBRARY_DIR/libOSMesa.so.8" ]]; then
 fi
 mkdir -p "$RUN_RESULTS/logs"
 nvidia-smi
+# Fail before the costly checkpoint load if this node lacks the matching LLVM.
+env -u PYTHONPATH -u PYTHONHOME LD_LIBRARY_PATH="$FREQUENCY_OSMESA_LIBRARY_DIR" "$LIBERO_VENV/bin/python" - <<'PY'
+import ctypes
+ctypes.CDLL('libOSMesa.so.8')
+print('Software renderer dependencies loaded on allocated node', flush=True)
+PY
 bash "$FREQUENCY_PROJECT/scripts/serve_policy.sh" --port "$POLICY_PORT" \
   --manifest-out "$RUN_RESULTS/provenance/startup_server.json" \
   --comparison-checkpoint "$COMPARISON_CHECKPOINT" --comparison-results-dir "$RUN_RESULTS" \

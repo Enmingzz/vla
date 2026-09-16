@@ -19,5 +19,6 @@ maximum_concurrent_gpus: 1
 renderer: osmesa
 workers: 8
 parallel_pilot_task_ids: [0, 15, 30, 45, 60, 75, 77, 89]
-parallel_pilot_timeout_seconds: 300
-condition_timeout_seconds: 3000
+single_pilot_timeout_seconds: 360
+parallel_pilot_timeout_seconds: 600
+condition_timeout_seconds: 5400

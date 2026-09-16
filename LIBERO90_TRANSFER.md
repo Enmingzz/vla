@@ -49,12 +49,14 @@ the primary subset and all 90 tasks; apply Holm to that secondary family. Task
 tables include regressions. Three layouts per task is a broad, small-per-task
 screen; individual task changes are descriptive.
 
-One H100, 12 CPU cores and 64 GiB host memory; a 2h45m upper bound, with
+One H100, 12 CPU cores and 64 GiB host memory; a 4h45m upper bound, with
 immediate release on completion or error. Eight simulator workers each use one
 software rasterizer thread. First run single/eight-worker rendering guards
-(180/300-second bounds), using layout 0 and including task ID 89. These nine pilot
+(360/600-second bounds), using layout 0 and including task ID 89. These nine pilot
 episodes are excluded from formal statistics. Each formal condition has a
-3,000-second runtime bound. Saved parameters/assets are checksum-checked;
+5,400-second runtime bound. These bounds allow cold dependency imports for each
+task process as well as software rendering; they do not change the 400-action
+episode limit or reserve additional GPUs. Saved parameters/assets are checksum-checked;
 the frozen backbone and normalization assets must match the original checkpoint.
 The comparison has no optimizer or training endpoints. Record any failed GPU time.
 
@@ -71,7 +73,7 @@ counts toward resource use, including GDB jobs whose Slurm status alone is misle
 All formal conditions therefore use **the same OSMesa software renderer**, while
 keeping the model, ten flow steps, official execution loop, image preprocessing,
 task list, ordered states and statistical comparisons fixed. The runtime-only plan
-amendment has digest `0bdca02a7d9027de22a2663c840a255ae013adb4965adfcb61fbe9b2decf807f`;
+amendment has digest `d3f293c11475f62a280f5e832e78d23f10d190537414d3154d71ae578235090d`;
 the earlier plan is archived with the failed attempts. Renderer identity, its
 library checksum, and thread settings enter every evaluation fingerprint.
 
@@ -84,6 +86,11 @@ prefix. Comparing five corresponding frames from both cameras across GPU/CPU
 nodes gave mean absolute channel differences of 0.83–1.54 on the 0–255 scale.
 They are **not pixel-identical**, so the measured result is specific to this
 documented renderer. No EGL measurements are mixed into the formal statistics.
+
+The first full-model software-rendering pilot reached 385 of 400 controlled
+steps without a native crash, but its 180-second process timeout included cold
+imports and stopped the rollout. Its partial episode is archived, not scored.
+The time bounds above were extended before any formal result was observed.
 
 ## Reproduce
 
@@ -105,7 +112,7 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
   --prior-results results/opsd_h20_100 results/autoresearch_round2
 
 sbatch --job-name=vla-libero90-transfer --account=rrg-btaati --nodes=1 --ntasks=1 \
-  --gpus-per-node=h100:1 --cpus-per-task=12 --mem=64G --time=02:45:00 \
+  --gpus-per-node=h100:1 --cpus-per-task=12 --mem=64G --time=04:45:00 \
   --output="$RUN_RESULTS/logs/slurm-%j.log" \
   scripts/fir_libero90_job.sh
 

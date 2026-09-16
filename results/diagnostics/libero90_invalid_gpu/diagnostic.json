@@ -1,0 +1,10 @@
+{
+  "job_id": 60102194,
+  "node": "fc10512",
+  "state": "FAILED",
+  "exit_code": "6:0",
+  "elapsed_seconds": 0,
+  "model_loaded": false,
+  "formal_episodes": 0,
+  "cause": "NVML insufficient-memory / GPU device-handle Unknown Error at nvidia-smi startup; exclude this node."
+}

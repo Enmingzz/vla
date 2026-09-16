@@ -137,7 +137,8 @@ def execute(args, plan):
             command += ["--task-ids"] + [str(t) for t in ids]
         run(name, command, limit)
 
-    evaluate("runtime_pilot_single", 0, 5, 1, 0, [0], workers=1, limit=180)
+    evaluate("runtime_pilot_single", 0, 5, 1, 0, [0], workers=1,
+             limit=plan.get("single_pilot_timeout_seconds", 180))
     pilot_ids = plan.get("parallel_pilot_task_ids", [0, 30, 60, 89])
     evaluate("runtime_pilot_parallel", 0, 5, 1, 0, pilot_ids,
              workers=plan.get("workers", 4), limit=plan.get("parallel_pilot_timeout_seconds", 180))

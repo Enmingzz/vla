@@ -1,0 +1,10 @@
+{
+  "job_id": 60102294,
+  "state": "FAILED",
+  "formal_episodes": 0,
+  "allocation_released": true,
+  "cause": "180-second single-pilot walltime included cold imports and software-rendered rollout; external timeout killed server before episode completion. No native renderer abort.",
+  "incomplete_pilot_controlled_steps": 385,
+  "next_step": "Use 360s single pilot, 600s eight-worker pilot and 5400s per formal condition, including cold imports. Episode limit remains 400 controlled actions.",
+  "elapsed_gpu_seconds": 464
+}
