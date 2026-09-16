@@ -219,10 +219,10 @@ class TemporalOPSD:
             # Compare like with like. XLA can compile a different bfloat16 primal
             # when producing backward residuals; that is a separate numeric check.
             forward = np.asarray(self.field(self.master, self.frozen,
-                pending["observation"], student_z, timestep))[:, :20, :7]
-            target_array, mask_array = np.asarray(target), np.asarray(mask)
+                pending["observation"], student_z, timestep), dtype=np.float32)[:, :20, :7]
+            target_array, mask_array = np.asarray(target, dtype=np.float32), np.asarray(mask)
             same_program_mse = float(np.mean(np.square(forward[:, :5] - target_array[:, :5])))
-            backward_primal_mse = float(np.mean(np.square(forward - gradient_program_prediction)))
+            backward_primal_mse = float(np.mean(np.square(forward - gradient_program_prediction.astype(np.float32))))
             feedback_mse = float(np.sum(np.square(forward[:, 5:] - target_array[:, 5:]) * mask_array[:, 5:, None])
                                  / max(1, np.sum(mask_array[:, 5:]) * 7))
             metrics = {"same_program_offset0_mse": same_program_mse,
