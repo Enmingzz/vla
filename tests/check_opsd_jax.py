@@ -90,11 +90,19 @@ def main():
         assert trainer.step == 1
         assert all(np.array_equal(a, b) for a, b in zip(jax.tree.leaves(frozen), jax.tree.leaves(trainer.frozen)))
         assert any(not np.array_equal(a, b) for a, b in zip(jax.tree.leaves(initial), jax.tree.leaves(trainer.master)))
+        updated_fixture = trainer.master
         restored = trainer.reset_after_diagnostic()
         assert restored["passed"] and trainer.step == 0 and trainer.diagnostic_complete
         assert all(np.array_equal(a, b) for a, b in zip(jax.tree.leaves(initial), jax.tree.leaves(trainer.master)))
         assert all(np.array_equal(a, b) for a, b in zip(jax.tree.leaves(initial), jax.tree.leaves(trainer.ema)))
-        print("PASS: native trace, nonzero detached-target update, frozen backbone, Orbax round-trip and exact rollback")
+        # Exercise the export path with a tiny synthetic snapshot, not a research run.
+        (root / "assets").mkdir()
+        (root / "assets/test-only.txt").write_text("SYNTHETIC TEST FIXTURE")
+        trainer.master, trainer.step = updated_fixture, 100
+        saved = trainer.save()
+        assert Path(saved["path"]).joinpath("training_manifest.json").is_file()
+        assert trainer.set_phase("student")["phase"] == "student"
+        print("PASS: native trace, nonzero detached-target update, frozen backbone, exact rollback, and complete checkpoint inference round-trip")
 
 
 if __name__ == "__main__":

@@ -6,6 +6,10 @@ source "$FREQUENCY_PROJECT/scripts/env.sh"
 : "${RUN_RESULTS:?Use a fresh RUN_RESULTS directory}"
 : "${OPSD_CHECKPOINT_ROOT:?Use a fresh OPSD_CHECKPOINT_ROOT on scratch}"
 : "${GAP_RESULTS:?Set the completed paired frequency-result directory}"
+if [[ -e "$RUN_RESULTS/provenance/training_setup.json" || -e "$RUN_RESULTS/training.jsonl" || -e "$OPSD_CHECKPOINT_ROOT/diagnostic_trainable" ]]; then
+  echo "Refusing to overwrite an existing OPSD run; choose fresh paths." >&2
+  exit 2
+fi
 export FREQUENCY_CONFIG="${FREQUENCY_CONFIG:-$FREQUENCY_PROJECT/configs/prediction50_h15_h20.yaml}"
 OPSD_CONFIG="${OPSD_CONFIG:-$FREQUENCY_PROJECT/configs/opsd_h20_100.yaml}"
 POLICY_PORT="${POLICY_PORT:-$((20000 + ${SLURM_JOB_ID:-0} % 20000))}"

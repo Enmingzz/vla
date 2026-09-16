@@ -26,6 +26,8 @@ class TemporalOPSD:
         validate_training_config(config)
         self.policy, self.metadata, self.config = policy, metadata, config
         self.root, self.checkpoint_root = Path(results_dir), Path(checkpoint_root)
+        if (self.root / "provenance/training_setup.json").exists():
+            raise FileExistsError("Refusing to overwrite an OPSD run: " + str(self.root))
         self.source_checkpoint = Path(source_checkpoint)
         self.base_spec = copy.deepcopy(metadata["experiment_spec"])
         self.step, self.pending, self.phase = 0, None, "baseline"
