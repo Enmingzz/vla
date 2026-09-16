@@ -1,0 +1,11 @@
+task_id,description,primary_novel_instruction,original_H5,original_H20,trained_H20,success_change
+0,close the top drawer of the cabinet,True,0.0,0.0,0.0,0.0
+1,close the top drawer of the cabinet and put the black bowl on top of it,True,0.0,0.0,0.0,0.0
+2,put the black bowl in the top drawer of the cabinet,True,0.6666666666666666,1.0,0.3333333333333333,-0.6666666666666667
+3,put the butter at the back in the top drawer of the cabinet and close it,True,0.0,0.0,0.0,0.0
+4,put the butter at the front in the top drawer of the cabinet and close it,True,0.0,0.0,0.0,0.0
+5,put the chocolate pudding in the top drawer of the cabinet and close it,True,0.0,0.0,0.0,0.0
+6,open the bottom drawer of the cabinet,True,0.0,0.0,0.0,0.0
+7,open the top drawer of the cabinet,True,0.0,0.0,0.0,0.0
+8,open the top drawer of the cabinet and put the bowl in it,True,0.0,0.0,0.0,0.0
+9,put the black bowl on the plate,True,1.0,1.0,1.0,0.0

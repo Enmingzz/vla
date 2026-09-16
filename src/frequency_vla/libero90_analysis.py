@@ -177,8 +177,13 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
     output.mkdir(exist_ok=True)
     labels = ["Original H=5", "Original H=20", "500 updates H=20"]
     colors = ["#64748b", "#ca8a04", "#059669"]
-    fig, axes = plt.subplots(1,2,figsize=(11,4.7),sharey=True)
-    for ax, subset in zip(axes,[validation["suite_subset"],"novel_instruction"]):
+    plot_subsets = [validation["suite_subset"]]
+    if audit["overlapping_instruction_task_ids"]:
+        plot_subsets.append("novel_instruction")
+    fig, axes = plt.subplots(1,len(plot_subsets),figsize=(5.5*len(plot_subsets),4.7),sharey=True)
+    if len(plot_subsets)==1:
+        axes=[axes]
+    for ax, subset in zip(axes,plot_subsets):
         rows = [next(r for r in summaries if r["subset"]==subset and (r["step"],r["H"])==key) for key in [(0,5),(0,20),(500,20)]]
         ax.bar(range(3),[100*r["success_rate"] for r in rows],color=colors)
         ax.vlines(range(3),[100*r["ci95_low"] for r in rows],[100*r["ci95_high"] for r in rows],color="black")
@@ -187,7 +192,8 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
         ax.set(xticks=range(3),xticklabels=labels,ylim=(0,110),title="{} tasks · {} episodes".format(rows[0]["tasks"],rows[0]["total_episodes"]))
         ax.tick_params(axis="x",labelrotation=12)
     axes[0].set_ylabel("LIBERO-90 task success (%)")
-    fig.suptitle("Cross-task transfer · P=50 · 95% Wilson intervals\nRight: instructions absent from added OPSD training")
+    subtitle = "Right: instructions absent from added OPSD training" if len(plot_subsets)>1 else "LIBERO-90 · held out from added OPSD"
+    fig.suptitle("Cross-task transfer · P=50 · 95% Wilson intervals\n"+subtitle)
     fig.tight_layout()
     fig.savefig(output / "libero90_success.png",dpi=180)
     plt.close(fig)
@@ -198,7 +204,7 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
         ax.axvspan(task-.45,task+.45,color="gray",alpha=.25)
     ax.axhline(0,color="black",linewidth=.7)
     ax.set(xlabel="Official LIBERO-90 task ID",ylabel="Trained − original H=20 success (pp)",
-           title="All tasks retained · 3 layouts/task · shaded task excluded from primary analysis",ylim=(-105,105))
+           title="All selected tasks retained · 3 layouts/task" + (" · shaded task excluded from primary analysis" if audit["overlapping_instruction_task_ids"] else ""),ylim=(-105,105))
     fig.tight_layout()
     fig.savefig(output / "libero90_task_changes.png",dpi=180)
     plt.close(fig)
@@ -242,21 +248,33 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
     frequency=next(r for r in comparisons if r["subset"]=="novel_instruction" and r["comparison"]=="replanning_gap")
     text += ["","## Replanning gap and inference calls","",
         "Original H=5 minus original H=20 was **{:+.1f} pp**, paired 95% CI **[{:+.1f}, {:+.1f}] pp**, "
-        "secondary-family Holm p=**{:.4g}**. Trained H=20 remains **{:+.1f} pp** below original H=5.".format(
+        "secondary-family Holm p=**{:.4g}**. Trained H=20 minus original H=5 is **{:+.1f} pp**.".format(
             100*frequency["success_change"],100*frequency["ci95_low"],100*frequency["ci95_high"],
-            frequency["p_holm"],100*recovery["remaining_gap_to_original_H5"]),"",
+            frequency["p_holm"],-100*recovery["remaining_gap_to_original_H5"]),"",
         "Trained H=20 uses **{:.1%} fewer calls per episode** and **{:.1%} fewer calls per controlled step** than original H=5. "
         "The latter controls for differing episode lengths; neither number measures wall-clock speedup.".format(
             recovery["trained_calls_per_episode_saved_vs_original_H5"],recovery["trained_calls_per_control_step_saved_vs_original_H5"])]
     if recovery["fraction_of_original_gap_recovered"] is not None:
         text += ["The point estimate recovers **{:.1%}** of the original replanning gap.".format(
             recovery["fraction_of_original_gap_recovered"])]
+    else:
+        text += ["Original H=5 does not outperform original H=20 in this screen. There is no positive measured replanning gap "
+                 "to express as a recovery fraction; any trained-model gain must be interpreted separately from recovery of a frequency penalty."]
     text += ["","## All results","","| Subset | Model | Successes/episodes | Success | Calls/episode | Calls/control step |",
              "|---|---|---:|---:|---:|---:|"]
-    for subset in [validation["suite_subset"],"novel_instruction"]:
+    for subset in plot_subsets:
         for label,(step,h) in zip(labels,[(0,5),(0,20),(500,20)]):
             r=lookup[subset,step,h]
             text.append("| {} | {} | {}/{} | {:.1%} | {:.2f} | {:.4f} |".format(subset,label,r["total_successes"],r["total_episodes"],r["success_rate"],r["mean_policy_calls"],r["policy_calls_per_environment_step"]))
+    if len(selected_task_ids(plan)) <= 10:
+        n=plan["episodes_per_task"]
+        text += ["", "## Task outcomes", "", "| ID | Task | Original H=5 | Original H=20 | Trained H=20 |", "|---:|---|---:|---:|---:|"]
+        for r in changes:
+            counts=[int(round(n*r[k])) for k in ["original_H5","original_H20","trained_H20"]]
+            text.append("| {} | {} | {}/{} | {}/{} | {}/{} |".format(r["task_id"],r["description"],counts[0],n,counts[1],n,counts[2],n))
+        floor=sum(all(r[k]==0 for k in ["original_H5","original_H20","trained_H20"]) for r in changes)
+        text += ["", "{} of {} tasks had no successes in any of the three settings on the tested layouts. "
+                 "This low baseline success limits what the screen can say about frequency penalties and their recovery.".format(floor,len(changes))]
     text += ["","The three secondary comparisons (all-selected-task training effect and original replanning gaps for both subsets) "
              "receive a joint Holm correction; comparisons.csv retains raw/adjusted p values and both bootstrap intervals.","",
              "## Scope and controls","",
@@ -284,7 +302,7 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
             "not chosen to improve the measured effect.", ""]
         if plan.get("reuse_original_H5",False):
             text += ["The 30 completed H=5 prefix episodes were copied unchanged with checksums and videos. Both H=20 conditions "
-                "use a restarted read-only server on the same node. Inference configuration, native sampler code, initial images and "
+                "use a restarted read-only server. Inference configuration, native sampler code, initial images and "
                 "episode RNG are required to match despite the server restart.", ""]
     (root/"FINDINGS.md").write_text("\n".join(text))
 

@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "original_inference_fingerprint_identical": true,
+  "original_experiment_spec_identical": true,
+  "old_server_instance": "b8d65f21-728a-4085-bcd7-55f4d37dee1c",
+  "new_server_instance": "783fb0a9-a22a-4d84-981e-f4595ab15cbe",
+  "pairwise_initial_observation_verification": "All 30 reused H=5 and new original H=20 episodes have identical initial observations, states, RNG, evaluator and inference fingerprints.",
+  "paired_original_H20_episodes_verified": 30
+}

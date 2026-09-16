@@ -1,0 +1,47 @@
+{
+  "job_id": "60106330",
+  "submitted_unix_time": 1789586217.9838228,
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--job-name=vla-libero90-first10",
+    "--account=rrg-btaati",
+    "--nodes=1",
+    "--ntasks=1",
+    "--gpus-per-node=h100:1",
+    "--cpus-per-task=12",
+    "--mem=64G",
+    "--time=00:50:00",
+    "--nodelist=fc10511",
+    "--output=/home/enmingzz/project/vla/frequency_vla/results/libero90_first10/logs/slurm-%j.log",
+    "scripts/fir_libero90_job.sh"
+  ],
+  "source_commit": "ed89d1d65e63b5258dda0ae3e548db75aac8839e",
+  "gpus": 1,
+  "maximum_concurrent_gpus": 1,
+  "walltime_upper_bound_seconds": 3000,
+  "remaining_new_episodes": 60,
+  "reused_baseline_episodes": 30,
+  "release_immediately_on_completion_or_error": true,
+  "previous_diagnostic_gpu_seconds": 2217,
+  "previous_partial_full_suite_gpu_seconds": 1189,
+  "environment": {
+    "FREQUENCY_CONFIG": "/home/enmingzz/project/vla/frequency_vla/configs/prediction50_libero90.yaml",
+    "TRANSFER_PLAN": "/home/enmingzz/project/vla/frequency_vla/configs/libero90_first10.yaml",
+    "RUN_RESULTS": "/home/enmingzz/project/vla/frequency_vla/results/libero90_first10",
+    "COMPARISON_CHECKPOINT": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/step_500",
+    "FREQUENCY_OSMESA_LIBRARY_DIR": "/scratch/enmingzz/frequency_vla/native_osmesa/root/usr/lib64",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "true",
+    "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.65",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "scheduling_amendment": {
+    "unix_time": 1789586354.3570955,
+    "reason": "Same-node reservation estimated 13:50:39, about 90 minutes away. Remove node pin; retain exact paired initial-image/state and unchanged native inference checks.",
+    "new_required_nodes": [],
+    "excluded_nodes": [
+      "fc10512"
+    ],
+    "maximum_concurrent_gpus": 1
+  }
+}

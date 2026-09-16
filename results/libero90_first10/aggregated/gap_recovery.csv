@@ -1,0 +1,3 @@
+subset,original_replanning_gap,trained_H20_gain,remaining_gap_to_original_H5,fraction_of_original_gap_recovered,trained_calls_per_episode_saved_vs_original_H5,trained_calls_per_control_step_saved_vs_original_H5
+selected_10,-0.033333333333333354,-0.06666666666666668,0.033333333333333326,,0.7429094236047575,0.7494462078203561
+novel_instruction,-0.033333333333333354,-0.06666666666666668,0.033333333333333326,,0.7429094236047575,0.7494462078203561

@@ -1,0 +1,1899 @@
+{
+  "complete": true,
+  "formal_episode_videos": 90,
+  "all_paths_unique": true,
+  "all_files_nonempty": true,
+  "metadata_spot_checks": 90,
+  "checks": [
+    {
+      "snapshot": "step_0",
+      "task_id": 0,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_00_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 0,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_00_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 0,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_00_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 1,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_01_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 1,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_01_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 1,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_01_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 2,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_02_episode_000_success.mp4",
+      "expected_controlled_steps": 289,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "289"
+          }
+        ],
+        "format": {
+          "duration": "28.900000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 2,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_02_episode_001_success.mp4",
+      "expected_controlled_steps": 297,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "297"
+          }
+        ],
+        "format": {
+          "duration": "29.700000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 2,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_02_episode_002_success.mp4",
+      "expected_controlled_steps": 157,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "157"
+          }
+        ],
+        "format": {
+          "duration": "15.700000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 3,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_03_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 3,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_03_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 3,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_03_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 4,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_04_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 4,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_04_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 4,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_04_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 5,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_05_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 5,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_05_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 5,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_05_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 6,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_06_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 6,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_06_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 6,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_06_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 7,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_07_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 7,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_07_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 7,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_07_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 8,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_08_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 8,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_08_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 8,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_08_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 9,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_09_episode_000_success.mp4",
+      "expected_controlled_steps": 145,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "145"
+          }
+        ],
+        "format": {
+          "duration": "14.500000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 9,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_09_episode_001_success.mp4",
+      "expected_controlled_steps": 150,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "150"
+          }
+        ],
+        "format": {
+          "duration": "15.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 9,
+      "horizon": 20,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_20/task_09_episode_002_success.mp4",
+      "expected_controlled_steps": 162,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "162"
+          }
+        ],
+        "format": {
+          "duration": "16.200000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 0,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_00_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 0,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_00_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 0,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_00_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 1,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_01_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 1,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_01_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 1,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_01_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 2,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_02_episode_000_success.mp4",
+      "expected_controlled_steps": 238,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "238"
+          }
+        ],
+        "format": {
+          "duration": "23.800000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 2,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_02_episode_001_success.mp4",
+      "expected_controlled_steps": 266,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "266"
+          }
+        ],
+        "format": {
+          "duration": "26.600000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 2,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_02_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 3,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_03_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 3,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_03_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 3,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_03_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 4,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_04_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 4,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_04_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 4,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_04_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 5,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_05_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 5,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_05_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 5,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_05_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 6,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_06_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 6,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_06_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 6,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_06_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 7,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_07_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 7,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_07_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 7,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_07_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 8,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_08_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 8,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_08_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 8,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_08_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 9,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_09_episode_000_success.mp4",
+      "expected_controlled_steps": 110,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "110"
+          }
+        ],
+        "format": {
+          "duration": "11.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 9,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_09_episode_001_success.mp4",
+      "expected_controlled_steps": 195,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "195"
+          }
+        ],
+        "format": {
+          "duration": "19.500000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_0",
+      "task_id": 9,
+      "horizon": 5,
+      "video": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_09_episode_002_success.mp4",
+      "expected_controlled_steps": 115,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "115"
+          }
+        ],
+        "format": {
+          "duration": "11.500000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 0,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_00_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 0,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_00_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 0,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_00_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 1,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_01_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 1,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_01_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 1,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_01_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 2,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_02_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 2,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_02_episode_001_success.mp4",
+      "expected_controlled_steps": 332,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "332"
+          }
+        ],
+        "format": {
+          "duration": "33.200000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 2,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_02_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 3,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_03_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 3,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_03_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 3,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_03_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 4,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_04_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 4,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_04_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 4,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_04_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 5,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_05_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 5,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_05_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 5,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_05_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 6,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_06_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 6,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_06_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 6,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_06_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 7,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_07_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 7,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_07_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 7,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_07_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 8,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_08_episode_000_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 8,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_08_episode_001_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 8,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_08_episode_002_failure.mp4",
+      "expected_controlled_steps": 400,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "400"
+          }
+        ],
+        "format": {
+          "duration": "40.000000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 9,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_09_episode_000_success.mp4",
+      "expected_controlled_steps": 132,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "132"
+          }
+        ],
+        "format": {
+          "duration": "13.200000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 9,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_09_episode_001_success.mp4",
+      "expected_controlled_steps": 137,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "137"
+          }
+        ],
+        "format": {
+          "duration": "13.700000"
+        }
+      }
+    },
+    {
+      "snapshot": "step_500",
+      "task_id": 9,
+      "horizon": 20,
+      "video": "evaluations/step_500/videos/smoke/libero_90/seed_37/H_20/task_09_episode_002_success.mp4",
+      "expected_controlled_steps": 208,
+      "probe": {
+        "programs": [],
+        "streams": [
+          {
+            "width": 224,
+            "height": 224,
+            "r_frame_rate": "10/1",
+            "nb_frames": "208"
+          }
+        ],
+        "format": {
+          "duration": "20.800000"
+        }
+      }
+    }
+  ]
+}

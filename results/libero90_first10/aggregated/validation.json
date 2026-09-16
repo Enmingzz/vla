@@ -1,0 +1,77 @@
+{
+  "all_initial_states_match_audit": true,
+  "complete": true,
+  "conditions": 3,
+  "exact_policy_call_schedule": true,
+  "excluded_instruction_overlap_task_ids": [],
+  "formal_episodes": 90,
+  "gap_recovery": [
+    {
+      "fraction_of_original_gap_recovered": null,
+      "original_replanning_gap": -0.033333333333333354,
+      "remaining_gap_to_original_H5": 0.033333333333333326,
+      "subset": "selected_10",
+      "trained_H20_gain": -0.06666666666666668,
+      "trained_calls_per_control_step_saved_vs_original_H5": 0.7494462078203561,
+      "trained_calls_per_episode_saved_vs_original_H5": 0.7429094236047575
+    },
+    {
+      "fraction_of_original_gap_recovered": null,
+      "original_replanning_gap": -0.033333333333333354,
+      "remaining_gap_to_original_H5": 0.033333333333333326,
+      "subset": "novel_instruction",
+      "trained_H20_gain": -0.06666666666666668,
+      "trained_calls_per_control_step_saved_vs_original_H5": 0.7494462078203561,
+      "trained_calls_per_episode_saved_vs_original_H5": 0.7429094236047575
+    }
+  ],
+  "no_new_optimizer_updates": true,
+  "plan_sha256": "1fb558bb09d65444f3d5336b38625898bc9aaee96b20bc3e235f930f8e40082b",
+  "primary": {
+    "ci95_high": 0.0,
+    "ci95_low": -0.1,
+    "comparison": "training_benefit",
+    "episodes": 30,
+    "family": "primary",
+    "hierarchical_ci95_high": 0.0,
+    "hierarchical_ci95_low": -0.23333333333333334,
+    "left_H": 20,
+    "left_step": 500,
+    "left_success_rate": 0.13333333333333333,
+    "p_exact": 0.5,
+    "p_holm": 0.5,
+    "recovered_episodes": 0,
+    "regressed_episodes": 2,
+    "right_H": 20,
+    "right_step": 0,
+    "right_success_rate": 0.2,
+    "subset": "novel_instruction",
+    "success_change": -0.06666666666666667
+  },
+  "primary_episodes": 30,
+  "primary_tasks": 10,
+  "reused_original_H5": true,
+  "selected_task_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "server_instance_ids": [
+    "783fb0a9-a22a-4d84-981e-f4595ab15cbe",
+    "b8d65f21-728a-4085-bcd7-55f4d37dee1c"
+  ],
+  "single_server_instance": null,
+  "suite_subset": "selected_10",
+  "task_changes": {
+    "declined": 1,
+    "improved": 0,
+    "tied": 9
+  }
+}

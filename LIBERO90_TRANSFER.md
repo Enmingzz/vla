@@ -11,7 +11,7 @@ job was cancelled promptly, and all 68 completed full-suite-prefix episodes
 remain in `results/libero90_transfer`. The new report is isolated in
 `results/libero90_first10`. No task was selected by observed improvement.
 
-The restarted server uses the same node and unchanged sampler code, weights,
+The restarted server uses unchanged sampler code, weights,
 dependencies and rendering. Analysis permits exactly the declared old/new server
 instances and still requires identical inference settings, initial images,
 state hashes and RNG. Completed pilot checks are reused. This ordered ten-task
@@ -34,7 +34,7 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
   --prior-results results/opsd_h20_100 results/autoresearch_round2 \
   --reuse-results results/libero90_transfer
 sbatch --account=rrg-btaati --nodes=1 --ntasks=1 --gpus-per-node=h100:1 \
-  --cpus-per-task=12 --mem=64G --time=00:50:00 --nodelist=fc10511 \
+  --cpus-per-task=12 --mem=64G --time=00:50:00 \
   --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_libero90_job.sh
 env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
   -m frequency_vla.libero90_analysis --results-dir "$RUN_RESULTS"
@@ -43,8 +43,9 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
 For a fresh run without archived baseline videos, copy this plan, set both
 `reuse_original_H5` and `reuse_runtime_pilots` to `false`, and omit
 `--reuse-results`. All three conditions and pilots will then run. Request a
-one-hour upper bound and any healthy H100 node; the fixed-node request above
-preserves the renderer hardware of the reused baseline in this recorded run.
+one-hour upper bound and any healthy H100 node. The initial same-node request
+was relaxed because its scheduled start was 90 minutes away; exact initial-image
+and state checks still gate all comparisons after the server restart.
 The full-suite protocol below remains available for a later extension.
 
 This evaluation reuses the frozen 500-update LIBERO-10 model from round two

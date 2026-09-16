@@ -7,12 +7,13 @@
   "all_reused_files_checksum_verified": true,
   "source_sha256": {
     "src/frequency_vla/libero90_transfer.py": "623defd500d341d066f82f2626044dc16df4456f87a57fca6ca6ad4f1fa9cb69",
-    "src/frequency_vla/libero90_analysis.py": "7c4f53d08b035716116078183c6faa2c22f6ffdcc979de83b23e09300c1f4c4f",
+    "src/frequency_vla/libero90_analysis.py": "3dc30718289f3e22a4b2a7f6df392783cd5ac34bed0f7b86164d9dd6e7e99696",
     "src/frequency_vla/evaluator.py": "5b00fb468569f3708b2486053ba239b67001a338b7a9e1f83aaad8f0ce86b056",
     "src/frequency_vla/frozen_comparison.py": "fc930f1cdf1c10739c518d6acf3849ace7fefc1e476b249e6ee2c8be9c7b79dd",
     "scripts/fir_libero90_job.sh": "eb0fde48ca276a22a5b729a3150b1e7255839c55f18e19c95c2f4a73f1ffecb7",
     "configs/libero90_first10.yaml": "f8d1154627489c962ea0ca75f686752c1637d089c9a959871183c1b28ffb3742",
     "configs/prediction50_libero90.yaml": "2f9dcf3d1de7bdf71847ae188b23975278b197a6dab4a34d80d933f6427ca7ab"
   },
-  "model_and_simulator_source_unchanged_from_reused_baseline": true
+  "model_and_simulator_source_unchanged_from_reused_baseline": true,
+  "post_submission_analysis_only_adjustments": "Report documents allowed node change and avoids duplicate plot panels for identical task subsets. Native sampler and evaluator unchanged."
 }

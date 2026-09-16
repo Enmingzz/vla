@@ -1,0 +1,23 @@
+{
+  "gpu_memory": {
+    "bytes_in_use": 10147656192,
+    "bytes_limit": 55261368750,
+    "bytes_reserved": 0,
+    "largest_alloc_size": 2415919104,
+    "largest_free_block_bytes": 0,
+    "num_allocs": 73011,
+    "peak_bytes_in_use": 15994327040,
+    "peak_bytes_reserved": 0,
+    "peak_pool_bytes": 55261368576,
+    "pool_bytes": 55261368576
+  },
+  "server_timing": {
+    "infer_ms": 20.338378846645355
+  },
+  "snapshots": [
+    0,
+    500
+  ],
+  "step": 500,
+  "training_operations_available": false
+}

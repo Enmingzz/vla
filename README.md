@@ -34,11 +34,15 @@ in [AUTORESEARCH_ROUND2.md](AUTORESEARCH_ROUND2.md), commands in
 [TRAINING.md](TRAINING.md#round-2-continue-to-500-updates-and-test-transfer), and
 outputs in the separate [round-two archive](results/autoresearch_round2/README.md).
 
-The next requested evaluation tests cross-task transfer on **all 90 LIBERO-90
-tasks**, using the existing 500-update model without further training. The fixed
-810-episode protocol, instruction-overlap audit and commands are in
-[LIBERO90_TRANSFER.md](LIBERO90_TRANSFER.md); outputs are isolated in the
-[LIBERO-90 archive](results/libero90_transfer/README.md).
+The completed cross-task evaluation was reduced at the user's request to
+**LIBERO-90 task IDs 0–9**, using the existing 500-update model without further
+training. The 90-episode screen reused 30 complete H=5 episodes and added 60 H=20
+episodes. Original H=5 / original H=20 / trained H=20 achieved **16.7% / 20.0% /
+13.3%**; the observed training change was −6.7 pp (paired p=0.5). This small
+screen shows no demonstrated transfer benefit. See [the findings](results/libero90_first10/FINDINGS.md). The [first-ten archive](results/libero90_first10/README.md) keeps this
+ordered exploratory prefix separate from the [interrupted full-suite attempt](results/libero90_transfer/README.md).
+The amended protocol, original full-suite plan and exact commands are in
+[LIBERO90_TRANSFER.md](LIBERO90_TRANSFER.md).
 
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures

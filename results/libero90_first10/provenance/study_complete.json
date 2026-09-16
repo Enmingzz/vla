@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "completed_conditions": [
+    "step0_H5",
+    "step0_H20",
+    "step500_H20"
+  ],
+  "optimizer_updates_added": 0,
+  "plan_sha256": "1fb558bb09d65444f3d5336b38625898bc9aaee96b20bc3e235f930f8e40082b"
+}

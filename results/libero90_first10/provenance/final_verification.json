@@ -1,0 +1,32 @@
+{
+  "complete": true,
+  "formal_episodes": 90,
+  "conditions": 3,
+  "new_training_updates": 0,
+  "unit_tests_passed": 36,
+  "exact_pairing_and_call_schedules_passed": true,
+  "all_90_video_metadata_checks_passed": true,
+  "all_three_plots_visually_inspected": true,
+  "regression_video_final_frames_visually_inspected": {
+    "task_id": 2,
+    "initial_state_index": 40,
+    "snapshots": [
+      0,
+      500
+    ]
+  },
+  "GPU_allocations_released": true,
+  "artifacts_sha256": {
+    "FINDINGS.md": "8e8f8b407a6c4f633babc512da170ce0054ca2c37f179fba094fd07fb61c1ff6",
+    "aggregated/comparisons.csv": "c7bebbef05ab64cc5a1314fb0b07aa88e83621ffddbf0f210928cdabe44811bd",
+    "aggregated/conditions.csv": "fce9b957e17cd5936ddc9562de1c474f4e49163d9ef65ad5183711a997af3bf8",
+    "aggregated/episodes.csv": "14453bcc587b54e06359da6ca02b647777b483a98cc837f4c11569d63a39c7a6",
+    "aggregated/gap_recovery.csv": "e00841a303c237f45bb71e7d4480a4e6c41f5e47b586d3d297b6d4ac938417e9",
+    "aggregated/per_task.csv": "30a254f2775f292b48fdb6849fed397b4424e6ed3266de0a3392ae95253a5769",
+    "aggregated/task_changes.csv": "6f76c234a234a4826ccd563c970110a7be54908539abe104cbb662568c94441c",
+    "aggregated/validation.json": "dd56bf2447771dd10e49cbc29acfc2ba3c53e6b3fda462bbec95beafd8945330",
+    "figures/libero90_success.png": "dc23d4ffa98ea39e9ab159f38a55b8caeb941070897154576245e67218687010",
+    "figures/libero90_task_changes.png": "6e50da18984f48490e39a13f411f4f428d814231796e74b790ca3bf6d38e7e05",
+    "figures/success_vs_policy_calls.png": "d472658e450261888f17a715c9ce5c715eece10aeff1ac8a56ee0586db8e6a31"
+  }
+}

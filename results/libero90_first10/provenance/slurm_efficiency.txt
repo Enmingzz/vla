@@ -1,0 +1,11 @@
+Job ID: 60106330
+Cluster: fir
+User/Group: enmingzz/enmingzz
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 12
+CPU Utilized: 01:06:05
+CPU Efficiency: 27.74% of 03:58:12 core-walltime
+Job Wall-clock time: 00:19:51
+Memory Utilized: 32.31 GB
+Memory Efficiency: 50.48% of 64.00 GB (64.00 GB/node)
