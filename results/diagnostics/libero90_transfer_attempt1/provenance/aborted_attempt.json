@@ -1,0 +1,17 @@
+{
+  "job_id": 60096722,
+  "state": "FAILED",
+  "exit_code": "1:0",
+  "node": "fc10517",
+  "gpu_seconds": 425,
+  "gpus": 1,
+  "allocation_released": true,
+  "formal_episodes": 0,
+  "completed_pilot_episodes": 0,
+  "failed_stage": "runtime_pilot_single",
+  "evaluator_exit_signal": "SIGABRT (6)",
+  "model_server_reported_exception": false,
+  "last_evaluator_event": "First policy response received",
+  "cause": "Undetermined native evaluator abort; no Python exception or C backtrace was emitted.",
+  "retry_controls": "Keep task/seed/model protocol unchanged; enable PYTHONFAULTHANDLER and use previously successful node fc10601."
+}

@@ -11,7 +11,7 @@ if [[ -e "$RUN_RESULTS/provenance/frozen_comparison.json" || ! -e "$RUN_RESULTS/
   exit 2
 fi
 POLICY_PORT="${POLICY_PORT:-$((20000 + ${SLURM_JOB_ID:-0} % 20000))}"
-export PYTHONUNBUFFERED=1 MUJOCO_EGL_DEVICE_ID=0
+export PYTHONUNBUFFERED=1 PYTHONFAULTHANDLER=1 MUJOCO_EGL_DEVICE_ID=0
 mkdir -p "$RUN_RESULTS/logs"
 nvidia-smi
 bash "$FREQUENCY_PROJECT/scripts/serve_policy.sh" --port "$POLICY_PORT" \
