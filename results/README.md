@@ -5,6 +5,8 @@ This page describes the original native-P archive. Only H=5 and H=10 are support
 by the unchanged official `pi05_libero` config (native prediction horizon P=10).
 No native-P results exist for H=20/30/40/50. The separately requested fixed-P=50
 extension uses `p50/`; it must not be pooled with this archive.
+The additional fixed-P50 H=5/15/20 follow-up is in
+[`p50_h15_h20/`](p50_h15_h20/README.md), again analyzed separately.
 
 | Mode | Slurm job | Episodes per task per H | Seed | Task workers | Status |
 |---|---:|---:|---:|---:|---|

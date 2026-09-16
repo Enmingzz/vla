@@ -1,9 +1,12 @@
 # π0.5 LIBERO replanning-frequency validation
 
-Evaluation only, using the official Physical Intelligence OpenPI checkpoint and its
-existing LIBERO action-execution loop. No training, distillation, Flow-OPD,
+The initial evaluation phase uses the official Physical Intelligence OpenPI
+checkpoint and its existing LIBERO action-execution loop, without training,
 attention-rule changes, or action repetition. The default protocol preserves the
 official prediction horizon; an explicitly selected P=50 extension is documented below.
+The subsequently authorized 100-step H=20 recovery experiment is specified in
+[AUTORESEARCH.md](AUTORESEARCH.md) and keeps its learned weights and results separate.
+Exact commands for that phase are in [TRAINING.md](TRAINING.md).
 
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures
@@ -82,6 +85,11 @@ chunk length, and a distinct inference fingerprint. Aggregation refuses mixed P
 or mixed config fingerprints. The native-P archive is not pooled with this experiment.
 
 ### Follow-up H=15 and H=20
+
+The completed paired smoke test measured **H=5: 88%, H=15: 82%, H=20: 46%**.
+H=20 has a 42 pp gap (paired 95% CI 33–51 pp), with 62.2% fewer calls per episode.
+The H=15 gap is inconclusive (6 pp, CI −2 to 15 pp). See the separate
+[findings](results/p50_h15_h20/FINDINGS.md) and [archive](results/p50_h15_h20/README.md).
 
 Use `configs/prediction50_h15_h20.yaml` to compare H=5, 15 and 20 at fixed P=50.
 H=5 is rerun on the same continuous server, since separate GPU server instances

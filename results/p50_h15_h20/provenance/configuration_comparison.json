@@ -1,0 +1,25 @@
+{
+  "previous_job": 60035109,
+  "followup_job": 60042686,
+  "previous_fingerprint": "97aae698acfdb3f933b44fcc0ac0c6de9bb538515118bef6ba12e41f96f4aa54",
+  "followup_fingerprint": "e253594495c5b9a33f30d6374deb4a55cfdf1025871018d96247a6ea9f74c2d6",
+  "unchanged_checkpoint_model_flow_rng_and_packages": true,
+  "intentional_startup_transport_changes": {
+    "startup_warmup_protocol": {
+      "previous": null,
+      "followup": "one zero observation before listening; all episode calls reseeded"
+    },
+    "websocket_ping_interval": {
+      "previous": null,
+      "followup": null,
+      "previous_key_present": false,
+      "previous_effective_seconds": 20
+    }
+  },
+  "warmup": {
+    "benchmark_episode": false,
+    "seconds": 40.65938467346132,
+    "synthetic": true
+  },
+  "not_poolable_with_previous_server": true
+}

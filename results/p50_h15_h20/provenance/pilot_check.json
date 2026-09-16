@@ -1,0 +1,31 @@
+{
+  "diagnostic_excluded_from_benchmark": true,
+  "smoke_task0_episode0_matches_pilot": true,
+  "compared_fields": [
+    "success",
+    "controlled_environment_steps",
+    "policy_calls",
+    "initial_state_sha256",
+    "first_observation_sha256",
+    "episode_rng_seed",
+    "inference_fingerprint"
+  ],
+  "diagnostic": {
+    "success": true,
+    "controlled_environment_steps": 333,
+    "policy_calls": 67,
+    "initial_state_sha256": "8feb5a31194162cae0d3e381f31ac291b7e8ba02e5af413f2e26b3443d0cb4fe",
+    "first_observation_sha256": "63f4aabeb8c5b958739e38097e0260f935b5e51a2e611614789a90afcf80a1ef",
+    "episode_rng_seed": 3009361500,
+    "inference_fingerprint": "e253594495c5b9a33f30d6374deb4a55cfdf1025871018d96247a6ea9f74c2d6"
+  },
+  "smoke": {
+    "success": true,
+    "controlled_environment_steps": 333,
+    "policy_calls": 67,
+    "initial_state_sha256": "8feb5a31194162cae0d3e381f31ac291b7e8ba02e5af413f2e26b3443d0cb4fe",
+    "first_observation_sha256": "63f4aabeb8c5b958739e38097e0260f935b5e51a2e611614789a90afcf80a1ef",
+    "episode_rng_seed": 3009361500,
+    "inference_fingerprint": "e253594495c5b9a33f30d6374deb4a55cfdf1025871018d96247a6ea9f74c2d6"
+  }
+}

@@ -7,6 +7,11 @@ requested P=50 extension has its own [smoke-test findings](results/p50/FINDINGS.
 H=5 achieved 86/100 and H=30 achieved 12/100. That extension changes the inference
 prediction length and is not pooled with the results below.
 
+The later [paired H=15/20 follow-up](results/p50_h15_h20/FINDINGS.md), also at fixed
+P=50, measured H=5: 88%, H=15: 82%, H=20: 46%. Its H=20 gap is 42 pp (paired
+95% CI 33–51 pp); the H=15 gap is inconclusive. A separate, subsequently authorized
+100-step recovery experiment is specified in [AUTORESEARCH.md](AUTORESEARCH.md).
+
 ## Protocol constraint
 
 The pinned official `pi05_libero` config has native prediction horizon P=10. Requested horizons above P were not executed. No model/config override, action padding, repetition, or hidden policy calls was used.

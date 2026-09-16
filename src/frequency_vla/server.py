@@ -16,7 +16,7 @@ import time
 from unittest.mock import patch
 
 from .config import load_config, prediction_horizon, upstream_spec
-from .logging_utils import digest, write_json
+from .logging_utils import digest, file_digest, write_json
 
 
 def main():
@@ -26,6 +26,10 @@ def main():
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=8000)
     p.add_argument("--manifest-out", required=True)
+    p.add_argument("--opsd-config")
+    p.add_argument("--opsd-results-dir")
+    p.add_argument("--opsd-checkpoint-root")
+    p.add_argument("--trained-checkpoint", help="Separately exported OPSD checkpoint, with its training manifest")
     args = p.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", force=True)
     config = load_config()
@@ -40,6 +44,21 @@ def main():
         local = checkpoint / entry["name"].split("checkpoints/pi05_libero/", 1)[1]
         if local.stat().st_size != int(entry["size"]):
             raise ValueError("Checkpoint file size changed: " + str(local))
+    active_checkpoint = checkpoint
+    trained_manifest = None
+    if args.trained_checkpoint:
+        if args.opsd_config:
+            raise ValueError("The initial 100-step training run must start from the official checkpoint")
+        active_checkpoint = Path(args.trained_checkpoint).resolve()
+        trained_manifest = json.loads((active_checkpoint / "training_manifest.json").read_text())
+        if trained_manifest["base_object_manifest_sha256"] != digest(download_manifest):
+            raise ValueError("Trained checkpoint has a different source checkpoint")
+        for key in ["prediction_horizon", "flow_steps"]:
+            if trained_manifest["config"][key] != (prediction_horizon(spec) if key == "prediction_horizon" else spec[key]):
+                raise ValueError("Trained checkpoint inference setting mismatch: " + key)
+        for name, expected in trained_manifest["files"].items():
+            if name.startswith(("params/", "assets/")) and file_digest(active_checkpoint / name) != expected:
+                raise ValueError("Trained checkpoint checksum mismatch: " + name)
     sys.path.insert(0, str(Path(args.openpi_dir).resolve()))
     import jax
     from jax._src import lib as jax_lib
@@ -60,11 +79,11 @@ def main():
         from openpi.policies import policy_config
         effective_config = dataclasses.replace(native_config,
             model=dataclasses.replace(native_config.model, action_horizon=prediction_horizon(spec)))
-        policy = policy_config.create_trained_policy(effective_config, str(checkpoint))
+        policy = policy_config.create_trained_policy(effective_config, str(active_checkpoint))
     else:
         policy = serve_policy.create_policy(serve_policy.Args(
             env=serve_policy.EnvMode.LIBERO,
-            policy=serve_policy.Checkpoint(config=config["training_config"], dir=str(checkpoint)),
+            policy=serve_policy.Checkpoint(config=config["training_config"], dir=str(active_checkpoint)),
         ))
     if policy._model.action_horizon != prediction_horizon(spec) or policy._sample_kwargs:
         raise ValueError("Configured prediction horizon or sampling defaults changed")
@@ -97,16 +116,29 @@ def main():
                  "ptxas_version": subprocess.check_output([str(Path(jax_lib.cuda_path) / "bin/ptxas"), "--version"], text=True).strip(),
                  "jax_cuda_root": str(jax_lib.cuda_path),
                  "xla_flags": os.environ.get("XLA_FLAGS", "")})
+    if trained_manifest is not None:
+        spec.update(trained_checkpoint_manifest_sha256=digest(trained_manifest),
+                    trained_optimizer_step=trained_manifest["step"],
+                    trained_checkpoint_local_path=str(active_checkpoint))
     fingerprint = digest(spec)
     metadata = {"experiment_spec": spec, "inference_fingerprint": fingerprint,
-                "checkpoint_local_path": str(checkpoint),
+                "checkpoint_local_path": str(active_checkpoint),
                 "warmup": {"seconds": warmup_seconds, "synthetic": True, "benchmark_episode": False},
                 "server_packages": packages,
                 "devices": [{"device": str(d), "kind": d.device_kind} for d in jax.devices()]}
+    trainer = None
+    if args.opsd_config:
+        if not args.opsd_results_dir or not args.opsd_checkpoint_root:
+            raise ValueError("OPSD requires separate results and checkpoint directories")
+        from .opsd_backend import TemporalOPSD
+        trainer = TemporalOPSD(policy, metadata, load_config(args.opsd_config),
+                               args.opsd_results_dir, args.opsd_checkpoint_root, checkpoint)
     write_json(args.manifest_out, metadata)
 
     class PairedPolicy:
         def infer(self, observation):
+            if trainer is not None:
+                return trainer.infer(observation)
             observation = dict(observation)
             control = observation.pop("_frequency_vla", None)
             if control is None:

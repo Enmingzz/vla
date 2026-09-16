@@ -1,0 +1,21 @@
+{
+  "gpus": 1,
+  "gpu_type": "h100",
+  "cpus": 8,
+  "memory_gib": 40,
+  "walltime_limit": "00:35:00",
+  "workers": 4,
+  "startup_timeout_seconds": 300,
+  "diagnostic_episode_timeout_seconds": 180,
+  "pilot_first": true,
+  "horizons": [
+    5,
+    15,
+    20
+  ],
+  "prediction_horizon": 50,
+  "seed": 7,
+  "episodes_per_task": 10,
+  "project_commit": "b491e55b3b06a543761f50f3abae052d57d31e7e",
+  "rationale": "One warmed policy server; a bounded diagnostic must finish before any sweep. Prior two cancelled attempts consumed 30m05s of one GPU with no completed episodes. Failures stop all workers."
+}
