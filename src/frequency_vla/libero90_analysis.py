@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 from .analysis import holm, pair_key, summarize, validate_records, write_csv
-from .libero90_transfer import condition_id, conditions, validate_plan
+from .libero90_transfer import condition_id, conditions, selected_task_ids, validate_plan
 from .logging_utils import digest, file_digest, write_json
 from .study_analysis import paired_change
 
@@ -35,6 +35,8 @@ def analyze(root):
     root = Path(root)
     plan = json.loads((root / "provenance/study_plan.json").read_text())
     validate_plan(plan)
+    task_ids = selected_task_ids(plan)
+    suite_subset = "all_90" if len(task_ids) == 90 else "selected_"+str(len(task_ids))
     audit = json.loads((root / "provenance/split_audit.json").read_text())
     complete = json.loads((root / "provenance/study_complete.json").read_text())
     if not complete["complete"] or not complete["plan_sha256"] == audit["plan_sha256"] == digest(plan):
@@ -58,10 +60,10 @@ def analyze(root):
         folder = root / "evaluations" / ("step_"+str(c["step"])) / "raw/smoke/libero_90" / ("seed_"+str(c["seed"])) / ("H_"+str(c["horizon"]))
         manifests = [json.loads(p.read_text()) for p in folder.glob("*.manifest.json")]
         rows = [json.loads(line) for p in sorted(folder.glob("*.jsonl")) for line in p.read_text().splitlines() if line]
-        if len(manifests) != 90 or any(m["status"] != "complete" for m in manifests):
-            raise ValueError("Incomplete 90-task condition: " + condition_id(c))
+        if len(manifests) != len(task_ids) or any(m["status"] != "complete" for m in manifests):
+            raise ValueError("Incomplete selected-task condition: " + condition_id(c))
         validate_records(rows)
-        expected = {(c["seed"], t, e) for t in range(90) for e in range(c["episodes_per_task"])}
+        expected = {(c["seed"], t, e) for t in task_ids for e in range(c["episodes_per_task"])}
         if len(rows) != len(expected) or {pair_key(r) for r in rows} != expected:
             raise ValueError("Unequal/duplicate task or layout coverage")
         for r in rows:
@@ -82,6 +84,8 @@ def analyze(root):
             if digest(spec) != server["inference_fingerprint"] or any(r["inference_fingerprint"] != server["inference_fingerprint"] for r in rows):
                 raise ValueError("Changed inference fingerprint within a condition")
             snapshot = spec.pop("frozen_comparison")
+            if snapshot["source_sha256"] != setup["source_sha256"] or snapshot["sampler"] != "unchanged Pi0.sample_actions":
+                raise ValueError("Native sampler changed between parameter snapshots")
             if snapshot["optimizer_step"] != c["step"]:
                 raise ValueError("Wrong parameter snapshot")
             if c["step"] and snapshot["checkpoint"] != setup["trained_checkpoint"]:
@@ -94,15 +98,23 @@ def analyze(root):
         data[c["step"], c["horizon"]] = rows
         all_rows.extend(dict(condition=condition_id(c), optimizer_step=c["step"],
                             primary_novel_instruction=r["task_id"] in primary_ids, **r) for r in rows)
-        for task in range(90):
+        for task in task_ids:
             tr = [r for r in rows if r["task_id"] == task]
             per_task.append(dict(step=c["step"], horizon=c["horizon"], task_id=task,
                 task_description=tr[0]["task_description"], primary_novel_instruction=task in primary_ids,
                 **summarize(c["horizon"], tr)))
-    if len(servers) != 1:
+    if plan.get("reuse_original_H5", False):
+        reused=json.loads((root/"provenance/reused_original_H5.json").read_text())
+        for f in reused["files"]:
+            if file_digest(root/f["relative_path"]) != f["sha256"]:
+                raise ValueError("Reused baseline changed after import")
+        current=json.loads((root/"provenance/startup_server.json").read_text())["server_instance_id"]
+        if servers != set(reused["server_instance_ids"]) | {current}:
+            raise ValueError("Unexpected server restart beyond the declared baseline reuse")
+    elif len(servers) != 1:
         raise ValueError("Require one continuous native sampler/server for every condition")
     tables, comparisons = [], []
-    subsets = {"all_90": set(range(90)), "novel_instruction": primary_ids}
+    subsets = {suite_subset: set(task_ids), "novel_instruction": primary_ids}
     for label, ids in subsets.items():
         selected = {k: [r for r in rows if r["task_id"] in ids] for k, rows in data.items()}
         for (step,h), rows in selected.items():
@@ -131,7 +143,7 @@ def analyze(root):
             trained_calls_per_episode_saved_vs_original_H5=1-trained["mean_policy_calls"]/teacher["mean_policy_calls"],
             trained_calls_per_control_step_saved_vs_original_H5=1-trained["policy_calls_per_environment_step"]/teacher["policy_calls_per_environment_step"]))
     changes = []
-    for task in range(90):
+    for task in task_ids:
         values = {(r["step"],r["horizon"]):r for r in per_task if r["task_id"] == task}
         changes.append(dict(task_id=task, description=task_info[task]["description"],
             primary_novel_instruction=task in primary_ids,
@@ -142,7 +154,9 @@ def analyze(root):
         primary_tasks=len(primary_ids), primary_episodes=len(primary_ids)*plan["episodes_per_task"],
         excluded_instruction_overlap_task_ids=audit["overlapping_instruction_task_ids"],
         no_new_optimizer_updates=True, exact_policy_call_schedule=True,
-        all_initial_states_match_audit=True, single_server_instance=next(iter(servers)),
+        all_initial_states_match_audit=True, single_server_instance=next(iter(servers)) if len(servers)==1 else None,
+        server_instance_ids=sorted(servers), reused_original_H5=plan.get("reuse_original_H5",False),
+        selected_task_ids=task_ids, suite_subset=suite_subset,
         primary=next(r for r in comparisons if r["family"] == "primary"),
         gap_recovery=recovery,
         task_changes={k:sum((r["success_change"]>0 if k=="improved" else r["success_change"]<0 if k=="declined" else r["success_change"]==0)
@@ -164,7 +178,7 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
     labels = ["Original H=5", "Original H=20", "500 updates H=20"]
     colors = ["#64748b", "#ca8a04", "#059669"]
     fig, axes = plt.subplots(1,2,figsize=(11,4.7),sharey=True)
-    for ax, subset in zip(axes,["all_90","novel_instruction"]):
+    for ax, subset in zip(axes,[validation["suite_subset"],"novel_instruction"]):
         rows = [next(r for r in summaries if r["subset"]==subset and (r["step"],r["H"])==key) for key in [(0,5),(0,20),(500,20)]]
         ax.bar(range(3),[100*r["success_rate"] for r in rows],color=colors)
         ax.vlines(range(3),[100*r["ci95_low"] for r in rows],[100*r["ci95_high"] for r in rows],color="black")
@@ -205,7 +219,7 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
     lookup={(r["subset"],r["step"],r["H"]):r for r in summaries}
     text=["# LIBERO-90 transfer findings","",
         "This evaluation adds **zero optimizer updates**. It compares the official model with the fixed 500-update "
-        "model trained only on LIBERO-10, using all 90 LIBERO-90 tasks and three official initial layouts (40–42), seed 37.","",
+        "model trained only on LIBERO-10, using {} selected LIBERO-90 tasks and three official initial layouts (40–42), seed 37.".format(len(selected_task_ids(plan))),"",
         "## Primary comparison: task instructions absent from added OPSD","",
         "The primary subset contains **{} tasks / {} paired episodes**. The trained H=20 model achieved **{:.1%}**, "
         "versus **{:.1%}** for original H=20: **{:+.1f} pp**, paired within-task 95% bootstrap CI **[{:+.1f}, {:+.1f}] pp**, "
@@ -239,19 +253,19 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
             recovery["fraction_of_original_gap_recovered"])]
     text += ["","## All results","","| Subset | Model | Successes/episodes | Success | Calls/episode | Calls/control step |",
              "|---|---|---:|---:|---:|---:|"]
-    for subset in ["all_90","novel_instruction"]:
+    for subset in [validation["suite_subset"],"novel_instruction"]:
         for label,(step,h) in zip(labels,[(0,5),(0,20),(500,20)]):
             r=lookup[subset,step,h]
             text.append("| {} | {} | {}/{} | {:.1%} | {:.2f} | {:.4f} |".format(subset,label,r["total_successes"],r["total_episodes"],r["success_rate"],r["mean_policy_calls"],r["policy_calls_per_environment_step"]))
-    text += ["","The three secondary comparisons (complete-suite training effect and original replanning gaps for both subsets) "
+    text += ["","The three secondary comparisons (all-selected-task training effect and original replanning gaps for both subsets) "
              "receive a joint Holm correction; comparisons.csv retains raw/adjusted p values and both bootstrap intervals.","",
              "## Scope and controls","",
-             "LIBERO-90 task names are disjoint from the ten OPSD training task names. Exact instruction overlap occurs at task IDs {}. "
-             "Those tasks are retained in the all-90 table and excluded from the primary subset using a metadata rule fixed before evaluation.".format(audit["overlapping_instruction_task_ids"]),"",
+             "Selected LIBERO-90 task names are disjoint from the ten OPSD training task names. Exact instruction overlap occurs at task IDs {}. "
+             "Any overlapping tasks remain in the selected-task table and are excluded from the primary subset by the metadata rule.".format(audit["overlapping_instruction_task_ids"]),"",
              "Only our added OPSD is task-held-out. The official checkpoint's historical fine-tuning/pretraining exposure is not fully audited. "
              "Current public task metadata is archived separately and is not evidence that the base model never saw a task, scene, object or subskill.","",
              "All comparisons fix P=50 (an extension of the checkpoint's native P=10), ten native flow steps, preprocessing, ordered initial states, "
-             "episode/call RNG and the official LIBERO-90 400-step limit. Both frozen snapshots share one continuous native sampler. "
+             "episode/call RNG and the official LIBERO-90 400-step limit. Both frozen snapshots use identical native sampler code. "
              "No optimizer or teacher updates are available in this comparison server. This evaluates the temporal OPSD Gaussian velocity-matching "
              "adaptation, not a new reproduction of the image-generation Flow-OPD algorithm.","",
              "The 500-update checkpoint was selected before any LIBERO-90 outcome. Rendering pilot episodes are excluded. "
@@ -261,6 +275,17 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
              "this documented rendering environment. No formal EGL measurements are mixed into these statistics.","",
              "Raw JSONL/manifests and videos are under evaluations/. Tables include every task and paired episode. "
              "See provenance/ for the split audit, checkpoint hashes, code, checks and GPU accounting; see LIBERO90_TRANSFER.md for exact rerun commands.",""]
+    if len(selected_task_ids(plan)) < 90:
+        text += ["## User-requested first-ten screen", "",
+            "The selected official task IDs are {}.".format(selected_task_ids(plan)), "",
+            "These are the first ten tasks in benchmark order, not a random sample of LIBERO-90 and not the separate LIBERO-10 suite. "
+            "Three layouts per task provide a small exploratory screen. Do not extrapolate the measured rate to all 90 tasks. "
+            "The full-suite attempt and every outcome outside this prefix remain archived separately; the selection was requested by the user, "
+            "not chosen to improve the measured effect.", ""]
+        if plan.get("reuse_original_H5",False):
+            text += ["The 30 completed H=5 prefix episodes were copied unchanged with checksums and videos. Both H=20 conditions "
+                "use a restarted read-only server on the same node. Inference configuration, native sampler code, initial images and "
+                "episode RNG are required to match despite the server restart.", ""]
     (root/"FINDINGS.md").write_text("\n".join(text))
 
 

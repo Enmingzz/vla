@@ -1,8 +1,9 @@
-"""Evaluate LIBERO-10 OPSD transfer to all LIBERO-90 tasks without training."""
+"""Evaluate LIBERO-10 OPSD transfer to declared LIBERO-90 tasks without training."""
 import argparse
 import json
 import os
 from pathlib import Path
+import shutil
 import subprocess
 import sys
 import time
@@ -26,13 +27,61 @@ def condition_id(c):
     return "step{step}_H{horizon}".format(**c)
 
 
+def selected_task_ids(plan):
+    ids = plan.get("task_ids", list(range(90)))
+    if not ids or any(type(t) is not int or not 0 <= t < 90 for t in ids) or len(ids) != len(set(ids)):
+        raise ValueError("Invalid or duplicate selected LIBERO-90 task IDs")
+    return ids
+
+
 def validate_plan(plan):
     if plan["suite"] != "libero_90" or plan["all_tasks"] != 90 or plan["maximum_concurrent_gpus"] != 1:
-        raise ValueError("This frozen evaluation covers all 90 tasks on at most one GPU")
+        raise ValueError("This frozen evaluation uses LIBERO-90 on at most one GPU")
+    selected_task_ids(plan)
     if {(c["step"], c["horizon"]) for c in conditions(plan)} != {(0, 5), (0, 20), (500, 20)}:
         raise ValueError("The original H=5/H=20 and step-500 H=20 controls are required")
     if not 0 <= plan["initial_state_start"] < plan["initial_state_start"]+plan["episodes_per_task"] <= 50:
         raise ValueError("Invalid ordered initial-state range")
+
+
+def reuse_baseline(source, root, plan, audit_result):
+    """Copy complete, checksum-pinned H=5 episodes; never select by success."""
+    from .analysis import pair_key, validate_records
+    source, root = Path(source).resolve(), Path(root).resolve()
+    relative = Path("evaluations/step_0/raw/smoke/libero_90") / ("seed_"+str(plan["seed"])) / "H_5"
+    rows, files, servers = [], [], set()
+    for task in selected_task_ids(plan):
+        shard = "tasks_"+str(task)
+        manifest = json.loads((source/relative/(shard+".manifest.json")).read_text())
+        if manifest["status"] != "complete":
+            raise ValueError("Cannot reuse an incomplete task")
+        servers.add(manifest["server"]["server_instance_id"])
+        task_rows = [json.loads(line) for line in (source/relative/(shard+".jsonl")).read_text().splitlines()]
+        rows.extend(task_rows)
+        files.extend(relative/(shard+ext) for ext in [".jsonl", ".manifest.json"])
+        files.extend(Path("evaluations/step_0")/r["video_path"] for r in task_rows)
+    validate_records(rows)
+    expected = {(plan["seed"], t, e) for t in selected_task_ids(plan) for e in range(plan["episodes_per_task"])}
+    if len(rows) != len(expected) or {pair_key(r) for r in rows} != expected:
+        raise ValueError("Reused baseline coverage differs from the selected plan")
+    states = {(r["task_id"],r["initial_state_index"]):r["initial_state_sha256"] for r in audit_result["evaluation_initial_states"]}
+    for r in rows:
+        index=plan["initial_state_start"]+r["episode_index"]
+        if r["task_suite"] != "libero_90" or r["replan_steps"] != 5 or r["prediction_horizon"] != 50 or r["initial_state_index"] != index or r["initial_state_sha256"] != states[r["task_id"],index]:
+            raise ValueError("Reused episode protocol differs")
+    records=[]
+    for relative_file in files:
+        src, dst = source/relative_file, root/relative_file
+        sha=file_digest(src)
+        if dst.exists() and file_digest(dst) != sha:
+            raise ValueError("Refuse to replace a different result: "+str(dst))
+        dst.parent.mkdir(parents=True,exist_ok=True)
+        if not dst.exists():
+            shutil.copy2(src,dst)
+        records.append(dict(relative_path=str(relative_file),sha256=sha))
+    write_json(root/"provenance/reused_original_H5.json",dict(source_root=str(source),episodes=len(rows),
+        selection="User requested official task IDs 0–9 during the full-suite baseline; no selection by success.",
+        server_instance_ids=sorted(servers),files=records))
 
 
 def audit(args, plan):
@@ -74,7 +123,7 @@ def audit(args, plan):
     if public_metadata.exists():
         public_instructions = {normalize_instruction(json.loads(line)["task"]) for line in public_metadata.read_text().splitlines() if line}
     tasks, states = [], []
-    for task_id in range(90):
+    for task_id in selected_task_ids(plan):
         task = target.get_task(task_id)
         name = task.name
         if name in source_names:
@@ -137,15 +186,29 @@ def execute(args, plan):
             command += ["--task-ids"] + [str(t) for t in ids]
         run(name, command, limit)
 
-    evaluate("runtime_pilot_single", 0, 5, 1, 0, [0], workers=1,
-             limit=plan.get("single_pilot_timeout_seconds", 180))
-    pilot_ids = plan.get("parallel_pilot_task_ids", [0, 30, 60, 89])
-    evaluate("runtime_pilot_parallel", 0, 5, 1, 0, pilot_ids,
-             workers=plan.get("workers", 4), limit=plan.get("parallel_pilot_timeout_seconds", 180))
+    if not plan.get("reuse_runtime_pilots", False):
+        evaluate("runtime_pilot_single", 0, 5, 1, 0, [0], workers=1,
+                 limit=plan.get("single_pilot_timeout_seconds", 180))
+        pilot_ids = plan.get("parallel_pilot_task_ids", [0, 30, 60, 89])
+        evaluate("runtime_pilot_parallel", 0, 5, 1, 0, pilot_ids,
+                 workers=plan.get("workers", 4), limit=plan.get("parallel_pilot_timeout_seconds", 180))
+    else:
+        prior=json.loads((root/"provenance/prior_runtime_pilot_checks.json").read_text())
+        if not prior["complete"] or prior["pilot_episodes"] != 9:
+            raise ValueError("Missing completed prior runtime checks")
     completed = []
     for c in conditions(plan):
         name = condition_id(c)
+        if plan.get("reuse_original_H5", False) and (c["step"],c["horizon"]) == (0,5):
+            reused=json.loads((root/"provenance/reused_original_H5.json").read_text())
+            for file in reused["files"]:
+                if file_digest(root/file["relative_path"]) != file["sha256"]:
+                    raise ValueError("Reused baseline changed")
+            append_record(root/"stages.jsonl",dict(stage=name,event="reused",episodes=reused["episodes"],unix_time=time.time()))
+            completed.append(name)
+            continue
         evaluate(name, c["step"], c["horizon"], c["episodes_per_task"], c["initial_state_start"],
+                 ids=selected_task_ids(plan),
                  workers=plan.get("workers", 4), limit=plan.get("condition_timeout_seconds", 1500))
         completed.append(name)
     client = WebsocketClientPolicy("127.0.0.1", args.port)
@@ -165,6 +228,7 @@ def main():
     p.add_argument("--results-dir", required=True)
     p.add_argument("--checkpoint")
     p.add_argument("--prior-results", nargs="+")
+    p.add_argument("--reuse-results", help="Prior result root with complete H=5 task shards")
     p.add_argument("--port", type=int)
     args = p.parse_args()
     plan = load_config(args.plan)
@@ -173,6 +237,10 @@ def main():
         if not args.checkpoint or not args.prior_results:
             p.error("audit requires --checkpoint and --prior-results")
         result = audit(args, plan)
+        if plan.get("reuse_original_H5", False):
+            if not args.reuse_results:
+                p.error("This plan requires --reuse-results for its existing H=5 baseline")
+            reuse_baseline(args.reuse_results,args.results_dir,plan,result)
         write_json(Path(args.results_dir) / "provenance/split_audit.json", result)
         print(json.dumps({k:v for k,v in result.items() if k not in ["tasks", "evaluation_initial_states"]}, indent=2))
     else:

@@ -1,0 +1,41 @@
+{
+  "error": "RuntimeError('Upstream evaluation error (not a task failure): Caught exception: no close frame received or sent')",
+  "incomplete_episode": {
+    "action_chunk_length": 50,
+    "controlled_environment_steps": 65,
+    "environment_steps": 75,
+    "episode_index": 1,
+    "episode_rng_seed": 3037823230,
+    "evaluation_fingerprint": "e29fd81668f7086bbd0c049cfdec09e0c54121881d5d1e593a5c189d0b26c33b",
+    "first_observation_sha256": "3a26dd88dc9806401e2dede593418e7564e315081bce1a574f023b27de33eef2",
+    "inference_fingerprint": "6525da7201c9d70249a8090fbe18466d0fae93f446a5295cb5f9fb831ab1cc6b",
+    "initial_state_index": 41,
+    "initial_state_sha256": "4e3424835805a667d49cdc558d9aff3cbc4d8088d5edc079b6e50819cc9864a4",
+    "mode": "smoke",
+    "native_prediction_horizon": 10,
+    "policy_call_control_steps": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ],
+    "policy_calls": 13,
+    "prediction_horizon": 50,
+    "replan_steps": 5,
+    "seed": 37,
+    "settling_steps": 10,
+    "success": false,
+    "task_description": "turn on the stove and put the frying pan on it",
+    "task_id": 21,
+    "task_suite": "libero_90"
+  }
+}

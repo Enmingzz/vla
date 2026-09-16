@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "pilot_episodes": 9,
+  "single_and_parallel_task0_matched_fields": [
+    "initial_state_sha256",
+    "first_observation_sha256",
+    "episode_rng_seed",
+    "success",
+    "controlled_environment_steps",
+    "policy_calls"
+  ],
+  "policy_call_schedule_verified": true,
+  "returned_chunk_length": 50,
+  "formal_episodes_excluded": true,
+  "visually_checked_single_pilot_video": true
+}

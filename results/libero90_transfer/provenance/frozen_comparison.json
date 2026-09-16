@@ -1,0 +1,14 @@
+{
+  "frozen_backbone_equal": true,
+  "inference_parameter_checksums_verified": true,
+  "native_sampler": "unchanged Pi0.sample_actions with dynamic snapshot parameters",
+  "normalization_assets_equal": true,
+  "original_checkpoint": "gs://openpi-assets/checkpoints/pi05_libero",
+  "source_sha256": "fc930f1cdf1c10739c518d6acf3849ace7fefc1e476b249e6ee2c8be9c7b79dd",
+  "trained_checkpoint": {
+    "manifest_sha256": "c00bcab9c776c6e3794b4b86dc18a15b0e78dd9e7fcd9fb0fa1c7f2d920f18ed",
+    "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/step_500"
+  },
+  "trained_step": 500,
+  "training_operations_available": false
+}

@@ -50,5 +50,5 @@ else:
     raise SystemExit('Comparison server startup exceeded 420 seconds')
 PY
 env -u PYTHONPATH -u PYTHONHOME LD_LIBRARY_PATH="$FREQUENCY_OSMESA_LIBRARY_DIR" "$LIBERO_VENV/bin/python" \
-  -m frequency_vla.libero90_transfer run --plan "$FREQUENCY_PROJECT/configs/libero90_transfer.yaml" \
+  -m frequency_vla.libero90_transfer run --plan "${TRANSFER_PLAN:-$FREQUENCY_PROJECT/configs/libero90_transfer.yaml}" \
   --port "$POLICY_PORT" --results-dir "$RUN_RESULTS"

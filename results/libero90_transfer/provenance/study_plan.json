@@ -1,0 +1,39 @@
+{
+  "all_tasks": 90,
+  "analysis_seed": 20260917,
+  "base_checkpoint_manifest_sha256": "434da05c6b5ac51c28222ca1bd9b77b77fa733a7b16955cbe98ac09786845dcf",
+  "bootstrap_replicates": 10000,
+  "checkpoint_manifest_sha256": "c00bcab9c776c6e3794b4b86dc18a15b0e78dd9e7fcd9fb0fa1c7f2d920f18ed",
+  "condition_timeout_seconds": 5400,
+  "episodes_per_task": 3,
+  "initial_state_start": 40,
+  "maximum_concurrent_gpus": 1,
+  "parallel_pilot_task_ids": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    77,
+    89
+  ],
+  "parallel_pilot_timeout_seconds": 600,
+  "parent_checkpoint_manifest_sha256": "a7d6b7cb8cf42e2285721c007515b4a6526e4bb8c1874028f1dae841b5238a8c",
+  "primary_comparison": "step500_H20_minus_original_H20",
+  "primary_subset": "tasks_with_instructions_not_in_added_opsd_training",
+  "renderer": "osmesa",
+  "seed": 37,
+  "single_pilot_timeout_seconds": 360,
+  "snapshots": {
+    "0": [
+      5,
+      20
+    ],
+    "500": [
+      20
+    ]
+  },
+  "suite": "libero_90",
+  "workers": 8
+}

@@ -9,6 +9,18 @@ from frequency_vla.libero90_analysis import task_and_layout_interval
 from frequency_vla.analysis import paired_interval
 from frequency_vla.evaluator import rendering_spec
 from frequency_vla.logging_utils import file_digest
+from frequency_vla.libero90_transfer import selected_task_ids
+
+
+def test_explicit_prefix_is_distinct_from_full_suite_default():
+    assert selected_task_ids({}) == list(range(90))
+    assert selected_task_ids({"task_ids": list(range(10))}) == list(range(10))
+
+
+@pytest.mark.parametrize("ids", [[], [0,0], [90], [-1], [True]])
+def test_invalid_selected_tasks_fail(ids):
+    with pytest.raises(ValueError, match="Invalid or duplicate"):
+        selected_task_ids({"task_ids": ids})
 
 
 @pytest.mark.parametrize("requested, expected", [([], list(range(90))), (["--task-ids", "89"], [89])])

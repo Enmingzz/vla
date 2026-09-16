@@ -1,5 +1,52 @@
 # LIBERO-10 OPSD transfer to LIBERO-90
 
+## Current scope: user-requested first ten tasks
+
+The user reduced the first result to **official LIBERO-90 task IDs 0–9** during
+the full-suite H=5 run. These are not the separate LIBERO-10 suite. The first
+screen now has 10 tasks × 3 layouts × 3 conditions = **90 episodes**. All 30
+completed H=5 prefix episodes are reused unchanged, including video/checksum
+provenance; only the 60 H=20 episodes require another allocation. The original
+job was cancelled promptly, and all 68 completed full-suite-prefix episodes
+remain in `results/libero90_transfer`. The new report is isolated in
+`results/libero90_first10`. No task was selected by observed improvement.
+
+The restarted server uses the same node and unchanged sampler code, weights,
+dependencies and rendering. Analysis permits exactly the declared old/new server
+instances and still requires identical inference settings, initial images,
+state hashes and RNG. Completed pilot checks are reused. This ordered ten-task
+screen is exploratory and cannot estimate performance over all 90 tasks.
+
+To reproduce the reduced run using the archived H=5 prefix:
+
+```bash
+source scripts/env.sh
+export FREQUENCY_CONFIG="$PWD/configs/prediction50_libero90.yaml"
+export TRANSFER_PLAN="$PWD/configs/libero90_first10.yaml"
+export RUN_RESULTS="$PWD/results/libero90_first10-rerun"
+export COMPARISON_CHECKPOINT="$FREQUENCY_WORK/runs/autoresearch_round2_attempt2/step_500"
+mkdir -p "$RUN_RESULTS/provenance" "$RUN_RESULTS/logs"
+cp results/libero90_transfer/provenance/base_dataset_tasks.jsonl "$RUN_RESULTS/provenance/"
+cp results/libero90_transfer/provenance/pilot_checks.json "$RUN_RESULTS/provenance/prior_runtime_pilot_checks.json"
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+  -m frequency_vla.libero90_transfer audit --plan "$TRANSFER_PLAN" \
+  --results-dir "$RUN_RESULTS" --checkpoint "$COMPARISON_CHECKPOINT" \
+  --prior-results results/opsd_h20_100 results/autoresearch_round2 \
+  --reuse-results results/libero90_transfer
+sbatch --account=rrg-btaati --nodes=1 --ntasks=1 --gpus-per-node=h100:1 \
+  --cpus-per-task=12 --mem=64G --time=00:50:00 --nodelist=fc10511 \
+  --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_libero90_job.sh
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+  -m frequency_vla.libero90_analysis --results-dir "$RUN_RESULTS"
+```
+
+For a fresh run without archived baseline videos, copy this plan, set both
+`reuse_original_H5` and `reuse_runtime_pilots` to `false`, and omit
+`--reuse-results`. All three conditions and pilots will then run. Request a
+one-hour upper bound and any healthy H100 node; the fixed-node request above
+preserves the renderer hardware of the reused baseline in this recorded run.
+The full-suite protocol below remains available for a later extension.
+
 This evaluation reuses the frozen 500-update LIBERO-10 model from round two
 to test transfer outside its added OPSD training tasks. No new training is
 performed for this experiment.

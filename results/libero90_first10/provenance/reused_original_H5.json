@@ -1,0 +1,210 @@
+{
+  "episodes": 30,
+  "files": [
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_0.jsonl",
+      "sha256": "a7e487e1bd04914c4a7e6447e9eed0e070af3623de51fa168dd0576e83d8e7aa"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_0.manifest.json",
+      "sha256": "87bd298f200f1bf18bb299c6aa6d1a0677db99ef52061333429fa3dd6c5fe295"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_00_episode_000_failure.mp4",
+      "sha256": "f8257c964ab7083a52f8cabc9babc7f1cc7e67f49ce5facc283e9a161b364109"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_00_episode_001_failure.mp4",
+      "sha256": "adc8a1999eb694bb03a8e5b6ae5468d2eaa446f753e0ee41ea10b43e9d890837"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_00_episode_002_failure.mp4",
+      "sha256": "1ff52e8a576c6cc8a10824c7ec58674c92bc26b00a4653c7e4f9392089871d4c"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_1.jsonl",
+      "sha256": "a8e1d09d2f088f18778b185d281a00899b27ec28a5bd4edf78b0afe5cc9f792f"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_1.manifest.json",
+      "sha256": "7848e249f5074bdb02eb99157084523850a86a4bb93734d93c2f110d4a36eef5"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_01_episode_000_failure.mp4",
+      "sha256": "3b27b616512ad866f1b73ee7493b249bb3a050c0884f53ddcbcd9cc1a9019073"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_01_episode_001_failure.mp4",
+      "sha256": "8c7839b113bb24991765d7ab3b27bc9203bc253743fce3db1001db941fe11be5"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_01_episode_002_failure.mp4",
+      "sha256": "0fa8d7b430054f2006f353e771cf2d655ae718771e57fdfca7d49a64d267e3ac"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_2.jsonl",
+      "sha256": "ab5e7b076a6e25218446bd78e958736acf53ef9898305a8e7d53456e98d3780b"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_2.manifest.json",
+      "sha256": "6986c7637f9c41574f0b92d29af40406d6e68614e2dfc2381e03e41741786266"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_02_episode_000_success.mp4",
+      "sha256": "52d10bc50e4c418e2fa5403d436bb542af388ccd439d05a9905d96f570f7176c"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_02_episode_001_success.mp4",
+      "sha256": "4b49bcd3f119843797278375ad7289a66004a31086487409d3fc76caf05f448c"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_02_episode_002_failure.mp4",
+      "sha256": "12b00f6f8721eb7e43fe7e55f2befc76954ae9118d080d30c2d5577bd5d2515a"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_3.jsonl",
+      "sha256": "7b2315b2aa6cf33126dd7801b83ad3a16586162b180272aa1f77ecfc66284f59"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_3.manifest.json",
+      "sha256": "a63afedf399626d3bf28b9e49fd1b80f90e1e51067eee0d1ca36026394cce76a"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_03_episode_000_failure.mp4",
+      "sha256": "3f14577f898582cbbab46ef770b41b5e80c43cc6b29371c0478bde44fd83eb80"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_03_episode_001_failure.mp4",
+      "sha256": "6a9d65dcf5ee2af7a574fa463dc5eff5891dba9b28865b82a004e353a1b6d042"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_03_episode_002_failure.mp4",
+      "sha256": "6381ecae7225ab5136559c2f6227fb03282c63091511d3293b02335bc76b50c0"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_4.jsonl",
+      "sha256": "9964b10719feaad33b57e1864bd71deef625c27033b376ecb020ff5e4c5ad798"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_4.manifest.json",
+      "sha256": "9970d9e57d91ec6cde6155df615981c0554da4a40d0bb5038d7b861f5355142c"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_04_episode_000_failure.mp4",
+      "sha256": "ad0f5aefbe1d61ba96e7c5b17e27e2533f2bdfde3892b5f50bbe65b38ca66f2c"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_04_episode_001_failure.mp4",
+      "sha256": "a5ddf6c2a7bf9ef8dd61e2e3eb525afa3eab6f1ae1dfeecb51b4b0ccd0315975"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_04_episode_002_failure.mp4",
+      "sha256": "b1abb898581a9bbea8c93c9d8b7963d574e3345f8ea16fee4d3884fe4e311df5"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_5.jsonl",
+      "sha256": "6acb491e9b51fbaefe69ca36e0a9d057b62ef8dc011238fcd90be24a7eaecf49"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_5.manifest.json",
+      "sha256": "e27e7e85972a2abcfb63d671bdf31184e0a6fed2613d31ef3db495a075785437"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_05_episode_000_failure.mp4",
+      "sha256": "160ff431120fad8b852beb902b6a47d94bd36787306fb76684fd9de838af7fc1"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_05_episode_001_failure.mp4",
+      "sha256": "8497bb37983ae40ae8dcb3ccfb36831219d41716b0ba48ca975373b96a50e02a"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_05_episode_002_failure.mp4",
+      "sha256": "ea5655d9971186d3a74cb8dd0add2b5c4e25438a07f172484939bf888c5dd496"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_6.jsonl",
+      "sha256": "6611be62fd1abdef3ec0c2805cb8f6910e00a70cf66f44b2325bbd4ad58ec7c9"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_6.manifest.json",
+      "sha256": "2672210d7e170691ec0b8421ffba6e314f4e6b7706db5f67d369c2ec9958a143"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_06_episode_000_failure.mp4",
+      "sha256": "41234046abc1e779bbdc82b8a5b45c2e33098979fb8abc050378257d5608aae9"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_06_episode_001_failure.mp4",
+      "sha256": "fd578d7fe66dff3466196c28870f4c1f263ddf7376b0521ca07f62b8f2e9d228"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_06_episode_002_failure.mp4",
+      "sha256": "48c71b533d11ef8d1aaef8341dca002aea6e44fc863d3ed40e9bfacd2a36f655"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_7.jsonl",
+      "sha256": "eaecbc99ee31a5fc4ce423c9011d6474009ac01129ef9d98e9493dbe95bd470b"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_7.manifest.json",
+      "sha256": "f22ee70281996c8fca222d61949ff0af8515c79ae694afb1ae9718adc094dfad"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_07_episode_000_failure.mp4",
+      "sha256": "1e71b4e53119500b5b460c69b74238b6e401ff8426e9569a805a79c6cab421e7"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_07_episode_001_failure.mp4",
+      "sha256": "57c15bd1a910e3105029a4f51bdb5b8e82b4393b314c6ba052e19db95bac2bba"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_07_episode_002_failure.mp4",
+      "sha256": "4b0c7c1f638b0e2084ebefef43a0378a8632efeb460cbdc22151c2de52e03ddb"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_8.jsonl",
+      "sha256": "fa374b454d4de39f9e45c1b214279b78ef287f53d82a7d5ffdf94b8a7ed0475a"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_8.manifest.json",
+      "sha256": "2972bf99aa516c0febc6192fa787290aa043ef5bbbf65e2fae0257064d218f74"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_08_episode_000_failure.mp4",
+      "sha256": "ea89673a9b8952f746b372a3148f93f4fb43d4c3b8b87ad04381ce5eb61b723d"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_08_episode_001_failure.mp4",
+      "sha256": "3dbb696300b56181e96f075a33ab8951cbd799390ca2efa22268f1c94ac0a572"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_08_episode_002_failure.mp4",
+      "sha256": "55472be0069787b202b25478f512067a12879d9dd361c1e104aa5358ab1c854f"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_9.jsonl",
+      "sha256": "747aaa61c4f957a94c138704a52e04bf544f53b1dc6a6d5268cf90ddb37f2a16"
+    },
+    {
+      "relative_path": "evaluations/step_0/raw/smoke/libero_90/seed_37/H_5/tasks_9.manifest.json",
+      "sha256": "6fc8826ea0b56ca1dbbe67e362845854462941002b5b740fea5499902cfe48ad"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_09_episode_000_success.mp4",
+      "sha256": "c0c710e50b274e739aeb9e29ba0b9a98846e90204e8ad8f481a680964318c292"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_09_episode_001_success.mp4",
+      "sha256": "b9a247f56aed29cb8ea303c96294ab88961427f14cdfbcd2fa5aebd1a0302ccd"
+    },
+    {
+      "relative_path": "evaluations/step_0/videos/smoke/libero_90/seed_37/H_5/task_09_episode_002_success.mp4",
+      "sha256": "ad3a3996d5b5a97962486a54bd98b9f5cfd26efb7a9b961d49c2fed6e0bc4a62"
+    }
+  ],
+  "selection": "User requested official task IDs 0\u20139 during the full-suite baseline; no selection by success.",
+  "server_instance_ids": [
+    "b8d65f21-728a-4085-bcd7-55f4d37dee1c"
+  ],
+  "source_root": "/home/enmingzz/project/vla/frequency_vla/results/libero90_transfer"
+}

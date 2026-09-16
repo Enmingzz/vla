@@ -1,0 +1,270 @@
+{
+  "actual_training_distinct_layouts": 54,
+  "actual_training_evaluation_state_hashes_disjoint": true,
+  "added_optimizer_updates": 500,
+  "added_optimizer_updates_in_this_study": 0,
+  "base_exposure_caveat": "Current public task metadata is not the historical fine-tuning revision or a complete pretraining audit.",
+  "checkpoint_manifest_sha256": "c00bcab9c776c6e3794b4b86dc18a15b0e78dd9e7fcd9fb0fa1c7f2d920f18ed",
+  "distinct_task_names": true,
+  "evaluation_initial_states": [
+    {
+      "initial_state_index": 40,
+      "initial_state_sha256": "da681405e4ca0479283a2a2d44338e4ee3e6c6296bdc950a9c995a6d59c3a40a",
+      "task_id": 0
+    },
+    {
+      "initial_state_index": 41,
+      "initial_state_sha256": "55d31b598189aafc1f1ae698a8682bad056a07a4db4e66de2cc5b2cce132159e",
+      "task_id": 0
+    },
+    {
+      "initial_state_index": 42,
+      "initial_state_sha256": "52cf8aeedbea8fa517125fd621852703831540e87d044784ed6217e88efbc98c",
+      "task_id": 0
+    },
+    {
+      "initial_state_index": 40,
+      "initial_state_sha256": "09b944494c8a234a6f9bc27144e6926a4b94c2e643489fb7f2fbc5bedbd90f0e",
+      "task_id": 1
+    },
+    {
+      "initial_state_index": 41,
+      "initial_state_sha256": "207586d448f4c750ae53a5b2d9ff69f88c8f85507b6b7830869530a0fd0c5e87",
+      "task_id": 1
+    },
+    {
+      "initial_state_index": 42,
+      "initial_state_sha256": "f226eefb8935fc664c6f61ac2203522aaa475bdc5cffe6740e5ccf052b599415",
+      "task_id": 1
+    },
+    {
+      "initial_state_index": 40,
+      "initial_state_sha256": "3dd37d9e57acfba1844cd9e444565ec65cbf64a2921164359295f4423181036c",
+      "task_id": 2
+    },
+    {
+      "initial_state_index": 41,
+      "initial_state_sha256": "31ee5d81fb1e480d8d6c0e7152f424e357d385aa024b4229f97344bd057e5cf3",
+      "task_id": 2
+    },
+    {
+      "initial_state_index": 42,
+      "initial_state_sha256": "6c38dca961822854ad4e23e2f54aced33246e2a361ab280a7abb64eeb6f63031",
+      "task_id": 2
+    },
+    {
+      "initial_state_index": 40,
+      "initial_state_sha256": "72ca5a0a89fd09045e779d5080a40708abc92db425971f2b4eccc95e42f9058e",
+      "task_id": 3
+    },
+    {
+      "initial_state_index": 41,
+      "initial_state_sha256": "e863b2d5c39d329408a777038052ecebba9fe10b0e4c47bab1b228c48437832f",
+      "task_id": 3
+    },
+    {
+      "initial_state_index": 42,
+      "initial_state_sha256": "3f607047bd53340ee5d52ca71afba23e54b207e0a037e83d124a3e0266d12192",
+      "task_id": 3
+    },
+    {
+      "initial_state_index": 40,
+      "initial_state_sha256": "7a8d423e492706c89a2be4addeef48c88cf88f7c0709206c5a03d4ab841603ab",
+      "task_id": 4
+    },
+    {
+      "initial_state_index": 41,
+      "initial_state_sha256": "5ee94b33135d4affd5a00840fb0f1af0ee2703769556aaad6cb7fcf55e26d452",
+      "task_id": 4
+    },
+    {
+      "initial_state_index": 42,
+      "initial_state_sha256": "b200234743951f3e4a251a1ce82a3572aa9ddf4ae4515d03a15cc6fc45241998",
+      "task_id": 4
+    },
+    {
+      "initial_state_index": 40,
+      "initial_state_sha256": "5d7bb553f311a65073788e121b857681b3dc3ba9f7e9950eb8a88b9560377844",
+      "task_id": 5
+    },
+    {
+      "initial_state_index": 41,
+      "initial_state_sha256": "88d882323b38607bd5cdde9c1fb6c46350f373557fe706749857ab31445e618e",
+      "task_id": 5
+    },
+    {
+      "initial_state_index": 42,
+      "initial_state_sha256": "19ff7748ecb6956273310a3d38d566df4ff1f173209c6f4030323a5e3b6cbf46",
+      "task_id": 5
+    },
+    {
+      "initial_state_index": 40,
+      "initial_state_sha256": "2659fb0be9f01e9d97eb807549846cfa0d2d1be11c3e1a95fe3547f6fd323871",
+      "task_id": 6
+    },
+    {
+      "initial_state_index": 41,
+      "initial_state_sha256": "eeab172765f4c2587f0b720b22c15b5b97d7987a96cc63cd28204d16a0e11293",
+      "task_id": 6
+    },
+    {
+      "initial_state_index": 42,
+      "initial_state_sha256": "0e349c3f5992d1c1e0e5097dcf8e781b93804c4d4fb706544cea5ae00a1d51aa",
+      "task_id": 6
+    },
+    {
+      "initial_state_index": 40,
+      "initial_state_sha256": "8d930c2bd0dfbdbe30e6e1f51c6c33198302954d0940bc1bcbf31a1e1746ac86",
+      "task_id": 7
+    },
+    {
+      "initial_state_index": 41,
+      "initial_state_sha256": "8823570362e5e201ce89205d7ba3962f2f495663e4c9bba0d43f5ea2d7e58ef5",
+      "task_id": 7
+    },
+    {
+      "initial_state_index": 42,
+      "initial_state_sha256": "f68f61cb8ed7d68a871b63359ec606adf8ca0ae8cabdb7fe0294ee322187b3a1",
+      "task_id": 7
+    },
+    {
+      "initial_state_index": 40,
+      "initial_state_sha256": "31d5e3947d7b0e263e50c706eb7048d93cbfa37af2a69c9d6dddaa3140a62c75",
+      "task_id": 8
+    },
+    {
+      "initial_state_index": 41,
+      "initial_state_sha256": "c000cc22cfae83acc6d0f8660542bcce15cb629f22ec53292c0886cb587e15ba",
+      "task_id": 8
+    },
+    {
+      "initial_state_index": 42,
+      "initial_state_sha256": "685a1ac2517074ba3ed60eca1f557c9f18f5d3c65667bcfbe73224c120622833",
+      "task_id": 8
+    },
+    {
+      "initial_state_index": 40,
+      "initial_state_sha256": "3b354f0c5fe2352eee0d61673613825c38c51fdfdfcb35d844d0f6685a8f6af6",
+      "task_id": 9
+    },
+    {
+      "initial_state_index": 41,
+      "initial_state_sha256": "7a616c390376d5c006589a5d4d1f2139308e0c943b18177a6583895c85a08ee1",
+      "task_id": 9
+    },
+    {
+      "initial_state_index": 42,
+      "initial_state_sha256": "0a58035466d35bc7df0275e191965150e047d08cf9d3190d7ba3c34eff965e42",
+      "task_id": 9
+    }
+  ],
+  "overlapping_instruction_task_ids": [],
+  "plan_sha256": "1fb558bb09d65444f3d5336b38625898bc9aaee96b20bc3e235f930f8e40082b",
+  "primary_task_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "prior_training_rollout_files": [
+    {
+      "path": "/home/enmingzz/project/vla/frequency_vla/results/opsd_h20_100/rollouts.jsonl",
+      "sha256": "39c73a7783a9d178b4e58377dbf6c3dc3b420696ac33d214113f817832e22838"
+    },
+    {
+      "path": "/home/enmingzz/project/vla/frequency_vla/results/autoresearch_round2/rollouts.jsonl",
+      "sha256": "075c7502feba0ddf16f83708c7e8363f98b0fe435c7de1b04911b80c700eecd9"
+    }
+  ],
+  "tasks": [
+    {
+      "bddl_sha256": "a0824cbe6b3146c00984f5a01307a3e39aac9ddc434ee4ff040b5536a0c48bbc",
+      "description": "close the top drawer of the cabinet",
+      "instruction_in_current_public_base_dataset": false,
+      "instruction_seen_in_added_opsd": false,
+      "name": "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet",
+      "task_id": 0
+    },
+    {
+      "bddl_sha256": "da9fc4fcf5523a989a547b61450c0809926e710af0c37341b15593930e42f8d9",
+      "description": "close the top drawer of the cabinet and put the black bowl on top of it",
+      "instruction_in_current_public_base_dataset": false,
+      "instruction_seen_in_added_opsd": false,
+      "name": "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet_and_put_the_black_bowl_on_top_of_it",
+      "task_id": 1
+    },
+    {
+      "bddl_sha256": "ffca5a60db6d6fe14aedb8ec9d4fe75363d49f28b686c9d55acda312450cb19a",
+      "description": "put the black bowl in the top drawer of the cabinet",
+      "instruction_in_current_public_base_dataset": false,
+      "instruction_seen_in_added_opsd": false,
+      "name": "KITCHEN_SCENE10_put_the_black_bowl_in_the_top_drawer_of_the_cabinet",
+      "task_id": 2
+    },
+    {
+      "bddl_sha256": "3d00910a47feefbe351a02442c03c9d66cf62a1dc89f4b653fd0250b90f7fa88",
+      "description": "put the butter at the back in the top drawer of the cabinet and close it",
+      "instruction_in_current_public_base_dataset": false,
+      "instruction_seen_in_added_opsd": false,
+      "name": "KITCHEN_SCENE10_put_the_butter_at_the_back_in_the_top_drawer_of_the_cabinet_and_close_it",
+      "task_id": 3
+    },
+    {
+      "bddl_sha256": "af0684ddb06f1b9b1f151db3bea2d390e3b8b8eed1f2529b2e82d58c5e227709",
+      "description": "put the butter at the front in the top drawer of the cabinet and close it",
+      "instruction_in_current_public_base_dataset": false,
+      "instruction_seen_in_added_opsd": false,
+      "name": "KITCHEN_SCENE10_put_the_butter_at_the_front_in_the_top_drawer_of_the_cabinet_and_close_it",
+      "task_id": 4
+    },
+    {
+      "bddl_sha256": "f6438ca7aa12c288cc491844c5af26e06777a85c1a9ec7a65f62fbf14f9bf838",
+      "description": "put the chocolate pudding in the top drawer of the cabinet and close it",
+      "instruction_in_current_public_base_dataset": false,
+      "instruction_seen_in_added_opsd": false,
+      "name": "KITCHEN_SCENE10_put_the_chocolate_pudding_in_the_top_drawer_of_the_cabinet_and_close_it",
+      "task_id": 5
+    },
+    {
+      "bddl_sha256": "26453b960c3c071a731e13d1447c31dd4dc939a8852030edad5e90d0ee465e0e",
+      "description": "open the bottom drawer of the cabinet",
+      "instruction_in_current_public_base_dataset": false,
+      "instruction_seen_in_added_opsd": false,
+      "name": "KITCHEN_SCENE1_open_the_bottom_drawer_of_the_cabinet",
+      "task_id": 6
+    },
+    {
+      "bddl_sha256": "d4f8f86fec0d4fe418f8c063792d07d179a71f06fb799dc5132ca06896e16ac1",
+      "description": "open the top drawer of the cabinet",
+      "instruction_in_current_public_base_dataset": false,
+      "instruction_seen_in_added_opsd": false,
+      "name": "KITCHEN_SCENE1_open_the_top_drawer_of_the_cabinet",
+      "task_id": 7
+    },
+    {
+      "bddl_sha256": "642afeac021a9e8d20256da9fcd8a2f34ca2dd4df89a4d67c90b9facf46e4e97",
+      "description": "open the top drawer of the cabinet and put the bowl in it",
+      "instruction_in_current_public_base_dataset": false,
+      "instruction_seen_in_added_opsd": false,
+      "name": "KITCHEN_SCENE1_open_the_top_drawer_of_the_cabinet_and_put_the_bowl_in_it",
+      "task_id": 8
+    },
+    {
+      "bddl_sha256": "9875b091f27560f75e556353e204e8fb27526e3ee9449c02ef1b127115055450",
+      "description": "put the black bowl on the plate",
+      "instruction_in_current_public_base_dataset": false,
+      "instruction_seen_in_added_opsd": false,
+      "name": "KITCHEN_SCENE1_put_the_black_bowl_on_the_plate",
+      "task_id": 9
+    }
+  ],
+  "test_suite": "libero_90",
+  "total_evaluation_episodes": 90,
+  "train_suite": "libero_10"
+}

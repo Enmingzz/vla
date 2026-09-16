@@ -1,0 +1,39 @@
+{
+  "job_id": "60104287",
+  "submitted_unix_time": 1789584666.9392543,
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--job-name=vla-libero90-osmesa",
+    "--account=rrg-btaati",
+    "--nodes=1",
+    "--ntasks=1",
+    "--gpus-per-node=h100:1",
+    "--cpus-per-task=12",
+    "--mem=64G",
+    "--time=04:45:00",
+    "--exclude=fc10512",
+    "--output=/home/enmingzz/project/vla/frequency_vla/results/libero90_transfer/logs/slurm-%j.log",
+    "scripts/fir_libero90_job.sh"
+  ],
+  "source_commit": "fa5952547a5317333cf8b059015a8f38f35fef7f",
+  "maximum_concurrent_gpus": 1,
+  "gpus": 1,
+  "cpus": 12,
+  "memory_GiB": 64,
+  "walltime_upper_bound_seconds": 17100,
+  "release_immediately_on_completion_or_error": true,
+  "optimizer_updates_added": 0,
+  "simulator_workers": 8,
+  "renderer": "osmesa",
+  "prior_diagnostic_gpu_seconds": 2217,
+  "environment": {
+    "FREQUENCY_CONFIG": "/home/enmingzz/project/vla/frequency_vla/configs/prediction50_libero90.yaml",
+    "RUN_RESULTS": "/home/enmingzz/project/vla/frequency_vla/results/libero90_transfer",
+    "COMPARISON_CHECKPOINT": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/step_500",
+    "FREQUENCY_OSMESA_LIBRARY_DIR": "/scratch/enmingzz/frequency_vla/native_osmesa/root/usr/lib64",
+    "XLA_PYTHON_CLIENT_PREALLOCATE": "true",
+    "XLA_PYTHON_CLIENT_MEM_FRACTION": "0.65",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "reason": "User requested evaluating only the first ten LIBERO-90 tasks first.",
+  "original_job_id": 60104287,
+  "original_job_state": "CANCELLED by user-requested scope reduction",
+  "original_job_elapsed_seconds": 1189,
+  "allocation_released": true,
+  "completed_formal_episodes": 68,
+  "reused_H5_episodes": 30,
+  "target_task_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "target_formal_episodes": 90,
+  "remaining_new_H20_episodes": 60,
+  "new_result_root": "/home/enmingzz/project/vla/frequency_vla/results/libero90_first10",
+  "selection_not_outcome_based": true,
+  "unix_time": 1789586084.622011
+}

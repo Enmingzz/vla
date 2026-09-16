@@ -1,0 +1,13 @@
+{
+  "backend": "osmesa",
+  "package": "mesa-libOSMesa-25.0.7-5.el9_7.x86_64.rpm",
+  "url": "https://dl.rockylinux.org/vault/rocky/9.7/CRB/x86_64/os/Packages/m/mesa-libOSMesa-25.0.7-5.el9_7.x86_64.rpm",
+  "rpm_sha256": "916f7643c9e3caee7226217214266513ef0da654301e1535b728d52ea3679837",
+  "library_sha256": "bef74da9e93e7e9557fecd7efe35eb77f3eddcd36a6c836b49153d1f4b085bf7",
+  "library_directory": "/scratch/enmingzz/frequency_vla/native_osmesa/root/usr/lib64",
+  "allocated_node_dependency_load_passed": "fc10513",
+  "rasterizer_threads_per_worker": 1,
+  "formal_renderer_identical_for_all_conditions": true,
+  "diagnostic_comparison": "../../diagnostics/libero90_render_probe/image_comparison.json",
+  "backend_limitation": "EGL and OSMesa frames are not pixel-identical. This study reports the software-renderer result; it does not compare mixed backends."
+}
