@@ -270,7 +270,7 @@ def findings(summaries, gaps, task_gaps, config, suite, mode, native_p, complete
     else:
         lines.append("No applicable LIBERO-10 H=5 baseline is available; reproduction is not established.")
     if extension:
-        lines.append("The official reference is contextual only because P differs. Both H values are evaluated as diagnostics even if this screen fails; failure prevents interpreting a gap as evidence for a strong teacher.")
+        lines.append("The official reference is contextual only because P differs. All selected H values are evaluated as diagnostics even if this screen fails; failure prevents interpreting a gap as evidence for a strong teacher.")
     lines.extend(["", "## Paired replanning gaps and compute savings", "", "Gap is Success(5) − Success(H), measured on matching seed/task/initial-state indices. Positive values favour H=5.", ""])
     for g in gaps:
         lines.append("- H={}: gap {:.1f} pp, paired 95% bootstrap CI [{:.1f}, {:.1f}] pp; {:.1%} fewer calls per episode and {:.1%} fewer calls per controlled step ({} pairs).{}".format(g["student_H"], 100*g["replanning_gap"], 100*g["gap_ci95_low"], 100*g["gap_ci95_high"], g["relative_policy_calls_saved"], g["relative_call_density_saved"], g["paired_episodes"], " Exact McNemar p (Holm-adjusted) = {:.4g}.".format(g["mcnemar_p_holm"]) if "mcnemar_p_holm" in g else ""))
