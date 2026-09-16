@@ -1,0 +1,15 @@
+{
+  "reference": "results/p50_h15_h20",
+  "episodes": 100,
+  "mismatched_episodes_by_field": {
+    "success": 0,
+    "initial_state_sha256": 0,
+    "first_observation_sha256": 0,
+    "episode_rng_seed": 0,
+    "controlled_environment_steps": 0,
+    "policy_calls": 0,
+    "policy_call_control_steps": 0
+  },
+  "all_checked_fields_equal": true,
+  "note": "Actions were not recorded in these evaluation logs; equal lengths/outcomes do not prove bitwise-equal full action trajectories."
+}

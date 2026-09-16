@@ -1,0 +1,41 @@
+{
+  "formal_optimizer_updates": 100,
+  "action_blocks": 400,
+  "actual_controlled_training_steps": 7961,
+  "unique_training_initial_states": 18,
+  "tasks_covered": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "initial_state_indices_used": [
+    10,
+    11
+  ],
+  "finite_nonzero_losses_gradients_and_updates": true,
+  "student_rollout_versions_verified": true,
+  "flow_time_index_counts": {
+    "0": 9,
+    "1": 9,
+    "2": 7,
+    "3": 7,
+    "4": 13,
+    "5": 13,
+    "6": 10,
+    "7": 10,
+    "8": 12,
+    "9": 10
+  },
+  "loss_min": 0.002652312396094203,
+  "loss_max": 0.06779294461011887,
+  "grad_norm_min": 0.059930555522441864,
+  "grad_norm_max": 0.7892150282859802,
+  "note": "Losses use changing on-policy observations and denoising times; their trend alone is not an accuracy result."
+}

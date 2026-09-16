@@ -1,0 +1,3 @@
+condition,H,P,total_episodes,total_successes,success_rate,ci95_low,ci95_high,mean_policy_calls,mean_episode_length,mean_environment_steps_including_settling,policy_calls_per_environment_step,mean_executed_actions_per_policy_call,mean_wall_clock_seconds
+untrained,20,50,100,46,0.46,0.36560808309024106,0.5573513967663177,22.64,448.18,458.18,0.05051541791244589,19.743296885313946,10.510008339406923
+step_100,20,50,100,58,0.58,0.4820648670304296,0.6720161732564526,21.32,420.58,430.58,0.05069190165961292,19.656323112169233,9.996544354045763

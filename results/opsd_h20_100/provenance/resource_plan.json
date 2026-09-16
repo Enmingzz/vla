@@ -1,0 +1,15 @@
+{
+  "gpus": 1,
+  "gpu_type": "h100",
+  "cpus": 8,
+  "memory_gib": 48,
+  "walltime_limit": "01:00:00",
+  "optimizer_steps": 100,
+  "batch_size": 4,
+  "baseline_episodes": 100,
+  "trained_episodes": 100,
+  "project_commit": "90b83689f71f3920e5554ebb6565711110e74c40",
+  "prior_failed_diagnostic_job": 60044854,
+  "reason": "Same single GPU resource bound; separately measure same-input consistency and gradient-program numeric noise before proceeding.",
+  "job_id": 60045256
+}

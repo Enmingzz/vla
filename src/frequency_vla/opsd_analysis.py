@@ -26,6 +26,22 @@ def main():
     args = parser.parse_args()
     root = Path(args.results_dir)
     before, after = load_condition(root / "baseline"), load_condition(root / "student_100")
+    server_specs = [json.loads((root / "provenance" / ("server_" + phase + ".json")).read_text())["experiment_spec"]
+                    for phase in ["baseline", "student"]]
+    phases = [spec.pop("temporal_opsd") for spec in server_specs]
+    if server_specs[0] != server_specs[1]:
+        raise ValueError("Inference configuration changed between baseline and trained evaluation")
+    if phases[0]["phase"] != "baseline" or phases[0]["optimizer_step"] != 0 or phases[1]["phase"] != "student" or phases[1]["optimizer_step"] != 100:
+        raise ValueError("Evaluation phases do not identify the initial and step-100 snapshots")
+    exported = json.loads((root / "provenance/step_100.json").read_text())
+    evaluated = phases[1]["checkpoint"]
+    # The native WebSocket server adds server_timing to RPC return dictionaries.
+    # Compare checkpoint identity, not transport timing annotations.
+    if {key: evaluated.get(key) for key in exported} != exported:
+        raise ValueError("Evaluated student does not identify the exported step-100 checkpoint")
+    for field in ["algorithm", "sources", "evaluation_sampler"]:
+        if phases[0][field] != phases[1][field]:
+            raise ValueError("Evaluation implementation changed: " + field)
     for key in sorted(before):
         for field in ["initial_state_sha256", "first_observation_sha256", "episode_rng_seed", "evaluation_fingerprint",
                       "prediction_horizon", "native_prediction_horizon", "task_description"]:
@@ -43,22 +59,38 @@ def main():
     train_hashes = {s["initial_state_sha256"] for r in rollouts for s in r["initial_states"]}
     if eval_hashes & train_hashes:
         raise ValueError("Training/evaluation initial-state leakage")
+    if [r["optimizer_step"] for r in rollouts] != list(range(1, 101)) or any(r["diagnostic"] for r in rollouts):
+        raise ValueError("Rollout versions do not match the 100 formal updates")
+    training_steps = sum(s["executed_steps"] for r in rollouts for s in r["initial_states"])
+    task_coverage = [{"task_id": task,
+                      "action_blocks": sum(s["task_id"] == task for r in rollouts for s in r["initial_states"]),
+                      "controlled_steps": sum(s["executed_steps"] for r in rollouts for s in r["initial_states"] if s["task_id"] == task),
+                      "unique_initial_states": len({s["initial_state_sha256"] for r in rollouts for s in r["initial_states"] if s["task_id"] == task})}
+                     for task in range(10)]
     pairs = [(after[key], before[key]) for key in sorted(before)]
     baseline, trained = summarize(20, list(before.values())), summarize(20, list(after.values()))
     only_after = sum(a["success"] and not b["success"] for a, b in pairs)
     only_before = sum(b["success"] and not a["success"] for a, b in pairs)
     low, high = paired_interval(pairs)
     delta = trained["success_rate"] - baseline["success_rate"]
+    prior_gap = json.loads((root / "provenance/hypothesis_gate.json").read_text())["gap"]
+    teacher_reference = float(prior_gap["teacher_success_rate"])
+    recovered_fraction = delta / float(prior_gap["replanning_gap"])
     stats = {"paired_episodes": 100, "optimizer_steps": 100,
              "baseline_success_rate": baseline["success_rate"], "trained_success_rate": trained["success_rate"],
              "success_change": delta, "change_ci95_low": low, "change_ci95_high": high,
              "trained_only_successes": only_after, "baseline_only_successes": only_before,
              "mcnemar_p_two_sided": exact_mcnemar(only_after, only_before),
-             "train_eval_initial_states_disjoint": True, "same_H": 20, "same_P": 50,
+             "train_eval_initial_states_disjoint": True, "inference_config_unchanged": True,
+             "exported_step_100_evaluated": True, "same_H": 20, "same_P": 50,
+             "training_controlled_steps": training_steps, "unique_training_initial_states": len(train_hashes),
+             "prior_H5_success_reference": teacher_reference,
+             "contextual_fraction_of_prior_gap_recovered": recovered_fraction,
              "mean_calls_before": baseline["mean_policy_calls"], "mean_calls_after": trained["mean_policy_calls"]}
     output = root / "aggregated"
     write_json(output / "comparison.json", stats)
     write_csv(output / "comparison.csv", [dict(condition="untrained", **baseline), dict(condition="step_100", **trained)])
+    write_csv(output / "training_task_coverage.csv", task_coverage)
     write_csv(output / "episodes.csv", [dict(condition=name, **r) for name, rows in [("untrained", before), ("step_100", after)] for r in rows.values()])
     tasks = []
     for task in range(10):
@@ -79,8 +111,12 @@ def main():
     errors = [[100 * (s["success_rate"] - s["ci95_low"]) for s in summaries],
               [100 * (s["ci95_high"] - s["success_rate"]) for s in summaries]]
     ax.bar(["Before training", "After 100 updates"], values, yerr=errors, capsize=5, color=["#64748b", "#0284c7"])
+    for x, value in enumerate(values):
+        ax.text(x, value / 2, f"{value:.0f}%", ha="center", va="center", color="white", fontsize=14)
     ax.set(ylabel="LIBERO-10 success (%)", ylim=(0, 100), title="Temporal OPSD · fixed P=50, H=20")
-    fig.tight_layout()
+    fig.text(.5, .02, f"Paired change {delta*100:+.0f} pp; 95% CI [{low*100:+.0f}, {high*100:+.0f}] pp. Bars: Wilson 95% CI.",
+             ha="center", fontsize=8)
+    fig.tight_layout(rect=(0, .05, 1, 1))
     fig.savefig(figures / "success_before_after_100.png", dpi=180)
     plt.close(fig)
     fig, ax = plt.subplots(figsize=(7, 4))
@@ -91,6 +127,9 @@ def main():
     fig.savefig(figures / "training_loss.png", dpi=180)
     plt.close(fig)
     convincing = delta > 0 and low > 0 and stats["mcnemar_p_two_sided"] < .05
+    task_table = "\n".join(f"| {row['task_id']} | {row['success_before']:.0%} | {row['success_after']:.0%} | "
+                           f"{100*(row['success_after']-row['success_before']):+.0f} pp | {row['task_description']} |"
+                           for row in tasks)
     text = f'''# First 100-step temporal OPSD result
 
 At fixed P=50 and H=20, held-out LIBERO-10 success changed from
@@ -102,6 +141,25 @@ p = **{stats['mcnemar_p_two_sided']:.4g}**.
 
 {'This pilot provides paired evidence of improvement on these held-out initial states.' if convincing else 'This pilot does not establish a statistically convincing improvement.'}
 The measured direction is reported regardless of the training loss.
+This single-seed pilot requires independent confirmation before a strong recovery
+claim; no training hyperparameters were selected using its success results.
+
+## Recovery and task changes
+
+There were {only_after} failures converted to successes and {only_before} successes
+converted to failures. Relative to the preceding H=5 reference of
+{teacher_reference:.0%}, the trained student's remaining gap is
+{100*(teacher_reference-trained['success_rate']):.0f} pp. The measured improvement
+corresponds to {recovered_fraction:.1%} of the earlier H=5/H=20 gap. This recovery
+fraction is contextual: H=5 was measured in the preceding frequency job, not
+re-evaluated in this training job. The paired before/after H=20 comparison above
+is the primary training result.
+
+Each task has only 10 evaluation episodes; the following changes are exploratory.
+
+| Task | Before | After | Change | Description |
+|---:|---:|---:|---:|---|
+{task_table}
 
 ## Protocol
 
@@ -113,9 +171,11 @@ Mean policy calls per episode: {baseline['mean_policy_calls']:.2f} before,
 {trained['mean_policy_calls']:.2f} after. Calls per fixed-length trajectory remain
 approximately one per 20 steps; episode lengths can change with success.
 
-Training used 100 current-student batches of four action blocks, seed 17, and
-initial-state indices 10–49. Initial-state hashes were verified disjoint from
-evaluation. One diagnostic update was saved/reloaded and fully rolled back before
+Training used 100 current-student batches of four action blocks, seed 17, and an
+eligible initial-state pool of indices 10–49. Initial-state hashes were verified disjoint from
+evaluation. The run collected {training_steps:,} controlled training steps across
+{len(train_hashes)} distinct initial states; per-task exposure is reported in
+aggregated/training_task_coverage.csv. One diagnostic update was saved/reloaded and fully rolled back before
 the formal baseline. Only the existing action expert and action/time projections
 were optimized; the visual/language backbone was outside the optimizer. The
 teacher was an EMA, decay 0.9999. No demonstrations or success rewards were used
@@ -134,6 +194,10 @@ gradient algorithm. See the repository's AUTORESEARCH.md for the specified metho
 The official checkpoint was fine-tuned at P=10; both tested conditions extrapolate
 to P=50. This is an initial 100-episode held-out pilot, not a 500-episode main
 validation or proof of recovery on unseen tasks. Per-task changes are exploratory.
+These evaluation states were excluded from optimizer training but were already
+used in the preceding H sweep; they are not a fresh final test set. Expanding to
+all official states later would include the training states and must not be
+labelled a fully held-out evaluation without a new split.
 Further tests must not reuse these results for unreported hyperparameter selection.
 
 Raw before/after records and videos are in baseline/ and student_100/. Training

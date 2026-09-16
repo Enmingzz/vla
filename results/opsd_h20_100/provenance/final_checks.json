@@ -1,0 +1,21 @@
+{
+  "job_id": 60045256,
+  "job_state": "COMPLETED",
+  "exit_code": "0:0",
+  "formal_training_updates": 100,
+  "baseline_evaluation_episodes": 100,
+  "trained_evaluation_episodes": 100,
+  "evaluation_videos": 200,
+  "video_metadata_spot_checks": 20,
+  "verified_training_rollout_arrays": 100,
+  "train_eval_initial_states_disjoint": true,
+  "checkpoint_native_inference_reload_max_abs_difference": 0.0,
+  "pytest_tests_passed": 20,
+  "cpu_native_sampler_nnx_orbax_integration_test_passed": true,
+  "original_openpi_and_libero_worktrees_clean": true,
+  "plots_visually_checked": [
+    "success_before_after_100.png",
+    "training_loss.png"
+  ],
+  "analysis_source_sha256": "15bc5420293054551fc37bc26eb8244845e85a587d5e227b8ab808c87f1f4f69"
+}

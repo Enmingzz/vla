@@ -91,3 +91,34 @@ the gradient program. Fresh-observation supervision must exceed this measured
 numeric MSE by a factor of five before proceeding. This diagnoses bfloat16/XLA
 differences without conflating them with temporal alignment errors. No success
 rate was used to revise this diagnostic.
+
+The refined real-model diagnostic passed in job `60045256`: same-program
+offset-0 MSE was exactly 0; forward-versus-backward-primal MSE was
+9.49e-6; teacher-target MSE at offsets 5–15 was 0.0540 (ratio 5,695). This
+signal includes fresh observations, latent reindexing and auxiliary-tail
+completion; it does not isolate the contribution of each choice. Traced and native
+sampling gave exactly identical actions. The single diagnostic update had
+finite nonzero gradients, passed parameter save/reload, and was rolled back
+before the formal baseline. These checks establish the implementation signal
+for this pilot, not a task-success benefit. Full values are retained in
+`results/opsd_h20_100/provenance/numeric_diagnostic.json`.
+
+## Completed first result
+
+Job `60045256` completed the specified 100 updates and both 100-episode H=20
+evaluations. Success increased from 46% to 58%: +12 pp, within-task paired 95%
+bootstrap CI [+2, +22] pp, exact McNemar p=0.04277. There were 21 recovered
+episodes and 9 regressions. The unchanged H=20 baseline matched the preceding
+frequency sweep in all 100 outcomes, episode lengths and policy-call counts.
+
+This is an initial positive signal, not robust confirmation from multiple seeds
+or a fresh final test set. The improvement corresponds contextually to 28.6%
+of the prior 42 pp H=5/H=20 gap; the prior H=5 reference remains 30 pp higher.
+Training and evaluation details, task regressions, raw data and limitations are
+reported in `results/opsd_h20_100/FINDINGS.md`. No further training or parameter
+sweep was launched after observing these results.
+
+The successful job used one H100 for 22m12s. Including the earlier 4m55s failed
+diagnostic, this training trial consumed 27m07s of single-GPU time. It ended and
+released its GPU. The preceding H=5/15/20 frequency follow-up, including its own
+failed attempts, consumed a separate 55m26s.

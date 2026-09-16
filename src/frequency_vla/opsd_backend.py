@@ -310,4 +310,5 @@ class TemporalOPSD:
         write_json(path / "training_manifest.json", manifest)
         self.saved_checkpoint = {"path": str(path), "manifest_sha256": digest(manifest)}
         write_json(self.root / "provenance/step_100.json", self.saved_checkpoint)
-        return self.saved_checkpoint
+        # Native WebSocket transport mutates replies to append server timing.
+        return dict(self.saved_checkpoint)

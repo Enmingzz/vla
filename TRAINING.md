@@ -6,6 +6,13 @@ is specified in [AUTORESEARCH.md](AUTORESEARCH.md). It is temporal OPSD with loc
 Gaussian velocity matching, adapted from the user's OPSD pipeline, not the
 image-generation Flow-OPD paper's policy-gradient algorithm.
 
+The completed first pilot measured **46% → 58%** at H=20 after 100 updates
+(100 paired episodes, +12 pp, paired 95% CI +2 to +22 pp, McNemar p=0.0428).
+See [FINDINGS](results/opsd_h20_100/FINDINGS.md) and the
+[run archive](results/opsd_h20_100/README.md). The actual training covered 18
+initial states at indices 10–11; evaluation used indices 0–9. These results are
+preliminary and are not a fully held-out evaluation of all 50 official states.
+
 Reuse the setup and base checkpoint from README.md. The original OpenPI checkout,
 checkpoint and frequency-result archives remain intact.
 

@@ -11,6 +11,10 @@ The later [paired H=15/20 follow-up](results/p50_h15_h20/FINDINGS.md), also at f
 P=50, measured H=5: 88%, H=15: 82%, H=20: 46%. Its H=20 gap is 42 pp (paired
 95% CI 33–51 pp); the H=15 gap is inconclusive. A separate, subsequently authorized
 100-step recovery experiment is specified in [AUTORESEARCH.md](AUTORESEARCH.md).
+That [completed pilot](results/opsd_h20_100/FINDINGS.md) improved H=20 from
+46/100 to 58/100: +12 pp, paired 95% CI +2 to +22 pp, exact McNemar p=0.0428.
+It provides preliminary recovery evidence at fixed P=50, with no change to the
+native-P findings below.
 
 ## Protocol constraint
 
@@ -49,7 +53,7 @@ Tasks with the largest absolute changes (exploratory; positive gaps favour H=5, 
 - Task 0 at H=10: gap +2.0 pp (H=5 96.0%, H=10 94.0%) — put both the alphabet soup and the tomato sauce in the basket.
 
 No teacher/student pair is recommended from the evidence currently available.
-The intended H_S=20/30/50 premise remains untested because native P=10. These results alone cannot justify that proposed distillation stage; it requires a revised, explicitly authorized protocol. No training or distillation was implemented.
+The intended H_S=20/30/50 premise is not tested by this native-P=10 experiment. These results alone cannot justify that proposed distillation stage; it requires the revised, explicitly authorized P=50 protocol described above. No training or distillation was used in this native-P experiment.
 
 ## Reproducibility and uncertainty
 

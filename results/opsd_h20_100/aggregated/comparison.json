@@ -1,0 +1,23 @@
+{
+  "baseline_only_successes": 9,
+  "baseline_success_rate": 0.46,
+  "change_ci95_high": 0.22,
+  "change_ci95_low": 0.02,
+  "contextual_fraction_of_prior_gap_recovered": 0.2857142857142856,
+  "exported_step_100_evaluated": true,
+  "inference_config_unchanged": true,
+  "mcnemar_p_two_sided": 0.04277394525706768,
+  "mean_calls_after": 21.32,
+  "mean_calls_before": 22.64,
+  "optimizer_steps": 100,
+  "paired_episodes": 100,
+  "prior_H5_success_reference": 0.88,
+  "same_H": 20,
+  "same_P": 50,
+  "success_change": 0.11999999999999994,
+  "train_eval_initial_states_disjoint": true,
+  "trained_only_successes": 21,
+  "trained_success_rate": 0.58,
+  "training_controlled_steps": 7961,
+  "unique_training_initial_states": 18
+}

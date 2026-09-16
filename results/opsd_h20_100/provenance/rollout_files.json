@@ -1,0 +1,606 @@
+{
+  "formal_training_rollouts": [
+    {
+      "optimizer_step": 1,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_001.npz",
+      "bytes": 4833158,
+      "sha256": "402949a900d703bd29994f533093a911b55e13fa71d1bcf9f00f61ba84610612"
+    },
+    {
+      "optimizer_step": 2,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_002.npz",
+      "bytes": 4833158,
+      "sha256": "f5f30c46cea10a1fb95d6df45059315d40a354143bea81a1e42b31095ec0efc4"
+    },
+    {
+      "optimizer_step": 3,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_003.npz",
+      "bytes": 4833158,
+      "sha256": "1c2497bf77c1b590f6f436d68e4058489593128cbd7105657a8772a483874efa"
+    },
+    {
+      "optimizer_step": 4,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_004.npz",
+      "bytes": 4833158,
+      "sha256": "4bce25f7ddf2a1b35d0dfba9044c789ca6ac3059f5f27aa463a6520e8b6c688f"
+    },
+    {
+      "optimizer_step": 5,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_005.npz",
+      "bytes": 4833158,
+      "sha256": "800bad8bf21421a3f0e0979caca69e753ffbe9ce89f21e11f6b106bfcd973c05"
+    },
+    {
+      "optimizer_step": 6,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_006.npz",
+      "bytes": 4833158,
+      "sha256": "0f8abddee17a2189e58a8ef6bb97363b6f323a203674454bb050567615704377"
+    },
+    {
+      "optimizer_step": 7,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_007.npz",
+      "bytes": 4833158,
+      "sha256": "4c174c05b10bbe98abb6c0197a1a455c39fa167062beea64a819a1dc973f4b8e"
+    },
+    {
+      "optimizer_step": 8,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_008.npz",
+      "bytes": 4833158,
+      "sha256": "1275861ccb6c02f63809337b9e1fcb4b7d7c6a2db7e7cffb085bf6ee7ddfb5ad"
+    },
+    {
+      "optimizer_step": 9,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_009.npz",
+      "bytes": 4833158,
+      "sha256": "a71c4f1037b411606723c5ae8510a971e4b8dec8276e6c8ec94a9b8789411a18"
+    },
+    {
+      "optimizer_step": 10,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_010.npz",
+      "bytes": 4833158,
+      "sha256": "d896759e3acf29d58dca77374abb8ffdf48149764d0565a94422bab84b22e798"
+    },
+    {
+      "optimizer_step": 11,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_011.npz",
+      "bytes": 4833158,
+      "sha256": "a933cb30637361c81d525c503bac0a46a06d165b62e562066aee7ab03ed8d2a5"
+    },
+    {
+      "optimizer_step": 12,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_012.npz",
+      "bytes": 4833158,
+      "sha256": "c96ea85dbc135936e3dc5c25a6b9c46fefd22f65e1fac8382d9812a0c2cdbe68"
+    },
+    {
+      "optimizer_step": 13,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_013.npz",
+      "bytes": 4833158,
+      "sha256": "0eb87e48ff476afa72f178dea43c2423ede064fd61e63f369c96b14b51291879"
+    },
+    {
+      "optimizer_step": 14,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_014.npz",
+      "bytes": 4833158,
+      "sha256": "97275254319093f4c611b0599828f4be8c1dc7a57fdcd1711707cba779d43600"
+    },
+    {
+      "optimizer_step": 15,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_015.npz",
+      "bytes": 4833158,
+      "sha256": "121bec0687396331141e398a1ba2194f0973027a6764e40fec5118e0cf7d4ef5"
+    },
+    {
+      "optimizer_step": 16,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_016.npz",
+      "bytes": 4833158,
+      "sha256": "5d51f3d1c5ae940f183dc2018a964a6002eb15a8acbf90197dfb320900ad7462"
+    },
+    {
+      "optimizer_step": 17,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_017.npz",
+      "bytes": 4833158,
+      "sha256": "105393f08e3ec99bcf7ee3b5d5c3adfc1406d2411d9d2a4fde3fae2d59d56062"
+    },
+    {
+      "optimizer_step": 18,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_018.npz",
+      "bytes": 4833158,
+      "sha256": "4640bffe7f7e85119ae2bf67ffb10257b37a7afc614022b4bf8d16f6d7f4f03e"
+    },
+    {
+      "optimizer_step": 19,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_019.npz",
+      "bytes": 4833158,
+      "sha256": "e0bd87186831022a25b8769694f90ef2da5741c43c6d5dc166abb5ea086a07f3"
+    },
+    {
+      "optimizer_step": 20,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_020.npz",
+      "bytes": 4833158,
+      "sha256": "131bb235c1fa56ee33e147e9607c55ebcb84b31b6bf6d219cf20781a0908dafa"
+    },
+    {
+      "optimizer_step": 21,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_021.npz",
+      "bytes": 4833158,
+      "sha256": "15af2191f52e3f5d737895c2d5008ea26749c75c4ff5b663a791ee3495f4e7ba"
+    },
+    {
+      "optimizer_step": 22,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_022.npz",
+      "bytes": 4833158,
+      "sha256": "790864aa7a1b5062211c7bd6633910a3194e454cbcd677432d7d8c5b26273672"
+    },
+    {
+      "optimizer_step": 23,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_023.npz",
+      "bytes": 4833158,
+      "sha256": "c3172e7ec3a64061591d990605ac9215800d3df723d3860d0bbf277cfd859d0b"
+    },
+    {
+      "optimizer_step": 24,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_024.npz",
+      "bytes": 4833158,
+      "sha256": "3bbe126dde131634505643a862c613e9f7fcebbc34338164ccdba1a081a79354"
+    },
+    {
+      "optimizer_step": 25,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_025.npz",
+      "bytes": 4833158,
+      "sha256": "2a3f191745163d9f169f971651c96717913deb060f4aa2965e2dae5060baa60f"
+    },
+    {
+      "optimizer_step": 26,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_026.npz",
+      "bytes": 4833158,
+      "sha256": "34bd9676dc840c8de2810210968c5206e4d81cbfebd881af7bddf7bcba5e46a8"
+    },
+    {
+      "optimizer_step": 27,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_027.npz",
+      "bytes": 4833158,
+      "sha256": "42b114b99c9550a6501c347b5cf338dbde4f73e72b3b1191bcdeedd3eb76bfbf"
+    },
+    {
+      "optimizer_step": 28,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_028.npz",
+      "bytes": 4833158,
+      "sha256": "93b8e8c3deb4e1b99e1475ad38164caeb25ab49e4c7b96c8bfaea679acf6fad9"
+    },
+    {
+      "optimizer_step": 29,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_029.npz",
+      "bytes": 4833158,
+      "sha256": "72fc875582816dd831926614ed46a3486bc2cebd9728cf2dfdf860282085e217"
+    },
+    {
+      "optimizer_step": 30,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_030.npz",
+      "bytes": 4833158,
+      "sha256": "f328f033bab3e50a02b3e0d45b2d6fa996fe22af5147d0022f9c3e1884eeb6b0"
+    },
+    {
+      "optimizer_step": 31,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_031.npz",
+      "bytes": 4833158,
+      "sha256": "7a6f70b1e9d427cfadf784970ecbf9543721b70496793771e688421a506f3aaa"
+    },
+    {
+      "optimizer_step": 32,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_032.npz",
+      "bytes": 4833158,
+      "sha256": "47b66d37d257fc6bffe595470ca76d8a0138d8d5f40b2a172c69b2af543a9fd8"
+    },
+    {
+      "optimizer_step": 33,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_033.npz",
+      "bytes": 4833158,
+      "sha256": "09981863725ac89cbec8471b2b34ea4dfbe8273af0cfc4e74021696acd81985a"
+    },
+    {
+      "optimizer_step": 34,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_034.npz",
+      "bytes": 4833158,
+      "sha256": "4305029ecf4853f72742bcb19c87347568b810513cb964dfe53cbef58bcc7305"
+    },
+    {
+      "optimizer_step": 35,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_035.npz",
+      "bytes": 4833158,
+      "sha256": "c5bc5948f678704543fa62c04bf2a6e3d79834c0e3c314f07d9384950b2f9ce5"
+    },
+    {
+      "optimizer_step": 36,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_036.npz",
+      "bytes": 4833158,
+      "sha256": "e80140053b87b1bf73e9ea67e4d704adec81845b2f168d87964419c9291cddb1"
+    },
+    {
+      "optimizer_step": 37,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_037.npz",
+      "bytes": 4833158,
+      "sha256": "3fe273c6622c38d519a183d86d078d84d7ea6469b6dfc7443cc078c683f1bd11"
+    },
+    {
+      "optimizer_step": 38,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_038.npz",
+      "bytes": 4833158,
+      "sha256": "3b44f89485708f3a47021a1cfeaf0face97754968d31b7427bd94d548aa09d71"
+    },
+    {
+      "optimizer_step": 39,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_039.npz",
+      "bytes": 4833158,
+      "sha256": "8986d58cc2acdee34f097518138f84b2e28a441f67f8c6579ccba115338458ee"
+    },
+    {
+      "optimizer_step": 40,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_040.npz",
+      "bytes": 4833158,
+      "sha256": "b0946abaa35ee1923553bb2fbf6db6b457c1ed4255fcd15e58ab43b5f03f830b"
+    },
+    {
+      "optimizer_step": 41,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_041.npz",
+      "bytes": 4833158,
+      "sha256": "1ca62380f2c92ccfa5fe57e4a756cb416d4f68b3b3f473d10f022c5c383901cf"
+    },
+    {
+      "optimizer_step": 42,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_042.npz",
+      "bytes": 4833158,
+      "sha256": "76dd3bdc2f885b4517bf20415a93d358909ce88b916ac201856ff508646c2325"
+    },
+    {
+      "optimizer_step": 43,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_043.npz",
+      "bytes": 4833158,
+      "sha256": "4e084aa6fa5c544b94f139da21dea74e4bc841cad3badf0b7a8e9045b84b8aa7"
+    },
+    {
+      "optimizer_step": 44,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_044.npz",
+      "bytes": 4833158,
+      "sha256": "31b9d12483dfb838d73c2fffa6e7a13ce27678b6fee26a59fe9abc2e2fbf3134"
+    },
+    {
+      "optimizer_step": 45,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_045.npz",
+      "bytes": 4833158,
+      "sha256": "f06acb9f18be871200e0d3f14d7814d3ac759b2aeba6401a6a26ac4389132b9b"
+    },
+    {
+      "optimizer_step": 46,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_046.npz",
+      "bytes": 4833158,
+      "sha256": "675b2fce58dd203fc423b120336a7aba5eaa07e812cb04dea74d8de6d7a541e5"
+    },
+    {
+      "optimizer_step": 47,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_047.npz",
+      "bytes": 4833158,
+      "sha256": "a5deef9dfae414c5e0436d1b12f19ab3e2de4077da5c4ecc53640f9bb8dbb51c"
+    },
+    {
+      "optimizer_step": 48,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_048.npz",
+      "bytes": 4833158,
+      "sha256": "75102c02d5cc25301e0e98f7276ff8e46bbab0cbc7bc3e087e89b8e917668076"
+    },
+    {
+      "optimizer_step": 49,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_049.npz",
+      "bytes": 4833158,
+      "sha256": "a6a3abb386972fbbd4afcb62fb415a9ad5057adee40ee310bb961accd1e4c077"
+    },
+    {
+      "optimizer_step": 50,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_050.npz",
+      "bytes": 4833158,
+      "sha256": "5c3c7dc9c78fa341693105781b779ee80570a50f4bfbdfd789fe7ad1f4eb1c4a"
+    },
+    {
+      "optimizer_step": 51,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_051.npz",
+      "bytes": 4833158,
+      "sha256": "c033e862b2ec8526aabb8e40d4cda38546b26ddc050fa6b8b42a81f167df74ce"
+    },
+    {
+      "optimizer_step": 52,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_052.npz",
+      "bytes": 4833158,
+      "sha256": "f0f8679d20f4427d73be2a9d6d7dee73d40f5503b3f1282a94141880d2a913f1"
+    },
+    {
+      "optimizer_step": 53,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_053.npz",
+      "bytes": 4833158,
+      "sha256": "cfb2ea50d83f5a66ea779bd4b6201688da7fb4dc9c19055ddaf73f104988f4db"
+    },
+    {
+      "optimizer_step": 54,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_054.npz",
+      "bytes": 4833158,
+      "sha256": "0d2ffd153aa551908800024c2fc9f62d19e248bb8eed8476601cf331a56582b2"
+    },
+    {
+      "optimizer_step": 55,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_055.npz",
+      "bytes": 4833158,
+      "sha256": "c538d9fc3cbbb9d31a4fd57e99e6adbd26ce7e000f5f1c50e7207e8a0fe25e5d"
+    },
+    {
+      "optimizer_step": 56,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_056.npz",
+      "bytes": 4833158,
+      "sha256": "9bbd4f05a2e1eed03178588b1ea719d092e6aef0f44e708bd13d10d68c421c84"
+    },
+    {
+      "optimizer_step": 57,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_057.npz",
+      "bytes": 4833158,
+      "sha256": "a945f194c99e1a6a9d06e006532f740dadf7d8a4729a16fd1d81dc97107ad4f9"
+    },
+    {
+      "optimizer_step": 58,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_058.npz",
+      "bytes": 4833158,
+      "sha256": "75b7d8f10a14a13b0c8601cc367d9c3d5a647685ce3cf4ea616d30ae5dfb31e9"
+    },
+    {
+      "optimizer_step": 59,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_059.npz",
+      "bytes": 4833158,
+      "sha256": "3e97590d04c3192a6f0a147ba7f519c0204bc19fc4c9bbd195eac78ffe18dd96"
+    },
+    {
+      "optimizer_step": 60,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_060.npz",
+      "bytes": 4833158,
+      "sha256": "49e00d5ea09ec38fbc7c69a435f82258e4046c4386331a28f0cfe0a4c0555467"
+    },
+    {
+      "optimizer_step": 61,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_061.npz",
+      "bytes": 4833158,
+      "sha256": "9834ba6da558d94fb330fd4de21544b3a7dcc6bd4bc6cfb830aeba8015ad4c55"
+    },
+    {
+      "optimizer_step": 62,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_062.npz",
+      "bytes": 4833158,
+      "sha256": "b423c4e29875b9d31f4b96c36d57569640f91bd394dec7338a573da831f26ae9"
+    },
+    {
+      "optimizer_step": 63,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_063.npz",
+      "bytes": 4833158,
+      "sha256": "f68fbd4a1fba33ef9a2a090a099bff1b72438510b6003bfff6db8dd945a65a0d"
+    },
+    {
+      "optimizer_step": 64,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_064.npz",
+      "bytes": 4833158,
+      "sha256": "086c7eb787c1b45e96e0b3d9879c4b12043b09ecf0493f902c96ff4ebee36eed"
+    },
+    {
+      "optimizer_step": 65,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_065.npz",
+      "bytes": 4833158,
+      "sha256": "32252711b909347c45563fc1e84d5ce14e3233ce6bc5f6ba117fdf53b108dd1c"
+    },
+    {
+      "optimizer_step": 66,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_066.npz",
+      "bytes": 4833158,
+      "sha256": "b042f0b2a42cd4fe1c2ccabbab84d8244128cf808aa46758d4395a140890a300"
+    },
+    {
+      "optimizer_step": 67,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_067.npz",
+      "bytes": 4833158,
+      "sha256": "2fe172e5bdb2820e299f0d8e8ccd81bec0c10d63380d175de042fe8d34d19627"
+    },
+    {
+      "optimizer_step": 68,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_068.npz",
+      "bytes": 4833158,
+      "sha256": "fa33948441c9713d9f00a6dd2a6e2ddda72eca1785a99c57af79f4119931bfdd"
+    },
+    {
+      "optimizer_step": 69,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_069.npz",
+      "bytes": 4833158,
+      "sha256": "f7965de634b308ac5ad7b3865b5b418d5942840949a9cf31cb0ffc373d31e022"
+    },
+    {
+      "optimizer_step": 70,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_070.npz",
+      "bytes": 4833158,
+      "sha256": "43e0b61fa845efde8d2e66b657a8349358c3121317848c87187d0a63cb0ec7f4"
+    },
+    {
+      "optimizer_step": 71,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_071.npz",
+      "bytes": 4833158,
+      "sha256": "1b5b3a9abb4c4838e4844dcd470e8063d929e7cc22ef4760553391b8ae3cac2e"
+    },
+    {
+      "optimizer_step": 72,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_072.npz",
+      "bytes": 4833158,
+      "sha256": "2d1eae46fe79a15cbeb817c255f2579f7ba69c025b5d1d12a1b6e5e42d3dd33f"
+    },
+    {
+      "optimizer_step": 73,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_073.npz",
+      "bytes": 4833158,
+      "sha256": "6ed9a2dc771745a82529e85ac60b8960585f3c4112ed866b53f41762fcc663cf"
+    },
+    {
+      "optimizer_step": 74,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_074.npz",
+      "bytes": 4833158,
+      "sha256": "0c18b2831b2e62dedb3223c9a25959ad041a42a3575b991900d8bd5f3ccadac9"
+    },
+    {
+      "optimizer_step": 75,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_075.npz",
+      "bytes": 4833158,
+      "sha256": "f626a324a192734c8b4be48c84d85d0d1f45f65f3ae395660f262cb675805662"
+    },
+    {
+      "optimizer_step": 76,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_076.npz",
+      "bytes": 4833158,
+      "sha256": "caca3ec07c5fc2708de00084119f9857f334fd16d9a8a32af25447a636b3d91c"
+    },
+    {
+      "optimizer_step": 77,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_077.npz",
+      "bytes": 4833158,
+      "sha256": "20347adb6a3e4b00c75ae0a6477d0f184e3a0f9d1946d9ab5a3adc4a1ac44fd7"
+    },
+    {
+      "optimizer_step": 78,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_078.npz",
+      "bytes": 4833158,
+      "sha256": "997a4cd5a08b842b0e2d1265d81f620005325450437af34adfce10146f4fdc94"
+    },
+    {
+      "optimizer_step": 79,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_079.npz",
+      "bytes": 4833158,
+      "sha256": "0310205354713c8bf1a7560066f74139cb46219f89e5fde4845770efe571e0d2"
+    },
+    {
+      "optimizer_step": 80,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_080.npz",
+      "bytes": 4833158,
+      "sha256": "3e231bf2333e76f5080a600507dd856e951e6bcd8bb1524903e82e4fbd5eab24"
+    },
+    {
+      "optimizer_step": 81,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_081.npz",
+      "bytes": 4833158,
+      "sha256": "4a40d01a86ef593fd580967c10731b87247c462e5474f58dbbfddf6367e1146d"
+    },
+    {
+      "optimizer_step": 82,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_082.npz",
+      "bytes": 4833158,
+      "sha256": "2a5b8147418f151b87ed72886662ddbeddccdf85637b7471a6d3119f2173d1c2"
+    },
+    {
+      "optimizer_step": 83,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_083.npz",
+      "bytes": 4833158,
+      "sha256": "3346a18245bcd0cd07c43e9f122a1b8c9e4bffac8e115bb0f556e8a3efe0f685"
+    },
+    {
+      "optimizer_step": 84,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_084.npz",
+      "bytes": 4833158,
+      "sha256": "7a3d8967f79eb9b4b1b7ebb4ab3be62f0ebfba7901463f476e1660e62cf26be5"
+    },
+    {
+      "optimizer_step": 85,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_085.npz",
+      "bytes": 4833158,
+      "sha256": "f9a701d969af32136652e33df9ef5c7e7158aa6fe975994804f558ad9a909d42"
+    },
+    {
+      "optimizer_step": 86,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_086.npz",
+      "bytes": 4833158,
+      "sha256": "186b8139b0dc0eb265ad0ef7810f9db3afbf490284f81c3b03a479d50f1cd64e"
+    },
+    {
+      "optimizer_step": 87,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_087.npz",
+      "bytes": 4833158,
+      "sha256": "546dc64b92df71148f7b5f19c4950cdd1ced154a75d1305742cf2e65d7097f20"
+    },
+    {
+      "optimizer_step": 88,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_088.npz",
+      "bytes": 4833158,
+      "sha256": "a443fac814ac25fa72eb018c20d696e90f9fafd023170c69687cd472360e47fa"
+    },
+    {
+      "optimizer_step": 89,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_089.npz",
+      "bytes": 4833158,
+      "sha256": "82384c9d350b3c30ed1e7540e214b6a88834a650f31f9cc8d4012a16ef8f64f5"
+    },
+    {
+      "optimizer_step": 90,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_090.npz",
+      "bytes": 4833158,
+      "sha256": "c2eb61ce5d9070838c4f0ce0215a36a4e76486367f952cd2e968cac28a3610c3"
+    },
+    {
+      "optimizer_step": 91,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_091.npz",
+      "bytes": 4833158,
+      "sha256": "335a78b21a0b403b854c8de0d26ed8d3d5a58e302439c293406b6a514f529c08"
+    },
+    {
+      "optimizer_step": 92,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_092.npz",
+      "bytes": 4833158,
+      "sha256": "bc47510ea705cba42e09e9c9779f220780091831e3eaa905f58e315cf62e0f96"
+    },
+    {
+      "optimizer_step": 93,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_093.npz",
+      "bytes": 4833158,
+      "sha256": "356d24f57d85ddfc8501cec68da9341c33d67b2cd369b9b8a6fadef7509e9a61"
+    },
+    {
+      "optimizer_step": 94,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_094.npz",
+      "bytes": 4833158,
+      "sha256": "18dba1e0edd374c5ccc2363f01f7f091f5dc21e027cbffc9cbd819448feeb97f"
+    },
+    {
+      "optimizer_step": 95,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_095.npz",
+      "bytes": 4833158,
+      "sha256": "217f0e6ebbc67ab3f076ea21328cf04076b51808e81232a133206d990a157da8"
+    },
+    {
+      "optimizer_step": 96,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_096.npz",
+      "bytes": 4833158,
+      "sha256": "8dea059183925a2d0b420dc8c169c7b735caaaac388a1eb866d116c7d4457a35"
+    },
+    {
+      "optimizer_step": 97,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_097.npz",
+      "bytes": 4833158,
+      "sha256": "fb523694a6622fee02d1e6eaeda8342fd30061fb4489f456dbc27e9c99740822"
+    },
+    {
+      "optimizer_step": 98,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_098.npz",
+      "bytes": 4833158,
+      "sha256": "b4f60f15b586ad9aec601143b86d08bd91bc97c9bd44d07c7c7c874b9e46e885"
+    },
+    {
+      "optimizer_step": 99,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_099.npz",
+      "bytes": 4833158,
+      "sha256": "026e0b7ec864ed8f0df83665d11d007a9d857e79df92fc49eab7bb7386c71d86"
+    },
+    {
+      "optimizer_step": 100,
+      "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/rollouts/train/step_100.npz",
+      "bytes": 4833158,
+      "sha256": "183ea02184f1f811263482be1292aabbd523ed575b7ba6f4bb55795ea1b5b09a"
+    }
+  ],
+  "total_bytes": 483315800,
+  "all_shapes_actions_masks_and_finiteness_checked": true
+}

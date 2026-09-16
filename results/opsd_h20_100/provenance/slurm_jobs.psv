@@ -1,0 +1,7 @@
+JobID|JobName|State|Elapsed|ElapsedRaw|AllocCPUS|ReqMem|MaxRSS|TotalCPU|AllocTRES|ExitCode
+60044854|vla-opsd-h20-100|FAILED|00:04:55|295|8|48G||07:14.073|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|1:0
+60044854.batch|batch|FAILED|00:04:55|295|8||29865048K|07:14.073|cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|1:0
+60044854.extern|extern|COMPLETED|00:04:55|295|8|||00:00:00|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|0:0
+60045256|vla-opsd-h20-100|COMPLETED|00:22:12|1332|8|48G||48:44.591|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|0:0
+60045256.batch|batch|COMPLETED|00:22:12|1332|8||44752236K|48:44.591|cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|0:0
+60045256.extern|extern|COMPLETED|00:22:12|1332|8|||00:00:00|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|0:0

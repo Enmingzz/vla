@@ -1,0 +1,42 @@
+{
+  "gpus_per_job": 1,
+  "maximum_concurrent_gpus": 1,
+  "gpu_type": "H100 80GB",
+  "trial_gpu_seconds_including_failed_diagnostic": 1627,
+  "trial_gpu_time_including_failed_diagnostic": "00:27:07",
+  "successful_job_gpu_time": "00:22:12",
+  "failed_diagnostic_gpu_time": "00:04:55",
+  "memory_requested_gib": 48,
+  "successful_peak_host_memory_gib": 42.67905807495117,
+  "prior_H5_H15_H20_followup_gpu_time_including_failures": "00:55:26",
+  "followup_plus_this_trial_gpu_time_including_failures": "01:22:33",
+  "jobs": [
+    {
+      "JobID": "60044854",
+      "JobName": "vla-opsd-h20-100",
+      "State": "FAILED",
+      "Elapsed": "00:04:55",
+      "ElapsedRaw": "295",
+      "AllocCPUS": "8",
+      "ReqMem": "48G",
+      "MaxRSS": "",
+      "TotalCPU": "07:14.073",
+      "AllocTRES": "billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1",
+      "ExitCode": "1:0"
+    },
+    {
+      "JobID": "60045256",
+      "JobName": "vla-opsd-h20-100",
+      "State": "COMPLETED",
+      "Elapsed": "00:22:12",
+      "ElapsedRaw": "1332",
+      "AllocCPUS": "8",
+      "ReqMem": "48G",
+      "MaxRSS": "",
+      "TotalCPU": "48:44.591",
+      "AllocTRES": "billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1",
+      "ExitCode": "0:0"
+    }
+  ],
+  "note": "Totals count each one-GPU job once, not its batch/extern steps. Earlier native-P and H=30 studies are separate. GPU allocation was released on job completion."
+}

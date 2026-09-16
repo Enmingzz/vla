@@ -1,0 +1,9 @@
+{
+  "repository": "/home/enmingzz/project/opsd",
+  "commit": "28d04e440350df2037fdd34ce703f088fb4ffd97",
+  "files": {
+    "visionzip_aokvqa/train.py": "5c5a8bf3e6fc1dd51b896297371bd865c103ccf0d00d540a2871aa69770b4598",
+    "visionzip_aokvqa/losses.py": "83d2b4c194bcecc9cd9d0c95cd1dd97e38414a75222c291f350ff233cd2cac8f",
+    "configs/visionzip_aokvqa/aokvqa_opsd_nogt_ema_reasoning_ebs32_4l40s.yaml": "98ed70876370b59729290fa7059089defd6108e884737526d720e16cc356f6aa"
+  }
+}

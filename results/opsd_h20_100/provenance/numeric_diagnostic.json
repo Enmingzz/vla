@@ -1,0 +1,20 @@
+{
+  "flow_time_index": 9,
+  "forward_vs_backward_primal_mse": 9.487681381870061e-06,
+  "fresh_feedback_mse": 0.054033633640834265,
+  "gradient_program_offset_mse": [
+    7.912117325759027e-06,
+    0.04461826756596565,
+    0.06083538755774498,
+    0.05660061165690422
+  ],
+  "required_signal_to_numeric_ratio": 5,
+  "same_program_offset0_mse": 0.0,
+  "signal_to_numeric_ratio": 5695.135773012648,
+  "trace_check": {
+    "max_abs_difference": 0.0,
+    "native_flow_steps": 10,
+    "same_noise_key": true,
+    "tolerance": 0.01
+  }
+}

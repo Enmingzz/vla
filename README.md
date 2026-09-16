@@ -8,6 +8,15 @@ The subsequently authorized 100-step H=20 recovery experiment is specified in
 [AUTORESEARCH.md](AUTORESEARCH.md) and keeps its learned weights and results separate.
 Exact commands for that phase are in [TRAINING.md](TRAINING.md).
 
+The first recovery pilot is complete: at fixed **P=50, H=20**, 100 temporal OPSD
+updates increased paired LIBERO-10 success from **46% to 58%** (100 episodes;
+change +12 pp, paired 95% CI +2 to +22 pp, exact McNemar p=0.0428).
+This is preliminary evidence from a continuous-action adaptation of the local
+OPSD pipeline, not a reproduction of the image-generation Flow-OPD algorithm.
+See the [training findings](results/opsd_h20_100/FINDINGS.md),
+[before/after figure](results/opsd_h20_100/figures/success_before_after_100.png),
+and [complete run archive](results/opsd_h20_100/README.md).
+
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures
 **P=10**, not 50. Therefore only **H=5 and H=10** from the requested sweep are
