@@ -1,0 +1,16 @@
+{
+  "job_id": 60097833,
+  "state": "FAILED",
+  "exit_code": "1:0",
+  "node": "fc10513",
+  "gpu_seconds": 425,
+  "gpus": 1,
+  "allocation_released": true,
+  "formal_episodes": 0,
+  "completed_pilot_episodes": 0,
+  "failed_stage": "runtime_pilot_single",
+  "evaluator_exit_signal": "SIGABRT (6)",
+  "failure_stack": "robosuite/utils/binding_utils.py:171 read_pixels -> mujoco.mjr_readPixels during env.step",
+  "cause": "Reproduced native pixel-read abort on a second node; precise driver/runtime cause under investigation.",
+  "next_step": "Diagnose renderer without loading the policy model; do not allocate another full-model job until the renderer is tested."
+}

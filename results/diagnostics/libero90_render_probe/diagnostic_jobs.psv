@@ -1,0 +1,12 @@
+JobID|JobName|State|Elapsed|ElapsedRaw|AllocTRES|ExitCode|NodeList
+60096722|vla-libero90-transfer|FAILED|00:07:05|425|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|1:0|fc10517
+60097833|vla-libero90-transfer|FAILED|00:07:05|425|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|1:0|fc10513
+60098927|libero90-render-cpu|FAILED|00:00:04|4|billing=2000,cpu=2,mem=8G,node=1|1:0|fc30560
+60098934|libero90-render-gpu|COMPLETED|00:00:25|25|billing=12200,cpu=2,gres/gpu:h100=1,gres/gpu=1,mem=8G,node=1|0:0|fc10517
+60099057|libero90-render-mem|COMPLETED|00:00:19|19|billing=12200,cpu=2,gres/gpu:h100=1,gres/gpu=1,mem=8G,node=1|0:0|fc10517
+60099096|libero90-trace-model|COMPLETED|00:05:11|311|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|0:0|fc10517
+60099402|libero90-render-cpu|FAILED|00:01:03|63|billing=2000,cpu=2,mem=8G,node=1|1:0|fc30556
+60099709|libero90-action-replay|FAILED|00:00:14|14|billing=12200,cpu=2,gres/gpu:h100=1,gres/gpu=1,mem=8G,node=1|1:0|fc10517
+60099822|libero90-concurrent|COMPLETED|00:02:18|138|billing=12200,cpu=2,gres/gpu:h100=1,gres/gpu=1,mem=8G,node=1|0:0|fc10517
+60100107|libero90-osmesa-fixed|COMPLETED|00:03:09|189|billing=2000,cpu=2,mem=8G,node=1|0:0|fc30555
+60100127|libero90-compare-images|COMPLETED|00:00:35|35|billing=12200,cpu=2,gres/gpu:h100=1,gres/gpu=1,mem=8G,node=1|0:0|fc10517

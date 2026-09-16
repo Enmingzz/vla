@@ -1,0 +1,27 @@
+{
+  "cpu_job": 60098927,
+  "cpu_result": "inconclusive: shared filesystem could not read the OpenCV Qt library before rendering began",
+  "gpu_jobs": [
+    {
+      "job_id": 60098934,
+      "gpu_seconds": 25,
+      "node": "fc10517",
+      "steps": 400,
+      "seconds": 5.091031435877085,
+      "reserve_gib": 0,
+      "action_scale": 0.1
+    },
+    {
+      "job_id": 60099057,
+      "gpu_seconds": 19,
+      "node": "fc10517",
+      "steps": 800,
+      "seconds": 9.961887799203396,
+      "reserve_gib": 52,
+      "action_scale": 1
+    }
+  ],
+  "renderer": "NVIDIA H100 80GB HBM3/PCIe/SSE2",
+  "driver": "580.159.03",
+  "interpretation": "Rendering alone passes on an earlier failed node, including a 52-GiB CUDA memory reservation. This does not reproduce the policy-driven trajectory or concurrent JAX inference."
+}

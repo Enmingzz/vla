@@ -1,0 +1,71 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{"phase": "construct", "suite": "libero_90", "task": 0, "name": "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet", "backend": "osmesa", "cuda": null, "egl_device": null}
+/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/np/arraymath.py:3845: DeprecationWarning: `np.MachAr` is deprecated (NumPy 1.22).
+  @overload(np.MachAr)
+{"phase": "ready", "renderer": "llvmpipe (LLVM 20.1.8, 256 bits)", "vendor": "Mesa", "version": "4.5 (Compatibility Profile) Mesa 25.0.7"}
+{"phase": "render", "step": 0, "seconds": 2.4608990519773215, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 20, "seconds": 4.8228531159693375, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 40, "seconds": 7.188711615977809, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 60, "seconds": 9.56174666795414, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 80, "seconds": 11.921460130950436, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 100, "seconds": 14.29238802101463, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 120, "seconds": 16.640148567967117, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 140, "seconds": 18.992492137942463, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 160, "seconds": 21.361514125950634, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 180, "seconds": 23.748505915980786, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 200, "seconds": 26.141718935919926, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 220, "seconds": 28.52892583294306, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 240, "seconds": 30.900219287956133, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 260, "seconds": 33.28551721200347, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 280, "seconds": 35.66050518292468, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 300, "seconds": 38.03668501100037, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 320, "seconds": 40.40984576800838, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 340, "seconds": 42.782820386928506, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 360, "seconds": 45.16881855891552, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 380, "seconds": 47.56486610497814, "image_shape": [224, 224, 3]}
+{"phase": "complete", "steps": 400, "seconds": 49.9431546239648}
+[robosuite WARNING] No private macro file found! (macros.py:53)
+2026-09-16 11:21:11,513 WARNING No private macro file found!
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+2026-09-16 11:21:11,516 WARNING It is recommended to use a private macro file
+[robosuite WARNING] To setup, run: python /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+2026-09-16 11:21:11,516 WARNING To setup, run: python /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/scripts/setup_macros.py
+2026-09-16 11:21:11,621 INFO No OpenGL_accelerate module loaded: No module named 'OpenGL_accelerate'
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2026-09-16 11:21:13,302 INFO Task suite: libero_90
+  0%|          | 0/1 [00:00<?, ?it/s]2026-09-16 11:21:13,308 INFO Constructing LIBERO environment task=0
+/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/np/arraymath.py:3845: DeprecationWarning: `np.MachAr` is deprecated (NumPy 1.22).
+  @overload(np.MachAr)
+2026-09-16 11:21:14,900 INFO Environment constructed in 1.59s
+
+  0%|          | 0/1 [00:00<?, ?it/s][A2026-09-16 11:21:14,901 INFO 
+Task: close the top drawer of the cabinet
+2026-09-16 11:21:16,006 INFO Environment reset completed in 1.11s
+2026-09-16 11:21:16,121 INFO Initial state installed in 0.12s
+2026-09-16 11:21:16,121 INFO Starting episode 1...
+REPLAY_STEP 0
+2026-09-16 11:21:17,438 INFO First policy request after 2.54s of episode setup/settling
+2026-09-16 11:21:17,438 INFO First policy response received; server timing: None
+REPLAY_STEP 20
+REPLAY_STEP 40
+REPLAY_STEP 60
+REPLAY_STEP 80
+REPLAY_STEP 100
+REPLAY_STEP 120
+REPLAY_STEP 140
+REPLAY_STEP 160
+REPLAY_STEP 180
+REPLAY_STEP 200
+REPLAY_STEP 220
+REPLAY_STEP 240
+REPLAY_STEP 260
+REPLAY_COMPLETE 261 exact actions, no policy model loaded
+  0%|          | 0/1 [00:34<?, ?it/s]
+  0%|          | 0/1 [00:35<?, ?it/s]

@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/macros.py", line 48, in <module>
+    from robosuite.macros_private import *
+ModuleNotFoundError: No module named 'robosuite.macros_private'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ".runtime/libero90_render_probe.py", line 13, in <module>
+    spec.loader.exec_module(m)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/examples/libero/main.py", line 10, in <module>
+    from libero.libero.envs import OffScreenRenderEnv
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/third_party/libero/libero/libero/envs/__init__.py", line 1, in <module>
+    from .bddl_base_domain import TASK_MAPPING
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/third_party/libero/libero/libero/envs/bddl_base_domain.py", line 3, in <module>
+    import robosuite.utils.transform_utils as T
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/__init__.py", line 1, in <module>
+    from robosuite.environments.base import make
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/environments/__init__.py", line 1, in <module>
+    from .base import REGISTERED_ENVS, MujocoEnv
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/environments/base.py", line 8, in <module>
+    import robosuite.macros as macros
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/macros.py", line 51, in <module>
+    from robosuite.utils.log_utils import ROBOSUITE_DEFAULT_LOGGER
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/utils/__init__.py", line 3, in <module>
+    from .opencv_renderer import OpenCVRenderer
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/utils/opencv_renderer.py", line 4, in <module>
+    import cv2
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/__init__.py", line 181, in <module>
+    bootstrap()
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/__init__.py", line 153, in bootstrap
+    native_module = importlib.import_module("cv2")
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/lib/python3.8/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+ImportError: /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libQt5Core-39545cc7.so.5.15.0: cannot read file data: Cannot send after transport endpoint shutdown

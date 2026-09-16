@@ -1,0 +1,37 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Traceback (most recent call last):
+  File ".runtime/libero90_render_probe.py", line 23, in <module>
+    spec.loader.exec_module(m)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/examples/libero/main.py", line 10, in <module>
+    from libero.libero.envs import OffScreenRenderEnv
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/third_party/libero/libero/libero/envs/__init__.py", line 1, in <module>
+    from .bddl_base_domain import TASK_MAPPING
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/third_party/libero/libero/libero/envs/bddl_base_domain.py", line 3, in <module>
+    import robosuite.utils.transform_utils as T
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/__init__.py", line 1, in <module>
+    from robosuite.environments.base import make
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/environments/__init__.py", line 1, in <module>
+    from .base import REGISTERED_ENVS, MujocoEnv
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/environments/base.py", line 12, in <module>
+    from robosuite.utils.binding_utils import MjRenderContextOffscreen, MjSim
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/utils/binding_utils.py", line 12, in <module>
+    import mujoco
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/__init__.py", line 48, in <module>
+    from mujoco.gl_context import *
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/gl_context.py", line 38, in <module>
+    from mujoco.osmesa import GLContext as _GLContext
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/osmesa/__init__.py", line 31, in <module>
+    from OpenGL import GL
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/OpenGL/GL/__init__.py", line 4, in <module>
+    from OpenGL.GL.VERSION.GL_1_1 import *
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/OpenGL/GL/VERSION/GL_1_1.py", line 14, in <module>
+    from OpenGL.raw.GL.VERSION.GL_1_1 import *
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/OpenGL/raw/GL/VERSION/GL_1_1.py", line 7, in <module>
+    from OpenGL.raw.GL import _errors
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/OpenGL/raw/GL/_errors.py", line 4, in <module>
+    _error_checker = _ErrorChecker( _p, _p.GL.glGetError )
+AttributeError: 'NoneType' object has no attribute 'glGetError'

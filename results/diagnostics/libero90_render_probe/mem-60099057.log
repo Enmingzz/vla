@@ -1,0 +1,308 @@
+0, GPU-3bfd94ce-4b52-b64a-71ad-057fe5ae77dc, NVIDIA H100 80GB HBM3, 8 MiB
+warning: File "/usr/lib64/libthread_db.so.1" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
+To enable execution of this file add
+	add-auto-load-safe-path /usr/lib64/libthread_db.so.1
+line to your configuration file "/home/enmingzz/.config/gdb/gdbinit".
+To completely disable this security protection add
+	set auto-load safe-path /
+line to your configuration file "/home/enmingzz/.config/gdb/gdbinit".
+For more information about this security protection see the
+"Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
+	info "(gdb)Auto-loading safe path"
+warning: Unable to find libthread_db matching inferior's thread library, thread debugging will not be available.
+[New LWP 406418]
+[New LWP 406419]
+{"phase": "reserved", "gib": 52.0}
+[Detaching after fork from child process 406436]
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+{"phase": "construct", "suite": "libero_90", "task": 0, "name": "KITCHEN_SCENE10_close_the_top_drawer_of_the_cabinet", "backend": "egl", "cuda": "0", "egl_device": "0"}
+[New LWP 406558]
+[New LWP 406559]
+[New LWP 406560]
+[New LWP 406561]
+[New LWP 406562]
+[New LWP 406563]
+[New LWP 406564]
+[New LWP 406565]
+[New LWP 406566]
+[New LWP 406567]
+[New LWP 406568]
+[New LWP 406569]
+[New LWP 406570]
+[New LWP 406571]
+[New LWP 406572]
+[New LWP 406573]
+[LWP 406573 exited]
+[LWP 406560 exited]
+[LWP 406568 exited]
+[LWP 406559 exited]
+[LWP 406558 exited]
+[LWP 406571 exited]
+[LWP 406569 exited]
+[LWP 406570 exited]
+[LWP 406572 exited]
+[LWP 406565 exited]
+[LWP 406564 exited]
+[LWP 406561 exited]
+[LWP 406563 exited]
+[LWP 406562 exited]
+[LWP 406566 exited]
+[LWP 406567 exited]
+/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/np/arraymath.py:3845: DeprecationWarning: `np.MachAr` is deprecated (NumPy 1.22).
+  @overload(np.MachAr)
+[New LWP 406577]
+[New LWP 406578]
+[New LWP 406579]
+[New LWP 406580]
+[New LWP 406581]
+[New LWP 406582]
+[New LWP 406583]
+[New LWP 406584]
+[New LWP 406585]
+[New LWP 406586]
+[New LWP 406587]
+[New LWP 406588]
+[New LWP 406589]
+[New LWP 406590]
+[LWP 406589 exited]
+[LWP 406587 exited]
+[LWP 406586 exited]
+[LWP 406582 exited]
+[LWP 406579 exited]
+[New LWP 406591]
+[LWP 406590 exited]
+[LWP 406585 exited]
+[LWP 406581 exited]
+[LWP 406577 exited]
+[New LWP 406592]
+[LWP 406591 exited]
+[LWP 406583 exited]
+[LWP 406592 exited]
+[LWP 406588 exited]
+[LWP 406580 exited]
+[LWP 406578 exited]
+[LWP 406584 exited]
+{"phase": "ready", "renderer": "NVIDIA H100 80GB HBM3/PCIe/SSE2", "vendor": "NVIDIA Corporation", "version": "4.6.0 NVIDIA 580.159.03"}
+{"phase": "render", "step": 0, "seconds": 0.029972730204463005, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 20, "seconds": 0.26609927229583263, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 40, "seconds": 0.5018614577129483, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 60, "seconds": 0.7346543585881591, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 80, "seconds": 0.9689202830195427, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 100, "seconds": 1.2066141264513135, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 120, "seconds": 1.4487142376601696, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 140, "seconds": 1.6929970448836684, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 160, "seconds": 1.939035221002996, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 180, "seconds": 2.188764924183488, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 200, "seconds": 2.441891566850245, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 220, "seconds": 2.695862361229956, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 240, "seconds": 2.938491277396679, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 260, "seconds": 3.1932297414168715, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 280, "seconds": 3.446170726791024, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 300, "seconds": 3.686966094188392, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 320, "seconds": 3.9279925487935543, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 340, "seconds": 4.165154579095542, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 360, "seconds": 4.404138647019863, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 380, "seconds": 4.643939175643027, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 400, "seconds": 4.882878004573286, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 420, "seconds": 5.125038826838136, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 440, "seconds": 5.372124791145325, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 460, "seconds": 5.628160499967635, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 480, "seconds": 5.892866297625005, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 500, "seconds": 6.152706652879715, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 520, "seconds": 6.403094967827201, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 540, "seconds": 6.6483325539156795, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 560, "seconds": 6.900962833315134, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 580, "seconds": 7.154885707423091, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 600, "seconds": 7.420776660554111, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 620, "seconds": 7.681086520664394, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 640, "seconds": 7.936257709749043, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 660, "seconds": 8.186630776152015, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 680, "seconds": 8.427923397161067, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 700, "seconds": 8.665753888897598, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 720, "seconds": 8.906965752132237, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 740, "seconds": 9.148644879460335, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 760, "seconds": 9.391924116760492, "image_shape": [224, 224, 3]}
+{"phase": "render", "step": 780, "seconds": 9.632857719436288, "image_shape": [224, 224, 3]}
+{"phase": "complete", "steps": 800, "seconds": 9.961887799203396}
+[LWP 406418 exited]
+[LWP 406383 exited]
+[LWP 406419 exited]
+[New process 406383]
+[Inferior 1 (process 406383) exited normally]
+No stack.
+warning: Could not load shared library symbols for linux-vdso.so.1.
+Do you need "set solib-search-path" or "set sysroot"?
+From                To                  Syms Read   Shared Object Library
+0x000015555551e000  0x0000155555545bf5  Yes         /lib64/ld-linux-x86-64.so.2
+0x00001555541cf000  0x0000155554e5e480  Yes (*)     /scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/bin/../lib/libpython3.8.so.1.0
+0x0000155554042050  0x0000155554042115  Yes (*)     /lib64/libpthread.so.0
+0x000015555403d050  0x000015555403d115  Yes (*)     /lib64/libdl.so.2
+0x0000155554038050  0x0000155554038115  Yes (*)     /lib64/libutil.so.1
+0x0000155553f67390  0x0000155553fd6648  Yes (*)     /lib64/libm.so.6
+0x0000155553f56090  0x0000155553f56285  Yes (*)     /lib64/librt.so.1
+0x0000155553d75780  0x0000155553ee826d  Yes (*)     /lib64/libc.so.6
+0x00001555461a3f20  0x000015554621a9fa  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/nvidia/cuda_runtime/lib/libcudart.so.12
+0x00001555406a4f00  0x0000155541627324  Yes (*)     /lib64/libcuda.so.1
+0x0000155334f06820  0x000015533526ff7a  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/core/_multiarray_umath.cpython-38-x86_64-linux-gnu.so
+0x000015530c2ae000  0x000015530dd3d8dc  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/core/../../numpy.libs/libopenblas64_p-r0-2f7c42d4.3.18.so
+0x0000155334a6a870  0x0000155334c95837  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/core/../../numpy.libs/libgfortran-040039e1.so.5.0.0
+0x00001553348143e0  0x0000155334837d2b  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/core/../../numpy.libs/libquadmath-96973f99.so.0.0.0
+0x00001555400055f0  0x00001555400127bb  Yes (*)     /lib64/libz.so.1
+0x00001553347f8650  0x000015533480b395  Yes (*)     /lib64/libgcc_s.so.1
+0x0000155334655280  0x000015533466a5ca  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/core/_multiarray_tests.cpython-38-x86_64-linux-gnu.so
+0x000015533455e060  0x000015533457e12a  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/linalg/_umath_linalg.cpython-38-x86_64-linux-gnu.so
+0x000015533447e170  0x00001553344909fe  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/fft/_pocketfft_internal.cpython-38-x86_64-linux-gnu.so
+0x0000155334398100  0x00001553343e5bba  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/random/mtrand.cpython-38-x86_64-linux-gnu.so
+0x000015533431e810  0x00001553343392a5  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/random/bit_generator.cpython-38-x86_64-linux-gnu.so
+0x00001553342d8780  0x000015533430fb03  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/random/_common.cpython-38-x86_64-linux-gnu.so
+0x0000155334279ec0  0x00001553342c47ca  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/random/_bounded_integers.cpython-38-x86_64-linux-gnu.so
+0x000015533425a640  0x0000155334268e72  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/random/_mt19937.cpython-38-x86_64-linux-gnu.so
+0x00001553342425a0  0x000015533424e590  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/random/_philox.cpython-38-x86_64-linux-gnu.so
+0x00001553342275f0  0x00001553342365bb  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/random/_pcg64.cpython-38-x86_64-linux-gnu.so
+0x0000155334216550  0x000015533421d1ca  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/random/_sfc64.cpython-38-x86_64-linux-gnu.so
+0x0000155334143330  0x00001553341b7cca  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numpy/random/_generator.cpython-38-x86_64-linux-gnu.so
+0x000015530bffca50  0x000015530c048e83  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/yaml/_yaml.cpython-38-x86_64-linux-gnu.so
+0x000015530bdb3520  0x000015530bdb35fa  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libtorch_global_deps.so
+0x000015530bbab170  0x000015530bbaef98  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libnvToolsExt-24de1d56.so.1
+0x000015530b986060  0x000015530b99cc2a  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libgomp-a34b3233.so.1
+0x000015530b7f73d0  0x000015530b8fa542  Yes (*)     /lib64/libstdc++.so.6
+0x000015530b553570  0x000015530b553655  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/_C.cpython-38-x86_64-linux-gnu.so
+0x000015530a8515e0  0x000015530af5264a  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libtorch_python.so
+0x000015530a48db60  0x000015530a48fff3  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libshm.so
+0x000015530a2894d0  0x000015530a2895aa  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libtorch.so
+0x000015530a07e6c0  0x000015530a083777  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libtorch_cuda.so
+0x000015459e0383e0  0x00001545a60319ca  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libtorch_cuda_cpp.so
+0x00001545852f8f00  0x000015459708a7df  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libtorch_cpu.so
+0x0000155309da1df0  0x0000155309e35a8a  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libc10_cuda.so
+0x000015454c9dfd50  0x000015454fc6049a  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libtorch_cuda_cu.so
+0x0000155309b21230  0x0000155309b60aca  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libc10.so
+0x0000155309875840  0x00001553098d857c  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/torch/lib/libcudart-a7b20f20.so.11.0
+0x0000155304f55640  0x0000155307d305e9  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/cv2.abi3.so
+0x0000155304d65910  0x0000155304d8735a  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libpng16-57e5e0a0.so.16.37.0
+0x0000155303b04510  0x000015530442ed99  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libavcodec-5896f664.so.58.134.100
+0x0000155303861ed0  0x00001553039e025d  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libavformat-8ef5c7db.so.58.76.100
+0x0000155303588520  0x00001553035edf4b  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libavutil-9c768859.so.56.70.100
+0x00001553034e8240  0x000015530355be78  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libswscale-e6451464.so.5.9.100
+0x0000155302d4bd60  0x00001553030b5875  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libQt5Widgets-e69d94fb.so.5.15.0
+0x00001553023c11b0  0x000015530285b7aa  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libQt5Gui-48e93776.so.5.15.0
+0x0000155302262490  0x0000155302288b45  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libQt5Test-c38a5234.so.5.15.0
+0x0000155301bfc140  0x0000155301f41ebd  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libQt5Core-39545cc7.so.5.15.0
+0x00001545495c2000  0x000015454b65f5c1  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libopenblas-r0-f650aae0.3.3.so
+0x0000155334014230  0x000015533402746c  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libswresample-99364a1c.so.3.9.100
+0x000015530185f340  0x0000155301af35b0  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libvpx-f22f1483.so.7.0.0
+0x0000155301649760  0x00001553016555f0  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libbz2-a273e504.so.1.0.6
+0x00001553015c6bc0  0x00001553016146b6  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libssl-c8c53640.so.1.1
+0x000015530131f000  0x00001553014c81ca  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libcrypto-d21001fc.so.1.1
+0x00001553012631b0  0x0000155301265f71  Yes (*)     /lib64/libGL.so.1
+0x000015533400d090  0x000015533400d1d2  Yes (*)     /lib64/libgthread-2.0.so.0
+0x0000155301104d30  0x0000155301193462  Yes (*)     /lib64/libglib-2.0.so.0
+0x0000155300dcae10  0x0000155300eb0e6f  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/cv2/../opencv_python.libs/libgfortran-91cc3cb1.so.3.0.0
+0x0000155300d836b0  0x0000155300d9cf30  Yes (*)     /lib64/libGLX.so.0
+0x0000155300c593f0  0x0000155300ce3d6c  Yes (*)     /lib64/libX11.so.6
+0x0000155300c27790  0x0000155300c31a65  Yes (*)     /lib64/libXext.so.6
+0x0000155300bab270  0x0000155300bad037  Yes (*)     /lib64/libGLdispatch.so.0
+0x0000155300af53b0  0x0000155300b4b522  Yes (*)     /lib64/libpcre.so.1
+0x0000155300ad4db0  0x0000155300ae7b40  Yes (*)     /lib64/libxcb.so.1
+0x00001553340073d0  0x0000155334008102  Yes (*)     /lib64/libXau.so.6
+0x00001553008ab9e0  0x0000155300927f2b  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/PIL/_imaging.cpython-38-x86_64-linux-gnu.so
+0x00001553007ebbd0  0x000015530085a433  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/PIL/../pillow.libs/libtiff-0a86184d.so.6.0.2
+0x00001553007207c0  0x00001553007b3567  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/PIL/../pillow.libs/libjpeg-77ae51ab.so.62.4.0
+0x0000155300694e80  0x000015530070115e  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/PIL/../pillow.libs/libopenjp2-05423b53.so
+0x000015530065a740  0x00001553006747f4  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/PIL/../pillow.libs/libxcb-b8a56d01.so.1.1.0
+0x000015530060f580  0x000015530063d69b  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/PIL/../pillow.libs/liblzma-13fa198c.so.5.4.5
+0x0000155300406ff0  0x0000155300407cd2  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/PIL/../pillow.libs/libXau-154567c4.so.6.0.0
+0x000015530031f3b0  0x000015530037bdf1  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/_callbacks.cpython-38-x86_64-linux-gnu.so
+0x00001545491751e0  0x0000154549487504  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/libmujoco.so.3.2.3
+0x00001553002bd7b0  0x00001553002ec0b6  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/_constants.cpython-38-x86_64-linux-gnu.so
+0x0000155300145cc0  0x00001553002910e8  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/_enums.cpython-38-x86_64-linux-gnu.so
+0x00001545490570f0  0x0000154549084c63  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/_errors.cpython-38-x86_64-linux-gnu.so
+0x0000154548f9ea00  0x0000154549033a65  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/_functions.cpython-38-x86_64-linux-gnu.so
+0x0000154548d67c80  0x0000154548f4889b  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/_structs.cpython-38-x86_64-linux-gnu.so
+0x0000154548c0b360  0x0000154548c7e53a  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/_render.cpython-38-x86_64-linux-gnu.so
+0x0000154548a92690  0x0000154548b89d38  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/_specs.cpython-38-x86_64-linux-gnu.so
+0x00001545489e7790  0x00001545489efdd5  Yes (*)     /lib64/libEGL.so.1
+0x00001545489ce190  0x00001545489ce66b  Yes (*)     /lib64/libOpenGL.so.0
+0x00001545487aa7e0  0x00001545488404c4  Yes (*)     /lib64/libEGL_nvidia.so.0
+0x00001545486ea7a0  0x00001545487496d1  Yes (*)     /lib64/libnvidia-glsi.so.580.159.03
+0x00001545486b5cb0  0x00001545486bcf2d  Yes (*)     /lib64/libwayland-server.so.0
+0x00001545486a2870  0x00001545486a785d  Yes (*)     /lib64/libwayland-client.so.0
+0x000015454868abb0  0x0000154548695168  Yes (*)     /lib64/libdrm.so.2
+0x000015454867b590  0x0000154548680e3a  Yes (*)     /lib64/libffi.so.8
+0x0000154541f55370  0x0000154541f56172  Yes (*)     /lib64/libgbm.so.1
+0x0000154541f25330  0x0000154541f449e7  Yes (*)     /lib64/libexpat.so.1
+0x00001553340020b0  0x000015533400298a  Yes (*)     /lib64/libxcb-present.so.0
+0x0000154541f08150  0x0000154541f091a7  Yes (*)     /lib64/libxcb-dri3.so.0
+0x0000154541eee050  0x0000154541eee12f  Yes (*)     /lib64/libX11-xcb.so.1
+0x0000154541e9f2d0  0x0000154541ec9a52  Yes (*)     /lib64/libEGL_mesa.so.0
+0x000015453f771b40  0x0000154540d7e762  Yes (*)     /lib64/libgallium-25.0.7.so
+0x000015453f6d3490  0x000015453f6d8487  Yes (*)     /lib64/libxcb-randr.so.0
+0x000015453f6c50d0  0x000015453f6c790e  Yes (*)     /lib64/libxcb-xfixes.so.0
+0x000015453f6be0f0  0x000015453f6bec47  Yes (*)     /lib64/libxcb-shm.so.0
+0x00001545383c8c80  0x000015453c0e4f42  Yes (*)     /lib64/libLLVM.so.20.1
+0x0000154537c03e00  0x0000154537ca2d32  Yes (*)     /lib64/libzstd.so.1
+0x0000154537a91df0  0x0000154537b6174f  Yes (*)     /lib64/libSPIRV-Tools.so
+0x0000154537a59210  0x0000154537a5b526  Yes (*)     /lib64/libxcb-sync.so.1
+0x0000154537a52190  0x0000154537a52450  Yes (*)     /lib64/libxshmfence.so.1
+0x0000154537a478f0  0x0000154537a4c3a2  Yes (*)     /lib64/libdrm_amdgpu.so.1
+0x0000154537a2c7f0  0x0000154537a3d985  Yes (*)     /lib64/libelf.so.1
+0x00001545379f6790  0x0000154537a14670  Yes (*)     /lib64/libedit.so.0
+0x0000154537892990  0x0000154537996023  Yes (*)     /lib64/libxml2.so.2
+0x0000154537841590  0x000015453784e14c  Yes (*)     /lib64/libtinfo.so.6
+0x00001545378099f0  0x000015453782370e  Yes (*)     /lib64/liblzma.so.5
+0x00001545377b9400  0x00001545377fcedd  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/plugin/libsensor.so
+0x0000154537742da0  0x000015453778ce03  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/plugin/libelasticity.so
+0x000015453767f260  0x00001545377137c6  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/plugin/libsdf.so
+0x0000154537625360  0x000015453764248b  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/mujoco/plugin/libactuator.so
+0x0000154533828700  0x00001545355f0ce0  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/llvmlite/binding/libllvmlite.so
+0x000015554618e270  0x000015554618f302  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/core/typeconv/_typeconv.cpython-38-x86_64-linux-gnu.so
+0x0000154533182e60  0x000015453319804c  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/_helperlib.cpython-38-x86_64-linux-gnu.so
+0x0000154533138220  0x0000154533138b24  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/_dynfunc.cpython-38-x86_64-linux-gnu.so
+0x00001545330ec5e0  0x00001545330f2d72  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/_dispatcher.cpython-38-x86_64-linux-gnu.so
+0x00001545330a50c0  0x00001545330a52ea  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/_devicearray.cpython-38-x86_64-linux-gnu.so
+0x0000154532d1d230  0x0000154532d1f458  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/core/runtime/_nrt_python.cpython-38-x86_64-linux-gnu.so
+0x0000154532c16260  0x0000154532c17c3c  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/np/ufunc/_internal.cpython-38-x86_64-linux-gnu.so
+0x0000154532bd0110  0x0000154532bd0435  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/numba/experimental/jitclass/_box.cpython-38-x86_64-linux-gnu.so
+0x0000154532b40660  0x0000154532b4890d  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/_lib/_ccallback_c.cpython-38-x86_64-linux-gnu.so
+0x00001545324faa90  0x00001545324fad64  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/matplotlib/_c_internal_utils.cpython-38-x86_64-linux-gnu.so
+0x000015453220db80  0x0000154532232bec  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/matplotlib/_path.cpython-38-x86_64-linux-gnu.so
+0x0000154531c97270  0x0000154531d1a198  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/matplotlib/ft2font.cpython-38-x86_64-linux-gnu.so
+0x0000154531a5a210  0x0000154531a84d78  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/kiwisolver/_cext.cpython-38-x86_64-linux-gnu.so
+0x000015453174d0d0  0x000015453174d451  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/websockets/speedups.cpython-38-x86_64-linux-gnu.so
+0x00001545316a49e0  0x00001545316c010c  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/msgpack/_cmsgpack.cpython-38-x86_64-linux-gnu.so
+0x000015453042cb10  0x0000154530459045  Yes (*)     /lib64/libdbus-1.so.3
+0x00001545300a77f0  0x000015453012a776  Yes (*)     /lib64/libsystemd.so.0
+0x0000154530414790  0x0000154530417b0a  Yes (*)     /lib64/libcap.so.2
+0x0000154529aa3b80  0x0000154529b8843e  Yes (*)     /lib64/libgcrypt.so.20
+0x00001545303f1730  0x000015453040c271  Yes (*)     /lib64/liblz4.so.1
+0x00001545303cca50  0x00001545303e1192  Yes (*)     /lib64/libgpg-error.so.0
+0x00001545282454e0  0x0000154528289002  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/_fblas.cpython-38-x86_64-linux-gnu.so
+0x00001544863dc000  0x0000154487e714d4  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/../../scipy.libs/libopenblasp-r0-41284840.3.18.so
+0x00001544ec20c5c0  0x00001544ec301692  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/_flapack.cpython-38-x86_64-linux-gnu.so
+0x00001545281968e0  0x00001545281de1c0  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/_cythonized_array_utils.cpython-38-x86_64-linux-gnu.so
+0x000015453038b3f0  0x0000154530392f72  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/_flinalg.cpython-38-x86_64-linux-gnu.so
+0x000015452811d8d0  0x000015452813f05d  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/_solve_toeplitz.cpython-38-x86_64-linux-gnu.so
+0x00001545280ea8a0  0x000015452810791d  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/_matfuncs_sqrtm_triu.cpython-38-x86_64-linux-gnu.so
+0x00001545280909f0  0x00001545280cf240  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/_matfuncs_expm.cpython-38-x86_64-linux-gnu.so
+0x00001544ec161170  0x00001544ec176e25  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/cython_lapack.cpython-38-x86_64-linux-gnu.so
+0x0000154528012190  0x000015452802f375  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/cython_blas.cpython-38-x86_64-linux-gnu.so
+0x00001544ec0fe680  0x00001544ec12fb67  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/linalg/_decomp_update.cpython-38-x86_64-linux-gnu.so
+0x0000154485f6e440  0x0000154486247d8a  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/_sparsetools.cpython-38-x86_64-linux-gnu.so
+0x0000154485ef98d0  0x0000154485f54c6e  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/_csparsetools.cpython-38-x86_64-linux-gnu.so
+0x0000154485eb75a0  0x0000154485edac62  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/linalg/_isolve/_iterative.cpython-38-x86_64-linux-gnu.so
+0x0000154485e666e0  0x0000154485ea2eeb  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/linalg/_dsolve/_superlu.cpython-38-x86_64-linux-gnu.so
+0x0000154485dbdb10  0x0000154485e02612  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/linalg/_eigen/arpack/_arpack.cpython-38-x86_64-linux-gnu.so
+0x0000154485d5c8d0  0x0000154485d9c5be  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-38-x86_64-linux-gnu.so
+0x00001544ec015570  0x00001544ec02ba35  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/csgraph/_tools.cpython-38-x86_64-linux-gnu.so
+0x0000154485cf3570  0x0000154485d07b40  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/csgraph/_traversal.cpython-38-x86_64-linux-gnu.so
+0x0000154485cc67e0  0x0000154485ce1cfe  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-38-x86_64-linux-gnu.so
+0x0000154485c83880  0x0000154485cacdf0  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/csgraph/_flow.cpython-38-x86_64-linux-gnu.so
+0x0000154485c40820  0x0000154485c6825e  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/csgraph/_matching.cpython-38-x86_64-linux-gnu.so
+0x0000154485c038b0  0x0000154485c29f9d  Yes (*)     /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/scipy/sparse/csgraph/_reordering.cpython-38-x86_64-linux-gnu.so
+0x0000154485a06000  0x0000154485a27f61  Yes         /scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/_cffi_backend.cpython-38-x86_64-linux-gnu.so
+                                        No          linux-vdso.so.1
+(*): Shared library is missing debugging information.

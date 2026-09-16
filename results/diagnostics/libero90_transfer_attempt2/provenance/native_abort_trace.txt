@@ -1,0 +1,32 @@
+Fatal Python error: Aborted
+
+Thread 0x000014dad9052640 (most recent call first):
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/lib/python3.8/threading.py", line 306 in wait
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/lib/python3.8/threading.py", line 558 in wait
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/tqdm/_monitor.py", line 60 in run
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Thread 0x000014dad9293640 (most recent call first):
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/websockets/sync/connection.py", line 561 in recv_events
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/websockets/sync/client.py", line 112 in recv_events
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/lib/python3.8/threading.py", line 870 in run
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/lib/python3.8/threading.py", line 932 in _bootstrap_inner
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/lib/python3.8/threading.py", line 890 in _bootstrap
+
+Current thread 0x000014dbcaa65b80 (most recent call first):
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/utils/binding_utils.py", line 171 in read_pixels
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/utils/binding_utils.py", line 1131 in render
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/environments/robot_env.py", line 404 in camera_rgb
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/utils/observables.py", line 234 in update
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/environments/base.py", line 324 in _update_observables
+  File "/scratch/enmingzz/frequency_vla/venvs/libero/lib/python3.8/site-packages/robosuite/environments/base.py", line 395 in step
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/third_party/libero/libero/libero/envs/bddl_base_domain.py", line 806 in step
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/third_party/libero/libero/libero/envs/env_wrapper.py", line 88 in step
+  File "/home/enmingzz/project/vla/frequency_vla/src/frequency_vla/evaluator.py", line 98 in step
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/examples/libero/main.py", line 153 in eval_libero
+  File "/home/enmingzz/project/vla/frequency_vla/src/frequency_vla/evaluator.py", line 261 in run
+  File "/home/enmingzz/project/vla/frequency_vla/src/frequency_vla/evaluator.py", line 299 in main
+  File "/home/enmingzz/project/vla/frequency_vla/src/frequency_vla/evaluator.py", line 303 in <module>
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/lib/python3.8/runpy.py", line 87 in _run_code
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/lib/python3.8/runpy.py", line 194 in _run_module_as_main

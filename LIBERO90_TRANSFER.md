@@ -1,8 +1,8 @@
 # LIBERO-10 OPSD transfer to LIBERO-90
 
-The user requested testing outside LIBERO-10. This evaluation reuses the frozen
-500-update LIBERO-10 model from round two. The proposed within-LIBERO-10 task
-split was not submitted and no new training is performed for this experiment.
+This evaluation reuses the frozen 500-update LIBERO-10 model from round two
+to test transfer outside its added OPSD training tasks. No new training is
+performed for this experiment.
 
 ## Fixed experiment
 
@@ -56,6 +56,12 @@ rendering stalls. First run single/four-worker rendering guards, each at most
 are excluded from formal statistics. Saved parameters/assets are checksum-checked;
 the frozen backbone and normalization assets must match the original checkpoint.
 The comparison has no optimizer or training endpoints. Record any failed GPU time.
+Python fault handling is enabled to retain stack traces for native simulator
+crashes. The first attempt (job 60096722 on fc10517) aborted in the single-worker
+pilot with SIGABRT before any complete episode. Its exact cause is unresolved;
+the archive is under `results/diagnostics/libero90_transfer_attempt1`, and its
+7m05s of one-GPU time counts toward this study's total resource use. The rerun
+keeps every model/task/seed setting unchanged and excludes that node as well.
 
 ## Reproduce
 
@@ -77,7 +83,7 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
 
 sbatch --job-name=vla-libero90-transfer --account=rrg-btaati --nodes=1 --ntasks=1 \
   --gpus-per-node=h100:1 --cpus-per-task=8 --mem=48G --time=01:15:00 \
-  --exclude=fc10511,fc10519,fc10605 --output="$RUN_RESULTS/logs/slurm-%j.log" \
+  --exclude=fc10511,fc10517,fc10519,fc10605 --output="$RUN_RESULTS/logs/slurm-%j.log" \
   scripts/fir_libero90_job.sh
 
 # CPU aggregation after all 810 episodes complete.

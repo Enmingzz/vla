@@ -1,0 +1,138 @@
+{
+  "base_checkpoint": "gs://openpi-assets/checkpoints/pi05_libero",
+  "base_object_manifest_sha256": "434da05c6b5ac51c28222ca1bd9b77b77fa733a7b16955cbe98ac09786845dcf",
+  "config": {
+    "algorithm": "temporal_opsd_gaussian_velocity_matching",
+    "batch_size": 4,
+    "checkpoint_steps": [
+      100,
+      300,
+      500
+    ],
+    "clip_gradient_norm": 1.0,
+    "compute_dtype": "bfloat16",
+    "ema_decay": 0.9999,
+    "evaluation_episodes_per_task": 5,
+    "evaluation_seed": 17,
+    "flow_steps": 10,
+    "flow_time_sampling": "uniform_over_native_10_step_grid",
+    "learning_rate": 1e-05,
+    "loss_action_dimensions": 7,
+    "loss_covariance": "unit_isotropic_velocity_probe",
+    "master_dtype": "float32",
+    "optimizer_steps": 500,
+    "prediction_horizon": 50,
+    "protected_eval_ranges": [
+      [
+        0,
+        10
+      ],
+      [
+        20,
+        50
+      ]
+    ],
+    "reference_opsd_commit": "28d04e440350df2037fdd34ce703f088fb4ffd97",
+    "student_horizon": 20,
+    "teacher_horizon": 5,
+    "teacher_strategy": "ema",
+    "teacher_tail": "ema_native_flow_latent_at_same_time",
+    "train_initial_state_cursor": 12,
+    "train_initial_state_start": 10,
+    "train_initial_state_stop": 20,
+    "train_seed": 17,
+    "trainable_parameters": "action_expert_and_action_time_projections",
+    "weight_decay": 0.0
+  },
+  "files": {
+    "assets/physical-intelligence/libero/norm_stats.json": "b3a44bb2810436fb62917decaea58bd4d9110255df527dea21e8fd40c960bd84",
+    "params/_CHECKPOINT_METADATA": "2a1147f69536b11190530becb56a8582de1a6981eae0b4ebeec63f32f28ef30c",
+    "params/_METADATA": "250d0ad0f6540a5e4bdd70442d6864cef729724f2d23e2dd2cc669563a668d70",
+    "params/_sharding": "38efd4f20bfc656b138c3009fa6156b1199c29a3ccf020769e3726605f1c51ca",
+    "params/array_metadatas/process_0": "987d6c82745514f7ae68d1d6fa238129e23a6d90f10a6d3f6b24eafc94383ade",
+    "params/d/6807621abd512041b6d6d5ad0056bcb4": "4dbfe17d09fd4938a01b9cefa85e35b332923d8f060023a1b26adb6ba2580d2d",
+    "params/manifest.ocdbt": "0e0247576bfaf7f1e2af75ade062fc48c21d66ae79e0af3c0c74542b7d6614e6",
+    "params/ocdbt.process_0/d/0846cd7ead0178d79e335f738d43d76b": "d1ec8ac3ea4ba48a5f54959eb20349464874e064f621bc0069afe670ad11c6b4",
+    "params/ocdbt.process_0/d/0ddf2f8de5db680b2a81c3d880e6438b": "86f1f849f64cbbcb7353f2bce614a44f504b43b33dbc5e03d704f00d5fe23363",
+    "params/ocdbt.process_0/d/25ef02db196d3b52517ae124fba5f522": "596e986146c5fcfb6fdb8199e5c416d25a44951da9b44c84eac8e63debc9dff9",
+    "params/ocdbt.process_0/d/4f017d160b7c2afa49b02fa5e4231e12": "d563d5ce397f72088890caea07752a8dceb7ed34b6d8a2e42d761a55328445e6",
+    "params/ocdbt.process_0/d/85ebf7d9d672bccd5a310049c877926c": "bd8452e5a826004a48f5682215618e584047c93fda1b023393060b2778941bbe",
+    "params/ocdbt.process_0/manifest.ocdbt": "e7bc889988af4a969bc1ea9aaa80bca595c74c260c1394a832f9982108c73fd8",
+    "training_state/_CHECKPOINT_METADATA": "89c680a30b35b18532a3018d81e15307ac8d68d59864a8352ca79f2d1a254ee2",
+    "training_state/_METADATA": "444d16e481303a27ec95a730affe2e440f0fbdc120058b920183447a06ae21fd",
+    "training_state/_sharding": "1ea246b3fee1b23b349dfa34b35d4e35e460b28bd65a90b7d6dabdf9bc21a67c",
+    "training_state/array_metadatas/process_0": "04ad61b1fe775f29d7c04fa81cad627701ec2e5f71b7f741c4990464c58b6d0c",
+    "training_state/d/de684ab8bbc1151906dbd020acfdbba0": "3d12fc9e49ba2adbeac59cf8d5c59cd5dad6284c55614525fc0f4ff1420d3f43",
+    "training_state/manifest.ocdbt": "ac054323362e351cbbd81a188d305d8cf6b386851c7656d78a3e5b59f599a035",
+    "training_state/ocdbt.process_0/d/0f22d07c1f81a9f111247227baecd45c": "c5d95a8d2ca4539b151f0779fdafa023b6ecfe06a855d33613a0bd4da4fd8e1f",
+    "training_state/ocdbt.process_0/d/38026b477f31137ea567ed165e168193": "06b986a5e7ba7ca3bdc1daf4a3d2c06c63fe8bcdb72ef81f10773ee3d4c4f134",
+    "training_state/ocdbt.process_0/d/4f319fdeb49dad8a22b171b41106e46f": "5c19647f49efe3e76714bc8512c47a5184eecb3b2357ccb76b4e52ac0f985898",
+    "training_state/ocdbt.process_0/d/802fb2be18103ce75d8642e97ee51d13": "c0a6cfcd1a59bc331c1cb10ac02c4da9434b588cfa0f8d19b046d584c2164c0e",
+    "training_state/ocdbt.process_0/d/94acb45a18b47771114b848f482fa6a9": "eb629a919e41db1c2e2b77bfdb8c8002cc54539c056f87d03cfbb3afdcbb7349",
+    "training_state/ocdbt.process_0/d/b955d616d13344717a977ebb89c931b9": "c0169de6d863f2f02c4c5958ed5bc0a216ac95a25e3d0494759588e26e7e5c91",
+    "training_state/ocdbt.process_0/d/bad4f62f8f5964aa3416f4c41597ffcc": "3089633883379589d9a22d0cbca2fa5c1993a62d69bc1b2366ac566c16cfe23b",
+    "training_state/ocdbt.process_0/d/f4ecbc159f2e69245129c8a656699c69": "a47421382ea02954b569af05c36c984489d3a69b12a9d8e42bd123a0ff377a5a",
+    "training_state/ocdbt.process_0/manifest.ocdbt": "631f1a86955244193744b033669dd8c08e255cd4ee0b33f2dc830cc6d9ef915d"
+  },
+  "reloaded_native_inference_max_abs_difference": 0.0,
+  "resumed_from": {
+    "adam_update_counters": [
+      100
+    ],
+    "config_changes": {
+      "checkpoint_steps": {
+        "after": [
+          100,
+          300,
+          500
+        ],
+        "before": null
+      },
+      "evaluation_episodes_per_task": {
+        "after": 5,
+        "before": 10
+      },
+      "evaluation_seed": {
+        "after": 17,
+        "before": 7
+      },
+      "optimizer_steps": {
+        "after": 500,
+        "before": 100
+      },
+      "protected_eval_ranges": {
+        "after": [
+          [
+            0,
+            10
+          ],
+          [
+            20,
+            50
+          ]
+        ],
+        "before": null
+      },
+      "train_initial_state_cursor": {
+        "after": 12,
+        "before": null
+      },
+      "train_initial_state_stop": {
+        "after": 20,
+        "before": 50
+      }
+    },
+    "ema_and_optimizer_restored": true,
+    "fp32_master_restored": true,
+    "frozen_backbone_equal": true,
+    "manifest_sha256": "a7d6b7cb8cf42e2285721c007515b4a6526e4bb8c1874028f1dae841b5238a8c",
+    "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/step_100",
+    "step": 100
+  },
+  "sources": {
+    "opsd_backend.py": "61c1a0280378d59f767196e936badc330fdc82f5d90ba282e53ef7d4728d8d1d",
+    "opsd_flow.py": "c0e85665f5fce10e0afffe185763d07008cb16aa2d97a04a164a18e725eaa45c",
+    "opsd_protocol.py": "12b4cb91ffe208d3df30f44d9e013aafa750b851264cb2b0f7552ef1c3d32c10"
+  },
+  "step": 500
+}

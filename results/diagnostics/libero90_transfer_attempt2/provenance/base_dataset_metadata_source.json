@@ -1,0 +1,6 @@
+{
+  "repository": "physical-intelligence/libero",
+  "revision": "a4336d589d589045d1c56423ffdf3b88a0e19b1f",
+  "url": "https://huggingface.co/datasets/physical-intelligence/libero/resolve/a4336d589d589045d1c56423ffdf3b88a0e19b1f/meta/tasks.jsonl",
+  "note": "Current public metadata; the exact historical fine-tuning revision and earlier pretraining exposure are not established."
+}

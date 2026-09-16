@@ -1,0 +1,82 @@
+[
+  {
+    "step": 0,
+    "camera": "agent",
+    "mean_absolute_pixel_difference": 0.870452880859375,
+    "max_absolute_pixel_difference": 112.0,
+    "fraction_changed_channels": 0.4854024251302083,
+    "eef_max_abs_difference": 0.0
+  },
+  {
+    "step": 0,
+    "camera": "wrist",
+    "mean_absolute_pixel_difference": 0.9774169921875,
+    "max_absolute_pixel_difference": 87.0,
+    "fraction_changed_channels": 0.4673512776692708,
+    "eef_max_abs_difference": 0.0
+  },
+  {
+    "step": 9,
+    "camera": "agent",
+    "mean_absolute_pixel_difference": 0.8516387939453125,
+    "max_absolute_pixel_difference": 70.0,
+    "fraction_changed_channels": 0.4826711018880208,
+    "eef_max_abs_difference": 0.0
+  },
+  {
+    "step": 9,
+    "camera": "wrist",
+    "mean_absolute_pixel_difference": 0.8536631266276041,
+    "max_absolute_pixel_difference": 104.0,
+    "fraction_changed_channels": 0.4594167073567708,
+    "eef_max_abs_difference": 0.0
+  },
+  {
+    "step": 100,
+    "camera": "agent",
+    "mean_absolute_pixel_difference": 0.8310089111328125,
+    "max_absolute_pixel_difference": 88.0,
+    "fraction_changed_channels": 0.4713592529296875,
+    "eef_max_abs_difference": 1.0909352587962218e-10
+  },
+  {
+    "step": 100,
+    "camera": "wrist",
+    "mean_absolute_pixel_difference": 0.9572092692057291,
+    "max_absolute_pixel_difference": 77.0,
+    "fraction_changed_channels": 0.427490234375,
+    "eef_max_abs_difference": 1.0909352587962218e-10
+  },
+  {
+    "step": 200,
+    "camera": "agent",
+    "mean_absolute_pixel_difference": 0.83837890625,
+    "max_absolute_pixel_difference": 62.0,
+    "fraction_changed_channels": 0.4839731852213542,
+    "eef_max_abs_difference": 5.969467566036002e-06
+  },
+  {
+    "step": 200,
+    "camera": "wrist",
+    "mean_absolute_pixel_difference": 1.5398000081380208,
+    "max_absolute_pixel_difference": 101.0,
+    "fraction_changed_channels": 0.5368906656901041,
+    "eef_max_abs_difference": 5.969467566036002e-06
+  },
+  {
+    "step": 260,
+    "camera": "agent",
+    "mean_absolute_pixel_difference": 0.8939158121744791,
+    "max_absolute_pixel_difference": 71.0,
+    "fraction_changed_channels": 0.4923248291015625,
+    "eef_max_abs_difference": 5.879962554560664e-06
+  },
+  {
+    "step": 260,
+    "camera": "wrist",
+    "mean_absolute_pixel_difference": 0.971466064453125,
+    "max_absolute_pixel_difference": 91.0,
+    "fraction_changed_channels": 0.4379425048828125,
+    "eef_max_abs_difference": 5.879962554560664e-06
+  }
+]
