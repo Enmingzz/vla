@@ -134,6 +134,10 @@ def analyze(root):
         write_csv(output / name, rows)
     validation = {"complete": True, "plan_sha256": digest(plan), "evaluation_episodes": len(all_rows),
         "conditions": len(matrix), "single_server_instance": list(servers)[0], "optimizer_updates_added": len(training),
+        "new_training_distinct_task_layouts": len({(s["task_id"], s["initial_state_index"]) for r in rollouts for s in r["initial_states"]}),
+        "new_training_layout_indices": sorted({s["initial_state_index"] for r in rollouts for s in r["initial_states"]}),
+        "new_training_action_blocks": sum(len(r["initial_states"]) for r in rollouts),
+        "new_training_executed_actions": sum(s["executed_steps"] for r in rollouts for s in r["initial_states"]),
         "all_initial_states_match_audit": True, "training_evaluation_disjoint": True,
         "primary": primary, "additional_updates_confirmation": extra}
     write_json(output / "validation.json", validation)
@@ -229,9 +233,12 @@ def findings(root, summaries, comparisons, tasks, validation):
         "| Snapshot | Deployment H | Successes/episodes | Success | Calls/episode |", "|---|---:|---:|---:|---:|"]
     for s in confirmation:
         text.append("| {} | {} | {}/{} | {:.0%} | {:.2f} |".format("Original" if s["step"] == 0 else str(s["step"]) + " updates", s["horizon"], s["total_successes"], s["total_episodes"], s["success_rate"], s["mean_policy_calls"]))
-    verdict = ("The primary comparison provides evidence of improved task success on these held-out layouts."
-               if p["success_change"] > 0 and p["ci95_low"] > 0 and p["p_exact"] < .05 else
-               "The primary comparison does not establish a positive improvement at the 5% level; do not interpret a positive point estimate alone as proof of recovery.")
+    if p["ci95_low"] > 0 and p["p_exact"] < .05:
+        verdict = "The primary comparison provides evidence of improved task success on these held-out layouts."
+    elif p["ci95_high"] < 0 and p["p_exact"] < .05:
+        verdict = "The primary comparison indicates reduced task success: this 500-update continuation harmed performance on the confirmation layouts."
+    else:
+        verdict = "The primary comparison does not establish a directional change at the 5% level; a positive point estimate alone is not proof of recovery."
     text += ["", verdict, "",
         "On the same confirmation layouts, the original H=5 minus H=20 replanning gap was **{:.1f} pp**, "
         "paired CI **[{:.1f}, {:.1f}] pp**, Holm-adjusted frequency-family p={:.4g}. "
@@ -243,7 +250,8 @@ def findings(root, summaries, comparisons, tasks, validation):
         "raw p={:.4g}, Holm-adjusted secondary-family p={:.4g}.".format(100*extra["success_change"],
          100*extra["ci95_low"], 100*extra["ci95_high"], extra["p_exact"], extra["p_holm"]), "",
         "The 300-update model is a screen checkpoint only. The final checkpoint was fixed at 500 before observing new outcomes; "
-        "the screen did not select a winner.", "", "## H=15 and H=25 deployment transfer", "",
+        "the screen did not select a winner. More updates also collect additional on-policy experience and cover more starting layouts; "
+        "this is not an optimizer-step ablation on a fixed dataset.", "", "## H=15 and H=25 deployment transfer", "",
         "All added training used H=20. These are deployment-horizon tests of the same parameters on 50 paired episodes per condition, states 20–24, seed 17.", "",
         "| H | Original | 100 updates | 500 updates | 500 − original | Secondary adjusted p |", "|---:|---:|---:|---:|---:|---:|"]
     for h in [15, 20, 25]:
@@ -258,10 +266,10 @@ def findings(root, summaries, comparisons, tasks, validation):
         values = [lookup["transfer", suite, step, h]["success_rate"] for step, h in [(0, 5), (0, 20), (100, 20), (500, 20)]]
         text.append("| {} | {:.1%} | {:.1%} | {:.1%} | {:.1%} |".format(suite, *values))
     text += ["", "## Task-level confirmation", "", "Exploratory, 10 episodes/task; no task-wise significance claim.", "",
-             "| Task | Original H=20 | 100 updates | 500 updates | Description |", "|---:|---:|---:|---:|---|"]
+             "| Task | Original H=5 | Original H=20 | 100 updates H=20 | 500 updates H=20 | Description |", "|---:|---:|---:|---:|---:|---|"]
     for task in range(10):
-        values = [next(r for r in tasks if r["split"] == "confirmation" and r["step"] == s and r["horizon"] == 20 and r["task_id"] == task) for s in [0, 100, 500]]
-        text.append("| {} | {:.0%} | {:.0%} | {:.0%} | {} |".format(task, *(v["success_rate"] for v in values), values[0]["task_description"]))
+        values = [next(r for r in tasks if r["split"] == "confirmation" and r["step"] == s and r["horizon"] == h and r["task_id"] == task) for s, h in [(0, 5), (0, 20), (100, 20), (500, 20)]]
+        text.append("| {} | {:.0%} | {:.0%} | {:.0%} | {:.0%} | {} |".format(task, *(v["success_rate"] for v in values), values[0]["task_description"]))
     text += ["", "## Limits and reproducibility", "",
         "This tests temporal OPSD with Gaussian velocity matching, an experimental continuous-action adaptation of the local OPSD pipeline; "
         "it is not the image-generation Flow-OPD clipped policy-gradient algorithm. All conditions extrapolate the official checkpoint's native P=10 to P=50, "
@@ -269,6 +277,10 @@ def findings(root, summaries, comparisons, tasks, validation):
         "FP32 master parameters, EMA and Adam moments/counters were restored at step 100. Updates 101–500 kept the learning rate, loss and frozen backbone unchanged. "
         "Training used only official LIBERO-10 start indices 10–19, starting at 12 after the two simulator restarts. All tested layouts were hash-disjoint from these "
         "and the earlier 18 OPSD training layouts. All evaluated snapshots shared one continuous policy server.", "",
+        "The added 400 updates actually visited **{} task/layout combinations**, with layout indices {}, "
+        "using {} action blocks and {} executed actions. Layout identifiers describe the initial scene; "
+        "each trajectory supplies many intermediate observations.".format(validation["new_training_distinct_task_layouts"],
+         validation["new_training_layout_indices"], validation["new_training_action_blocks"], validation["new_training_executed_actions"]), "",
         "Wilson intervals describe individual rates; paired differences use 10,000 within-task initial-state bootstrap replicates. "
         "Secondary/screen training comparisons form one Holm family; frequency comparisons form a separate Holm family. "
         "The fixed task set and small single-seed screens do not establish generalization to unseen tasks. Every condition, including regressions, is retained.", "",

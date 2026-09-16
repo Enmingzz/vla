@@ -1,0 +1,4 @@
+JobID|State|Elapsed|ElapsedRaw|AllocCPUS|ReqMem|MaxRSS|TotalCPU|AllocTRES|ExitCode|NodeList
+60078880|CANCELLED by 3158914|00:13:52|832|8|64G||28:44.620|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0|fc10511
+60078880.batch|CANCELLED|00:14:09|849|8||29231236K|28:37.620|cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:15|fc10511
+60078880.extern|COMPLETED|00:14:13|853|8||35788K|00:00:07|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0|fc10511

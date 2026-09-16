@@ -6,11 +6,18 @@ with 1,310 evaluation episodes across LIBERO-10/spatial/object/goal. The primary
 comparison is the preselected step-500 model versus the original model at H=20,
 on 100 paired LIBERO-10 episodes excluded from our OPSD training and screen.
 
-Code revision for training/evaluation: `7bc24971126ab5e050d7e85db442f6b661695295`.
-The initial job is `60078880`: one H100, eight CPU cores, 64 GiB host memory,
+Code revision for training/evaluation: `1916f4c885e1fe0724bea6ea779487a2b11d8038`.
+The retry job is `60080314`: one H100, eight CPU cores, 64 GiB host memory,
 two-hour upper bound. Exact submission, environment and parent checkpoint are in
 [resource_plan.json](provenance/resource_plan.json). Final Slurm accounting is
-recorded separately after the job exits.
+recorded separately after the job exits. The first attempt, `60078880`, was
+cancelled for severely degraded simulator throughput before any completed benchmark
+episode or formal added update; it used 13m52s and is retained in
+[the diagnostic archive](../diagnostics/autoresearch_round2_attempt1/README.md).
+The retry requires single/four-process runtime pilots on training layouts, each
+with a 180-second bound, and uses the prior XLA memory fraction 0.65. These five
+pilot episodes are excluded from statistics; the root cause of the stall remains
+unresolved.
 
 The parent is the complete [100-update pilot](../opsd_h20_100/README.md), pinned
 by checkpoint manifest digest
