@@ -116,6 +116,18 @@ def analyze(root):
         adjusted = holm({i:r["p_exact"] for i,r in enumerate(comparisons) if r["family"] == family})
         for i,p in adjusted.items():
             comparisons[i]["p_holm"] = p
+    recovery = []
+    for label in subsets:
+        by_model = {(r["step"], r["H"]): r for r in tables if r["subset"] == label}
+        teacher, original, trained = [by_model[k] for k in [(0,5), (0,20), (500,20)]]
+        gap = teacher["success_rate"] - original["success_rate"]
+        benefit = trained["success_rate"] - original["success_rate"]
+        recovery.append(dict(subset=label, original_replanning_gap=gap,
+            trained_H20_gain=benefit,
+            remaining_gap_to_original_H5=teacher["success_rate"]-trained["success_rate"],
+            fraction_of_original_gap_recovered=benefit/gap if gap > 0 else None,
+            trained_calls_per_episode_saved_vs_original_H5=1-trained["mean_policy_calls"]/teacher["mean_policy_calls"],
+            trained_calls_per_control_step_saved_vs_original_H5=1-trained["policy_calls_per_environment_step"]/teacher["policy_calls_per_environment_step"]))
     changes = []
     for task in range(90):
         values = {(r["step"],r["horizon"]):r for r in per_task if r["task_id"] == task}
@@ -130,10 +142,11 @@ def analyze(root):
         no_new_optimizer_updates=True, exact_policy_call_schedule=True,
         all_initial_states_match_audit=True, single_server_instance=next(iter(servers)),
         primary=next(r for r in comparisons if r["family"] == "primary"),
+        gap_recovery=recovery,
         task_changes={k:sum((r["success_change"]>0 if k=="improved" else r["success_change"]<0 if k=="declined" else r["success_change"]==0)
                            for r in changes if r["primary_novel_instruction"]) for k in ["improved","declined","tied"]})
     for name, rows in [("conditions.csv",tables), ("comparisons.csv",comparisons), ("per_task.csv",per_task),
-                       ("task_changes.csv",changes), ("episodes.csv",all_rows)]:
+                       ("task_changes.csv",changes), ("gap_recovery.csv",recovery), ("episodes.csv",all_rows)]:
         write_csv(root / "aggregated" / name, rows)
     write_json(root / "aggregated/validation.json", validation)
     return plan, audit, tables, comparisons, changes, validation
@@ -143,7 +156,6 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    import numpy as np
     root = Path(root)
     output = root / "figures"
     output.mkdir(exist_ok=True)
@@ -174,6 +186,19 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
     fig.tight_layout()
     fig.savefig(output / "libero90_task_changes.png",dpi=180)
     plt.close(fig)
+    fig, ax = plt.subplots(figsize=(7,4.7))
+    for label, color, key in zip(labels,colors,[(0,5),(0,20),(500,20)]):
+        r=next(r for r in summaries if r["subset"]=="novel_instruction" and (r["step"],r["H"])==key)
+        ax.errorbar(r["policy_calls_per_environment_step"],100*r["success_rate"],
+                    yerr=[[100*(r["success_rate"]-r["ci95_low"])],[100*(r["ci95_high"]-r["success_rate"])]],
+                    fmt="o",capsize=4,color=color,label=label)
+    ax.set(xlabel="Policy calls per controlled environment step",ylabel="Task success (%)",
+           title="LIBERO-90 transfer · primary task subset · 95% Wilson intervals",ylim=(0,105))
+    ax.grid(alpha=.2)
+    ax.legend()
+    fig.tight_layout()
+    fig.savefig(output / "success_vs_policy_calls.png",dpi=180)
+    plt.close(fig)
     p=validation["primary"]
     lookup={(r["subset"],r["step"],r["H"]):r for r in summaries}
     text=["# LIBERO-90 transfer findings","",
@@ -197,6 +222,19 @@ def report(root, plan, audit, summaries, comparisons, changes, validation):
         text += ["The primary comparison indicates harmful transfer: the LIBERO-10 update reduced success on these held-out tasks."]
     else:
         text += ["The primary comparison does not establish an improvement or decline at the 5% level. These data do not validate cross-task recovery."]
+    recovery=next(r for r in validation["gap_recovery"] if r["subset"]=="novel_instruction")
+    frequency=next(r for r in comparisons if r["subset"]=="novel_instruction" and r["comparison"]=="replanning_gap")
+    text += ["","## Replanning gap and inference calls","",
+        "Original H=5 minus original H=20 was **{:+.1f} pp**, paired 95% CI **[{:+.1f}, {:+.1f}] pp**, "
+        "secondary-family Holm p=**{:.4g}**. Trained H=20 remains **{:+.1f} pp** below original H=5.".format(
+            100*frequency["success_change"],100*frequency["ci95_low"],100*frequency["ci95_high"],
+            frequency["p_holm"],100*recovery["remaining_gap_to_original_H5"]),"",
+        "Trained H=20 uses **{:.1%} fewer calls per episode** and **{:.1%} fewer calls per controlled step** than original H=5. "
+        "The latter controls for differing episode lengths; neither number measures wall-clock speedup.".format(
+            recovery["trained_calls_per_episode_saved_vs_original_H5"],recovery["trained_calls_per_control_step_saved_vs_original_H5"])]
+    if recovery["fraction_of_original_gap_recovered"] is not None:
+        text += ["The point estimate recovers **{:.1%}** of the original replanning gap.".format(
+            recovery["fraction_of_original_gap_recovered"])]
     text += ["","## All results","","| Subset | Model | Successes/episodes | Success | Calls/episode | Calls/control step |",
              "|---|---|---:|---:|---:|---:|"]
     for subset in ["all_90","novel_instruction"]:
