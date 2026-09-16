@@ -1,0 +1,25 @@
+{
+  "error": "RuntimeError('Upstream evaluation error (not a task failure): Caught exception: received 1011 (internal error) keepalive ping timeout; then sent 1011 (internal error) keepalive ping timeout')",
+  "incomplete_episode": {
+    "controlled_environment_steps": 0,
+    "environment_steps": 10,
+    "episode_index": 0,
+    "episode_rng_seed": 1821783503,
+    "evaluation_fingerprint": "5641237b52440be505d74811bb3fedc889ff4747c2c977a48c93b569e921a331",
+    "first_observation_sha256": "fb57add370184de8e47a3fa630c183d47c38b4e4d6bd67d824cc475f170ed656",
+    "inference_fingerprint": "97aae698acfdb3f933b44fcc0ac0c6de9bb538515118bef6ba12e41f96f4aa54",
+    "initial_state_sha256": "6743e1718eec1bff4329fc797b47395e529677fd366e17baae29f25b9ba75bf5",
+    "mode": "smoke",
+    "native_prediction_horizon": 10,
+    "policy_call_control_steps": [],
+    "policy_calls": 0,
+    "prediction_horizon": 50,
+    "replan_steps": 5,
+    "seed": 7,
+    "settling_steps": 10,
+    "success": false,
+    "task_description": "put both the cream cheese box and the butter in the basket",
+    "task_id": 1,
+    "task_suite": "libero_10"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "error": "RuntimeError('Upstream evaluation error (not a task failure): Caught exception: no close frame received or sent')",
+  "incomplete_episode": {
+    "action_chunk_length": 50,
+    "controlled_environment_steps": 10,
+    "environment_steps": 20,
+    "episode_index": 0,
+    "episode_rng_seed": 3009361500,
+    "evaluation_fingerprint": "5641237b52440be505d74811bb3fedc889ff4747c2c977a48c93b569e921a331",
+    "first_observation_sha256": "00a6028f2371fc17ea2e90e7671e44a96f0a5cd996b29b1b2404f71c9f7e52e7",
+    "inference_fingerprint": "97aae698acfdb3f933b44fcc0ac0c6de9bb538515118bef6ba12e41f96f4aa54",
+    "initial_state_sha256": "8feb5a31194162cae0d3e381f31ac291b7e8ba02e5af413f2e26b3443d0cb4fe",
+    "mode": "smoke",
+    "native_prediction_horizon": 10,
+    "policy_call_control_steps": [
+      0,
+      5
+    ],
+    "policy_calls": 2,
+    "prediction_horizon": 50,
+    "replan_steps": 5,
+    "seed": 7,
+    "settling_steps": 10,
+    "success": false,
+    "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+    "task_id": 0,
+    "task_suite": "libero_10"
+  }
+}

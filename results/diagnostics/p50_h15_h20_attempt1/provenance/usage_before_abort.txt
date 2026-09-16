@@ -1,0 +1,2 @@
+JobID|MaxRSS|AveCPU|TRESUsageInAve
+60040618.batch|28025676K|00:38:02|cpu=00:38:02,energy=0,fs/disk=13306103615,gres/gpumem=57481948K,gres/gpuutil=100,mem=12538932K,pages=59199,vmem=0

@@ -1,0 +1,26 @@
+{
+  "job_id": 60041592,
+  "previous_attempt_job_id": 60040618,
+  "previous_attempt_status": "Cancelled after 15m15s, zero completed episodes",
+  "evaluation_commit": "8e1f331e76b42f418c895a7da7d4d7118fa93849",
+  "prediction_horizon": 50,
+  "horizons": [
+    5,
+    15,
+    20
+  ],
+  "mode": "smoke",
+  "suite": "libero_10",
+  "seed": 7,
+  "episodes_per_task": 10,
+  "expected_total_episodes": 300,
+  "gpus": 1,
+  "gpu_type": "h100",
+  "cpu_cores": 8,
+  "host_memory_gib": 40,
+  "walltime_limit_minutes": 35,
+  "task_workers": 4,
+  "policy_servers": 1,
+  "excluded_node": "fc10605",
+  "resource_policy": "One GPU and one continuous policy server; H values sequential; release on completion/error; no automatic main or multiseed expansion. Restore proven 8 CPUs after unproductive 4-CPU attempt; CPU versus node cause remains unisolated."
+}

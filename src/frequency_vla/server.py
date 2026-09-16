@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import dataclasses
+import functools
 import importlib.metadata
 import json
 import logging
@@ -11,6 +12,8 @@ from pathlib import Path
 import platform
 import subprocess
 import sys
+import time
+from unittest.mock import patch
 
 from .config import load_config, prediction_horizon, upstream_spec
 from .logging_utils import digest, write_json
@@ -24,7 +27,7 @@ def main():
     p.add_argument("--port", type=int, default=8000)
     p.add_argument("--manifest-out", required=True)
     args = p.parse_args()
-    logging.basicConfig(level=logging.INFO, force=True)
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", force=True)
     config = load_config()
     spec = upstream_spec(args.openpi_dir, config)
     checkpoint = Path(args.checkpoint_dir).resolve()
@@ -42,6 +45,7 @@ def main():
     from jax._src import lib as jax_lib
     from openpi.training import config as official_config
     from openpi.serving.websocket_policy_server import WebsocketPolicyServer
+    import websockets.asyncio.server as websocket_server
     from scripts import serve_policy
 
     if not any(d.platform == "gpu" for d in jax.devices()):
@@ -64,6 +68,20 @@ def main():
         ))
     if policy._model.action_horizon != prediction_horizon(spec) or policy._sample_kwargs:
         raise ValueError("Configured prediction horizon or sampling defaults changed")
+    # Compile before opening any evaluator connections. Otherwise a long first
+    # inference blocks the server event loop and can trigger keepalive timeouts.
+    import numpy as np
+    from .evaluator import check_chunk
+    logging.info("Compiling one synthetic warmup inference before accepting connections")
+    warmup_started = time.monotonic()
+    warmup = policy.infer({
+        "observation/image": np.zeros((config["resize_size"], config["resize_size"], 3), dtype=np.uint8),
+        "observation/wrist_image": np.zeros((config["resize_size"], config["resize_size"], 3), dtype=np.uint8),
+        "observation/state": np.zeros(8, dtype=np.float64), "prompt": "warmup",
+    })
+    check_chunk(warmup["actions"], prediction_horizon(spec), prediction_horizon(spec))
+    warmup_seconds = time.monotonic() - warmup_started
+    logging.info("Warmup complete: P=%s in %.2f seconds", prediction_horizon(spec), warmup_seconds)
     packages = {d.metadata["Name"]: d.version for d in importlib.metadata.distributions()}
     core_packages = {k: v for k, v in packages.items() if k.lower() in {
         "jax", "jaxlib", "jax-cuda12-plugin", "jax-cuda12-pjrt", "flax", "numpy", "pillow",
@@ -72,6 +90,8 @@ def main():
                  "model_config": dataclasses.asdict(effective_config.model),
                  "sample_kwargs": {}, "backend": "jax", "dtype": "bfloat16",
                  "rng_protocol": "fold_in(episode_key,call_index); native Policy.infer split; v1",
+                 "startup_warmup_protocol": "one zero observation before listening; all episode calls reseeded",
+                 "websocket_ping_interval": None,
                  "resize_size": config["resize_size"], "num_steps_wait": config["num_steps_wait"],
                  "python_version": platform.python_version(), "inference_packages": core_packages,
                  "ptxas_version": subprocess.check_output([str(Path(jax_lib.cuda_path) / "bin/ptxas"), "--version"], text=True).strip(),
@@ -80,6 +100,7 @@ def main():
     fingerprint = digest(spec)
     metadata = {"experiment_spec": spec, "inference_fingerprint": fingerprint,
                 "checkpoint_local_path": str(checkpoint),
+                "warmup": {"seconds": warmup_seconds, "synthetic": True, "benchmark_episode": False},
                 "server_packages": packages,
                 "devices": [{"device": str(d), "kind": d.device_kind} for d in jax.devices()]}
     write_json(args.manifest_out, metadata)
@@ -96,7 +117,11 @@ def main():
             result["inference_fingerprint"] = fingerprint
             return result
 
-    WebsocketPolicyServer(PairedPolicy(), host=args.host, port=args.port, metadata=metadata).serve_forever()
+    # Keep the official handler and serialization. Physics initialization and
+    # blocking inference need not satisfy a 20-second heartbeat deadline.
+    serve_without_heartbeat = functools.partial(websocket_server.serve, ping_interval=None)
+    with patch.object(websocket_server, "serve", serve_without_heartbeat):
+        WebsocketPolicyServer(PairedPolicy(), host=args.host, port=args.port, metadata=metadata).serve_forever()
 
 
 if __name__ == "__main__":

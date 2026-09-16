@@ -54,7 +54,7 @@ mkdir -p "$RUN_RESULTS/logs"
 env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH \
   "$LIBERO_VENV/bin/python" scripts/preflight.py
 sbatch --job-name=freq-p50-smoke --account=rrg-btaati --nodes=1 --ntasks=1 \
-  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=96G --time=02:00:00 \
+  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=40G --time=00:35:00 \
   --output="$RUN_RESULTS/logs/slurm-%j.log" \
   scripts/fir_job.sh smoke --horizons 5 30 --workers 4
 ```
@@ -80,6 +80,31 @@ unset FREQUENCY_CONFIG
 Every episode records both official P=10 and effective inference P=50, the actual
 chunk length, and a distinct inference fingerprint. Aggregation refuses mixed P
 or mixed config fingerprints. The native-P archive is not pooled with this experiment.
+
+### Follow-up H=15 and H=20
+
+Use `configs/prediction50_h15_h20.yaml` to compare H=5, 15 and 20 at fixed P=50.
+H=5 is rerun on the same continuous server, since separate GPU server instances
+were not bitwise reproducible in the earlier diagnostic. All three conditions use
+seed 7 and the same first 10 initial states per task. Results live separately from
+the earlier H=5/30 archive.
+
+```bash
+source scripts/env.sh
+export FREQUENCY_CONFIG="$PWD/configs/prediction50_h15_h20.yaml"
+export RUN_RESULTS="$PWD/results/p50_h15_h20-rerun"
+export PILOT_FIRST=1 SERVER_READY_TIMEOUT_SECONDS=300 PILOT_TIMEOUT_SECONDS=180
+mkdir -p "$RUN_RESULTS/logs"
+sbatch --job-name=freq-p50-h15-h20 --account=rrg-btaati --nodes=1 --ntasks=1 \
+  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=40G --time=00:35:00 \
+  --output="$RUN_RESULTS/logs/slurm-%j.log" \
+  scripts/fir_job.sh smoke --horizons 5 15 20 --workers 4
+
+# Recreate this follow-up's summaries and plots after it finishes.
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+  scripts/aggregate_results.py --mode smoke --results-dir "$RUN_RESULTS" \
+  --findings-out "$RUN_RESULTS/FINDINGS.md"
+```
 
 Inspected upstream sources:
 
@@ -163,7 +188,7 @@ Run inside an allocated GPU compute node. On Fir, for example:
 
 ```bash
 salloc --account=rrg-btaati --nodes=1 --ntasks=1 \
-  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=96G --time=03:00:00
+  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=40G --time=00:35:00
 # Return to this repository directory in the allocated shell, then:
 source scripts/env.sh
 bash scripts/serve_policy.sh --host 127.0.0.1 --port 8000
@@ -176,6 +201,15 @@ and previous episode lengths. This provides paired sampling streams without
 changing the native Gaussian sampler or its integration steps. It differs from
 the stock server's single continuously advancing key initialized at zero.
 The same protocol is used for every measured H, including the reproduction gate.
+
+The current launcher compiles one synthetic observation before opening the server
+and disables the server's WebSocket heartbeat, so a long compilation cannot expire
+an evaluator connection. The synthetic call is not an episode, and every measured
+call still resets its PRNG key. Both settings are recorded in provenance. Batch
+startup defaults to a 300-second limit (`SERVER_READY_TIMEOUT_SECONDS`). With
+`PILOT_FIRST=1`, one diagnostic episode must complete within 180 seconds
+(`PILOT_TIMEOUT_SECONDS`) before the sweep begins; it is excluded from smoke/main
+statistics. Any worker failure stops all remaining workers and releases the server.
 
 Seeds do not guarantee bitwise reproducibility across independent GPU server
 starts. In this Fir run, three identical fixed-input/seed requests matched exactly
@@ -264,6 +298,16 @@ and fairshare snapshot are in [FIR_NOTES.md](FIR_NOTES.md) (Chinese).
 Run `sbatch` from the repository directory, or export `FREQUENCY_PROJECT` to its
 absolute path. Replace the account with a GPU account you are authorized to use:
 
+Use one GPU and one continuous policy server, and run H values sequentially.
+The earlier P=50 job peaked at 26.34 GB host memory, so the examples now request
+40 GB instead of 96 GB. A subsequent 4-CPU attempt produced no completed episode
+in 15m15s and was cancelled; CPU versus node effects were not isolated. Retain
+the previously successful 8 CPUs for four simulator workers rather than assuming
+that average CPU utilization predicts peak rendering/initialization needs.
+The resource objective is useful evaluation per GPU minute, not simply fewer CPUs.
+Wall-time limits are upper bounds; the job releases its allocation when it exits.
+The commands below are alternatives: submit only the required mode.
+
 ```bash
 # Preserve the included measurements; choose a new directory for fresh rollouts.
 export RUN_RESULTS="$PWD/results/rerun"
@@ -271,16 +315,16 @@ mkdir -p "$RUN_RESULTS/logs"
 
 # One-episode real GPU/environment check.
 sbatch --account=rrg-btaati --job-name=freq-check --nodes=1 --ntasks=1 \
-  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=96G --time=01:00:00 \
+  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=40G --time=00:15:00 \
   --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_job.sh diagnostic
 
 # The scripts start/stop one policy server and collect both horizons sequentially.
 sbatch --account=rrg-btaati --job-name=freq-smoke --nodes=1 --ntasks=1 \
-  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=96G --time=03:00:00 \
-  --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_job.sh smoke --horizons 5 10
+  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=40G --time=00:35:00 \
+  --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_job.sh smoke --horizons 5 10 --workers 4
 
 sbatch --account=rrg-btaati --job-name=freq-main --nodes=1 --ntasks=1 \
-  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=96G --time=04:00:00 \
+  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=40G --time=02:00:00 \
   --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_job.sh main --horizons 5 10 --workers 4
 ```
 

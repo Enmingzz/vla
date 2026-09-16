@@ -2,14 +2,63 @@
 from __future__ import annotations
 
 import argparse
-from concurrent.futures import ThreadPoolExecutor
 import json
 import os
 from pathlib import Path
+import signal
 import subprocess
 import sys
+import time
 
 from .config import load_config, prediction_horizon, upstream_spec, validate_horizons
+
+
+def run_task_group(command, task_ids, workers, log_dir):
+    """Bound simulator concurrency and stop every child on the first error."""
+    log_dir = Path(log_dir)
+    log_dir.mkdir(parents=True, exist_ok=True)
+    remaining, active = iter(task_ids), {}
+    exhausted = False
+    try:
+        while active or not exhausted:
+            # Check all exits before launching another task. Ordered map() used
+            # to hide later failures behind an earlier, still-running rollout.
+            for task_id, process in list(active.items()):
+                code = process.poll()
+                if code is not None:
+                    if code:
+                        raise subprocess.CalledProcessError(code, process.args)
+                    del active[task_id]
+                    print("Completed task={}".format(task_id), flush=True)
+            while not exhausted and len(active) < workers:
+                task_id = next(remaining, None)
+                if task_id is None:
+                    exhausted = True
+                    break
+                with (log_dir / "task_{}.log".format(task_id)).open("x") as log:
+                    active[task_id] = subprocess.Popen(command + ["--task-ids", str(task_id)],
+                        stdout=log, stderr=subprocess.STDOUT, start_new_session=True)
+            if active:
+                time.sleep(0.1)
+    finally:
+        # Include descendants such as video encoders; don't leave GPU clients
+        # running while an exception propagates to the batch server cleanup.
+        for process in active.values():
+            if process.poll() is None:
+                try:
+                    os.killpg(process.pid, signal.SIGTERM)
+                except ProcessLookupError:
+                    pass
+        deadline = time.monotonic() + 3
+        for process in active.values():
+            try:
+                process.wait(timeout=max(0.01, deadline - time.monotonic()))
+            except subprocess.TimeoutExpired:
+                try:
+                    os.killpg(process.pid, signal.SIGKILL)
+                except ProcessLookupError:
+                    pass
+                process.wait()
 
 
 def main():
@@ -42,17 +91,9 @@ def main():
                 subprocess.run(command, check=True)
             else:
                 log_dir = Path(args.results_dir) / "logs" / args.mode / args.suite / ("seed_" + str(seed)) / ("H_" + str(h))
-                log_dir.mkdir(parents=True, exist_ok=True)
-
-                def run_task(task_id):
-                    with (log_dir / ("task_{}.log".format(task_id))).open("x") as log:
-                        subprocess.run(command + ["--task-ids", str(task_id)], stdout=log, stderr=subprocess.STDOUT, check=True)
-                    print("Completed H={} seed={} task={}".format(h, seed, task_id), flush=True)
-
                 # Only simulator processes overlap; native server inference is serial.
                 # Per-episode/call RNG makes task scheduling independent of policy noise.
-                with ThreadPoolExecutor(max_workers=args.workers) as pool:
-                    list(pool.map(run_task, range(10)))
+                run_task_group(command, range(10), args.workers, log_dir)
         subprocess.run([sys.executable, "-m", "frequency_vla.analysis", "--mode", args.mode, "--suite", args.suite,
                         "--results-dir", args.results_dir], check=True)
         if h == 5 and args.suite == "libero_10":

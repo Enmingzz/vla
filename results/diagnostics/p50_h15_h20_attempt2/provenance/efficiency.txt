@@ -1,0 +1,11 @@
+Job ID: 60041592
+Cluster: fir
+User/Group: enmingzz/enmingzz
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 8
+CPU Utilized: 00:39:54
+CPU Efficiency: 33.62% of 01:58:40 core-walltime
+Job Wall-clock time: 00:14:50
+Memory Utilized: 28.00 GB
+Memory Efficiency: 70.01% of 40.00 GB (40.00 GB/node)

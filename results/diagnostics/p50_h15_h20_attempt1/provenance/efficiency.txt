@@ -1,0 +1,11 @@
+Job ID: 60040618
+Cluster: fir
+User/Group: enmingzz/enmingzz
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 4
+CPU Utilized: 00:38:21
+CPU Efficiency: 62.87% of 01:01:00 core-walltime
+Job Wall-clock time: 00:15:15
+Memory Utilized: 26.73 GB
+Memory Efficiency: 66.82% of 40.00 GB (40.00 GB/node)

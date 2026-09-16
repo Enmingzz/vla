@@ -78,11 +78,19 @@ class TrackedEnv:
 
     def reset(self):
         self.tracker.start()
-        return self.env.reset()
+        started = time.monotonic()
+        result = self.env.reset()
+        if self.tracker.episode_index == 0:
+            logging.info("Environment reset completed in %.2fs", time.monotonic() - started)
+        return result
 
     def set_init_state(self, state):
         self.tracker.current["initial_state_sha256"] = array_hash(state)
-        return self.env.set_init_state(state)
+        started = time.monotonic()
+        result = self.env.set_init_state(state)
+        if self.tracker.episode_index == 0:
+            logging.info("Initial state installed in %.2fs", time.monotonic() - started)
+        return result
 
     def step(self, action):
         result = self.env.step(action)
@@ -114,7 +122,12 @@ class CountingClient:
             })
         request = dict(observation)
         request["_frequency_vla"] = {"episode_seed": row["episode_rng_seed"], "call_index": row["policy_calls"]}
+        first_call = row["policy_calls"] == 0 and row["episode_index"] == 0
+        if first_call:
+            logging.info("First policy request after %.2fs of episode setup/settling", time.monotonic() - self.tracker.started)
         result = self.client.infer(request)
+        if first_call:
+            logging.info("First policy response received; server timing: %s", result.get("server_timing"))
         if result.get("inference_fingerprint") != row["inference_fingerprint"]:
             raise RuntimeError("Policy changed during evaluation")
         check_chunk(result["actions"], row["prediction_horizon"], self.tracker.args.required_horizon)
@@ -206,7 +219,10 @@ def run(args):
         if tracker.env is not None:
             tracker.env.close()
             tracker.env = None
+        started = time.monotonic()
+        logging.info("Constructing LIBERO environment task=%s", tracker.task_id)
         env, description = original_get_env(task, resolution, seed)
+        logging.info("Environment constructed in %.2fs", time.monotonic() - started)
         tracker.task_description = description
         tracker.env = TrackedEnv(env, tracker)
         return tracker.env, description
@@ -274,7 +290,7 @@ def main():
     args = p.parse_args()
     args.episodes = args.episodes or config["modes"].get(args.mode, 1)
     args.required_horizon = args.required_horizon or args.horizon
-    logging.basicConfig(level=logging.INFO, force=True)
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", force=True)
     run(args)
 
 

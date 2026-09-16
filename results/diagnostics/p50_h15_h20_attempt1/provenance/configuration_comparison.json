@@ -1,0 +1,70 @@
+{
+  "previous_comparison_job": 60035109,
+  "job_id": 60040618,
+  "same_complete_inference_spec": true,
+  "inference_fingerprint": "97aae698acfdb3f933b44fcc0ac0c6de9bb538515118bef6ba12e41f96f4aa54",
+  "experiment_spec": {
+    "backend": "jax",
+    "checkpoint": "gs://openpi-assets/checkpoints/pi05_libero",
+    "checkpoint_object_manifest_sha256": "434da05c6b5ac51c28222ca1bd9b77b77fa733a7b16955cbe98ac09786845dcf",
+    "dtype": "bfloat16",
+    "flow_steps": 10,
+    "inference_packages": {
+      "flax": "0.10.2",
+      "jax": "0.5.3",
+      "jax-cuda12-pjrt": "0.5.3",
+      "jax-cuda12-plugin": "0.5.3",
+      "jaxlib": "0.5.3",
+      "ml-dtypes": "0.4.1",
+      "numpy": "1.26.4",
+      "opencv-python": "4.11.0.86",
+      "orbax-checkpoint": "0.11.13",
+      "pillow": "11.2.1",
+      "sentencepiece": "0.2.0",
+      "tensorstore": "0.1.74"
+    },
+    "jax_cuda_root": "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+    "libero_commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+    "model_config": {
+      "action_dim": 32,
+      "action_expert_variant": "gemma_300m",
+      "action_horizon": 50,
+      "discrete_state_input": false,
+      "dtype": "bfloat16",
+      "max_token_len": 200,
+      "paligemma_variant": "gemma_2b",
+      "pi05": true,
+      "pytorch_compile_mode": "max-autotune"
+    },
+    "native_prediction_horizon": 10,
+    "num_steps_wait": 10,
+    "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "prediction_horizon": 50,
+    "protocol": "fixed_prediction_horizon_extension",
+    "ptxas_version": "ptxas: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Apr__9_19:22:20_PDT_2025\nCuda compilation tools, release 12.9, V12.9.41\nBuild cuda_12.9.r12.9/compiler.35813241_0",
+    "python_version": "3.11.13",
+    "resize_size": 224,
+    "rng_protocol": "fold_in(episode_key,call_index); native Policy.infer split; v1",
+    "sample_kwargs": {},
+    "source_sha256": {
+      "examples/libero/README.md": "a2caaf5459c4b01837b73aa93a6f69e8cdf10385b39c34eba36afa85f83fafe9",
+      "examples/libero/main.py": "d53748c95804ada559e3ca867305b8f755d8651c4c7f4e2723ef80aea55a3943",
+      "scripts/serve_policy.py": "eccc0448b4873fd30a1fff3355c5de7a7c227138e6db04b7dcaa5bb38a6a5809",
+      "src/openpi/models/pi0.py": "24b32d7c6ed5e409459afa8ca5af96a4dae09c2dcdf48e828907e411f4f12342",
+      "src/openpi/training/config.py": "c34231f888dba5dc981d808765b3d98775ab845b04313bf53fcecd567c520b0d",
+      "uv.lock": "793488b5a55bb87200db90a61fd0af51922b686d94e1da4f4c587ab119b37d74"
+    },
+    "training_config": "pi05_libero",
+    "xla_flags": " --xla_gpu_cuda_data_dir=/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/nvidia/cuda_nvcc"
+  },
+  "allocation": {
+    "JobId": "60040618",
+    "JobState": "RUNNING",
+    "NumCPUs": "4",
+    "TimeLimit": "00:35:00",
+    "ReqTRES": "cpu=4,mem=40G,node=1,billing=12200,gres/gpu=1,gres/gpu:h100=1",
+    "AllocTRES": "cpu=4,mem=40G,node=1,billing=12200,gres/gpu=1,gres/gpu:h100=1",
+    "NodeList": "fc10605"
+  },
+  "note": "H5 is rerun within this new continuous server; old-server episodes are not pooled despite identical configuration fingerprints."
+}

@@ -1,0 +1,6 @@
+{
+  "reason": "Severely degraded simulator throughput; no completed episode after more than 14 minutes. Preserve as aborted diagnostic, not scored failure. CPU allocation versus node performance cause not isolated.",
+  "completed_episodes": 0,
+  "job_id": 60040618,
+  "next_attempt": "One H100, restore previously successful 8 CPUs, retain 40 GiB host memory, exclude fc10605."
+}

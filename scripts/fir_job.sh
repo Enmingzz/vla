@@ -18,9 +18,10 @@ bash "$FREQUENCY_PROJECT/scripts/serve_policy.sh" --port "$POLICY_PORT" \
   > "$RUN_RESULTS/logs/server-${SLURM_JOB_ID:-manual}.log" 2>&1 &
 SERVER_PID=$!
 trap 'kill "$SERVER_PID" 2>/dev/null || true; wait "$SERVER_PID" 2>/dev/null || true' EXIT
-env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$SERVER_VENV/bin/python" - "$POLICY_PORT" "$SERVER_PID" <<'PY'
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$SERVER_VENV/bin/python" - "$POLICY_PORT" "$SERVER_PID" "${SERVER_READY_TIMEOUT_SECONDS:-300}" <<'PY'
 import os, sys, time, urllib.request
-for _ in range(180):
+deadline = time.monotonic() + int(sys.argv[3])
+while time.monotonic() < deadline:
     try:
         os.kill(int(sys.argv[2]), 0)
     except ProcessLookupError:
@@ -32,8 +33,16 @@ for _ in range(180):
     except OSError:
         time.sleep(5)
 else:
-    raise SystemExit('Policy server did not become ready within 15 minutes')
+    raise SystemExit('Policy server did not become ready within '+sys.argv[3]+' seconds')
 PY
+if [[ "${PILOT_FIRST:-0}" == 1 && "$MODE" != diagnostic ]]; then
+  echo "Running one diagnostic episode before the sweep (limit ${PILOT_TIMEOUT_SECONDS:-180}s)."
+  timeout --kill-after=10s "${PILOT_TIMEOUT_SECONDS:-180}s" \
+    env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+    -m frequency_vla.evaluator --mode diagnostic --horizon "${PILOT_HORIZON:-5}" \
+    --episodes 1 --task-ids 0 --port "$POLICY_PORT" --results-dir "$RUN_RESULTS" \
+    > "$RUN_RESULTS/logs/pilot-${SLURM_JOB_ID:-manual}.log" 2>&1
+fi
 if [[ "$MODE" == diagnostic ]]; then
   env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
     -m frequency_vla.evaluator --mode diagnostic --horizon 5 --episodes 1 --task-ids 0 \
