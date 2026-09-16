@@ -115,7 +115,7 @@ export RUN_RESULTS="$PWD/results/autoresearch_round2-rerun"
 export OPSD_CHECKPOINT_ROOT="$FREQUENCY_WORK/runs/autoresearch_round2-rerun"
 export PARENT_CHECKPOINT="$FREQUENCY_WORK/runs/opsd_h20_100_attempt2/step_100"
 export PARENT_RESULTS="$PWD/results/opsd_h20_100"
-export XLA_PYTHON_CLIENT_MEM_FRACTION=0.75
+export XLA_PYTHON_CLIENT_MEM_FRACTION=0.65
 mkdir -p "$RUN_RESULTS/logs"
 
 # CPU only: check actual state hashes and the parent checkpoint identity first.

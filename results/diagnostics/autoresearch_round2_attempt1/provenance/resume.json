@@ -1,0 +1,54 @@
+{
+  "adam_update_counters": [
+    100
+  ],
+  "config_changes": {
+    "checkpoint_steps": {
+      "after": [
+        100,
+        300,
+        500
+      ],
+      "before": null
+    },
+    "evaluation_episodes_per_task": {
+      "after": 5,
+      "before": 10
+    },
+    "evaluation_seed": {
+      "after": 17,
+      "before": 7
+    },
+    "optimizer_steps": {
+      "after": 500,
+      "before": 100
+    },
+    "protected_eval_ranges": {
+      "after": [
+        [
+          0,
+          10
+        ],
+        [
+          20,
+          50
+        ]
+      ],
+      "before": null
+    },
+    "train_initial_state_cursor": {
+      "after": 12,
+      "before": null
+    },
+    "train_initial_state_stop": {
+      "after": 20,
+      "before": 50
+    }
+  },
+  "ema_and_optimizer_restored": true,
+  "fp32_master_restored": true,
+  "frozen_backbone_equal": true,
+  "manifest_sha256": "a7d6b7cb8cf42e2285721c007515b4a6526e4bb8c1874028f1dae841b5238a8c",
+  "path": "/scratch/enmingzz/frequency_vla/runs/opsd_h20_100_attempt2/step_100",
+  "step": 100
+}

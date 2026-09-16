@@ -1,0 +1,81 @@
+{
+  "analysis_seed": 20260916,
+  "bootstrap_replicates": 10000,
+  "confirmation": {
+    "episodes_per_task": 10,
+    "horizons": {
+      "0": [
+        5,
+        20
+      ],
+      "100": [
+        20
+      ],
+      "500": [
+        20
+      ]
+    },
+    "initial_state_start": 30,
+    "seed": 27,
+    "suite": "libero_10"
+  },
+  "milestones": [
+    100,
+    300,
+    500
+  ],
+  "primary_comparison": "confirmation_libero10_H20_step500_minus_step0",
+  "resume_manifest_sha256": "a7d6b7cb8cf42e2285721c007515b4a6526e4bb8c1874028f1dae841b5238a8c",
+  "resume_step": 100,
+  "screen": {
+    "episodes_per_task": 5,
+    "horizons": {
+      "0": [
+        5,
+        15,
+        20,
+        25
+      ],
+      "100": [
+        15,
+        20,
+        25
+      ],
+      "300": [
+        20
+      ],
+      "500": [
+        15,
+        20,
+        25
+      ]
+    },
+    "initial_state_start": 20,
+    "seed": 17,
+    "suite": "libero_10"
+  },
+  "secondary_comparison": "confirmation_libero10_H20_step500_minus_step100",
+  "training_config": "configs/opsd_continuation_500.yaml",
+  "transfer": {
+    "episodes_per_task": 3,
+    "horizons": {
+      "0": [
+        5,
+        20
+      ],
+      "100": [
+        20
+      ],
+      "500": [
+        20
+      ]
+    },
+    "initial_state_start": 20,
+    "seed": 17,
+    "suites": [
+      "libero_spatial",
+      "libero_object",
+      "libero_goal"
+    ]
+  }
+}

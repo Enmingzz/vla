@@ -59,13 +59,23 @@ def main():
                 "--initial-state-start", str(c["initial_state_start"])], 1200)
             seen.add(identifier)
 
+    # Runtime guards use training layouts and never enter benchmark statistics.
+    # A single context first warms rendering; four processes then check concurrency.
+    for label, tasks, workers in [("single", [0], 1), ("parallel", [0, 1, 2, 3], 4)]:
+        run("runtime_pilot_" + label, [sys.executable, "-m", "frequency_vla.opsd_evaluate",
+            "--port", str(args.port), "--results-dir", str(root / ("runtime_pilot_" + label)),
+            "--workers", str(workers), "--suite", "libero_10", "--horizon", "5",
+            "--episodes", "1", "--seed", "17", "--initial-state-start", "10",
+            "--task-ids"] + [str(t) for t in tasks], 180)
     client("diagnostic", limit=420)
     client("resume", "--checkpoint", args.parent_checkpoint, limit=300)
+    client("status", name="memory_after_resume", limit=60)
     evaluate(0)
     evaluate(100)
     for milestone in [300, 500]:
         client("train", "--end-step", str(milestone), name="train_to_" + str(milestone), limit=1200)
         client("save", name="save_" + str(milestone), limit=240)
+        client("status", name="memory_at_" + str(milestone), limit=60)
         evaluate(milestone)
     for step in [0, 100, 500]:
         evaluate(step, confirmation=True)

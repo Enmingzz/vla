@@ -1,6 +1,6 @@
 {
   "pytest": {
-    "passed": 24,
+    "passed": 23,
     "failed": 0,
     "command": "env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH \"$LIBERO_VENV/bin/python\" -m pytest -q"
   },
@@ -19,6 +19,5 @@
     ]
   },
   "split_audit": "split_audit.json",
-  "gpu_allocated_for_preflight": false,
-  "runtime_retry": "One/four-worker time-bounded rendering pilots; previous failed GPU attempt archived separately."
+  "gpu_allocated_for_preflight": false
 }

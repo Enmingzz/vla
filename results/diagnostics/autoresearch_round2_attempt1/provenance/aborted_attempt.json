@@ -1,0 +1,10 @@
+{
+  "job_id": 60078880,
+  "cancelled_unix_time": 1789571153.756356,
+  "node": "fc10511",
+  "reason": "Simulator performance anomaly: environment reset 84\u2013119 s versus prior ~1.3 s, first 4 evaluation episodes still unfinished after ~5 minutes, GPU graphics process 99% utilization while inference server idle. Cancelled proactively to avoid wasting GPU allocation.",
+  "completed_evaluation_episodes": 0,
+  "formal_optimizer_updates_added": 0,
+  "diagnostic_and_resume_passed": true,
+  "diagnosis": "Suspected node/rendering or memory-allocation interaction; not established yet. No task failures inferred from runtime slowdown."
+}

@@ -151,7 +151,8 @@ class TemporalOPSD:
                 return self.set_phase(control["phase"])
             if operation == "status":
                 return {"step": self.step, "phase": self.phase, "diagnostic_complete": self.diagnostic_complete,
-                        "saved_snapshots": sorted(self.snapshots)}
+                        "saved_snapshots": sorted(self.snapshots),
+                        "gpu_memory": jax.devices()[0].memory_stats() or {}}
             raise ValueError("Unknown OPSD request")
         control = observation.pop("_frequency_vla", None)
         if control is None:

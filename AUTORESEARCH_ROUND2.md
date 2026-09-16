@@ -78,3 +78,16 @@ final accounting. Do not silently repeat a whole completed study after a late er
 The completed job's run archive will contain exact commands, revisions, checkpoint
 lineage and measured findings. Select fresh result/checkpoint paths for reruns;
 the original checkpoint and previous result directories remain intact.
+
+## Runtime-only retry amendment
+
+The first job, 60078880 on fc10511, was cancelled after 13m52s for severely
+degraded simulator throughput, before any complete evaluation episode or added
+formal optimizer update. Its diagnostics are retained under
+`results/diagnostics/autoresearch_round2_attempt1/` and counted in resource cost.
+The root cause is unresolved. The retry excludes that node and the two nodes
+with similar earlier stalls, and restores the previously successful XLA memory
+fraction 0.65. Before the expensive study it runs one- and four-process rollout
+checks, each bounded at 180 seconds, on initial-state index 10 (training layouts).
+These five pilot episodes are excluded from every research statistic. The fixed
+1,310-episode matrix, optimization method, checkpoint choice and splits are unchanged.

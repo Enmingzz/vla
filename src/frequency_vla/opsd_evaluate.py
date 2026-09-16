@@ -17,6 +17,7 @@ def main():
     parser.add_argument("--episodes", type=int, default=10)
     parser.add_argument("--seed", type=int, default=7)
     parser.add_argument("--initial-state-start", type=int, default=0)
+    parser.add_argument("--task-ids", type=int, nargs="+", choices=range(10))
     args = parser.parse_args()
     if not 1 <= args.workers <= 4:
         raise ValueError("The first training comparison uses at most four simulator workers")
@@ -25,7 +26,7 @@ def main():
                "--episodes", str(args.episodes), "--seed", str(args.seed),
                "--initial-state-start", str(args.initial_state_start),
                "--suite", args.suite, "--port", str(args.port), "--results-dir", args.results_dir]
-    run_task_group(command, range(10), args.workers,
+    run_task_group(command, args.task_ids if args.task_ids is not None else range(10), args.workers,
                    Path(args.results_dir) / "logs" / args.suite / ("H_" + str(args.horizon)))
 
 
