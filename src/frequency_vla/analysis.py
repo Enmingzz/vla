@@ -8,7 +8,7 @@ import json
 import math
 from pathlib import Path
 
-from .config import load_config
+from .config import load_config, prediction_horizon
 from .evaluator import validate_call_schedule
 from .logging_utils import write_json
 
@@ -70,6 +70,8 @@ def validate_records(records, allow_partial=False):
         raise ValueError("Cannot aggregate changed checkpoints/configs/inference settings")
     if len({r["evaluation_fingerprint"] for r in records}) != 1:
         raise ValueError("Cannot aggregate changed evaluator code or simulator dependencies")
+    if len({prediction_horizon(r) for r in records}) != 1:
+        raise ValueError("Cannot aggregate different prediction horizons")
     by_h = defaultdict(dict)
     reference_states = {}
     for row in records:
@@ -78,6 +80,8 @@ def validate_records(records, allow_partial=False):
             raise ValueError("Duplicate episode: " + str((h, key)))
         if type(row["success"]) is not bool:
             raise ValueError("Success must be a measured boolean")
+        if h > prediction_horizon(row) or row.get("action_chunk_length", prediction_horizon(row)) != prediction_horizon(row):
+            raise ValueError("Recorded execution horizon or action chunk conflicts with prediction horizon")
         validate_call_schedule(row["controlled_environment_steps"], row["policy_calls"], h, row["policy_call_control_steps"])
         if row["environment_steps"] != row["controlled_environment_steps"] + row["settling_steps"]:
             raise ValueError("Inconsistent environment step counts")
@@ -100,7 +104,7 @@ def mean(rows, field):
 def summarize(h, rows):
     successes = sum(r["success"] for r in rows)
     low, high = wilson(successes, len(rows))
-    return {"H": h, "total_episodes": len(rows), "total_successes": successes,
+    return {"H": h, "P": prediction_horizon(rows[0]), "total_episodes": len(rows), "total_successes": successes,
             "success_rate": successes / len(rows), "ci95_low": low, "ci95_high": high,
             "mean_policy_calls": mean(rows, "policy_calls"),
             "mean_episode_length": mean(rows, "controlled_environment_steps"),
@@ -187,8 +191,13 @@ def plots(summaries, gaps, output, suite, mode, native_p, config):
     y = [100 * s["success_rate"] for s in summaries]
     errors = [[100 * max(0., s["success_rate"] - s["ci95_low"]) for s in summaries],
               [100 * max(0., s["ci95_high"] - s["success_rate"]) for s in summaries]]
-    title = "{} · {} · native P={}".format(suite, mode, native_p)
-    note = "H > {} is unsupported with the unchanged official checkpoint config.".format(native_p) if max(config["horizons"]) > native_p else ""
+    effective_p = config.get("prediction_horizon", native_p)
+    extension = effective_p != native_p
+    title = "{} · {} · {} P={}".format(suite, mode, "experimental" if extension else "native", effective_p)
+    if extension:
+        note = "Fixed inference P={}; official P={}. Unchanged weights; extrapolated sequence length.".format(effective_p, native_p)
+    else:
+        note = "H > {} is unsupported with the unchanged official checkpoint config.".format(native_p) if max(config["horizons"]) > native_p else ""
 
     def save(fig, filename):
         if note:
@@ -237,19 +246,31 @@ def plots(summaries, gaps, output, suite, mode, native_p, config):
 
 
 def findings(summaries, gaps, task_gaps, config, suite, mode, native_p, complete):
+    effective_p = config.get("prediction_horizon", native_p)
+    extension = effective_p != native_p
     teacher = next((s for s in summaries if s["H"] == 5), None)
     baseline_ok = bool(teacher and suite == "libero_10" and teacher["success_rate"] >= config["official_libero_10_success"] - config["baseline_max_absolute_drop"])
+    if extension:
+        protocol = ("Explicit fixed-P extension: inference P={}, while the official `pi05_libero` config specifies P={}. "
+                    "The same checkpoint weights and upstream action loop are used. Only the static prediction length is overridden; "
+                    "flow steps and attention-mask rules are unchanged. Every compared H uses the same P={}. "
+                    "This is sequence-length extrapolation, not official-protocol reproduction. Even the first five actions can change "
+                    "when P changes because action tokens attend to one another. Results cannot be pooled with the native-P archive.").format(effective_p, native_p, effective_p)
+    else:
+        protocol = "The pinned official `pi05_libero` config has native prediction horizon P={}. Requested horizons above P were not executed. No model/config override, action padding, repetition, or hidden policy calls was used.".format(native_p)
     lines = ["# Findings", "", "Measured {} evaluation on {}. Coverage: {}.".format(mode, suite, "complete for the explicitly selected horizons" if complete else "PARTIAL; exploratory only"), "",
-             "## Protocol constraint", "", "The pinned official `pi05_libero` config has native prediction horizon P={}. Requested horizons above P were not executed. No model/config override, action padding, repetition, or hidden policy calls was used.".format(native_p), "",
+             "## Protocol constraint", "", protocol, "",
              "OpenPI commit: `{}`. Checkpoint: `{}`. Flow steps: {} (upstream default).".format(config["openpi_commit"], config["checkpoint"], config["flow_steps"]), "",
              "## Measured success", "", "| H | Successes / episodes | Success | 95% Wilson CI | Calls/episode | Controlled steps/episode |", "|---:|---:|---:|---:|---:|---:|"]
     for s in summaries:
         lines.append("| {H} | {total_successes}/{total_episodes} | {rate:.1%} | [{low:.1%}, {high:.1%}] | {mean_policy_calls:.2f} | {mean_episode_length:.1f} |".format(**s, rate=s["success_rate"], low=s["ci95_low"], high=s["ci95_high"]))
-    lines.extend(["", "## H=5 reproduction gate", ""])
+    lines.extend(["", "## H=5 baseline screen" if extension else "## H=5 reproduction gate", ""])
     if teacher and suite == "libero_10":
         lines.append("H=5 measured {:.1%}, versus the official 92.4% reference. The predeclared diagnostic gate allows at most a {:.0f} percentage point deficit: {}. This gate is a debugging screen, not an equivalence test; the public reference has no reported uncertainty here.".format(teacher["success_rate"], 100*config["baseline_max_absolute_drop"], "PASS" if baseline_ok else "FAIL — investigate before interpreting gaps"))
     else:
         lines.append("No applicable LIBERO-10 H=5 baseline is available; reproduction is not established.")
+    if extension:
+        lines.append("The official reference is contextual only because P differs. Both H values are evaluated as diagnostics even if this screen fails; failure prevents interpreting a gap as evidence for a strong teacher.")
     lines.extend(["", "## Paired replanning gaps and compute savings", "", "Gap is Success(5) − Success(H), measured on matching seed/task/initial-state indices. Positive values favour H=5.", ""])
     for g in gaps:
         lines.append("- H={}: gap {:.1f} pp, paired 95% bootstrap CI [{:.1f}, {:.1f}] pp; {:.1%} fewer calls per episode and {:.1%} fewer calls per controlled step ({} pairs).{}".format(g["student_H"], 100*g["replanning_gap"], 100*g["gap_ci95_low"], 100*g["gap_ci95_high"], g["relative_policy_calls_saved"], g["relative_call_density_saved"], g["paired_episodes"], " Exact McNemar p (Holm-adjusted) = {:.4g}.".format(g["mcnemar_p_holm"]) if "mcnemar_p_holm" in g else ""))
@@ -283,7 +304,10 @@ def findings(summaries, gaps, task_gaps, config, suite, mode, native_p, complete
         lines.append("Among measured settings, (H_T,H_S)=(5,{}) is an exploratory candidate: at least 30% fewer calls per controlled step, a 5–25 pp gap, and paired evidence favouring H=5. Candidate selection is exploratory and needs confirmation.".format(candidate["student_H"]))
     else:
         lines.append("No teacher/student pair is recommended from the evidence currently available.")
-    lines.append("The intended H_S=20/30/50 premise remains untested because native P={}. These results alone cannot justify that proposed distillation stage; it requires a revised, explicitly authorized protocol. No training or distillation was implemented.".format(native_p))
+    if extension:
+        lines.append("These results concern only the measured H values under fixed inference P={}. They do not establish native P={} performance at larger H or validate extrapolated action quality. No training or distillation was implemented.".format(effective_p, native_p))
+    else:
+        lines.append("The intended H_S=20/30/50 premise remains untested because native P={}. These results alone cannot justify that proposed distillation stage; it requires a revised, explicitly authorized protocol. No training or distillation was implemented.".format(native_p))
     if mode != "main" or not complete:
         lines.append("Smoke/partial results are diagnostic, not the requested main validation.")
     lines.extend(["", "## Reproducibility and uncertainty", "", "Environment settling, image rotation/resize, state conversion, chunk-prefix execution, success termination and task step limits come directly from the pinned official evaluator. Initial-state and first-policy-observation hashes, per-episode RNG seeds, and inference fingerprints are validated across H. Actual call positions must equal 0,H,2H,… .", "", "Wilson intervals describe the episode-level binomial rate. Gap intervals use paired initial-state blocks resampled within fixed tasks (10,000 replicates, fixed analysis seed); repeated seeds of one initial state stay in the same block. Exact McNemar tests are reported for single-seed runs, with Holm correction across measured candidate horizons. The task set is fixed; intervals do not establish generalization to unseen tasks. Video encoding time is excluded from episode duration; first-episode JIT compilation is included.", ""])
@@ -320,11 +344,15 @@ def main():
     for name, rows in [("frequency_sweep.csv", summaries), ("per_task.csv", tasks), ("per_seed.csv", seeds), ("replanning_gaps.csv", gaps), ("task_gaps.csv", task_gaps), ("episodes.csv", records)]:
         write_csv(out / name, rows)
     native_p = records[0]["native_prediction_horizon"]
+    effective_p = prediction_horizon(records[0])
+    if effective_p != config.get("prediction_horizon", native_p):
+        raise ValueError("Analysis prediction horizon differs from recorded inference")
     baseline = next((s for s in summaries if s["H"] == 5), None)
     gate = bool(baseline and args.suite == "libero_10" and baseline["success_rate"] >= config["official_libero_10_success"] - config["baseline_max_absolute_drop"])
     write_json(out / "validation.json", {"complete_for_measured_horizons": complete, "baseline_gate_passed": gate,
-        "measured_horizons": [s["H"] for s in summaries], "unsupported_requested_horizons": [h for h in config["horizons"] if h > native_p],
-        "paired_checks_passed": True, "native_prediction_horizon": native_p, "inference_fingerprint": records[0]["inference_fingerprint"]})
+        "measured_horizons": [s["H"] for s in summaries], "unsupported_requested_horizons": [h for h in config["horizons"] if h > effective_p],
+        "paired_checks_passed": True, "native_prediction_horizon": native_p, "prediction_horizon": effective_p,
+        "official_prediction_horizon_unchanged": effective_p == native_p, "inference_fingerprint": records[0]["inference_fingerprint"]})
     plots(summaries, gaps, root / "figures" / args.mode / args.suite, args.suite, args.mode, native_p, config)
     text = findings(summaries, gaps, task_gaps, config, args.suite, args.mode, native_p, complete)
     probe_file = root / "diagnostics" / "inference_reproducibility.json"

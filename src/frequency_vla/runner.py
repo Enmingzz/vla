@@ -9,7 +9,7 @@ from pathlib import Path
 import subprocess
 import sys
 
-from .config import load_config, upstream_spec, validate_horizons
+from .config import load_config, prediction_horizon, upstream_spec, validate_horizons
 
 
 def main():
@@ -26,7 +26,7 @@ def main():
     p.add_argument("--openpi-dir", default=os.environ.get("OPENPI_DIR"), required=not os.environ.get("OPENPI_DIR"))
     args = p.parse_args()
     spec = upstream_spec(args.openpi_dir, config)
-    validate_horizons(args.horizons, spec["native_prediction_horizon"])
+    validate_horizons(args.horizons, prediction_horizon(spec))
     if len(args.seeds) != len(set(args.seeds)):
         raise ValueError("Duplicate seeds")
     if not 1 <= args.workers <= 10:
@@ -58,7 +58,10 @@ def main():
         if h == 5 and args.suite == "libero_10":
             gate_file = Path(args.results_dir) / "aggregated" / args.mode / args.suite / "validation.json"
             if not json.loads(gate_file.read_text())["baseline_gate_passed"]:
-                raise RuntimeError("H=5 reproduction gate failed. Comparisons stopped; inspect baseline videos/environment first.")
+                if config.get("baseline_gate_policy", "stop") == "report_only":
+                    print("H=5 baseline screen failed. Explicit extension protocol continues diagnostics; do not interpret this as official baseline reproduction.", flush=True)
+                else:
+                    raise RuntimeError("H=5 reproduction gate failed. Comparisons stopped; inspect baseline videos/environment first.")
 
 
 if __name__ == "__main__":

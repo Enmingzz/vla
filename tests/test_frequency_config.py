@@ -13,7 +13,7 @@ import pytest
 
 from frequency_vla import evaluator
 from frequency_vla.analysis import exact_mcnemar, holm, paired_interval, validate_records, wilson
-from frequency_vla.config import episode_seed, load_config, upstream_spec, validate_horizons
+from frequency_vla.config import episode_seed, load_config, prediction_horizon, upstream_spec, validate_horizons
 from frequency_vla.logging_utils import digest
 
 
@@ -72,11 +72,16 @@ def test_bootstrap_pairs_keep_repeated_seeds_in_same_state_block():
 
 
 @pytest.fixture
-def official_fixture(monkeypatch):
+def official_fixture(monkeypatch, request):
     root = Path(os.environ.get("OPENPI_DIR", "/nonexistent"))
     if not (root / "examples/libero/main.py").exists():
         pytest.skip("Set OPENPI_DIR to run integration tests against the actual pinned upstream loop")
-    spec = upstream_spec(root, load_config())
+    options = getattr(request, "param", {})
+    config = load_config()
+    if options.get("prediction_horizon"):
+        config = load_config(Path(__file__).resolve().parents[1] / "configs/prediction50.yaml")
+        monkeypatch.setattr(evaluator, "load_config", lambda: config)
+    spec = upstream_spec(root, config)
     assert spec["native_prediction_horizon"] == 10
     assert spec["flow_steps"] == 10
     metadata = {"experiment_spec": spec, "inference_fingerprint": digest(spec)}
@@ -108,7 +113,7 @@ def official_fixture(monkeypatch):
 
         def step(self, action):
             self.actions.append(action)
-            return observation(), 0., len(self.actions) == 23, {}
+            return observation(), 0., len(self.actions) == options.get("terminal_step", 23), {}
 
         def close(self):
             self.closed = True
@@ -133,7 +138,7 @@ def official_fixture(monkeypatch):
             requests.append(request)
             if fail_infer[0]:
                 raise RuntimeError("synthetic inference failure")
-            return {"actions": np.tile(np.arange(10)[:, None], (1, 7)).astype(float), "inference_fingerprint": metadata["inference_fingerprint"]}
+            return {"actions": np.tile(np.arange(prediction_horizon(spec))[:, None], (1, 7)).astype(float), "inference_fingerprint": metadata["inference_fingerprint"]}
 
     def module(name, **attrs):
         m = types.ModuleType(name)
@@ -214,3 +219,35 @@ def test_aggregation_and_all_three_plots_from_actual_loop_fixtures(official_fixt
     assert (aggregated / "replanning_gaps.csv").is_file()
     for name in ["success_vs_replan_horizon.png", "success_vs_policy_calls.png", "relative_performance_drop.png"]:
         assert (tmp_path / "figures/diagnostic/libero_10" / name).read_bytes().startswith(b"\x89PNG")
+
+
+@pytest.mark.parametrize("official_fixture", [{"prediction_horizon": 50, "terminal_step": 73}], indirect=True)
+def test_fixed_p50_executes_thirty_then_discards_twenty_and_pairs_with_h5(official_fixture, tmp_path, monkeypatch):
+    from frequency_vla import analysis
+    root, created, requests, _ = official_fixture
+    for h in [5, 30]:
+        args = arguments(root, tmp_path, h)
+        args.required_horizon = 30
+        evaluator.run(args)
+    h5, h30 = created
+    assert [a[0] for a in h5.episodes[0][10:]] == list(range(5)) * 12 + [0, 1, 2]
+    assert [a[0] for a in h30.episodes[0][10:]] == list(range(30)) * 2 + [0, 1, 2]
+    rows = [json.loads(line) for path in tmp_path.rglob("*.jsonl") for line in path.read_text().splitlines()]
+    assert all(r["native_prediction_horizon"] == 10 and r["prediction_horizon"] == 50 and r["action_chunk_length"] == 50 for r in rows)
+    validate_records(rows)
+    changed = copy.deepcopy(rows)
+    changed[0]["prediction_horizon"] = 10
+    with pytest.raises(ValueError, match="different prediction horizons"):
+        validate_records(changed)
+    monkeypatch.setenv("FREQUENCY_CONFIG", str(Path(__file__).resolve().parents[1] / "configs/prediction50.yaml"))
+    monkeypatch.setattr(sys, "argv", ["aggregate", "--results-dir", str(tmp_path), "--mode", "diagnostic", "--allow-partial"])
+    analysis.main()
+    out = tmp_path / "aggregated/diagnostic/libero_10"
+    validation = json.loads((out / "validation.json").read_text())
+    assert validation["prediction_horizon"] == 50
+    assert validation["measured_horizons"] == [5, 30]
+    assert validation["unsupported_requested_horizons"] == []
+    assert not validation["official_prediction_horizon_unchanged"]
+    text = (out / "FINDINGS.md").read_text()
+    assert "Explicit fixed-P extension" in text
+    assert "No model/config override" not in text

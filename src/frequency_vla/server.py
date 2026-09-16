@@ -1,4 +1,4 @@
-"""Official policy construction/server with provenance and paired inference RNG only."""
+"""Official policy loader with provenance, paired RNG, and explicit fixed-P extensions."""
 from __future__ import annotations
 
 import argparse
@@ -12,7 +12,7 @@ import platform
 import subprocess
 import sys
 
-from .config import load_config, upstream_spec
+from .config import load_config, prediction_horizon, upstream_spec
 from .logging_utils import digest, write_json
 
 
@@ -49,19 +49,27 @@ def main():
     native_config = official_config.get_config(config["training_config"])
     if native_config.model.action_horizon != spec["native_prediction_horizon"]:
         raise ValueError("Runtime model configuration differs from source preflight")
-    # Same factory and no sample_kwargs overrides as scripts/serve_policy.py.
-    policy = serve_policy.create_policy(serve_policy.Args(
-        env=serve_policy.EnvMode.LIBERO,
-        policy=serve_policy.Checkpoint(config=config["training_config"], dir=str(checkpoint)),
-    ))
-    if policy._model.action_horizon != spec["native_prediction_horizon"] or policy._sample_kwargs:
-        raise ValueError("Native prediction horizon or sampling defaults changed")
+    effective_config = native_config
+    if "prediction_horizon" in config:
+        # Same official loader, weights, transforms and sampler. Only the static
+        # sequence length changes; never mutate the upstream checkout/config.
+        from openpi.policies import policy_config
+        effective_config = dataclasses.replace(native_config,
+            model=dataclasses.replace(native_config.model, action_horizon=prediction_horizon(spec)))
+        policy = policy_config.create_trained_policy(effective_config, str(checkpoint))
+    else:
+        policy = serve_policy.create_policy(serve_policy.Args(
+            env=serve_policy.EnvMode.LIBERO,
+            policy=serve_policy.Checkpoint(config=config["training_config"], dir=str(checkpoint)),
+        ))
+    if policy._model.action_horizon != prediction_horizon(spec) or policy._sample_kwargs:
+        raise ValueError("Configured prediction horizon or sampling defaults changed")
     packages = {d.metadata["Name"]: d.version for d in importlib.metadata.distributions()}
     core_packages = {k: v for k, v in packages.items() if k.lower() in {
         "jax", "jaxlib", "jax-cuda12-plugin", "jax-cuda12-pjrt", "flax", "numpy", "pillow",
         "opencv-python", "sentencepiece", "orbax-checkpoint", "tensorstore", "ml-dtypes"}}
     spec.update({"checkpoint_object_manifest_sha256": digest(download_manifest),
-                 "model_config": dataclasses.asdict(native_config.model),
+                 "model_config": dataclasses.asdict(effective_config.model),
                  "sample_kwargs": {}, "backend": "jax", "dtype": "bfloat16",
                  "rng_protocol": "fold_in(episode_key,call_index); native Policy.infer split; v1",
                  "resize_size": config["resize_size"], "num_steps_wait": config["num_steps_wait"],
@@ -82,7 +90,7 @@ def main():
             control = observation.pop("_frequency_vla", None)
             if control is None:
                 raise ValueError("Use the instrumented evaluator so inference RNG and provenance are recorded")
-            # Only the RNG key changes. Weights, preprocessing, sampler, and P are untouched.
+            # Only RNG changes between calls; P is fixed for this entire server.
             policy._rng = jax.random.fold_in(jax.random.key(int(control["episode_seed"])), int(control["call_index"]))
             result = policy.infer(observation)
             result["inference_fingerprint"] = fingerprint

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import ast
 import io
+import os
 from pathlib import Path
 import tokenize
 
@@ -13,7 +14,8 @@ from .logging_utils import file_digest, git_commit
 CONFIG_PATH = Path(__file__).resolve().parents[2] / "configs" / "frequency_sweep.yaml"
 
 
-def load_config(path=CONFIG_PATH):
+def load_config(path=None):
+    path = path or os.environ.get("FREQUENCY_CONFIG") or CONFIG_PATH
     with open(path) as f:
         return yaml.safe_load(f)
 
@@ -76,10 +78,20 @@ def upstream_spec(openpi_dir, config):
         raise ValueError("Upstream default flow steps changed")
     files = ["examples/libero/main.py", "examples/libero/README.md", "scripts/serve_policy.py",
              "src/openpi/training/config.py", "src/openpi/models/pi0.py", "uv.lock"]
-    return {"openpi_commit": commit, "libero_commit": libero_commit,
+    spec = {"openpi_commit": commit, "libero_commit": libero_commit,
             "native_prediction_horizon": horizon, "flow_steps": flow_steps,
             "training_config": config["training_config"], "checkpoint": config["checkpoint"],
             "source_sha256": {p: file_digest(root / p) for p in files}}
+    if "prediction_horizon" in config:
+        requested = config["prediction_horizon"]
+        if type(requested) is not int or requested < 1:
+            raise ValueError("prediction_horizon must be a positive integer")
+        spec.update(prediction_horizon=requested, protocol="fixed_prediction_horizon_extension")
+    return spec
+
+
+def prediction_horizon(spec):
+    return spec.get("prediction_horizon", spec["native_prediction_horizon"])
 
 
 def validate_horizons(horizons, prediction_horizon):
@@ -90,10 +102,10 @@ def validate_horizons(horizons, prediction_horizon):
     invalid = [h for h in horizons if h > prediction_horizon]
     if invalid:
         raise ValueError(
-            "PROTOCOL BLOCKED: official pi05_libero has native prediction horizon P={}. "
+            "PROTOCOL BLOCKED: configured prediction horizon P={}. "
             "Requested H={} exceeds its action chunk. No padding, action repetition, hidden "
-            "policy calls, or prediction-horizon override is allowed. "
-            "Explicitly select supported horizons to run a partial experiment.".format(prediction_horizon, invalid)
+            "policy calls, or automatic prediction-horizon override is allowed. "
+            "Select supported horizons or explicitly select an extension config.".format(prediction_horizon, invalid)
         )
 
 

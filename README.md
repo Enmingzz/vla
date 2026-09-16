@@ -1,8 +1,9 @@
 # π0.5 LIBERO replanning-frequency validation
 
 Evaluation only, using the official Physical Intelligence OpenPI checkpoint and its
-existing LIBERO action-execution loop. No training, distillation, Flow-OPD, model
-changes, attention changes, action repetition, or prediction-horizon overrides.
+existing LIBERO action-execution loop. No training, distillation, Flow-OPD,
+attention-rule changes, or action repetition. The default protocol preserves the
+official prediction horizon; an explicitly selected P=50 extension is documented below.
 
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures
@@ -16,6 +17,61 @@ The completed main result (seed 7, 50 episodes/task) is **H=5: 92.0%, H=10: 95.0
 with 51.8% fewer policy calls per episode at H=10. See [FINDINGS.md](FINDINGS.md)
 and the [result archive](results/README.md). The measured comparison does not
 support H=5 as the stronger teacher.
+
+## Explicit P=50 extension
+
+Following the native-P experiment, a separate requested extension fixes inference
+P=50 and compares H=5 with H=30. Select `configs/prediction50.yaml` explicitly;
+the default `frequency_sweep.yaml` and original results remain the native-P protocol.
+The official loader receives a dataclass copy with only `model.action_horizon=50`
+changed. It restores the same checkpoint, checking all required parameter shapes.
+Flow integration remains 10 steps and the official evaluator executes the first H
+actions of each returned 50-step chunk. No actions are padded or repeated.
+
+**Interpretation:** this checkpoint's official fine-tuning configuration uses P=10.
+P=50 is sequence-length extrapolation, and even the first five actions can change
+because action tokens attend to one another. Always compare H values at the same P;
+do not attribute a comparison of P=10/H=5 versus P=50/H=30 solely to replanning.
+The 92.4% official reference is only a contextual health screen for this extension.
+Both smoke conditions run even if P=50/H=5 fails that screen; such failure prevents
+claiming a strong teacher. This is an evaluation extension, not new training.
+
+On Fir, after installation, submit the paired smoke test (10 episodes/task/H):
+
+```bash
+source scripts/env.sh
+export FREQUENCY_CONFIG="$PWD/configs/prediction50.yaml"
+export RUN_RESULTS="$PWD/results/p50-rerun"
+mkdir -p "$RUN_RESULTS/logs"
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH \
+  "$LIBERO_VENV/bin/python" scripts/preflight.py
+sbatch --job-name=freq-p50-smoke --account=rrg-btaati --nodes=1 --ntasks=1 \
+  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=96G --time=02:00:00 \
+  --output="$RUN_RESULTS/logs/slurm-%j.log" \
+  scripts/fir_job.sh smoke --horizons 5 30 --workers 4
+```
+
+For a manual GPU session, export the same `FREQUENCY_CONFIG` in **both** server
+and evaluator shells. Start the server with `bash scripts/serve_policy.sh`; then:
+
+```bash
+# One H, or both paired conditions. Choose a fresh result path for each run.
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+  -m frequency_vla.evaluator --mode smoke --horizon 30 --results-dir results/p50-one-h
+bash scripts/run_smoke_test.sh --horizons 5 30 --workers 4 --results-dir results/p50-paired
+
+# Recreate extension tables, plots and its separate findings file, without a GPU.
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+  scripts/aggregate_results.py --mode smoke --results-dir results/p50-paired \
+  --findings-out results/p50-paired/FINDINGS.md
+
+# Return to the original, unchanged-P protocol.
+unset FREQUENCY_CONFIG
+```
+
+Every episode records both official P=10 and effective inference P=50, the actual
+chunk length, and a distinct inference fingerprint. Aggregation refuses mixed P
+or mixed config fingerprints. The native-P archive is not pooled with this experiment.
 
 Inspected upstream sources:
 

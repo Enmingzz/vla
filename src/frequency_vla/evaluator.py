@@ -16,7 +16,7 @@ import sys
 import time
 from unittest.mock import patch
 
-from .config import episode_seed, load_config, upstream_spec, validate_horizons
+from .config import episode_seed, load_config, prediction_horizon, upstream_spec, validate_horizons
 from .logging_utils import append_record, digest, file_digest, write_json
 
 
@@ -37,11 +37,11 @@ def validate_call_schedule(control_steps, policy_calls, horizon, call_steps):
                            + str((control_steps, policy_calls, horizon, call_steps)))
 
 
-def check_chunk(actions, native_horizon, required_horizon):
+def check_chunk(actions, prediction_length, required_horizon):
     import numpy as np
     a = np.asarray(actions)
-    if a.ndim != 2 or a.shape[1] != 7 or a.shape[0] != native_horizon or a.shape[0] < required_horizon:
-        raise RuntimeError("Invalid action chunk {}; require native P={} and maximum H={}".format(a.shape, native_horizon, required_horizon))
+    if a.ndim != 2 or a.shape[1] != 7 or a.shape[0] != prediction_length or a.shape[0] < required_horizon:
+        raise RuntimeError("Invalid action chunk {}; require configured P={} and maximum H={}".format(a.shape, prediction_length, required_horizon))
     if not np.isfinite(a).all():
         raise RuntimeError("Non-finite policy actions")
 
@@ -68,6 +68,7 @@ class EpisodeTracker:
                         "inference_fingerprint": self.metadata["inference_fingerprint"],
                         "evaluation_fingerprint": self.metadata["evaluation_fingerprint"],
                         "native_prediction_horizon": self.metadata["experiment_spec"]["native_prediction_horizon"],
+                        "prediction_horizon": prediction_horizon(self.metadata["experiment_spec"]),
                         "episode_rng_seed": episode_seed(self.args.seed, self.args.suite, self.task_id, self.episode_index)}
 
 
@@ -116,7 +117,8 @@ class CountingClient:
         result = self.client.infer(request)
         if result.get("inference_fingerprint") != row["inference_fingerprint"]:
             raise RuntimeError("Policy changed during evaluation")
-        check_chunk(result["actions"], row["native_prediction_horizon"], self.tracker.args.required_horizon)
+        check_chunk(result["actions"], row["prediction_horizon"], self.tracker.args.required_horizon)
+        row["action_chunk_length"] = len(result["actions"])
         row["policy_call_control_steps"].append(row["controlled_environment_steps"])
         row["policy_calls"] += 1
         return result
@@ -132,7 +134,7 @@ class FatalUpstreamErrors(logging.Handler):
 def run(args):
     config = load_config()
     spec = upstream_spec(args.openpi_dir, config)
-    validate_horizons([args.horizon, args.required_horizon] if args.horizon != args.required_horizon else [args.horizon], spec["native_prediction_horizon"])
+    validate_horizons([args.horizon, args.required_horizon] if args.horizon != args.required_horizon else [args.horizon], prediction_horizon(spec))
     if args.suite not in config["supported_suites"]:
         raise ValueError("Unsupported suite")
     if args.episodes < 1 or args.episodes > 50:

@@ -5,5 +5,6 @@ __pycache__/
 .runtime/
 results/videos/**
 results/logs/**
+results/**/logs/**
 !results/videos/.gitkeep
 *.mp4

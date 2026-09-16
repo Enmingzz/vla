@@ -1,8 +1,10 @@
 # Result archive
 
 These are real OpenPI/LIBERO rollouts on Fir H100 GPUs, collected on 2026-09-15.
-Only H=5 and H=10 are supported by the unchanged official `pi05_libero` config
-(native prediction horizon P=10). No results exist for H=20/30/40/50.
+This page describes the original native-P archive. Only H=5 and H=10 are supported
+by the unchanged official `pi05_libero` config (native prediction horizon P=10).
+No native-P results exist for H=20/30/40/50. The separately requested fixed-P=50
+extension uses `p50/`; it must not be pooled with this archive.
 
 | Mode | Slurm job | Episodes per task per H | Seed | Task workers | Status |
 |---|---:|---:|---:|---:|---|
