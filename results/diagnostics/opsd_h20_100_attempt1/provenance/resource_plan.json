@@ -1,0 +1,13 @@
+{
+  "gpus": 1,
+  "gpu_type": "h100",
+  "cpus": 8,
+  "memory_gib": 48,
+  "walltime_limit": "01:00:00",
+  "optimizer_steps": 100,
+  "batch_size": 4,
+  "baseline_episodes": 100,
+  "trained_episodes": 100,
+  "project_commit": "94fdabdfe59bca90a54dab06d3502c5bf508591c",
+  "reason": "One sequential allocation, real diagnostic before full evaluations/training; bounds on every stage; no overlapping GPU requests."
+}

@@ -78,3 +78,16 @@ training resources. Bound startup and diagnostic stages, terminate on any
 worker/gradient error, and record failed as well as successful GPU time. Stop the
 first experiment after the 100-step evaluation; do not launch an open-ended
 hyperparameter sweep or silently expand the budget.
+
+## Numerical diagnostic refinement before any formal training
+
+The first real-model diagnostic (job 60044854, 4m55s, no formal updates or
+evaluation) stopped because the offset-0 MSE from the differentiated program
+exceeded 1e-5. Its raw MSE was not captured before the exception, so the cause
+was not yet established. The refinement compares identical teacher/student
+inputs through the **same compiled forward function** (MSE tolerance 1e-8), and
+separately records the difference between that function and the primal used by
+the gradient program. Fresh-observation supervision must exceed this measured
+numeric MSE by a factor of five before proceeding. This diagnoses bfloat16/XLA
+differences without conflating them with temporal alignment errors. No success
+rate was used to revise this diagnostic.

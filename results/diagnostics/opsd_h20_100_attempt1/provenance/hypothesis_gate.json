@@ -1,0 +1,34 @@
+{
+  "gap": {
+    "gap_ci95_high": "0.51",
+    "gap_ci95_low": "0.33",
+    "mcnemar_p_holm": "9.094947017729282e-13",
+    "mcnemar_p_two_sided": "4.547473508864641e-13",
+    "paired_episodes": "100",
+    "policy_calls_saved_per_episode": "37.3",
+    "relative_call_density_saved": "0.7488556133148336",
+    "relative_policy_calls_saved": "0.6222889556222889",
+    "replanning_gap": "0.42",
+    "student_H": "20",
+    "student_only_successes": "0",
+    "student_success_rate": "0.46",
+    "teacher_H": "5",
+    "teacher_only_successes": "42",
+    "teacher_success_rate": "0.88"
+  },
+  "validation": {
+    "baseline_gate_passed": true,
+    "complete_for_measured_horizons": true,
+    "inference_fingerprint": "e253594495c5b9a33f30d6374deb4a55cfdf1025871018d96247a6ea9f74c2d6",
+    "measured_horizons": [
+      5,
+      15,
+      20
+    ],
+    "native_prediction_horizon": 10,
+    "official_prediction_horizon_unchanged": false,
+    "paired_checks_passed": true,
+    "prediction_horizon": 50,
+    "unsupported_requested_horizons": []
+  }
+}

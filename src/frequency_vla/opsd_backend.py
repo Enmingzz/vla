@@ -80,13 +80,14 @@ class TemporalOPSD:
                 loss = 0.5 * jnp.sum(squared * mask[..., None]) / (jnp.sum(mask) * 7)
                 per_offset = jnp.sum((squared * mask[..., None]).reshape((-1, 4, 5, 7)), axis=(0, 2, 3))
                 per_offset /= jnp.maximum(1, jnp.sum(mask.reshape((-1, 4, 5)), axis=(0, 2)) * 7)
-                return loss, per_offset
+                return loss, (per_offset, prediction)
 
-            (loss, per_offset), grads = jax.value_and_grad(loss_fn, has_aux=True)(master)
+            (loss, (per_offset, prediction)), grads = jax.value_and_grad(loss_fn, has_aux=True)(master)
             updates, state = self.tx.update(grads, opt_state, master)
             return optax.apply_updates(master, updates), state, {
                 "loss": loss, "grad_norm": optax.global_norm(grads),
-                "update_norm": optax.global_norm(updates), "offset_mse": per_offset}
+                "update_norm": optax.global_norm(updates), "offset_mse": per_offset,
+                "forward_prediction": prediction}
 
         self.native, self.trace, self.field, self.update = map(jax.jit, [native, trace, field, update])
         self.set_phase("baseline")
@@ -211,10 +212,32 @@ class TemporalOPSD:
         info = jax.device_get(info)
         if not all(np.isfinite(np.asarray(x)).all() for x in info.values()):
             raise RuntimeError("Non-finite training loss or gradient; aborting before state update")
+        gradient_program_prediction = info.pop("forward_prediction")
         if float(info["grad_norm"]) == 0 or float(info["update_norm"]) == 0:
             raise RuntimeError("Zero distillation gradient/update; verify the teacher information advantage")
-        if pending["diagnostic"] and float(info["offset_mse"][0]) > 1e-5:
-            raise RuntimeError("Identical initial teacher/student offset-0 fields disagree")
+        if pending["diagnostic"]:
+            # Compare like with like. XLA can compile a different bfloat16 primal
+            # when producing backward residuals; that is a separate numeric check.
+            forward = np.asarray(self.field(self.master, self.frozen,
+                pending["observation"], student_z, timestep))[:, :20, :7]
+            target_array, mask_array = np.asarray(target), np.asarray(mask)
+            same_program_mse = float(np.mean(np.square(forward[:, :5] - target_array[:, :5])))
+            backward_primal_mse = float(np.mean(np.square(forward - gradient_program_prediction)))
+            feedback_mse = float(np.sum(np.square(forward[:, 5:] - target_array[:, 5:]) * mask_array[:, 5:, None])
+                                 / max(1, np.sum(mask_array[:, 5:]) * 7))
+            metrics = {"same_program_offset0_mse": same_program_mse,
+                "forward_vs_backward_primal_mse": backward_primal_mse,
+                "fresh_feedback_mse": feedback_mse,
+                "required_signal_to_numeric_ratio": 5,
+                "signal_to_numeric_ratio": feedback_mse / max(backward_primal_mse, 1e-20),
+                "gradient_program_offset_mse": np.asarray(info["offset_mse"]).tolist(),
+                "flow_time_index": pending["time_index"], "trace_check": self.trace_check}
+            write_json(self.root / "provenance/numeric_diagnostic.json", metrics)
+            logging.info("OPSD numeric diagnostic: %s", metrics)
+            if same_program_mse > 1e-8:
+                raise RuntimeError("Identical teacher/student inputs differ in the same compiled forward function")
+            if feedback_mse <= max(1e-10, 5 * backward_primal_mse):
+                raise RuntimeError("Fresh-observation supervision does not exceed compiled numeric noise sufficiently")
         self.master, self.opt_state = params, optimizer
         self.ema = jax.tree.map(lambda old, new: self.config["ema_decay"] * old +
                                (1 - self.config["ema_decay"]) * new, self.ema, self.master)

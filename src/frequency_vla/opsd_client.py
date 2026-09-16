@@ -165,6 +165,10 @@ def main():
             if filename.exists():
                 raise FileExistsError(str(filename))
             np.savez(filename, **arrays)
+            append_record(Path(args.results_dir) / "rollout_inputs.jsonl", {
+                "optimizer_step": step + 1, "diagnostic": diagnostic, "initial_states": identities,
+                "action_chunk_sha256": array_hash(actions), "rollout_path": str(filename.resolve()),
+                "flow_time_index": response["flow_time_index"]})
             result = request("update", {"future_observations": future},
                              rollout_token=response["rollout_token"], valid_steps=valid)
             record = {"optimizer_step": step + 1, "diagnostic": diagnostic, "initial_states": identities,

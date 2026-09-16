@@ -1,0 +1,11 @@
+Job ID: 60044854
+Cluster: fir
+User/Group: enmingzz/enmingzz
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 8
+CPU Utilized: 00:07:14
+CPU Efficiency: 18.39% of 00:39:20 core-walltime
+Job Wall-clock time: 00:04:55
+Memory Utilized: 28.48 GB
+Memory Efficiency: 59.34% of 48.00 GB (48.00 GB/node)
