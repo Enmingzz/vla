@@ -18,6 +18,12 @@
     "formal_evaluations_deferred": true,
     "original_analysis_job_cancelled": "60147552",
     "cpu_preflight_job": "60251844",
-    "cpu_checkpoint_validation_job": "60252387"
+    "cpu_checkpoint_validation_job": "60252387",
+    "temporary_user_hold_used": true,
+    "age_credit_preserved": false,
+    "last_observed_pre_hold_age_priority": 262,
+    "post_release_age_priority": 0,
+    "post_release_eligible_time_local": "2026-09-17T14:46:05",
+    "note": "The original job ID and submission time are retained, but Slurm restarts age accrual after the temporary user hold. Fairshare history was not reset."
   }
 }
