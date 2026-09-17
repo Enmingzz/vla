@@ -10,8 +10,5 @@
   "script_sha256": {
     "finish_round3.sh": "a35ee8c4266930105022928cce43ed49ca2956bf35a811fb1bd8b4e5e52e6f81",
     "finish_round3.py": "f4ef5c9335f87904de6df231a78896c969b1b996d0135674ee30321341723651"
-  },
-  "state": "CANCELLED",
-  "ran": false,
-  "reason": "User requested training first; formal evaluation and analysis are deferred."
+  }
 }

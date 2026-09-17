@@ -4,8 +4,20 @@
   "gpus": 1,
   "cpus": 8,
   "memory_gib": 64,
-  "time_limit": "02:30:00",
+  "time_limit": "01:00:00",
   "account": "rrg-btaati",
   "parent_checkpoint": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/step_500",
-  "checkpoint_root": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3"
+  "checkpoint_root": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3",
+  "execution_mode": "train_only",
+  "scheduling_amendment": {
+    "requested_utc": "2026-09-17T21:39:46.698592+00:00",
+    "original_time_limit": "02:30:00",
+    "new_time_limit": "01:00:00",
+    "same_job_id": true,
+    "original_submit_time_retained": true,
+    "formal_evaluations_deferred": true,
+    "original_analysis_job_cancelled": "60147552",
+    "cpu_preflight_job": "60251844",
+    "cpu_checkpoint_validation_job": "60252387"
+  }
 }

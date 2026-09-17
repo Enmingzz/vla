@@ -1,0 +1,10 @@
+{
+  "mode": "train_only",
+  "wall_time_limit_seconds": 3600,
+  "checkpoint_reserve_seconds": 300,
+  "requested_start_step": 500,
+  "requested_end_step": 1000,
+  "formal_evaluations_in_this_allocation": 0,
+  "evaluation_deferred": true,
+  "maximum_concurrent_gpus": 1
+}

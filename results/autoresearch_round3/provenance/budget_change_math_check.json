@@ -1,0 +1,18 @@
+{
+  "reference_commit": "786563d1b80ee4b86096ad49a1ad220f850201ed",
+  "unchanged_function_ast_sha256": {
+    "make_model": "104c2e6586dd99cc513d1eaf1c87f3706f96205a1bc8a73bb19382ff57564c14",
+    "native": "7e093ba2d15287341b9fc71d13393bf200d819f052bc097b0617053b4fd64734",
+    "trace": "badd31b062ede64a6bcae5b896c5a4ad4fcf40a0b68ca8b1c5031bbb662f80c0",
+    "field": "8d10d0cad24ad77ba61067ad0eeb2a82832f8a4fe79ea250305933520457fae6",
+    "update": "0c23f50818c265582932f56bfff7fdfa908f2c2170c331ff9d114f81c88641c2",
+    "observations": "e87178f42c2976f063f6ab27809f2d31a5ad70aad21e4f3706ba22b16e56fcce",
+    "environment_actions": "2770fffbce47902ace563f26b4e6a497a5126b9a5e97cade9ad846b9919d338d",
+    "rollout": "e247d5ad223a9cec9a7504c6fe965c82dc163c3704127367224a8bc6cb6c581f",
+    "learn": "0782713c0ac49a130f22a5a08c60cdd099883b6b187aa6a0ac8c1b1e6f3aa254",
+    "reset_after_diagnostic": "13eca1011d244e155d1373aa40a350d30240086c194c5de5edd25ced3a4649fd",
+    "resume": "7133cddd7e0fbb2f8c0f13d29e2333931b86baeb6aee65fc078c3a93671cbe3b",
+    "save": "e7513d9c998de38c033c46f2efe41a4b397def8bafde2bb5dc18dd6b9d59d177"
+  },
+  "only_backend_change": "Enable checkpoint export at a completed intermediate update within the continuation range."
+}

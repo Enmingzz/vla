@@ -1,0 +1,12 @@
+{
+  "mode": "train_only",
+  "wall_time_limit_seconds": 3600,
+  "checkpoint_reserve_seconds": 300,
+  "requested_start_step": 500,
+  "requested_end_step": 1000,
+  "formal_evaluations_in_this_allocation": 0,
+  "evaluation_deferred": true,
+  "maximum_concurrent_gpus": 1,
+  "requested_utc": "2026-09-17T21:37:47.526071+00:00",
+  "user_request": "Train first using a one-hour allocation; keep the 500 additional-update target."
+}

@@ -44,6 +44,12 @@ ordered exploratory prefix separate from the [interrupted full-suite attempt](re
 The amended protocol, original full-suite plan and exact commands are in
 [LIBERO90_TRANSFER.md](LIBERO90_TRANSFER.md).
 
+The next requested continuation targets **500 → 1000 updates at H=20**. At the
+user's request, it uses a **one-hour training-only allocation**, with a checkpoint
+save reserve and no benchmark evaluation in that job. The comparison is deferred;
+there is no new success-rate result yet. See the [execution protocol](AUTORESEARCH_ROUND3.md)
+and [round-three archive](results/autoresearch_round3/README.md).
+
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures
 **P=10**, not 50. Therefore only **H=5 and H=10** from the requested sweep are

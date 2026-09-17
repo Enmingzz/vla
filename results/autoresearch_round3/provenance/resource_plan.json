@@ -1,13 +1,17 @@
 {
   "checkpoint_load_and_training_on_login_node": false,
   "cpus": 8,
-  "exact_additional_optimizer_updates": 500,
-  "formal_evaluation_episodes": 200,
+  "formal_evaluation_episodes": 0,
   "gpu": "H100 80GB",
   "maximum_concurrent_gpus": 1,
   "memory_gib": 64,
   "release_on_completion_or_error": true,
-  "simulator_evaluation_workers": 8,
   "simulator_training_processes": 4,
-  "wall_time_limit_seconds": 9000
+  "wall_time_limit_seconds": 3600,
+  "deferred_evaluation_episodes": 200,
+  "checkpoint_reserve_seconds": 300,
+  "save_completed_progress_if_time_budget_exhausted": true,
+  "target_additional_optimizer_updates": 500,
+  "maximum_additional_optimizer_updates": 500,
+  "deferred_evaluation_workers": 8
 }

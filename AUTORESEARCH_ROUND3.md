@@ -13,7 +13,17 @@ batch size=4, AdamW learning rate=1e-5, EMA decay=0.9999. Train LIBERO-10 only,
 using the existing eligible start-state pool 10–19 and beginning at index 16.
 The actual task/layout coverage will be reported from recorded rollouts.
 
-Only two formal conditions are requested: step 500 and step 1000, both H=20,
+**Execution amendment, 2026-09-17:** the user requested training first in a
+one-hour allocation. The original pending GPU job is amended in place to one
+hour and training only. It restores step 500, aims for step 1000, exports the
+checkpoint, and releases the GPU. No evaluation runs in this allocation.
+The actual Slurm start/end timestamps define the budget, including model load
+and diagnostics. Five minutes are reserved for checkpoint export. If the budget
+is reached, finish the current update and save the actual completed step with
+FP32 student weights, EMA and Adam state; report any shortfall from 500 updates.
+This intermediate save is for resumption, not performance-based selection.
+
+The deferred comparison still has only two formal conditions: step 500 and step 1000, both H=20,
 10 tasks × 10 episodes, seed 27, official state indices 30–39. The primary
 comparison is paired step-1000 minus step-500 success, with a within-task paired
 bootstrap interval and exact McNemar test. Also report per-task changes, action
@@ -43,8 +53,10 @@ now explicitly activates its own GL context before stepping/closing. The failed
 CPU diagnostic is retained and the corrected serial/parallel images must match
 exactly. The historical EGL training archives are not modified; the extent of
 any historical image effect has not been established by this OSMesa diagnostic.
-Only one H100 is allocated. Request 8 CPUs / 64 GiB / 2h30 maximum; release on
-completion or failure. No automatic extra training follows either outcome.
+Only one H100 is allocated. Request 8 CPUs / 64 GiB / **1 hour maximum**;
+release on completion or failure. No automatic extra training follows either
+outcome. A separate CPU job checks the saved files, update count and resource
+accounting; success-rate evaluation is deferred.
 
 ## Reproduction
 
@@ -62,6 +74,7 @@ export STUDY_PLAN="$PWD/configs/autoresearch_round3.yaml"
 export MUJOCO_GL=osmesa PYOPENGL_PLATFORM=osmesa LP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
 export FREQUENCY_OSMESA_LIBRARY_DIR="$FREQUENCY_WORK/native_osmesa/root/usr/lib64"
 mkdir -p "$RUN_RESULTS/logs" "$RUN_RESULTS/provenance"
+cp configs/train_only_one_hour.json "$RUN_RESULTS/provenance/execution_request.json"
 
 env -u PYTHONPATH -u PYTHONHOME LD_LIBRARY_PATH="$FREQUENCY_OSMESA_LIBRARY_DIR" \
   "$LIBERO_VENV/bin/python" tests/check_parallel_osmesa.py \
@@ -72,16 +85,28 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
   --parent-results results/opsd_h20_100 results/autoresearch_round2 \
   --parent-checkpoint "$PARENT_CHECKPOINT" --output "$RUN_RESULTS/provenance/split_audit.json"
 
-sbatch --job-name=vla-opsd-1000 --account=rrg-btaati --nodes=1 --ntasks=1 \
-  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=64G --time=02:30:00 \
-  --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_study_job.sh
+TRAINING_JOB=$(sbatch --parsable --job-name=vla-opsd-train --account=rrg-btaati --nodes=1 --ntasks=1 \
+  --gpus-per-node=h100:1 --cpus-per-task=8 --mem=64G --time=01:00:00 \
+  --output="$RUN_RESULTS/logs/slurm-%j.log" scripts/fir_study_job.sh)
+export TRAINING_JOB
+python3 - <<'PY'
+import json, os
+from pathlib import Path
+root = Path(os.environ['RUN_RESULTS']) / 'provenance'
+(root / 'submission.json').write_text(json.dumps({'job_id': os.environ['TRAINING_JOB'].split(';')[0]}))
+PY
 
-env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
-  -m frequency_vla.study_analysis --results-dir "$RUN_RESULTS"
+sbatch --job-name=vla-train-check --account=def-btaati --nodes=1 --ntasks=1 \
+  --cpus-per-task=1 --mem=4G --time=00:05:00 \
+  --dependency="afterok:${TRAINING_JOB%%;*}" --kill-on-invalid-dep=yes \
+  --output="$RUN_RESULTS/logs/training-validation-%j.log" scripts/fir_training_summary.sh
 ```
 
 The existing backend verifies the complete parent checkpoint, frozen backbone,
 Adam counters, FP32 master state and native flow implementation on resume.
 The exported step-1000 checkpoint must reproduce native inference exactly on a
 save/reload probe. All new rollouts, teacher views and actions are archived;
-formal test episodes save videos and initial-state/observation fingerprints.
+formal test episodes will save videos and initial-state/observation fingerprints
+when the deferred evaluation is run. `provenance/training_only_validation.json`
+and `TRAINING_STATUS.md` distinguish saved partial progress from 500 completed
+updates, and neither claims a measured success-rate improvement.

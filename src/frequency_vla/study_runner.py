@@ -64,8 +64,31 @@ def main():
             seen.add(identifier)
 
     if plan.get("continuation_only"):
+        request_path = root / "provenance/execution_request.json"
+        execution = json.loads(request_path.read_text()) if request_path.exists() else None
+        deadline = None
+        if execution is not None:
+            from .execution_budget import training_deadline
+            deadline = training_deadline(execution, os.environ)
         client("diagnostic", limit=plan["diagnostic_timeout_seconds"])
         client("resume", "--checkpoint", args.parent_checkpoint, limit=300)
+        if execution is not None:
+            endpoint = plan["milestones"][-1]
+            client("train", "--end-step", str(endpoint), "--stop-at-unix-time", str(deadline),
+                   name="train_to_" + str(endpoint), limit=max(60, int(deadline - time.time()) + 60))
+            progress = json.loads((root / "provenance/training_progress.json").read_text())
+            actual = progress["last_completed_step"]
+            if actual > plan["resume_step"]:
+                client("save", name="save_" + str(actual), limit=240)
+            client("status", name="memory_at_" + str(actual), limit=30)
+            checkpoint = json.loads((root / "provenance" / ("step_" + str(actual) + ".json")).read_text())
+            write_json(root / "provenance/training_complete.json", {
+                **progress, "complete": progress["requested_updates_complete"],
+                "checkpoint": checkpoint, "plan_sha256": digest(plan),
+                "execution_request_sha256": digest(execution), "evaluation_complete": False,
+                "deferred_conditions": sorted(condition_id(c) for c in matrix)})
+            print("Training-only allocation finished at step {}; checkpoint saved, evaluation deferred.".format(actual), flush=True)
+            return
         evaluate(plan["resume_step"], confirmation=True)
         endpoint = plan["milestones"][-1]
         client("train", "--end-step", str(endpoint), name="train_to_" + str(endpoint),

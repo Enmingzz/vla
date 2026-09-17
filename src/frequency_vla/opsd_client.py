@@ -13,7 +13,7 @@ import numpy as np
 
 from .config import load_config
 from .evaluator import array_hash, check_chunk
-from .logging_utils import append_record, digest
+from .logging_utils import append_record, digest, write_json
 from .opsd_protocol import validate_training_config
 
 
@@ -136,6 +136,8 @@ def main():
     parser.add_argument("--checkpoint")
     parser.add_argument("--snapshot", type=int)
     parser.add_argument("--end-step", type=int)
+    parser.add_argument("--stop-at-unix-time", type=float,
+                        help="Finish the current update and return before the checkpoint-save reserve")
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", force=True)
     config = load_config(args.config)
@@ -183,7 +185,13 @@ def main():
         else:
             environments = TrainingEnvironments(official, config)
         diagnostic = args.stage == "diagnostic"
+        if args.stop_at_unix_time is not None and (diagnostic or not config.get("allow_budget_checkpoint")):
+            raise ValueError("A wall-time stop requires training with partial-checkpoint export enabled")
+        last_completed = current_step
         for step in range(current_step, end_step):
+            if args.stop_at_unix_time is not None and time.time() >= args.stop_at_unix_time:
+                logging.warning("Wall-time budget reached after update %s; return for checkpoint export", step)
+                break
             started = time.monotonic()
             observations = environments.prepare()
             response = request("rollout", {"observations": observations}, expected_step=step, diagnostic=diagnostic)
@@ -208,7 +216,15 @@ def main():
                       "action_chunk_sha256": array_hash(actions), "rollout_path": str(filename.resolve()),
                       "seconds": time.monotonic() - started, "training": result}
             append_record(Path(args.results_dir) / ("diagnostic_rollouts.jsonl" if diagnostic else "rollouts.jsonl"), record)
+            last_completed = step + 1
             logging.info("Completed optimizer update %s; loss %.6g", step + 1, result["loss"])
+        if args.stop_at_unix_time is not None:
+            write_json(Path(args.results_dir) / "provenance/training_progress.json", {
+                "start_step": current_step, "last_completed_step": last_completed,
+                "requested_end_step": end_step, "optimizer_updates_added": last_completed - current_step,
+                "requested_updates_complete": last_completed == end_step,
+                "stopped_for_walltime": last_completed < end_step,
+                "stop_at_unix_time": args.stop_at_unix_time})
         if diagnostic:
             print(request("reset_after_diagnostic"), flush=True)
     finally:

@@ -127,7 +127,9 @@ def main():
         print("PASS: original/trained frozen snapshots equal native inference, preserve the base, and reject training")
         # A second tiny, synthetic-only experiment checks a real optimizer resume:
         # one update, save, restore all state, then equal next updates in both copies.
-        small_config = dict(config, optimizer_steps=3, checkpoint_steps=[1, 2, 3])
+        # Step 2 is not an evaluation milestone, but a time-budget save must
+        # still preserve it exactly, including FP32/EMA/Adam state.
+        small_config = dict(config, optimizer_steps=3, checkpoint_steps=[1, 3], allow_budget_checkpoint=True)
         def make_trainer(name):
             value = TemporalOPSD(TinyPolicy(), {"experiment_spec": dict(metadata["experiment_spec"])},
                 small_config, root / name / "results", root / name / "checkpoints", root)
@@ -158,11 +160,16 @@ def main():
         for key in ["master", "ema", "opt_state"]:
             equal_trees(getattr(uninterrupted, key), getattr(resumed, key))
         resumed.save()
+        partial = make_trainer("partial-budget-restored")
+        partial.resume(resumed.saved_checkpoint["path"])
+        assert partial.step == 2
+        for key in ["master", "ema", "opt_state", "frozen"]:
+            equal_trees(getattr(partial, key), getattr(resumed, key))
         resumed.set_phase("step_1")
         equal_trees(frozen_one, resumed.evaluation_parameters)
         resumed.set_phase("step_2")
         equal_trees(resumed.master, resumed.evaluation_parameters)
-        print("PASS: FP32/EMA/Adam resume, identical next update, and frozen milestone evaluation")
+        print("PASS: FP32/EMA/Adam resume, identical next update, partial-budget save/restore, and frozen milestone evaluation")
 
 
 if __name__ == "__main__":

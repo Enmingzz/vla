@@ -1,0 +1,34 @@
+{
+  "cpu_validation_jobs": [
+    60146110,
+    60146702
+  ],
+  "fp32_ema_adam_resume_next_update_fixture_passed": true,
+  "loss_backend_source_unchanged": true,
+  "native_cpu_fixture_passed": true,
+  "old_training_checkpoint_is_read_only": true,
+  "sources": {
+    "configs/autoresearch_round3.yaml": "7def48a80dfce7f9e7623ffc2202b3f3383e57bf772ff30658ee64e27bb8ae7f",
+    "configs/opsd_continuation_1000.yaml": "3229bb53eac25727a32f9adc78008fb3b33fe124d051817b61300bfd396c9177",
+    "configs/prediction50_round3.yaml": "87733163b18e7009a96389e98e9c9d7cf23bd8888df98ce8714a57894ca50c7b",
+    "scripts/fir_study_job.sh": "7cd2cb802be65a3c94877da202f970731ac5bd6110664d83d0003ab30c17608a",
+    "src/frequency_vla/opsd_backend.py": "61c1a0280378d59f767196e936badc330fdc82f5d90ba282e53ef7d4728d8d1d",
+    "src/frequency_vla/opsd_client.py": "c7f61a6e76885205ab170a89e4edd11b18734d07eb4d02923f4841ab30ca6427",
+    "src/frequency_vla/opsd_flow.py": "c0e85665f5fce10e0afffe185763d07008cb16aa2d97a04a164a18e725eaa45c",
+    "src/frequency_vla/opsd_parallel_env.py": "41372e01998cfa72750ed763b9252d8503e6ee123a3db2bb8ccff9cd92040397",
+    "src/frequency_vla/study_plan.py": "4efd9adcc934ec781f4334561747ea2b8f78c52cec72c14f406e4b4dc6533172",
+    "src/frequency_vla/study_runner.py": "dc530fe1a340a8bc474aeeb5835a18e8b0cdeb0286d420f6a20925daea351a03"
+  },
+  "unit_test_runs": [
+    {
+      "seconds": 6.52,
+      "tests": 37
+    },
+    {
+      "scope": "Continuation result direction, CSV labels and report/plot generation on synthetic fixtures",
+      "seconds": 1.14,
+      "tests": 1
+    }
+  ],
+  "unit_tests_passed": 38
+}

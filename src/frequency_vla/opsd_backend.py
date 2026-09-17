@@ -42,6 +42,10 @@ class TemporalOPSD:
         self.master, self.ema = self.initial, self.initial
         self.snapshots = {0: {"params": self.initial, "checkpoint": None}}
         self.checkpoint_steps = config.get("checkpoint_steps", [config["optimizer_steps"]])
+        if config.get("allow_budget_checkpoint", False):
+            # Storage-only permission: preserve any completed continuation update
+            # before a scheduler deadline; this does not select evaluation models.
+            self.checkpoint_steps = range(min(self.checkpoint_steps), config["optimizer_steps"] + 1)
         self.resume_provenance = None
         self.tx = optax.chain(optax.clip_by_global_norm(config["clip_gradient_norm"]),
             optax.adamw(config["learning_rate"], weight_decay=config["weight_decay"]))
