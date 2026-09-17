@@ -58,6 +58,8 @@ def analyze(root):
                 raise ValueError("Actual evaluation differs from the audited initial states")
         for manifest in manifests:
             server = manifest["server"]
+            if plan.get("renderer") and server["evaluation_spec"]["rendering"]["backend"] != plan["renderer"]:
+                raise ValueError("Renderer differs from the declared continuation")
             if digest(server["experiment_spec"]) != server["inference_fingerprint"] or any(r["inference_fingerprint"] != server["inference_fingerprint"] for r in rows):
                 raise ValueError("Episode inference fingerprint differs from its manifest")
             servers.add(server["server_instance_id"])
@@ -87,8 +89,9 @@ def analyze(root):
         raise ValueError("This predeclared comparison requires one continuous policy server")
     training = [json.loads(line) for line in (root / "training.jsonl").read_text().splitlines() if line]
     rollouts = [json.loads(line) for line in (root / "rollouts.jsonl").read_text().splitlines() if line]
-    if [r["optimizer_step"] for r in training] != list(range(101, 501)) or [r["optimizer_step"] for r in rollouts] != list(range(101, 501)):
-        raise ValueError("Continuation must contain exactly updates 101–500")
+    expected_updates = list(range(plan["resume_step"] + 1, plan["milestones"][-1] + 1))
+    if [r["optimizer_step"] for r in training] != expected_updates or [r["optimizer_step"] for r in rollouts] != expected_updates:
+        raise ValueError("Continuation must contain exactly the predeclared additional updates")
     eval_hashes = {r["initial_state_sha256"] for r in all_rows}
     for row, rollout in zip(training, rollouts):
         if row["diagnostic"] or rollout["diagnostic"] or row["student_behavior_version"] != row["optimizer_step"] - 1:
@@ -96,6 +99,9 @@ def analyze(root):
         for state in rollout["initial_states"]:
             if not 10 <= state["initial_state_index"] < 20 or state["initial_state_sha256"] in eval_hashes:
                 raise ValueError("Continuation leaked into evaluation initial states")
+    if plan.get("continuation_only"):
+        from .continuation_analysis import summarize_continuation
+        return summarize_continuation(root, plan, data, summaries, task_rows, all_rows, servers, training, rollouts)
     comparisons = []
 
     def compare(kind, left, right, family):
@@ -371,8 +377,12 @@ def main():
     p.add_argument("--results-dir", required=True)
     args = p.parse_args()
     plan, summaries, comparisons, tasks, training, validation = analyze(args.results_dir)
-    plots(args.results_dir, summaries, training, comparisons)
-    findings(args.results_dir, summaries, comparisons, tasks, validation)
+    if plan.get("continuation_only"):
+        from .continuation_analysis import report
+        report(args.results_dir, plan, summaries, tasks, training, validation)
+    else:
+        plots(args.results_dir, summaries, training, comparisons)
+        findings(args.results_dir, summaries, comparisons, tasks, validation)
     print(json.dumps(validation, indent=2))
 
 

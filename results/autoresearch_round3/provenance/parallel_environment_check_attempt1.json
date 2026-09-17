@@ -1,0 +1,1279 @@
+{
+  "parallel": [
+    {
+      "after": [
+        {
+          "observation/image": "6eb21b3c165356d871d7b208206844daa68084a6c1fabcf45da727eaed060a46",
+          "observation/state": "1006af62053d50ff22978c26ee013e543083aecec57bdd32b44f60da39a7fe4f",
+          "observation/wrist_image": "a1d6326196f85ebd0ed8111002a35386a6cc9318ff394e77e70e89948573a60d",
+          "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+        },
+        {
+          "observation/image": "cdab43b01fec04ce5bd72ba864000b4cc567e85793f900c4f1442ea08c1ad546",
+          "observation/state": "704c88b800300edbdb60f6f307c032e310ad6dbf5648b636fa84fc1e68088629",
+          "observation/wrist_image": "e750a3d759d72ec3b5f64043ce3393de3b84ad23fdc4b788ef8acbfccbea9615",
+          "prompt": "put both the cream cheese box and the butter in the basket"
+        },
+        {
+          "observation/image": "121836d9b0be9808faa38b99a0608a183a029c66e0b22cd89b3453398ebeb54f",
+          "observation/state": "d1ecf5bb226290317cfdec29b80362ec3ab177fc41ad613771920e85ebeddee2",
+          "observation/wrist_image": "fa34458aa037199057e8545058306cc9b1c5dffa4ac47fe80f3a0f410d64bef6",
+          "prompt": "turn on the stove and put the moka pot on it"
+        },
+        {
+          "observation/image": "43a044163bb6187ba65ccde42f8627abbeb2056aaf3bbb81ba69c08b28487ac7",
+          "observation/state": "bacd87e971a233d828a877fa60115baf93f2d8b1d75d0685f23cc9c703dbc62b",
+          "observation/wrist_image": "c1373ac6d1ba2a518a6c27a7f145de1d6287abbe102fdd9d21bb66fdf3eee1cd",
+          "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+        }
+      ],
+      "before": [
+        {
+          "observation/image": "85a5b3fa7bc75504e3a2b1f771d1f4e705faa2442b2ebe07a2fd7bc8aef39112",
+          "observation/state": "2c2b7845f5d69be1888f8be1924559e1c4c76d16a3f57744af79be7f6d0f7cf6",
+          "observation/wrist_image": "5f1fc47714e372dd2402246887405a5052a0dbae2f1e7a5fe6a2139cd039c989",
+          "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+        },
+        {
+          "observation/image": "ace7785e12f6e73af677bb4bdc989bad28cb8f68c08fd6f3b047e881214b771b",
+          "observation/state": "936245825cb68198b9b345614bbf331bf3e144ca5828b0f58ff8b7907eaea207",
+          "observation/wrist_image": "2bfff0067b6d184298e261265f45427b54388d2f5c3b6fc3a82653b5e6a30545",
+          "prompt": "put both the cream cheese box and the butter in the basket"
+        },
+        {
+          "observation/image": "93eae96805d5939b7c0017ac6d55eb3efca7a74bb6a290904fb0d5a0766c7a4b",
+          "observation/state": "195207d80210d99b8033043d61c68e387a29ad9ad921b38910f3b4465ab46a40",
+          "observation/wrist_image": "cf4e61e6352ec5ae50c154d2a08d3da35b9d448bc8b7106e63c4b30a5bf9b54d",
+          "prompt": "turn on the stove and put the moka pot on it"
+        },
+        {
+          "observation/image": "ceb2fddecc03c4582c37e7bfd0f803e4e560c6f92243ca266c8f5aa12166c968",
+          "observation/state": "6ba8cd4cee73382fd761c1bb8450cc1b0fbb44d187e27274544c82dfbc79eeee",
+          "observation/wrist_image": "8b267586d9b3df8a251840586bcc7e9266da7f9dd2874273efc364b9be3bedde",
+          "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+        }
+      ],
+      "identities": [
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "de5c5d6e3c98f14444b473336f9a7278579dd2a684d9bb8d63237fc046f7bdbc",
+          "seed": 17,
+          "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+          "task_id": 0,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "3b363af26394eb78094e47b94202a5e9dd8ce59279c7693212216c6da2bb9782",
+          "seed": 17,
+          "task_description": "put both the cream cheese box and the butter in the basket",
+          "task_id": 1,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "c3e093b87771ffda30d99942308e72706d01b9da7524f91a4a8db299d060743d",
+          "seed": 17,
+          "task_description": "turn on the stove and put the moka pot on it",
+          "task_id": 2,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "31784fc75e331c33b4d6009b0ecbbf4619434435b8ef727cf1785ac92fcfa806",
+          "seed": 17,
+          "task_description": "put the black bowl in the bottom drawer of the cabinet and close it",
+          "task_id": 3,
+          "task_success": false
+        }
+      ],
+      "teacher_views": [
+        [
+          {
+            "observation/image": "85a5b3fa7bc75504e3a2b1f771d1f4e705faa2442b2ebe07a2fd7bc8aef39112",
+            "observation/state": "2c2b7845f5d69be1888f8be1924559e1c4c76d16a3f57744af79be7f6d0f7cf6",
+            "observation/wrist_image": "5f1fc47714e372dd2402246887405a5052a0dbae2f1e7a5fe6a2139cd039c989",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "ace7785e12f6e73af677bb4bdc989bad28cb8f68c08fd6f3b047e881214b771b",
+            "observation/state": "936245825cb68198b9b345614bbf331bf3e144ca5828b0f58ff8b7907eaea207",
+            "observation/wrist_image": "2bfff0067b6d184298e261265f45427b54388d2f5c3b6fc3a82653b5e6a30545",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "93eae96805d5939b7c0017ac6d55eb3efca7a74bb6a290904fb0d5a0766c7a4b",
+            "observation/state": "195207d80210d99b8033043d61c68e387a29ad9ad921b38910f3b4465ab46a40",
+            "observation/wrist_image": "cf4e61e6352ec5ae50c154d2a08d3da35b9d448bc8b7106e63c4b30a5bf9b54d",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "ceb2fddecc03c4582c37e7bfd0f803e4e560c6f92243ca266c8f5aa12166c968",
+            "observation/state": "6ba8cd4cee73382fd761c1bb8450cc1b0fbb44d187e27274544c82dfbc79eeee",
+            "observation/wrist_image": "8b267586d9b3df8a251840586bcc7e9266da7f9dd2874273efc364b9be3bedde",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "91f64f34f62007ef96de25844488b90518ae71f75cee0100c2c663ae6173a0d9",
+            "observation/state": "26ab73c711a3bc05395ca69f313c69e137bd2590fd70d3968e21a82c6878e38d",
+            "observation/wrist_image": "78787466d2e444255348a0a2524a9f88c1d970ac70e2ae21818f4d70a02018f6",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "61da40576500d61740777050cd8eeb30326554a8458e4db3e05c257abe95a028",
+            "observation/state": "dce62e9c4dd81a1f22c602eaceba99928c44dcd78e92f22b0002e54352b9d489",
+            "observation/wrist_image": "d447411ed72de2f59d3ebd3cb03e93bf31918dc1e1ee77000322ca7ca1881c1a",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "7078d436baf6dc569a10c56de5e614789772b09759eed94dee3e86116846e6bd",
+            "observation/state": "0359e19277521c725f7aa324170ef3423be6af599c045116411ffcf2378f096a",
+            "observation/wrist_image": "2814bea8d296f8736c18ae7cee73fd40047f9cdee4ee39a81808ea2c4813b62a",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "05149a791d2241a324eb3d2c7d6bac0a34d77555bf35288768f60c1af5d79269",
+            "observation/state": "39b6cf28f23481ebc470e0a5d6935a68c8795bcc52674c139df13485094cf086",
+            "observation/wrist_image": "537aae5cdd2586a8e64cc75aa45d4b4c79795510b77e170ff0ab8c30181ef429",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "cffb454d835f53af531d3276ef68fb2fde90b30c3de8a7dce852bbe913a02030",
+            "observation/state": "ac625fbc55b04c01f3749fa103769b6ec626c2dd717a7f8baaae1f99eac2eaa2",
+            "observation/wrist_image": "75d544e9aa43ecbb1bbdb91218ba5bc903587a666a5c9489d2ef8ef1992ee3a3",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "eb75df909f87fb1527a03e726ab181a90ae0122406e8611f4f2f3813360d03bd",
+            "observation/state": "ded557816cc44fedcf448ef239aad96db51c38300944da29ff536f4d720295da",
+            "observation/wrist_image": "08f59e78f247f499c8eeb1524b95d8d83b4760b580445e73bc460f7ee40ea5e8",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "501ab2c03eaaf73282695dd3ef65b2d362ce21034c5accc5ec033a53e37bfc28",
+            "observation/state": "b372039de76f16b706911a8bf437415e8fcc2670fc135261fb2713ba77b39da9",
+            "observation/wrist_image": "7eca9748f6423bc989fd09e773f69187a5b9e6a0b5093683187937a4af609c1c",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "5fab980743c0e02e2266ce7b4aacdc02285740d4932c5a0061b4da6e9189b45f",
+            "observation/state": "dd426a3047de9ab2d7b43ec8aee818ec3504eaf61ad7dc03be858c259998cafb",
+            "observation/wrist_image": "b8568176cf9295a4752ea37909cef7af2fe48480d08e03a42fedbb2e08a354b8",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "38e2847434b2421bc48ff6e5097fc4698af1f3d4cb6cbba2c480b13c3dfb91ed",
+            "observation/state": "e7a718a9804cffbec3d3d915397ab1c5495a2547d57f89d5cca68f472ae4b416",
+            "observation/wrist_image": "a170c49009bf043a243191c03a288804a795262a322c1ee190012fdbddb79f79",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "69fc1a8d5e89f7cf84539ac59b27d35e558641d0feb05cb1b5fb592519ea0714",
+            "observation/state": "48d048972ac16c3d3c73da3b13c108de7dc16c6055c2e8cc0909c6be9a9e716b",
+            "observation/wrist_image": "078e8ace4176c240bcb76847d57a4697026f3418e81e3ecac5749e5aae1acf0e",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "9e7790cd1fe6200454bb43caf47cd89291672827826514d65596f3affb2a2095",
+            "observation/state": "917a6d027356e8e592b6e54ec59b75b51b513012a307753da9fa8e2baf85ffc7",
+            "observation/wrist_image": "5c8ff0578d8485a29c4117136c415286b0cf8514418e77ef87e91271644b62c0",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "d19a43156f87fdea252e6c6007bf8f6a637fac3fef3822a797de54d211472b99",
+            "observation/state": "104f42f66e5b57b494d1630c94d3088a0cabde40d8430bf3591d92f3ed01d0d3",
+            "observation/wrist_image": "9ac36172c66d3ff496909aade8446291be5a92f557814b78e532ded11b05c501",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ]
+      ],
+      "valid": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "after": [
+        {
+          "observation/image": "43de2ad1074fc684d459eadb50b995a9024df96a158ce63afa6ae87375c5d6d4",
+          "observation/state": "8c8e26f2e1e36555689903e8758e2747f4df95efe3d3533d686c29941eceba4d",
+          "observation/wrist_image": "f7894b09526d2636f1303e02c732c8a7337738ef4dadcd68f4fc6fae0d13fcfb",
+          "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+        },
+        {
+          "observation/image": "cb86ad4a85ad018ef9ab5bad37062f1c93c851d0471e90a58dbabd8c49e0a51e",
+          "observation/state": "eb714955191aaff9b83f2b9fdc52bd70ed1c485415f8b41bfe7e22115a2b2f02",
+          "observation/wrist_image": "057979a1c9644eb1b305e0dbe5a271ba2f9c2d994fb6820ff19a2bbfb78b1bee",
+          "prompt": "put both the cream cheese box and the butter in the basket"
+        },
+        {
+          "observation/image": "62df388e98804a5f752cab27444360bddc2fdd80bea2b58bf015efbe06514719",
+          "observation/state": "841f249c21042a6d19ab98e9f4065fd19465c72ec33f26e4023c63742cd3272b",
+          "observation/wrist_image": "457ebf98c36a171c2eb1890fdfb76085ff5938137f4c7bdeeabba420ecb5f738",
+          "prompt": "turn on the stove and put the moka pot on it"
+        },
+        {
+          "observation/image": "1e05f4c303122d5bc64062afc6039c891b8668da909b9cc137eb5653b393ef93",
+          "observation/state": "dd37a066ac440b6ce15bf755cea8fcaa3385da4af18e86675174995b5495a6ba",
+          "observation/wrist_image": "445971968d66fb4a76f16f867e43d30014815fba8a52dcde6bbcf58fd216c364",
+          "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+        }
+      ],
+      "before": [
+        {
+          "observation/image": "6eb21b3c165356d871d7b208206844daa68084a6c1fabcf45da727eaed060a46",
+          "observation/state": "1006af62053d50ff22978c26ee013e543083aecec57bdd32b44f60da39a7fe4f",
+          "observation/wrist_image": "a1d6326196f85ebd0ed8111002a35386a6cc9318ff394e77e70e89948573a60d",
+          "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+        },
+        {
+          "observation/image": "cdab43b01fec04ce5bd72ba864000b4cc567e85793f900c4f1442ea08c1ad546",
+          "observation/state": "704c88b800300edbdb60f6f307c032e310ad6dbf5648b636fa84fc1e68088629",
+          "observation/wrist_image": "e750a3d759d72ec3b5f64043ce3393de3b84ad23fdc4b788ef8acbfccbea9615",
+          "prompt": "put both the cream cheese box and the butter in the basket"
+        },
+        {
+          "observation/image": "121836d9b0be9808faa38b99a0608a183a029c66e0b22cd89b3453398ebeb54f",
+          "observation/state": "d1ecf5bb226290317cfdec29b80362ec3ab177fc41ad613771920e85ebeddee2",
+          "observation/wrist_image": "fa34458aa037199057e8545058306cc9b1c5dffa4ac47fe80f3a0f410d64bef6",
+          "prompt": "turn on the stove and put the moka pot on it"
+        },
+        {
+          "observation/image": "43a044163bb6187ba65ccde42f8627abbeb2056aaf3bbb81ba69c08b28487ac7",
+          "observation/state": "bacd87e971a233d828a877fa60115baf93f2d8b1d75d0685f23cc9c703dbc62b",
+          "observation/wrist_image": "c1373ac6d1ba2a518a6c27a7f145de1d6287abbe102fdd9d21bb66fdf3eee1cd",
+          "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+        }
+      ],
+      "identities": [
+        {
+          "controlled_steps_at_start": 20,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "de5c5d6e3c98f14444b473336f9a7278579dd2a684d9bb8d63237fc046f7bdbc",
+          "seed": 17,
+          "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+          "task_id": 0,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 20,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "3b363af26394eb78094e47b94202a5e9dd8ce59279c7693212216c6da2bb9782",
+          "seed": 17,
+          "task_description": "put both the cream cheese box and the butter in the basket",
+          "task_id": 1,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 20,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "c3e093b87771ffda30d99942308e72706d01b9da7524f91a4a8db299d060743d",
+          "seed": 17,
+          "task_description": "turn on the stove and put the moka pot on it",
+          "task_id": 2,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 20,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "31784fc75e331c33b4d6009b0ecbbf4619434435b8ef727cf1785ac92fcfa806",
+          "seed": 17,
+          "task_description": "put the black bowl in the bottom drawer of the cabinet and close it",
+          "task_id": 3,
+          "task_success": false
+        }
+      ],
+      "teacher_views": [
+        [
+          {
+            "observation/image": "6eb21b3c165356d871d7b208206844daa68084a6c1fabcf45da727eaed060a46",
+            "observation/state": "1006af62053d50ff22978c26ee013e543083aecec57bdd32b44f60da39a7fe4f",
+            "observation/wrist_image": "a1d6326196f85ebd0ed8111002a35386a6cc9318ff394e77e70e89948573a60d",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "cdab43b01fec04ce5bd72ba864000b4cc567e85793f900c4f1442ea08c1ad546",
+            "observation/state": "704c88b800300edbdb60f6f307c032e310ad6dbf5648b636fa84fc1e68088629",
+            "observation/wrist_image": "e750a3d759d72ec3b5f64043ce3393de3b84ad23fdc4b788ef8acbfccbea9615",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "121836d9b0be9808faa38b99a0608a183a029c66e0b22cd89b3453398ebeb54f",
+            "observation/state": "d1ecf5bb226290317cfdec29b80362ec3ab177fc41ad613771920e85ebeddee2",
+            "observation/wrist_image": "fa34458aa037199057e8545058306cc9b1c5dffa4ac47fe80f3a0f410d64bef6",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "43a044163bb6187ba65ccde42f8627abbeb2056aaf3bbb81ba69c08b28487ac7",
+            "observation/state": "bacd87e971a233d828a877fa60115baf93f2d8b1d75d0685f23cc9c703dbc62b",
+            "observation/wrist_image": "c1373ac6d1ba2a518a6c27a7f145de1d6287abbe102fdd9d21bb66fdf3eee1cd",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "1aef8d101181272c2f11c5d468b748ea2cb33f402431507ae14d29afa4b8d5b3",
+            "observation/state": "61804b6965d2f42637997ffea9ec0a37f7764bfc5ae7646ae3cbf40bc8480068",
+            "observation/wrist_image": "6fa190153b89707f8b437e7bde2aa2e07823023fef12d578f212d731ec6b599b",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "d9a269b17a7cd0e8751eaad80ee14b41a68dcb5e976b30aae698a17ea7a587e4",
+            "observation/state": "3375b36b2a8f48f0dedf79785249a34a05705ab53f3f5dce633e2af6f20df696",
+            "observation/wrist_image": "e2fed74afa6fd46347b197997d94e88fab1d3f9d6c354b821eee2ed5300ab907",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "f0415477d015bc49868aa4023c50955d4592183988fab8d2a2cd6610f2bd9d76",
+            "observation/state": "953467c062dd8e4aa6e72ae3ec886e88897bf26009ee353c1fd75658c3d936d7",
+            "observation/wrist_image": "cdd39a10e3f725f0f8d5537eabdbf60bf714b7dd449fa9eede6cbff2d4fa8a0b",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "267dfd0f58ae3542f67eef4c06162c636c497bec929e0ee5ccb0f82b781bd049",
+            "observation/state": "3853f39b6ea899c624bf47547623f7a036deaf5cb94d50ec977899a4a580e2fd",
+            "observation/wrist_image": "0d514011056019088882a579b31a3dce5ce0dad6e1986c8c901dfaf7afa60971",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "1e5ccde915d1407615b130465f1bb1aa102d2a3d11ba9121a79da0143b987dc9",
+            "observation/state": "6180b88ef0c27430681a85770a76ffa2f67d779ebde69f61d6a93d22079f1e8f",
+            "observation/wrist_image": "7cc8ef6a4479648f16e168d38d6e2a92a50fb57750be9784b912a19d6838681d",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "a6b1bac955b1eff3b88c882fcd343d45a54d0bf6ac02436d01da4097472484cc",
+            "observation/state": "3a44f91b2f263ac780b00f9bb79e09e301263cddebda84c1b1ec25e1b56b0096",
+            "observation/wrist_image": "66db52e76925e60c420bac929cf98fd7eb06f0ebd027d1171af0fab1b444433c",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "df6bf43cdf7d48f5eacafea3330366d2bdc92809b5aec3e2686e5f8e9ed92e52",
+            "observation/state": "bb3fafdae43517a0b73133517a7b79867a68d6492f057e8d2fc0759198ba8e21",
+            "observation/wrist_image": "aae95426a7ceace00b70aab02787fec621fd56db635778e1410694758152beac",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "e23ee679fe9cb4f796f9d94e55331412f470e776e0e24177a90cec6f726e8194",
+            "observation/state": "a7d78d6962ff01d2b726cc96f2a42147ca092031bf756436cd47a018f8c8322d",
+            "observation/wrist_image": "5eb40b9aa402152b5f4eb274f624e4824ade47f7a7de1874eb417724f3b68f8f",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "572d011cd1610e8078d594bbd3bb9396a18e76a6e5b38a3f2912c8fc130d54f5",
+            "observation/state": "df0d86c1c02a155252cc6fe9d4dc9c6331edf39d37fbbc3540f2eeb42464119c",
+            "observation/wrist_image": "00824f4295435ac4b4a1eebae7de1e59fb115d5edc09637858c4b98692d48608",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "fa24b123a1fb7a11edfa155eaade8e7347332ed4ad69d7a5c3a558c316c8ad44",
+            "observation/state": "933d751c9fc916ff99133e46a7d0836347510879bdd236d8d0baf7014c586af5",
+            "observation/wrist_image": "b25b557c49a32e677ade35e2c302ad4133591d10966a9f8a39c07bf380920a11",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "114f74eb93753bb3d95cca12b4e5a6e5e3899b52af443b5f7b2ecbf845ea63d6",
+            "observation/state": "04b1ae55f6a6dc218edc4e336f7464d48457b46647e6f89bbed67fab4ef3601d",
+            "observation/wrist_image": "6d7f58634bc5feae9cf39298d5bc0cce236254e1449823ee56fcf81774c95fb6",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "3f373172f6edefde48b4cd25d5845bffd41dd179202e01978c0345a911df9a15",
+            "observation/state": "5ede406d7c2219a13bd80b54b29642c6cdfa945db18b872f0da20ce488e59e6b",
+            "observation/wrist_image": "c0503e47ebf059138769bf69b0474314c7837718c86b4d63414d74a37461e6e3",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ]
+      ],
+      "valid": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "after": [
+        {
+          "observation/image": "89d1e85361611f33894bfbd4feef3242cf09bf2486b472c25ee9f1d8b3d38fbc",
+          "observation/state": "ce9fa74c3be5e2d8fc56e90cbab293d2b482bd9b3f3322430c479e09bcb92275",
+          "observation/wrist_image": "202eee9a94a2bf0df25d85706edea1dbdaf9303f250b1a32260f464697a936d5",
+          "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+        },
+        {
+          "observation/image": "726bc7c10ec593942620d10d9aa0b079daaec02b02047619e231249c1bbd4a21",
+          "observation/state": "f4a13af9e22d732a7d5ed2d596933c82b87cf8464a25a7bc2805245514ca3083",
+          "observation/wrist_image": "ac8b1d3763d9018df52c924bbc502264b59557411b22e0a71c6dd3542160305e",
+          "prompt": "pick up the book and place it in the back compartment of the caddy"
+        },
+        {
+          "observation/image": "e7fb53678d4d6c4bf877828ed2c9c1d9f54879abb0d071dc1e8d62f334929a27",
+          "observation/state": "dfe5a76e93525668a3be80f75a1ccdc536f372e60ac6b57a2b60adab0e83dfdf",
+          "observation/wrist_image": "480668f03fc2c40c141cf545e76533a547ca0d561229598c42f9278344fda4e7",
+          "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+        },
+        {
+          "observation/image": "e27d53ddae16965ede73ffb07f5ade14005b1d72cf45625d160a9f5acaba9d5c",
+          "observation/state": "74e01489b7db79a0e6012d32d5b71618c44aa9cb14cfe0a7bfc834c34d2ff115",
+          "observation/wrist_image": "0bb193e0b36800e4ff1c05c15b34df4cf0a46b6b591add47e0af980368a319e9",
+          "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+        }
+      ],
+      "before": [
+        {
+          "observation/image": "4d085a24a3d24190934f21f7bf7ce0cdb423f6d75256645df45711aa8e94f6ea",
+          "observation/state": "71aa63da4b82683fbed6256cb69b893744c6523726d13e1b633712630fd71469",
+          "observation/wrist_image": "1c50eb72a2349ec3fe08d87839c456df8f43ef788a1691c1bea28753d28adad2",
+          "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+        },
+        {
+          "observation/image": "b78cca9b614f882385af62740e645b00e3d6ad182119d159bbfec5d6c66dd84c",
+          "observation/state": "f477187c9dab994a8f6dc6fd6164169419843c2683a8e5f8286929d2b7fc72ff",
+          "observation/wrist_image": "04136467b0051695271e60ae51ca05a9c6a4c7775f3be4b72ddbd16bd5dfd99d",
+          "prompt": "pick up the book and place it in the back compartment of the caddy"
+        },
+        {
+          "observation/image": "47cf683ef50dadcd76ecb40c0214bb7dfccb2850fe0e46d64cc90b42fa85cc01",
+          "observation/state": "38f1243e52fd693f9b267b76dadf6d55b0560c1a3142635a656d200ab15bdbfe",
+          "observation/wrist_image": "5af0a50ca3d938697e22c190d43880722fdb0f72799072beda6c5ce1797792db",
+          "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+        },
+        {
+          "observation/image": "c8fc42cff23c9dc2a30faa7d88090db6abcb01a8e863844630c375cc7514a7f5",
+          "observation/state": "cc5f563d3e59a0cec9ccaf66c63255f812d30414f191726dd49b83c2f498f29c",
+          "observation/wrist_image": "3677d1b0462a12db7fc3143e443f83fdedf283514dcb4ee3a2dbb8f8496a4986",
+          "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+        }
+      ],
+      "identities": [
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "a7bcc377e63ba72be9b04309437eb20be23059410b6ad87efe5de4941791b55b",
+          "seed": 17,
+          "task_description": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+          "task_id": 4,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "8f372d4a25ec97dc05ebf08c9e55991a42a6e9147471d4cf590d2c2bdcd9b620",
+          "seed": 17,
+          "task_description": "pick up the book and place it in the back compartment of the caddy",
+          "task_id": 5,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "611d2a3905103a88487c6a6792787e71594be2d8005dcf6f2c57111563befe6c",
+          "seed": 17,
+          "task_description": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+          "task_id": 6,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "d67eb9e81ad7ec13db18e9afc46c29148ba07df9f41b4972dfb6a27ea403f51d",
+          "seed": 17,
+          "task_description": "put both the alphabet soup and the cream cheese box in the basket",
+          "task_id": 7,
+          "task_success": false
+        }
+      ],
+      "teacher_views": [
+        [
+          {
+            "observation/image": "4d085a24a3d24190934f21f7bf7ce0cdb423f6d75256645df45711aa8e94f6ea",
+            "observation/state": "71aa63da4b82683fbed6256cb69b893744c6523726d13e1b633712630fd71469",
+            "observation/wrist_image": "1c50eb72a2349ec3fe08d87839c456df8f43ef788a1691c1bea28753d28adad2",
+            "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+          },
+          {
+            "observation/image": "b78cca9b614f882385af62740e645b00e3d6ad182119d159bbfec5d6c66dd84c",
+            "observation/state": "f477187c9dab994a8f6dc6fd6164169419843c2683a8e5f8286929d2b7fc72ff",
+            "observation/wrist_image": "04136467b0051695271e60ae51ca05a9c6a4c7775f3be4b72ddbd16bd5dfd99d",
+            "prompt": "pick up the book and place it in the back compartment of the caddy"
+          },
+          {
+            "observation/image": "47cf683ef50dadcd76ecb40c0214bb7dfccb2850fe0e46d64cc90b42fa85cc01",
+            "observation/state": "38f1243e52fd693f9b267b76dadf6d55b0560c1a3142635a656d200ab15bdbfe",
+            "observation/wrist_image": "5af0a50ca3d938697e22c190d43880722fdb0f72799072beda6c5ce1797792db",
+            "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+          },
+          {
+            "observation/image": "c8fc42cff23c9dc2a30faa7d88090db6abcb01a8e863844630c375cc7514a7f5",
+            "observation/state": "cc5f563d3e59a0cec9ccaf66c63255f812d30414f191726dd49b83c2f498f29c",
+            "observation/wrist_image": "3677d1b0462a12db7fc3143e443f83fdedf283514dcb4ee3a2dbb8f8496a4986",
+            "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+          }
+        ],
+        [
+          {
+            "observation/image": "035af094e930e1707507c3ffd271ccd767d2ae2e4b7b68785fc96a27e393f6fb",
+            "observation/state": "059222aea6a41afca77e3cad1cb91e035c8e8ea30758858a39ef399a9accdab1",
+            "observation/wrist_image": "08f15646f06e2f7efa41b0924e2826997c162682d8036606caa873098c723808",
+            "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+          },
+          {
+            "observation/image": "6677a4a076219899f0b789e2edbb2d9601a899691245667ad562c104e319e7f5",
+            "observation/state": "c85c340d99746d9a23cc1fff7e88b8b92141f7cca3791b4a57b02cfb24171098",
+            "observation/wrist_image": "71addf72c8d7e4120d336a92036e1f55f66d8ddf6a320932616b7ae1344ed50b",
+            "prompt": "pick up the book and place it in the back compartment of the caddy"
+          },
+          {
+            "observation/image": "d06acadbc2bdf774ebf8664f0bab7a7dd1af44f5537ded416623814e47e9d4c9",
+            "observation/state": "1d0da7cc6e21a0c99c45047c8ee313cc6adadc33893309e33004c8be44ecdede",
+            "observation/wrist_image": "6c156f874f5358afd91b360b00f47c7804e0e0f0d684235bb1941f31866cb980",
+            "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+          },
+          {
+            "observation/image": "55281db9ca8807a84b0673a411972f354386b3fe48f438f6a6241367c2679f1d",
+            "observation/state": "06ea8e7bcc54d19493aef22b873ca2b6c63a6f584913addfedbe59b004d4a3c7",
+            "observation/wrist_image": "9463581c913b56bd4a102d71fcac6c15908b0c1b1308b23c1cb078f7c5b3b50b",
+            "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+          }
+        ],
+        [
+          {
+            "observation/image": "fea6f60557347f6db964abb371604de041017fc10a89eb12b2cd4e6c8393617f",
+            "observation/state": "855efd7c82da255d1b962bd91cf6f06539f201faada771834776e39068b56efc",
+            "observation/wrist_image": "f63bb37ad95a290a51dee97fd0e8251cd897de184519243d1f5f251cb68c6303",
+            "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+          },
+          {
+            "observation/image": "d074e46da9a02adb30f363bf9645cfbe49d3f700b4343d59d7368951a0be9176",
+            "observation/state": "5b8cc5b8f35082283b1c3bd5e4e5f160e357e643ec4b2c36a9e97f1df842b4d6",
+            "observation/wrist_image": "2cd6cbea5636f3729dade7c7952a7aafcc5250e23c8c6a6730958d3c250a24dc",
+            "prompt": "pick up the book and place it in the back compartment of the caddy"
+          },
+          {
+            "observation/image": "74d093427deda8adf557eff722802ef9f0d3f153e5d66a611d7e04762294c69d",
+            "observation/state": "19f1ce739ca3997c5333158ebef72457de7da4e85b9a15a5ca42267f424e92fc",
+            "observation/wrist_image": "ca542239a8b1982653102cc6cd0af13f86a8ad7d4ebfdee268eb76bbdd9bf648",
+            "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+          },
+          {
+            "observation/image": "8bcfec31f03ee66c2be99f09c4b0e3f5b10fb23c1fa96ad00ffc3e603a63244d",
+            "observation/state": "e6590f867ef40fc905738e95fb76aa2f96078efc0475aa7114d4e94fc6961380",
+            "observation/wrist_image": "31b04546ef979857f2c1997ed4e4f200a2a6e22bf319f5e75e42f0c4901e4d4a",
+            "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+          }
+        ],
+        [
+          {
+            "observation/image": "48938b4c2425d736d69137c206af7f026d87216e582a152e6b56bf75e77f0903",
+            "observation/state": "8ce53333ab6f205dc1038045afb762a68f9c0f44e10fa88a6c8a5e75614ee459",
+            "observation/wrist_image": "2d0c68fc15847a4240b6b39f5ff8e37edf4c5cb9471872e19b3855955c393538",
+            "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+          },
+          {
+            "observation/image": "a13bbc08cd0771616755ff669558481013489aca1c6e8c86ab4a02d055091255",
+            "observation/state": "5322b356c243df8b48dad95ee0454bfd96abede2c0a525ad79fe6761b2ea3a77",
+            "observation/wrist_image": "5913e61eb3e77982cbd319bc3cc507fdd3bce9598f0b02996054bbe9b8e601e9",
+            "prompt": "pick up the book and place it in the back compartment of the caddy"
+          },
+          {
+            "observation/image": "35e2a7ae7291f45d489ee0d7ba0ebc212e14cf403378fb1243eaa6451431010f",
+            "observation/state": "c00105edf39bebb32fc43919d9101e0443f4d51646582e41314763bd792501f1",
+            "observation/wrist_image": "dd0886900aff8fa0c6603484cfc014952b36b1099c9163b4fea794c4f7141e2f",
+            "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+          },
+          {
+            "observation/image": "0b9386eef58b1d49da481727aa0a4bb5d6f9216571342fb22f11af16f62f6d25",
+            "observation/state": "46d2dbde5cf537c4cb62a83226f06c6691368330e98bf697d8068b35b89d4c4f",
+            "observation/wrist_image": "d8d8bcc7f0db029b5fda4c2599b279f55e980c1249fd5102e2b53341312e2b40",
+            "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+          }
+        ]
+      ],
+      "valid": [
+        20,
+        20,
+        20,
+        20
+      ]
+    }
+  ],
+  "passed": false,
+  "serial": [
+    {
+      "after": [
+        {
+          "observation/image": "f6dfdbefaaa30a4ff5146a922281708a7d857e0be94d91f544594dad754d6864",
+          "observation/state": "1006af62053d50ff22978c26ee013e543083aecec57bdd32b44f60da39a7fe4f",
+          "observation/wrist_image": "824bb75f011cbdd5dbcc434a77f001d897ade874b1daf63e5ea069f23b6c6652",
+          "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+        },
+        {
+          "observation/image": "58e6bf376d90c325028abefe828e44f43a531b6836afb31add1dc6fe3490b533",
+          "observation/state": "704c88b800300edbdb60f6f307c032e310ad6dbf5648b636fa84fc1e68088629",
+          "observation/wrist_image": "b6f4e6dc739b495fcf98f937a0b0ec7d19504283778a947fdaa5ba5fc637338c",
+          "prompt": "put both the cream cheese box and the butter in the basket"
+        },
+        {
+          "observation/image": "22a4e417e07829f90198f50383ec53e3e04d7f84a0d2c37f8ed8698ea2f38595",
+          "observation/state": "d1ecf5bb226290317cfdec29b80362ec3ab177fc41ad613771920e85ebeddee2",
+          "observation/wrist_image": "46cb1c72245fbcf339a723a56c3beefa568643eb001390c3eff7d2f2512500ac",
+          "prompt": "turn on the stove and put the moka pot on it"
+        },
+        {
+          "observation/image": "43a044163bb6187ba65ccde42f8627abbeb2056aaf3bbb81ba69c08b28487ac7",
+          "observation/state": "bacd87e971a233d828a877fa60115baf93f2d8b1d75d0685f23cc9c703dbc62b",
+          "observation/wrist_image": "c1373ac6d1ba2a518a6c27a7f145de1d6287abbe102fdd9d21bb66fdf3eee1cd",
+          "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+        }
+      ],
+      "before": [
+        {
+          "observation/image": "85a5b3fa7bc75504e3a2b1f771d1f4e705faa2442b2ebe07a2fd7bc8aef39112",
+          "observation/state": "2c2b7845f5d69be1888f8be1924559e1c4c76d16a3f57744af79be7f6d0f7cf6",
+          "observation/wrist_image": "5f1fc47714e372dd2402246887405a5052a0dbae2f1e7a5fe6a2139cd039c989",
+          "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+        },
+        {
+          "observation/image": "ace7785e12f6e73af677bb4bdc989bad28cb8f68c08fd6f3b047e881214b771b",
+          "observation/state": "936245825cb68198b9b345614bbf331bf3e144ca5828b0f58ff8b7907eaea207",
+          "observation/wrist_image": "2bfff0067b6d184298e261265f45427b54388d2f5c3b6fc3a82653b5e6a30545",
+          "prompt": "put both the cream cheese box and the butter in the basket"
+        },
+        {
+          "observation/image": "93eae96805d5939b7c0017ac6d55eb3efca7a74bb6a290904fb0d5a0766c7a4b",
+          "observation/state": "195207d80210d99b8033043d61c68e387a29ad9ad921b38910f3b4465ab46a40",
+          "observation/wrist_image": "cf4e61e6352ec5ae50c154d2a08d3da35b9d448bc8b7106e63c4b30a5bf9b54d",
+          "prompt": "turn on the stove and put the moka pot on it"
+        },
+        {
+          "observation/image": "ceb2fddecc03c4582c37e7bfd0f803e4e560c6f92243ca266c8f5aa12166c968",
+          "observation/state": "6ba8cd4cee73382fd761c1bb8450cc1b0fbb44d187e27274544c82dfbc79eeee",
+          "observation/wrist_image": "8b267586d9b3df8a251840586bcc7e9266da7f9dd2874273efc364b9be3bedde",
+          "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+        }
+      ],
+      "identities": [
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "de5c5d6e3c98f14444b473336f9a7278579dd2a684d9bb8d63237fc046f7bdbc",
+          "seed": 17,
+          "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+          "task_id": 0,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "3b363af26394eb78094e47b94202a5e9dd8ce59279c7693212216c6da2bb9782",
+          "seed": 17,
+          "task_description": "put both the cream cheese box and the butter in the basket",
+          "task_id": 1,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "c3e093b87771ffda30d99942308e72706d01b9da7524f91a4a8db299d060743d",
+          "seed": 17,
+          "task_description": "turn on the stove and put the moka pot on it",
+          "task_id": 2,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "31784fc75e331c33b4d6009b0ecbbf4619434435b8ef727cf1785ac92fcfa806",
+          "seed": 17,
+          "task_description": "put the black bowl in the bottom drawer of the cabinet and close it",
+          "task_id": 3,
+          "task_success": false
+        }
+      ],
+      "teacher_views": [
+        [
+          {
+            "observation/image": "85a5b3fa7bc75504e3a2b1f771d1f4e705faa2442b2ebe07a2fd7bc8aef39112",
+            "observation/state": "2c2b7845f5d69be1888f8be1924559e1c4c76d16a3f57744af79be7f6d0f7cf6",
+            "observation/wrist_image": "5f1fc47714e372dd2402246887405a5052a0dbae2f1e7a5fe6a2139cd039c989",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "ace7785e12f6e73af677bb4bdc989bad28cb8f68c08fd6f3b047e881214b771b",
+            "observation/state": "936245825cb68198b9b345614bbf331bf3e144ca5828b0f58ff8b7907eaea207",
+            "observation/wrist_image": "2bfff0067b6d184298e261265f45427b54388d2f5c3b6fc3a82653b5e6a30545",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "93eae96805d5939b7c0017ac6d55eb3efca7a74bb6a290904fb0d5a0766c7a4b",
+            "observation/state": "195207d80210d99b8033043d61c68e387a29ad9ad921b38910f3b4465ab46a40",
+            "observation/wrist_image": "cf4e61e6352ec5ae50c154d2a08d3da35b9d448bc8b7106e63c4b30a5bf9b54d",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "ceb2fddecc03c4582c37e7bfd0f803e4e560c6f92243ca266c8f5aa12166c968",
+            "observation/state": "6ba8cd4cee73382fd761c1bb8450cc1b0fbb44d187e27274544c82dfbc79eeee",
+            "observation/wrist_image": "8b267586d9b3df8a251840586bcc7e9266da7f9dd2874273efc364b9be3bedde",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "3bdd6851e6df9980970592f76c4e93b77f6877abeba62465c2f4ac1f2b0263d0",
+            "observation/state": "26ab73c711a3bc05395ca69f313c69e137bd2590fd70d3968e21a82c6878e38d",
+            "observation/wrist_image": "64aa5e28f6363ff62a038bff1ed14ca40380ca9238e068a40a8fe4f4eeedfbb0",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "9c8dbd5947e33ecd732286cf160b8bcf488303c8de9ad2496baa4a4e583a254f",
+            "observation/state": "dce62e9c4dd81a1f22c602eaceba99928c44dcd78e92f22b0002e54352b9d489",
+            "observation/wrist_image": "5f6c73e6d0af4d6cd35b86e8c6f8131b8f0aeb86bb80ac200613c5d0467a22ee",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "b31db3a6cf557a701802af5d8dbf26e626c3ee4a68a8c55ad34a20f291aac2d9",
+            "observation/state": "0359e19277521c725f7aa324170ef3423be6af599c045116411ffcf2378f096a",
+            "observation/wrist_image": "3e3bf71b889d0a36c1033789dcdb73ed34735238abb9707f572dbfa87830628d",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "05149a791d2241a324eb3d2c7d6bac0a34d77555bf35288768f60c1af5d79269",
+            "observation/state": "39b6cf28f23481ebc470e0a5d6935a68c8795bcc52674c139df13485094cf086",
+            "observation/wrist_image": "537aae5cdd2586a8e64cc75aa45d4b4c79795510b77e170ff0ab8c30181ef429",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "ef06cc15d4145803ea804076eb3069f87ec9cdef70431fd7230223c9b8c7bfd8",
+            "observation/state": "ac625fbc55b04c01f3749fa103769b6ec626c2dd717a7f8baaae1f99eac2eaa2",
+            "observation/wrist_image": "aaa270fae0e0cd74776c46f81a75ba35ac54c2e2330a4ffa8530559b294be918",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "8380a0e13a053ffb324e39ddce70c31809b3717ec46ff98608f15095d59c8329",
+            "observation/state": "ded557816cc44fedcf448ef239aad96db51c38300944da29ff536f4d720295da",
+            "observation/wrist_image": "544be011c6f67d95682b66f8c031d079366da201395593deb59f9249a71beeee",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "66250613a3bb7fbc7c52b001b34bb8ce4556b648138cd1462f9264d9e874fd10",
+            "observation/state": "b372039de76f16b706911a8bf437415e8fcc2670fc135261fb2713ba77b39da9",
+            "observation/wrist_image": "281e1fbd08816852f00078924e7d7a65745f0f173a2697b35ea8350541e81ea4",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "5fab980743c0e02e2266ce7b4aacdc02285740d4932c5a0061b4da6e9189b45f",
+            "observation/state": "dd426a3047de9ab2d7b43ec8aee818ec3504eaf61ad7dc03be858c259998cafb",
+            "observation/wrist_image": "b8568176cf9295a4752ea37909cef7af2fe48480d08e03a42fedbb2e08a354b8",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "f167d2bd6170725257173a890e194c6d10c4cdb8efb6192f02dbed0cf5065a40",
+            "observation/state": "e7a718a9804cffbec3d3d915397ab1c5495a2547d57f89d5cca68f472ae4b416",
+            "observation/wrist_image": "220c01cd0a3e1e6ec2644365f2f5ae3019500c8f6cdd0f2ed3f1719f477c5869",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "2833a1aff282ea78282ab2d87e12df627878d51892b9e0bc3a8ffff2b6b3c82e",
+            "observation/state": "48d048972ac16c3d3c73da3b13c108de7dc16c6055c2e8cc0909c6be9a9e716b",
+            "observation/wrist_image": "06c7ac0799cdfc978ca9f9a057b689d8fa306b319690e81b3c7af795baeb699c",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "89fa5d0e7f368559cd7b80eda7c55953a495002b771c2043b1fd25bdabb2a4c4",
+            "observation/state": "917a6d027356e8e592b6e54ec59b75b51b513012a307753da9fa8e2baf85ffc7",
+            "observation/wrist_image": "8f798f43b6f9d4582f0ebbb25b366465e72902471896be46b75770bc031332af",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "d19a43156f87fdea252e6c6007bf8f6a637fac3fef3822a797de54d211472b99",
+            "observation/state": "104f42f66e5b57b494d1630c94d3088a0cabde40d8430bf3591d92f3ed01d0d3",
+            "observation/wrist_image": "9ac36172c66d3ff496909aade8446291be5a92f557814b78e532ded11b05c501",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ]
+      ],
+      "valid": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "after": [
+        {
+          "observation/image": "e569adfdab555ae6efeb675ab856acfcb9df9d51bab802556e24c2115765410a",
+          "observation/state": "8c8e26f2e1e36555689903e8758e2747f4df95efe3d3533d686c29941eceba4d",
+          "observation/wrist_image": "57135337d93317928c2b7fa148ec7e55fc5a96d3f6bcd4ebdeebcec402814393",
+          "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+        },
+        {
+          "observation/image": "d899058b2a8a7927a2abf1c8c6a17100e84fea5350f04cac3e96ced6842d7a88",
+          "observation/state": "eb714955191aaff9b83f2b9fdc52bd70ed1c485415f8b41bfe7e22115a2b2f02",
+          "observation/wrist_image": "3c6afb4fec782726d83135669b6a57a808a607807563f10c166922aac4ef926e",
+          "prompt": "put both the cream cheese box and the butter in the basket"
+        },
+        {
+          "observation/image": "db4a1e9c69cef052b2bd99a553fe35f92f3d8ac47667d90431adcdebb2c07020",
+          "observation/state": "841f249c21042a6d19ab98e9f4065fd19465c72ec33f26e4023c63742cd3272b",
+          "observation/wrist_image": "8fd5441ad04da2744582e1784bfa34b942842cd9f3895cb9ae86a0dd8b54ab08",
+          "prompt": "turn on the stove and put the moka pot on it"
+        },
+        {
+          "observation/image": "1e05f4c303122d5bc64062afc6039c891b8668da909b9cc137eb5653b393ef93",
+          "observation/state": "dd37a066ac440b6ce15bf755cea8fcaa3385da4af18e86675174995b5495a6ba",
+          "observation/wrist_image": "445971968d66fb4a76f16f867e43d30014815fba8a52dcde6bbcf58fd216c364",
+          "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+        }
+      ],
+      "before": [
+        {
+          "observation/image": "f6dfdbefaaa30a4ff5146a922281708a7d857e0be94d91f544594dad754d6864",
+          "observation/state": "1006af62053d50ff22978c26ee013e543083aecec57bdd32b44f60da39a7fe4f",
+          "observation/wrist_image": "824bb75f011cbdd5dbcc434a77f001d897ade874b1daf63e5ea069f23b6c6652",
+          "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+        },
+        {
+          "observation/image": "58e6bf376d90c325028abefe828e44f43a531b6836afb31add1dc6fe3490b533",
+          "observation/state": "704c88b800300edbdb60f6f307c032e310ad6dbf5648b636fa84fc1e68088629",
+          "observation/wrist_image": "b6f4e6dc739b495fcf98f937a0b0ec7d19504283778a947fdaa5ba5fc637338c",
+          "prompt": "put both the cream cheese box and the butter in the basket"
+        },
+        {
+          "observation/image": "22a4e417e07829f90198f50383ec53e3e04d7f84a0d2c37f8ed8698ea2f38595",
+          "observation/state": "d1ecf5bb226290317cfdec29b80362ec3ab177fc41ad613771920e85ebeddee2",
+          "observation/wrist_image": "46cb1c72245fbcf339a723a56c3beefa568643eb001390c3eff7d2f2512500ac",
+          "prompt": "turn on the stove and put the moka pot on it"
+        },
+        {
+          "observation/image": "43a044163bb6187ba65ccde42f8627abbeb2056aaf3bbb81ba69c08b28487ac7",
+          "observation/state": "bacd87e971a233d828a877fa60115baf93f2d8b1d75d0685f23cc9c703dbc62b",
+          "observation/wrist_image": "c1373ac6d1ba2a518a6c27a7f145de1d6287abbe102fdd9d21bb66fdf3eee1cd",
+          "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+        }
+      ],
+      "identities": [
+        {
+          "controlled_steps_at_start": 20,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "de5c5d6e3c98f14444b473336f9a7278579dd2a684d9bb8d63237fc046f7bdbc",
+          "seed": 17,
+          "task_description": "put both the alphabet soup and the tomato sauce in the basket",
+          "task_id": 0,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 20,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "3b363af26394eb78094e47b94202a5e9dd8ce59279c7693212216c6da2bb9782",
+          "seed": 17,
+          "task_description": "put both the cream cheese box and the butter in the basket",
+          "task_id": 1,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 20,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "c3e093b87771ffda30d99942308e72706d01b9da7524f91a4a8db299d060743d",
+          "seed": 17,
+          "task_description": "turn on the stove and put the moka pot on it",
+          "task_id": 2,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 20,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "31784fc75e331c33b4d6009b0ecbbf4619434435b8ef727cf1785ac92fcfa806",
+          "seed": 17,
+          "task_description": "put the black bowl in the bottom drawer of the cabinet and close it",
+          "task_id": 3,
+          "task_success": false
+        }
+      ],
+      "teacher_views": [
+        [
+          {
+            "observation/image": "f6dfdbefaaa30a4ff5146a922281708a7d857e0be94d91f544594dad754d6864",
+            "observation/state": "1006af62053d50ff22978c26ee013e543083aecec57bdd32b44f60da39a7fe4f",
+            "observation/wrist_image": "824bb75f011cbdd5dbcc434a77f001d897ade874b1daf63e5ea069f23b6c6652",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "58e6bf376d90c325028abefe828e44f43a531b6836afb31add1dc6fe3490b533",
+            "observation/state": "704c88b800300edbdb60f6f307c032e310ad6dbf5648b636fa84fc1e68088629",
+            "observation/wrist_image": "b6f4e6dc739b495fcf98f937a0b0ec7d19504283778a947fdaa5ba5fc637338c",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "22a4e417e07829f90198f50383ec53e3e04d7f84a0d2c37f8ed8698ea2f38595",
+            "observation/state": "d1ecf5bb226290317cfdec29b80362ec3ab177fc41ad613771920e85ebeddee2",
+            "observation/wrist_image": "46cb1c72245fbcf339a723a56c3beefa568643eb001390c3eff7d2f2512500ac",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "43a044163bb6187ba65ccde42f8627abbeb2056aaf3bbb81ba69c08b28487ac7",
+            "observation/state": "bacd87e971a233d828a877fa60115baf93f2d8b1d75d0685f23cc9c703dbc62b",
+            "observation/wrist_image": "c1373ac6d1ba2a518a6c27a7f145de1d6287abbe102fdd9d21bb66fdf3eee1cd",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "1eaed6f36b5f2d5169df39bb01afd5eb10e1dec3a41748b5ebffa61a0f152cbe",
+            "observation/state": "61804b6965d2f42637997ffea9ec0a37f7764bfc5ae7646ae3cbf40bc8480068",
+            "observation/wrist_image": "c8a5b67e40ef6c6a0a6f5a24a8716387f178ebff951bdc663420f8d3759ed7e3",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "feef8887ce44843a6e624861e664f89b14afe1632a41cc1a8ad999bf9c7e6566",
+            "observation/state": "3375b36b2a8f48f0dedf79785249a34a05705ab53f3f5dce633e2af6f20df696",
+            "observation/wrist_image": "f87c774d84d7636b85fb8f92dab7bf1bb7e07cdc92154ce17c97dc9b965a354b",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "0394bb8cdad6033c259809716379cf4bf430d054c72323586d2b26a523eb3334",
+            "observation/state": "953467c062dd8e4aa6e72ae3ec886e88897bf26009ee353c1fd75658c3d936d7",
+            "observation/wrist_image": "7665666979937f760f90ee71d548def94a94dc2292fdf797f412fd395f1b7f1d",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "267dfd0f58ae3542f67eef4c06162c636c497bec929e0ee5ccb0f82b781bd049",
+            "observation/state": "3853f39b6ea899c624bf47547623f7a036deaf5cb94d50ec977899a4a580e2fd",
+            "observation/wrist_image": "0d514011056019088882a579b31a3dce5ce0dad6e1986c8c901dfaf7afa60971",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "8a56b484d71155901dfba7979018a25bb0dd183bf6d79f0fed2932035da9ceae",
+            "observation/state": "6180b88ef0c27430681a85770a76ffa2f67d779ebde69f61d6a93d22079f1e8f",
+            "observation/wrist_image": "6a6ef8a9db976b261da131a9988c4d8c288aebcd72bb18051fb2361934e5868d",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "db365db707c5bb22994677c4a273fed2c2d31ea24965dfccbb2f72cbbbad69aa",
+            "observation/state": "3a44f91b2f263ac780b00f9bb79e09e301263cddebda84c1b1ec25e1b56b0096",
+            "observation/wrist_image": "8966c46b2e03874c428cae6d1b95e2a08af41f363a1a16476cf4b42b01066f71",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "70b993f11ca4cf42fd16861752d4d0f50a998a946b2b50ca47d1ef22f0a00935",
+            "observation/state": "bb3fafdae43517a0b73133517a7b79867a68d6492f057e8d2fc0759198ba8e21",
+            "observation/wrist_image": "84fbbc51d33dfd41ee9680175c514f3766d54df05f4a315461aae06ec13bc43b",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "e23ee679fe9cb4f796f9d94e55331412f470e776e0e24177a90cec6f726e8194",
+            "observation/state": "a7d78d6962ff01d2b726cc96f2a42147ca092031bf756436cd47a018f8c8322d",
+            "observation/wrist_image": "5eb40b9aa402152b5f4eb274f624e4824ade47f7a7de1874eb417724f3b68f8f",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ],
+        [
+          {
+            "observation/image": "63bb0f1d3741f047e3b7af095753efe2e48f021785feaeed4118e940796ccdd8",
+            "observation/state": "df0d86c1c02a155252cc6fe9d4dc9c6331edf39d37fbbc3540f2eeb42464119c",
+            "observation/wrist_image": "76664f0a8dd776d2ff5182913d6273ee85c2a33a626dc75d7ef79642cc75510d",
+            "prompt": "put both the alphabet soup and the tomato sauce in the basket"
+          },
+          {
+            "observation/image": "3ed5f7ea38409b591842f9757bd2bb620d97ea92b3326557266a19fb20c3f622",
+            "observation/state": "933d751c9fc916ff99133e46a7d0836347510879bdd236d8d0baf7014c586af5",
+            "observation/wrist_image": "a21743fa99273e82d03cbaebff7687798e530396a9a474bc11b6916ec59114c7",
+            "prompt": "put both the cream cheese box and the butter in the basket"
+          },
+          {
+            "observation/image": "b2d8d5e1d6d00c27b9f3618e1fefc256665922ccb43dfde1efaaebd3a7bd6c65",
+            "observation/state": "04b1ae55f6a6dc218edc4e336f7464d48457b46647e6f89bbed67fab4ef3601d",
+            "observation/wrist_image": "62b13018d7ff0615732839be3e6e9b1b629309565bdd9bceaa3d449b37d7051b",
+            "prompt": "turn on the stove and put the moka pot on it"
+          },
+          {
+            "observation/image": "3f373172f6edefde48b4cd25d5845bffd41dd179202e01978c0345a911df9a15",
+            "observation/state": "5ede406d7c2219a13bd80b54b29642c6cdfa945db18b872f0da20ce488e59e6b",
+            "observation/wrist_image": "c0503e47ebf059138769bf69b0474314c7837718c86b4d63414d74a37461e6e3",
+            "prompt": "put the black bowl in the bottom drawer of the cabinet and close it"
+          }
+        ]
+      ],
+      "valid": [
+        20,
+        20,
+        20,
+        20
+      ]
+    },
+    {
+      "after": [
+        {
+          "observation/image": "bcf7ac5c9c84006f1478f014c7b0440f07b923ba2dade957b768c52ee4db6f34",
+          "observation/state": "ce9fa74c3be5e2d8fc56e90cbab293d2b482bd9b3f3322430c479e09bcb92275",
+          "observation/wrist_image": "d2edf4f139570963f6af391a80d0874f809500e82f96ca2d09d2887c12342382",
+          "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+        },
+        {
+          "observation/image": "4b0679700934604d05ab0bd4c3d74f68939af10a0a4a8beb624ef5f66fa2aad2",
+          "observation/state": "f4a13af9e22d732a7d5ed2d596933c82b87cf8464a25a7bc2805245514ca3083",
+          "observation/wrist_image": "ce184c5da905601fc4fc460ea5a90d31b5584e1698fcdbcba2f9d4209cbd79e6",
+          "prompt": "pick up the book and place it in the back compartment of the caddy"
+        },
+        {
+          "observation/image": "689deddfc8fac40a7cf7e007fb90bb376f4c31250abdf9d574bd7ebcdb119fa6",
+          "observation/state": "dfe5a76e93525668a3be80f75a1ccdc536f372e60ac6b57a2b60adab0e83dfdf",
+          "observation/wrist_image": "d28ff19a04ed032bc0125ddc6a43542b6aedcd9357ca6141c55251832ca6e4a6",
+          "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+        },
+        {
+          "observation/image": "e27d53ddae16965ede73ffb07f5ade14005b1d72cf45625d160a9f5acaba9d5c",
+          "observation/state": "74e01489b7db79a0e6012d32d5b71618c44aa9cb14cfe0a7bfc834c34d2ff115",
+          "observation/wrist_image": "0bb193e0b36800e4ff1c05c15b34df4cf0a46b6b591add47e0af980368a319e9",
+          "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+        }
+      ],
+      "before": [
+        {
+          "observation/image": "4d085a24a3d24190934f21f7bf7ce0cdb423f6d75256645df45711aa8e94f6ea",
+          "observation/state": "71aa63da4b82683fbed6256cb69b893744c6523726d13e1b633712630fd71469",
+          "observation/wrist_image": "1c50eb72a2349ec3fe08d87839c456df8f43ef788a1691c1bea28753d28adad2",
+          "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+        },
+        {
+          "observation/image": "b78cca9b614f882385af62740e645b00e3d6ad182119d159bbfec5d6c66dd84c",
+          "observation/state": "f477187c9dab994a8f6dc6fd6164169419843c2683a8e5f8286929d2b7fc72ff",
+          "observation/wrist_image": "04136467b0051695271e60ae51ca05a9c6a4c7775f3be4b72ddbd16bd5dfd99d",
+          "prompt": "pick up the book and place it in the back compartment of the caddy"
+        },
+        {
+          "observation/image": "47cf683ef50dadcd76ecb40c0214bb7dfccb2850fe0e46d64cc90b42fa85cc01",
+          "observation/state": "38f1243e52fd693f9b267b76dadf6d55b0560c1a3142635a656d200ab15bdbfe",
+          "observation/wrist_image": "5af0a50ca3d938697e22c190d43880722fdb0f72799072beda6c5ce1797792db",
+          "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+        },
+        {
+          "observation/image": "c8fc42cff23c9dc2a30faa7d88090db6abcb01a8e863844630c375cc7514a7f5",
+          "observation/state": "cc5f563d3e59a0cec9ccaf66c63255f812d30414f191726dd49b83c2f498f29c",
+          "observation/wrist_image": "3677d1b0462a12db7fc3143e443f83fdedf283514dcb4ee3a2dbb8f8496a4986",
+          "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+        }
+      ],
+      "identities": [
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "a7bcc377e63ba72be9b04309437eb20be23059410b6ad87efe5de4941791b55b",
+          "seed": 17,
+          "task_description": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+          "task_id": 4,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "8f372d4a25ec97dc05ebf08c9e55991a42a6e9147471d4cf590d2c2bdcd9b620",
+          "seed": 17,
+          "task_description": "pick up the book and place it in the back compartment of the caddy",
+          "task_id": 5,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "611d2a3905103a88487c6a6792787e71594be2d8005dcf6f2c57111563befe6c",
+          "seed": 17,
+          "task_description": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+          "task_id": 6,
+          "task_success": false
+        },
+        {
+          "controlled_steps_at_start": 0,
+          "episode_ended": false,
+          "executed_steps": 20,
+          "initial_state_index": 16,
+          "initial_state_sha256": "d67eb9e81ad7ec13db18e9afc46c29148ba07df9f41b4972dfb6a27ea403f51d",
+          "seed": 17,
+          "task_description": "put both the alphabet soup and the cream cheese box in the basket",
+          "task_id": 7,
+          "task_success": false
+        }
+      ],
+      "teacher_views": [
+        [
+          {
+            "observation/image": "4d085a24a3d24190934f21f7bf7ce0cdb423f6d75256645df45711aa8e94f6ea",
+            "observation/state": "71aa63da4b82683fbed6256cb69b893744c6523726d13e1b633712630fd71469",
+            "observation/wrist_image": "1c50eb72a2349ec3fe08d87839c456df8f43ef788a1691c1bea28753d28adad2",
+            "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+          },
+          {
+            "observation/image": "b78cca9b614f882385af62740e645b00e3d6ad182119d159bbfec5d6c66dd84c",
+            "observation/state": "f477187c9dab994a8f6dc6fd6164169419843c2683a8e5f8286929d2b7fc72ff",
+            "observation/wrist_image": "04136467b0051695271e60ae51ca05a9c6a4c7775f3be4b72ddbd16bd5dfd99d",
+            "prompt": "pick up the book and place it in the back compartment of the caddy"
+          },
+          {
+            "observation/image": "47cf683ef50dadcd76ecb40c0214bb7dfccb2850fe0e46d64cc90b42fa85cc01",
+            "observation/state": "38f1243e52fd693f9b267b76dadf6d55b0560c1a3142635a656d200ab15bdbfe",
+            "observation/wrist_image": "5af0a50ca3d938697e22c190d43880722fdb0f72799072beda6c5ce1797792db",
+            "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+          },
+          {
+            "observation/image": "c8fc42cff23c9dc2a30faa7d88090db6abcb01a8e863844630c375cc7514a7f5",
+            "observation/state": "cc5f563d3e59a0cec9ccaf66c63255f812d30414f191726dd49b83c2f498f29c",
+            "observation/wrist_image": "3677d1b0462a12db7fc3143e443f83fdedf283514dcb4ee3a2dbb8f8496a4986",
+            "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+          }
+        ],
+        [
+          {
+            "observation/image": "71d0b3e24819a95425b61e8c91da7c3d5b48309597f16d252a445e92786cc5f4",
+            "observation/state": "059222aea6a41afca77e3cad1cb91e035c8e8ea30758858a39ef399a9accdab1",
+            "observation/wrist_image": "97ba93b0285e50d4c428e0878e1e2aa484d23eed837b74d1262690e9dd799e7c",
+            "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+          },
+          {
+            "observation/image": "40d1856f1b9a9387e06ad430ab068fc0853c121aa465ea50d2d57bbde09eb49d",
+            "observation/state": "c85c340d99746d9a23cc1fff7e88b8b92141f7cca3791b4a57b02cfb24171098",
+            "observation/wrist_image": "5d46572b10eafd6522925b917e30f72acd71d7c4baa62d0e8993dbab93bcb46d",
+            "prompt": "pick up the book and place it in the back compartment of the caddy"
+          },
+          {
+            "observation/image": "2c432ddc428ee81f7f92730b3d0da47ec10ecdebf7d5f1002b228ca2dcd69857",
+            "observation/state": "1d0da7cc6e21a0c99c45047c8ee313cc6adadc33893309e33004c8be44ecdede",
+            "observation/wrist_image": "3bab9417331984ba937d59b50d04c42132507bad925d6728056d91365df8d9b3",
+            "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+          },
+          {
+            "observation/image": "55281db9ca8807a84b0673a411972f354386b3fe48f438f6a6241367c2679f1d",
+            "observation/state": "06ea8e7bcc54d19493aef22b873ca2b6c63a6f584913addfedbe59b004d4a3c7",
+            "observation/wrist_image": "9463581c913b56bd4a102d71fcac6c15908b0c1b1308b23c1cb078f7c5b3b50b",
+            "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+          }
+        ],
+        [
+          {
+            "observation/image": "cd0df3407865c1b80ecb0c3bbce285a05930715e68905b81ddbb13bc521c6206",
+            "observation/state": "855efd7c82da255d1b962bd91cf6f06539f201faada771834776e39068b56efc",
+            "observation/wrist_image": "8aba78a919a5642871df231fde6b6df3ce441d9311bb4f809e669085ac16d074",
+            "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+          },
+          {
+            "observation/image": "f33d35e53a3ebab4218635496f2fa2dc22d2d44667420dc9fd67ec997144307a",
+            "observation/state": "5b8cc5b8f35082283b1c3bd5e4e5f160e357e643ec4b2c36a9e97f1df842b4d6",
+            "observation/wrist_image": "c7eaadbe720972064c3fe2d812451e734140c5aaf9c8b8599b23162bb556605b",
+            "prompt": "pick up the book and place it in the back compartment of the caddy"
+          },
+          {
+            "observation/image": "f3b4234e50742dc9bb559bf19a402cdcdf2e5c1f2fc1dbba29f6605ceb1dde68",
+            "observation/state": "19f1ce739ca3997c5333158ebef72457de7da4e85b9a15a5ca42267f424e92fc",
+            "observation/wrist_image": "3e2c7e02ba9758eddb04bc2e5b36ddfcb60a69beb77dfbfaff920921f415f56e",
+            "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+          },
+          {
+            "observation/image": "8bcfec31f03ee66c2be99f09c4b0e3f5b10fb23c1fa96ad00ffc3e603a63244d",
+            "observation/state": "e6590f867ef40fc905738e95fb76aa2f96078efc0475aa7114d4e94fc6961380",
+            "observation/wrist_image": "31b04546ef979857f2c1997ed4e4f200a2a6e22bf319f5e75e42f0c4901e4d4a",
+            "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+          }
+        ],
+        [
+          {
+            "observation/image": "e788d6cf607af95a9282e15c64c9293fb50768783d8d803b72ea35ec4f24e83f",
+            "observation/state": "8ce53333ab6f205dc1038045afb762a68f9c0f44e10fa88a6c8a5e75614ee459",
+            "observation/wrist_image": "f99c899e7069f8ab5908b1111492c960164c49182b1c8b930c5b0c43ab69e902",
+            "prompt": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+          },
+          {
+            "observation/image": "6f75ee0775434c170bba9e02dc0527acd23be674289328fd476f10d0e2667016",
+            "observation/state": "5322b356c243df8b48dad95ee0454bfd96abede2c0a525ad79fe6761b2ea3a77",
+            "observation/wrist_image": "0e8f7acb24c5a384e2f08b7f4e9b3f100b2319b43984593abc0da719ddfba063",
+            "prompt": "pick up the book and place it in the back compartment of the caddy"
+          },
+          {
+            "observation/image": "f6ff20039db8440ac54e151a9f13c7a9cf6e205f70aed990e8937e4b76208c73",
+            "observation/state": "c00105edf39bebb32fc43919d9101e0443f4d51646582e41314763bd792501f1",
+            "observation/wrist_image": "9c016adba9497601ff8ebb59f1d52839b876c8d7f82a01f0b684717eb3d1122c",
+            "prompt": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+          },
+          {
+            "observation/image": "0b9386eef58b1d49da481727aa0a4bb5d6f9216571342fb22f11af16f62f6d25",
+            "observation/state": "46d2dbde5cf537c4cb62a83226f06c6691368330e98bf697d8068b35b89d4c4f",
+            "observation/wrist_image": "d8d8bcc7f0db029b5fda4c2599b279f55e980c1249fd5102e2b53341312e2b40",
+            "prompt": "put both the alphabet soup and the cream cheese box in the basket"
+          }
+        ]
+      ],
+      "valid": [
+        20,
+        20,
+        20,
+        20
+      ]
+    }
+  ]
+}

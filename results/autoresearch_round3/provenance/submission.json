@@ -1,0 +1,11 @@
+{
+  "job_id": "60146846",
+  "submitted_utc": "2026-09-17T03:44:36.055974+00:00",
+  "gpus": 1,
+  "cpus": 8,
+  "memory_gib": 64,
+  "time_limit": "02:30:00",
+  "account": "rrg-btaati",
+  "parent_checkpoint": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/step_500",
+  "checkpoint_root": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3"
+}

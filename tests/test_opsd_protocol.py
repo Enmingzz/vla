@@ -40,9 +40,26 @@ def test_continuation_split_protects_confirmation_and_caps_updates():
     with pytest.raises(ValueError, match="overlap"):
         validate_training_config(config)
     config["train_initial_state_stop"] = 20
-    config["optimizer_steps"] = 501
-    with pytest.raises(ValueError, match="at-most-500"):
+    config["optimizer_steps"] = 1001
+    with pytest.raises(ValueError, match="at-most-1000"):
         validate_training_config(config)
+
+
+def test_third_round_keeps_the_method_and_exact_additional_update_budget():
+    base = Path(__file__).resolve().parents[1]
+    previous = load_config(base / "configs/opsd_continuation_500.yaml")
+    current = load_config(base / "configs/opsd_continuation_1000.yaml")
+    validate_training_config(current)
+    plan = load_config(base / "configs/autoresearch_round3.yaml")
+    assert current["optimizer_steps"] - plan["resume_step"] == 500
+    for key in ["algorithm", "prediction_horizon", "student_horizon", "teacher_horizon", "flow_steps",
+                "batch_size", "learning_rate", "ema_decay", "trainable_parameters", "teacher_tail"]:
+        assert current[key] == previous[key]
+    assert current["checkpoint_steps"] == plan["milestones"] == [500, 1000]
+    matrix = conditions(plan)
+    assert len(matrix) == 2
+    assert sum(c["episodes_per_task"] * 10 for c in matrix) == 200
+    assert all(c["horizon"] == 20 and c["initial_state_start"] == 30 and c["seed"] == 27 for c in matrix)
 
 
 def test_research_matrix_keeps_confirmation_separate_and_preselects_final_step():

@@ -1,0 +1,523 @@
+{
+  "evaluation_initial_states": {
+    "confirmation/libero_10": [
+      {
+        "initial_state_index": 30,
+        "initial_state_sha256": "19e0f3dd0866c389374b3f35a6d9603f86c487154452af1b41ccfc8c63b90ec8",
+        "task_id": 0
+      },
+      {
+        "initial_state_index": 31,
+        "initial_state_sha256": "b76a1814bb27d0c14b6b9fb5927fd0bd69e2d869ea201f94d5c4f8c04bdf7c2e",
+        "task_id": 0
+      },
+      {
+        "initial_state_index": 32,
+        "initial_state_sha256": "33784af332c16d365e2821d5259c619eda5fde4968118f88adfc9eab97730848",
+        "task_id": 0
+      },
+      {
+        "initial_state_index": 33,
+        "initial_state_sha256": "5c9bc6f2a5b7d83aff179da81757fb20495ec5a80a84ceca542b9e4e5d115e39",
+        "task_id": 0
+      },
+      {
+        "initial_state_index": 34,
+        "initial_state_sha256": "4a3273ac6502122445ad5b3b98800f280d3a5d231b06a89f7ddb8ac39d159054",
+        "task_id": 0
+      },
+      {
+        "initial_state_index": 35,
+        "initial_state_sha256": "336b8f5aa6585aaa4f3631893197cb6993a55e3071ecada7aa9982f8e4476323",
+        "task_id": 0
+      },
+      {
+        "initial_state_index": 36,
+        "initial_state_sha256": "a24ed341443fe40e15b073681dcbab65a77da538b3f60b761b7948457fe9be40",
+        "task_id": 0
+      },
+      {
+        "initial_state_index": 37,
+        "initial_state_sha256": "6ea34f0fe33999cf5c40aaf628c4010587a011c063b8e048a892374d37322173",
+        "task_id": 0
+      },
+      {
+        "initial_state_index": 38,
+        "initial_state_sha256": "f6380f5a36567d9c02dfba174a719a561ab260ef0b375aa597fc16841883dacf",
+        "task_id": 0
+      },
+      {
+        "initial_state_index": 39,
+        "initial_state_sha256": "c2698b783aee84ff8148627c99ac73554e8e67d3acdaf3f0a6262b0c7ce0b0d7",
+        "task_id": 0
+      },
+      {
+        "initial_state_index": 30,
+        "initial_state_sha256": "a3da9babaf478ebf08f386675f6cafd53660341acccc1e6a3a35e78ab05b701f",
+        "task_id": 1
+      },
+      {
+        "initial_state_index": 31,
+        "initial_state_sha256": "4984085fa97ebf951172cf5ae789580d7134152b4fea5698ff96a4bad7e70f97",
+        "task_id": 1
+      },
+      {
+        "initial_state_index": 32,
+        "initial_state_sha256": "d2d75abf097e2be72d962bbf8ffc3b20b31e433221c18bec82325e28d986826b",
+        "task_id": 1
+      },
+      {
+        "initial_state_index": 33,
+        "initial_state_sha256": "81b61f9be92ac4f9d56cdacf3dcca98f387e31edb9c7141d3f990117a1ff278d",
+        "task_id": 1
+      },
+      {
+        "initial_state_index": 34,
+        "initial_state_sha256": "9e2d084f62d6113e4e45261dab7f322ee26372814e064c310ab4daa568f6fb67",
+        "task_id": 1
+      },
+      {
+        "initial_state_index": 35,
+        "initial_state_sha256": "952e1bbf1ba35e5b14351a18a3112f6c25ffe341655a4f4c67b38833279c0b45",
+        "task_id": 1
+      },
+      {
+        "initial_state_index": 36,
+        "initial_state_sha256": "fb05a103e69465a12b6a08b239238f9d6c0079f7d35b59739e23ded8c8c33b57",
+        "task_id": 1
+      },
+      {
+        "initial_state_index": 37,
+        "initial_state_sha256": "64b354475cf062ae58de534c2e79fc7c1814418988ab54d863d201fa69cd571a",
+        "task_id": 1
+      },
+      {
+        "initial_state_index": 38,
+        "initial_state_sha256": "b56cdd171743659e0bfc9bc854d675e92646e2c5629ae623abf3dd160f60ca19",
+        "task_id": 1
+      },
+      {
+        "initial_state_index": 39,
+        "initial_state_sha256": "1bc8ab9e681f4b4681db4276c21bb92a0cb331e08dcb2cda26f82a3385614dea",
+        "task_id": 1
+      },
+      {
+        "initial_state_index": 30,
+        "initial_state_sha256": "144d043d888be815a7b1a9ff7bbcf63a5042f54b22180630e908ed9e6c710f90",
+        "task_id": 2
+      },
+      {
+        "initial_state_index": 31,
+        "initial_state_sha256": "afd7fda8754fc34080207742f04c1cff7be8e99e4983b9baa15a23b8aea86e7c",
+        "task_id": 2
+      },
+      {
+        "initial_state_index": 32,
+        "initial_state_sha256": "9525d500803d1abdcf74cc53b9386cc7d82a73d5f8e1ea4b60a7357252a950f2",
+        "task_id": 2
+      },
+      {
+        "initial_state_index": 33,
+        "initial_state_sha256": "2506655b02978d7435f0f6428a1d663a4d6821eccd5295c878a2877142be1176",
+        "task_id": 2
+      },
+      {
+        "initial_state_index": 34,
+        "initial_state_sha256": "e9ed14beb2da957878d06220da3839343ac51bdd33d51e8f0121639d0c268955",
+        "task_id": 2
+      },
+      {
+        "initial_state_index": 35,
+        "initial_state_sha256": "fbad01ad429880915350bbdf8eadaf6ffff4791545609ccc11a70305a0ab2ba7",
+        "task_id": 2
+      },
+      {
+        "initial_state_index": 36,
+        "initial_state_sha256": "2360a74a51b0ed0bd70fb44ced10bc029c6f9e569f03fb59ec029b0d462c4955",
+        "task_id": 2
+      },
+      {
+        "initial_state_index": 37,
+        "initial_state_sha256": "6c5cc50b8c9124cd39e2cc0bdb081e27d0568223545369da060bc03d5b777db7",
+        "task_id": 2
+      },
+      {
+        "initial_state_index": 38,
+        "initial_state_sha256": "9586fc7a62b7f3bacd5eb709b2e884419a6ba9884376719ed34ad2ec8019160a",
+        "task_id": 2
+      },
+      {
+        "initial_state_index": 39,
+        "initial_state_sha256": "cfce9023a54d96cd3c72d5241d49f34a4367209ad647171edfe4773f7b10ee38",
+        "task_id": 2
+      },
+      {
+        "initial_state_index": 30,
+        "initial_state_sha256": "fc294a322b8e4064400cd584307a533e230719575f2af1344a0ee6087f3c06be",
+        "task_id": 3
+      },
+      {
+        "initial_state_index": 31,
+        "initial_state_sha256": "f738da9b3fa1500543fbd9b75b6ab875527ab2d359b48a94671e5ab0dbdb6d3b",
+        "task_id": 3
+      },
+      {
+        "initial_state_index": 32,
+        "initial_state_sha256": "06ff1bc9677758e857883910b86f9484d22db3e268ff231869bb1e9ae973ccc7",
+        "task_id": 3
+      },
+      {
+        "initial_state_index": 33,
+        "initial_state_sha256": "b024886d4d9f44efa449e52dfd7494d494837d058ed98e39a4c5086301743d42",
+        "task_id": 3
+      },
+      {
+        "initial_state_index": 34,
+        "initial_state_sha256": "3164aef8b531383e188349bc449caf1a3991ba01f148f71047c8979b96466a48",
+        "task_id": 3
+      },
+      {
+        "initial_state_index": 35,
+        "initial_state_sha256": "479b1abd1a72e610f81a3b59258fd987d25dc8b6f12533be29668a767204cfbe",
+        "task_id": 3
+      },
+      {
+        "initial_state_index": 36,
+        "initial_state_sha256": "68dd38852f913e58fb78af70a92409c87a3412b4746d2fc170cf6973bdc63dc6",
+        "task_id": 3
+      },
+      {
+        "initial_state_index": 37,
+        "initial_state_sha256": "c441e8975840d9daf19f79713c79734ba8cce8cb97796197d3f32ab0fe3e93e5",
+        "task_id": 3
+      },
+      {
+        "initial_state_index": 38,
+        "initial_state_sha256": "299a158ad84ef9f24f05515886168207dfc774964ccb05103623d4469a73e8df",
+        "task_id": 3
+      },
+      {
+        "initial_state_index": 39,
+        "initial_state_sha256": "3546a781ca29eee99be8d91b90dbfee886b9dcfc848383f6137d11d9db2e4e9e",
+        "task_id": 3
+      },
+      {
+        "initial_state_index": 30,
+        "initial_state_sha256": "9cabd93fa3f38a169948aa35aee80d77652180b15df663b23c9beb3f9a6638b3",
+        "task_id": 4
+      },
+      {
+        "initial_state_index": 31,
+        "initial_state_sha256": "a2dd381786cfc57f78ce3bc8328bf3f59badede5bd1ce5a09eb10b08ef121946",
+        "task_id": 4
+      },
+      {
+        "initial_state_index": 32,
+        "initial_state_sha256": "fb9a0c28a7f00cadc79ea609852f1096d0903647db3be31ee2d370eea0b7617d",
+        "task_id": 4
+      },
+      {
+        "initial_state_index": 33,
+        "initial_state_sha256": "c0ff444e1794384a8c40bae133656c04b43fdfe1a9794a0efdcf43e00f8371d2",
+        "task_id": 4
+      },
+      {
+        "initial_state_index": 34,
+        "initial_state_sha256": "ac58d3a07536dce949261054e5eb123c67781962742b063d39a5496629004d0f",
+        "task_id": 4
+      },
+      {
+        "initial_state_index": 35,
+        "initial_state_sha256": "8e76adf21e17924868d52561761b530ffa801f0f8437f794b92930d243679e3d",
+        "task_id": 4
+      },
+      {
+        "initial_state_index": 36,
+        "initial_state_sha256": "6df1188e48c3b632f4f99de80b2fe6b0686bef6518e94aad31c0eab9c3102bec",
+        "task_id": 4
+      },
+      {
+        "initial_state_index": 37,
+        "initial_state_sha256": "7cb147ff35e21075dd5327651d8801a136ce3c0cc9c72f40d3ca2ccbeb13c4a1",
+        "task_id": 4
+      },
+      {
+        "initial_state_index": 38,
+        "initial_state_sha256": "0fbb059759f0e93f6931962464ee93d64844f47e5339dbe33a9e2cab1bef7c25",
+        "task_id": 4
+      },
+      {
+        "initial_state_index": 39,
+        "initial_state_sha256": "79f87021169f3d2ae4a585159c1956f8d0dbd5aeded6d2b39dc7dcfac1a5514f",
+        "task_id": 4
+      },
+      {
+        "initial_state_index": 30,
+        "initial_state_sha256": "4491acebd5dea3068f362e25df266acd8c84f9ce8f9f258c80ab3b524b854b0c",
+        "task_id": 5
+      },
+      {
+        "initial_state_index": 31,
+        "initial_state_sha256": "75b1ca6183cc1a2604f71e7e8ae20a7bfe91969e929f02e11444b30f4558c14f",
+        "task_id": 5
+      },
+      {
+        "initial_state_index": 32,
+        "initial_state_sha256": "2cdc667fc19ee05ae22542f9545ef3ab7222df552eff7d463d6e8d9d787a300a",
+        "task_id": 5
+      },
+      {
+        "initial_state_index": 33,
+        "initial_state_sha256": "59ea4b5d4411669f35f88220d1175a375e6065f91a12287ab0874ef17a67232c",
+        "task_id": 5
+      },
+      {
+        "initial_state_index": 34,
+        "initial_state_sha256": "7b7605c5e6cfc0229a322f8bed8d929afe1264bf3c2a8068110e2140b31aa380",
+        "task_id": 5
+      },
+      {
+        "initial_state_index": 35,
+        "initial_state_sha256": "b506e501b8268f2a03f285cdb565e19d0df0e4a00f8d129384a424d29ca8e1c6",
+        "task_id": 5
+      },
+      {
+        "initial_state_index": 36,
+        "initial_state_sha256": "9739b063e195361683ca42327b494b103440dee28762444d9a725f470cb49033",
+        "task_id": 5
+      },
+      {
+        "initial_state_index": 37,
+        "initial_state_sha256": "789ef0f2ca4bcea4a64de30097e2e154810831b30e54aa9b5abf57240e934bb6",
+        "task_id": 5
+      },
+      {
+        "initial_state_index": 38,
+        "initial_state_sha256": "448d2dfcd3d2b22ea0e6f506f9407cf93f75ba5ce99a73d75357f90e03b10171",
+        "task_id": 5
+      },
+      {
+        "initial_state_index": 39,
+        "initial_state_sha256": "a9f86490e101eba1689934409c4f2a5b85ffe25d00ed62b9d4aa76e34e17cfd1",
+        "task_id": 5
+      },
+      {
+        "initial_state_index": 30,
+        "initial_state_sha256": "50367b388f1fc6cdcdf89a01cb826e389d78289712a594a1242df4d673ecf9ff",
+        "task_id": 6
+      },
+      {
+        "initial_state_index": 31,
+        "initial_state_sha256": "1f2d85a9be6763be044ba75e7db58bf582e5679a4eb4df4fb57ecb1948cd379f",
+        "task_id": 6
+      },
+      {
+        "initial_state_index": 32,
+        "initial_state_sha256": "0b343a4214cd6a6e78bef19b4c2724c22ff9ccb7d61c9592de6b3185ba2bfe45",
+        "task_id": 6
+      },
+      {
+        "initial_state_index": 33,
+        "initial_state_sha256": "9a6c43322351f119c3431c4b26ad2700b7ac0b0135d1cfea5e8334cad9684769",
+        "task_id": 6
+      },
+      {
+        "initial_state_index": 34,
+        "initial_state_sha256": "4398df75635f9ebd80c3a983da8dd1deece20fedb09a378f843abc93654e60b2",
+        "task_id": 6
+      },
+      {
+        "initial_state_index": 35,
+        "initial_state_sha256": "bb65a20d296b97d30d4a9a01e5999c31092c0d8d7cd3b903ac3723dc9fc14c66",
+        "task_id": 6
+      },
+      {
+        "initial_state_index": 36,
+        "initial_state_sha256": "8a0b38f735945c6e34f9934a36c1df97e6c033360e997496386bb9eb6675a2f3",
+        "task_id": 6
+      },
+      {
+        "initial_state_index": 37,
+        "initial_state_sha256": "1a1e6b6093094b10f5dd7da0659f59f808b3bb64fffebc34425a66e3064f25c7",
+        "task_id": 6
+      },
+      {
+        "initial_state_index": 38,
+        "initial_state_sha256": "d12009560dd7ee90ca6f30f6004671c74c7fd99d329dca6cc9550b043adedf0a",
+        "task_id": 6
+      },
+      {
+        "initial_state_index": 39,
+        "initial_state_sha256": "4aee3d7a3bd03986e9b730b8b7de7336b41cf65930bf1ca4167367930f8f49a5",
+        "task_id": 6
+      },
+      {
+        "initial_state_index": 30,
+        "initial_state_sha256": "fe1433d2e44147ed0c4c352f5755ef8fba3a4e398697ad71a1a2d8f35703979e",
+        "task_id": 7
+      },
+      {
+        "initial_state_index": 31,
+        "initial_state_sha256": "6be74bc1591d7fdc6e5cbfe61bfc3bc22f79191834d5fc7bd9920cc04feea03f",
+        "task_id": 7
+      },
+      {
+        "initial_state_index": 32,
+        "initial_state_sha256": "1683c68ac1977394b13f99d1f535d5fd131baad833d9181458e94435cd22af49",
+        "task_id": 7
+      },
+      {
+        "initial_state_index": 33,
+        "initial_state_sha256": "c835680b1e805062a9bb4535470929661da8e03efc771f8430dd87b67adab284",
+        "task_id": 7
+      },
+      {
+        "initial_state_index": 34,
+        "initial_state_sha256": "4eb0b1b6d02f161fc40f5cb41729e26da2f6316cbfb0b47c73b56352cdbc448b",
+        "task_id": 7
+      },
+      {
+        "initial_state_index": 35,
+        "initial_state_sha256": "4bed2b6781046cea461fd2b0579889feede3b85ea5dcb84ea1b77bf0c39eddd7",
+        "task_id": 7
+      },
+      {
+        "initial_state_index": 36,
+        "initial_state_sha256": "01f7b9a68c17467a119bad08737faa6614d59cb1d1acaf2673483f74fa3df62f",
+        "task_id": 7
+      },
+      {
+        "initial_state_index": 37,
+        "initial_state_sha256": "9d7d305df4f0b23d3bcd7636f64e11bed5122a236602f8824aa2addb11868329",
+        "task_id": 7
+      },
+      {
+        "initial_state_index": 38,
+        "initial_state_sha256": "1620a4362542e680831597e5133830a29fa3e4749b184593e8c6582367044822",
+        "task_id": 7
+      },
+      {
+        "initial_state_index": 39,
+        "initial_state_sha256": "73e179bfac0aad991de36bd64e704c4e9601ad3080269debd108fdb90f08b5a0",
+        "task_id": 7
+      },
+      {
+        "initial_state_index": 30,
+        "initial_state_sha256": "ccf2c646b3370360a21376e4ac71e4c17944f8f7dc0b67c2f4933bd98c8a3d24",
+        "task_id": 8
+      },
+      {
+        "initial_state_index": 31,
+        "initial_state_sha256": "6e687b6e1e8f520c26faeabf22c61ec54692bb060cff6daaadf4367aa091296e",
+        "task_id": 8
+      },
+      {
+        "initial_state_index": 32,
+        "initial_state_sha256": "f3c3d72674a7719004c174332ab222515d99f4b13d450da9182006654fee4c60",
+        "task_id": 8
+      },
+      {
+        "initial_state_index": 33,
+        "initial_state_sha256": "6df4a44a929730bed56b581146e08ffa71405649ce070ab2353b4e1bbc06e36f",
+        "task_id": 8
+      },
+      {
+        "initial_state_index": 34,
+        "initial_state_sha256": "0b25b8a1dc192aab2cc1fb017bd49083f60f4b4ec8d696cfeee355545492e25c",
+        "task_id": 8
+      },
+      {
+        "initial_state_index": 35,
+        "initial_state_sha256": "a22f8a48609d805771371a2a4d745ba0073aadeb9c987a3429e5f08aee3133bf",
+        "task_id": 8
+      },
+      {
+        "initial_state_index": 36,
+        "initial_state_sha256": "37b3977061059b1b5f7e5882b51fa9cfa3233eb50f7ed45ae59e9102bb467231",
+        "task_id": 8
+      },
+      {
+        "initial_state_index": 37,
+        "initial_state_sha256": "7d421763df389214f41ecd5a7764261df5b3b5965b10d79f50d8ee3232abfe90",
+        "task_id": 8
+      },
+      {
+        "initial_state_index": 38,
+        "initial_state_sha256": "aba62d2df077e20cf69434537da3653e049c453c0d4b5e02ffede8657aced077",
+        "task_id": 8
+      },
+      {
+        "initial_state_index": 39,
+        "initial_state_sha256": "4e1e8d1cb244d05025cc85e42bf6a50926d66b8bed6e554d6a449108032576f5",
+        "task_id": 8
+      },
+      {
+        "initial_state_index": 30,
+        "initial_state_sha256": "722fc672bba22b4cd87fff9b99340150401f641117283d24efda5b6522340a12",
+        "task_id": 9
+      },
+      {
+        "initial_state_index": 31,
+        "initial_state_sha256": "9434b2d80d0501c1eaa1f18beb28da48e57e488c1f8bbf12976065f92b2810ba",
+        "task_id": 9
+      },
+      {
+        "initial_state_index": 32,
+        "initial_state_sha256": "5bbc0b4dffc071855de50629b83470a122963798eb14b7fbc7002364d484c652",
+        "task_id": 9
+      },
+      {
+        "initial_state_index": 33,
+        "initial_state_sha256": "3a0877f5eca7a69595595b1f422388cc520ff89f6d8486ebc89bd0aca87fdb14",
+        "task_id": 9
+      },
+      {
+        "initial_state_index": 34,
+        "initial_state_sha256": "3d78ff484ac87792403bd2fa4e9b17a0766c76c5270ae3863b54b747f806f961",
+        "task_id": 9
+      },
+      {
+        "initial_state_index": 35,
+        "initial_state_sha256": "e344642b43b5175d2b7daadfadf040fc6b5ff02290cf4470fa91c7808a69948c",
+        "task_id": 9
+      },
+      {
+        "initial_state_index": 36,
+        "initial_state_sha256": "2558531014a16541302b2178b955d5059be493a5f961059d989dfb766bfc4289",
+        "task_id": 9
+      },
+      {
+        "initial_state_index": 37,
+        "initial_state_sha256": "442345dbf4620c9eb5aac2472870e3c9dcf7a03021ce28bb49dab6bc7bb6f9b8",
+        "task_id": 9
+      },
+      {
+        "initial_state_index": 38,
+        "initial_state_sha256": "a862501f326c85b31acc187c81a5dd7e3f1dfc7972815bcd94cb35a616f03844",
+        "task_id": 9
+      },
+      {
+        "initial_state_index": 39,
+        "initial_state_sha256": "5a9d747758237e92bbe856b97d739838ff94e00ca367263cb10f14e5ca87f59e",
+        "task_id": 9
+      }
+    ]
+  },
+  "new_training_pool_distinct_states": 100,
+  "old_and_new_training_disjoint_from_all_evaluations": true,
+  "parent_manifest_sha256": "c00bcab9c776c6e3794b4b86dc18a15b0e78dd9e7fcd9fb0fa1c7f2d920f18ed",
+  "plan_sha256": "035e7b8db88ac388ede63d467bf30cefbb80629745e6fbc515eb940e9b5bddff",
+  "planned_evaluation_episodes": 200,
+  "prior_rollout_sources": [
+    {
+      "path": "/home/enmingzz/project/vla/frequency_vla/results/opsd_h20_100/rollouts.jsonl",
+      "sha256": "39c73a7783a9d178b4e58377dbf6c3dc3b420696ac33d214113f817832e22838"
+    },
+    {
+      "path": "/home/enmingzz/project/vla/frequency_vla/results/autoresearch_round2/rollouts.jsonl",
+      "sha256": "075c7502feba0ddf16f83708c7e8363f98b0fe435c7de1b04911b80c700eecd9"
+    }
+  ],
+  "prior_training_distinct_states": 54,
+  "screen_confirmation_disjoint": true
+}

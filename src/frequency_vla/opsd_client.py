@@ -52,8 +52,17 @@ class TrainingEnvironments:
         self.eval_hashes = {array_hash(state) for task in range(10) for start, stop in protected
             for state in self.suite.get_task_init_states(task)[start:stop]}
 
+    @staticmethod
+    def activate_renderer(env):
+        # robosuite 1.4.1 binds GL at construction, not at each render. Select
+        # the owning context when switching between environments or freeing it.
+        context = env.env.sim._render_context_offscreen
+        if context is not None:
+            context.gl_ctx.make_current()
+
     def reset(self, slot):
         if self.environments[slot] is not None:
+            self.activate_renderer(self.environments[slot])
             self.environments[slot].close()
         task_id = self.next_task % 10
         self.next_task += 1
@@ -96,6 +105,7 @@ class TrainingEnvironments:
             for slot, env in enumerate(self.environments):
                 if self.done[slot]:
                     continue
+                self.activate_renderer(env)
                 obs, _, done, _ = env.step(actions[slot, offset].tolist())
                 self.steps[slot] += 1
                 valid[slot] += 1
@@ -110,6 +120,7 @@ class TrainingEnvironments:
     def close(self):
         for env in self.environments:
             if env is not None:
+                self.activate_renderer(env)
                 env.close()
 
 
@@ -166,7 +177,11 @@ def main():
         np.random.seed(config["train_seed"])
         import torch
         torch.manual_seed(config["train_seed"])
-        environments = TrainingEnvironments(official, config)
+        if config.get("environment_workers", 1) == 4:
+            from .opsd_parallel_env import ParallelTrainingEnvironments
+            environments = ParallelTrainingEnvironments(official, config, args.openpi_dir)
+        else:
+            environments = TrainingEnvironments(official, config)
         diagnostic = args.stage == "diagnostic"
         for step in range(current_step, end_step):
             started = time.monotonic()

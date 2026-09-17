@@ -8,7 +8,7 @@ import sys
 import time
 
 from .config import load_config
-from .logging_utils import append_record, digest, write_json
+from .logging_utils import append_record, digest, file_digest, write_json
 from .study_plan import condition_id, conditions
 
 
@@ -26,6 +26,10 @@ def main():
     audit = json.loads((root / "provenance/split_audit.json").read_text())
     if audit["plan_sha256"] != digest(plan):
         raise ValueError("Plan changed after initial-state audit")
+    if plan.get("continuation_only"):
+        check = json.loads((root / "provenance/parallel_environment_check.json").read_text())
+        if not check["passed"] or any(file_digest(p) != sha for p, sha in check["source_sha256"].items()):
+            raise ValueError("Parallel software rendering was not verified for this implementation")
     matrix = conditions(plan)
     seen = set()
 
@@ -53,11 +57,29 @@ def main():
             identifier = condition_id(c)
             output = root / "evaluations" / c["split"] / ("step_" + str(step))
             run(identifier, [sys.executable, "-m", "frequency_vla.opsd_evaluate",
-                "--port", str(args.port), "--results-dir", str(output), "--workers", "4",
+                "--port", str(args.port), "--results-dir", str(output), "--workers", str(plan.get("evaluation_workers", 4)),
                 "--suite", c["suite"], "--horizon", str(c["horizon"]),
                 "--episodes", str(c["episodes_per_task"]), "--seed", str(c["seed"]),
-                "--initial-state-start", str(c["initial_state_start"])], 1200)
+                "--initial-state-start", str(c["initial_state_start"])], plan.get("evaluation_timeout_seconds", 1200))
             seen.add(identifier)
+
+    if plan.get("continuation_only"):
+        client("diagnostic", limit=plan["diagnostic_timeout_seconds"])
+        client("resume", "--checkpoint", args.parent_checkpoint, limit=300)
+        evaluate(plan["resume_step"], confirmation=True)
+        endpoint = plan["milestones"][-1]
+        client("train", "--end-step", str(endpoint), name="train_to_" + str(endpoint),
+               limit=plan["training_timeout_seconds"])
+        client("save", name="save_" + str(endpoint), limit=240)
+        client("status", name="memory_at_" + str(endpoint), limit=60)
+        evaluate(endpoint, confirmation=True)
+        if seen != {condition_id(c) for c in matrix}:
+            raise RuntimeError("Incomplete continuation comparison")
+        write_json(root / "provenance/study_complete.json", {
+            "complete": True, "plan_sha256": digest(plan), "completed_conditions": sorted(seen),
+            "optimizer_steps_added": endpoint - plan["resume_step"], "final_optimizer_step": endpoint})
+        print("Continuation and paired evaluation complete; exit to release GPU.", flush=True)
+        return
 
     # Runtime guards use training layouts and never enter benchmark statistics.
     # A single context first warms rendering; four processes then check concurrency.

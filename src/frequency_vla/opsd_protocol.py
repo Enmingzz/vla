@@ -7,8 +7,8 @@ import json
 def validate_training_config(config):
     if config["prediction_horizon"] != 50 or config["student_horizon"] != 20 or config["teacher_horizon"] != 5:
         raise ValueError("This first experiment is fixed at P=50, H_student=20, H_teacher=5")
-    if config["flow_steps"] != 10 or type(config["optimizer_steps"]) is not int or not 1 <= config["optimizer_steps"] <= 500:
-        raise ValueError("Keep the 10-step sampler and the bounded, at-most-500-update experiment")
+    if config["flow_steps"] != 10 or type(config["optimizer_steps"]) is not int or not 1 <= config["optimizer_steps"] <= 1000:
+        raise ValueError("Keep the 10-step sampler and the bounded, at-most-1000-update experiment")
     checkpoints = config.get("checkpoint_steps", [config["optimizer_steps"]])
     if not checkpoints or checkpoints != sorted(set(checkpoints)) or any(type(s) is not int or not 1 <= s <= config["optimizer_steps"] for s in checkpoints):
         raise ValueError("Checkpoint steps must be ordered, unique and inside the update budget")
@@ -26,6 +26,8 @@ def validate_training_config(config):
         raise ValueError("The selected OPSD protocol requires an EMA teacher")
     if config["batch_size"] != 4 or config["loss_action_dimensions"] != 7:
         raise ValueError("Unexpected first-experiment batch or LIBERO action dimension")
+    if config.get("environment_workers", 1) not in (1, 4):
+        raise ValueError("Use the serial simulator or one process per batch environment")
 
 
 def require_measured_gap(root):

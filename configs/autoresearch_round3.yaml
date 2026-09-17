@@ -1,0 +1,24 @@
+# User requested exactly 500 further updates; final endpoint fixed before results.
+continuation_only: true
+training_config: configs/opsd_continuation_1000.yaml
+resume_step: 500
+resume_manifest_sha256: c00bcab9c776c6e3794b4b86dc18a15b0e78dd9e7fcd9fb0fa1c7f2d920f18ed
+milestones: [500, 1000]
+evaluation_workers: 8
+training_timeout_seconds: 4500
+evaluation_timeout_seconds: 1800
+diagnostic_timeout_seconds: 900
+maximum_concurrent_gpus: 1
+confirmation:
+  suite: libero_10
+  initial_state_start: 30
+  episodes_per_task: 10
+  seed: 27
+  horizons:
+    500: [20]
+    1000: [20]
+primary_comparison: step1000_minus_step500_H20
+bootstrap_replicates: 10000
+analysis_seed: 20260916
+renderer: osmesa
+interpretation: Previously inspected evaluation layouts, held out from training; exploratory continuation, not a new blind test.
