@@ -170,6 +170,32 @@ def main():
         resumed.set_phase("step_2")
         equal_trees(resumed.master, resumed.evaluation_parameters)
         print("PASS: FP32/EMA/Adam resume, identical next update, partial-budget save/restore, and frozen milestone evaluation")
+        advance(partial)
+        partial.save()
+        preserved = {key: jax.tree.map(lambda x: np.array(x), getattr(partial, key))
+                     for key in ["master", "ema", "opt_state", "frozen"]}
+        saved_identity, resume_provenance = dict(partial.saved_checkpoint), dict(partial.resume_provenance)
+        try:
+            partial.load_snapshot(saved_one["path"], "wrong digest", 1)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("A mismatched comparison checkpoint was accepted")
+        partial.load_snapshot(saved_one["path"], saved_one["manifest_sha256"], 1)
+        partial.set_phase("step_1")
+        equal_trees(frozen_one, partial.evaluation_parameters)
+        for name, value in preserved.items():
+            equal_trees(value, getattr(partial, name))
+        assert partial.step == 3 and partial.saved_checkpoint == saved_identity
+        assert partial.resume_provenance == resume_provenance and partial.pending is None
+        _, comparison_key = jax.random.split(jax.random.fold_in(jax.random.key(37), 2))
+        expected = uninterrupted.environment_actions(native_inputs,
+            uninterrupted.native(uninterrupted.snapshots[1]["params"], uninterrupted.frozen, native_inputs, comparison_key))[0]
+        assert np.array_equal(partial.infer(query)["actions"], expected)
+        advance(uninterrupted)
+        for name in ["master", "ema", "opt_state"]:
+            equal_trees(getattr(partial, name), getattr(uninterrupted, name))
+        print("PASS: partial continuation reaches final step; read-only baseline loading preserves optimizer/EMA/final checkpoint and equals native inference")
 
 
 if __name__ == "__main__":

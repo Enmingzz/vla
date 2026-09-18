@@ -53,6 +53,13 @@ ran, so there is no new success-rate result yet. See the
 [execution protocol](AUTORESEARCH_ROUND3.md) and
 [round-three archive](results/autoresearch_round3/README.md).
 
+The subsequently requested completion resumes step 978 for the remaining **22
+updates**, then compares **step 500 and step 1000 at H=20** on 100 paired
+LIBERO-10 episodes each under the same OSMesa renderer. GPU job **60427489**
+and dependent CPU validation/reporting are submitted; results are not yet
+available. The [completion archive](results/autoresearch_round3_finish/README.md)
+contains the fixed protocol, provenance and reproduction commands.
+
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures
 **P=10**, not 50. Therefore only **H=5 and H=10** from the requested sweep are

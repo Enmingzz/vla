@@ -17,6 +17,7 @@ def main():
     p.add_argument("--plan", required=True)
     p.add_argument("--training-config", required=True)
     p.add_argument("--parent-checkpoint", required=True)
+    p.add_argument("--baseline-checkpoint", help="Read-only comparison checkpoint when resuming a partial continuation")
     p.add_argument("--port", type=int, required=True)
     p.add_argument("--results-dir", required=True)
     p.add_argument("--checkpoint-root", required=True)
@@ -26,6 +27,10 @@ def main():
     audit = json.loads((root / "provenance/split_audit.json").read_text())
     if audit["plan_sha256"] != digest(plan):
         raise ValueError("Plan changed after initial-state audit")
+    if plan.get("prior_continuation_results"):
+        preflight = json.loads((root / "provenance/preflight_checks.json").read_text())
+        if not preflight["passed"] or any(file_digest(p) != sha for p, sha in preflight["sources"].items()):
+            raise ValueError("Completion implementation changed after CPU validation")
     if plan.get("continuation_only"):
         check = json.loads((root / "provenance/parallel_environment_check.json").read_text())
         if not check["passed"] or any(file_digest(p) != sha for p, sha in check["source_sha256"].items()):
@@ -89,18 +94,27 @@ def main():
                 "deferred_conditions": sorted(condition_id(c) for c in matrix)})
             print("Training-only allocation finished at step {}; checkpoint saved, evaluation deferred.".format(actual), flush=True)
             return
-        evaluate(plan["resume_step"], confirmation=True)
+        first = plan.get("comparison_step", plan["resume_step"])
+        if first != plan["resume_step"] and not args.baseline_checkpoint:
+            raise ValueError("Finishing a partial continuation requires --baseline-checkpoint")
+        if first == plan["resume_step"]:
+            evaluate(first, confirmation=True)
         endpoint = plan["milestones"][-1]
         client("train", "--end-step", str(endpoint), name="train_to_" + str(endpoint),
                limit=plan["training_timeout_seconds"])
         client("save", name="save_" + str(endpoint), limit=240)
         client("status", name="memory_at_" + str(endpoint), limit=60)
+        if first != plan["resume_step"]:
+            client("load_snapshot", "--checkpoint", args.baseline_checkpoint,
+                   "--manifest-sha256", plan["comparison_manifest_sha256"], "--snapshot", str(first), limit=240)
+            evaluate(first, confirmation=True)
         evaluate(endpoint, confirmation=True)
         if seen != {condition_id(c) for c in matrix}:
             raise RuntimeError("Incomplete continuation comparison")
         write_json(root / "provenance/study_complete.json", {
             "complete": True, "plan_sha256": digest(plan), "completed_conditions": sorted(seen),
-            "optimizer_steps_added": endpoint - plan["resume_step"], "final_optimizer_step": endpoint})
+            "optimizer_steps_added": endpoint - plan["resume_step"], "final_optimizer_step": endpoint,
+            "comparison_optimizer_steps_added": endpoint - first})
         print("Continuation and paired evaluation complete; exit to release GPU.", flush=True)
         return
 

@@ -8,7 +8,7 @@ from .logging_utils import digest, write_json
 
 def summarize_continuation(root, plan, data, summaries, task_rows, all_rows, servers, training, rollouts):
     from .study_analysis import paired_change
-    first, final = plan["resume_step"], plan["milestones"][-1]
+    first, final = plan.get("comparison_step", plan["resume_step"]), plan["milestones"][-1]
     before = data["confirmation", "libero_10", first, 20]
     after = data["confirmation", "libero_10", final, 20]
     comparison = dict(comparison=plan["primary_comparison"], left_step=final, right_step=first,
@@ -40,6 +40,8 @@ def summarize_continuation(root, plan, data, summaries, task_rows, all_rows, ser
     validation = dict(complete=True, plan_sha256=digest(plan), evaluation_episodes=len(all_rows),
         conditions=len(summaries), single_server_instance=list(servers)[0], renderer=plan["renderer"],
         optimizer_updates_added=len(training), first_step=first, final_step=final,
+        resumed_at_step=plan["resume_step"], updates_in_final_allocation=final - plan["resume_step"],
+        prior_continuation_archives=plan.get("prior_continuation_results", []),
         training_evaluation_disjoint=True, all_initial_states_match_audit=True,
         initial_state_indices_previously_evaluated=True,
         new_training_distinct_task_layouts=len({(s["task_id"], s["initial_state_index"]) for r in rollouts for s in r["initial_states"]}),
@@ -109,6 +111,12 @@ def report(root, plan, summaries, tasks, training, validation):
         a, b = [next(r for r in tasks if r["task_id"] == task and r["step"] == step) for step in [first, final]]
         text.append("| {} | {:.0%} | {:.0%} | {:+.0f} pp | {} |".format(task, a["success_rate"], b["success_rate"],
                     100*(b["success_rate"]-a["success_rate"]), a["task_description"]))
+    if validation.get("resumed_at_step", first) != first:
+        text += ["", "The continuation was saved at step {} at the one-hour budget boundary, then resumed for the remaining {} updates. "
+                 "Both segments preserve FP32 weights, EMA and Adam moments/counters. Simulator episodes restart on resume; "
+                 "this is not an uninterrupted simulator trajectory. Prior segment logs remain in their original archives and "
+                 "are joined only after checksum and contiguous-update validation.".format(
+                     validation["resumed_at_step"], validation["updates_in_final_allocation"])]
     text += ["", "Training restored the original step-500 FP32 weights, EMA teacher and Adam state. P=50, H_student=20, "
         "H_teacher=5, 10 flow steps, batch size 4, learning rate 1e-5, trainable parameter selection, "
         "velocity loss, first-five-block supervision and auxiliary teacher-tail sampling are unchanged. "

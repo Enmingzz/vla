@@ -53,7 +53,11 @@ SIM_ENV=(env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH)
 if [[ "${MUJOCO_GL}" == osmesa ]]; then
   SIM_ENV+=("LD_LIBRARY_PATH=$FREQUENCY_OSMESA_LIBRARY_DIR")
 fi
+BASELINE_ARGS=()
+if [[ -n "${BASELINE_CHECKPOINT:-}" ]]; then
+  BASELINE_ARGS+=(--baseline-checkpoint "$BASELINE_CHECKPOINT")
+fi
 "${SIM_ENV[@]}" "$LIBERO_VENV/bin/python" \
   -m frequency_vla.study_runner --plan "$STUDY_PLAN" --training-config "$OPSD_CONFIG" \
   --parent-checkpoint "$PARENT_CHECKPOINT" --port "$POLICY_PORT" \
-  --results-dir "$RUN_RESULTS" --checkpoint-root "$OPSD_CHECKPOINT_ROOT"
+  --results-dir "$RUN_RESULTS" --checkpoint-root "$OPSD_CHECKPOINT_ROOT" "${BASELINE_ARGS[@]}"

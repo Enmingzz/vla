@@ -1,0 +1,15 @@
+{
+  "maximum_concurrent_gpus": 1,
+  "gpu": "H100 80GB",
+  "cpus": 12,
+  "memory_gib": 64,
+  "wall_time_limit_seconds": 4500,
+  "training_updates": 22,
+  "training_first": true,
+  "checkpoint_saved_before_evaluation": true,
+  "formal_evaluation_episodes": 200,
+  "evaluation_workers": 8,
+  "release_on_completion_or_error": true,
+  "checkpoint_load_and_training_on_login_node": false,
+  "estimate_basis": "Previous 478-update run about 6 seconds/update, about 7 minutes startup/diagnostic, 86 seconds save. Previous 30-episode OSMesa evaluation about 441 seconds with eight workers. Combined 22-update finish and 200-episode evaluation estimated near one hour; 75 minutes is a hard cap, not a runtime target."
+}

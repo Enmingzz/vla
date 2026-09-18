@@ -1,0 +1,10 @@
+{
+  "job_id": "60427494",
+  "depends_on": "60427489",
+  "dependency": "afterok",
+  "account": "def-btaati_cpu",
+  "gpus": 0,
+  "cpus": 1,
+  "memory_gib": 4,
+  "time_limit": "00:10:00"
+}

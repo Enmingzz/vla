@@ -1,0 +1,15 @@
+{
+  "job_id": "60427489",
+  "depends_on": "60427465",
+  "dependency": "afterok",
+  "submitted_utc": "2026-09-18T20:40:15.318469+00:00",
+  "gpus": 1,
+  "cpus": 12,
+  "memory_gib": 64,
+  "time_limit": "01:15:00",
+  "account": "rrg-btaati_gpu",
+  "execution_mode": "finish_22_then_paired_evaluation",
+  "parent_checkpoint": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3/step_978",
+  "baseline_checkpoint": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/step_500",
+  "checkpoint_root": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3_finish"
+}

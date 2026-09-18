@@ -1,0 +1,87 @@
+# Finish step 1000 and evaluate the fixed 500/1000 comparison
+
+The user authorized completing the remaining 22 updates and evaluating the result.
+GPU job **60427489** follows CPU preflight **60427465**. CPU report job
+**60427494** follows successful GPU completion. No evaluation result is claimed
+until `provenance/final_checks.json` records completion.
+
+This archive resumes the verified step-978 checkpoint from
+[`../autoresearch_round3`](../autoresearch_round3/README.md), retaining FP32
+weights, EMA and Adam moments/counters. It trains exactly updates 979–1000,
+saves the final checkpoint, and loads step 500 as a read-only evaluation
+snapshot on the same continuous policy server. Loading this baseline does not
+reset or replace the resumed optimizer. Simulator trajectories restart on the
+same training-only state pool; they are not part of the checkpoint.
+
+The comparison is fixed at **P=50, H=20, 10 flow steps**, LIBERO-10, seed 27,
+official initial-state indices 30–39, ten episodes per task. This is
+**100 paired episodes per checkpoint, 200 episodes total**. Both checkpoints
+use the same pinned OSMesa renderer. Historical EGL results are not substituted
+for the newly measured step-500 baseline. These previously inspected layouts
+remain excluded from added training; this is an exploratory continuation.
+
+`training.jsonl` and `rollouts.jsonl` here contain only the 22 final updates.
+Analysis verifies and joins the prior archive's 478 updates, without copying
+or overwriting that archive, to account for all 500 additional updates.
+`provenance/split_audit.json` records the chain and source-file hashes.
+The loss, optimizer, training action execution, native inference and model
+structure are unchanged; see `provenance/math_unchanged_check.json`.
+
+Expected completed outputs:
+
+- `evaluations/confirmation/step_{500,1000}/raw/`: episode records and manifests.
+- `evaluations/confirmation/step_{500,1000}/videos/`: all 200 videos.
+- `aggregated/{conditions,comparisons,per_task,episodes}.csv`: paired results.
+- `figures/continuation_comparison.png` and `figures/training_loss.png`.
+- `FINDINGS.md`: measured outcomes and interpretation.
+- `provenance/final_checks.json`: checkpoint, video and resource validation.
+
+One H100, 12 CPUs, 64 GiB, maximum 75 minutes; finish early when done. The
+estimate is based on measured prior training and OSMesa evaluation timings.
+Full-model loading, training and evaluation run only in the GPU allocation.
+CPU preflight, aggregation, plots and integrity checks use separate CPU jobs.
+
+## Reproduction
+
+Run from the repository root, using the existing managed environments and
+checkpoints documented in [`TRAINING.md`](../../TRAINING.md). Keep the completed
+parent archives for the provenance audit. Use a fresh output directory each time.
+
+```bash
+source scripts/env.sh
+export RUN_RESULTS="$FREQUENCY_PROJECT/results/round3_finish_reproduction"
+export PARENT_CHECKPOINT="$FREQUENCY_WORK/runs/autoresearch_round3/step_978"
+export BASELINE_CHECKPOINT="$FREQUENCY_WORK/runs/autoresearch_round2_attempt2/step_500"
+export OPSD_CHECKPOINT_ROOT="$FREQUENCY_WORK/runs/round3_finish_reproduction"
+export FREQUENCY_CONFIG="$FREQUENCY_PROJECT/configs/prediction50_round3.yaml"
+export OPSD_CONFIG="$FREQUENCY_PROJECT/configs/opsd_continuation_1000.yaml"
+export STUDY_PLAN="$FREQUENCY_PROJECT/configs/autoresearch_round3_finish.yaml"
+export MUJOCO_GL=osmesa PYOPENGL_PLATFORM=osmesa LP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+mkdir -p "$RUN_RESULTS/logs"
+CHECK_JOB=$(sbatch --parsable --account=def-btaati --nodes=1 --ntasks=1 \
+  --cpus-per-task=4 --mem=12G --time=00:15:00 \
+  --output="$RUN_RESULTS/logs/preflight_%j.log" scripts/fir_finish_preflight.sh)
+TRAIN_JOB=$(sbatch --parsable --account=rrg-btaati --nodes=1 --ntasks=1 \
+  --dependency="afterok:$CHECK_JOB" --kill-on-invalid-dep=yes \
+  --gpus-per-node=h100:1 --cpus-per-task=12 --mem=64G --time=01:15:00 \
+  --output="$RUN_RESULTS/logs/gpu_%j.log" scripts/fir_study_job.sh)
+export TRAIN_JOB
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" - <<'PY'
+import os
+from pathlib import Path
+from frequency_vla.logging_utils import write_json
+write_json(Path(os.environ['RUN_RESULTS']) / 'provenance/submission.json',
+           dict(job_id=os.environ['TRAIN_JOB']))
+PY
+sbatch --account=def-btaati --nodes=1 --ntasks=1 --cpus-per-task=1 --mem=4G \
+  --time=00:10:00 --dependency="afterok:$TRAIN_JOB" --kill-on-invalid-dep=yes \
+  --output="$RUN_RESULTS/logs/analysis_%j.log" scripts/fir_continuation_summary.sh
+```
+
+Regenerate statistics and plots from completed records, without another GPU:
+
+```bash
+source scripts/env.sh
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
+  -m frequency_vla.study_analysis --results-dir results/autoresearch_round3_finish
+```

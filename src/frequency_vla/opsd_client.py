@@ -130,11 +130,12 @@ def main():
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, required=True)
     parser.add_argument("--openpi-dir", default=os.environ.get("OPENPI_DIR"), required=not os.environ.get("OPENPI_DIR"))
-    parser.add_argument("--stage", choices=["diagnostic", "train", "save", "baseline", "student", "status", "resume", "snapshot"], required=True)
+    parser.add_argument("--stage", choices=["diagnostic", "train", "save", "baseline", "student", "status", "resume", "snapshot", "load_snapshot"], required=True)
     parser.add_argument("--results-dir", required=True)
     parser.add_argument("--rollouts-dir")
     parser.add_argument("--checkpoint")
     parser.add_argument("--snapshot", type=int)
+    parser.add_argument("--manifest-sha256")
     parser.add_argument("--end-step", type=int)
     parser.add_argument("--stop-at-unix-time", type=float,
                         help="Finish the current update and return before the checkpoint-save reserve")
@@ -157,8 +158,14 @@ def main():
             return
         if args.stage == "snapshot":
             if args.snapshot is None:
-                raise ValueError("Select --snapshot 0, 100, 300 or 500")
+                raise ValueError("Select a registered --snapshot optimizer step")
             print(request("set_phase", phase="baseline" if args.snapshot == 0 else "step_" + str(args.snapshot)), flush=True)
+            return
+        if args.stage == "load_snapshot":
+            if not args.checkpoint or not args.manifest_sha256 or args.snapshot is None:
+                raise ValueError("Loading a snapshot requires its path, manifest digest and step")
+            print(request("load_snapshot", checkpoint=args.checkpoint,
+                          manifest_sha256=args.manifest_sha256, step=args.snapshot), flush=True)
             return
         if args.stage in ("baseline", "student"):
             print(request("set_phase", phase=args.stage), flush=True)

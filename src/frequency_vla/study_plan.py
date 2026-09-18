@@ -46,10 +46,13 @@ def audit(plan, training_config, parent_results, parent_checkpoint, openpi_dir):
         raise ValueError("Parent training provenance is incomplete")
     prior_hashes = {s["initial_state_sha256"] for r in rows for s in r["initial_states"]}
     if plan.get("continuation_only"):
-        if plan["resume_step"] != 500 or training_config["optimizer_steps"] != 1000 or plan["milestones"] != [500, 1000]:
+        first = plan.get("comparison_step", plan["resume_step"])
+        if first != 500 or not first <= plan["resume_step"] < 1000 or training_config["optimizer_steps"] != 1000 or plan["milestones"] != [500, 1000]:
             raise ValueError("The authorized continuation must contain exactly 500 additional updates")
         if {c["step"] for c in conditions(plan)} != {500, 1000} or any(c["horizon"] != 20 or c["suite"] != "libero_10" for c in conditions(plan)):
             raise ValueError("This continuation compares the two H=20 LIBERO-10 snapshots")
+    from .continuation_records import audit_prior_segments
+    segments = audit_prior_segments(plan)
     sys.path.insert(0, str(Path(openpi_dir) / "third_party/libero"))
     from libero.libero import benchmark
     suites = {name: benchmark.get_benchmark_dict()[name]() for name in
@@ -78,6 +81,7 @@ def audit(plan, training_config, parent_results, parent_checkpoint, openpi_dir):
     if screen_hashes & confirmation_hashes:
         raise ValueError("Screen and confirmation initial states overlap")
     return {"plan_sha256": digest(plan), "parent_manifest_sha256": digest(manifest),
+        "continuation_segments": segments,
         "prior_rollout_sources": [{"path": str(p.resolve()), "sha256": file_digest(p)} for p in parent_files],
         "prior_training_distinct_states": len(prior_hashes), "new_training_pool_distinct_states": len(new_hashes),
         "old_and_new_training_disjoint_from_all_evaluations": True, "screen_confirmation_disjoint": True,

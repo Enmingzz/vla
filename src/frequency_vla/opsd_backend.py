@@ -151,6 +151,8 @@ class TemporalOPSD:
                 return self.save()
             if operation == "resume":
                 return self.resume(control["checkpoint"])
+            if operation == "load_snapshot":
+                return self.load_snapshot(control["checkpoint"], control["manifest_sha256"], control["step"])
             if operation == "set_phase":
                 return self.set_phase(control["phase"])
             if operation == "status":
@@ -353,6 +355,47 @@ class TemporalOPSD:
         write_json(self.root / "provenance/resume.json", self.resume_provenance)
         write_json(self.root / "provenance" / ("step_" + str(step) + ".json"), self.saved_checkpoint)
         return dict(self.resume_provenance)
+
+    def load_snapshot(self, checkpoint, manifest_sha256, step):
+        """Register a verified evaluation snapshot without touching training state."""
+        if self.pending is not None:
+            raise RuntimeError("Cannot load an evaluation snapshot during a rollout")
+        path = Path(checkpoint).resolve()
+        manifest = json.loads((path / "training_manifest.json").read_text())
+        if digest(manifest) != manifest_sha256 or manifest["step"] != step:
+            raise ValueError("Evaluation snapshot differs from the declared checkpoint")
+        if step in self.snapshots:
+            raise ValueError("Evaluation snapshot is already registered")
+        if manifest["base_object_manifest_sha256"] != self.base_spec["checkpoint_object_manifest_sha256"]:
+            raise ValueError("Evaluation snapshot uses a different base checkpoint")
+        for key in ["algorithm", "prediction_horizon", "flow_steps", "compute_dtype", "master_dtype"]:
+            if manifest["config"][key] != self.config[key]:
+                raise ValueError("Evaluation snapshot changed " + key)
+        selected = {name: sha for name, sha in manifest["files"].items()
+                    if name.startswith(("params/", "assets/"))}
+        actual_files = {str(p.relative_to(path)) for folder in ["params", "assets"]
+                        for p in (path / folder).rglob("*") if p.is_file()}
+        if not selected or set(selected) != actual_files:
+            raise ValueError("Incomplete evaluation snapshot file manifest")
+        for name, expected in selected.items():
+            if file_digest(path / name) != expected:
+                raise ValueError("Evaluation snapshot checksum mismatch: " + name)
+        assets = {name: sha for name, sha in selected.items() if name.startswith("assets/")}
+        base_assets = {str(p.relative_to(self.source_checkpoint)): file_digest(p)
+                       for p in (self.source_checkpoint / "assets").rglob("*") if p.is_file()}
+        if assets != base_assets:
+            raise ValueError("Evaluation snapshot normalization assets changed")
+        state = nnx.state(self.policy._model)
+        state.replace_by_pure_dict(model_lib.restore_params(path / "params"))
+        _, parameters, frozen = nnx.split(nnx.merge(self.graph, state), self.teacher_filter, ...)
+        if not jax.tree.all(jax.tree.map(lambda a, b: bool(jnp.array_equal(a, b)), self.frozen, frozen)):
+            raise ValueError("Evaluation snapshot changed the frozen backbone")
+        if any(x.dtype != jnp.float32 for x in jax.tree.leaves(parameters)):
+            raise ValueError("Evaluation snapshot must preserve FP32 master weights")
+        identity = {"path": str(path), "manifest_sha256": manifest_sha256}
+        self.snapshots[step] = {"params": parameters, "checkpoint": identity}
+        write_json(self.root / "provenance" / ("step_" + str(step) + ".json"), identity)
+        return dict(identity)
 
     def save(self):
         if self.step not in self.checkpoint_steps or self.pending is not None:

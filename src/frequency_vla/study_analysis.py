@@ -87,11 +87,8 @@ def analyze(root):
                                   **summarize(c["horizon"], subset)))
     if len(servers) != 1:
         raise ValueError("This predeclared comparison requires one continuous policy server")
-    training = [json.loads(line) for line in (root / "training.jsonl").read_text().splitlines() if line]
-    rollouts = [json.loads(line) for line in (root / "rollouts.jsonl").read_text().splitlines() if line]
-    expected_updates = list(range(plan["resume_step"] + 1, plan["milestones"][-1] + 1))
-    if [r["optimizer_step"] for r in training] != expected_updates or [r["optimizer_step"] for r in rollouts] != expected_updates:
-        raise ValueError("Continuation must contain exactly the predeclared additional updates")
+    from .continuation_records import training_records
+    training, rollouts = training_records(root, plan, audit)
     eval_hashes = {r["initial_state_sha256"] for r in all_rows}
     for row, rollout in zip(training, rollouts):
         if row["diagnostic"] or rollout["diagnostic"] or row["student_behavior_version"] != row["optimizer_step"] - 1:

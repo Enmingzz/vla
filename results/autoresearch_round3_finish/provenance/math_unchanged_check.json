@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "previous_git_commit": "4753903",
+  "function_AST_equal": {
+    "__init__": true,
+    "observations": true,
+    "environment_actions": true,
+    "set_phase": true,
+    "rollout": true,
+    "learn": true,
+    "reset_after_diagnostic": true,
+    "resume": true,
+    "save": true
+  },
+  "native_flow_source_unchanged": true,
+  "backend_change": "Add a read-only checkpoint registration operation for the step-500 evaluation baseline; training methods are unchanged.",
+  "simulator_resume": "Fresh episodes on the same training-only layouts; simulator trajectories are not restored."
+}
