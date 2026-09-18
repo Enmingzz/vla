@@ -1,0 +1,3 @@
+60427465|COMPLETED|428|billing=4000,cpu=4,mem=12G,node=1|0:0
+60427465.batch|COMPLETED|428|cpu=4,mem=12G,node=1|0:0
+60427465.extern|COMPLETED|428|billing=4000,cpu=4,mem=12G,node=1|0:0
