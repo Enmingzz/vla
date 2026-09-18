@@ -1,0 +1,20 @@
+{
+  "all_checkpoint_files_verified": true,
+  "allocation_released": true,
+  "checkpoint": {
+    "manifest_sha256": "25424b58a198459cd39012373c5a3beb103c8963b57c3227763d4db1acfaa4cd",
+    "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3/step_978"
+  },
+  "evaluation_deferred": true,
+  "formal_evaluation_episodes": 0,
+  "gpu_job_id": "60146846",
+  "gpu_seconds": 3418,
+  "last_completed_step": 978,
+  "maximum_concurrent_gpus": 1,
+  "native_reload_max_abs_difference": 0,
+  "optimizer_updates_added": 478,
+  "requested_updates_complete": false,
+  "start_step": 500,
+  "training_evaluation_states_disjoint": true,
+  "validation_passed": true
+}

@@ -1,0 +1,9 @@
+{
+  "last_completed_step": 978,
+  "optimizer_updates_added": 478,
+  "requested_end_step": 1000,
+  "requested_updates_complete": false,
+  "start_step": 500,
+  "stop_at_unix_time": 1789686473.0,
+  "stopped_for_walltime": true
+}

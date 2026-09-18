@@ -1,0 +1,21 @@
+{
+  "checkpoint": {
+    "manifest_sha256": "25424b58a198459cd39012373c5a3beb103c8963b57c3227763d4db1acfaa4cd",
+    "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3/step_978"
+  },
+  "complete": false,
+  "deferred_conditions": [
+    "confirmation_libero_10_step1000_H20",
+    "confirmation_libero_10_step500_H20"
+  ],
+  "evaluation_complete": false,
+  "execution_request_sha256": "a45ce21946c2091821d172de8fa0a93660ba649113f470ca02133ed49a984b5a",
+  "last_completed_step": 978,
+  "optimizer_updates_added": 478,
+  "plan_sha256": "035e7b8db88ac388ede63d467bf30cefbb80629745e6fbc515eb940e9b5bddff",
+  "requested_end_step": 1000,
+  "requested_updates_complete": false,
+  "start_step": 500,
+  "stop_at_unix_time": 1789686473.0,
+  "stopped_for_walltime": true
+}

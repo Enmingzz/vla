@@ -1,0 +1,48 @@
+{
+  "adam_update_counters": [
+    500
+  ],
+  "config_changes": {
+    "allow_budget_checkpoint": {
+      "after": true,
+      "before": null
+    },
+    "checkpoint_steps": {
+      "after": [
+        500,
+        1000
+      ],
+      "before": [
+        100,
+        300,
+        500
+      ]
+    },
+    "environment_workers": {
+      "after": 4,
+      "before": null
+    },
+    "evaluation_episodes_per_task": {
+      "after": 10,
+      "before": 5
+    },
+    "evaluation_seed": {
+      "after": 27,
+      "before": 17
+    },
+    "optimizer_steps": {
+      "after": 1000,
+      "before": 500
+    },
+    "train_initial_state_cursor": {
+      "after": 16,
+      "before": 12
+    }
+  },
+  "ema_and_optimizer_restored": true,
+  "fp32_master_restored": true,
+  "frozen_backbone_equal": true,
+  "manifest_sha256": "c00bcab9c776c6e3794b4b86dc18a15b0e78dd9e7fcd9fb0fa1c7f2d920f18ed",
+  "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/step_500",
+  "step": 500
+}

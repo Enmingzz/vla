@@ -44,11 +44,14 @@ ordered exploratory prefix separate from the [interrupted full-suite attempt](re
 The amended protocol, original full-suite plan and exact commands are in
 [LIBERO90_TRANSFER.md](LIBERO90_TRANSFER.md).
 
-The next requested continuation targets **500 → 1000 updates at H=20**. At the
-user's request, it uses a **one-hour training-only allocation**, with a checkpoint
-save reserve and no benchmark evaluation in that job. The comparison is deferred;
-there is no new success-rate result yet. See the [execution protocol](AUTORESEARCH_ROUND3.md)
-and [round-three archive](results/autoresearch_round3/README.md).
+The requested one-hour continuation finished at **step 978: 478 additional
+updates from step 500**, leaving 22 updates to the step-1000 target. It used one
+H100 for **56m58s**, stopped for the checkpoint-save reserve, and released the
+allocation normally. Checkpoint verification passed. No benchmark evaluation
+ran, so there is no new success-rate result yet. See the
+[training status](results/autoresearch_round3/TRAINING_STATUS.md),
+[execution protocol](AUTORESEARCH_ROUND3.md) and
+[round-three archive](results/autoresearch_round3/README.md).
 
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures
