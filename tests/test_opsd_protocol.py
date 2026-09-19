@@ -40,8 +40,8 @@ def test_continuation_split_protects_confirmation_and_caps_updates():
     with pytest.raises(ValueError, match="overlap"):
         validate_training_config(config)
     config["train_initial_state_stop"] = 20
-    config["optimizer_steps"] = 1001
-    with pytest.raises(ValueError, match="at-most-1000"):
+    config["optimizer_steps"] = 1501
+    with pytest.raises(ValueError, match="at-most-1500"):
         validate_training_config(config)
 
 

@@ -1,0 +1,20 @@
+{
+  "account": "rrg-btaati_gpu",
+  "checkpoint_root": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round4",
+  "cpu_preflight_job": "60480558",
+  "cpu_summary_job": "60480560",
+  "cpus": 12,
+  "excluded_nodes": [
+    "fc10501"
+  ],
+  "execution_mode": "resume_1000_train_to_1500_evaluate_1500_reuse_verified_1000",
+  "gpus": 1,
+  "job_id": "60480559",
+  "launch_script": "scripts/fir_gpu_checked_study.sh",
+  "memory_gib": 64,
+  "new_evaluation_episodes": 100,
+  "parent_checkpoint": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3_finish_retry1/step_1000",
+  "reused_evaluation_episodes": 100,
+  "submitted_utc": "2026-09-19T04:45:28.908620+00:00",
+  "time_limit": "01:40:00"
+}

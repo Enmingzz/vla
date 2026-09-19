@@ -2,18 +2,24 @@
 import csv
 import json
 
+import pytest
+
 from frequency_vla.analysis import summarize
 from frequency_vla.continuation_analysis import summarize_continuation, report
 from frequency_vla.logging_utils import write_json
 
 
-def test_continuation_report_keeps_parent_and_final_measurements_separate(tmp_path):
-    plan = dict(resume_step=500, milestones=[500, 1000], renderer="osmesa",
-                resume_manifest_sha256="parent", primary_comparison="step1000_minus_step500_H20",
+@pytest.mark.parametrize("first", [500, 1000])
+def test_continuation_report_keeps_parent_and_final_measurements_separate(tmp_path, first):
+    final = first + 500
+    plan = dict(resume_step=first, milestones=[first, final], renderer="osmesa",
+                resume_manifest_sha256="parent", primary_comparison="step{}_minus_step{}_H20".format(final, first),
                 bootstrap_replicates=1000, analysis_seed=7)
     data, summaries, tasks, all_rows = {}, [], [], []
     stage_records = []
-    for step, success_limit in [(500, 6), (1000, 8)]:
+    if first == 1000:
+        plan["cached_reference"] = dict(archive="SYNTHETIC_REFERENCE")
+    for step, success_limit in [(first, 6), (final, 8)]:
         rows = []
         for task in range(10):
             for episode in range(10):
@@ -31,12 +37,12 @@ def test_continuation_report_keeps_parent_and_final_measurements_separate(tmp_pa
         all_rows.extend(dict(optimizer_step=step, **r) for r in rows)
         tasks.extend(dict(condition, task_id=t, task_description="task "+str(t),
                           **summarize(20, [r for r in rows if r["task_id"] == t])) for t in range(10))
-        stage_records.append(dict(stage="confirmation_libero_10_step{}_H20".format(step), event="complete", seconds=100))
+        stage_records.append(dict(stage="confirmation_libero_10_step{}_H20".format(step), event="reused" if first == 1000 and step == first else "complete", seconds=100))
     (tmp_path / "stages.jsonl").write_text("\n".join(json.dumps(r) for r in stage_records))
-    write_json(tmp_path / "provenance/training_setup.json", dict(config=dict(optimizer_steps=1000)))
+    write_json(tmp_path / "provenance/training_setup.json", dict(config=dict(optimizer_steps=final)))
     write_json(tmp_path / "provenance/resume.json", dict(manifest_sha256="parent", fp32_master_restored=True,
                ema_and_optimizer_restored=True, frozen_backbone_equal=True))
-    training = [dict(optimizer_step=s, loss=.01) for s in range(501, 1001)]
+    training = [dict(optimizer_step=s, loss=.01) for s in range(first+1, final+1)]
     rollouts = [dict(initial_states=[dict(task_id=t, initial_state_index=16, executed_steps=20) for t in range(4)]) for _ in training]
     result = summarize_continuation(tmp_path, plan, data, summaries, tasks, all_rows, {"one server"}, training, rollouts)
     validation = result[-1]
@@ -45,10 +51,17 @@ def test_continuation_report_keeps_parent_and_final_measurements_separate(tmp_pa
     assert validation["primary"]["regressed_episodes"] == 0
     assert validation["optimizer_updates_added"] == 500
     assert validation["evaluation_episodes"] == 200
+    assert validation["new_evaluation_episodes"] == (100 if first == 1000 else 200)
+    assert validation["reused_evaluation_episodes"] == (100 if first == 1000 else 0)
     with (tmp_path / "aggregated/conditions.csv").open() as f:
         measured = list(csv.DictReader(f))
-    assert [(r["step"], r["total_successes"]) for r in measured] == [("500", "60"), ("1000", "80")]
+    assert [(r["step"], r["total_successes"]) for r in measured] == [(str(first), "60"), (str(final), "80")]
     report(tmp_path, plan, summaries, tasks, training, validation)
     assert "60/100" in (tmp_path / "FINDINGS.md").read_text()
     assert "80/100" in (tmp_path / "FINDINGS.md").read_text()
+    text = (tmp_path / "FINDINGS.md").read_text()
+    assert "step {} to step {}".format(first, final) in text
+    if first == 1000:
+        assert "separate H100 allocations" in text
+        assert "Step 500" not in text
     assert (tmp_path / "figures/continuation_comparison.png").stat().st_size > 0

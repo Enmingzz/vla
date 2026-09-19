@@ -1,0 +1,30 @@
+# Exactly 500 new updates; reuse the verified OSMesa step-1000 reference.
+continuation_only: true
+require_cpu_preflight: true
+training_config: configs/opsd_continuation_1500.yaml
+comparison_step: 1000
+resume_step: 1000
+resume_manifest_sha256: 1289e0ee260fb908acac32a2595768929537762ff27fc35a1fd1ad6b9ed35f60
+milestones: [1000, 1500]
+evaluation_workers: 8
+training_timeout_seconds: 3900
+evaluation_timeout_seconds: 2100
+diagnostic_timeout_seconds: 900
+maximum_concurrent_gpus: 1
+cached_reference:
+  archive: results/autoresearch_round3_finish_retry1
+  step: 1000
+  inventory_sha256: 41ac95c70f9d9aa82a6ccb820b82bdebd6297e5e1e8c6114d3d3a5c67205916a
+confirmation:
+  suite: libero_10
+  initial_state_start: 30
+  episodes_per_task: 10
+  seed: 27
+  horizons:
+    1000: [20]
+    1500: [20]
+primary_comparison: step1500_minus_step1000_H20
+bootstrap_replicates: 10000
+analysis_seed: 20260916
+renderer: osmesa
+interpretation: Previously inspected evaluation layouts, held out from training; exploratory continuation, not a new blind test.

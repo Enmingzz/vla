@@ -66,6 +66,12 @@ remain archived. See the [new findings](results/autoresearch_round3_finish_retry
 [comparison figure](results/autoresearch_round3_finish_retry1/figures/continuation_comparison.png)
 and [completed archive](results/autoresearch_round3_finish_retry1/README.md).
 
+A further **1000→1500** continuation is submitted, with no result yet. It keeps
+P=50, student H=20, teacher H=5 and the training method unchanged, reuses the
+verified 100-episode OSMesa step-1000 baseline, and adds only 100 step-1500
+evaluation episodes. CPU preflight, one-H100 training/evaluation and CPU reporting
+are linked automatically. See the [round-four run](results/autoresearch_round4/README.md).
+
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures
 **P=10**, not 50. Therefore only **H=5 and H=10** from the requested sweep are

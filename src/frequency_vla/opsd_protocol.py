@@ -7,8 +7,8 @@ import json
 def validate_training_config(config):
     if config["prediction_horizon"] != 50 or config["student_horizon"] != 20 or config["teacher_horizon"] != 5:
         raise ValueError("This first experiment is fixed at P=50, H_student=20, H_teacher=5")
-    if config["flow_steps"] != 10 or type(config["optimizer_steps"]) is not int or not 1 <= config["optimizer_steps"] <= 1000:
-        raise ValueError("Keep the 10-step sampler and the bounded, at-most-1000-update experiment")
+    if config["flow_steps"] != 10 or type(config["optimizer_steps"]) is not int or not 1 <= config["optimizer_steps"] <= 1500:
+        raise ValueError("Keep the 10-step sampler and the bounded, at-most-1500-update experiment")
     checkpoints = config.get("checkpoint_steps", [config["optimizer_steps"]])
     if not checkpoints or checkpoints != sorted(set(checkpoints)) or any(type(s) is not int or not 1 <= s <= config["optimizer_steps"] for s in checkpoints):
         raise ValueError("Checkpoint steps must be ordered, unique and inside the update budget")

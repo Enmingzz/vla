@@ -47,10 +47,15 @@ def audit(plan, training_config, parent_results, parent_checkpoint, openpi_dir):
     prior_hashes = {s["initial_state_sha256"] for r in rows for s in r["initial_states"]}
     if plan.get("continuation_only"):
         first = plan.get("comparison_step", plan["resume_step"])
-        if first != 500 or not first <= plan["resume_step"] < 1000 or training_config["optimizer_steps"] != 1000 or plan["milestones"] != [500, 1000]:
+        final = first + 500
+        if first not in [500, 1000] or not first <= plan["resume_step"] < final or training_config["optimizer_steps"] != final or plan["milestones"] != [first, final]:
             raise ValueError("The authorized continuation must contain exactly 500 additional updates")
-        if {c["step"] for c in conditions(plan)} != {500, 1000} or any(c["horizon"] != 20 or c["suite"] != "libero_10" for c in conditions(plan)):
+        if {c["step"] for c in conditions(plan)} != {first, final} or any(c["horizon"] != 20 or c["suite"] != "libero_10" for c in conditions(plan)):
             raise ValueError("This continuation compares the two H=20 LIBERO-10 snapshots")
+    reference = None
+    if plan.get("cached_reference"):
+        from .cached_reference import audit_reference
+        reference = audit_reference(plan)
     from .continuation_records import audit_prior_segments
     segments = audit_prior_segments(plan)
     sys.path.insert(0, str(Path(openpi_dir) / "third_party/libero"))
@@ -81,6 +86,7 @@ def audit(plan, training_config, parent_results, parent_checkpoint, openpi_dir):
     if screen_hashes & confirmation_hashes:
         raise ValueError("Screen and confirmation initial states overlap")
     return {"plan_sha256": digest(plan), "parent_manifest_sha256": digest(manifest),
+        "cached_reference": reference,
         "continuation_segments": segments,
         "prior_rollout_sources": [{"path": str(p.resolve()), "sha256": file_digest(p)} for p in parent_files],
         "prior_training_distinct_states": len(prior_hashes), "new_training_pool_distinct_states": len(new_hashes),

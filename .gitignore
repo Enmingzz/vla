@@ -8,3 +8,4 @@ results/logs/**
 results/**/logs/**
 !results/videos/.gitkeep
 *.mp4
+results/**/videos

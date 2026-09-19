@@ -1,0 +1,6 @@
+{
+  "failed_cpu_job": "60480360",
+  "gpu_seconds_wasted": 0,
+  "reason": "Evaluation environment overrides leaked into unit-test fixtures; clear renderer and FREQUENCY_CONFIG for the unit-test subprocess.",
+  "unused_dependent_gpu_job": "60480362"
+}

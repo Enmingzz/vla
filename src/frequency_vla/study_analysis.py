@@ -53,6 +53,12 @@ def analyze(root):
     if not completed["complete"] or not (completed["plan_sha256"] == audit["plan_sha256"] == digest(plan)):
         raise ValueError("The declared research matrix is incomplete or changed")
     matrix = conditions(plan)
+    reference = None
+    if plan.get("cached_reference"):
+        from .cached_reference import verify_reference
+        reference = verify_reference(root, plan)
+        if audit.get("cached_reference") != reference or completed.get("reused_conditions") != [reference["condition"]]:
+            raise ValueError("Undeclared reuse of reference measurements")
     data, summaries, task_rows, all_rows, servers = {}, [], [], [], set()
     core_reference = None
     expected_hashes = {key: {(r["task_id"], r["initial_state_index"]): r["initial_state_sha256"] for r in value}
@@ -63,6 +69,8 @@ def analyze(root):
         manifests = [json.loads(p.read_text()) for p in folder.glob("*.manifest.json")]
         if len(manifests) != 10 or any(m["status"] != "complete" for m in manifests):
             raise ValueError("Incomplete condition: " + condition_id(c))
+        if len({m["server"]["server_instance_id"] for m in manifests}) != 1:
+            raise ValueError("A condition spans multiple policy servers")
         validate_records(rows)
         expected = {(c["seed"], t, e) for t in range(10) for e in range(c["episodes_per_task"])}
         if len(rows) != len(expected) or {pair_key(r) for r in rows} != expected:
@@ -102,7 +110,10 @@ def analyze(root):
             summary["task_{}_success_rate".format(task)] = sum(r["success"] for r in subset) / len(subset)
             task_rows.append(dict(c, task_id=task, task_description=subset[0]["task_description"],
                                   **summarize(c["horizon"], subset)))
-    if len(servers) != 1:
+    if reference is not None:
+        if len(servers) != 2 or reference["server_instance_id"] not in servers:
+            raise ValueError("Require one cached reference server and one new evaluation server")
+    elif len(servers) != 1:
         raise ValueError("This predeclared comparison requires one continuous policy server")
     from .continuation_records import training_records
     training, rollouts = training_records(root, plan, audit)

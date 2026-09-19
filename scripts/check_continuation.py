@@ -32,17 +32,18 @@ def main():
             videos.append(dict(video=str(path.relative_to(root)), frames=int(info["nb_frames"])))
     assert len(videos) == len({v["video"] for v in videos}) == 200
     write_json(root / "provenance/video_checks.json", dict(passed=True, videos=200, all_frame_counts_match=True, checks=videos))
-    step = json.loads((root / "provenance/step_1000.json").read_text())
+    endpoint = plan["milestones"][-1]
+    step = json.loads((root / "provenance" / ("step_" + str(endpoint) + ".json")).read_text())
     checkpoint = Path(step["path"])
     manifest = json.loads((checkpoint / "training_manifest.json").read_text())
-    assert digest(manifest) == step["manifest_sha256"] and manifest["step"] == 1000
+    assert digest(manifest) == step["manifest_sha256"] and manifest["step"] == endpoint
     assert manifest["resumed_from"]["step"] == plan["resume_step"]
     assert manifest["resumed_from"]["manifest_sha256"] == plan["resume_manifest_sha256"]
     assert manifest["reloaded_native_inference_max_abs_difference"] == 0
     for name, expected in manifest["files"].items():
         if file_digest(checkpoint / name) != expected:
             raise ValueError("Final checkpoint checksum mismatch: " + name)
-    write_json(root / "provenance/exported_training_manifest_step_1000.json", manifest)
+    write_json(root / "provenance" / ("exported_training_manifest_step_" + str(endpoint) + ".json"), manifest)
     job = json.loads((root / "provenance/submission.json").read_text())["job_id"]
     accounting = subprocess.check_output(["sacct", "-j", str(job), "-nP", "-o",
         "JobID,State,ElapsedRaw,AllocTRES,ExitCode,NodeList"], text=True)
@@ -57,6 +58,8 @@ def main():
         root / "FINDINGS.md", root / "training.jsonl", root / "rollouts.jsonl"]
     write_json(root / "provenance/final_checks.json", dict(complete=True, new_optimizer_updates=500,
         updates_in_final_allocation=validation["updates_in_final_allocation"], paired_evaluation_episodes=200,
+        new_evaluation_episodes=validation["new_evaluation_episodes"],
+        reused_evaluation_episodes=validation["reused_evaluation_episodes"],
         validated_videos=200, checkpoint_manifest_sha256=step["manifest_sha256"],
         all_checkpoint_file_checksums_verified=True, native_reload_max_abs_difference=0,
         gpu_allocation_released=True, artifacts={str(p.relative_to(root)):file_digest(p) for p in artifacts if p.is_file()}))
