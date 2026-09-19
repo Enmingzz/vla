@@ -1,5 +1,11 @@
 # π0.5 LIBERO replanning-frequency validation
 
+The current [EGL pipeline](EGL_PIPELINE.md) starts a **fresh official checkpoint**
+and uses EGL for all 1500 training updates and all five evaluations: original
+H=5/H=20 and H=20 at steps 500/1000/1500. It has a single submission command and
+does not use historical mixed-renderer checkpoints. Historical findings below
+remain separate; new results are published only after the new run completes.
+
 The initial evaluation phase uses the official Physical Intelligence OpenPI
 checkpoint and its existing LIBERO action-execution loop, without training,
 attention-rule changes, or action repetition. The default protocol preserves the

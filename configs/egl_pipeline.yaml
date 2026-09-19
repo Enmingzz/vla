@@ -1,0 +1,29 @@
+suite: libero_10
+prediction_horizon: 50
+flow_steps: 10
+renderer: egl
+workers: 4
+training_config: configs/opsd_egl_1500.yaml
+seed: 27
+initial_state_start: 30
+episodes_per_task: 10
+maximum_concurrent_gpus: 1
+optimizer_updates_added: 1500
+start_from_official_checkpoint: true
+milestones: [500, 1000, 1500]
+conditions:
+  - {step: 0, horizon: 5}
+  - {step: 0, horizon: 20}
+  - {step: 500, horizon: 20}
+  - {step: 1000, horizon: 20}
+  - {step: 1500, horizon: 20}
+pilot_seed: 17
+pilot_initial_state_start: 10
+pilot_timeout_seconds: 180
+renderer_check_timeout_seconds: 180
+diagnostic_timeout_seconds: 480
+training_segment_timeout_seconds: 2400
+condition_timeout_seconds: 900
+bootstrap_replicates: 10000
+analysis_seed: 20260919
+interpretation: Fresh official checkpoint, all training and evaluation use EGL; fixed method and predeclared checkpoints; previously inspected test layouts held out from training.

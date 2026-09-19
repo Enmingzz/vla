@@ -1,6 +1,7 @@
-"""CPU-node check: serial and parallel training simulators receive identical actions.
+"""Check that serial and parallel training simulators receive identical actions.
 
-Uses no policy/checkpoint/GPU and never creates formal research outcomes.
+Uses no policy/checkpoint and never creates formal research outcomes.
+The default OSMesa check runs on a CPU node; selecting EGL requires a GPU node.
 """
 import argparse
 import os
@@ -48,9 +49,11 @@ def run(parallel, config):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--output", required=True)
+    p.add_argument("--training-config", default="configs/opsd_continuation_1000.yaml")
+    p.add_argument("--inference-config", default="configs/prediction50_round3.yaml")
     args = p.parse_args()
-    config = load_config("configs/opsd_continuation_1000.yaml")
-    renderer = rendering_spec(load_config("configs/prediction50_round3.yaml"))
+    config = load_config(args.training_config)
+    renderer = rendering_spec(load_config(args.inference_config))
     serial, serial_s = run(False, config)
     parallel, parallel_s = run(True, config)
     if serial != parallel:
