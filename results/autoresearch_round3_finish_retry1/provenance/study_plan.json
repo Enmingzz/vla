@@ -1,0 +1,39 @@
+{
+  "analysis_seed": 20260916,
+  "bootstrap_replicates": 10000,
+  "comparison_manifest_sha256": "c00bcab9c776c6e3794b4b86dc18a15b0e78dd9e7fcd9fb0fa1c7f2d920f18ed",
+  "comparison_step": 500,
+  "confirmation": {
+    "episodes_per_task": 10,
+    "horizons": {
+      "500": [
+        20
+      ],
+      "1000": [
+        20
+      ]
+    },
+    "initial_state_start": 30,
+    "seed": 27,
+    "suite": "libero_10"
+  },
+  "continuation_only": true,
+  "diagnostic_timeout_seconds": 900,
+  "evaluation_timeout_seconds": 2100,
+  "evaluation_workers": 8,
+  "interpretation": "Previously inspected evaluation layouts, held out from training; exploratory continuation, not a new blind test.",
+  "maximum_concurrent_gpus": 1,
+  "milestones": [
+    500,
+    1000
+  ],
+  "primary_comparison": "step1000_minus_step500_H20",
+  "prior_continuation_results": [
+    "results/autoresearch_round3"
+  ],
+  "renderer": "osmesa",
+  "resume_manifest_sha256": "25424b58a198459cd39012373c5a3beb103c8963b57c3227763d4db1acfaa4cd",
+  "resume_step": 978,
+  "training_config": "configs/opsd_continuation_1000.yaml",
+  "training_timeout_seconds": 600
+}

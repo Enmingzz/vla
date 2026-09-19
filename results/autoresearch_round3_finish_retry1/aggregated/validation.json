@@ -1,0 +1,51 @@
+{
+  "all_initial_states_match_audit": true,
+  "complete": true,
+  "conditions": 2,
+  "evaluation_episodes": 200,
+  "final_step": 1000,
+  "first_step": 500,
+  "initial_state_indices_previously_evaluated": true,
+  "new_training_action_blocks": 2000,
+  "new_training_distinct_task_layouts": 100,
+  "new_training_executed_actions": 39151,
+  "new_training_layout_indices": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "optimizer_updates_added": 500,
+  "plan_sha256": "308fc36b00502da01a6eac601bf715d55bc62afece9c568ac3bb53743f3fa999",
+  "primary": {
+    "after_mean_steps_on_both_success": 269.7903225806452,
+    "before_mean_steps_on_both_success": 300.4193548387097,
+    "both_success_episodes": 62,
+    "ci95_high": 0.12,
+    "ci95_low": -0.06,
+    "comparison": "step1000_minus_step500_H20",
+    "episodes": 100,
+    "left_step": 1000,
+    "left_success_rate": 0.78,
+    "p_exact": 0.711071103811264,
+    "recovered_episodes": 16,
+    "regressed_episodes": 13,
+    "right_step": 500,
+    "right_success_rate": 0.75,
+    "success_change": 0.03
+  },
+  "prior_continuation_archives": [
+    "results/autoresearch_round3"
+  ],
+  "renderer": "osmesa",
+  "resumed_at_step": 978,
+  "single_server_instance": "fe16b2a4-4636-4654-8a85-61df51f9c656",
+  "training_evaluation_disjoint": true,
+  "updates_in_final_allocation": 22
+}

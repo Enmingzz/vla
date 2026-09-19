@@ -1,0 +1,9 @@
+{
+  "job_id": "60477541",
+  "account": "def-btaati_cpu",
+  "gpus": 0,
+  "cpus": 1,
+  "memory_gib": 4,
+  "time_limit": "00:10:00",
+  "replaces_failed_analysis_job": "60469138"
+}

@@ -28,9 +28,26 @@ def paired_change(left, right, plan):
         "recovered_episodes": won, "regressed_episodes": lost, "p_exact": exact_mcnemar(won, lost)}
 
 
+def load_archived_plan(path):
+    """Restore the YAML step-key types before checking its original digest.
+
+    JSON object keys are strings. Sorting saved keys lexically would place
+    "1000" before "500", changing the hash of the original integer-keyed plan.
+    Only this schema-defined key type is restored; the hash guard is retained.
+    """
+    plan = json.loads(Path(path).read_text())
+    for split in ["screen", "transfer", "confirmation"]:
+        if split in plan:
+            horizons = plan[split]["horizons"]
+            if any(str(int(key)) != key or int(key) < 0 for key in horizons):
+                raise ValueError("Invalid archived optimizer-step key")
+            plan[split]["horizons"] = {int(step): values for step, values in horizons.items()}
+    return plan
+
+
 def analyze(root):
     root = Path(root)
-    plan = json.loads((root / "provenance/study_plan.json").read_text())
+    plan = load_archived_plan(root / "provenance/study_plan.json")
     audit = json.loads((root / "provenance/split_audit.json").read_text())
     completed = json.loads((root / "provenance/study_complete.json").read_text())
     if not completed["complete"] or not (completed["plan_sha256"] == audit["plan_sha256"] == digest(plan)):

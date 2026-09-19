@@ -1,0 +1,12 @@
+{
+  "adam_update_counters": [
+    978
+  ],
+  "config_changes": {},
+  "ema_and_optimizer_restored": true,
+  "fp32_master_restored": true,
+  "frozen_backbone_equal": true,
+  "manifest_sha256": "25424b58a198459cd39012373c5a3beb103c8963b57c3227763d4db1acfaa4cd",
+  "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3/step_978",
+  "step": 978
+}

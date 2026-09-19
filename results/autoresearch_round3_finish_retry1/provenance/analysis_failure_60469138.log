@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/enmingzz/project/vla/frequency_vla/scripts/check_continuation.py", line 67, in <module>
+    main()
+  File "/home/enmingzz/project/vla/frequency_vla/scripts/check_continuation.py", line 17, in main
+    plan, summaries, comparisons, tasks, training, validation = analyze(root)
+  File "/home/enmingzz/project/vla/frequency_vla/src/frequency_vla/study_analysis.py", line 37, in analyze
+    raise ValueError("The declared research matrix is incomplete or changed")
+ValueError: The declared research matrix is incomplete or changed

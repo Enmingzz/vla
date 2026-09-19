@@ -1,0 +1,11 @@
+{
+  "comparison_optimizer_steps_added": 500,
+  "complete": true,
+  "completed_conditions": [
+    "confirmation_libero_10_step1000_H20",
+    "confirmation_libero_10_step500_H20"
+  ],
+  "final_optimizer_step": 1000,
+  "optimizer_steps_added": 22,
+  "plan_sha256": "308fc36b00502da01a6eac601bf715d55bc62afece9c568ac3bb53743f3fa999"
+}

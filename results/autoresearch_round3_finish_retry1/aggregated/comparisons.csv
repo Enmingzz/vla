@@ -1,0 +1,2 @@
+comparison,left_step,right_step,episodes,left_success_rate,right_success_rate,success_change,ci95_low,ci95_high,recovered_episodes,regressed_episodes,p_exact,both_success_episodes,before_mean_steps_on_both_success,after_mean_steps_on_both_success
+step1000_minus_step500_H20,1000,500,100,0.78,0.75,0.03,-0.06,0.12,16,13,0.711071103811264,62,300.4193548387097,269.7903225806452

@@ -1,0 +1,3 @@
+60477541|COMPLETED|23|billing=1000,cpu=1,mem=4G,node=1|0:0|fc30555
+60477541.batch|COMPLETED|23|cpu=1,mem=4G,node=1|0:0|fc30555
+60477541.extern|COMPLETED|23|billing=1000,cpu=1,mem=4G,node=1|0:0|fc30555

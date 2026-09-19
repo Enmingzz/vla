@@ -44,23 +44,27 @@ ordered exploratory prefix separate from the [interrupted full-suite attempt](re
 The amended protocol, original full-suite plan and exact commands are in
 [LIBERO90_TRANSFER.md](LIBERO90_TRANSFER.md).
 
-The requested one-hour continuation finished at **step 978: 478 additional
+The requested one-hour continuation initially finished at **step 978: 478 additional
 updates from step 500**, leaving 22 updates to the step-1000 target. It used one
 H100 for **56m58s**, stopped for the checkpoint-save reserve, and released the
 allocation normally. Checkpoint verification passed. No benchmark evaluation
-ran, so there is no new success-rate result yet. See the
+ran in that first allocation. See the
 [training status](results/autoresearch_round3/TRAINING_STATUS.md),
 [execution protocol](AUTORESEARCH_ROUND3.md) and
 [round-three archive](results/autoresearch_round3/README.md).
 
-The subsequently requested completion resumes step 978 for the remaining **22
-updates**, then compares **step 500 and step 1000 at H=20** on 100 paired
-LIBERO-10 episodes each under the same OSMesa renderer. GPU job **60427489**
-failed before model loading with `CUDA_ERROR_NO_DEVICE`, using 3m25s and
-performing zero updates or evaluations. Retry **60469132** excludes that
-node and checks CUDA before model startup; there is no new success-rate
-result yet. See the [retry archive](results/autoresearch_round3_finish_retry1/README.md)
-and the preserved [failed-launch archive](results/autoresearch_round3_finish/README.md).
+The completion has now reached **step 1000** and evaluated both endpoints on
+the same 100 paired LIBERO-10 episodes at **P=50, H=20**. Step 500 achieved
+**75%** and step 1000 **78%** under OSMesa: **+3 pp**, paired 95% CI **−6 to
++12 pp**, exact McNemar **p=0.7111**. This does not establish a success-rate
+gain from the extra 500 updates. Mean actions/calls per episode fell about
+7.6%, with large opposing changes on individual tasks. Both endpoints were
+remeasured; the earlier EGL 72% is not the current baseline.
+Retry job **60469132** completed in **1h04m50s on one H100** and released it.
+The preceding launch failed before model loading and used 3m25s; its logs
+remain archived. See the [new findings](results/autoresearch_round3_finish_retry1/FINDINGS.md),
+[comparison figure](results/autoresearch_round3_finish_retry1/figures/continuation_comparison.png)
+and [completed archive](results/autoresearch_round3_finish_retry1/README.md).
 
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures

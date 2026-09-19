@@ -1,0 +1,130 @@
+{
+  "base_experiment_spec": {
+    "backend": "jax",
+    "checkpoint": "gs://openpi-assets/checkpoints/pi05_libero",
+    "checkpoint_object_manifest_sha256": "434da05c6b5ac51c28222ca1bd9b77b77fa733a7b16955cbe98ac09786845dcf",
+    "dtype": "bfloat16",
+    "flow_steps": 10,
+    "inference_packages": {
+      "flax": "0.10.2",
+      "jax": "0.5.3",
+      "jax-cuda12-pjrt": "0.5.3",
+      "jax-cuda12-plugin": "0.5.3",
+      "jaxlib": "0.5.3",
+      "ml-dtypes": "0.4.1",
+      "numpy": "1.26.4",
+      "opencv-python": "4.11.0.86",
+      "orbax-checkpoint": "0.11.13",
+      "pillow": "11.2.1",
+      "sentencepiece": "0.2.0",
+      "tensorstore": "0.1.74"
+    },
+    "jax_cuda_root": "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/nvidia/cuda_nvcc",
+    "libero_commit": "f78abd68ee283de9f9be3c8f7e2a9ad60246e95c",
+    "model_config": {
+      "action_dim": 32,
+      "action_expert_variant": "gemma_300m",
+      "action_horizon": 50,
+      "discrete_state_input": false,
+      "dtype": "bfloat16",
+      "max_token_len": 200,
+      "paligemma_variant": "gemma_2b",
+      "pi05": true,
+      "pytorch_compile_mode": "max-autotune"
+    },
+    "native_prediction_horizon": 10,
+    "num_steps_wait": 10,
+    "openpi_commit": "215abfb217dbac7d5f1273282331b9b1866c0479",
+    "prediction_horizon": 50,
+    "protocol": "fixed_prediction_horizon_extension",
+    "ptxas_version": "ptxas: NVIDIA (R) Ptx optimizing assembler\nCopyright (c) 2005-2025 NVIDIA Corporation\nBuilt on Wed_Apr__9_19:22:20_PDT_2025\nCuda compilation tools, release 12.9, V12.9.41\nBuild cuda_12.9.r12.9/compiler.35813241_0",
+    "python_version": "3.11.13",
+    "resize_size": 224,
+    "rng_protocol": "fold_in(episode_key,call_index); native Policy.infer split; v1",
+    "sample_kwargs": {},
+    "source_sha256": {
+      "examples/libero/README.md": "a2caaf5459c4b01837b73aa93a6f69e8cdf10385b39c34eba36afa85f83fafe9",
+      "examples/libero/main.py": "d53748c95804ada559e3ca867305b8f755d8651c4c7f4e2723ef80aea55a3943",
+      "scripts/serve_policy.py": "eccc0448b4873fd30a1fff3355c5de7a7c227138e6db04b7dcaa5bb38a6a5809",
+      "src/openpi/models/pi0.py": "24b32d7c6ed5e409459afa8ca5af96a4dae09c2dcdf48e828907e411f4f12342",
+      "src/openpi/training/config.py": "c34231f888dba5dc981d808765b3d98775ab845b04313bf53fcecd567c520b0d",
+      "uv.lock": "793488b5a55bb87200db90a61fd0af51922b686d94e1da4f4c587ab119b37d74"
+    },
+    "startup_warmup_protocol": "one zero observation before listening; all episode calls reseeded",
+    "training_config": "pi05_libero",
+    "websocket_ping_interval": null,
+    "xla_flags": " --xla_gpu_cuda_data_dir=/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/nvidia/cuda_nvcc"
+  },
+  "config": {
+    "algorithm": "temporal_opsd_gaussian_velocity_matching",
+    "allow_budget_checkpoint": true,
+    "batch_size": 4,
+    "checkpoint_steps": [
+      500,
+      1000
+    ],
+    "clip_gradient_norm": 1.0,
+    "compute_dtype": "bfloat16",
+    "ema_decay": 0.9999,
+    "environment_workers": 4,
+    "evaluation_episodes_per_task": 10,
+    "evaluation_seed": 27,
+    "flow_steps": 10,
+    "flow_time_sampling": "uniform_over_native_10_step_grid",
+    "learning_rate": 1e-05,
+    "loss_action_dimensions": 7,
+    "loss_covariance": "unit_isotropic_velocity_probe",
+    "master_dtype": "float32",
+    "optimizer_steps": 1000,
+    "prediction_horizon": 50,
+    "protected_eval_ranges": [
+      [
+        0,
+        10
+      ],
+      [
+        20,
+        50
+      ]
+    ],
+    "reference_opsd_commit": "28d04e440350df2037fdd34ce703f088fb4ffd97",
+    "student_horizon": 20,
+    "teacher_horizon": 5,
+    "teacher_strategy": "ema",
+    "teacher_tail": "ema_native_flow_latent_at_same_time",
+    "train_initial_state_cursor": 16,
+    "train_initial_state_start": 10,
+    "train_initial_state_stop": 20,
+    "train_seed": 17,
+    "trainable_parameters": "action_expert_and_action_time_projections",
+    "weight_decay": 0.0
+  },
+  "sources": {
+    "opsd_backend.py": "bec71c3ad8eea55445a9c2ab300727655a3584146328484474352eb2c00e54ec",
+    "opsd_flow.py": "c0e85665f5fce10e0afffe185763d07008cb16aa2d97a04a164a18e725eaa45c",
+    "opsd_protocol.py": "639c635eb9ad893dfb61c1b1924300b3a0eb266176afb3727432c5fc0f7be314"
+  },
+  "trainable_parameter_count": 430098464,
+  "trainable_paths": [
+    "PaliGemma/llm/final_norm_1/Dense_0/bias",
+    "PaliGemma/llm/final_norm_1/Dense_0/kernel",
+    "PaliGemma/llm/layers/attn/attn_vec_einsum_1/w",
+    "PaliGemma/llm/layers/attn/kv_einsum_1/w",
+    "PaliGemma/llm/layers/attn/q_einsum_1/w",
+    "PaliGemma/llm/layers/mlp_1/gating_einsum",
+    "PaliGemma/llm/layers/mlp_1/linear",
+    "PaliGemma/llm/layers/pre_attention_norm_1/Dense_0/bias",
+    "PaliGemma/llm/layers/pre_attention_norm_1/Dense_0/kernel",
+    "PaliGemma/llm/layers/pre_ffw_norm_1/Dense_0/bias",
+    "PaliGemma/llm/layers/pre_ffw_norm_1/Dense_0/kernel",
+    "action_in_proj/bias",
+    "action_in_proj/kernel",
+    "action_out_proj/bias",
+    "action_out_proj/kernel",
+    "time_mlp_in/bias",
+    "time_mlp_in/kernel",
+    "time_mlp_out/bias",
+    "time_mlp_out/kernel"
+  ],
+  "training_checkpoint_root": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3_finish_retry1"
+}

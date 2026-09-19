@@ -1,0 +1,14 @@
+{
+  "original_analysis_job": "60469138",
+  "original_analysis_state": "FAILED",
+  "gpu_job": "60469132",
+  "gpu_job_state": "COMPLETED",
+  "error": "JSON stringified integer optimizer-step keys. Lexical sorting put 1000 before 500 and changed the plan hash.",
+  "fix": "Restore integer keys only in schema-defined horizons maps before checking the original digest. Do not alter plan, audit, checkpoint identity or episode data.",
+  "original_plan_sha256": "308fc36b00502da01a6eac601bf715d55bc62afece9c568ac3bb53743f3fa999",
+  "restored_plan_equals_predeclared_yaml": true,
+  "modified_analysis_source_sha256": "55de06363c27e70596e822fa6f08e9af516aa73316bf54b48793e8300a8509fd",
+  "regression_and_paired_analysis_tests_passed": 8,
+  "rejects_real_protocol_changes": true,
+  "gpu_rerun": false
+}
