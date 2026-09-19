@@ -1,0 +1,501 @@
+condition,task_id,episode_index,initial_state_index,success,executed_actions,policy_calls
+Original H5,0,0,30,True,378,76
+Original H5,0,1,31,True,299,60
+Original H5,0,2,32,True,343,69
+Original H5,0,3,33,True,271,55
+Original H5,0,4,34,True,285,57
+Original H5,0,5,35,True,285,57
+Original H5,0,6,36,True,322,65
+Original H5,0,7,37,True,420,84
+Original H5,0,8,38,True,278,56
+Original H5,0,9,39,True,325,65
+Original H5,1,0,30,True,257,52
+Original H5,1,1,31,True,265,53
+Original H5,1,2,32,True,252,51
+Original H5,1,3,33,True,355,71
+Original H5,1,4,34,True,260,52
+Original H5,1,5,35,True,286,58
+Original H5,1,6,36,True,303,61
+Original H5,1,7,37,True,246,50
+Original H5,1,8,38,True,237,48
+Original H5,1,9,39,True,271,55
+Original H5,2,0,30,True,279,56
+Original H5,2,1,31,True,271,55
+Original H5,2,2,32,True,245,49
+Original H5,2,3,33,True,254,51
+Original H5,2,4,34,True,308,62
+Original H5,2,5,35,True,252,51
+Original H5,2,6,36,True,241,49
+Original H5,2,7,37,True,269,54
+Original H5,2,8,38,True,242,49
+Original H5,2,9,39,True,241,49
+Original H5,3,0,30,True,224,45
+Original H5,3,1,31,True,236,48
+Original H5,3,2,32,True,238,48
+Original H5,3,3,33,True,233,47
+Original H5,3,4,34,True,216,44
+Original H5,3,5,35,True,244,49
+Original H5,3,6,36,True,244,49
+Original H5,3,7,37,True,228,46
+Original H5,3,8,38,True,210,42
+Original H5,3,9,39,True,237,48
+Original H5,4,0,30,True,258,52
+Original H5,4,1,31,True,249,50
+Original H5,4,2,32,True,239,48
+Original H5,4,3,33,True,257,52
+Original H5,4,4,34,True,243,49
+Original H5,4,5,35,True,239,48
+Original H5,4,6,36,True,247,50
+Original H5,4,7,37,True,308,62
+Original H5,4,8,38,True,247,50
+Original H5,4,9,39,True,253,51
+Original H5,5,0,30,True,194,39
+Original H5,5,1,31,True,241,49
+Original H5,5,2,32,True,185,37
+Original H5,5,3,33,True,222,45
+Original H5,5,4,34,True,194,39
+Original H5,5,5,35,True,190,38
+Original H5,5,6,36,True,225,45
+Original H5,5,7,37,True,202,41
+Original H5,5,8,38,True,242,49
+Original H5,5,9,39,True,398,80
+Original H5,6,0,30,True,234,47
+Original H5,6,1,31,True,227,46
+Original H5,6,2,32,False,520,104
+Original H5,6,3,33,True,276,56
+Original H5,6,4,34,True,233,47
+Original H5,6,5,35,True,255,51
+Original H5,6,6,36,True,262,53
+Original H5,6,7,37,True,240,48
+Original H5,6,8,38,False,520,104
+Original H5,6,9,39,True,409,82
+Original H5,7,0,30,True,244,49
+Original H5,7,1,31,True,279,56
+Original H5,7,2,32,True,287,58
+Original H5,7,3,33,True,344,69
+Original H5,7,4,34,True,299,60
+Original H5,7,5,35,True,261,53
+Original H5,7,6,36,True,313,63
+Original H5,7,7,37,True,319,64
+Original H5,7,8,38,True,263,53
+Original H5,7,9,39,True,278,56
+Original H5,8,0,30,True,437,88
+Original H5,8,1,31,False,520,104
+Original H5,8,2,32,True,458,92
+Original H5,8,3,33,False,520,104
+Original H5,8,4,34,True,389,78
+Original H5,8,5,35,False,520,104
+Original H5,8,6,36,True,430,86
+Original H5,8,7,37,False,520,104
+Original H5,8,8,38,True,468,94
+Original H5,8,9,39,True,434,87
+Original H5,9,0,30,True,321,65
+Original H5,9,1,31,True,249,50
+Original H5,9,2,32,True,253,51
+Original H5,9,3,33,True,253,51
+Original H5,9,4,34,True,285,57
+Original H5,9,5,35,True,266,54
+Original H5,9,6,36,True,315,63
+Original H5,9,7,37,True,411,83
+Original H5,9,8,38,True,289,58
+Original H5,9,9,39,False,520,104
+Original H20,0,0,30,False,520,26
+Original H20,0,1,31,True,399,20
+Original H20,0,2,32,True,478,24
+Original H20,0,3,33,True,347,18
+Original H20,0,4,34,True,416,21
+Original H20,0,5,35,False,520,26
+Original H20,0,6,36,False,520,26
+Original H20,0,7,37,False,520,26
+Original H20,0,8,38,False,520,26
+Original H20,0,9,39,False,520,26
+Original H20,1,0,30,False,520,26
+Original H20,1,1,31,True,469,24
+Original H20,1,2,32,False,520,26
+Original H20,1,3,33,False,520,26
+Original H20,1,4,34,False,520,26
+Original H20,1,5,35,True,420,21
+Original H20,1,6,36,False,520,26
+Original H20,1,7,37,True,495,25
+Original H20,1,8,38,False,520,26
+Original H20,1,9,39,False,520,26
+Original H20,2,0,30,False,520,26
+Original H20,2,1,31,True,317,16
+Original H20,2,2,32,False,520,26
+Original H20,2,3,33,True,379,19
+Original H20,2,4,34,False,520,26
+Original H20,2,5,35,True,377,19
+Original H20,2,6,36,False,520,26
+Original H20,2,7,37,False,520,26
+Original H20,2,8,38,True,378,19
+Original H20,2,9,39,False,520,26
+Original H20,3,0,30,True,305,16
+Original H20,3,1,31,True,314,16
+Original H20,3,2,32,True,306,16
+Original H20,3,3,33,False,520,26
+Original H20,3,4,34,True,448,23
+Original H20,3,5,35,True,295,15
+Original H20,3,6,36,True,278,14
+Original H20,3,7,37,True,354,18
+Original H20,3,8,38,True,267,14
+Original H20,3,9,39,True,395,20
+Original H20,4,0,30,False,520,26
+Original H20,4,1,31,True,442,23
+Original H20,4,2,32,False,520,26
+Original H20,4,3,33,False,520,26
+Original H20,4,4,34,True,442,23
+Original H20,4,5,35,False,520,26
+Original H20,4,6,36,False,520,26
+Original H20,4,7,37,True,411,21
+Original H20,4,8,38,False,520,26
+Original H20,4,9,39,False,520,26
+Original H20,5,0,30,True,226,12
+Original H20,5,1,31,True,241,13
+Original H20,5,2,32,True,261,14
+Original H20,5,3,33,True,331,17
+Original H20,5,4,34,False,520,26
+Original H20,5,5,35,True,210,11
+Original H20,5,6,36,True,265,14
+Original H20,5,7,37,True,221,12
+Original H20,5,8,38,True,222,12
+Original H20,5,9,39,True,463,24
+Original H20,6,0,30,True,412,21
+Original H20,6,1,31,False,520,26
+Original H20,6,2,32,False,520,26
+Original H20,6,3,33,False,520,26
+Original H20,6,4,34,True,290,15
+Original H20,6,5,35,False,520,26
+Original H20,6,6,36,True,363,19
+Original H20,6,7,37,False,520,26
+Original H20,6,8,38,False,520,26
+Original H20,6,9,39,False,520,26
+Original H20,7,0,30,True,423,22
+Original H20,7,1,31,True,321,17
+Original H20,7,2,32,True,375,19
+Original H20,7,3,33,True,471,24
+Original H20,7,4,34,True,518,26
+Original H20,7,5,35,True,321,17
+Original H20,7,6,36,True,348,18
+Original H20,7,7,37,True,408,21
+Original H20,7,8,38,True,347,18
+Original H20,7,9,39,True,309,16
+Original H20,8,0,30,True,492,25
+Original H20,8,1,31,True,481,25
+Original H20,8,2,32,False,520,26
+Original H20,8,3,33,True,497,25
+Original H20,8,4,34,False,520,26
+Original H20,8,5,35,True,500,25
+Original H20,8,6,36,False,520,26
+Original H20,8,7,37,False,520,26
+Original H20,8,8,38,False,520,26
+Original H20,8,9,39,False,520,26
+Original H20,9,0,30,False,520,26
+Original H20,9,1,31,False,520,26
+Original H20,9,2,32,False,520,26
+Original H20,9,3,33,False,520,26
+Original H20,9,4,34,False,520,26
+Original H20,9,5,35,False,520,26
+Original H20,9,6,36,False,520,26
+Original H20,9,7,37,False,520,26
+Original H20,9,8,38,False,520,26
+Original H20,9,9,39,False,520,26
+OPSD 500 H20 historical,0,0,30,True,320,16
+OPSD 500 H20 historical,0,1,31,True,310,16
+OPSD 500 H20 historical,0,2,32,True,408,21
+OPSD 500 H20 historical,0,3,33,True,295,15
+OPSD 500 H20 historical,0,4,34,True,369,19
+OPSD 500 H20 historical,0,5,35,True,315,16
+OPSD 500 H20 historical,0,6,36,True,335,17
+OPSD 500 H20 historical,0,7,37,True,377,19
+OPSD 500 H20 historical,0,8,38,True,337,17
+OPSD 500 H20 historical,0,9,39,True,314,16
+OPSD 500 H20 historical,1,0,30,True,309,16
+OPSD 500 H20 historical,1,1,31,True,348,18
+OPSD 500 H20 historical,1,2,32,True,283,15
+OPSD 500 H20 historical,1,3,33,True,309,16
+OPSD 500 H20 historical,1,4,34,True,447,23
+OPSD 500 H20 historical,1,5,35,True,310,16
+OPSD 500 H20 historical,1,6,36,False,520,26
+OPSD 500 H20 historical,1,7,37,True,271,14
+OPSD 500 H20 historical,1,8,38,True,282,15
+OPSD 500 H20 historical,1,9,39,True,362,19
+OPSD 500 H20 historical,2,0,30,False,520,26
+OPSD 500 H20 historical,2,1,31,True,276,14
+OPSD 500 H20 historical,2,2,32,True,271,14
+OPSD 500 H20 historical,2,3,33,True,293,15
+OPSD 500 H20 historical,2,4,34,True,285,15
+OPSD 500 H20 historical,2,5,35,True,290,15
+OPSD 500 H20 historical,2,6,36,True,294,15
+OPSD 500 H20 historical,2,7,37,True,281,15
+OPSD 500 H20 historical,2,8,38,True,273,14
+OPSD 500 H20 historical,2,9,39,True,283,15
+OPSD 500 H20 historical,3,0,30,True,245,13
+OPSD 500 H20 historical,3,1,31,True,275,14
+OPSD 500 H20 historical,3,2,32,True,280,14
+OPSD 500 H20 historical,3,3,33,True,269,14
+OPSD 500 H20 historical,3,4,34,True,277,14
+OPSD 500 H20 historical,3,5,35,False,520,26
+OPSD 500 H20 historical,3,6,36,False,520,26
+OPSD 500 H20 historical,3,7,37,True,280,14
+OPSD 500 H20 historical,3,8,38,True,279,14
+OPSD 500 H20 historical,3,9,39,True,256,13
+OPSD 500 H20 historical,4,0,30,False,520,26
+OPSD 500 H20 historical,4,1,31,True,302,16
+OPSD 500 H20 historical,4,2,32,False,520,26
+OPSD 500 H20 historical,4,3,33,True,324,17
+OPSD 500 H20 historical,4,4,34,True,263,14
+OPSD 500 H20 historical,4,5,35,True,262,14
+OPSD 500 H20 historical,4,6,36,True,322,17
+OPSD 500 H20 historical,4,7,37,True,320,16
+OPSD 500 H20 historical,4,8,38,True,389,20
+OPSD 500 H20 historical,4,9,39,True,282,15
+OPSD 500 H20 historical,5,0,30,False,520,26
+OPSD 500 H20 historical,5,1,31,True,211,11
+OPSD 500 H20 historical,5,2,32,True,208,11
+OPSD 500 H20 historical,5,3,33,False,520,26
+OPSD 500 H20 historical,5,4,34,False,520,26
+OPSD 500 H20 historical,5,5,35,True,273,14
+OPSD 500 H20 historical,5,6,36,True,230,12
+OPSD 500 H20 historical,5,7,37,True,205,11
+OPSD 500 H20 historical,5,8,38,True,196,10
+OPSD 500 H20 historical,5,9,39,True,208,11
+OPSD 500 H20 historical,6,0,30,False,520,26
+OPSD 500 H20 historical,6,1,31,False,520,26
+OPSD 500 H20 historical,6,2,32,False,520,26
+OPSD 500 H20 historical,6,3,33,False,520,26
+OPSD 500 H20 historical,6,4,34,True,476,24
+OPSD 500 H20 historical,6,5,35,False,520,26
+OPSD 500 H20 historical,6,6,36,False,520,26
+OPSD 500 H20 historical,6,7,37,False,520,26
+OPSD 500 H20 historical,6,8,38,False,520,26
+OPSD 500 H20 historical,6,9,39,False,520,26
+OPSD 500 H20 historical,7,0,30,True,312,16
+OPSD 500 H20 historical,7,1,31,True,515,26
+OPSD 500 H20 historical,7,2,32,True,386,20
+OPSD 500 H20 historical,7,3,33,True,348,18
+OPSD 500 H20 historical,7,4,34,True,327,17
+OPSD 500 H20 historical,7,5,35,True,328,17
+OPSD 500 H20 historical,7,6,36,True,287,15
+OPSD 500 H20 historical,7,7,37,True,387,20
+OPSD 500 H20 historical,7,8,38,True,324,17
+OPSD 500 H20 historical,7,9,39,True,288,15
+OPSD 500 H20 historical,8,0,30,False,520,26
+OPSD 500 H20 historical,8,1,31,False,520,26
+OPSD 500 H20 historical,8,2,32,False,520,26
+OPSD 500 H20 historical,8,3,33,False,520,26
+OPSD 500 H20 historical,8,4,34,False,520,26
+OPSD 500 H20 historical,8,5,35,False,520,26
+OPSD 500 H20 historical,8,6,36,False,520,26
+OPSD 500 H20 historical,8,7,37,False,520,26
+OPSD 500 H20 historical,8,8,38,True,479,24
+OPSD 500 H20 historical,8,9,39,False,520,26
+OPSD 500 H20 historical,9,0,30,True,442,23
+OPSD 500 H20 historical,9,1,31,True,266,14
+OPSD 500 H20 historical,9,2,32,True,310,16
+OPSD 500 H20 historical,9,3,33,True,295,15
+OPSD 500 H20 historical,9,4,34,True,296,15
+OPSD 500 H20 historical,9,5,35,True,319,16
+OPSD 500 H20 historical,9,6,36,True,322,17
+OPSD 500 H20 historical,9,7,37,True,465,24
+OPSD 500 H20 historical,9,8,38,False,520,26
+OPSD 500 H20 historical,9,9,39,True,271,14
+OPSD 500 H20 current,0,0,30,True,424,22
+OPSD 500 H20 current,0,1,31,True,308,16
+OPSD 500 H20 current,0,2,32,True,401,21
+OPSD 500 H20 current,0,3,33,True,288,15
+OPSD 500 H20 current,0,4,34,True,388,20
+OPSD 500 H20 current,0,5,35,True,314,16
+OPSD 500 H20 current,0,6,36,True,330,17
+OPSD 500 H20 current,0,7,37,True,399,20
+OPSD 500 H20 current,0,8,38,True,313,16
+OPSD 500 H20 current,0,9,39,True,328,17
+OPSD 500 H20 current,1,0,30,True,299,15
+OPSD 500 H20 current,1,1,31,True,319,16
+OPSD 500 H20 current,1,2,32,True,281,15
+OPSD 500 H20 current,1,3,33,True,298,15
+OPSD 500 H20 current,1,4,34,False,520,26
+OPSD 500 H20 current,1,5,35,True,310,16
+OPSD 500 H20 current,1,6,36,True,313,16
+OPSD 500 H20 current,1,7,37,True,273,14
+OPSD 500 H20 current,1,8,38,True,273,14
+OPSD 500 H20 current,1,9,39,True,329,17
+OPSD 500 H20 current,2,0,30,False,520,26
+OPSD 500 H20 current,2,1,31,False,520,26
+OPSD 500 H20 current,2,2,32,True,266,14
+OPSD 500 H20 current,2,3,33,True,285,15
+OPSD 500 H20 current,2,4,34,True,285,15
+OPSD 500 H20 current,2,5,35,True,292,15
+OPSD 500 H20 current,2,6,36,True,280,14
+OPSD 500 H20 current,2,7,37,False,520,26
+OPSD 500 H20 current,2,8,38,True,270,14
+OPSD 500 H20 current,2,9,39,True,282,15
+OPSD 500 H20 current,3,0,30,True,239,12
+OPSD 500 H20 current,3,1,31,True,279,14
+OPSD 500 H20 current,3,2,32,True,277,14
+OPSD 500 H20 current,3,3,33,True,266,14
+OPSD 500 H20 current,3,4,34,True,324,17
+OPSD 500 H20 current,3,5,35,True,316,16
+OPSD 500 H20 current,3,6,36,True,265,14
+OPSD 500 H20 current,3,7,37,True,269,14
+OPSD 500 H20 current,3,8,38,True,290,15
+OPSD 500 H20 current,3,9,39,True,261,14
+OPSD 500 H20 current,4,0,30,True,293,15
+OPSD 500 H20 current,4,1,31,False,520,26
+OPSD 500 H20 current,4,2,32,False,520,26
+OPSD 500 H20 current,4,3,33,True,332,17
+OPSD 500 H20 current,4,4,34,True,321,17
+OPSD 500 H20 current,4,5,35,True,272,14
+OPSD 500 H20 current,4,6,36,True,326,17
+OPSD 500 H20 current,4,7,37,False,520,26
+OPSD 500 H20 current,4,8,38,True,350,18
+OPSD 500 H20 current,4,9,39,True,319,16
+OPSD 500 H20 current,5,0,30,True,195,10
+OPSD 500 H20 current,5,1,31,True,211,11
+OPSD 500 H20 current,5,2,32,True,205,11
+OPSD 500 H20 current,5,3,33,False,520,26
+OPSD 500 H20 current,5,4,34,True,237,12
+OPSD 500 H20 current,5,5,35,True,306,16
+OPSD 500 H20 current,5,6,36,True,228,12
+OPSD 500 H20 current,5,7,37,True,201,11
+OPSD 500 H20 current,5,8,38,True,317,16
+OPSD 500 H20 current,5,9,39,True,287,15
+OPSD 500 H20 current,6,0,30,False,520,26
+OPSD 500 H20 current,6,1,31,False,520,26
+OPSD 500 H20 current,6,2,32,False,520,26
+OPSD 500 H20 current,6,3,33,False,520,26
+OPSD 500 H20 current,6,4,34,True,391,20
+OPSD 500 H20 current,6,5,35,False,520,26
+OPSD 500 H20 current,6,6,36,False,520,26
+OPSD 500 H20 current,6,7,37,False,520,26
+OPSD 500 H20 current,6,8,38,False,520,26
+OPSD 500 H20 current,6,9,39,False,520,26
+OPSD 500 H20 current,7,0,30,True,330,17
+OPSD 500 H20 current,7,1,31,True,348,18
+OPSD 500 H20 current,7,2,32,True,304,16
+OPSD 500 H20 current,7,3,33,True,342,18
+OPSD 500 H20 current,7,4,34,True,354,18
+OPSD 500 H20 current,7,5,35,True,337,17
+OPSD 500 H20 current,7,6,36,True,307,16
+OPSD 500 H20 current,7,7,37,True,387,20
+OPSD 500 H20 current,7,8,38,True,308,16
+OPSD 500 H20 current,7,9,39,True,287,15
+OPSD 500 H20 current,8,0,30,False,520,26
+OPSD 500 H20 current,8,1,31,True,451,23
+OPSD 500 H20 current,8,2,32,True,477,24
+OPSD 500 H20 current,8,3,33,False,520,26
+OPSD 500 H20 current,8,4,34,False,520,26
+OPSD 500 H20 current,8,5,35,False,520,26
+OPSD 500 H20 current,8,6,36,False,520,26
+OPSD 500 H20 current,8,7,37,False,520,26
+OPSD 500 H20 current,8,8,38,True,450,23
+OPSD 500 H20 current,8,9,39,False,520,26
+OPSD 500 H20 current,9,0,30,False,520,26
+OPSD 500 H20 current,9,1,31,True,270,14
+OPSD 500 H20 current,9,2,32,True,299,15
+OPSD 500 H20 current,9,3,33,True,281,15
+OPSD 500 H20 current,9,4,34,True,316,16
+OPSD 500 H20 current,9,5,35,True,337,17
+OPSD 500 H20 current,9,6,36,True,339,17
+OPSD 500 H20 current,9,7,37,True,342,18
+OPSD 500 H20 current,9,8,38,True,317,16
+OPSD 500 H20 current,9,9,39,True,267,14
+OPSD 1000 H20 current,0,0,30,True,278,14
+OPSD 1000 H20 current,0,1,31,True,300,15
+OPSD 1000 H20 current,0,2,32,True,296,15
+OPSD 1000 H20 current,0,3,33,True,268,14
+OPSD 1000 H20 current,0,4,34,True,269,14
+OPSD 1000 H20 current,0,5,35,True,309,16
+OPSD 1000 H20 current,0,6,36,True,291,15
+OPSD 1000 H20 current,0,7,37,True,275,14
+OPSD 1000 H20 current,0,8,38,True,344,18
+OPSD 1000 H20 current,0,9,39,True,288,15
+OPSD 1000 H20 current,1,0,30,True,268,14
+OPSD 1000 H20 current,1,1,31,True,271,14
+OPSD 1000 H20 current,1,2,32,True,259,13
+OPSD 1000 H20 current,1,3,33,True,274,14
+OPSD 1000 H20 current,1,4,34,True,314,16
+OPSD 1000 H20 current,1,5,35,True,278,14
+OPSD 1000 H20 current,1,6,36,True,286,15
+OPSD 1000 H20 current,1,7,37,True,268,14
+OPSD 1000 H20 current,1,8,38,True,288,15
+OPSD 1000 H20 current,1,9,39,True,311,16
+OPSD 1000 H20 current,2,0,30,True,267,14
+OPSD 1000 H20 current,2,1,31,True,249,13
+OPSD 1000 H20 current,2,2,32,True,242,13
+OPSD 1000 H20 current,2,3,33,True,247,13
+OPSD 1000 H20 current,2,4,34,True,276,14
+OPSD 1000 H20 current,2,5,35,True,270,14
+OPSD 1000 H20 current,2,6,36,True,254,13
+OPSD 1000 H20 current,2,7,37,True,257,13
+OPSD 1000 H20 current,2,8,38,True,274,14
+OPSD 1000 H20 current,2,9,39,True,284,15
+OPSD 1000 H20 current,3,0,30,True,237,12
+OPSD 1000 H20 current,3,1,31,True,240,12
+OPSD 1000 H20 current,3,2,32,True,227,12
+OPSD 1000 H20 current,3,3,33,True,231,12
+OPSD 1000 H20 current,3,4,34,True,249,13
+OPSD 1000 H20 current,3,5,35,True,245,13
+OPSD 1000 H20 current,3,6,36,True,237,12
+OPSD 1000 H20 current,3,7,37,True,237,12
+OPSD 1000 H20 current,3,8,38,True,234,12
+OPSD 1000 H20 current,3,9,39,True,236,12
+OPSD 1000 H20 current,4,0,30,True,247,13
+OPSD 1000 H20 current,4,1,31,False,520,26
+OPSD 1000 H20 current,4,2,32,True,236,12
+OPSD 1000 H20 current,4,3,33,True,257,13
+OPSD 1000 H20 current,4,4,34,False,520,26
+OPSD 1000 H20 current,4,5,35,True,241,13
+OPSD 1000 H20 current,4,6,36,False,520,26
+OPSD 1000 H20 current,4,7,37,True,260,13
+OPSD 1000 H20 current,4,8,38,True,278,14
+OPSD 1000 H20 current,4,9,39,False,520,26
+OPSD 1000 H20 current,5,0,30,True,194,10
+OPSD 1000 H20 current,5,1,31,True,194,10
+OPSD 1000 H20 current,5,2,32,True,217,11
+OPSD 1000 H20 current,5,3,33,False,520,26
+OPSD 1000 H20 current,5,4,34,True,462,24
+OPSD 1000 H20 current,5,5,35,True,403,21
+OPSD 1000 H20 current,5,6,36,True,189,10
+OPSD 1000 H20 current,5,7,37,True,187,10
+OPSD 1000 H20 current,5,8,38,True,180,9
+OPSD 1000 H20 current,5,9,39,True,292,15
+OPSD 1000 H20 current,6,0,30,True,281,15
+OPSD 1000 H20 current,6,1,31,True,254,13
+OPSD 1000 H20 current,6,2,32,False,520,26
+OPSD 1000 H20 current,6,3,33,True,252,13
+OPSD 1000 H20 current,6,4,34,True,227,12
+OPSD 1000 H20 current,6,5,35,True,243,13
+OPSD 1000 H20 current,6,6,36,False,520,26
+OPSD 1000 H20 current,6,7,37,True,486,25
+OPSD 1000 H20 current,6,8,38,False,520,26
+OPSD 1000 H20 current,6,9,39,True,337,17
+OPSD 1000 H20 current,7,0,30,True,279,14
+OPSD 1000 H20 current,7,1,31,False,520,26
+OPSD 1000 H20 current,7,2,32,True,311,16
+OPSD 1000 H20 current,7,3,33,False,520,26
+OPSD 1000 H20 current,7,4,34,True,295,15
+OPSD 1000 H20 current,7,5,35,True,268,14
+OPSD 1000 H20 current,7,6,36,True,276,14
+OPSD 1000 H20 current,7,7,37,False,520,26
+OPSD 1000 H20 current,7,8,38,True,267,14
+OPSD 1000 H20 current,7,9,39,True,267,14
+OPSD 1000 H20 current,8,0,30,False,520,26
+OPSD 1000 H20 current,8,1,31,True,413,21
+OPSD 1000 H20 current,8,2,32,False,520,26
+OPSD 1000 H20 current,8,3,33,True,455,23
+OPSD 1000 H20 current,8,4,34,True,505,26
+OPSD 1000 H20 current,8,5,35,True,433,22
+OPSD 1000 H20 current,8,6,36,True,425,22
+OPSD 1000 H20 current,8,7,37,False,520,26
+OPSD 1000 H20 current,8,8,38,False,520,26
+OPSD 1000 H20 current,8,9,39,False,520,26
+OPSD 1000 H20 current,9,0,30,False,520,26
+OPSD 1000 H20 current,9,1,31,True,258,13
+OPSD 1000 H20 current,9,2,32,True,283,15
+OPSD 1000 H20 current,9,3,33,True,264,14
+OPSD 1000 H20 current,9,4,34,False,520,26
+OPSD 1000 H20 current,9,5,35,False,520,26
+OPSD 1000 H20 current,9,6,36,True,337,17
+OPSD 1000 H20 current,9,7,37,False,520,26
+OPSD 1000 H20 current,9,8,38,False,520,26
+OPSD 1000 H20 current,9,9,39,False,520,26

@@ -1,0 +1,6 @@
+condition,step,H,P,renderer,total_episodes,successes,success_rate,successful_action_sum,mean_actions_success,mean_policy_calls_success
+Original H5,0,5,50,EGL (archived protocol),100,93,0.93,25964,279.18279569892474,56.215053763440864
+Original H20,0,20,50,EGL (archived protocol),100,49,0.49,18048,368.3265306122449,18.918367346938776
+OPSD 500 H20 historical,500,20,50,EGL (archived protocol),100,72,0.72,22446,311.75,16.083333333333332
+OPSD 500 H20 current,500,20,50,OSMesa,100,75,0.75,23175,309.0,15.933333333333334
+OPSD 1000 H20 current,1000,20,50,OSMesa,100,78,0.78,21981,281.8076923076923,14.525641025641026
