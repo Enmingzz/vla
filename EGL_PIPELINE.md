@@ -50,7 +50,8 @@ The submitter schedules CPU checks, then one H100 for all training and
 evaluation, then a CPU summary. GPU allocation ends as soon as the work finishes;
 its wall-time cap is two hours. Accounts, excluded nodes and the cap can be
 overridden with `EGL_CPU_ACCOUNT`, `EGL_GPU_ACCOUNT`, `EGL_EXCLUDED_NODES` and
-`EGL_TIME_LIMIT`. `provenance/submission.json` records exact jobs and resources.
+`EGL_TIME_LIMIT`. `EGL_CPU_EXCLUDED_NODES` excludes CPU nodes with known storage
+errors. `provenance/submission.json` records exact jobs and resources.
 No GPU computation runs on a login node.
 
 CPU checks cover unit tests, native sampling/loss masks, diagnostic rollback,

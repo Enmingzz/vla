@@ -4,6 +4,24 @@ source "${FREQUENCY_PROJECT:-${SLURM_SUBMIT_DIR:-$PWD}}/scripts/env.sh"
 cd "$FREQUENCY_PROJECT"
 : "${RUN_RESULTS:?Set a fresh EGL training archive}"
 export OPENBLAS_NUM_THREADS=1 LP_NUM_THREADS=1
+# Fail before expensive imports if the compute node cannot read scratch binaries.
+env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$SERVER_VENV/bin/python" - <<'PY'
+import base64, hashlib, importlib.metadata, json, os, socket
+from pathlib import Path
+package=importlib.metadata.distribution('scipy')
+verified=[]
+for entry in package.files:
+    if str(entry).startswith('scipy/special/') and str(entry).endswith('.so'):
+        actual=base64.urlsafe_b64encode(hashlib.sha256(package.locate_file(entry).read_bytes()).digest()).decode().rstrip('=')
+        if entry.hash.mode!='sha256' or entry.hash.value!=actual:
+            raise ValueError('Installed SciPy binary differs from its distribution: '+str(entry))
+        verified.append(str(entry))
+root=Path(os.environ['RUN_RESULTS'])/'provenance'
+root.mkdir(parents=True,exist_ok=True)
+(root/'scratch_binary_check.json').write_text(json.dumps(dict(passed=True,node=socket.gethostname(),
+    scipy_version=package.version,verified_binaries=verified),indent=2)+'\n')
+print('Scratch dependency binary checks passed',flush=True)
+PY
 env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH -u FREQUENCY_CONFIG -u MUJOCO_GL -u PYOPENGL_PLATFORM \
   "$LIBERO_VENV/bin/python" -m pytest -q tests
 env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH JAX_PLATFORMS=cpu \
