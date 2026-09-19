@@ -1,0 +1,5 @@
+{
+  "reason": "Unchanged simulator/client code and pinned OSMesa library; exact serial/parallel check already passed.",
+  "sha256": "644b92d66af2c06b1c24a1d6346f2c1219c38ffd1f8aa7e32075e4f0441c52ce",
+  "source": "results/autoresearch_round3_finish_retry1/provenance/parallel_environment_check.json"
+}

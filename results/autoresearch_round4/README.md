@@ -1,6 +1,6 @@
 # Step 1000 to 1500: another 500 temporal OPSD updates
 
-Status: submitted. CPU preflight **60480558** → GPU training/evaluation **60480559** → CPU analysis **60480560**. No step-1500 result measured yet.
+Status: CPU preflight **60480558 passed**. GPU training/evaluation **60480559** is queued, followed automatically by CPU analysis **60480560**. No step-1500 result measured yet.
 
 The user requested another 500 updates and evaluation. Resume the verified full
 step-1000 checkpoint (FP32 action-expert parameters, EMA teacher, Adam moments and
@@ -80,5 +80,6 @@ sbatch --account=def-btaati --nodes=1 --ntasks=1 --cpus-per-task=1 --mem=4G \
 The first CPU preflight detected test-fixture environment contamination and
 stopped before any GPU allocation. Clearing evaluation overrides in the unit-test
 subprocess fixed it; the failed CPU log and original submission remain archived.
-The replacement suite passed all 59 tests. Native CPU checkpoint restoration and
-state-pool audit must also pass before the GPU dependency is satisfied.
+The replacement CPU job passed all 59 tests, native FP32/EMA/Adam restoration and
+next-update equivalence checks, and the complete state-pool/provenance audit.
+Its GPU dependency is now satisfied.

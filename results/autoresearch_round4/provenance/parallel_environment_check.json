@@ -1,0 +1,29 @@
+{
+  "action_blocks": 12,
+  "exact_observation_hashes_equal": true,
+  "parallel_execute_seconds": [
+    4.145167932030745,
+    4.029727052082308,
+    2.8489893060177565
+  ],
+  "passed": true,
+  "renderer": {
+    "backend": "osmesa",
+    "library_sha256": "bef74da9e93e7e9557fecd7efe35eb77f3eddcd36a6c836b49153d1f4b085bf7",
+    "llvmpipe_threads": "1",
+    "openblas_threads": "1",
+    "pyopengl_platform": "osmesa"
+  },
+  "serial_execute_seconds": [
+    12.892542487941682,
+    12.942363410955295,
+    8.355200859950855
+  ],
+  "serial_to_parallel_speedup": 3.1014573320092547,
+  "simulated_actions": 240,
+  "source_sha256": {
+    "src/frequency_vla/opsd_client.py": "2131c0345c59a6ea0accaf77885b892ae5689febec2f22ef90f2c4aa54dc02f3",
+    "src/frequency_vla/opsd_parallel_env.py": "41372e01998cfa72750ed763b9252d8503e6ee123a3db2bb8ccff9cd92040397"
+  },
+  "task_assignment_equal": true
+}

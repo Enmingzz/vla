@@ -1,0 +1,8 @@
+{
+  "checked_utc": "2026-09-19T04:50:41.338249+00:00",
+  "job_id": "60480559",
+  "queue_status": "PENDING|(Priority)",
+  "cpu_preflight_passed": true,
+  "step_1500_result_available": false,
+  "new_evaluation_episodes_completed": 0
+}
