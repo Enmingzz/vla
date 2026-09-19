@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "node": "fc30555",
+  "scipy_version": "1.15.3",
+  "verified_binaries": [
+    "scipy/special/_comb.cpython-311-x86_64-linux-gnu.so",
+    "scipy/special/_ellip_harm_2.cpython-311-x86_64-linux-gnu.so",
+    "scipy/special/_gufuncs.cpython-311-x86_64-linux-gnu.so",
+    "scipy/special/_specfun.cpython-311-x86_64-linux-gnu.so",
+    "scipy/special/_special_ufuncs.cpython-311-x86_64-linux-gnu.so",
+    "scipy/special/_test_internal.cpython-311-x86_64-linux-gnu.so",
+    "scipy/special/_ufuncs.cpython-311-x86_64-linux-gnu.so",
+    "scipy/special/_ufuncs_cxx.cpython-311-x86_64-linux-gnu.so",
+    "scipy/special/cython_special.cpython-311-x86_64-linux-gnu.so",
+    "scipy/special/libsf_error_state.so"
+  ]
+}

@@ -1,0 +1,58 @@
+................................................................         [100%]
+64 passed in 8.76s
+/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/enmingzz/project/vla/frequency_vla/tests/check_opsd_jax.py", line 19, in <module>
+    from openpi.models.pi0 import Pi0
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/src/openpi/models/pi0.py", line 10, in <module>
+    from openpi.models import model as _model
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/src/openpi/models/model.py", line 20, in <module>
+    from openpi.models_pytorch import pi0_pytorch
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/src/openpi/models_pytorch/pi0_pytorch.py", line 10, in <module>
+    from openpi.models_pytorch.gemma_pytorch import PaliGemmaWithExpertModel
+  File "/scratch/enmingzz/frequency_vla/deps/openpi/src/openpi/models_pytorch/gemma_pytorch.py", line 5, in <module>
+    from transformers import GemmaForCausalLM
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 2154, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 2184, in _get_module
+    raise e
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/utils/import_utils.py", line 2182, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/models/gemma/modeling_gemma.py", line 40, in <module>
+    from ...modeling_utils import ALL_ATTENTION_FUNCTIONS, PreTrainedModel
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/modeling_utils.py", line 73, in <module>
+    from .loss.loss_utils import LOSS_MAPPING
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/loss/loss_utils.py", line 21, in <module>
+    from .loss_d_fine import DFineForObjectDetectionLoss
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/loss/loss_d_fine.py", line 21, in <module>
+    from .loss_for_object_detection import (
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/loss/loss_for_object_detection.py", line 28, in <module>
+    from scipy.optimize import linear_sum_assignment
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/optimize/__init__.py", line 435, in <module>
+    from ._linprog import linprog, linprog_verbose_callback
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/optimize/_linprog.py", line 22, in <module>
+    from ._linprog_ip import _linprog_ip
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/optimize/_linprog_ip.py", line 27, in <module>
+    from ._linprog_util import _postsolve
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/optimize/_linprog_util.py", line 9, in <module>
+    from scipy.optimize._remove_redundancy import (
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/optimize/_remove_redundancy.py", line 9, in <module>
+    from scipy.linalg.interpolative import interp_decomp
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/linalg/interpolative.py", line 368, in <module>
+    import scipy.linalg._decomp_interpolative as _backend
+  File "_decomp_interpolative.pyx", line 116, in init scipy.linalg._decomp_interpolative
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/fft/__init__.py", line 91, in <module>
+    from ._fftlog import fht, ifht, fhtoffset
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/fft/_fftlog.py", line 10, in <module>
+    from ._fftlog_backend import fhtoffset
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/fft/_fftlog_backend.py", line 4, in <module>
+    from ..special import loggamma, poch
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/special/__init__.py", line 817, in <module>
+    from . import _ufuncs
+ImportError: cannot import name '_ufuncs' from partially initialized module 'scipy.special' (most likely due to a circular import) (/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/scipy/special/__init__.py)

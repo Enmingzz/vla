@@ -1,0 +1,5 @@
+60516007|FAILED|144|billing=4000,cpu=4,mem=12G,node=1|1:0|fc30560
+60516007.batch|FAILED|144|cpu=4,mem=12G,node=1|1:0|fc30560
+60516007.extern|COMPLETED|144|billing=4000,cpu=4,mem=12G,node=1|0:0|fc30560
+60516008|CANCELLED|0||0:0|None assigned
+60516009|CANCELLED|0||0:0|None assigned

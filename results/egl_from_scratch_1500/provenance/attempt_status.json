@@ -1,0 +1,14 @@
+{
+  "complete": false,
+  "status": "CPU_PREFLIGHT_FAILED",
+  "cpu_job": "60516007",
+  "gpu_job": "60516008",
+  "summary_job": "60516009",
+  "node": "fc30560",
+  "gpu_seconds": 0,
+  "new_optimizer_updates": 0,
+  "new_evaluation_episodes": 0,
+  "unit_tests_passed": 64,
+  "failure": "SciPy special._ufuncs import during native CPU fixture; cause under investigation",
+  "gpu_and_summary_cancelled_by_dependency": true
+}

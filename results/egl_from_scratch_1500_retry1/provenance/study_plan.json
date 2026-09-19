@@ -1,0 +1,51 @@
+{
+  "analysis_seed": 20260919,
+  "bootstrap_replicates": 10000,
+  "condition_timeout_seconds": 900,
+  "conditions": [
+    {
+      "horizon": 5,
+      "step": 0
+    },
+    {
+      "horizon": 20,
+      "step": 0
+    },
+    {
+      "horizon": 20,
+      "step": 500
+    },
+    {
+      "horizon": 20,
+      "step": 1000
+    },
+    {
+      "horizon": 20,
+      "step": 1500
+    }
+  ],
+  "diagnostic_timeout_seconds": 480,
+  "episodes_per_task": 10,
+  "flow_steps": 10,
+  "initial_state_start": 30,
+  "interpretation": "Fresh official checkpoint, all training and evaluation use EGL; fixed method and predeclared checkpoints; previously inspected test layouts held out from training.",
+  "maximum_concurrent_gpus": 1,
+  "milestones": [
+    500,
+    1000,
+    1500
+  ],
+  "optimizer_updates_added": 1500,
+  "pilot_initial_state_start": 10,
+  "pilot_seed": 17,
+  "pilot_timeout_seconds": 180,
+  "prediction_horizon": 50,
+  "renderer": "egl",
+  "renderer_check_timeout_seconds": 180,
+  "seed": 27,
+  "start_from_official_checkpoint": true,
+  "suite": "libero_10",
+  "training_config": "configs/opsd_egl_1500.yaml",
+  "training_segment_timeout_seconds": 2400,
+  "workers": 4
+}

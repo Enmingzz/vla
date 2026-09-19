@@ -1,0 +1,21 @@
+{
+  "account": "rrg-btaati",
+  "checkpoint_root": "/scratch/enmingzz/frequency_vla/runs/egl_from_scratch_1500",
+  "cpu_preflight_job": "60516007",
+  "cpu_summary_job": "60516009",
+  "cpus": 8,
+  "excluded_nodes": [
+    "fc10501",
+    "fc10511"
+  ],
+  "execution_mode": "official_step0_train_to_1500_all_egl",
+  "gpus": 1,
+  "job_id": "60516008",
+  "launch_script": "scripts/fir_egl_pipeline.sh",
+  "memory_gib": 64,
+  "new_evaluation_episodes": 500,
+  "new_optimizer_updates": 1500,
+  "reused_evaluation_episodes": 0,
+  "submitted_utc": "2026-09-19T16:46:43.299518+00:00",
+  "time_limit": "02:00:00"
+}

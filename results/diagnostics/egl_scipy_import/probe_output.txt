@@ -1,0 +1,7 @@
+fc30560
+Traceback (most recent call last):
+  File "<stdin>", line 8, in <module>
+  File "/scratch/enmingzz/frequency_vla/python/cpython-3.11.13-linux-x86_64-gnu/lib/python3.11/pathlib.py", line 1051, in read_bytes
+    return f.read()
+           ^^^^^^^^
+BrokenPipeError: [Errno 108] Cannot send after transport endpoint shutdown
