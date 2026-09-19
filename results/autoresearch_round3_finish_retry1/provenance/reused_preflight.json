@@ -1,0 +1,8 @@
+{
+  "all_training_evaluation_config_and_runner_sources_unchanged": true,
+  "copied_preflight_sha256": "d8ef95904288bbb113ff0afbc2665930a884c2eed3c506f059e4ab85fff8dc2a",
+  "cpu_preflight_job": "60427465",
+  "passed": true,
+  "reason": "First GPU attempt failed before model loading; all original CPU preflight source checksums still match.",
+  "source_archive": "results/autoresearch_round3_finish"
+}

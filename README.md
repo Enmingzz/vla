@@ -56,9 +56,11 @@ ran, so there is no new success-rate result yet. See the
 The subsequently requested completion resumes step 978 for the remaining **22
 updates**, then compares **step 500 and step 1000 at H=20** on 100 paired
 LIBERO-10 episodes each under the same OSMesa renderer. GPU job **60427489**
-and dependent CPU validation/reporting are submitted; results are not yet
-available. The [completion archive](results/autoresearch_round3_finish/README.md)
-contains the fixed protocol, provenance and reproduction commands.
+failed before model loading with `CUDA_ERROR_NO_DEVICE`, using 3m25s and
+performing zero updates or evaluations. Retry **60469132** excludes that
+node and checks CUDA before model startup; there is no new success-rate
+result yet. See the [retry archive](results/autoresearch_round3_finish_retry1/README.md)
+and the preserved [failed-launch archive](results/autoresearch_round3_finish/README.md).
 
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures

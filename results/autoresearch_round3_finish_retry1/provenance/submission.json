@@ -1,0 +1,19 @@
+{
+  "job_id": "60469132",
+  "submitted_utc": "2026-09-19T02:33:27.600106+00:00",
+  "gpus": 1,
+  "cpus": 12,
+  "memory_gib": 64,
+  "time_limit": "01:15:00",
+  "account": "rrg-btaati_gpu",
+  "execution_mode": "finish_22_then_paired_evaluation",
+  "excluded_nodes": [
+    "fc10501"
+  ],
+  "parent_checkpoint": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3/step_978",
+  "baseline_checkpoint": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round2_attempt2/step_500",
+  "checkpoint_root": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3_finish_retry1",
+  "prior_failed_gpu_job": "60427489",
+  "prior_failed_gpu_seconds": 205,
+  "launch_script": "scripts/fir_gpu_checked_study.sh"
+}

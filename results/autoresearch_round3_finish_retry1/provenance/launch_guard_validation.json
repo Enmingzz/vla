@@ -1,0 +1,13 @@
+{
+  "bash_syntax_passed": true,
+  "excluded_node": "fc10501",
+  "gpu_probe_run_on_login_node": false,
+  "passed": true,
+  "reason": "CUDA initialization failed on this node in attempt 60427489, with nvidia-smi ERR fields. The underlying device/driver/allocation cause is not yet established.",
+  "sources": {
+    "scripts/check_cuda_allocation.py": "03e7535d0261733ba7afa246ff6219d3067e7647027e1b27f488ae7cdd9c8670",
+    "scripts/fir_gpu_checked_study.sh": "e4bb94f79d3913c5cf88ff9719485117078f645e5fa341cc06bb5e4be5c7bee1",
+    "tests/test_cuda_allocation.py": "165ec795c7a5763bd7f9967493a9e13c8bcb8209273190c3d10f36bec426f1ce"
+  },
+  "unit_tests_passed": 6
+}

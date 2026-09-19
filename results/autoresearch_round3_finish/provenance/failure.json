@@ -1,0 +1,18 @@
+{
+  "allocation_released": true,
+  "dependent_analysis_job": "60427494",
+  "dependent_analysis_state": "CANCELLED",
+  "error": "CUDA_ERROR_NO_DEVICE at jax.devices() before model loading; nvidia-smi shows ERR fields.",
+  "evaluation_episodes": 0,
+  "gpu_seconds": 205,
+  "job_id": "60427489",
+  "maximum_concurrent_gpus": 1,
+  "node": "fc10501",
+  "optimizer_updates": 0,
+  "parent_checkpoint_untouched": true,
+  "parent_step": 978,
+  "retry_archive": "results/autoresearch_round3_finish_retry1",
+  "state": "FAILED",
+  "training_started": false,
+  "underlying_cause": "Device/driver/allocation issue unresolved; this is not evidence of a model or training failure."
+}

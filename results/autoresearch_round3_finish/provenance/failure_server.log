@@ -1,0 +1,43 @@
+/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+2026-09-18 15:17:42,424 INFO PyTorch version 2.7.1 available.
+2026-09-18 15:17:42,427 INFO Polars version 1.30.0 available.
+2026-09-18 15:17:42,428 INFO JAX version 0.5.3 available.
+2026-09-18 15:17:51.548313: E external/xla/xla/stream_executor/cuda/cuda_platform.cc:51] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+Traceback (most recent call last):
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/jax/_src/xla_bridge.py", line 915, in backends
+    backend = _init_backend(platform)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/jax/_src/xla_bridge.py", line 1001, in _init_backend
+    backend = registration.factory()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/jax/_src/xla_bridge.py", line 693, in factory
+    return xla_client.make_c_api_client(plugin_name, updated_options, None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/jaxlib/xla_client.py", line 207, in make_c_api_client
+    return _xla.get_c_api_client(plugin_name, options, distributed_client)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+jaxlib.xla_extension.XlaRuntimeError: FAILED_PRECONDITION: No visible GPU devices.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/enmingzz/project/vla/frequency_vla/src/frequency_vla/server.py", line 178, in <module>
+    main()
+  File "/home/enmingzz/project/vla/frequency_vla/src/frequency_vla/server.py", line 76, in main
+    if not any(d.platform == "gpu" for d in jax.devices()):
+                                            ^^^^^^^^^^^^^
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/jax/_src/xla_bridge.py", line 1115, in devices
+    return get_backend(backend).devices()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/jax/_src/xla_bridge.py", line 1049, in get_backend
+    return _get_backend_uncached(platform)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/jax/_src/xla_bridge.py", line 1028, in _get_backend_uncached
+    bs = backends()
+         ^^^^^^^^^^
+  File "/scratch/enmingzz/frequency_vla/venvs/server/lib/python3.11/site-packages/jax/_src/xla_bridge.py", line 931, in backends
+    raise RuntimeError(err_msg)
+RuntimeError: Unable to initialize backend 'cuda': FAILED_PRECONDITION: No visible GPU devices. (you may need to uninstall the failing plugin package, or set JAX_PLATFORMS=cpu to skip this backend.)
