@@ -1,0 +1,27 @@
+{
+  "adam_update_counters": [
+    1000
+  ],
+  "config_changes": {
+    "checkpoint_steps": {
+      "after": [
+        1000,
+        1500
+      ],
+      "before": [
+        500,
+        1000
+      ]
+    },
+    "optimizer_steps": {
+      "after": 1500,
+      "before": 1000
+    }
+  },
+  "ema_and_optimizer_restored": true,
+  "fp32_master_restored": true,
+  "frozen_backbone_equal": true,
+  "manifest_sha256": "1289e0ee260fb908acac32a2595768929537762ff27fc35a1fd1ad6b9ed35f60",
+  "path": "/scratch/enmingzz/frequency_vla/runs/autoresearch_round3_finish_retry1/step_1000",
+  "step": 1000
+}

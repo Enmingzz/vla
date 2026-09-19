@@ -66,11 +66,16 @@ remain archived. See the [new findings](results/autoresearch_round3_finish_retry
 [comparison figure](results/autoresearch_round3_finish_retry1/figures/continuation_comparison.png)
 and [completed archive](results/autoresearch_round3_finish_retry1/README.md).
 
-A further **1000→1500** continuation is submitted, with no result yet. It keeps
-P=50, student H=20, teacher H=5 and the training method unchanged, reuses the
-verified 100-episode OSMesa step-1000 baseline, and adds only 100 step-1500
-evaluation episodes. CPU preflight, one-H100 training/evaluation and CPU reporting
-are linked automatically. See the [round-four run](results/autoresearch_round4/README.md).
+The **1000→1500** continuation is complete: at P=50, H=20, success increased
+from **78% to 90%** on 100 paired LIBERO-10 episodes (**+12 pp**, paired 95% CI
+**+4 to +20 pp**, exact McNemar **p=0.01690**). There were 17 recoveries and
+5 regressions. Mean actions on successful episodes remained **281.81** at both
+checkpoints. All paired initial-state, first-observation and evaluator checks
+passed. The step-1000 reference was reused; one H100 completed the new training
+and 100 new evaluations in **1h23m24s**, then released. This is improvement on
+previously inspected layouts held out from training, not a new blind or transfer
+result. See the [round-four findings](results/autoresearch_round4/FINDINGS.md)
+and [run archive](results/autoresearch_round4/README.md).
 
 **Protocol constraint discovered before implementation:** at pinned OpenPI commit
 `215abfb217dbac7d5f1273282331b9b1866c0479`, `pi05_libero` explicitly configures

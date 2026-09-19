@@ -1,0 +1,25 @@
+{
+  "all_checkpoint_file_checksums_verified": true,
+  "artifacts": {
+    "FINDINGS.md": "e5c0b118f60c5857a6853672c2394cc3affee94fa81256a9e0df9c9817a673c4",
+    "aggregated/comparisons.csv": "c0f480625862a5699e08475ef9b7fc1ff08e16c3e05d6a248e1266cc2bc0c8ff",
+    "aggregated/conditions.csv": "b6c5346f4606d2569112f422a15f233444870bf51ce0800fa0b34d98f0dfd891",
+    "aggregated/episodes.csv": "a8a374fc951021b072dffc2695bdabc3ab33b79836744bec3feca94002e236a7",
+    "aggregated/per_task.csv": "0efc1f68c0903890061aef587cc1f0b7fefa14aa3f8e1f058262c2090c5acd15",
+    "aggregated/validation.json": "1d28b94f9df2016a298705afb706eec9dc6c52df238fb236043ff3bec29411ee",
+    "figures/continuation_comparison.png": "94bb84c79955fa6102c68b0643f112bf4e3d2e13b17c106f1a1b4496c179f304",
+    "figures/training_loss.png": "72a7a539961b384645bc177e81c4af4bec4665a8cd2bb78af4440c53e106ba7c",
+    "rollouts.jsonl": "43ee36b3ef1e5263bc305e9d1f5c4a19686d96d79250f6d36ec0b9b6c373d709",
+    "training.jsonl": "1aef8d0bc69d9a0a7509098e6f4972c8c76612109007b1746562891ca0296530"
+  },
+  "checkpoint_manifest_sha256": "cba2d5ae9694d9acccf6001f87147fc3c30dce7124d4884351a931c9faedbf8d",
+  "complete": true,
+  "gpu_allocation_released": true,
+  "native_reload_max_abs_difference": 0,
+  "new_evaluation_episodes": 100,
+  "new_optimizer_updates": 500,
+  "paired_evaluation_episodes": 200,
+  "reused_evaluation_episodes": 100,
+  "updates_in_final_allocation": 500,
+  "validated_videos": 200
+}

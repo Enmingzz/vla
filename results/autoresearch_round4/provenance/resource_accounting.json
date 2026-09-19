@@ -1,0 +1,10 @@
+{
+  "alloc_tres": "billing=12200,cpu=12,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1",
+  "allocation_released": true,
+  "gpu_hours": 1.39,
+  "gpu_seconds": 5004,
+  "job_id": "60480559",
+  "maximum_concurrent_gpus": 1,
+  "node": "fc10517",
+  "state": "COMPLETED"
+}

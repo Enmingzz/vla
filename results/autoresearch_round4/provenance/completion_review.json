@@ -1,0 +1,20 @@
+{
+  "checked_utc": "2026-09-19T16:21:18.049298+00:00",
+  "complete": true,
+  "job_id": "60480559",
+  "cpu_summary_job": "60480560",
+  "all_report_artifact_hashes_match": true,
+  "all_100_pairs_match": true,
+  "independently_recomputed": {
+    "before_successes": 78,
+    "after_successes": 90,
+    "episodes_per_condition": 100,
+    "recovered_episodes": 17,
+    "regressed_episodes": 5,
+    "mcnemar_exact_p": 0.01690053939819336,
+    "before_successful_actions_total": 21981,
+    "after_successful_actions_total": 25363
+  },
+  "comparison_figure_visually_checked": true,
+  "gpu_allocation_released": true
+}

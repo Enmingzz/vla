@@ -1,0 +1,60 @@
+{
+  "all_initial_states_match_audit": true,
+  "cached_reference": {
+    "archive": "results/autoresearch_round3_finish_retry1",
+    "inventory_sha256": "41ac95c70f9d9aa82a6ccb820b82bdebd6297e5e1e8c6114d3d3a5c67205916a",
+    "step": 1000
+  },
+  "complete": true,
+  "conditions": 2,
+  "evaluation_episodes": 200,
+  "final_step": 1500,
+  "first_step": 1000,
+  "initial_state_indices_previously_evaluated": true,
+  "new_evaluation_episodes": 100,
+  "new_training_action_blocks": 2000,
+  "new_training_distinct_task_layouts": 100,
+  "new_training_executed_actions": 39075,
+  "new_training_layout_indices": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "optimizer_updates_added": 500,
+  "plan_sha256": "21e2c44acb4dfbaa917760ec8bbe59c1e642d8daea6d2b2eaf4579b203f5027d",
+  "primary": {
+    "after_mean_steps_on_both_success": 276.4657534246575,
+    "before_mean_steps_on_both_success": 277.6164383561644,
+    "both_success_episodes": 73,
+    "ci95_high": 0.2,
+    "ci95_low": 0.04,
+    "comparison": "step1500_minus_step1000_H20",
+    "episodes": 100,
+    "left_step": 1500,
+    "left_success_rate": 0.9,
+    "p_exact": 0.01690053939819336,
+    "recovered_episodes": 17,
+    "regressed_episodes": 5,
+    "right_step": 1000,
+    "right_success_rate": 0.78,
+    "success_change": 0.12
+  },
+  "prior_continuation_archives": [],
+  "renderer": "osmesa",
+  "resumed_at_step": 1000,
+  "reused_evaluation_episodes": 100,
+  "server_instances": [
+    "84e12350-9834-4dad-ac55-77d23c24616d",
+    "fe16b2a4-4636-4654-8a85-61df51f9c656"
+  ],
+  "single_server_instance": null,
+  "training_evaluation_disjoint": true,
+  "updates_in_final_allocation": 500
+}

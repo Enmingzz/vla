@@ -1,6 +1,26 @@
 # Step 1000 to 1500: another 500 temporal OPSD updates
 
-Status: CPU preflight **60480558 passed**. GPU training/evaluation **60480559** is queued, followed automatically by CPU analysis **60480560**. No step-1500 result measured yet.
+Status: **completed and verified**. GPU job **60480559** reached step 1500 and
+completed all 100 new evaluations; CPU report job **60480560** passed. One H100
+was allocated for **1h23m24s** and has been released. The 500-update training
+stage took 49m28s; the new 100-episode evaluation took 25m15s, with the remaining
+time spent loading, checking, compiling and saving.
+
+At P=50, H=20, success rose from **78/100 at step 1000 to 90/100 at step 1500**:
+**+12 percentage points**, paired 95% within-task bootstrap CI **+4 to +20 pp**,
+exact McNemar **p=0.01690**, with 17 recoveries and 5 regressions. All 100
+initial-state/first-observation/RNG/evaluator pairs match. The mean actions on
+successful episodes stayed at 281.81 (rounded) for both checkpoints. Among the
+73 episodes both solve, mean actions were 277.62 and 276.47 respectively.
+These are previously inspected layouts excluded from training, so the result
+supports improvement on this evaluation set without establishing broader transfer.
+
+See [FINDINGS.md](FINDINGS.md), [condition summaries](aggregated/conditions.csv),
+[paired comparison](aggregated/comparisons.csv), [per-task results](aggregated/per_task.csv),
+and [the figure](figures/continuation_comparison.png). All 200 compared episode
+videos and all exported checkpoint file checksums passed verification. Only the
+100 step-1500 episodes consumed GPU time in this allocation; the 100 reference
+episodes were reused with pinned checksums.
 
 The user requested another 500 updates and evaluation. Resume the verified full
 step-1000 checkpoint (FP32 action-expert parameters, EMA teacher, Adam moments and
