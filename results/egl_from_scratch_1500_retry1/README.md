@@ -11,7 +11,7 @@ optimizer/EMA continuation and the training/evaluation initial-state audit
 passed. GPU runtime rendering checks still run inside the dependent GPU job.
 
 - CPU checks: `60516311`.
-- One H100, 8 CPU cores, 64 GiB RAM, two-hour cap: `60516312`.
+- One H100, 8 CPU cores, 64 GiB RAM, two-hour cap: `60516312`, account `def-btaati_gpu`.
 - CPU report: `60516313`.
 
 The [fixed protocol](../../EGL_PIPELINE.md) trains 1500 updates and evaluates
@@ -33,6 +33,7 @@ Reproduction after the documented setup, using new paths:
 
 ```bash
 source scripts/env.sh
+export EGL_GPU_ACCOUNT=def-btaati
 export RUN_RESULTS="$PWD/results/new_egl_run"
 export OPSD_CHECKPOINT_ROOT="$FREQUENCY_WORK/runs/new_egl_run"
 bash scripts/submit_egl_pipeline.sh
@@ -43,3 +44,7 @@ actions, policy calls and wall time, including successful-episode averages.
 All 500 videos and saved checkpoint hashes are validated on CPU after the GPU
 allocation is released. Paired comparisons include confidence intervals and
 Holm-adjusted exact McNemar tests.
+
+The pending GPU job was changed in place from `rrg-btaati_gpu` to
+`def-btaati_gpu` at the user's request on 2026-09-19. Its job ID and dependent
+CPU summary remain the same; see [the account-change record](provenance/account_change.json).

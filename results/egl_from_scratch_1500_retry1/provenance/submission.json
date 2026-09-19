@@ -1,5 +1,6 @@
 {
-  "account": "rrg-btaati",
+  "account": "def-btaati_gpu",
+  "account_change_record": "provenance/account_change.json",
   "checkpoint_root": "/scratch/enmingzz/frequency_vla/runs/egl_from_scratch_1500_retry1",
   "cpu_preflight_job": "60516311",
   "cpu_summary_job": "60516313",
@@ -18,6 +19,7 @@
   "memory_gib": 64,
   "new_evaluation_episodes": 500,
   "new_optimizer_updates": 1500,
+  "original_submission_account": "rrg-btaati",
   "reused_evaluation_episodes": 0,
   "submitted_utc": "2026-09-19T16:51:59.503180+00:00",
   "time_limit": "02:00:00"

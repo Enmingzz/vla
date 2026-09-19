@@ -1,0 +1,13 @@
+{
+  "account": "def-btaati_gpu",
+  "changed_in_place": true,
+  "command": "scontrol update JobId=60516312 Account=def-btaati_gpu",
+  "job_id": "60516312",
+  "previous_account": "rrg-btaati_gpu",
+  "priority_after": 1368579,
+  "priority_before": 1311364,
+  "recorded_utc": "2026-09-19T17:00:52.752649+00:00",
+  "summary_dependency_verified": true,
+  "summary_job_id": "60516313",
+  "user_requested": true
+}

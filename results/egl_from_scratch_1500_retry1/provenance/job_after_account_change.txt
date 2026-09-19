@@ -1,0 +1,30 @@
+JobId=60516312 JobName=egl-train-eval
+   UserId=enmingzz(3158914) GroupId=enmingzz(3158914) MCS_label=N/A
+   Priority=1368579 Nice=0 Account=def-btaati_gpu QOS=normal
+   JobState=PENDING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:00 TimeLimit=02:00:00 TimeMin=N/A
+   SubmitTime=2026-09-19T09:51:59 EligibleTime=2026-09-19T09:54:47
+   AccrueTime=2026-09-19T09:54:47
+   StartTime=Unknown EndTime=Unknown Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-19T10:00:01 Scheduler=Main
+   Partition=gpubase_bygpu_b1,gpubackfill AllocNode:Sid=login1:957537
+   ReqNodeList=(null) ExcNodeList=fc[10501,10511]
+   NodeList=
+   NumNodes=1-1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=8,mem=64G,node=1,billing=12200,gres/gpu=1,gres/gpu:h100=1
+   AllocTRES=(null)
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=NO Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/home/enmingzz/project/vla/frequency_vla/scripts/fir_egl_pipeline.sh
+   SubmitLine=sbatch --parsable --account=rrg-btaati --job-name=egl-train-eval --dependency=afterok:60516311 --kill-on-invalid-dep=yes --nodes=1 --ntasks=1 --gpus-per-node=h100:1 --cpus-per-task=8 --mem=64G --exclude=fc10501,fc10511 --time=02:00:00 --output=/home/enmingzz/project/vla/frequency_vla/results/egl_from_scratch_1500_retry1/logs/gpu-%j.log scripts/fir_egl_pipeline.sh
+   WorkDir=/home/enmingzz/project/vla/frequency_vla
+   StdErr=
+   StdIn=/dev/null
+   StdOut=/home/enmingzz/project/vla/frequency_vla/results/egl_from_scratch_1500_retry1/logs/gpu-60516312.log
+   KillOnInvalidDependent=Yes
+   TresPerNode=gres/gpu:h100:1
+   TresPerTask=cpu=8
+
