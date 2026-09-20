@@ -25,6 +25,12 @@ One H100 completed both conditions in **20m43s** and was released. See the
 [retention findings](results/egl_step1500_h5_retention/FINDINGS.md) and
 [raw-data archive](results/egl_step1500_h5_retention/README.md).
 
+The requested [extension to 500 episodes per model](results/egl_step1500_h5_500/README.md)
+reuses those 100 episodes per checkpoint and adds only 400 per checkpoint.
+Its primary comparison excludes the 100 training-layout episodes and reports
+400 held-out pairs; the full 500 and training-layout subsets are also reported.
+The extension has no final success rate until its completion checks pass.
+
 The initial evaluation phase uses the official Physical Intelligence OpenPI
 checkpoint and its existing LIBERO action-execution loop, without training,
 attention-rule changes, or action repetition. The default protocol preserves the

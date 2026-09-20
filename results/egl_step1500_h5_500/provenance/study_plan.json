@@ -1,0 +1,39 @@
+{
+  "analysis_seed": 20260920,
+  "bootstrap_replicates": 10000,
+  "cached_episodes": 200,
+  "cached_initial_state_start": 30,
+  "checkpoint": {
+    "manifest_sha256": "92c8279d8a3a27737e2d1d8d520f61fce680baeec297c8cd427a0f518e5d3bf5",
+    "path": "/scratch/enmingzz/frequency_vla/runs/egl_from_scratch_1500_retry1/step_1500"
+  },
+  "condition_timeout_seconds": 1200,
+  "episodes_per_block_per_task": 10,
+  "flow_steps": 10,
+  "horizon": 5,
+  "new_episodes": 800,
+  "new_initial_state_starts": [
+    0,
+    10,
+    20,
+    40
+  ],
+  "optimizer_updates_added": 0,
+  "original_git_commit": "18d9a952dd83d806ebcc4ebb9a608829e347f6d2",
+  "prediction_horizon": 50,
+  "primary_subset": "heldout_400",
+  "reference_results": "/home/enmingzz/project/vla/frequency_vla/results/egl_step1500_h5_retention",
+  "renderer": "egl",
+  "seed": 27,
+  "steps": [
+    0,
+    1500
+  ],
+  "suite": "libero_10",
+  "total_episodes_per_condition": 500,
+  "training_initial_state_range": [
+    10,
+    20
+  ],
+  "workers": 4
+}
