@@ -1,0 +1,36 @@
+{
+  "changed_records_per_field": {
+    "controlled_environment_steps": 0,
+    "environment_steps": 0,
+    "episode_rng_seed": 0,
+    "evaluation_fingerprint": 0,
+    "first_observation_sha256": 0,
+    "initial_state_index": 0,
+    "initial_state_sha256": 0,
+    "policy_call_control_steps": 0,
+    "policy_calls": 0,
+    "prediction_horizon": 0,
+    "replan_steps": 0,
+    "success": 0,
+    "task_description": 0
+  },
+  "current_successes": 88,
+  "episodes": 100,
+  "historical_successes": 88,
+  "interpretation": "The cached original H=5 baseline yields identical success and action-count comparisons for this follow-up; reuse it for matching-protocol follow-ups unless evidence requires a new control.",
+  "matched_fields": [
+    "success",
+    "controlled_environment_steps",
+    "environment_steps",
+    "policy_calls",
+    "policy_call_control_steps",
+    "initial_state_index",
+    "initial_state_sha256",
+    "first_observation_sha256",
+    "episode_rng_seed",
+    "evaluation_fingerprint",
+    "prediction_horizon",
+    "replan_steps",
+    "task_description"
+  ]
+}

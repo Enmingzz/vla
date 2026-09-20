@@ -1,5 +1,18 @@
 # Step-1500 H=5 retention check
 
+Completed job **60558779** on one H100 under `def-btaati_gpu` in **20m43s**;
+the allocation is released. Original H=5 achieved **88/100**, and the step-1500
+student at H=5 achieved **86/100**. The paired difference is **−2 pp**, 95% CI
+**[−10, +6] pp**, exact McNemar **p=0.814529**. This small evaluation does not
+establish a clear degradation or prove equivalence. See [FINDINGS.md](FINDINGS.md).
+
+The original-model repeat took **541.89 seconds**. All 100 success outcomes,
+action counts, call schedules, initial states, first observations and RNG seeds
+matched the historical reference exactly. The cached original H=5 data therefore
+give the same success comparison here. Prefer reusing this verified reference for
+future follow-ups with matching protocols unless evidence requires another control.
+The comparison is recorded in `provenance/historical_reproduction_check.json`.
+
 Evaluation-only follow-up to `../egl_from_scratch_1500_retry1`: compare the original
 checkpoint and that run's student after 1500 updates, both at P=50 and H=5.
 Both are freshly measured on one H100 and one continuous native sampler/server.
@@ -47,5 +60,5 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
 ```
 
 Completed measurements appear in `FINDINGS.md`, `aggregated/`, and `evaluations/`.
-Until `provenance/study_complete.json` and `aggregated/validation.json` exist and
-pass validation, this archive must not be treated as a completed result.
+`provenance/final_checks.json` records the completed allocation, 200 episodes and
+video files, exact historical baseline reproduction, and report checksums.

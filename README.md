@@ -15,6 +15,16 @@ released. See the [full table and paired statistics](results/egl_from_scratch_15
 and [completed archive](results/egl_from_scratch_1500_retry1/README.md).
 The historical experiments below remain separate from this fresh all-EGL run.
 
+The requested **step-1500 H=5 retention check** is also complete: at P=50,
+original H=5 scored **88/100**, and the trained student at H=5 scored **86/100**.
+The paired change is **−2 pp**, 95% CI **[−10, +6] pp**, exact p=0.815; this
+does not establish clear degradation or statistical equivalence. The extra
+original-model repeat matched all 100 historical success outcomes and action
+counts exactly, so reusing the cached reference yields the same success comparison.
+One H100 completed both conditions in **20m43s** and was released. See the
+[retention findings](results/egl_step1500_h5_retention/FINDINGS.md) and
+[raw-data archive](results/egl_step1500_h5_retention/README.md).
+
 The initial evaluation phase uses the official Physical Intelligence OpenPI
 checkpoint and its existing LIBERO action-execution loop, without training,
 attention-rule changes, or action repetition. The default protocol preserves the

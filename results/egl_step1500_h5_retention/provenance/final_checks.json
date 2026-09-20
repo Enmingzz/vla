@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "FINDINGS.md": "dd3c2c3b6ab2084fe3d5d15d58a4aa5f50a644a50d78a56e71d2d1ef79736256",
+    "aggregated/comparison.csv": "d236d9a5a71ff3ff09b7d6443aa546ab1df30199631b8ec91b3bb3446a15df17",
+    "aggregated/conditions.csv": "0288578fffb76c771b343ffd1304bca5b2d2f0dad55c631270cfa0c46b2e8f8f",
+    "aggregated/episodes.csv": "d6b957da70ad7f284b37c3695b2535d3dcfa09d2ad5ada3e7fa6af24d606ba79",
+    "aggregated/historical_baseline_repeat.csv": "1ef96bff3729df8308822a0cd789710efee48ac3c8384e869a7ed69ca54b9ae1",
+    "aggregated/per_task.csv": "fd0123dc37f75b838f5f2ee87ba66d337f102f5ed54e018f4e6bae6af3844704",
+    "aggregated/validation.json": "abec0e628644d432a87c685f3e4e6866162a08eb89d546892aae9cf4be4a31a1",
+    "provenance/historical_reproduction_check.json": "97188bc631254ccfd020a96ba9725ef3685eb77c15450ace3cf8b1621eeeeddb",
+    "provenance/study_plan.json": "cb935aef4bd6c72d9dfb4d537ace7d49761be9fab2a93b98e9dec27e93b3e6c9"
+  },
+  "complete": true,
+  "elapsed_seconds": 1243,
+  "formal_episodes": 200,
+  "gpu_allocation_released": true,
+  "job_id": "60558779",
+  "new_optimizer_updates": 0,
+  "original_H5_reproduced_exact_success_and_action_counts": true,
+  "video_files_present": 200
+}

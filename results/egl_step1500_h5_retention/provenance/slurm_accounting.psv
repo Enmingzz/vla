@@ -1,0 +1,3 @@
+60558779|COMPLETED|def-btaati_gpu|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|1243|2026-09-19T19:59:21|2026-09-19T20:20:04|0:0|fc10207|
+60558779.batch|COMPLETED|def-btaati_gpu|cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|1243|2026-09-19T19:59:21|2026-09-19T20:20:04|0:0|fc10207|31232352K
+60558779.extern|COMPLETED|def-btaati_gpu|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1|1243|2026-09-19T19:59:21|2026-09-19T20:20:04|0:0|fc10207|

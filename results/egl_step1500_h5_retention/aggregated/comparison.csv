@@ -1,0 +1,2 @@
+episodes,left_success_rate,right_success_rate,success_change,ci95_low,ci95_high,recovered_episodes,regressed_episodes,p_exact
+100,0.86,0.88,-0.02,-0.1,0.06,8,10,0.8145294189453125

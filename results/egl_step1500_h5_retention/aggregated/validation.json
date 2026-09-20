@@ -1,0 +1,33 @@
+{
+  "checkpoint_manifest_sha256": "92c8279d8a3a27737e2d1d8d520f61fce680baeec297c8cd427a0f518e5d3bf5",
+  "complete": true,
+  "formal_episodes": 200,
+  "historical_baseline_repeat": {
+    "ci95_high": 0.0,
+    "ci95_low": 0.0,
+    "episodes": 100,
+    "left_success_rate": 0.88,
+    "p_exact": 1.0,
+    "recovered_episodes": 0,
+    "regressed_episodes": 0,
+    "right_success_rate": 0.88,
+    "success_change": 0.0
+  },
+  "optimizer_updates_added": 0,
+  "paired_states_observations_rng_evaluator": true,
+  "primary": {
+    "ci95_high": 0.06,
+    "ci95_low": -0.1,
+    "episodes": 100,
+    "left_success_rate": 0.86,
+    "p_exact": 0.8145294189453125,
+    "recovered_episodes": 8,
+    "regressed_episodes": 10,
+    "right_success_rate": 0.88,
+    "success_change": -0.02
+  },
+  "renderer": "egl",
+  "single_server_instance": "28b12871-8bc0-47cd-86f3-51e8d33433b6",
+  "video_files_present": 200,
+  "workers": 4
+}

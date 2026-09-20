@@ -1,0 +1,14 @@
+{
+  "frozen_backbone_equal": true,
+  "inference_parameter_checksums_verified": true,
+  "native_sampler": "unchanged Pi0.sample_actions with dynamic snapshot parameters",
+  "normalization_assets_equal": true,
+  "original_checkpoint": "gs://openpi-assets/checkpoints/pi05_libero",
+  "source_sha256": "fc930f1cdf1c10739c518d6acf3849ace7fefc1e476b249e6ee2c8be9c7b79dd",
+  "trained_checkpoint": {
+    "manifest_sha256": "92c8279d8a3a27737e2d1d8d520f61fce680baeec297c8cd427a0f518e5d3bf5",
+    "path": "/scratch/enmingzz/frequency_vla/runs/egl_from_scratch_1500_retry1/step_1500"
+  },
+  "trained_step": 1500,
+  "training_operations_available": false
+}
