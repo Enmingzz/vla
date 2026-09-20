@@ -1,5 +1,39 @@
 # H=5 retention: 500 episodes per model (retry 1)
 
+**Completed:** job 60564883 finished normally in **1h11m08s** on one H100;
+the allocation is released. All 800 new episodes plus 200 reused episodes passed
+the paired-state, first-observation, RNG, inference-setting, evaluator-setting,
+coverage, policy-call, and video-presence checks. No training was performed.
+
+| Model | All 500 episodes | 400 episodes held out from added OPSD |
+|---|---:|---:|
+| Original | 444/500 (88.8%) | 356/400 (89.00%) |
+| OPSD step 1500 | 429/500 (85.8%) | 345/400 (86.25%) |
+
+The primary held-out change is **−2.75 pp**, paired 95% CI **[−6.25, +1.00] pp**,
+exact McNemar **p=0.18485** (23 recoveries, 34 regressions). The full-500
+secondary change is **−3.00 pp**, CI **[−6.40, +0.20] pp**, **p=0.10064**
+(29 recoveries, 44 regressions). The point estimates decrease at H=5, but neither
+contrast establishes a statistically significant decrease. These data also do
+not establish equivalence or absence of degradation.
+
+On the held-out subset, the largest task-level net decrease is task 8, putting
+both moka pots on the stove: 16/40 → 12/40. Tasks 0 and 5 each lose three
+successes; task 3 gains two and task 2 gains one. These task-level comparisons
+are exploratory. The [full per-task CSV](aggregated/per_task.csv) includes all
+tasks and both training-layout and held-out partitions.
+
+Mean time per episode over all 500 is 14.38s → 14.45s; among each model's
+successful episodes it is 13.62s → 13.31s. These are four-worker shared-server
+wall times, and conditioning on each model's successes changes which episodes
+enter the latter means. They do not establish an inference speedup.
+
+Including the preceding cancelled 12m53s attempt, this extension used **1h24m01s**
+of single-H100 allocation time. The failed initialization produced no episode
+outcomes. Complete [findings](FINDINGS.md), [conditions](aggregated/conditions.csv),
+[paired comparisons](aggregated/comparisons.csv), and
+[1,000 joined episode records](aggregated/episodes.csv) are available below.
+
 Retry after job 60563925 stalled during EGL reset with zero completed episodes. The scientific plan is unchanged. This launch performs a bounded EGL rendering preflight before loading the model and stops if evaluation produces no completed episode for 180 seconds.
 
 Compare Original and the completed all-EGL OPSD step-1500 student at P=50, H=5,
@@ -86,5 +120,6 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
   -m frequency_vla.h5_extension analyze --results-dir "$RUN_RESULTS"
 ```
 
-Until `provenance/study_complete.json` and `aggregated/validation.json` pass their
-checks, this archive contains an incomplete extension and has no final success rate.
+`provenance/study_complete.json` and `aggregated/validation.json` passed their
+checks. `provenance/final_checks.json` records the completed allocation and pins
+the result artifacts and raw records by SHA-256.

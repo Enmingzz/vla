@@ -1,0 +1,4 @@
+subset,primary,episodes,left_success_rate,right_success_rate,success_change,ci95_low,ci95_high,recovered_episodes,regressed_episodes,p_exact
+heldout_400,True,400,0.8625,0.89,-0.0275,-0.0625,0.01,23,34,0.18485048241641847
+all_500,False,500,0.858,0.888,-0.03,-0.064,0.002,29,44,0.1006436775202357
+training_layouts_100,False,100,0.84,0.88,-0.04,-0.12,0.03,6,10,0.454498291015625

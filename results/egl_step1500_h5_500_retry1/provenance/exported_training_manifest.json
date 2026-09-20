@@ -1,0 +1,89 @@
+{
+  "base_checkpoint": "gs://openpi-assets/checkpoints/pi05_libero",
+  "base_object_manifest_sha256": "434da05c6b5ac51c28222ca1bd9b77b77fa733a7b16955cbe98ac09786845dcf",
+  "config": {
+    "algorithm": "temporal_opsd_gaussian_velocity_matching",
+    "allow_budget_checkpoint": true,
+    "batch_size": 4,
+    "checkpoint_steps": [
+      500,
+      1000,
+      1500
+    ],
+    "clip_gradient_norm": 1.0,
+    "compute_dtype": "bfloat16",
+    "ema_decay": 0.9999,
+    "environment_workers": 4,
+    "evaluation_episodes_per_task": 10,
+    "evaluation_seed": 27,
+    "flow_steps": 10,
+    "flow_time_sampling": "uniform_over_native_10_step_grid",
+    "learning_rate": 1e-05,
+    "loss_action_dimensions": 7,
+    "loss_covariance": "unit_isotropic_velocity_probe",
+    "master_dtype": "float32",
+    "optimizer_steps": 1500,
+    "prediction_horizon": 50,
+    "protected_eval_ranges": [
+      [
+        0,
+        10
+      ],
+      [
+        20,
+        50
+      ]
+    ],
+    "reference_opsd_commit": "28d04e440350df2037fdd34ce703f088fb4ffd97",
+    "student_horizon": 20,
+    "teacher_horizon": 5,
+    "teacher_strategy": "ema",
+    "teacher_tail": "ema_native_flow_latent_at_same_time",
+    "train_initial_state_cursor": 10,
+    "train_initial_state_start": 10,
+    "train_initial_state_stop": 20,
+    "train_seed": 17,
+    "trainable_parameters": "action_expert_and_action_time_projections",
+    "weight_decay": 0.0
+  },
+  "files": {
+    "assets/physical-intelligence/libero/norm_stats.json": "b3a44bb2810436fb62917decaea58bd4d9110255df527dea21e8fd40c960bd84",
+    "params/_CHECKPOINT_METADATA": "df655b6ebbefefcddbede6af8b7778110c1f030304313420653be22d4036bf7c",
+    "params/_METADATA": "250d0ad0f6540a5e4bdd70442d6864cef729724f2d23e2dd2cc669563a668d70",
+    "params/_sharding": "38efd4f20bfc656b138c3009fa6156b1199c29a3ccf020769e3726605f1c51ca",
+    "params/array_metadatas/process_0": "987d6c82745514f7ae68d1d6fa238129e23a6d90f10a6d3f6b24eafc94383ade",
+    "params/d/5f29daf18245b29e52ca2c87a5b4cf65": "7864cb5b4781641fc62b84fd07e837170276e6695dea7dad1eb1274856f8c36f",
+    "params/manifest.ocdbt": "71b5dde67ec2d7abc2f73fedaa258c00ac72980a602d5c7d9996779231acda93",
+    "params/ocdbt.process_0/d/3b239445bffcf2a662842f32a65ee23e": "86f1f849f64cbbcb7353f2bce614a44f504b43b33dbc5e03d704f00d5fe23363",
+    "params/ocdbt.process_0/d/57ae7a3bfeeaf9d7000c1ad4cc1dac10": "50a15eb7f70385ebb271320ef6bef0441c9f774afd3f61a2e1b3f74c674a4ad7",
+    "params/ocdbt.process_0/d/78be72ac1934c8c98a36ed5a71a5b353": "d6db20bee189d16e28839a3c2115611692b5e01af1a4580263dfbf1527a91cd8",
+    "params/ocdbt.process_0/d/97b4d3985754852c425289d7e71bc880": "2a3acf8fb2c07c8c62138d9fd40eeced7ea539ee0fbf40e9d471ac7da6e4719f",
+    "params/ocdbt.process_0/d/9dbf03ad203e08c2628fb76b717d93c3": "1ab0fc4a99b92079f7affab596c5e12edbb76c4fd61627e96471dcf5f70ac010",
+    "params/ocdbt.process_0/d/f183a4cca504db3ed7a6d598733b31f4": "146afccf0df18756eef47a591abf0be8271cde39ccf678ee3c4d6c15589ce950",
+    "params/ocdbt.process_0/d/fd55a607bf612d43936771a6432e5eae": "9468e05d1c0a3bb11ff7849d2935a1fe365d51c9760861c1be9d80cd5c19aad9",
+    "params/ocdbt.process_0/manifest.ocdbt": "04d59e833679390c16046f0f22df9e355488e8966f63e7fc9d3e72a9e3d8af88",
+    "training_state/_CHECKPOINT_METADATA": "16badeb7f510c480140b0d65a7f431a2cb2e06c9982a249df05bf470f93c9060",
+    "training_state/_METADATA": "444d16e481303a27ec95a730affe2e440f0fbdc120058b920183447a06ae21fd",
+    "training_state/_sharding": "aa9f7235838444acc669ddf59d1d5ac7843b352a21f504237623f9c3e755932f",
+    "training_state/array_metadatas/process_0": "04ad61b1fe775f29d7c04fa81cad627701ec2e5f71b7f741c4990464c58b6d0c",
+    "training_state/d/13643d0b272a91f7f29314c0f1e2d4d6": "8ad3f64919ca64f0192e9e3a61bcd658a99a14b3d0304bd5990fe0554db5afa3",
+    "training_state/manifest.ocdbt": "e4c00dad648e1448cb698019bfe29dda38efe6913961c8dcba8d2fb291b92290",
+    "training_state/ocdbt.process_0/d/14c7fe90695f893eccb9ec93a6f3e7cc": "ee247ed8999441ed16baff0964592e36fa6ccf265dde139addaa45901e9f1412",
+    "training_state/ocdbt.process_0/d/1c362c27f52ec6e4c920e6f7fd84badd": "e7f112761bbbcfe0ef792d36a30e123fd42a400eb46443451a116995368b8358",
+    "training_state/ocdbt.process_0/d/c9d08133e18d8005d8342c47b44fb1b3": "28a29b44fcb2677e12e30965d6f98cc1702e1a143ddeee6028ba688e49d6a2ae",
+    "training_state/ocdbt.process_0/d/cdcda08536cb860f13a307df41e77d3a": "8f3f14991253cb8dbba811d8175c216da123569d3ac9ee43059666f98bf68caf",
+    "training_state/ocdbt.process_0/d/eb1983febf0738b896090331b8d67edb": "90cf74532458a7c566a34740f932c08124dbfb42a13db7ce3dcf806f9cf79695",
+    "training_state/ocdbt.process_0/d/ebfdd0ec1ea9d8bd7595143932831336": "c0169de6d863f2f02c4c5958ed5bc0a216ac95a25e3d0494759588e26e7e5c91",
+    "training_state/ocdbt.process_0/d/fb0bca120453889fbe8879007a37b288": "d6bb619d1bc8302065bbc2f4418d8d8637043752c4629b1f3f129006776eb9ae",
+    "training_state/ocdbt.process_0/d/fd74bed761ab29c8b88365f2e1d4dda6": "5fe865da26cfe3bacec7a2072658c34a886b252fbb8230dd770df7d3996b669c",
+    "training_state/ocdbt.process_0/manifest.ocdbt": "43ae7d9ed37a0ce342e17083656289ef7cdda8125b422c7a48865940b8cc3e12"
+  },
+  "reloaded_native_inference_max_abs_difference": 0.0,
+  "resumed_from": null,
+  "sources": {
+    "opsd_backend.py": "bec71c3ad8eea55445a9c2ab300727655a3584146328484474352eb2c00e54ec",
+    "opsd_flow.py": "c0e85665f5fce10e0afffe185763d07008cb16aa2d97a04a164a18e725eaa45c",
+    "opsd_protocol.py": "7b4d415d7ae937da2b5c390123bcf4a800e611a7fbafbec60757e5dcbab9ab04"
+  },
+  "step": 1500
+}

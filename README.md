@@ -25,11 +25,16 @@ One H100 completed both conditions in **20m43s** and was released. See the
 [retention findings](results/egl_step1500_h5_retention/FINDINGS.md) and
 [raw-data archive](results/egl_step1500_h5_retention/README.md).
 
-The requested [extension to 500 episodes per model](results/egl_step1500_h5_500_retry1/README.md)
-reuses those 100 episodes per checkpoint and adds only 400 per checkpoint.
-Its primary comparison excludes the 100 training-layout episodes and reports
-400 held-out pairs; the full 500 and training-layout subsets are also reported.
-The extension has no final success rate until its completion checks pass.
+The [500-episode H=5 retention extension](results/egl_step1500_h5_500_retry1/README.md)
+is complete, reusing those 100 episodes and adding 400 per checkpoint. Original
+scored **444/500 (88.8%)**, and step 1500 scored **429/500 (85.8%)**. Excluding
+OPSD training layouts, the preselected primary comparison is **356/400 (89.00%)**
+versus **345/400 (86.25%)**, a change of **−2.75 pp**, paired 95% CI
+**[−6.25, +1.00] pp**, exact p=0.185. Neither statistical degradation nor
+equivalence is established. All 1,000 episode/video checks passed. The successful
+job took **1h11m08s** on one H100 and released its allocation; including the
+cancelled initialization attempt, this extension used **1h24m01s**.
+See the [paired statistics and timing table](results/egl_step1500_h5_500_retry1/FINDINGS.md).
 
 The initial evaluation phase uses the official Physical Intelligence OpenPI
 checkpoint and its existing LIBERO action-execution loop, without training,

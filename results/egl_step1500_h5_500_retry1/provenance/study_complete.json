@@ -1,0 +1,17 @@
+{
+  "complete": true,
+  "completed_blocks": [
+    "states0_step0_H5",
+    "states0_step1500_H5",
+    "states10_step0_H5",
+    "states10_step1500_H5",
+    "states20_step0_H5",
+    "states20_step1500_H5",
+    "states40_step0_H5",
+    "states40_step1500_H5"
+  ],
+  "new_episodes": 800,
+  "optimizer_updates_added": 0,
+  "plan_sha256": "01445a27c4b8878fe0940027ac595390b25e4b2f7ddc1230c538c711f1000689",
+  "reused_episodes": 200
+}

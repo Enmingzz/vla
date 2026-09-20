@@ -1,0 +1,31 @@
+{
+  "cached_server_instances": [
+    "28b12871-8bc0-47cd-86f3-51e8d33433b6"
+  ],
+  "complete": true,
+  "current_server_instances": [
+    "819e66ef-2f6f-4ea5-9c48-e7bf4611ab1f"
+  ],
+  "episodes": 1000,
+  "evaluation_settings_equal_except_declared_initial_state_start": true,
+  "inference_settings_equal_across_cached_and_new_blocks": true,
+  "new_episodes": 800,
+  "optimizer_updates_added": 0,
+  "paired_states_observations_rng_evaluator": true,
+  "primary": {
+    "ci95_high": 0.01,
+    "ci95_low": -0.0625,
+    "episodes": 400,
+    "left_success_rate": 0.8625,
+    "p_exact": 0.18485048241641847,
+    "primary": true,
+    "recovered_episodes": 23,
+    "regressed_episodes": 34,
+    "right_success_rate": 0.89,
+    "subset": "heldout_400",
+    "success_change": -0.0275
+  },
+  "reused_episodes": 200,
+  "source_local_episode_indices_preserved": true,
+  "video_files_present": 1000
+}
