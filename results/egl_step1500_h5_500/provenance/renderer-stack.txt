@@ -1,0 +1,32 @@
+[New LWP 3328764]
+[New LWP 3328767]
+
+warning: Expected absolute pathname for libpthread in the inferior, but got target:/lib64/libc.so.6.
+
+warning: Unable to find libthread_db matching inferior's thread library, thread debugging will not be available.
+0x000014a0e6e74b88 in ?? () from target:/lib64/libnvidia-eglcore.so.580.159.03
+
+Thread 3 (LWP 3328767 "python"):
+#0  0x000014a1c2b2b37a in __futex_abstimed_wait_common () from target:/lib64/libc.so.6
+#1  0x000014a1c2b36103 in __new_sem_wait_slow64.constprop.0 () from target:/lib64/libc.so.6
+#2  0x000014a1c31adec3 in PyThread_acquire_lock_timed () from target:/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/bin/../lib/libpython3.8.so.1.0
+#3  0x000014a1c3200c37 in acquire_timed () from target:/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/bin/../lib/libpython3.8.so.1.0
+#4  0x000014a1c3200ded in lock_PyThread_acquire_lock () from target:/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/bin/../lib/libpython3.8.so.1.0
+#5  0x000014a1c302ff50 in method_vectorcall_VARARGS_KEYWORDS () from target:/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/bin/../lib/libpython3.8.so.1.0
+
+Thread 2 (LWP 3328764 "python"):
+#0  0x000014a1c2bb3dfe in recv () from target:/lib64/libc.so.6
+#1  0x000014a1c3013b96 in sock_recv_impl () from target:/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/bin/../lib/libpython3.8.so.1.0
+#2  0x000014a1c3012618 in sock_call_ex () from target:/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/bin/../lib/libpython3.8.so.1.0
+#3  0x000014a1c3013b57 in sock_recv_guts () from target:/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/bin/../lib/libpython3.8.so.1.0
+#4  0x000014a1c3010c6e in sock_recv () from target:/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/bin/../lib/libpython3.8.so.1.0
+#5  0x000014a1c3030d41 in method_vectorcall_VARARGS () from target:/scratch/enmingzz/frequency_vla/python/cpython-3.8.20-linux-x86_64-gnu/bin/../lib/libpython3.8.so.1.0
+
+Thread 1 (LWP 3328674 "python"):
+#0  0x000014a0e6e74b88 in ?? () from target:/lib64/libnvidia-eglcore.so.580.159.03
+#1  0x000014a0e6f9115d in ?? () from target:/lib64/libnvidia-eglcore.so.580.159.03
+#2  0x000014a0e6f9cbaf in ?? () from target:/lib64/libnvidia-eglcore.so.580.159.03
+#3  0x000014a0e6f189b5 in ?? () from target:/lib64/libnvidia-eglcore.so.580.159.03
+#4  0x000014a0e6ff3758 in ?? () from target:/lib64/libnvidia-eglcore.so.580.159.03
+#5  0x000014a0e6ff5925 in ?? () from target:/lib64/libnvidia-eglcore.so.580.159.03
+[Inferior 1 (process 3328674) detached]

@@ -1,0 +1,15 @@
+{
+  "renderer_check_timeout_seconds": 180,
+  "episode_progress_timeout_seconds": 180,
+  "source_files": {
+    "/home/enmingzz/project/vla/frequency_vla/scripts/fir_h5_extension_checked.sh": "0342328cb01794334167219b486de994e046d3ed02c48eb1bfdd4e22b528a5fd",
+    "/home/enmingzz/project/vla/frequency_vla/tests/check_parallel_osmesa.py": "997bfc2f36be79b967cfcdbb25fe98703463186333207184682cdfca18fcadd1",
+    "/home/enmingzz/project/vla/frequency_vla/configs/opsd_egl_1500.yaml": "f2534ec5d5614cb28ca287c775cf89ddb2f08dd7e9ef329696b74fa3a2a5d1a4",
+    "/home/enmingzz/project/vla/frequency_vla/src/frequency_vla/opsd_client.py": "2131c0345c59a6ea0accaf77885b892ae5689febec2f22ef90f2c4aa54dc02f3",
+    "/home/enmingzz/project/vla/frequency_vla/src/frequency_vla/opsd_parallel_env.py": "41372e01998cfa72750ed763b9252d8503e6ee123a3db2bb8ccff9cd92040397"
+  },
+  "prior_attempt": "results/egl_step1500_h5_500",
+  "prior_job": "60563925",
+  "protocol_changes": false,
+  "reason": "Retry an EGL initialization stall on a previously working node; original evaluator/inference sources stay frozen."
+}

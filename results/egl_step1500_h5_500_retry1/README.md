@@ -1,6 +1,6 @@
-# Extend H=5 retention to 500 episodes per model
+# H=5 retention: 500 episodes per model (retry 1)
 
-**Attempt cancelled:** job 60563925 on fc10514 completed zero episodes before an EGL reset stall. The 12m53s allocation was released. These initialization failures are not task failures. Diagnostics are preserved in `provenance/cancelled.json` and `provenance/renderer-stack.txt`; the retry uses a fresh archive, an EGL preflight, and a progress timeout.
+Retry after job 60563925 stalled during EGL reset with zero completed episodes. The scientific plan is unchanged. This launch performs a bounded EGL rendering preflight before loading the model and stops if evaluation produces no completed episode for 180 seconds.
 
 Compare Original and the completed all-EGL OPSD step-1500 student at P=50, H=5,
 LIBERO-10, seed 27, EGL, four simulator workers, and ten flow steps. This follows
@@ -53,10 +53,23 @@ env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$LIBERO_VENV/bin/python" \
   -m frequency_vla.h5_extension prepare --results-dir "$RUN_RESULTS" \
   --reference-results "$PWD/results/egl_step1500_h5_retention" \
   --state-catalog "$PWD/results/raw/main/libero_10/seed_7/H_5"
+# Freeze the additional renderer checks before submission.
+python3 - <<'PY_LAUNCH'
+from pathlib import Path
+import hashlib, json, os
+paths = ["scripts/fir_h5_extension_checked.sh", "tests/check_parallel_osmesa.py",
+         "configs/opsd_egl_1500.yaml", "src/frequency_vla/opsd_client.py",
+         "src/frequency_vla/opsd_parallel_env.py"]
+record = dict(renderer_check_timeout_seconds=180, episode_progress_timeout_seconds=180,
+              source_files={str(Path(p).resolve()): hashlib.sha256(Path(p).read_bytes()).hexdigest()
+                            for p in paths})
+(Path(os.environ["RUN_RESULTS"]) / "provenance/launch_checks.json").write_text(
+    json.dumps(record, indent=2) + "\n")
+PY_LAUNCH
 sbatch --account=def-btaati --job-name=vla-h5-500 \
   --nodes=1 --ntasks=1 --gpus-per-node=h100:1 --cpus-per-task=8 --mem=48G \
-  --exclude=fc10501,fc10511 --time=01:30:00 \
-  --output="$RUN_RESULTS/logs/gpu-%j.log" scripts/fir_h5_extension.sh
+  --exclude=fc10501,fc10511,fc10514 --time=01:30:00 \
+  --output="$RUN_RESULTS/logs/gpu-%j.log" scripts/fir_h5_extension_checked.sh
 ```
 
 The 90-minute request is a cap; the job exits on completion or error. The previous

@@ -1,0 +1,13 @@
+{
+  "complete": false,
+  "formal_episodes_completed": 0,
+  "job_id": "60563925",
+  "node": "fc10514",
+  "state": "CANCELLED",
+  "elapsed_seconds": 773,
+  "cancelled_utc": "2026-09-20T03:56:28.382557+00:00",
+  "reason": "All four simulator workers stalled in their first env.reset; no episode completed. Main worker thread backtrace was inside libnvidia-eglcore.so.580.159.03. The same NVIDIA driver version worked on prior nodes; exact cause is unconfirmed.",
+  "gpu_allocation_verified": true,
+  "counted_as_task_failures": false,
+  "sacct": "JobID|State|ExitCode|Elapsed|NodeList|AllocTRES\n60563925|CANCELLED by 3158914|0:0|00:12:53|fc10514|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1\n"
+}

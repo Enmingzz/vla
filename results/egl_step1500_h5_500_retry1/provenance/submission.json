@@ -1,0 +1,33 @@
+{
+  "job_id": "60564883",
+  "submitted_utc": "2026-09-20T03:57:10.757117+00:00",
+  "command": [
+    "sbatch",
+    "--parsable",
+    "--account=def-btaati",
+    "--job-name=vla-h5-500-retry",
+    "--nodes=1",
+    "--ntasks=1",
+    "--gpus-per-node=h100:1",
+    "--cpus-per-task=8",
+    "--mem=48G",
+    "--exclude=fc10501,fc10511,fc10514",
+    "--time=01:30:00",
+    "--output=/home/enmingzz/project/vla/frequency_vla/results/egl_step1500_h5_500_retry1/logs/gpu-%j.log",
+    "scripts/fir_h5_extension_checked.sh"
+  ],
+  "account": "def-btaati",
+  "gpus": 1,
+  "cpus": 8,
+  "memory_gib": 48,
+  "time_limit": "01:30:00",
+  "excluded_nodes": [
+    "fc10501",
+    "fc10511",
+    "fc10514"
+  ],
+  "new_optimizer_updates": 0,
+  "new_evaluation_episodes": 800,
+  "reused_evaluation_episodes": 200,
+  "episodes_per_model": 500
+}
