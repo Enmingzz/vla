@@ -1,10 +1,19 @@
 # π0.5 LIBERO replanning-frequency validation
 
-The current [EGL pipeline](EGL_PIPELINE.md) starts a **fresh official checkpoint**
-and uses EGL for all 1500 training updates and all five evaluations: original
-H=5/H=20 and H=20 at steps 500/1000/1500. It has a single submission command and
-does not use historical mixed-renderer checkpoints. Historical findings below
-remain separate; new results are published only after the new run completes.
+The [EGL pipeline](EGL_PIPELINE.md) is complete: a fresh official checkpoint,
+1500 updates, and all five evaluations used EGL on one H100/server with four
+simulator workers. On the same 100 LIBERO-10 episodes per condition, original
+H=5/H=20 achieved **88% / 54%**; H=20 after 500/1000/1500 updates achieved
+**87% / 82% / 87%**. Step 1500 improved over original H=20 by **33 pp**
+(paired 95% CI **24–42 pp**, Holm-adjusted exact p=2.89e-7). Step 500 already
+achieved the same aggregate success, so further updates did not improve it
+monotonically. The 1 pp point-estimate gap to H=5 does not establish equivalence.
+Mean episode time fell from **14.30 s** at original H=5 to **8.03 s** at step
+1500/H=20 under fixed concurrency; the complete 100-episode evaluation fell
+from **451.42 s to 326.26 s**. GPU use was **1h20m44s**, and the allocation is
+released. See the [full table and paired statistics](results/egl_from_scratch_1500_retry1/FINDINGS.md)
+and [completed archive](results/egl_from_scratch_1500_retry1/README.md).
+The historical experiments below remain separate from this fresh all-EGL run.
 
 The initial evaluation phase uses the official Physical Intelligence OpenPI
 checkpoint and its existing LIBERO action-execution loop, without training,

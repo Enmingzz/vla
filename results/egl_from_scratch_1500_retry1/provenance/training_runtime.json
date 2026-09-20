@@ -1,0 +1,12 @@
+{
+  "configuration_fixed_for_all_updates": true,
+  "environment_workers": 4,
+  "official_start_step": 0,
+  "planned_optimizer_steps": 1500,
+  "renderer": {
+    "backend": "egl",
+    "llvmpipe_threads": "1",
+    "openblas_threads": "1",
+    "pyopengl_platform": "egl"
+  }
+}

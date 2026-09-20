@@ -1,0 +1,13 @@
+{
+  "checkpoint_roundtrip_equal": true,
+  "diagnostic_updates_rolled_back": 1,
+  "frozen_backbone_outside_optimizer": true,
+  "optimizer_steps": 0,
+  "passed": true,
+  "trace_check": {
+    "max_abs_difference": 0.0,
+    "native_flow_steps": 10,
+    "same_noise_key": true,
+    "tolerance": 0.01
+  }
+}

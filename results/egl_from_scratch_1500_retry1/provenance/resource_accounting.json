@@ -1,0 +1,9 @@
+{
+  "allocation_released": true,
+  "gpu_hours": 1.3455555555555556,
+  "gpu_seconds": 4844,
+  "job_id": "60516312",
+  "maximum_concurrent_gpus": 1,
+  "node": "fc10413",
+  "state": "COMPLETED"
+}

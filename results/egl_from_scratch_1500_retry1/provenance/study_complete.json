@@ -1,0 +1,16 @@
+{
+  "complete": true,
+  "completed_conditions": [
+    "step0_H5",
+    "step0_H20",
+    "step500_H20",
+    "step1000_H20",
+    "step1500_H20"
+  ],
+  "final_optimizer_step": 1500,
+  "formal_episodes": 500,
+  "optimizer_updates_added": 1500,
+  "plan_sha256": "e76efc5578f4b8ce9ef6d45b050137d1c6315099f385b4b4c52653dffa531685",
+  "renderer": "egl",
+  "workers": 4
+}

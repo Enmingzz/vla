@@ -1,0 +1,2 @@
+index, name, uuid, pci.bus_id, driver_version, memory.total [MiB]
+0, NVIDIA H100 80GB HBM3, GPU-cbd15f80-a1d7-97be-289c-c48cff880da5, 00000000:46:00.0, 580.159.03, 81559 MiB

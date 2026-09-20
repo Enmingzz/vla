@@ -1,0 +1,3 @@
+60516312|COMPLETED|4844|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0|fc10413
+60516312.batch|COMPLETED|4844|cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0|fc10413
+60516312.extern|COMPLETED|4844|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0|fc10413

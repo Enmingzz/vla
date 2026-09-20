@@ -1,0 +1,18 @@
+{
+  "all_checkpoint_checksums_verified": true,
+  "complete": true,
+  "conditions": 5,
+  "evaluation_renderer": "egl",
+  "formal_episodes": 500,
+  "initial_states_first_observations_rng_and_evaluator_paired": true,
+  "native_checkpoint_roundtrip_exact": true,
+  "optimizer_updates_added": 1500,
+  "plan_sha256": "e76efc5578f4b8ce9ef6d45b050137d1c6315099f385b4b4c52653dffa531685",
+  "same_renderer": "egl",
+  "same_workers": 4,
+  "single_server_instance": "e971365b-f3eb-4b5a-9050-b5bcee52dc87",
+  "trained_from_official_step_zero": true,
+  "training_evaluation_states_disjoint": true,
+  "training_renderer": "egl",
+  "validated_videos": 500
+}

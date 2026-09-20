@@ -1,0 +1,17 @@
+{
+  "artifacts": {
+    "FINDINGS.md": "eba7e0022ad51f7ebb43213c4f9665fa145f7231bd017c0edb89339508de96ac",
+    "aggregated/comparisons.csv": "72d00636ec36ee044c8a2d6fb263793bd5e86fbdaa6d349ba5b290400fa0cf70",
+    "aggregated/conditions.csv": "1b0e004f6af86f3024a80e7295a8422fa9f41184dadbe84b426da643e44ee439",
+    "aggregated/episodes.csv": "1f67a9060713293c321e7dc9d58eb24d5c554d97f6546a895124a4dc5166a64d",
+    "aggregated/per_task.csv": "7611f0f78933e8348c60f8e013824a42b4308b3fe444458034e0acdd45561a2b",
+    "aggregated/validation.json": "732217d9b34f87debb3a5cf9ef874fb048522a0c9fcb71ac87e5eb204c9063cb",
+    "rollouts.jsonl": "7ba57192ba3d99b500417957e50fbaa249149fd082c18ab0395df8444778c12a",
+    "training.jsonl": "e4e73675074fef4fbd61bcfad7996fa672b2dc70374d208d5842b94a681d7693"
+  },
+  "complete": true,
+  "formal_episodes": 500,
+  "gpu_allocation_released": true,
+  "optimizer_updates_added": 1500,
+  "validated_videos": 500
+}
