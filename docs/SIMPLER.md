@@ -78,6 +78,14 @@ noise. The first predicted chunk must match exactly across H. Every episode
 checks `calls = ceil(actions/H)` and logs actual query timesteps. Actions outside
 the first H of each chunk are discarded.
 
+Each episode now calls the simulator's native `reset(...,
+options={"reconfigure": True, ...})` to rebuild the scene before initialization.
+The first smoke attempt (`60921197`) found that a seed alone with a reused scene
+did not reproduce exact physical state or pixels; it stopped after 16 seconds,
+before policy loading or any task evaluation. The retry retains exact checks
+and probes both smoke layouts of every task before loading the model. No
+tolerance relaxation or stored-state injection is used.
+
 ## Run
 
 All paths can be overridden before sourcing `scripts/simpler_env.sh`.

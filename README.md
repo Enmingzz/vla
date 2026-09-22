@@ -3,9 +3,11 @@
 The new [SimplerEnv frequency experiment](docs/SIMPLER.md) uses a fixed,
 third-party Bridge-adapted π0.5 checkpoint with **native P=5 and H=1/2/5**.
 It evaluates the four standard WidowX tasks with paired layouts, states and
-inference noise. CPU installation/checkpoint verification is complete; smoke
-job `60921197` is submitted with one H100 and a 30-minute cap. No Simpler success
-result is claimed yet. The checkpoint's SFT/RL provenance conflict is documented.
+inference noise. CPU installation/checkpoint verification is complete. The first
+smoke job failed its exact reset-pairing check before model loading (zero policy
+episodes). Retry `60947294` uses native scene reconfiguration and checks all
+eight smoke layouts before loading the model: one H100, 20-minute cap. No Simpler
+success result is claimed yet. The checkpoint's SFT/RL provenance conflict is documented.
 
 The new [RoboCasa365 π0.5 pilot](ROBOCASA365_OPSD_PLAN.md) uses a fixed set of ten
 tasks with three independent Slurm jobs: original H=5, original H=20, and 500

@@ -19,25 +19,37 @@ def main():
     if not os.environ.get('SLURM_JOB_ID'):
         raise RuntimeError('Run rendering probes in a GPU allocation')
     cfg, checks = load_config(), []
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     for task_id, task in enumerate(cfg['tasks']):
         t = time.monotonic()
         env = make_env(task)
         try:
-            _, image, identity = reset(env, cfg['seed'], task_id, 0)
-            assert image.ndim == 3 and image.shape[2] == 3 and np.std(image) > 5
-            args.output.parent.mkdir(parents=True, exist_ok=True)
-            imageio.imwrite(args.output.parent/f'{task}.png', image)
-            env.step(np.array([0., 0., 0., 0., 0., 0., 1.]))
-            _, image2, identity2 = reset(env, cfg['seed'], task_id, 0)
-            if identity != identity2:
-                raise RuntimeError(f'Same-seed native reset mismatch: {task}: {identity} / {identity2}')
-            checks.append({'task': task, 'identity': identity, 'shape': list(image.shape),
-                'seconds': time.monotonic()-t, 'control_frequency_hz': env.unwrapped.control_freq,
-                'episode_limit': env.spec.max_episode_steps})
+            for index in range(cfg['episodes_per_task']['smoke']):
+                _, image, identity = reset(env, cfg['seed'], task_id, index)
+                state = env.unwrapped.get_state().copy()
+                assert image.ndim == 3 and image.shape[2] == 3 and np.std(image) > 5
+                imageio.imwrite(args.output.parent/f'{task}_{index}.png', image)
+                env.step(np.array([0., 0., 0., 0., 0., 0., 1.]))
+                _, image2, identity2 = reset(env, cfg['seed'], task_id, index)
+                state2 = env.unwrapped.get_state().copy()
+                check = {'task': task, 'episode_index': index, 'identity': identity,
+                    'repeated_identity': identity2, 'shape': list(image.shape),
+                    'state_max_abs_difference': float(np.max(np.abs(state2-state))),
+                    'image_max_abs_difference': int(np.max(np.abs(image2.astype(int)-image.astype(int)))),
+                    'passed': identity == identity2, 'seconds': time.monotonic()-t,
+                    'control_frequency_hz': env.unwrapped.control_freq,
+                    'episode_limit': env.spec.max_episode_steps}
+                checks.append(check)
+                write_json(args.output, {'passed': all(c['passed'] for c in checks),
+                    'complete': False, 'renderer': 'sapien_vulkan_ibl', 'checks': checks})
+                print(check, flush=True)
+                if identity != identity2:
+                    np.savez_compressed(args.output.parent/f'{task}_{index}_reset_mismatch.npz',
+                                        state=state, repeated_state=state2, image=image, repeated_image=image2)
+                    raise RuntimeError(f'Same-seed native reset mismatch: {task}; saved numeric diagnostic')
         finally:
             env.close()
-        print(checks[-1], flush=True)
-    write_json(args.output, {'passed': True, 'renderer': 'sapien_vulkan_ibl',
+    write_json(args.output, {'passed': True, 'complete': True, 'renderer': 'sapien_vulkan_ibl',
                             'render_device': os.environ.get('SV_RENDER_DEVICE', 'cuda:0'), 'checks': checks})
 
 

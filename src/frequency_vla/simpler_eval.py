@@ -23,12 +23,16 @@ def make_env(task):
 def reset(env, seed, task_id, index):
     from simpler_env.utils.env.observation_utils import get_image_from_maniskill2_obs_dict
     rng_seed = episode_seed(seed, task_id, index)
-    obs, info = env.reset(seed=rng_seed, options={'obj_init_options': {'episode_id': index}})
+    # Rebuild through the simulator's native reset API. Clearing velocities in
+    # a reused PhysX scene does not recreate its contact/solver state.
+    obs, info = env.reset(seed=rng_seed, options={
+        'reconfigure': True, 'obj_init_options': {'episode_id': index}})
     image = get_image_from_maniskill2_obs_dict(env, obs)
     identity = {'initial_state_sha256': array_digest(env.unwrapped.get_state()),
                 'first_observation_sha256': array_digest(image), 'episode_rng_seed': rng_seed,
                 'task_description': env.unwrapped.get_language_instruction(),
-                'object_episode_id': int(info['episode_id'])}
+                'object_episode_id': int(info['episode_id']),
+                'reset_protocol': 'native_reconfigure_each_episode'}
     return obs, image, identity
 
 
