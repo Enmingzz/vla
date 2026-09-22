@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "4d032555a18989289b429c1c1be76276568cabfb9c01a9e358f1754a328e29f7",
+  "episode_index": 9,
+  "episode_seed": 270040009,
+  "initial_observation_sha256": "9dafd3f422251691047b4372c8513afc345322fe8491f168ba873fe85ae7bb8d",
+  "initial_state_sha256": "f459042a4a24c316d68c8fdf0b022fdb7478aa874e0737933720cc48c956244c",
+  "initial_xml_sha256": "e7cd9ec6009c92664747c45d7f75436052c009bff32de06a812277422b326aaf",
+  "task_description": "Pick the avocado from the counter and place it in the cabinet.",
+  "task_horizon": 750,
+  "task_id": 4,
+  "task_name": "PickPlaceCounterToCabinet",
+  "training": false
+}

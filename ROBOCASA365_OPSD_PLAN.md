@@ -147,3 +147,46 @@ exact McNemar tests are exploratory and conditional on these ten tasks. Missing
 conditions are reported as pending; simulator/runtime failures abort instead of
 being silently scored as task failures. Weak, null and adverse outcomes stay in
 the report. There is no checkpoint or task selection using these evaluation results.
+
+## Interrupted-run recovery
+
+The first measured attempt completed all 500 optimizer updates and saved step
+500. Original H=20 completed 100 episodes (58 successes). Original H=5 stopped
+at 60 completed episodes and trained H=20 at 33 because of initial-reset checks.
+The paired partial trained comparison is negative: 6/33 versus original H=20
+18/33 on exactly those episodes. This is an incomplete, task-order-dependent
+subset, not the ten-task mean. Preserve the results regardless of outcome.
+
+GPU diagnostic 60911009 took 2m40s. All eight checked identities reproduced exact
+physical state, episode metadata and preprocessed policy input with native seeded
+construction. Seven had different XML text, exclusively an inferred
+`content_type="model/obj"` attribute on `.obj` meshes. The comparison now permits
+only this serialization equivalence, retaining both the raw XML hash and a
+comparison hash. All numerical attributes, assets, physical states, metadata and
+observations remain strict. Replaying exported XML was tested and rejected: its
+rounded geometry changed the input observations.
+
+Recovery uses the existing server and `load_snapshot` API, with no optimizer
+updates. It verifies cached rows, checkpoint/inference identity, episode catalog,
+policy-call counts and saved videos. A `student` / `step_500` phase-name alias is
+the only allowed inference-spec difference. The 193 completed episodes are
+reused; 207 remain across the four conditions. A fresh output archive records the
+source of every reused row. An unpaired native reset may be retried at most three
+times with the exact same seed, before policy queries or actions; rejected states
+are saved, never scored. No seed or result-based filtering is permitted.
+
+To submit this evaluation-only recovery after setting the four paths/digest:
+
+```bash
+source scripts/robocasa_env.sh
+export RC_RECOVERY_SOURCE="$PWD/results/robocasa365_fixed10_500_retry1"
+export RC_RECOVERY_ROOT="$PWD/results/robocasa365_fixed10_500_recovery1"
+export RC_RECOVERY_CHECKPOINT="$RC_WORK/runs/robocasa365_fixed10_500_retry1/train500/step_500"
+export RC_RECOVERY_MANIFEST="a8f369fa2278e0d6d46f68c8d757fc7839959544a697e7f205287924de5d6a1d"
+bash scripts/submit_robocasa_recovery.sh
+```
+
+One H100 serves all remaining conditions sequentially; the default scheduler cap
+is 75 minutes, not a promised runtime. No task is selected by observed success.
+Aggregated wall-clock episode times span the original and recovery allocations;
+all use EGL and four evaluation workers, but these times are exploratory.

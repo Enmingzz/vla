@@ -1,0 +1,578 @@
+{
+  "cam_configs": {
+    "robot0_agentview_center": {
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.6,
+        0.0,
+        1.15
+      ],
+      "quat": [
+        0.636945903301239,
+        0.3325185477733612,
+        -0.3199238181114197,
+        -0.6175596117973328
+      ]
+    },
+    "robot0_agentview_left": {
+      "camera_attribs": {
+        "fovy": "60"
+      },
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.5,
+        0.35,
+        1.05
+      ],
+      "quat": [
+        0.55623853,
+        0.29935253,
+        -0.37678665,
+        -0.6775092
+      ]
+    },
+    "robot0_agentview_right": {
+      "camera_attribs": {
+        "fovy": "60"
+      },
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.5,
+        -0.35,
+        1.05
+      ],
+      "quat": [
+        0.6775091886520386,
+        0.3767866790294647,
+        -0.2993525564670563,
+        -0.55623859167099
+      ]
+    },
+    "robot0_eye_in_hand": {
+      "parent_body": "robot0_right_hand",
+      "pos": [
+        0.05,
+        0,
+        0
+      ],
+      "quat": [
+        0,
+        0.707107,
+        0.707107,
+        0
+      ]
+    },
+    "robot0_frontview": {
+      "camera_attribs": {
+        "fovy": "60"
+      },
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.5,
+        0,
+        0.95
+      ],
+      "quat": [
+        0.6088936924934387,
+        0.3814677894115448,
+        -0.3673907518386841,
+        -0.5905545353889465
+      ]
+    }
+  },
+  "fixture_refs": {
+    "counter": "counter_1_right_group_1",
+    "sink": "sink_right_group_1"
+  },
+  "fixtures": {
+    "coffee_machine_main_group_1": {
+      "cls": "CoffeeMachine"
+    },
+    "counter_13_main_group_1": {
+      "cls": "Counter"
+    },
+    "counter_1_right_group_1": {
+      "cls": "Counter"
+    },
+    "counter_2_main_group_1": {
+      "cls": "Counter"
+    },
+    "counter_3_front_group_1": {
+      "cls": "Counter"
+    },
+    "counter_5_front_group_1": {
+      "cls": "Counter"
+    },
+    "counter_corner_1_main_group_1": {
+      "cls": "Counter"
+    },
+    "cube_11_front_group_1": {
+      "cls": "Box"
+    },
+    "cube_1_right_group_1": {
+      "cls": "Box"
+    },
+    "cube_2_dining_area_group": {
+      "cls": "Box"
+    },
+    "cube_2_right_group_1": {
+      "cls": "Box"
+    },
+    "cube_4_front_group_1": {
+      "cls": "Box"
+    },
+    "cube_5_front_group_1": {
+      "cls": "Box"
+    },
+    "cube_main_group_1": {
+      "cls": "Box"
+    },
+    "dining_dining_area_group": {
+      "cls": "Counter"
+    },
+    "dishwasher_1_right_group_1": {
+      "cls": "Dishwasher"
+    },
+    "floor_1_backing_room": {
+      "cls": "Floor"
+    },
+    "floor_1_room": {
+      "cls": "Floor"
+    },
+    "floor_2_backing_room": {
+      "cls": "Floor"
+    },
+    "floor_2_room": {
+      "cls": "Floor"
+    },
+    "fridgefrenchdoor_housing_left_group_2": {
+      "cls": "HousingCabinet"
+    },
+    "fridgefrenchdoor_left_group_2": {
+      "cls": "FridgeFrenchDoor"
+    },
+    "hingecabinet_1_left_group_2": {
+      "cls": "HingeCabinet"
+    },
+    "hingecabinet_2_main_group_1": {
+      "cls": "HingeCabinet"
+    },
+    "hingecabinet_3_main_group_1": {
+      "cls": "HingeCabinet"
+    },
+    "micro_cab_main_group_1": {
+      "cls": "HingeCabinet"
+    },
+    "microwave_main_group_1": {
+      "cls": "Microwave"
+    },
+    "papertowel_main_group_1": {
+      "cls": "Accessory"
+    },
+    "singlecabinet_4_main_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "sink_right_group_1": {
+      "cls": "Sink"
+    },
+    "stack_01_main_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_01_main_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_01_main_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_02_main_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_02_main_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_02_main_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_03_main_group_1_1": {
+      "cls": "Drawer"
+    },
+    "stack_03_main_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_03_main_group_1_3": {
+      "cls": "Drawer"
+    },
+    "stack_03_main_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_04_main_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_04_main_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_05_right_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_05_right_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_07_right_group_1_1": {
+      "cls": "HingeCabinet"
+    },
+    "stack_07_right_group_1_2": {
+      "cls": "PanelCabinet"
+    },
+    "stack_07_right_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_08_dining_area_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_08_dining_area_group_2": {
+      "cls": "Drawer"
+    },
+    "stack_08_dining_area_group_base": {
+      "cls": "Box"
+    },
+    "stack_09_dining_area_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_09_dining_area_group_2": {
+      "cls": "Drawer"
+    },
+    "stack_09_dining_area_group_base": {
+      "cls": "Box"
+    },
+    "stack_10_dining_area_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_10_dining_area_group_2": {
+      "cls": "Drawer"
+    },
+    "stack_10_dining_area_group_base": {
+      "cls": "Box"
+    },
+    "stack_11_front_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_11_front_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_11_front_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_12_front_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_12_front_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_12_front_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_13_front_group_1_1": {
+      "cls": "Drawer"
+    },
+    "stack_13_front_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_13_front_group_1_3": {
+      "cls": "Drawer"
+    },
+    "stack_13_front_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_14_front_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_14_front_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_14_front_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_15_front_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_15_front_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_15_front_group_1_base": {
+      "cls": "Box"
+    },
+    "stool_1_room": {
+      "cls": "Stool"
+    },
+    "stool_2_room": {
+      "cls": "Stool"
+    },
+    "stool_3_room": {
+      "cls": "Stool"
+    },
+    "stool_4_room": {
+      "cls": "Stool"
+    },
+    "stove_main_group_1": {
+      "cls": "Stove"
+    },
+    "toaster_main_group_1": {
+      "cls": "Toaster"
+    },
+    "toaster_oven_main_group_1": {
+      "cls": "ToasterOven"
+    },
+    "wall_front_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_front_room": {
+      "cls": "Wall"
+    },
+    "wall_left_1_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_left_1_room": {
+      "cls": "Wall"
+    },
+    "wall_left_2_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_left_2_room": {
+      "cls": "Wall"
+    },
+    "wall_left_3_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_left_3_room": {
+      "cls": "Wall"
+    },
+    "wall_left_4_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_left_4_room": {
+      "cls": "Wall"
+    },
+    "wall_main_1_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_main_1_room": {
+      "cls": "Wall"
+    },
+    "wall_main_2_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_main_2_room": {
+      "cls": "Wall"
+    },
+    "wall_main_3_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_main_3_room": {
+      "cls": "Wall"
+    },
+    "wall_main_4_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_main_4_room": {
+      "cls": "Wall"
+    },
+    "wall_right_1_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_right_1_room": {
+      "cls": "Wall"
+    },
+    "wallaccessory_11_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory_2_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory_4_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory_5_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory_6_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory_7_room": {
+      "cls": "WallAccessory"
+    },
+    "window_group_1_room": {
+      "cls": "Window"
+    }
+  },
+  "gen_textures": {},
+  "init_robot_base_ori": [
+    0.0,
+    0.0,
+    -0.00016215342262304588
+  ],
+  "init_robot_base_pos": [
+    5.261221919420188,
+    -1.8045381993226088,
+    0.0
+  ],
+  "lang": "Pick the squash from the sink and place it on the plate located on the counter.",
+  "layout_id": 49,
+  "object_cfgs": [
+    {
+      "exclude_obj_groups": null,
+      "graspable": true,
+      "info": {
+        "cat": "squash",
+        "groups": [
+          "food"
+        ],
+        "groups_containing_sampled_obj": [
+          "all",
+          "squash",
+          "vegetable",
+          "food",
+          "in_container"
+        ],
+        "mjcf_path": "/scratch/enmingzz/frequency_vla/robocasa365/deps/robocasa/robocasa/models/assets/objects/objaverse/squash/squash_15/model.xml",
+        "split": "pretrain"
+      },
+      "name": "obj",
+      "obj_groups": "food",
+      "placement": {
+        "fixture": "sink_right_group_1",
+        "pos": [
+          0.0,
+          1.0
+        ],
+        "size": [
+          0.25,
+          0.25
+        ]
+      },
+      "reset_region": {
+        "height": 0.08740352238851351,
+        "name": "basin_left",
+        "offset": [
+          -0.3155123874781437,
+          -0.0013502197326741155,
+          -0.14169635611952472
+        ],
+        "size": [
+          0.22385068813074951,
+          0.2986569638876845
+        ]
+      },
+      "type": "object",
+      "washable": true
+    },
+    {
+      "info": {
+        "cat": "plate",
+        "groups": [
+          "container"
+        ],
+        "groups_containing_sampled_obj": [
+          "all",
+          "plate",
+          "receptacle",
+          "container",
+          "container_set2"
+        ],
+        "mjcf_path": "/scratch/enmingzz/frequency_vla/robocasa365/deps/robocasa/robocasa/models/assets/objects/objaverse/plate/plate_1/model.xml",
+        "split": "pretrain"
+      },
+      "name": "container",
+      "obj_groups": "container",
+      "placement": {
+        "fixture": "counter_1_right_group_1",
+        "pos": [
+          "ref",
+          -1.0
+        ],
+        "sample_region_kwargs": {
+          "loc": "left_right",
+          "min_size": [
+            0.245475224055,
+            0.24547526901,
+            0.01497314187
+          ],
+          "ref": "sink_right_group_1"
+        },
+        "size": [
+          0.35,
+          0.4
+        ]
+      },
+      "reset_region": {
+        "name": "geom_1",
+        "offset": [
+          -0.816237175,
+          -3.469446951953614e-17,
+          0.460003
+        ],
+        "size": [
+          0.4538426500000001,
+          0.650178
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "info": {
+        "cat": "bell_pepper",
+        "groups": [
+          "all"
+        ],
+        "groups_containing_sampled_obj": [
+          "all",
+          "bell_pepper",
+          "vegetable",
+          "food",
+          "in_container"
+        ],
+        "mjcf_path": "/scratch/enmingzz/frequency_vla/robocasa365/deps/robocasa/robocasa/models/assets/objects/objaverse/bell_pepper/bell_pepper_0/model.xml",
+        "split": "pretrain"
+      },
+      "name": "distr_counter",
+      "obj_groups": "all",
+      "placement": {
+        "fixture": "counter_1_right_group_1",
+        "offset": [
+          0.0,
+          0.3
+        ],
+        "pos": [
+          "ref",
+          -1.0
+        ],
+        "sample_region_kwargs": {
+          "loc": "left_right",
+          "min_size": [
+            0.06301314029999996,
+            0.08249881694999997,
+            0.05559345577499998
+          ],
+          "ref": "sink_right_group_1"
+        },
+        "size": [
+          0.3,
+          0.3
+        ]
+      },
+      "reset_region": {
+        "name": "geom_0",
+        "offset": [
+          0.711921325,
+          -3.469446951953614e-17,
+          0.460003
+        ],
+        "size": [
+          0.6624743500000002,
+          0.650178
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "style_id": 49
+}

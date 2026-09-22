@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "aeb58e30cb9971df027857da0e8be0560fa964ea2d3f99fd3e4559b98a9cb9aa",
+  "episode_index": 4,
+  "episode_seed": 270060004,
+  "initial_observation_sha256": "05cfd820452274142b975507a60b5477c6a24ff19ef7541dcf7e4b4c09a00d7d",
+  "initial_state_sha256": "bc6f97887eecc8fea04e40169d1e574535bd88dfe4da40680218db7078d8bbc0",
+  "initial_xml_sha256": "f146b1174d53d6ce5438269aa11f8d3053552f1fd0a5c4e155ddf2c9a889c8a8",
+  "task_description": "Pick the garlic from the sink and place it on the plate located on the counter.",
+  "task_horizon": 900,
+  "task_id": 6,
+  "task_name": "PickPlaceSinkToCounter",
+  "training": false
+}

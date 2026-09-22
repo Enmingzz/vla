@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "c0552d83d0817561de83d2bbd073a91641c4a019ba4ea34e10533f7a5cecb649",
+  "episode_index": 9,
+  "episode_seed": 270060009,
+  "initial_observation_sha256": "bd8b9d32157a8a5685c648e112b63cc1cb73379b4dff878f78874157947d85d8",
+  "initial_state_sha256": "094b7ac40783df08484cbba21553455e73dab52fa2103ae575c3932bafdbbdc3",
+  "initial_xml_sha256": "9f149aa44feafc7d9157ab3bfd7da1bcd12a7e02215b5cc219d719927a1804b6",
+  "task_description": "Pick the bell pepper from the sink and place it on the plate located on the counter.",
+  "task_horizon": 900,
+  "task_id": 6,
+  "task_name": "PickPlaceSinkToCounter",
+  "training": false
+}

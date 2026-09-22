@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "bf743cdf05bf4d686bb1b06403b4b6eb52cff6857c13aea54dadc7de7be61b61",
+  "episode_index": 3,
+  "episode_seed": 270050003,
+  "initial_observation_sha256": "f278b2bd0d7fc48df413f9e8e53c4e11cb3d3acd86eafcd9f92be4deed88e826",
+  "initial_state_sha256": "0afab49e4a42ecfc172cc5f16d8d62c57490bc89d9a7ea2a1b49841a4985e4f1",
+  "initial_xml_sha256": "4df232e6f3eaa39bf26b73da8408f8ca7a4c74eed7d641caf9786b447c878fbd",
+  "task_description": "Pick the mango from the plate and place it in the pan.",
+  "task_horizon": 600,
+  "task_id": 5,
+  "task_name": "PickPlaceCounterToStove",
+  "training": false
+}

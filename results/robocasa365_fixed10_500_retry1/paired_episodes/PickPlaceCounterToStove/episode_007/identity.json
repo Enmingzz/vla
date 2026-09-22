@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "4f6d21cda0fccf87d8e2f1efc45ce1704687358d568ad18f3a5c8221f7c423d2",
+  "episode_index": 7,
+  "episode_seed": 270050007,
+  "initial_observation_sha256": "551390ade7b35e879ce057d093476fc249c5d388760135eb3f317eb30e6f4850",
+  "initial_state_sha256": "271f661f3f430b412e9e5be87f2befa2be90281df339f0c73780544bd69f155d",
+  "initial_xml_sha256": "a8dc14e4e0f2ec255c66f2fdbd40f3f258d9f10dc7eb5c0795c2630340b69712",
+  "task_description": "Pick the carrot from the plate and place it in the pan.",
+  "task_horizon": 600,
+  "task_id": 5,
+  "task_name": "PickPlaceCounterToStove",
+  "training": false
+}

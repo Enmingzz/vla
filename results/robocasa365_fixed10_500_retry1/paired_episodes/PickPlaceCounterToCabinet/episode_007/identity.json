@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "b0e3a7c9f4451dc0df80bb49d49e2adf75c0a8530a990e841e04f6b80352f8a8",
+  "episode_index": 7,
+  "episode_seed": 270040007,
+  "initial_observation_sha256": "0477bbc6dca995a21140491830456a7422c440b00c87c82fa0c2d69bc3a75984",
+  "initial_state_sha256": "5db7a29465e3ac1d73ed0c49368390934ecc85c086d17c11b4bc6fac6f90239d",
+  "initial_xml_sha256": "9fc7a1b4d2ecd6d36e30deb1e12374ec36769f4d3ae0ea69368b7d3845f961c5",
+  "task_description": "Pick the lemon from the counter and place it in the cabinet.",
+  "task_horizon": 750,
+  "task_id": 4,
+  "task_name": "PickPlaceCounterToCabinet",
+  "training": false
+}

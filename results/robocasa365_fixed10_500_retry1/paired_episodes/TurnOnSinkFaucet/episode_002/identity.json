@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "b71469b5914d0b6e253a303e2a56f176dc600d9ea58220a01982c15c7b2fa98a",
+  "episode_index": 2,
+  "episode_seed": 270090002,
+  "initial_observation_sha256": "928f1db1a1f6ccf42be9665bf17a07d48509c060aded6d33c2dd396f09f1eb42",
+  "initial_state_sha256": "0177909f0a5bf66954ffc5e93dfc0ef083d63c32a0d6043c82c2e76652dbd624",
+  "initial_xml_sha256": "35a0a214170adaec111296a4533e01ba02790c3c8a2a481fc41a450b19904917",
+  "task_description": "Turn on the sink faucet.",
+  "task_horizon": 600,
+  "task_id": 9,
+  "task_name": "TurnOnSinkFaucet",
+  "training": false
+}

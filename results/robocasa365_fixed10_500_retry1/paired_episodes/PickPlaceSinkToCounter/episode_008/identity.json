@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "df2895e2f959ea29f69c40efbcdb7605cde3ce77c9be023e8ba44d0bacba330e",
+  "episode_index": 8,
+  "episode_seed": 270060008,
+  "initial_observation_sha256": "897cb80956f994c72f5ac618823a9f304591ad4cb33f21c35d943c441ce1ad0f",
+  "initial_state_sha256": "fbffea323a0470a3d0129c89511ee2b87ca6fa55959b8e45002d93fa38cea32c",
+  "initial_xml_sha256": "f93a3a8842eb120c625f28e77022975bd288dcdba0721202560fbb4a5242a4f4",
+  "task_description": "Pick the lemon from the sink and place it on the plate located on the counter.",
+  "task_horizon": 900,
+  "task_id": 6,
+  "task_name": "PickPlaceSinkToCounter",
+  "training": false
+}

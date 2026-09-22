@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "604f714118bf7b64880f653fba6161fa27bb63d12fdebddb60f535d3534dd5de",
+  "episode_index": 0,
+  "episode_seed": 270060000,
+  "initial_observation_sha256": "7336871cdaa52bc23e034333d468ee758aee6f40092c9d44e20ffa10e92b2119",
+  "initial_state_sha256": "f7cb40f1bf8419c27b26e808719ba1180722d2e34e74fd05045d573a5035482c",
+  "initial_xml_sha256": "878fb483dea574fe20816f1a59ad168bf75b3e9f78178959afda9556e7ec6b29",
+  "task_description": "Pick the broccoli from the sink and place it on the plate located on the counter.",
+  "task_horizon": 900,
+  "task_id": 6,
+  "task_name": "PickPlaceSinkToCounter",
+  "training": false
+}

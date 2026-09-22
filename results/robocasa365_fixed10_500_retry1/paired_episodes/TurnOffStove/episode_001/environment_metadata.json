@@ -1,0 +1,479 @@
+{
+  "cam_configs": {
+    "robot0_agentview_center": {
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.6,
+        0.0,
+        1.15
+      ],
+      "quat": [
+        0.636945903301239,
+        0.3325185477733612,
+        -0.3199238181114197,
+        -0.6175596117973328
+      ]
+    },
+    "robot0_agentview_left": {
+      "camera_attribs": {
+        "fovy": "60"
+      },
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.5,
+        0.35,
+        1.05
+      ],
+      "quat": [
+        0.55623853,
+        0.29935253,
+        -0.37678665,
+        -0.6775092
+      ]
+    },
+    "robot0_agentview_right": {
+      "camera_attribs": {
+        "fovy": "60"
+      },
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.5,
+        -0.35,
+        1.05
+      ],
+      "quat": [
+        0.6775091886520386,
+        0.3767866790294647,
+        -0.2993525564670563,
+        -0.55623859167099
+      ]
+    },
+    "robot0_eye_in_hand": {
+      "parent_body": "robot0_right_hand",
+      "pos": [
+        0.05,
+        0,
+        0
+      ],
+      "quat": [
+        0,
+        0.707107,
+        0.707107,
+        0
+      ]
+    },
+    "robot0_frontview": {
+      "camera_attribs": {
+        "fovy": "60"
+      },
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.5,
+        0,
+        0.95
+      ],
+      "quat": [
+        0.6088936924934387,
+        0.3814677894115448,
+        -0.3673907518386841,
+        -0.5905545353889465
+      ]
+    }
+  },
+  "fixture_refs": {},
+  "fixtures": {
+    "coffee_machine_main_group_1": {
+      "cls": "CoffeeMachine"
+    },
+    "counter_13_main_group_1": {
+      "cls": "Counter"
+    },
+    "counter_1_right_group_1": {
+      "cls": "Counter"
+    },
+    "counter_2_main_group_1": {
+      "cls": "Counter"
+    },
+    "counter_3_front_group_1": {
+      "cls": "Counter"
+    },
+    "counter_5_front_group_1": {
+      "cls": "Counter"
+    },
+    "counter_corner_1_main_group_1": {
+      "cls": "Counter"
+    },
+    "cube_11_front_group_1": {
+      "cls": "Box"
+    },
+    "cube_1_right_group_1": {
+      "cls": "Box"
+    },
+    "cube_2_dining_area_group": {
+      "cls": "Box"
+    },
+    "cube_2_right_group_1": {
+      "cls": "Box"
+    },
+    "cube_4_front_group_1": {
+      "cls": "Box"
+    },
+    "cube_5_front_group_1": {
+      "cls": "Box"
+    },
+    "cube_main_group_1": {
+      "cls": "Box"
+    },
+    "dining_dining_area_group": {
+      "cls": "Counter"
+    },
+    "dishwasher_1_right_group_1": {
+      "cls": "Dishwasher"
+    },
+    "floor_1_backing_room": {
+      "cls": "Floor"
+    },
+    "floor_1_room": {
+      "cls": "Floor"
+    },
+    "floor_2_backing_room": {
+      "cls": "Floor"
+    },
+    "floor_2_room": {
+      "cls": "Floor"
+    },
+    "fridgefrenchdoor_housing_left_group_2": {
+      "cls": "HousingCabinet"
+    },
+    "fridgefrenchdoor_left_group_2": {
+      "cls": "FridgeFrenchDoor"
+    },
+    "hingecabinet_1_left_group_2": {
+      "cls": "HingeCabinet"
+    },
+    "hingecabinet_2_main_group_1": {
+      "cls": "HingeCabinet"
+    },
+    "hingecabinet_3_main_group_1": {
+      "cls": "HingeCabinet"
+    },
+    "micro_cab_main_group_1": {
+      "cls": "HingeCabinet"
+    },
+    "microwave_main_group_1": {
+      "cls": "Microwave"
+    },
+    "papertowel_main_group_1": {
+      "cls": "Accessory"
+    },
+    "singlecabinet_4_main_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "sink_right_group_1": {
+      "cls": "Sink"
+    },
+    "stack_01_main_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_01_main_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_01_main_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_02_main_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_02_main_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_02_main_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_03_main_group_1_1": {
+      "cls": "Drawer"
+    },
+    "stack_03_main_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_03_main_group_1_3": {
+      "cls": "Drawer"
+    },
+    "stack_03_main_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_04_main_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_04_main_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_05_right_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_05_right_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_07_right_group_1_1": {
+      "cls": "HingeCabinet"
+    },
+    "stack_07_right_group_1_2": {
+      "cls": "PanelCabinet"
+    },
+    "stack_07_right_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_08_dining_area_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_08_dining_area_group_2": {
+      "cls": "Drawer"
+    },
+    "stack_08_dining_area_group_base": {
+      "cls": "Box"
+    },
+    "stack_09_dining_area_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_09_dining_area_group_2": {
+      "cls": "Drawer"
+    },
+    "stack_09_dining_area_group_base": {
+      "cls": "Box"
+    },
+    "stack_10_dining_area_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_10_dining_area_group_2": {
+      "cls": "Drawer"
+    },
+    "stack_10_dining_area_group_base": {
+      "cls": "Box"
+    },
+    "stack_11_front_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_11_front_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_11_front_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_12_front_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_12_front_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_12_front_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_13_front_group_1_1": {
+      "cls": "Drawer"
+    },
+    "stack_13_front_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_13_front_group_1_3": {
+      "cls": "Drawer"
+    },
+    "stack_13_front_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_14_front_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_14_front_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_14_front_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_15_front_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_15_front_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_15_front_group_1_base": {
+      "cls": "Box"
+    },
+    "stool_1_room": {
+      "cls": "Stool"
+    },
+    "stool_2_room": {
+      "cls": "Stool"
+    },
+    "stool_3_room": {
+      "cls": "Stool"
+    },
+    "stool_4_room": {
+      "cls": "Stool"
+    },
+    "stove_main_group_1": {
+      "cls": "Stove"
+    },
+    "toaster_main_group_1": {
+      "cls": "Toaster"
+    },
+    "toaster_oven_main_group_1": {
+      "cls": "ToasterOven"
+    },
+    "wall_front_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_front_room": {
+      "cls": "Wall"
+    },
+    "wall_left_1_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_left_1_room": {
+      "cls": "Wall"
+    },
+    "wall_left_2_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_left_2_room": {
+      "cls": "Wall"
+    },
+    "wall_left_3_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_left_3_room": {
+      "cls": "Wall"
+    },
+    "wall_left_4_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_left_4_room": {
+      "cls": "Wall"
+    },
+    "wall_main_1_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_main_1_room": {
+      "cls": "Wall"
+    },
+    "wall_main_2_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_main_2_room": {
+      "cls": "Wall"
+    },
+    "wall_main_3_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_main_3_room": {
+      "cls": "Wall"
+    },
+    "wall_main_4_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_main_4_room": {
+      "cls": "Wall"
+    },
+    "wall_right_1_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_right_1_room": {
+      "cls": "Wall"
+    },
+    "wallaccessory_11_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory_2_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory_4_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory_5_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory_6_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory_7_room": {
+      "cls": "WallAccessory"
+    },
+    "window_group_1_room": {
+      "cls": "Window"
+    }
+  },
+  "gen_textures": {},
+  "init_robot_base_ori": [
+    0.0,
+    0.0,
+    1.5706449309965886
+  ],
+  "init_robot_base_pos": [
+    2.579896770111682,
+    -1.1790838493663107,
+    0.0
+  ],
+  "lang": "Turn off the front left burner of the stove.",
+  "layout_id": 49,
+  "object_cfgs": [
+    {
+      "info": {
+        "cat": "kettle_non_electric",
+        "groups": [
+          "cookware"
+        ],
+        "groups_containing_sampled_obj": [
+          "all",
+          "kettle_non_electric",
+          "receptacle",
+          "kettle",
+          "cookware"
+        ],
+        "mjcf_path": "/scratch/enmingzz/frequency_vla/robocasa365/deps/robocasa/robocasa/models/assets/objects/lightwheel/kettle/Kettle004/model.xml",
+        "split": "pretrain"
+      },
+      "name": "cookware",
+      "obj_groups": "cookware",
+      "placement": {
+        "ensure_object_boundary_in_range": false,
+        "fixture": "stove_main_group_1",
+        "rotation": [
+          [
+            -1.1780972450961724,
+            -0.7853981633974483
+          ],
+          [
+            0.7853981633974483,
+            1.1780972450961724
+          ]
+        ],
+        "sample_region_kwargs": {
+          "locs": [
+            "front_left"
+          ]
+        },
+        "size": [
+          0.02,
+          0.02
+        ]
+      },
+      "reset_region": {
+        "name": "front_left",
+        "offset": [
+          -0.16961108907365305,
+          -0.14769091467718246,
+          0.3066376428402726
+        ],
+        "size": [
+          0.1,
+          0.1
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "style_id": 17,
+  "task_refs": {
+    "cookware_burner": "front_left",
+    "knob": "front_left"
+  }
+}

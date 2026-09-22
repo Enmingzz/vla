@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "4fb1700a08be1dc0a27addc25285299cd39244b6fc8c4f7f2faf266a877fcf8f",
+  "episode_index": 4,
+  "episode_seed": 270070004,
+  "initial_observation_sha256": "fcd87fe1ad31f82548c85ddeb91c6e8c9d7980ad573008580e5a29996f3c40d2",
+  "initial_state_sha256": "b9b60a4ccf62497d9f25a6235267ba249874da0bb41bcf4ae782bff9a695255e",
+  "initial_xml_sha256": "6899e866ad98d3615ac28da79e8cdeb67991f34c601959923740ea6a909a4ba8",
+  "task_description": "Turn off the front right burner of the stove.",
+  "task_horizon": 750,
+  "task_id": 7,
+  "task_name": "TurnOffStove",
+  "training": false
+}

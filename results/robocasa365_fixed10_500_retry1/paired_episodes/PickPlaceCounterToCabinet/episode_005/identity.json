@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "2fbead2e242a4bd95365a220051fd69b53f361e3000b9c0af04858964a65d40a",
+  "episode_index": 5,
+  "episode_seed": 270040005,
+  "initial_observation_sha256": "a71d2f6df37a9a5f6f5bdb109dd3e6093e9e1fcc8798ed13a02d7b39b0fe1d35",
+  "initial_state_sha256": "da37712e6880946824a185a2dc9cedde6d9966974537ca67a3fc82e2d570fb1c",
+  "initial_xml_sha256": "9e60e4219c42ac2b2f630c557afeba8b25c1cc3c103073457e1bdc79c3eaa63d",
+  "task_description": "Pick the mug from the counter and place it in the cabinet.",
+  "task_horizon": 750,
+  "task_id": 4,
+  "task_name": "PickPlaceCounterToCabinet",
+  "training": false
+}

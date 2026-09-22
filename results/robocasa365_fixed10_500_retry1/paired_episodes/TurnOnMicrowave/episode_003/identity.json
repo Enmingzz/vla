@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "4edb551e3b2c67ec50e7e60cad7a58fbe0f99151b56bf24e48415640fcefeb96",
+  "episode_index": 3,
+  "episode_seed": 270080003,
+  "initial_observation_sha256": "9a7c9c8c62a15332a99b371e5c3ff3ba6762a854c4970705568be13c646ba461",
+  "initial_state_sha256": "d888f64fc43df077392c2ae2bbf49b2753d6a5643aa0e4ff33fbae1411441f22",
+  "initial_xml_sha256": "9d879f70d551f96782c1dfd6be5d9b1f7f34977019c1dbea8c9d5aa6b57c117d",
+  "task_description": "Press the start button on the microwave.",
+  "task_horizon": 450,
+  "task_id": 8,
+  "task_name": "TurnOnMicrowave",
+  "training": false
+}

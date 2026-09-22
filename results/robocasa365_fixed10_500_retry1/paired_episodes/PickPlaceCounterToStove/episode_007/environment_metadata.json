@@ -1,0 +1,408 @@
+{
+  "cam_configs": {
+    "robot0_agentview_center": {
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.6,
+        0.0,
+        1.15
+      ],
+      "quat": [
+        0.636945903301239,
+        0.3325185477733612,
+        -0.3199238181114197,
+        -0.6175596117973328
+      ]
+    },
+    "robot0_agentview_left": {
+      "camera_attribs": {
+        "fovy": "60"
+      },
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.5,
+        0.35,
+        1.05
+      ],
+      "quat": [
+        0.55623853,
+        0.29935253,
+        -0.37678665,
+        -0.6775092
+      ]
+    },
+    "robot0_agentview_right": {
+      "camera_attribs": {
+        "fovy": "60"
+      },
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.5,
+        -0.35,
+        1.05
+      ],
+      "quat": [
+        0.6775091886520386,
+        0.3767866790294647,
+        -0.2993525564670563,
+        -0.55623859167099
+      ]
+    },
+    "robot0_eye_in_hand": {
+      "parent_body": "robot0_right_hand",
+      "pos": [
+        0.05,
+        0,
+        0
+      ],
+      "quat": [
+        0,
+        0.707107,
+        0.707107,
+        0
+      ]
+    },
+    "robot0_frontview": {
+      "camera_attribs": {
+        "fovy": "60"
+      },
+      "parent_body": "mobilebase0_support",
+      "pos": [
+        -0.5,
+        0,
+        0.95
+      ],
+      "quat": [
+        0.6088936924934387,
+        0.3814677894115448,
+        -0.3673907518386841,
+        -0.5905545353889465
+      ]
+    }
+  },
+  "fixture_refs": {
+    "counter": "counter_1_right_group_1",
+    "stove": "stove_right_group_1"
+  },
+  "fixtures": {
+    "box_1_main_group_1": {
+      "cls": "Box"
+    },
+    "box_1_right_group_1": {
+      "cls": "Box"
+    },
+    "box_2_right_group_1": {
+      "cls": "Box"
+    },
+    "coffeemachine_main_group_1": {
+      "cls": "CoffeeMachine"
+    },
+    "counter_1_main_group_1": {
+      "cls": "Counter"
+    },
+    "counter_1_right_group_1": {
+      "cls": "Counter"
+    },
+    "counter_corner_1_main_group_1": {
+      "cls": "Counter"
+    },
+    "cube_2_main_group_1": {
+      "cls": "Box"
+    },
+    "dishwasher_1_right_group_1": {
+      "cls": "Dishwasher"
+    },
+    "floor_1_backing_room": {
+      "cls": "Floor"
+    },
+    "floor_1_room": {
+      "cls": "Floor"
+    },
+    "floor_2_backing_room": {
+      "cls": "Floor"
+    },
+    "floor_2_room": {
+      "cls": "Floor"
+    },
+    "fridgefrenchdoor_housing_right_group_1": {
+      "cls": "HousingCabinet"
+    },
+    "fridgefrenchdoor_right_group_1": {
+      "cls": "FridgeFrenchDoor"
+    },
+    "hingecabinet_1_main_group_1": {
+      "cls": "HingeCabinet"
+    },
+    "hingecabinet_1_right_group_1": {
+      "cls": "HingeCabinet"
+    },
+    "lightswitch_room": {
+      "cls": "WallAccessory"
+    },
+    "micro_cab_right_group_1": {
+      "cls": "HingeCabinet"
+    },
+    "microwave_right_group_1": {
+      "cls": "Microwave"
+    },
+    "papertowel_main_group_1": {
+      "cls": "Accessory"
+    },
+    "singlecabinet_1_main_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "singlecabinet_1_right_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "singlecabinet_2_right_group_1": {
+      "cls": "SingleCabinet"
+    },
+    "sink_right_group_1": {
+      "cls": "Sink"
+    },
+    "stack_1_main_group_1_1": {
+      "cls": "HingeCabinet"
+    },
+    "stack_1_main_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_1_main_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_1_right_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_1_right_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_2_main_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_2_main_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_2_right_group_1_1": {
+      "cls": "SingleCabinet"
+    },
+    "stack_2_right_group_1_2": {
+      "cls": "Drawer"
+    },
+    "stack_2_right_group_1_base": {
+      "cls": "Box"
+    },
+    "stack_3_right_group_1_1": {
+      "cls": "HingeCabinet"
+    },
+    "stack_3_right_group_1_base": {
+      "cls": "Box"
+    },
+    "stove_right_group_1": {
+      "cls": "Stove"
+    },
+    "toaster_right_group_1": {
+      "cls": "Toaster"
+    },
+    "wall_front_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_front_room": {
+      "cls": "Wall"
+    },
+    "wall_left_1_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_left_1_room": {
+      "cls": "Wall"
+    },
+    "wall_left_2_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_left_2_room": {
+      "cls": "Wall"
+    },
+    "wall_main_1_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_main_1_room": {
+      "cls": "Wall"
+    },
+    "wall_main_2_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_main_2_room": {
+      "cls": "Wall"
+    },
+    "wall_right_1_backing_room": {
+      "cls": "Wall"
+    },
+    "wall_right_1_room": {
+      "cls": "Wall"
+    },
+    "wallaccessory.001_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory.002_room": {
+      "cls": "WallAccessory"
+    },
+    "wallaccessory.003_room": {
+      "cls": "WallAccessory"
+    },
+    "window_group_room": {
+      "cls": "Window"
+    }
+  },
+  "gen_textures": {},
+  "init_robot_base_ori": [
+    0.0,
+    0.0,
+    0.00030199704781619374
+  ],
+  "init_robot_base_pos": [
+    2.875099560685315,
+    -3.5446615658843577,
+    0.0
+  ],
+  "lang": "Pick the carrot from the plate and place it in the pan.",
+  "layout_id": 40,
+  "object_cfgs": [
+    {
+      "info": {
+        "cat": "pan",
+        "groups": [
+          "pan"
+        ],
+        "groups_containing_sampled_obj": [
+          "all",
+          "pan",
+          "receptacle",
+          "cookware",
+          "pots_and_pans"
+        ],
+        "mjcf_path": "/scratch/enmingzz/frequency_vla/robocasa365/deps/robocasa/robocasa/models/assets/objects/objaverse/pan/pan_18/model.xml",
+        "split": "pretrain"
+      },
+      "name": "container",
+      "obj_groups": "pan",
+      "placement": {
+        "ensure_object_boundary_in_range": false,
+        "fixture": "stove_right_group_1",
+        "rotation": [
+          [
+            -1.1780972450961724,
+            -0.7853981633974483
+          ],
+          [
+            0.7853981633974483,
+            1.1780972450961724
+          ]
+        ],
+        "size": [
+          0.02,
+          0.02
+        ]
+      },
+      "reset_region": {
+        "name": "front_right",
+        "offset": [
+          0.1728141384636687,
+          -0.08637226381397044,
+          0.39483243421698316
+        ],
+        "size": [
+          0.1,
+          0.1
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "info": {
+        "cat": "plate",
+        "groups": [
+          "container"
+        ],
+        "groups_containing_sampled_obj": [
+          "all",
+          "plate",
+          "receptacle",
+          "container",
+          "container_set2"
+        ],
+        "mjcf_path": "/scratch/enmingzz/frequency_vla/robocasa365/deps/robocasa/robocasa/models/assets/objects/objaverse/plate/plate_19/model.xml",
+        "split": "pretrain"
+      },
+      "name": "obj_container",
+      "obj_groups": "container",
+      "placement": {
+        "fixture": "counter_1_right_group_1",
+        "pos": [
+          "ref",
+          -1.0
+        ],
+        "sample_region_kwargs": {
+          "min_size": [
+            0.24709981284000002,
+            0.24709756509000005,
+            0.021416774287499996
+          ],
+          "ref": "stove_right_group_1"
+        },
+        "size": [
+          0.3,
+          0.3
+        ],
+        "try_to_place_in": "container"
+      },
+      "reset_region": {
+        "name": "geom_0",
+        "offset": [
+          0.8254524827562169,
+          -3.469446951953614e-17,
+          0.46
+        ],
+        "size": [
+          0.784095034487567,
+          0.65
+        ]
+      },
+      "type": "object"
+    },
+    {
+      "cookable": true,
+      "exclude_obj_groups": null,
+      "graspable": true,
+      "info": {
+        "cat": "carrot",
+        "groups": [
+          "food"
+        ],
+        "groups_containing_sampled_obj": [
+          "all",
+          "carrot",
+          "vegetable",
+          "food",
+          "in_container",
+          "food_set1",
+          "group1"
+        ],
+        "mjcf_path": "/scratch/enmingzz/frequency_vla/robocasa365/deps/robocasa/robocasa/models/assets/objects/objaverse/carrot/carrot_0/model.xml",
+        "split": "pretrain"
+      },
+      "name": "obj",
+      "obj_groups": "food",
+      "placement": {
+        "ensure_object_boundary_in_range": false,
+        "sample_args": {
+          "on_top": true,
+          "reference": "obj_container"
+        },
+        "size": [
+          0.01,
+          0.01
+        ]
+      },
+      "type": "object"
+    }
+  ],
+  "style_id": 34
+}

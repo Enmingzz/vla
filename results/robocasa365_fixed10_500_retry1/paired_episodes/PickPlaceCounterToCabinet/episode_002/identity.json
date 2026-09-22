@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "f18e7c05cc25aeff581057111826fb67e606521e7c8041b510db2d9fb5779fa2",
+  "episode_index": 2,
+  "episode_seed": 270040002,
+  "initial_observation_sha256": "9828ab49e5a29529a20598bbe271ea876f3502c31849a33663c8297188c61871",
+  "initial_state_sha256": "131f482313cd7af09fa38d0c7e140bdc72ab061a7eb0a623ecf1d37b260756a7",
+  "initial_xml_sha256": "f84a64b8c65bda8ba9edec520259e446d0f25e69838dc9bfea81dbd18e449ae2",
+  "task_description": "Pick the glass cup from the counter and place it in the cabinet.",
+  "task_horizon": 750,
+  "task_id": 4,
+  "task_name": "PickPlaceCounterToCabinet",
+  "training": false
+}

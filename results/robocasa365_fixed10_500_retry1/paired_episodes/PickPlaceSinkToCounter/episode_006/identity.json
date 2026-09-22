@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "43d4259f66234559418bc8cd38071e14dbac860c520e8523d753dac162ce7e49",
+  "episode_index": 6,
+  "episode_seed": 270060006,
+  "initial_observation_sha256": "d340942ee8f77e5083bbbdad7e551c2e176c1f8977e3b19d4053d4d3ef8a066d",
+  "initial_state_sha256": "226c8cac777b610c0f14f9721a838e114f0f73c9b0351892a41b6988dcf2054a",
+  "initial_xml_sha256": "cd3afd70d374c14c86a3f1b4df3686a436b9d9d2a427200346adfccd55840297",
+  "task_description": "Pick the pear from the sink and place it on the plate located on the counter.",
+  "task_horizon": 900,
+  "task_id": 6,
+  "task_name": "PickPlaceSinkToCounter",
+  "training": false
+}

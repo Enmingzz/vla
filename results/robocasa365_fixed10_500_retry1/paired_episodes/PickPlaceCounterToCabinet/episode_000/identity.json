@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "a59270193fefe00b41f4154e8d90a09258f49d21ce32371c7a855ae275286eec",
+  "episode_index": 0,
+  "episode_seed": 270040000,
+  "initial_observation_sha256": "1bc80bcb7bd607392151bb9faf3c3d5b075fc3d3838282bdbf4f7181d66b837d",
+  "initial_state_sha256": "3221ff2b15a380ce53576a40b3e745c61e798613e6769a59081cf2ab4e36c162",
+  "initial_xml_sha256": "ecd32a956c7e9681adcdb4b1342f774fa2e8836c836cb77d770a31c291c5adb9",
+  "task_description": "Pick the paprika from the counter and place it in the cabinet.",
+  "task_horizon": 750,
+  "task_id": 4,
+  "task_name": "PickPlaceCounterToCabinet",
+  "training": false
+}

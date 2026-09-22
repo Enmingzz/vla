@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "fa72602401d42068569723df4c8c1c02bef513ea24c3fb927fc7655554c19b29",
+  "episode_index": 6,
+  "episode_seed": 270030006,
+  "initial_observation_sha256": "706ee92f5c8193d4856a4500a4ad58a9052aa3e94841dda6f9aebe1ce1fd70a5",
+  "initial_state_sha256": "e6802b9c02392f8352825c0258d337b42f0a2a5bca43898c00772667b83b9872",
+  "initial_xml_sha256": "6bb51932e721445d49edf46fd4041abc5293cb6912168ec4c69431d540cb7f4d",
+  "task_description": "Open the right drawer.",
+  "task_horizon": 750,
+  "task_id": 3,
+  "task_name": "OpenDrawer",
+  "training": false
+}

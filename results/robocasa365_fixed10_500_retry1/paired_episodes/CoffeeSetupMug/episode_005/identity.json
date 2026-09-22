@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "5c5c4b425a32dde8f6d04fd906825e4a19cd4e2def43efcbd9e81b1a1164b131",
+  "episode_index": 5,
+  "episode_seed": 270010005,
+  "initial_observation_sha256": "7c0dc53e1d4622b91c67ff354af65f86ac3e275e9e56afd1be1eb69a9caf95fb",
+  "initial_state_sha256": "6ba26345c97eb155d63c220cbaa6875200a1ea3a09e2fa40d6a0cc430695e09d",
+  "initial_xml_sha256": "98b72b35e1c2dfa72464762ca89d2e26d8119bfc9d9e20d0557959a9957e59bc",
+  "task_description": "Pick the mug from the counter and place it under the coffee machine dispenser.",
+  "task_horizon": 600,
+  "task_id": 1,
+  "task_name": "CoffeeSetupMug",
+  "training": false
+}

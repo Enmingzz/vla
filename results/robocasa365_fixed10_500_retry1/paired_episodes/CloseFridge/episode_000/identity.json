@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "08cee4803f50689b55533313f172c5e84bbfdfefefc0fcb667bcc74573fb7691",
+  "episode_index": 0,
+  "episode_seed": 270000000,
+  "initial_observation_sha256": "3b2d1e314a4b763535eef3a81ca6ae96ec2e256de7ead6877b6c5e16b0d6fbfd",
+  "initial_state_sha256": "a2245f1b979b00d7e17f5f37fc9f7e8c0d1f93a4999570bca3919cb679ab1dc3",
+  "initial_xml_sha256": "4ef97c0c9608147f80f70a0013d804e691f5442f0622a2b96220a14e83d59e70",
+  "task_description": "Close the fridge door.",
+  "task_horizon": 900,
+  "task_id": 0,
+  "task_name": "CloseFridge",
+  "training": false
+}

@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "08a6edec958e1ed4901888362a7dc6a20e97bfa00bc521e53ad07f3554ba6f83",
+  "episode_index": 2,
+  "episode_seed": 270060002,
+  "initial_observation_sha256": "0b5382ef3b911ac702c71e3bda314cd5e56b1f89f799e68e4cb3deff515e45ee",
+  "initial_state_sha256": "0f43ec655048d7c192b4dcfad8c18b8cc51adb99a4249f4a026539922e6e1584",
+  "initial_xml_sha256": "9939325eb889b30550270015790aa53aa61bd1643f0737511a88a7c8b7eec06e",
+  "task_description": "Pick the orange from the sink and place it on the plate located on the counter.",
+  "task_horizon": 900,
+  "task_id": 6,
+  "task_name": "PickPlaceSinkToCounter",
+  "training": false
+}

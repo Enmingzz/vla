@@ -12,12 +12,14 @@ import time
 
 from .logging_utils import append_record, digest, write_json
 from .robocasa_protocol import check_chunk, load_config
+from .robocasa_pairing import reuse_task_records
 
 
-def evaluate_task(config,task_id,horizon,port,root,catalog,condition):
+def evaluate_task(config,task_id,horizon,port,root,catalog,condition,reuse_root=None,
+                  allow_obj_mime_equivalence=False,reset_attempts=1):
     import imageio.v2 as imageio
     from openpi_client.websocket_client_policy import WebsocketClientPolicy
-    from .robocasa_env import Episode
+    from .robocasa_env import Episode, UnpairedResetError
     root = Path(root)
     task_name = config['tasks'][task_id]
     raw = root/'raw'/condition/(task_name+'.jsonl')
@@ -31,10 +33,43 @@ def evaluate_task(config,task_id,horizon,port,root,catalog,condition):
     fingerprint = metadata['inference_fingerprint']
     records = []
     try:
+        cached = {}
+        if reuse_root:
+            if not allow_obj_mime_equivalence:
+                raise ValueError('Recovery requires explicit XML comparison provenance')
+            cached,origin = reuse_task_records(config,task_id,horizon,catalog,condition,reuse_root,metadata)
+            write_json(root/'provenance'/condition/(task_name+'_reuse.json'),{
+                'source':str(reuse_root),'source_server':origin,'reused_indices':sorted(cached),
+                'inference_equivalence':'Exact spec, permitting only student/step_N phase aliases'})
         for index in range(config['evaluation_episodes_per_task']):
-            episode = Episode(config,task_id,index)
+            if index in cached:
+                append_record(raw,cached[index])
+                records.append(cached[index])
+                continue
+            # Retry only an unpaired reset, before any policy query/action. The
+            # seed and target identity never change; every rejected reset is saved.
+            for attempt in range(reset_attempts):
+                episode = Episode(config,task_id,index)
+                try:
+                    episode.pair(catalog,allow_obj_mime_equivalence)
+                except UnpairedResetError as error:
+                    import numpy as np
+                    folder = root/'provenance'/'reset_mismatches'/condition/task_name/(
+                        'episode_%03d_attempt_%d'%(index,attempt+1))
+                    write_json(folder/'identity.json',episode.identity)
+                    write_json(folder/'environment_metadata.json',episode.meta)
+                    (folder/'model.xml').write_text(episode.xml)
+                    np.savez(folder/'initial_state.npz',state=episode.state)
+                    episode.close()
+                    logging.warning('%s',error)
+                    if attempt+1 == reset_attempts:
+                        raise
+                except BaseException:
+                    episode.close()
+                    raise
+                else:
+                    break
             try:
-                episode.pair(catalog)
                 calls,query_seconds = 0,0.0
                 plan = deque()
                 video = video_dir/('episode_%03d.mp4'%index)
@@ -67,6 +102,8 @@ def evaluate_task(config,task_id,horizon,port,root,catalog,condition):
                     'policy_query_seconds':query_seconds,'inference_fingerprint':fingerprint,
                     'prediction_horizon':50,'flow_steps':10,'renderer':'egl','control_frequency_hz':20,
                     'video':str(video),'paired_catalog':str(catalog),'config_sha256':digest(config)}
+                if allow_obj_mime_equivalence:
+                    record['reused_record_source'] = ''
                 append_record(raw,record)
                 records.append(record)
                 logging.warning('%s %s %s/%s success=%s steps=%s calls=%s seconds=%.1f',
@@ -79,15 +116,19 @@ def evaluate_task(config,task_id,horizon,port,root,catalog,condition):
     return records
 
 
-def evaluate(config,horizon,port,root,catalog,condition):
+def evaluate(config,horizon,port,root,catalog,condition,reuse_root=None,
+             allow_obj_mime_equivalence=False,reset_attempts=1):
     if horizon not in (5,20):
         raise ValueError('This pilot compares H=5 and H=20')
+    if not 1 <= reset_attempts <= 3:
+        raise ValueError('Reset attempts must be bounded between one and three')
     root = Path(root)
     tasks = config['tasks']
     records = []
     with ProcessPoolExecutor(max_workers=config['evaluation_workers'],
                              mp_context=mp.get_context('spawn')) as pool:
-        futures = [pool.submit(evaluate_task,config,i,horizon,port,str(root),str(catalog),condition)
+        futures = [pool.submit(evaluate_task,config,i,horizon,port,str(root),str(catalog),condition,
+                               reuse_root,allow_obj_mime_equivalence,reset_attempts)
                    for i in range(len(tasks))]
         try:
             for future in as_completed(futures):
@@ -104,7 +145,7 @@ def evaluate(config,horizon,port,root,catalog,condition):
     folder = root/'aggregated'
     folder.mkdir(exist_ok=True)
     with (folder/(condition+'_episodes.csv')).open('w',newline='') as f:
-        writer = csv.DictWriter(f,fieldnames=list(records[0]))
+        writer = csv.DictWriter(f,fieldnames=sorted(set().union(*(r.keys() for r in records))))
         writer.writeheader()
         writer.writerows(records)
     successes = sum(r['success'] for r in records)

@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "d8684b48c3bd47ce70e078b4eeb1aac8df7b58a0de973f423eeae2b8fb6e8f29",
+  "episode_index": 3,
+  "episode_seed": 270040003,
+  "initial_observation_sha256": "3328291a78b4b2a0f55de22f1b49b231eaab6788d411f4aeeb5d83cca7057c65",
+  "initial_state_sha256": "ed2f0c072619d5c133775db8f1cf8dca982087083b2d3f5c57ddf79ae8631aba",
+  "initial_xml_sha256": "e040da54d0d11f17d2ee29bb90c1d9733a6e334ad37e80076fb49ecb5d5f8b45",
+  "task_description": "Pick the mushroom from the counter and place it in the cabinet.",
+  "task_horizon": 750,
+  "task_id": 4,
+  "task_name": "PickPlaceCounterToCabinet",
+  "training": false
+}

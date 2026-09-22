@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "33bd2a4a74f66be9b9e90fc1eca2dbb04b0dd2bb49efee80fa64ca8c2571e0c8",
+  "episode_index": 9,
+  "episode_seed": 270050009,
+  "initial_observation_sha256": "5fed3a526e65c19e7548c939acc9296e12c2b71e66af5223d90458990ab08a4f",
+  "initial_state_sha256": "ef0ac8231c3af4d2ff6b979d8a450d8ae953bfdc26a975bc6193c5cb8e0316f2",
+  "initial_xml_sha256": "e4a4495dfc5e2fa4cf23f55ab2d1140e43b5d6fd68f6fabb31cf3314483828e2",
+  "task_description": "Pick the onion from the plate and place it in the pan.",
+  "task_horizon": 600,
+  "task_id": 5,
+  "task_name": "PickPlaceCounterToStove",
+  "training": false
+}

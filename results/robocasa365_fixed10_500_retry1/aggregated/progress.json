@@ -1,0 +1,42 @@
+{
+  "conditions": {
+    "original_h20": {
+      "complete": true,
+      "completed_episodes": 100,
+      "successes": 58
+    },
+    "original_h5": {
+      "complete": false,
+      "completed_episodes": 60,
+      "successes": 31
+    },
+    "step500_h20": {
+      "complete": false,
+      "completed_episodes": 33,
+      "successes": 6
+    },
+    "step500_h5": {
+      "complete": false,
+      "completed_episodes": 0,
+      "successes": 0
+    }
+  },
+  "partial_comparisons": {
+    "opsd_recovery": {
+      "condition_a": "original_h20",
+      "condition_b": "step500_h20",
+      "descriptive_only": true,
+      "matched_episodes": 33,
+      "successes_a": 18,
+      "successes_b": 6
+    },
+    "replanning": {
+      "condition_a": "original_h5",
+      "condition_b": "original_h20",
+      "descriptive_only": true,
+      "matched_episodes": 60,
+      "successes_a": 31,
+      "successes_b": 38
+    }
+  }
+}

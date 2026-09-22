@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "c27e0624b974a3889ab2c403e1c47ad30dbf20025e19d08ed5ac9c9227f73bee",
+  "episode_index": 6,
+  "episode_seed": 270050006,
+  "initial_observation_sha256": "febcb7fa7ed4214e697dfb34bbb803c5f95aa4720e338d487a105529e1d3c784",
+  "initial_state_sha256": "0a7b840d8cb98fd091c2ec3e9709eaafc025848da08fdd0f172e79bb1f1226b7",
+  "initial_xml_sha256": "fb4cfa6cb340c4735fe468ee6a2dd5fe2ab1d041f3d35b805e94f0ca859d3db3",
+  "task_description": "Pick the corn from the plate and place it in the pan.",
+  "task_horizon": 600,
+  "task_id": 5,
+  "task_name": "PickPlaceCounterToStove",
+  "training": false
+}

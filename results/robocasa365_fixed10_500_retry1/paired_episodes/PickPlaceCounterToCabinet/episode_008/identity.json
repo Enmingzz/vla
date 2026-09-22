@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "532d8dfe2f06774cfd766e18404bacb89d6b9bd7028467fdb2d9a13eb16d09a1",
+  "episode_index": 8,
+  "episode_seed": 270040008,
+  "initial_observation_sha256": "536b14df08063efbfada60f4cdb7d1bb7b7883362851736d5f801bfc60813f1c",
+  "initial_state_sha256": "1a468f331faf67054e4dbb4286f443100210b576cdf9524e5ab89922b99beec5",
+  "initial_xml_sha256": "51073121bdbf274886b87ba2fe30fab85c7a41453ba18eef742fb68f0d4b436f",
+  "task_description": "Pick the tongs from the counter and place it in the cabinet.",
+  "task_horizon": 750,
+  "task_id": 4,
+  "task_name": "PickPlaceCounterToCabinet",
+  "training": false
+}

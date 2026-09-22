@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "d4cb911efd816451379513c7d739d777696e81f03c5ffab27e81afa38f68d89c",
+  "episode_index": 1,
+  "episode_seed": 270050001,
+  "initial_observation_sha256": "c3cf6b6fab3441ae4209e38c9a2d34f37c1f26e163438e2aa86b34f9331c7166",
+  "initial_state_sha256": "dc6dc56d27a01b55dfe8bbc5e83724a2f8e3245b703bf15eebeea8b7a1f63cf5",
+  "initial_xml_sha256": "5f16cdcbe63e84576403b8c5ce7ea36178e8fe4169bd84636af76833a6bda96d",
+  "task_description": "Pick the hotdog bun from the plate and place it in the pan.",
+  "task_horizon": 600,
+  "task_id": 5,
+  "task_name": "PickPlaceCounterToStove",
+  "training": false
+}

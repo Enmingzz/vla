@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "5e965fe3b7e020141cae8d695e0814429e555e705dd25b8e0958ec795b5aa949",
+  "episode_index": 3,
+  "episode_seed": 270060003,
+  "initial_observation_sha256": "b01bf219d453c5da32d1fcc0507c7e3f410440d0bfddff812d86075309624025",
+  "initial_state_sha256": "09b2483bddc913a93fb284e91b2ec0826d204372113454211abee7c2486a034d",
+  "initial_xml_sha256": "b95b119db5729773f1d6719b72db7ed1a227ff5751050993931744402c935396",
+  "task_description": "Pick the chicken drumstick from the sink and place it on the plate located on the counter.",
+  "task_horizon": 900,
+  "task_id": 6,
+  "task_name": "PickPlaceSinkToCounter",
+  "training": false
+}

@@ -86,3 +86,65 @@ def test_paired_analysis_rejects_different_resets_and_retains_negative_change():
     assert paired([base],[worse])['difference_b_minus_a']==-1.0
     with pytest.raises(ValueError,match='initial_state_sha256'):
         paired([base],[dict(worse,initial_state_sha256='different')])
+
+
+def test_pairing_ignores_only_inferred_obj_mime(tmp_path):
+    import hashlib
+    from frequency_vla.logging_utils import write_json
+    from frequency_vla.robocasa_env import Episode, UnpairedResetError
+    from frequency_vla.robocasa_pairing import xml_comparison_hash
+    xml = '<mujoco><asset><mesh file="m.obj" content_type="model/obj" scale="1 1 1"/></asset></mujoco>'
+    other = xml.replace(' content_type="model/obj"','')
+    assert xml_comparison_hash(xml) == xml_comparison_hash(other)
+    for changed in [other.replace('m.obj','other.obj'),other.replace('1 1 1','1 1 2'),
+                    xml.replace('m.obj','m.stl')]:
+        assert xml_comparison_hash(xml) != xml_comparison_hash(changed)
+    ep = Episode.__new__(Episode)
+    ep.name,ep.index,ep.xml = 'Task',0,other
+    identity = {'training':False,'initial_observation_sha256':'same-image',
+                'initial_xml_sha256':hashlib.sha256(xml.encode()).hexdigest()}
+    folder = tmp_path/'Task/episode_000'
+    write_json(folder/'identity.json',identity)
+    (folder/'model.xml').write_text(xml)
+    ep.identity = dict(identity,initial_xml_sha256=hashlib.sha256(other.encode()).hexdigest())
+    with pytest.raises(UnpairedResetError):
+        ep.pair(tmp_path)
+    ep.pair(tmp_path,allow_obj_mime_equivalence=True)
+    assert ep.identity['initial_xml_sha256'] != identity['initial_xml_sha256']
+    assert ep.identity['initial_xml_comparison_sha256'] == xml_comparison_hash(xml)
+    ep.identity['initial_observation_sha256'] = 'different-image'
+    with pytest.raises(UnpairedResetError,match='initial_observation_sha256'):
+        ep.pair(tmp_path,allow_obj_mime_equivalence=True)
+
+
+def test_cached_inference_allows_only_snapshot_phase_alias():
+    import copy
+    from frequency_vla.robocasa_pairing import same_inference_spec
+    a = {'flow_steps':10,'sources':{'native':'unchanged'},'temporal_opsd':{
+        'phase':'student','optimizer_step':500,'checkpoint':{'path':'step_500','manifest_sha256':'abc'}}}
+    b = copy.deepcopy(a)
+    b['temporal_opsd']['phase'] = 'step_500'
+    assert same_inference_spec(a,b)
+    for changed in [dict(b,flow_steps=9),dict(b,sources={'native':'different'})]:
+        assert not same_inference_spec(a,changed)
+    b['temporal_opsd']['checkpoint']['manifest_sha256'] = 'different'
+    assert not same_inference_spec(a,b)
+
+
+def test_analysis_reports_partial_comparison_on_common_episodes(tmp_path):
+    from frequency_vla.robocasa_analysis import analyze
+    from frequency_vla.logging_utils import append_record
+    import json
+    base = {'task_id':0,'episode_index':0,'episode_seed':27,'success':True,
+        **{k:'same' for k in ['initial_state_sha256','initial_xml_sha256',
+            'initial_observation_sha256','environment_metadata_sha256','config_sha256',
+            'prediction_horizon','flow_steps','renderer']}}
+    append_record(tmp_path/'h20/raw/original_h20/Task.jsonl',base)
+    append_record(tmp_path/'h20/raw/original_h20/Task.jsonl',dict(base,episode_index=1))
+    append_record(tmp_path/'train500/raw/step500_h20/Task.jsonl',dict(base,success=False))
+    analyze(tmp_path)
+    result = json.loads((tmp_path/'aggregated/progress.json').read_text())
+    comparison = result['partial_comparisons']['opsd_recovery']
+    assert comparison['matched_episodes'] == 1
+    assert comparison['successes_a'] == 1 and comparison['successes_b'] == 0
+    assert not result['conditions']['step500_h20']['complete']

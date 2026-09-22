@@ -1,0 +1,9 @@
+{
+  "duplicate_initial_state_equal": true,
+  "formal_evaluation_episode": false,
+  "hostname": "fc10616",
+  "passed": true,
+  "probe_training_seed": 170009001,
+  "renderer": "NVIDIA H100 80GB HBM3/PCIe/SSE2",
+  "seconds": 43.54906770866364
+}

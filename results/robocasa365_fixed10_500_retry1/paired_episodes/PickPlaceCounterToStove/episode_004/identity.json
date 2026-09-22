@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "dbd270ef787d9a4bb6758f17ce32ec3ac81b0871d0eb59f38c68bc8b03f7125b",
+  "episode_index": 4,
+  "episode_seed": 270050004,
+  "initial_observation_sha256": "ffb2b3106fd1adfff58b365afc58a1895b125a10c0bcd8113213e4601d9fe126",
+  "initial_state_sha256": "cb384dd2acdf8b1ba3b3db0f34da0f66c4b4b5c495bdc7ef76c5246093ace241",
+  "initial_xml_sha256": "f0822a733b485d078a3a9b352738becc6bdd8a1128ddcb0016a0dee310bc927e",
+  "task_description": "Pick the bell pepper from the plate and place it in the pan.",
+  "task_horizon": 600,
+  "task_id": 5,
+  "task_name": "PickPlaceCounterToStove",
+  "training": false
+}

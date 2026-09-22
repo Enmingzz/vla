@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "59fe9f55711253f1a6953e25b1b8b2fb91dce7a3f3c24b46b6578375c2b1a3ee",
+  "episode_index": 8,
+  "episode_seed": 270050008,
+  "initial_observation_sha256": "7420351c74317bc6e56b0d04d3b4256bf3eb0b39118cc40ffd9d472a55f32c57",
+  "initial_state_sha256": "5473bb2123d5174e50614556eb6e478478ed50b6c9bba6be9c3ccdff5cf9b909",
+  "initial_xml_sha256": "4465b7268be07ba6cb33e2db23345a636fbd8f0536340d73a5cc97bba38ed02b",
+  "task_description": "Pick the cheese from the plate and place it in the pan.",
+  "task_horizon": 600,
+  "task_id": 5,
+  "task_name": "PickPlaceCounterToStove",
+  "training": false
+}

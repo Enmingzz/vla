@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "361c96e00c6b05f577137d17e70bc6593b19f536237e65e76329705ad5d88a9a",
+  "episode_index": 3,
+  "episode_seed": 270020003,
+  "initial_observation_sha256": "9d37e7ec9c345aaa72f9cec7e5983f72dfc794ea65b3a249ab57fdab99b6a469",
+  "initial_state_sha256": "ffc0ca109e1ed99f6683f28bab256182e2d631fe0ad40f2809591f9afc7d2ad7",
+  "initial_xml_sha256": "bcad33ed701b0731f8b0e982c066a58bcc5b7c0266cb551ec9132b158df517ca",
+  "task_description": "Open the cabinet doors.",
+  "task_horizon": 1050,
+  "task_id": 2,
+  "task_name": "OpenCabinet",
+  "training": false
+}

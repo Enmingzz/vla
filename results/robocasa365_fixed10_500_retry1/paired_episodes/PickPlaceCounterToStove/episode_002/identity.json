@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "0c7c20257bfea62321c9e80b24e278151b05036ad64684f110406f6ae17deb07",
+  "episode_index": 2,
+  "episode_seed": 270050002,
+  "initial_observation_sha256": "ed95575f3235e8e776eac8ffef3ff5eea4822d0380b409301a35acb8175f34c1",
+  "initial_state_sha256": "fb237e4eb3487d41425cebd014cc0c4f98c7c30b425ee90c4f598ec5fc982751",
+  "initial_xml_sha256": "4b2dd46504842286cb4963db68926c9e18aa8f5ff168aab19888af7117fc4312",
+  "task_description": "Pick the lime from the plate and place it in the pan.",
+  "task_horizon": 600,
+  "task_id": 5,
+  "task_name": "PickPlaceCounterToStove",
+  "training": false
+}

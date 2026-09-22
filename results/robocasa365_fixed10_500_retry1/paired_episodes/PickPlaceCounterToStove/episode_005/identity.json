@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "f2f54256ffe8f4588380971d73d09672fd3f77a15b38db0356fb9ed5b0efa1f0",
+  "episode_index": 5,
+  "episode_seed": 270050005,
+  "initial_observation_sha256": "9a76ec7cc10ef27278f05adff5bfea69b4d68f5894d1929e299e3b6257b78ea6",
+  "initial_state_sha256": "f3a151a818a255e3955c5f408c6ba483737bac83ae0813e5527a3ea59a21ac40",
+  "initial_xml_sha256": "d0aae44684fcf0519cfd83d9ca6640eab0bdc7a6d4bbb8ec383341dfe9976a22",
+  "task_description": "Pick the lemon wedge from the plate and place it in the pan.",
+  "task_horizon": 600,
+  "task_id": 5,
+  "task_name": "PickPlaceCounterToStove",
+  "training": false
+}

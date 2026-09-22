@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "7141ddc055345393262f1561602f987a5fdb02280ae27ce425c9241f7e9f58f5",
+  "episode_index": 1,
+  "episode_seed": 270040001,
+  "initial_observation_sha256": "efcf330a7010ec9ac241ff3072b790b844ef02b37e272ee240678659a4cca836",
+  "initial_state_sha256": "deb6dd93facc51e071555f161a7c81b49f9f58e59b8b33601ce3ddbd9851e4f8",
+  "initial_xml_sha256": "ad115d89c6b414d3de300f8da58be5c8a2e40c2241966f846028b431be2cb14e",
+  "task_description": "Pick the measuring cup from the counter and place it in the cabinet.",
+  "task_horizon": 750,
+  "task_id": 4,
+  "task_name": "PickPlaceCounterToCabinet",
+  "training": false
+}

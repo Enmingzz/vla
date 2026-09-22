@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "46af3bb4e10bd32cbed8baa5c43068672ea5305b53c88d3b0b719397514c1069",
+  "episode_index": 4,
+  "episode_seed": 270040004,
+  "initial_observation_sha256": "72dfb47c9f9f4d7d5bf1689cab3caa3754871853fa89c127133e87e72869264e",
+  "initial_state_sha256": "634b9b9e18496a955218b7e0b907d544e21f1f8c626e618df772660cb08cc35a",
+  "initial_xml_sha256": "233966f0fc194ea1f90253987b7cd7c47d92a86e669a208785f1994f52756ac5",
+  "task_description": "Pick the bar from the counter and place it in the cabinet.",
+  "task_horizon": 750,
+  "task_id": 4,
+  "task_name": "PickPlaceCounterToCabinet",
+  "training": false
+}

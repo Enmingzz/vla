@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "128626034ed6279aab7c6572ccf0ce7808c68d173c68c80dc89a3551bfdd2520",
+  "episode_index": 6,
+  "episode_seed": 270040006,
+  "initial_observation_sha256": "87b95062238082a382cc080a0d90f34a9567f380f5a76422bfba8b6c1eb7c3c0",
+  "initial_state_sha256": "cd599bfb86a34d0b75704c491f08d76579a3cf91486f54a4222279b5dd02a2af",
+  "initial_xml_sha256": "d8b2dd64ac5f622deba6294d71321eb24a15d077227297e72dcbd6e46d94d8b1",
+  "task_description": "Pick the boxed food from the counter and place it in the cabinet.",
+  "task_horizon": 750,
+  "task_id": 4,
+  "task_name": "PickPlaceCounterToCabinet",
+  "training": false
+}

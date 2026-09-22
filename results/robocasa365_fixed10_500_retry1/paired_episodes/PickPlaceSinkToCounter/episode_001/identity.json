@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "43b4eb2ee555612f488813ed2feecf8532ff5e9358ae1836a7b26d0210d4e604",
+  "episode_index": 1,
+  "episode_seed": 270060001,
+  "initial_observation_sha256": "1be74d78efb992973945bcf087ec122756d32e5e022aca263a4e931ab7b3648b",
+  "initial_state_sha256": "e4c0bbf8be0c1e3d3fb0f1675381f396db39afc78c45a7a0b26624b5b56ebcb1",
+  "initial_xml_sha256": "5cf0f8e4a3fc2b35e6d10b707053067cddf61760312b678635aa23f655696a94",
+  "task_description": "Pick the carrot from the sink and place it on the plate located on the counter.",
+  "task_horizon": 900,
+  "task_id": 6,
+  "task_name": "PickPlaceSinkToCounter",
+  "training": false
+}

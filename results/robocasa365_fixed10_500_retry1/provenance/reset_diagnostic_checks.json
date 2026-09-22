@@ -1,0 +1,110 @@
+[
+  {
+    "after_changed": [
+      "initial_xml_sha256",
+      "initial_observation_sha256",
+      "environment_metadata_sha256"
+    ],
+    "before_changed": [
+      "initial_xml_sha256"
+    ],
+    "episode_index": 0,
+    "restored_state_max_abs": 0.0,
+    "task": "PickPlaceCounterToCabinet",
+    "xml_diff_lines": 436
+  },
+  {
+    "after_changed": [
+      "initial_xml_sha256",
+      "initial_observation_sha256",
+      "environment_metadata_sha256"
+    ],
+    "before_changed": [
+      "initial_xml_sha256"
+    ],
+    "episode_index": 8,
+    "restored_state_max_abs": 0.0,
+    "task": "CloseFridge",
+    "xml_diff_lines": 523
+  },
+  {
+    "after_changed": [
+      "initial_xml_sha256",
+      "initial_observation_sha256",
+      "environment_metadata_sha256"
+    ],
+    "before_changed": [
+      "initial_xml_sha256"
+    ],
+    "episode_index": 1,
+    "restored_state_max_abs": 0.0,
+    "task": "TurnOffStove",
+    "xml_diff_lines": 186
+  },
+  {
+    "after_changed": [
+      "initial_xml_sha256",
+      "initial_observation_sha256",
+      "environment_metadata_sha256"
+    ],
+    "before_changed": [
+      "initial_xml_sha256"
+    ],
+    "episode_index": 8,
+    "restored_state_max_abs": 0.0,
+    "task": "PickPlaceCounterToCabinet",
+    "xml_diff_lines": 51
+  },
+  {
+    "after_changed": [
+      "initial_observation_sha256",
+      "environment_metadata_sha256"
+    ],
+    "before_changed": [
+      "initial_xml_sha256"
+    ],
+    "episode_index": 7,
+    "restored_state_max_abs": 0.0,
+    "task": "PickPlaceCounterToStove",
+    "xml_diff_lines": 21
+  },
+  {
+    "after_changed": [
+      "initial_xml_sha256",
+      "initial_observation_sha256",
+      "environment_metadata_sha256"
+    ],
+    "before_changed": [
+      "initial_xml_sha256"
+    ],
+    "episode_index": 4,
+    "restored_state_max_abs": 0.0,
+    "task": "PickPlaceSinkToCounter",
+    "xml_diff_lines": 38
+  },
+  {
+    "after_changed": [
+      "initial_observation_sha256",
+      "environment_metadata_sha256"
+    ],
+    "before_changed": [],
+    "episode_index": 7,
+    "restored_state_max_abs": 0.0,
+    "task": "OpenCabinet",
+    "xml_diff_lines": 0
+  },
+  {
+    "after_changed": [
+      "initial_xml_sha256",
+      "initial_observation_sha256",
+      "environment_metadata_sha256"
+    ],
+    "before_changed": [
+      "initial_xml_sha256"
+    ],
+    "episode_index": 8,
+    "restored_state_max_abs": 0.0,
+    "task": "OpenDrawer",
+    "xml_diff_lines": 29
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "343bc40ec88c3b77f39076b034279b0d4ae5f457c6caa77613620f89c9ebdf13",
+  "episode_index": 7,
+  "episode_seed": 270070007,
+  "initial_observation_sha256": "6b90e7d5a2889753b1912189bf34b7bf8eb3058c904177456ac921b7f45d2769",
+  "initial_state_sha256": "25567c26e2258992331927dfe45a1653ed4d6137acf5474129aa667c6a1cd20f",
+  "initial_xml_sha256": "7d92dd264eae665f9eb5bf309b4ee7beab4f8564ecf8a10a8ce9ba52960fe24f",
+  "task_description": "Turn off the rear center burner of the stove.",
+  "task_horizon": 750,
+  "task_id": 7,
+  "task_name": "TurnOffStove",
+  "training": false
+}

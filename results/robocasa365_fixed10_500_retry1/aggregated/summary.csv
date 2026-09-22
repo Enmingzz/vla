@@ -1,1 +1,2 @@
 condition,H,episodes,successes,success_rate,ci95_low,ci95_high,mean_policy_calls,mean_actions,mean_seconds,successful_mean_actions,successful_mean_seconds
+original_h20,20,100,58,0.58,0.4820648670304296,0.6720161732564526,25.42,501.04,20.133026444250717,362.13793103448273,14.802645802160662

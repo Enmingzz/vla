@@ -11,6 +11,7 @@ import numpy as np
 
 from .logging_utils import digest, write_json
 from .robocasa_protocol import episode_seed
+from .robocasa_pairing import xml_comparison_hash
 
 
 IMAGE_KEYS = {'observation/image':'video.robot0_agentview_left',
@@ -38,6 +39,10 @@ def observation(obs):
 
 def observation_hash(obs):
     return digest({k:array_hash(v) if isinstance(v,np.ndarray) else v for k,v in obs.items()})
+
+
+class UnpairedResetError(RuntimeError):
+    pass
 
 
 class Episode:
@@ -81,7 +86,7 @@ class Episode:
             self.env.close()
             raise
 
-    def pair(self,catalog):
+    def pair(self,catalog,allow_obj_mime_equivalence=False):
         """Atomic cross-job comparison before any evaluation actions are taken."""
         if self.identity['training']:
             raise ValueError('Training must not write the evaluation catalog')
@@ -92,10 +97,23 @@ class Episode:
             path = root/'identity.json'
             if path.exists():
                 expected = json.loads(path.read_text())
-                if expected != self.identity:
-                    differing = [k for k in expected if expected[k] != self.identity.get(k)]
-                    raise RuntimeError('Unpaired evaluation reset: '+str(differing))
+                differing = [k for k in expected if expected[k] != self.identity.get(k)]
+                if allow_obj_mime_equivalence:
+                    xml = (root/'model.xml').read_text()
+                    if hashlib.sha256(xml.encode()).hexdigest() != expected['initial_xml_sha256']:
+                        raise ValueError('The recorded XML changed')
+                    comparable = xml_comparison_hash(xml)
+                    if xml_comparison_hash(self.xml) == comparable and 'initial_xml_sha256' in differing:
+                        differing.remove('initial_xml_sha256')
+                if differing:
+                    raise UnpairedResetError('{} episode {}: unpaired evaluation reset: {}'.format(
+                        self.name,self.index,differing))
+                if allow_obj_mime_equivalence:
+                    self.identity['initial_xml_comparison_sha256'] = comparable
+                    self.identity['paired_catalog_identity_sha256'] = digest(expected)
             else:
+                if allow_obj_mime_equivalence:
+                    raise FileNotFoundError('Recovery requires an existing episode catalog: '+str(path))
                 np.savez(root/'initial_state.npz',state=self.state)
                 (root/'model.xml').write_text(self.xml)
                 write_json(root/'environment_metadata.json',self.meta)

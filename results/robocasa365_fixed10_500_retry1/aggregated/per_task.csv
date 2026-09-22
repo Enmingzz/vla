@@ -1,1 +1,11 @@
 condition,task,success_rate
+original_h20,CloseFridge,1.0
+original_h20,CoffeeSetupMug,0.2
+original_h20,OpenCabinet,0.4
+original_h20,OpenDrawer,0.7
+original_h20,PickPlaceCounterToCabinet,0.7
+original_h20,PickPlaceCounterToStove,0.7
+original_h20,PickPlaceSinkToCounter,1.0
+original_h20,TurnOffStove,0.2
+original_h20,TurnOnMicrowave,0.4
+original_h20,TurnOnSinkFaucet,0.5
