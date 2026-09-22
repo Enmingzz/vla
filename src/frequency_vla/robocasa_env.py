@@ -12,6 +12,7 @@ import numpy as np
 from .logging_utils import digest, write_json
 from .robocasa_protocol import episode_seed
 from .robocasa_pairing import xml_comparison_hash
+from .robocasa_reset import recorded_counter_regions
 
 
 IMAGE_KEYS = {'observation/image':'video.robot0_agentview_left',
@@ -46,7 +47,7 @@ class UnpairedResetError(RuntimeError):
 
 
 class Episode:
-    def __init__(self,config,task_id,index,training=False):
+    def __init__(self,config,task_id,index,training=False,reset_catalog=None):
         if not os.environ.get('SLURM_JOB_ID'):
             raise RuntimeError('Run simulations inside a compute allocation')
         if os.environ.get('MUJOCO_GL') != 'egl':
@@ -55,6 +56,8 @@ class Episode:
         import gymnasium as gym
         from robocasa.utils.dataset_registry_utils import get_task_horizon
         seed = episode_seed(config,task_id,index,training)
+        if training and reset_catalog is not None:
+            raise ValueError('Recorded evaluation regions must never alter training')
         random.seed(seed)
         np.random.seed(seed)
         self.config, self.task_id, self.index = config,task_id,index
@@ -63,9 +66,12 @@ class Episode:
         started = time.monotonic()
         # Fresh constructor per episode removes dependence on preceding rollout
         # length, worker scheduling, and constructor-owned random generators.
-        self.env = gym.make('robocasa/'+self.name,split=config['split'],seed=seed)
+        self.env = None
+        self.reset_region_events = []
         try:
-            self.raw, _ = self.env.reset(seed=seed)
+            with recorded_counter_regions(reset_catalog,self.name,index,self.reset_region_events):
+                self.env = gym.make('robocasa/'+self.name,split=config['split'],seed=seed)
+                self.raw, _ = self.env.reset(seed=seed)
             self.obs = observation(self.raw)
             self.base = self.env.unwrapped.env
             if self.base.control_freq != 20:
@@ -83,7 +89,8 @@ class Episode:
             self.steps, self.success, self.done = 0,False,False
             self.reset_seconds = time.monotonic()-started
         except BaseException:
-            self.env.close()
+            if self.env is not None:
+                self.env.close()
             raise
 
     def pair(self,catalog,allow_obj_mime_equivalence=False):

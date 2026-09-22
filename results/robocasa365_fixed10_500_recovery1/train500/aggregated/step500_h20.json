@@ -1,0 +1,28 @@
+{
+  "H": 20,
+  "condition": "step500_h20",
+  "episodes": 100,
+  "mean_actions": 633.53,
+  "mean_policy_calls": 32.02,
+  "mean_seconds": 25.49171551398933,
+  "per_task": {
+    "CloseFridge": 0.1,
+    "CoffeeSetupMug": 0.0,
+    "OpenCabinet": 0.4,
+    "OpenDrawer": 0.3,
+    "PickPlaceCounterToCabinet": 0.5,
+    "PickPlaceCounterToStove": 0.5,
+    "PickPlaceSinkToCounter": 0.8,
+    "TurnOffStove": 0.3,
+    "TurnOnMicrowave": 0.1,
+    "TurnOnSinkFaucet": 0.5
+  },
+  "success_rate": 0.35,
+  "successes": 35,
+  "successful_mean_actions": 481.51428571428573,
+  "successful_mean_seconds": 20.236173562013676,
+  "wilson_ci95": [
+    0.26364248243097527,
+    0.44745556703112027
+  ]
+}

@@ -16,10 +16,14 @@ def main():
     parser.add_argument('--results-dir',required=True)
     parser.add_argument('--checkpoint',required=True)
     parser.add_argument('--manifest-sha256',required=True)
+    parser.add_argument('--catalog',help='Original immutable catalog, even for a later recovery attempt')
     args = parser.parse_args()
     from openpi_client.websocket_client_policy import WebsocketClientPolicy
     config = load_config()
     root,source = Path(args.results_dir),Path(args.source)
+    catalog = Path(args.catalog) if args.catalog else source/'paired_episodes'
+    if not catalog.is_dir():
+        raise FileNotFoundError('Episode catalog is missing: '+str(catalog))
     if root.resolve() == source.resolve():
         raise ValueError('Preserve the interrupted archive; use a fresh recovery directory')
     client = WebsocketClientPolicy('127.0.0.1',args.port)
@@ -36,6 +40,7 @@ def main():
              ('train500','step500_h20'),('train500','step500_h5')]}
         write_json(root/'provenance/recovery.json',{'source':str(source.resolve()),
             'snapshot':loaded,'additional_optimizer_updates':0,'xml_replay_used':False,
+            'paired_catalog':str(catalog.resolve()),'recorded_counter_region_labels':True,
             'pairing':'Exact physical state, observation and metadata; infer redundant OBJ MIME type',
             'reset_attempt_limit':3,'reset_retry_seed_changes':False,
             'archived_counts':archived_counts})
@@ -45,7 +50,7 @@ def main():
             ('train500','step500_h20',20,'step_500'),
             ('train500','step500_h5',5,'step_500')]:
             command(operation='set_phase',phase=phase)
-            evaluate(config,horizon,args.port,root/folder,source/'paired_episodes',condition,
+            evaluate(config,horizon,args.port,root/folder,catalog,condition,
                      reuse_root=str(source/folder),allow_obj_mime_equivalence=True,reset_attempts=3)
             analyze(root)
         status = command(operation='status')

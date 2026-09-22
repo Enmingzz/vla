@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "fabf8ac6f86a1bad277bde4911d0cad0ddfaf0cbd17df10fc81052cd0edc72f3",
+  "episode_index": 7,
+  "episode_seed": 270060007,
+  "initial_observation_sha256": "45015f34d63790b9df7f5e4220379f284bf9285be519a615a4118c3d31701b2e",
+  "initial_state_sha256": "d0e9d98c14f1176a9b341da11cb29a7cfc85fa34714bc3c16e380627a8b8bbf5",
+  "initial_xml_sha256": "ead38f76b3b4b702f7431fae163427f3f8c2ceddeea1825de5539eabdd5efed9",
+  "task_description": "Pick the squash from the sink and place it on the plate located on the counter.",
+  "task_horizon": 900,
+  "task_id": 6,
+  "task_name": "PickPlaceSinkToCounter",
+  "training": false
+}

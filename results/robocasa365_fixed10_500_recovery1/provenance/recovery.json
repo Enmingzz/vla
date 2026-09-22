@@ -1,0 +1,22 @@
+{
+  "additional_optimizer_updates": 0,
+  "archived_counts": {
+    "original_h20": 100,
+    "original_h5": 60,
+    "step500_h20": 33,
+    "step500_h5": 0
+  },
+  "pairing": "Exact physical state, observation and metadata; infer redundant OBJ MIME type",
+  "reset_attempt_limit": 3,
+  "reset_retry_seed_changes": false,
+  "snapshot": {
+    "manifest_sha256": "a8f369fa2278e0d6d46f68c8d757fc7839959544a697e7f205287924de5d6a1d",
+    "path": "/scratch/enmingzz/frequency_vla/robocasa365/runs/robocasa365_fixed10_500_retry1/train500/step_500",
+    "server_timing": {
+      "infer_ms": 11400.8684810251,
+      "prev_total_ms": 0.3657666966319084
+    }
+  },
+  "source": "/home/enmingzz/project/vla/frequency_vla/results/robocasa365_fixed10_500_retry1",
+  "xml_replay_used": false
+}

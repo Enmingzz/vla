@@ -7,6 +7,7 @@ cd "$FREQUENCY_PROJECT"
 : "${RC_RECOVERY_SOURCE:?Set the interrupted experiment archive}"
 : "${RC_RECOVERY_CHECKPOINT:?Set the existing step-500 checkpoint}"
 : "${RC_RECOVERY_MANIFEST:?Set its verified manifest digest}"
+export RC_RECOVERY_CATALOG="${RC_RECOVERY_CATALOG:-$RC_RECOVERY_SOURCE/paired_episodes}"
 PY=(env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$RC_VENV/bin/python")
 "${PY[@]}" - "$RC_RECOVERY_ROOT" <<'PY'
 import json,sys
@@ -21,6 +22,9 @@ mkdir -p "$RC_RECOVERY_ROOT/logs" "$RC_RECOVERY_ROOT/provenance"
 "${PY[@]}" scripts/check_cuda_allocation.py --output "$RC_RECOVERY_ROOT/provenance/cuda.json"
 timeout --kill-after=10s 300s "${PY[@]}" scripts/robocasa_render_check.py \
   --output "$RC_RECOVERY_ROOT/provenance/egl.json" > "$RC_RECOVERY_ROOT/logs/egl.log" 2>&1
+timeout --kill-after=10s 600s "${PY[@]}" -m frequency_vla.robocasa_reset_check \
+  --source "$RC_RECOVERY_SOURCE" --catalog "$RC_RECOVERY_CATALOG" \
+  --output "$RC_RECOVERY_ROOT/provenance" > "$RC_RECOVERY_ROOT/logs/reset_preflight.log" 2>&1
 POLICY_PORT="$((20000 + SLURM_JOB_ID % 20000))"
 # --train exposes the existing snapshot loading / phase switching API. The client
 # sends only load_snapshot, set_phase and status; no rollout, update, save or resume.
@@ -42,4 +46,5 @@ else: raise SystemExit('Policy startup exceeded ten minutes')
 PY
 "${PY[@]}" -m frequency_vla.robocasa_recover --port "$POLICY_PORT" \
   --source "$RC_RECOVERY_SOURCE" --results-dir "$RC_RECOVERY_ROOT" \
+  --catalog "$RC_RECOVERY_CATALOG" \
   --checkpoint "$RC_RECOVERY_CHECKPOINT" --manifest-sha256 "$RC_RECOVERY_MANIFEST"

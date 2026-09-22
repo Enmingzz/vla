@@ -1,0 +1,13 @@
+{
+  "environment_metadata_sha256": "dfbf1c80c3c8a266aa293cf0ee66ca88fe855266e027e13a508730a5d2543438",
+  "episode_index": 5,
+  "episode_seed": 270060005,
+  "initial_observation_sha256": "35c90d0e048cf41aecd34f5ae0d03351f61d39a28dced2416821dd87105072e7",
+  "initial_state_sha256": "d2dc8d9a33c164a08302b3be46903d8fe1ca34d9a34e18930d40bea7bb43c622",
+  "initial_xml_sha256": "efe7480e1bec1f6ffb20b77cbe2e2168fedb00d96fd5c3b4218358496579c282",
+  "task_description": "Pick the corn from the sink and place it on the plate located on the counter.",
+  "task_horizon": 900,
+  "task_id": 6,
+  "task_name": "PickPlaceSinkToCounter",
+  "training": false
+}

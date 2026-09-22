@@ -1,0 +1,34 @@
+{
+  "conditions": {
+    "original_h20": {
+      "complete": true,
+      "completed_episodes": 100,
+      "successes": 58
+    },
+    "original_h5": {
+      "complete": true,
+      "completed_episodes": 100,
+      "successes": 54
+    },
+    "step500_h20": {
+      "complete": true,
+      "completed_episodes": 100,
+      "successes": 35
+    },
+    "step500_h5": {
+      "complete": false,
+      "completed_episodes": 43,
+      "successes": 2
+    }
+  },
+  "partial_comparisons": {
+    "h5_retention": {
+      "condition_a": "original_h5",
+      "condition_b": "step500_h5",
+      "descriptive_only": true,
+      "matched_episodes": 43,
+      "successes_a": 17,
+      "successes_b": 2
+    }
+  }
+}

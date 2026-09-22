@@ -49,7 +49,8 @@ def evaluate_task(config,task_id,horizon,port,root,catalog,condition,reuse_root=
             # Retry only an unpaired reset, before any policy query/action. The
             # seed and target identity never change; every rejected reset is saved.
             for attempt in range(reset_attempts):
-                episode = Episode(config,task_id,index)
+                episode = Episode(config,task_id,index,
+                    reset_catalog=catalog if allow_obj_mime_equivalence else None)
                 try:
                     episode.pair(catalog,allow_obj_mime_equivalence)
                 except UnpairedResetError as error:
@@ -104,6 +105,7 @@ def evaluate_task(config,task_id,horizon,port,root,catalog,condition,reuse_root=
                     'video':str(video),'paired_catalog':str(catalog),'config_sha256':digest(config)}
                 if allow_obj_mime_equivalence:
                     record['reused_record_source'] = ''
+                    record['reset_region_events'] = episode.reset_region_events
                 append_record(raw,record)
                 records.append(record)
                 logging.warning('%s %s %s/%s success=%s steps=%s calls=%s seconds=%.1f',

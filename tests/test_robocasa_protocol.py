@@ -148,3 +148,27 @@ def test_analysis_reports_partial_comparison_on_common_episodes(tmp_path):
     assert comparison['matched_episodes'] == 1
     assert comparison['successes_a'] == 1 and comparison['successes_b'] == 0
     assert not result['conditions']['step500_h20']['complete']
+
+
+def test_recorded_counter_regions_remove_unordered_left_right_swap():
+    from frequency_vla.robocasa_reset import relabel_regions
+    left = {'offset':[-1.3,0.,0.46],'size':[1.6,.65]}
+    right = {'offset':[1.2,0.,0.46],'size':[1.9,.65]}
+    saved = [dict(right,name='geom_0'),dict(left,name='geom_1')]
+    a = relabel_regions({'geom_0':left,'geom_1':right},saved)
+    b = relabel_regions({'geom_0':right,'geom_1':left},saved)
+    assert a == b == {'geom_0':right,'geom_1':left}
+    # The same RNG-selected index now points to the same geometry. No RNG draw
+    # or placement is added, and native region dictionaries are retained.
+    assert a['geom_0'] is right and a['geom_1'] is left
+    assert relabel_regions({'geom_0':left,'geom_1':right},saved[:1]) == b
+
+
+def test_recorded_regions_never_replace_geometry_or_guess_missing_order():
+    from frequency_vla.robocasa_reset import relabel_regions
+    regions = {'geom_0':{'size':[1.,1.],'offset':[0.,0.,0.]},
+               'geom_1':{'size':[2.,2.],'offset':[1.,0.,0.]},
+               'geom_2':{'size':[3.,3.],'offset':[2.,0.,0.]}}
+    assert relabel_regions(regions,[dict(regions['geom_2'],name='geom_0')]) is regions
+    bad = {'name':'geom_0','size':[99.,99.],'offset':[0.,0.,0.]}
+    assert relabel_regions(regions,[bad]) is regions

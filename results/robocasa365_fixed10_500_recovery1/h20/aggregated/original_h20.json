@@ -1,0 +1,28 @@
+{
+  "H": 20,
+  "condition": "original_h20",
+  "episodes": 100,
+  "mean_actions": 501.04,
+  "mean_policy_calls": 25.42,
+  "mean_seconds": 20.133026444250717,
+  "per_task": {
+    "CloseFridge": 1.0,
+    "CoffeeSetupMug": 0.2,
+    "OpenCabinet": 0.4,
+    "OpenDrawer": 0.7,
+    "PickPlaceCounterToCabinet": 0.7,
+    "PickPlaceCounterToStove": 0.7,
+    "PickPlaceSinkToCounter": 1.0,
+    "TurnOffStove": 0.2,
+    "TurnOnMicrowave": 0.4,
+    "TurnOnSinkFaucet": 0.5
+  },
+  "success_rate": 0.58,
+  "successes": 58,
+  "successful_mean_actions": 362.13793103448273,
+  "successful_mean_seconds": 14.802645802160662,
+  "wilson_ci95": [
+    0.4820648670304296,
+    0.6720161732564526
+  ]
+}

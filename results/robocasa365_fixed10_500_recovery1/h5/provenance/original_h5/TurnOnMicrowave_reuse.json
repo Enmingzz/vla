@@ -1,0 +1,6 @@
+{
+  "inference_equivalence": "Exact spec, permitting only student/step_N phase aliases",
+  "reused_indices": [],
+  "source": "/home/enmingzz/project/vla/frequency_vla/results/robocasa365_fixed10_500_retry1/h5",
+  "source_server": null
+}

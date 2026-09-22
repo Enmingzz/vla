@@ -71,7 +71,8 @@ def analyze(root):
         # only. Never compare a partial percentage with the full baseline mean.
         partial_comparisons = {}
         for name,a,b in [('replanning','original_h5','original_h20'),
-                         ('opsd_recovery','original_h20','step500_h20')]:
+                         ('opsd_recovery','original_h20','step500_h20'),
+                         ('h5_retention','original_h5','step500_h5')]:
             if a in rows and b in rows:
                 continue
             key = lambda r:(r['task_id'],r['episode_index'],r['episode_seed'])

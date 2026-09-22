@@ -190,3 +190,25 @@ One H100 serves all remaining conditions sequentially; the default scheduler cap
 is 75 minutes, not a promised runtime. No task is selected by observed success.
 Aggregated wall-clock episode times span the original and recovery allocations;
 all use EGL and four evaluation workers, but these times are exploratory.
+
+The first recovery completed original H5 (54/100), original H20 (58/100) and
+step-500 H20 (35/100). It stopped during step-500 H5 at 2/43. The complete H20
+training comparison therefore shows a 23-percentage-point deterioration; the
+original comparison does not establish an H5 advantage on these ten tasks.
+
+The second reset defect was isolated from saved failed metadata: upstream
+`Counter.get_reset_regions` uses `list(set(valid_geoms))` on XML element objects,
+which can swap left/right region labels across otherwise identically seeded
+environments. `robocasa_reset.py` restores only an unambiguous mapping between
+recorded labels and exact native region geometry. It does not change geometry,
+consume RNG draws, replace simulation state, reload XML or affect training.
+The existing exact state, metadata, language and image checks remain mandatory.
+Before loading the model, `robocasa_reset_check` checks every outstanding episode
+identity on the allocated GPU. Recovery now also supports a separate immutable
+`RC_RECOVERY_CATALOG` and provenance-checked reuse across successive attempts.
+
+The follow-up uses `robocasa365_fixed10_500_recovery1` as its source,
+`robocasa365_fixed10_500_retry1/paired_episodes` as the catalog, and a fresh
+`robocasa365_fixed10_500_recovery2` output. It reuses 343 verified episodes and
+needs only 57 more H5 episodes. Fifteen CPU tests and validation of all 343 cached
+rows passed. Use `RC_RECOVERY_TIME=00:45:00` for this smaller remaining job.

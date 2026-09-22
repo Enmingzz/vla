@@ -6,6 +6,7 @@ cd "$FREQUENCY_PROJECT"
 : "${RC_RECOVERY_SOURCE:?Set the interrupted archive}"
 : "${RC_RECOVERY_CHECKPOINT:?Set the saved step-500 checkpoint}"
 : "${RC_RECOVERY_MANIFEST:?Set its verified manifest digest}"
+export RC_RECOVERY_CATALOG="${RC_RECOVERY_CATALOG:-$RC_RECOVERY_SOURCE/paired_episodes}"
 [[ ! -e "$RC_RECOVERY_ROOT/submission_sources.json" ]] || { echo 'Recovery archive already submitted.' >&2; exit 2; }
 mkdir -p "$RC_RECOVERY_ROOT/logs"
 export RC_RECOVERY_ROOT="$(realpath "$RC_RECOVERY_ROOT")"
@@ -27,6 +28,7 @@ root=Path(os.environ['RC_RECOVERY_ROOT'])
 write_json(root/'submission_sources.json',{'git_commit':git_commit(project),
     'sources':{str(p):file_digest(p) for p in files},'config':load_config(),
     'source_archive':os.environ['RC_RECOVERY_SOURCE'],'snapshot':str(checkpoint),
+    'paired_catalog':os.environ['RC_RECOVERY_CATALOG'],
     'manifest_sha256':os.environ['RC_RECOVERY_MANIFEST'],'additional_training_steps':0})
 PY
 job=$(sbatch --parsable --account="${RC_ACCOUNT:-def-btaati}" --gres=gpu:h100:1 \
