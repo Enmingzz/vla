@@ -1,5 +1,12 @@
 # π0.5 LIBERO replanning-frequency validation
 
+The new [RoboCasa365 π0.5 pilot](ROBOCASA365_OPSD_PLAN.md) uses a fixed set of ten
+tasks with three independent Slurm jobs: original H=5, original H=20, and 500
+temporal OPSD updates followed by H=20/H=5 evaluation. It uses the official
+RoboCasa `pi05_pretrain_human300` checkpoint, native P=50 and EGL throughout.
+Each evaluation contains 100 episodes. Its installation, checkpoints and results
+are separate from the completed LIBERO experiments below.
+
 The [EGL pipeline](EGL_PIPELINE.md) is complete: a fresh official checkpoint,
 1500 updates, and all five evaluations used EGL on one H100/server with four
 simulator workers. On the same 100 LIBERO-10 episodes per condition, original

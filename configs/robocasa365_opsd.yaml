@@ -1,0 +1,49 @@
+# Fixed before observing any task success rates. No baseline performance gate.
+benchmark: robocasa365
+split: pretrain
+tasks:
+  - CloseFridge
+  - CoffeeSetupMug
+  - OpenCabinet
+  - OpenDrawer
+  - PickPlaceCounterToCabinet
+  - PickPlaceCounterToStove
+  - PickPlaceSinkToCounter
+  - TurnOffStove
+  - TurnOnMicrowave
+  - TurnOnSinkFaucet
+openpi_commit: 5a6beda9ff99da30b4e1b59320f6a32971d7c397
+robocasa_commit: 4f8a2980def75a55dff96b990745b83540425f09
+robosuite_commit: 5ce6643f3092639d08f7b0f90ed1c6a84f50552c
+checkpoint_repo: robocasa/robocasa365_checkpoints
+checkpoint_revision: c484448aba1a9b60a04c9b0ca117241518ea69f3
+checkpoint_subdir: pi05_pretrain_human300/multitask_learning/75000
+training_config: pi05_pretrain_human300
+prediction_horizon: 50
+student_horizon: 20
+teacher_horizon: 5
+flow_steps: 10
+resize_size: 224
+renderer: egl
+evaluation_seed: 27
+evaluation_episodes_per_task: 10
+evaluation_workers: 4
+post_training_horizons: [20, 5]
+algorithm: temporal_opsd_gaussian_velocity_matching
+optimizer_steps: 500
+checkpoint_steps: [100, 500]
+batch_size: 4
+environment_workers: 4
+learning_rate: 0.00001
+weight_decay: 0.0
+clip_gradient_norm: 1.0
+teacher_strategy: ema
+ema_decay: 0.9999
+train_seed: 17
+trainable_parameters: action_expert_and_action_time_projections
+compute_dtype: bfloat16
+master_dtype: float32
+loss_action_dimensions: 12
+loss_covariance: unit_isotropic_velocity_probe
+flow_time_sampling: uniform_over_native_10_step_grid
+teacher_tail: ema_native_flow_latent_at_same_time
