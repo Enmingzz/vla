@@ -2,6 +2,7 @@
 set -euo pipefail
 source "${FREQUENCY_PROJECT:-${SLURM_SUBMIT_DIR:-$(cd -- "$(dirname -- "$0")/.." && pwd)}}/scripts/robocasa_env.sh"
 mkdir -p "$RC_WORK/provenance" "$RC_WORK/deps"
+if [[ "${RC_CHECK_ONLY:-0}" != 1 ]]; then
 checkout() {
   local url="$1" destination="$2" revision="$3"
   if [[ ! -d "$destination/.git" ]]; then
@@ -33,6 +34,7 @@ if not p.exists():
 PY
 env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH "$RC_VENV/bin/python" \
   "$FREQUENCY_PROJECT/scripts/download_robocasa.py"
+fi
 env -u PYTHONPATH -u PYTHONHOME -u LD_LIBRARY_PATH JAX_PLATFORMS=cpu \
   "$RC_VENV/bin/python" -m frequency_vla.robocasa_protocol --check-install "$RC_WORK/provenance/setup.json"
 "$UV_BIN" pip freeze --python "$RC_VENV/bin/python" > "$RC_WORK/provenance/environment.freeze.txt"

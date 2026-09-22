@@ -54,6 +54,7 @@ def check_chunk(actions, config):
 
 def check_install(output):
     config = load_config()
+    print('Checking pinned sources and importing official dependencies...',flush=True)
     revisions = {name:git_commit(os.environ[env]) for name,env in
         [('openpi','RC_OPENPI'),('robocasa','RC_CASA'),('robosuite','RC_SUITE')]}
     if any(config[name+'_commit'] != commit for name,commit in revisions.items()):
@@ -79,13 +80,21 @@ def check_install(output):
            ['observation/image','observation/wrist_image','observation/right_image']}}
     observation = robocasa_policy.RobocasaInputs(32,c.model.model_type)(sample)
     assert all(observation['image_mask'].values())
-    assert stats['actions'].mean.shape[-1] == 12 and stats['state'].mean.shape[-1] == 16
+    # The official checkpoint stores statistics after padding to model width.
+    # Physical observations/actions remain 16/12 dimensions at the Gym boundary.
+    for key,width in [('actions',12),('state',16)]:
+        assert stats[key].mean.shape == stats[key].std.shape == (32,)
+        np.testing.assert_allclose(stats[key].mean[width:],0,atol=1e-12)
+        np.testing.assert_allclose(stats[key].std[width:],1,atol=1e-12)
+    assert not data.use_quantile_norm  # This checkpoint has mean/std, not quantiles.
     registered = {t for tasks in TASK_SET_REGISTRY.values() for t in tasks}
     assert set(config['tasks']) <= registered
     write_json(output, {'passed':True,'config_sha256':digest(config),'revisions':revisions,
-        'model_config':dataclasses.asdict(c.model), 'norm_action_dimensions':12,
+        'model_config':dataclasses.asdict(c.model), 'physical_action_dimensions':12,
+        'normalization_dimensions':32,
         'native_task_horizons':{t:get_task_horizon(t) for t in config['tasks']},
         'quantile_normalization':data.use_quantile_norm, 'GPU_checks_pending':True})
+    print('Official pi0.5 config, padding, normalization and task checks passed.',flush=True)
 
 
 if __name__ == '__main__':
