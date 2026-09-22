@@ -1,0 +1,20 @@
+{
+  "actual_call_schedules_and_chunk_prefix_execution_verified": true,
+  "all_initial_states_images_and_first_chunks_match": true,
+  "episodes": 24,
+  "evaluation_fingerprints": [
+    "823b457093fc832ddcb6d494b4199f27865da91eb7d46bb919f7e8e99ebf20c1"
+  ],
+  "inference_fingerprints": [
+    "c43f127a0f66054f5811d585a02ed4849c1c2412c0a07ff267708ae6d8d614cc"
+  ],
+  "manual_video_inspection": [
+    "spoon layout 0 H=5 frames 0/15/30/60: failed placement",
+    "carrot layout 0 H=1 frames 15/30/60: grasp, transport, release on plate"
+  ],
+  "native_prediction_horizon": 5,
+  "paired_layouts": 8,
+  "passed": true,
+  "shared_step_noise_matches": true,
+  "videos_with_expected_frames": 24
+}

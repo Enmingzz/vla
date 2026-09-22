@@ -3,11 +3,17 @@
 The new [SimplerEnv frequency experiment](docs/SIMPLER.md) uses a fixed,
 third-party Bridge-adapted π0.5 checkpoint with **native P=5 and H=1/2/5**.
 It evaluates the four standard WidowX tasks with paired layouts, states and
-inference noise. CPU installation/checkpoint verification is complete. The first
-smoke job failed its exact reset-pairing check before model loading (zero policy
-episodes). Retry `60947294` uses native scene reconfiguration and checks all
-eight smoke layouts before loading the model: one H100, 20-minute cap. No Simpler
-success result is claimed yet. The checkpoint's SFT/RL provenance conflict is documented.
+inference noise. The [24-rollout smoke](results/simpler_pi05_p5_smoke2/smoke/FINDINGS.md)
+is complete: H=1/2/5 scored **1/8, 1/8, 0/8**, respectively. Mean policy calls
+were **75 / 37.5 / 15**. These very small, low-success samples do not establish
+a frequency gap (paired H=1 versus H=5 exact p=1), or a suitable teacher.
+All eight exact reset checks and all 24 episode/video/action-prefix checks
+passed. One H100 took **7m44s** and was released. The first failed reset preflight
+(zero evaluated episodes) remains archived. Job `60948028` was submitted to
+evaluate all 24 fixed layouts per task, **96 episodes per H / 288 total**, on one
+H100 with a one-hour cap. Smoke results are not pooled into this main evaluation.
+The checkpoint's SFT/RL provenance conflict is documented; no Simpler OPSD
+training has been started.
 
 The new [RoboCasa365 π0.5 pilot](ROBOCASA365_OPSD_PLAN.md) uses a fixed set of ten
 tasks with three independent Slurm jobs: original H=5, original H=20, and 500

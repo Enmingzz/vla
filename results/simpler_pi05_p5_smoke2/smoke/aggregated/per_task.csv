@@ -1,0 +1,13 @@
+H,P,total_episodes,total_successes,success_rate,ci95_low,ci95_high,mean_policy_calls,mean_episode_length,mean_environment_steps_including_settling,policy_calls_per_environment_step,mean_executed_actions_per_policy_call,mean_wall_clock_seconds,task_id,task_description
+1,5,2,0,0.0,0.0,0.6576197724933469,60.0,60.0,60.0,1.0,1.0,26.758038126397878,0,put the spoon on the towel
+1,5,2,1,0.5,0.09453120573423074,0.9054687942657693,60.0,60.0,60.0,1.0,1.0,13.644299321807921,1,put carrot on plate
+1,5,2,0,0.0,0.0,0.6576197724933469,60.0,60.0,60.0,1.0,1.0,13.708000755868852,2,stack the green block on the yellow block
+1,5,2,0,0.0,0.0,0.6576197724933469,120.0,120.0,120.0,1.0,1.0,28.889399021863937,3,put eggplant into yellow basket
+2,5,2,0,0.0,0.0,0.6576197724933469,30.0,60.0,60.0,0.5,2.0,8.207825787365437,0,put the spoon on the towel
+2,5,2,0,0.0,0.0,0.6576197724933469,30.0,60.0,60.0,0.5,2.0,8.069242278113961,1,put carrot on plate
+2,5,2,0,0.0,0.0,0.6576197724933469,30.0,60.0,60.0,0.5,2.0,8.168610295280814,2,stack the green block on the yellow block
+2,5,2,1,0.5,0.09453120573423074,0.9054687942657693,60.0,120.0,120.0,0.5,2.0,17.374576086644083,3,put eggplant into yellow basket
+5,5,2,0,0.0,0.0,0.6576197724933469,12.0,60.0,60.0,0.2,5.0,4.91767385834828,0,put the spoon on the towel
+5,5,2,0,0.0,0.0,0.6576197724933469,12.0,60.0,60.0,0.2,5.0,4.804711250588298,1,put carrot on plate
+5,5,2,0,0.0,0.0,0.6576197724933469,12.0,60.0,60.0,0.2,5.0,4.796365057583898,2,stack the green block on the yellow block
+5,5,2,0,0.0,0.0,0.6576197724933469,24.0,120.0,120.0,0.2,5.0,11.035639081615955,3,put eggplant into yellow basket

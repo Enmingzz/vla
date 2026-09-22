@@ -1,0 +1,256 @@
+{
+  "checks": [
+    {
+      "control_frequency_hz": 5,
+      "episode_index": 0,
+      "episode_limit": 60,
+      "identity": {
+        "episode_rng_seed": 2083679832,
+        "first_observation_sha256": "1d687b01e1a6a2859e1016acdf5d9c28a7a56933e716db1f62d015411cc3614c",
+        "initial_state_sha256": "f3dfba6f08eccb1c7dd7d6edfa145f7d9a0d52ca40628d8f30c2b466089e5f4d",
+        "object_episode_id": 0,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put the spoon on the towel"
+      },
+      "image_max_abs_difference": 0,
+      "passed": true,
+      "repeated_identity": {
+        "episode_rng_seed": 2083679832,
+        "first_observation_sha256": "1d687b01e1a6a2859e1016acdf5d9c28a7a56933e716db1f62d015411cc3614c",
+        "initial_state_sha256": "f3dfba6f08eccb1c7dd7d6edfa145f7d9a0d52ca40628d8f30c2b466089e5f4d",
+        "object_episode_id": 0,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put the spoon on the towel"
+      },
+      "seconds": 36.36165640410036,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "state_max_abs_difference": 0.0,
+      "task": "widowx_spoon_on_towel"
+    },
+    {
+      "control_frequency_hz": 5,
+      "episode_index": 1,
+      "episode_limit": 60,
+      "identity": {
+        "episode_rng_seed": 2028854884,
+        "first_observation_sha256": "322490c1a94cac08a89f5fe43b46fd324e51e4b2949e52743bea2bd81c815c16",
+        "initial_state_sha256": "fb6a8be379c50d885d8bfce14fd2140d37741c6df866a18992bdc67cc3a3a6af",
+        "object_episode_id": 1,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put the spoon on the towel"
+      },
+      "image_max_abs_difference": 0,
+      "passed": true,
+      "repeated_identity": {
+        "episode_rng_seed": 2028854884,
+        "first_observation_sha256": "322490c1a94cac08a89f5fe43b46fd324e51e4b2949e52743bea2bd81c815c16",
+        "initial_state_sha256": "fb6a8be379c50d885d8bfce14fd2140d37741c6df866a18992bdc67cc3a3a6af",
+        "object_episode_id": 1,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put the spoon on the towel"
+      },
+      "seconds": 37.03769075218588,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "state_max_abs_difference": 0.0,
+      "task": "widowx_spoon_on_towel"
+    },
+    {
+      "control_frequency_hz": 5,
+      "episode_index": 0,
+      "episode_limit": 60,
+      "identity": {
+        "episode_rng_seed": 369571992,
+        "first_observation_sha256": "4713613a28c035214a2a88d7bac1927790e9f548d3b2e4ae26f040b5bdbaf89a",
+        "initial_state_sha256": "49119c8417d4855468a7e96fab3ffa099ff7e2439c6ef1b51fcbc79742295600",
+        "object_episode_id": 0,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put carrot on plate"
+      },
+      "image_max_abs_difference": 0,
+      "passed": true,
+      "repeated_identity": {
+        "episode_rng_seed": 369571992,
+        "first_observation_sha256": "4713613a28c035214a2a88d7bac1927790e9f548d3b2e4ae26f040b5bdbaf89a",
+        "initial_state_sha256": "49119c8417d4855468a7e96fab3ffa099ff7e2439c6ef1b51fcbc79742295600",
+        "object_episode_id": 0,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put carrot on plate"
+      },
+      "seconds": 1.1592538813129067,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "state_max_abs_difference": 0.0,
+      "task": "widowx_carrot_on_plate"
+    },
+    {
+      "control_frequency_hz": 5,
+      "episode_index": 1,
+      "episode_limit": 60,
+      "identity": {
+        "episode_rng_seed": 582607262,
+        "first_observation_sha256": "d88ff9a6acf1a5e441a8b0666e804514d5f60830727bbef2fbf268e483390455",
+        "initial_state_sha256": "0171509a5037548920c4e56dc8721505b413fbd90b3b34b4499b011b43a7b146",
+        "object_episode_id": 1,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put carrot on plate"
+      },
+      "image_max_abs_difference": 0,
+      "passed": true,
+      "repeated_identity": {
+        "episode_rng_seed": 582607262,
+        "first_observation_sha256": "d88ff9a6acf1a5e441a8b0666e804514d5f60830727bbef2fbf268e483390455",
+        "initial_state_sha256": "0171509a5037548920c4e56dc8721505b413fbd90b3b34b4499b011b43a7b146",
+        "object_episode_id": 1,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put carrot on plate"
+      },
+      "seconds": 1.8292660731822252,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "state_max_abs_difference": 0.0,
+      "task": "widowx_carrot_on_plate"
+    },
+    {
+      "control_frequency_hz": 5,
+      "episode_index": 0,
+      "episode_limit": 60,
+      "identity": {
+        "episode_rng_seed": 1009178997,
+        "first_observation_sha256": "2a797b58dfda6320ce1de0a3e621ee1c456eb778932ea34ec59f4c238ae3813c",
+        "initial_state_sha256": "e4ca704dd8106edd8952b1a3583f4bcded90ce8519251e035e498137c91daed6",
+        "object_episode_id": 0,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "stack the green block on the yellow block"
+      },
+      "image_max_abs_difference": 0,
+      "passed": true,
+      "repeated_identity": {
+        "episode_rng_seed": 1009178997,
+        "first_observation_sha256": "2a797b58dfda6320ce1de0a3e621ee1c456eb778932ea34ec59f4c238ae3813c",
+        "initial_state_sha256": "e4ca704dd8106edd8952b1a3583f4bcded90ce8519251e035e498137c91daed6",
+        "object_episode_id": 0,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "stack the green block on the yellow block"
+      },
+      "seconds": 0.963310438208282,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "state_max_abs_difference": 0.0,
+      "task": "widowx_stack_cube"
+    },
+    {
+      "control_frequency_hz": 5,
+      "episode_index": 1,
+      "episode_limit": 60,
+      "identity": {
+        "episode_rng_seed": 1060258595,
+        "first_observation_sha256": "18bf08359f7d06092263c51467d4ae8b396e32dc76780b49148c3ee3aedd614d",
+        "initial_state_sha256": "27fe88159e8f6feb9e5083943af6e68c13af71f111142296cef27b1f1f049be3",
+        "object_episode_id": 1,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "stack the green block on the yellow block"
+      },
+      "image_max_abs_difference": 0,
+      "passed": true,
+      "repeated_identity": {
+        "episode_rng_seed": 1060258595,
+        "first_observation_sha256": "18bf08359f7d06092263c51467d4ae8b396e32dc76780b49148c3ee3aedd614d",
+        "initial_state_sha256": "27fe88159e8f6feb9e5083943af6e68c13af71f111142296cef27b1f1f049be3",
+        "object_episode_id": 1,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "stack the green block on the yellow block"
+      },
+      "seconds": 1.6378403566777706,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "state_max_abs_difference": 0.0,
+      "task": "widowx_stack_cube"
+    },
+    {
+      "control_frequency_hz": 5,
+      "episode_index": 0,
+      "episode_limit": 120,
+      "identity": {
+        "episode_rng_seed": 3466196061,
+        "first_observation_sha256": "ed247f101738a9aca0dcfdab82c2aae09e5f5486c1b6be638ad33d89eb126154",
+        "initial_state_sha256": "3d12daaf176b60b2eb009c70ee2afc482d0c398d671e37592525714e35fced4c",
+        "object_episode_id": 0,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put eggplant into yellow basket"
+      },
+      "image_max_abs_difference": 0,
+      "passed": true,
+      "repeated_identity": {
+        "episode_rng_seed": 3466196061,
+        "first_observation_sha256": "ed247f101738a9aca0dcfdab82c2aae09e5f5486c1b6be638ad33d89eb126154",
+        "initial_state_sha256": "3d12daaf176b60b2eb009c70ee2afc482d0c398d671e37592525714e35fced4c",
+        "object_episode_id": 0,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put eggplant into yellow basket"
+      },
+      "seconds": 2.1213200464844704,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "state_max_abs_difference": 0.0,
+      "task": "widowx_put_eggplant_in_basket"
+    },
+    {
+      "control_frequency_hz": 5,
+      "episode_index": 1,
+      "episode_limit": 120,
+      "identity": {
+        "episode_rng_seed": 1060801321,
+        "first_observation_sha256": "d6625f760fbdefa22cec12528af0b01a6a359c2b891b41bd3be77843902c6aad",
+        "initial_state_sha256": "7e6db1e8f4535f6aa71bddff2e661675c5d43ff37e3f82242f3836fd262ba8c8",
+        "object_episode_id": 1,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put eggplant into yellow basket"
+      },
+      "image_max_abs_difference": 0,
+      "passed": true,
+      "repeated_identity": {
+        "episode_rng_seed": 1060801321,
+        "first_observation_sha256": "d6625f760fbdefa22cec12528af0b01a6a359c2b891b41bd3be77843902c6aad",
+        "initial_state_sha256": "7e6db1e8f4535f6aa71bddff2e661675c5d43ff37e3f82242f3836fd262ba8c8",
+        "object_episode_id": 1,
+        "reset_protocol": "native_reconfigure_each_episode",
+        "task_description": "put eggplant into yellow basket"
+      },
+      "seconds": 3.16731646284461,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "state_max_abs_difference": 0.0,
+      "task": "widowx_put_eggplant_in_basket"
+    }
+  ],
+  "complete": true,
+  "passed": true,
+  "render_device": "cuda:0",
+  "renderer": "sapien_vulkan_ibl"
+}

@@ -1,0 +1,9 @@
+student_H,task_id,task_description,paired_episodes,teacher_success_rate,student_success_rate,replanning_gap
+2,0,put the spoon on the towel,2,0.0,0.0,0.0
+2,1,put carrot on plate,2,0.5,0.0,0.5
+2,2,stack the green block on the yellow block,2,0.0,0.0,0.0
+2,3,put eggplant into yellow basket,2,0.0,0.5,-0.5
+5,0,put the spoon on the towel,2,0.0,0.0,0.0
+5,1,put carrot on plate,2,0.5,0.0,0.5
+5,2,stack the green block on the yellow block,2,0.0,0.0,0.0
+5,3,put eggplant into yellow basket,2,0.0,0.0,0.0

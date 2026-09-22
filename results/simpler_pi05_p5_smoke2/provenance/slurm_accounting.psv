@@ -1,0 +1,4 @@
+JobID|State|Elapsed|ExitCode|NodeList|AllocTRES
+60947294|COMPLETED|00:07:44|0:0|fc10506|billing=12200,cpu=4,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1
+60947294.batch|COMPLETED|00:07:44|0:0|fc10506|cpu=4,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1
+60947294.extern|COMPLETED|00:07:48|0:0|fc10506|billing=12200,cpu=4,gres/gpu:h100=1,gres/gpu=1,mem=48G,node=1

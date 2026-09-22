@@ -1,0 +1,54 @@
+{
+  "config": {
+    "analysis_seed": 20260921,
+    "benchmark": "simpler_widowx",
+    "bootstrap_replicates": 10000,
+    "checkpoint_repo": "Fleurrr/OpenPI05-Bridge-RL",
+    "checkpoint_revision": "241ab13fe84ae2d547b64076ad6e172e2a963691",
+    "checkpoint_sha256": "ae0b7fc1c44813d6bb9be76b5ff125ff2b8c94472d1e0977fd903cc34e7fb424",
+    "control_frequency_hz": 5,
+    "episodes_per_task": {
+      "main": 24,
+      "probe": 1,
+      "smoke": 2
+    },
+    "flow_steps": 10,
+    "horizons": [
+      1,
+      2,
+      5
+    ],
+    "native_prediction_horizon": 5,
+    "normalization": "quantiles",
+    "prediction_horizon": 5,
+    "provenance_note": "Third-party Bridge-adapted pi0.5. The HF model card calls it RL, whereas ProphRL's release README calls it SFT. Training stage is unresolved. Released metadata records P=5 and global_step=200000. Current ProphRL config says P=6; this experiment preserves the saved checkpoint P=5. Published ProphRL scores are not reproduction targets for this artifact.",
+    "seed": 7,
+    "tasks": [
+      "widowx_spoon_on_towel",
+      "widowx_carrot_on_plate",
+      "widowx_stack_cube",
+      "widowx_put_eggplant_in_basket"
+    ],
+    "teacher_horizon": 1
+  },
+  "project_commit": "f4de6cf7bde982e84f3d232c93da413e1f9b3e90",
+  "sources": {
+    "configs/simpler.constraints.txt": "c1f35c46045890e75dc03ee6c7958d0da07f12a6cac6efce4da96446c1842bc7",
+    "configs/simpler_frequency.yaml": "651eb4ed48c96c7d82cf0115597a99c94d4d84610a3acf9a4cbdb4b320207a32",
+    "scripts/check_cuda_allocation.py": "03e7535d0261733ba7afa246ff6219d3067e7647027e1b27f488ae7cdd9c8670",
+    "scripts/download_simpler_checkpoint.py": "37b5099f4b603142a34dc0efd390005490078e62117299288d9b40e7ccaf1dc6",
+    "scripts/fir_simpler_job.sh": "1bf69a2c5f93e3300c4bbf708b8f3c51df4e025b1c39c91bdf20f7aceecc72e6",
+    "scripts/setup_simpler.sh": "f7e50f8548bf381f25c0b426d413959432b47e196eb86bf88563f83b58090b86",
+    "scripts/simpler_env.sh": "0c16255ea2d0e532e704cbd2e822a7b7f36704092336c78406463e8142ffef73",
+    "scripts/simpler_render_check.py": "2905c60ef79c45d71c9fb04a94786c77d7027bc87f6f24b855533606b1d92ce2",
+    "scripts/submit_simpler.sh": "da1e9d3f900f49e282619bee4522dd892d66fb894ed76932900f826f7b389db9",
+    "src/frequency_vla/analysis.py": "d729938abe7035b65dd2c069ff2d1be6ddc4e6661ed4cb912d9341fed3d414bb",
+    "src/frequency_vla/config.py": "6e6cf2a19b772d38e88a13988d4d582e1258a6725053f6f36c622b350b57540a",
+    "src/frequency_vla/evaluator.py": "5b00fb468569f3708b2486053ba239b67001a338b7a9e1f83aaad8f0ce86b056",
+    "src/frequency_vla/logging_utils.py": "aaf27d948e0bc887bc7493e02ce280395bcd481ae744648915c343ebdafdc1b1",
+    "src/frequency_vla/simpler_analysis.py": "8589ce07583ea651ae07e305a90588e405d8407e917b401433fc5c5f25b0b202",
+    "src/frequency_vla/simpler_eval.py": "aae1c6fb03783db1ad82112958acde63246fc3628217fad45b2458f91ff41c4e",
+    "src/frequency_vla/simpler_protocol.py": "3c2fffc56c506c43cff306cc32ad8c72ec246103f6139d653b1fd7d0a5c6d591",
+    "src/frequency_vla/simpler_server.py": "050c5ab5a185e8627a181e0e699a377eb32b60c38c609889cabd5eed543b90fc"
+  }
+}

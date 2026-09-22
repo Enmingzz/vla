@@ -86,6 +86,29 @@ before policy loading or any task evaluation. The retry retains exact checks
 and probes both smoke layouts of every task before loading the model. No
 tolerance relaxation or stored-state injection is used.
 
+## First measured smoke
+
+Job `60947294` completed all 24 rollouts in 7m44s on one H100. H=1, H=2 and H=5
+achieved 1/8 (12.5%), 1/8 (12.5%) and 0/8 (0%), respectively. H=1 succeeded on
+one carrot layout; H=2 succeeded on one eggplant layout. The H=1 minus H=5 gap
+is +12.5 percentage points, but the exact paired p-value is 1.0. This smoke
+does not establish a statistically convincing frequency effect or a strong
+teacher baseline. In particular, transient carrot success at H=5 did not persist
+until the final time limit and is correctly counted as failure.
+
+All eight preflight reset comparisons had zero state and image difference.
+All 24 saved videos have the expected frame count, and the recorded raw actions
+exactly equal the executed prefixes of the saved full chunks. Mean episode
+length is 75 actions at every H; mean policy calls are 75, 37.5 and 15.
+The [smoke archive](../results/simpler_pi05_p5_smoke2/README.md) includes raw
+records, traces, provenance, CSVs and figures. Videos remain on the cluster.
+
+Main job `60948028` was submitted with the unchanged source/configuration for
+all 24 predefined layouts of all four tasks, 96 episodes per H and 288 total.
+The first two layouts are evaluated again, so smoke and main must not be pooled.
+The one-hour allocation cap is a bound, not a measured runtime or queue estimate.
+No OPSD training is scheduled from the smoke outcome.
+
 ## Run
 
 All paths can be overridden before sourcing `scripts/simpler_env.sh`.
