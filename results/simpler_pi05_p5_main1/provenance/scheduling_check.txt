@@ -1,0 +1,28 @@
+JobId=60948028 JobName=simpler_main
+   UserId=enmingzz(3158914) GroupId=enmingzz(3158914) MCS_label=N/A
+   Priority=1215200 Nice=0 Account=def-btaati_gpu QOS=normal
+   JobState=PENDING Reason=Priority Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:00 TimeLimit=01:15:00 TimeMin=N/A
+   SubmitTime=2026-09-22T08:08:08 EligibleTime=2026-09-22T08:08:08
+   AccrueTime=2026-09-22T08:08:08
+   StartTime=Unknown EndTime=Unknown Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-09-22T12:07:50 Scheduler=Main
+   Partition=gpubase_bygpu_b1,gpubackfill AllocNode:Sid=login1:57776
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=
+   NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=4,mem=48G,node=1,billing=12200,gres/gpu=1,gres/gpu:h100=1
+   AllocTRES=(null)
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=4 MinMemoryNode=48G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=NO Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/home/enmingzz/project/vla/frequency_vla/scripts/fir_simpler_job.sh
+   SubmitLine=sbatch --parsable --account=def-btaati --gres=gpu:h100:1 --cpus-per-task=4 --mem=48G --time=01:00:00 --job-name=simpler_main --output=/home/enmingzz/project/vla/frequency_vla/results/simpler_pi05_p5_main1/logs/job_%j.log --export=ALL scripts/fir_simpler_job.sh
+   WorkDir=/home/enmingzz/project/vla/frequency_vla
+   StdErr=
+   StdIn=/dev/null
+   StdOut=/home/enmingzz/project/vla/frequency_vla/results/simpler_pi05_p5_main1/logs/job_60948028.log
+   TresPerNode=gres/gpu:h100:1
+   TresPerTask=cpu=4

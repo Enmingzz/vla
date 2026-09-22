@@ -106,7 +106,9 @@ records, traces, provenance, CSVs and figures. Videos remain on the cluster.
 Main job `60948028` was submitted with the unchanged source/configuration for
 all 24 predefined layouts of all four tasks, 96 episodes per H and 288 total.
 The first two layouts are evaluated again, so smoke and main must not be pooled.
-The one-hour allocation cap is a bound, not a measured runtime or queue estimate.
+The allocation cap was raised from one hour to 75 minutes after reviewing smoke
+timing: the estimated full run is close to one hour including startup and
+per-episode overhead. This is a bound, not a measured runtime or queue estimate.
 No OPSD training is scheduled from the smoke outcome.
 
 ## Run
@@ -135,7 +137,7 @@ SV_RUN_ROOT=results/simpler_smoke SV_MODE=smoke SV_TIME=00:30:00 \
   bash scripts/submit_simpler.sh
 
 # Run only after inspecting smoke logs/videos and validating policy behavior.
-SV_RUN_ROOT=results/simpler_main SV_MODE=main SV_TIME=01:00:00 \
+SV_RUN_ROOT=results/simpler_main SV_MODE=main SV_TIME=01:15:00 \
   bash scripts/submit_simpler.sh
 
 # Reproduce all aggregate CSVs, intervals, paired tests and plots:

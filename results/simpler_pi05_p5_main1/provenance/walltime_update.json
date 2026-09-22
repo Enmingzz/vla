@@ -1,0 +1,13 @@
+{
+  "checked_at_utc": "2026-09-22T19:08:06.692916+00:00",
+  "job_id": 60948028,
+  "previous_time_limit": "01:00:00",
+  "current_time_limit": "01:15:00",
+  "gpu_count": 1,
+  "gpu_type": "h100",
+  "episodes_completed": 0,
+  "reason_before_time_limit_update": "ReqNodeNotAvail, UnavailableNodes:fc[10615,10713,10715]",
+  "estimated_start_before_update": null,
+  "change_reason": "The 24-rollout smoke took 300.75 seconds in rollout calls, including about 26 seconds of first-call warmup. Scaling steady rollout and per-episode overhead to 288 rollouts, then adding preflight and checkpoint loading, gives an estimate close to one hour. Increase only the time cap to avoid truncation; release allocation when evaluation completes.",
+  "model_or_protocol_changed": false
+}

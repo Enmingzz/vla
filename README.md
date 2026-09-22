@@ -11,7 +11,8 @@ All eight exact reset checks and all 24 episode/video/action-prefix checks
 passed. One H100 took **7m44s** and was released. The first failed reset preflight
 (zero evaluated episodes) remains archived. Job `60948028` was submitted to
 evaluate all 24 fixed layouts per task, **96 episodes per H / 288 total**, on one
-H100 with a one-hour cap. Smoke results are not pooled into this main evaluation.
+H100 with a 75-minute cap (raised from one hour after reviewing smoke timing).
+Smoke results are not pooled into this main evaluation.
 The checkpoint's SFT/RL provenance conflict is documented; no Simpler OPSD
 training has been started.
 
