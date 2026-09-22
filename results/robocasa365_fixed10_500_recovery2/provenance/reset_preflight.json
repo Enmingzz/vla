@@ -1,0 +1,1252 @@
+{
+  "episodes": 57,
+  "passed": true,
+  "policy_calls": 0,
+  "rows": [
+    {
+      "identity": {
+        "environment_metadata_sha256": "b95aaa7cc8f95e9801d64d5d4b287caafc1f205ba04e5345bca4034db68fac19",
+        "episode_index": 9,
+        "episode_seed": 270020009,
+        "initial_observation_sha256": "16f9e3c13d5a5334f2a430611936903cfaddb9fba2cf08271eaa422071ea4b95",
+        "initial_state_sha256": "bbc4003bbbbecaa9bcc811fad224c887bec978dc7fb77a7463525acc4c05edd2",
+        "initial_xml_comparison_sha256": "d8215b0debf84b62bfc7e1580449e7d8a9c1ae9ec32bf78b81a2326ad1bcc13b",
+        "initial_xml_sha256": "cac39207cde92ae8a2721a7065230f4d8eedfd9e229eb31f501f8b6bc5591535",
+        "paired_catalog_identity_sha256": "2cbb8aac75fafd914178beee99c53fd521c6ad85fbc8a0c5302caa04bd6dff19",
+        "task_description": "Open the cabinet doors.",
+        "task_horizon": 1050,
+        "task_id": 2,
+        "task_name": "OpenCabinet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "d8684b48c3bd47ce70e078b4eeb1aac8df7b58a0de973f423eeae2b8fb6e8f29",
+        "episode_index": 3,
+        "episode_seed": 270040003,
+        "initial_observation_sha256": "3328291a78b4b2a0f55de22f1b49b231eaab6788d411f4aeeb5d83cca7057c65",
+        "initial_state_sha256": "ed2f0c072619d5c133775db8f1cf8dca982087083b2d3f5c57ddf79ae8631aba",
+        "initial_xml_comparison_sha256": "ff9133a93ffbfc5834fe4ec05e1e5ae6fa530bae42e557249716f117e8bf5e51",
+        "initial_xml_sha256": "86e018fe78c7a95c120989c7f68fa51f5bf6d6806a00b5167794a0c9b6deb10f",
+        "paired_catalog_identity_sha256": "27883e0ed558c0c78af5aacd7a5ec04b1930fad447cd1c0da877f2ec3225db20",
+        "task_description": "Pick the mushroom from the counter and place it in the cabinet.",
+        "task_horizon": 750,
+        "task_id": 4,
+        "task_name": "PickPlaceCounterToCabinet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "46af3bb4e10bd32cbed8baa5c43068672ea5305b53c88d3b0b719397514c1069",
+        "episode_index": 4,
+        "episode_seed": 270040004,
+        "initial_observation_sha256": "72dfb47c9f9f4d7d5bf1689cab3caa3754871853fa89c127133e87e72869264e",
+        "initial_state_sha256": "634b9b9e18496a955218b7e0b907d544e21f1f8c626e618df772660cb08cc35a",
+        "initial_xml_comparison_sha256": "ae6f458df6b445e533c4ff18dc877c073305d742b7a3202434e1029cb80ae197",
+        "initial_xml_sha256": "d6d77e16a65b8112343bc66c9722d56e7719ca1eec2c2ab218e235e26305a0da",
+        "paired_catalog_identity_sha256": "6c1e3774c50ef4308cae5307cd6766173bff0b27b9425dca52b63d88fd8dd975",
+        "task_description": "Pick the bar from the counter and place it in the cabinet.",
+        "task_horizon": 750,
+        "task_id": 4,
+        "task_name": "PickPlaceCounterToCabinet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "2fbead2e242a4bd95365a220051fd69b53f361e3000b9c0af04858964a65d40a",
+        "episode_index": 5,
+        "episode_seed": 270040005,
+        "initial_observation_sha256": "a71d2f6df37a9a5f6f5bdb109dd3e6093e9e1fcc8798ed13a02d7b39b0fe1d35",
+        "initial_state_sha256": "da37712e6880946824a185a2dc9cedde6d9966974537ca67a3fc82e2d570fb1c",
+        "initial_xml_comparison_sha256": "7620fca10e40f7d01f4c40cf989ac3424184f0545bf7323136df0e7268c077b2",
+        "initial_xml_sha256": "33c679b5b73abe874484bdd27d70026c45bd57a97d2f68c753518ff82bb62064",
+        "paired_catalog_identity_sha256": "36a875cad96e72da5c504437562857526c1edc382ab356822dd9b489ae8ccc9e",
+        "task_description": "Pick the mug from the counter and place it in the cabinet.",
+        "task_horizon": 750,
+        "task_id": 4,
+        "task_name": "PickPlaceCounterToCabinet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "128626034ed6279aab7c6572ccf0ce7808c68d173c68c80dc89a3551bfdd2520",
+        "episode_index": 6,
+        "episode_seed": 270040006,
+        "initial_observation_sha256": "87b95062238082a382cc080a0d90f34a9567f380f5a76422bfba8b6c1eb7c3c0",
+        "initial_state_sha256": "cd599bfb86a34d0b75704c491f08d76579a3cf91486f54a4222279b5dd02a2af",
+        "initial_xml_comparison_sha256": "8ce6f4125ed0479b73e05108c536319f6a2f20139f032a70453da2db9d624f38",
+        "initial_xml_sha256": "5c73aed4d43e5b3b59cf2e70fdefd3f8ff22216b9f2d237be7435a694b511bd6",
+        "paired_catalog_identity_sha256": "57bf2b65d84aea420c5892037aeaa40611fa78b550a7829cb727cb93f72d2191",
+        "task_description": "Pick the boxed food from the counter and place it in the cabinet.",
+        "task_horizon": 750,
+        "task_id": 4,
+        "task_name": "PickPlaceCounterToCabinet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "b0e3a7c9f4451dc0df80bb49d49e2adf75c0a8530a990e841e04f6b80352f8a8",
+        "episode_index": 7,
+        "episode_seed": 270040007,
+        "initial_observation_sha256": "0477bbc6dca995a21140491830456a7422c440b00c87c82fa0c2d69bc3a75984",
+        "initial_state_sha256": "5db7a29465e3ac1d73ed0c49368390934ecc85c086d17c11b4bc6fac6f90239d",
+        "initial_xml_comparison_sha256": "471d8bc4fb5be3141a9425c63caab20516f4de8a4899b5a7e7bfb3d9ed22ffef",
+        "initial_xml_sha256": "3b5b62e1fc2629c67e41ac19f2cf97637e9afdf1c4eec8c6ccc4c918c5f2b1cf",
+        "paired_catalog_identity_sha256": "8e6677e610a427d6a0a2ba73ef2fdb0c2609741bfb540c597c7e122fe6a42ac9",
+        "task_description": "Pick the lemon from the counter and place it in the cabinet.",
+        "task_horizon": 750,
+        "task_id": 4,
+        "task_name": "PickPlaceCounterToCabinet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "532d8dfe2f06774cfd766e18404bacb89d6b9bd7028467fdb2d9a13eb16d09a1",
+        "episode_index": 8,
+        "episode_seed": 270040008,
+        "initial_observation_sha256": "536b14df08063efbfada60f4cdb7d1bb7b7883362851736d5f801bfc60813f1c",
+        "initial_state_sha256": "1a468f331faf67054e4dbb4286f443100210b576cdf9524e5ab89922b99beec5",
+        "initial_xml_comparison_sha256": "01485f8491bfce76a2d7e1f88b703966e2f2212eccac2f887cee38c2a93f5d10",
+        "initial_xml_sha256": "230d5dc0564296265604f941726845f02b0024579bb0b34447373cec21ee4131",
+        "paired_catalog_identity_sha256": "55a747e575d86e4ced2ea9c8a5dd02b9fc032ef068b802b93876661b96686661",
+        "task_description": "Pick the tongs from the counter and place it in the cabinet.",
+        "task_horizon": 750,
+        "task_id": 4,
+        "task_name": "PickPlaceCounterToCabinet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "4d032555a18989289b429c1c1be76276568cabfb9c01a9e358f1754a328e29f7",
+        "episode_index": 9,
+        "episode_seed": 270040009,
+        "initial_observation_sha256": "9dafd3f422251691047b4372c8513afc345322fe8491f168ba873fe85ae7bb8d",
+        "initial_state_sha256": "f459042a4a24c316d68c8fdf0b022fdb7478aa874e0737933720cc48c956244c",
+        "initial_xml_comparison_sha256": "6f290a6ff7c2993a5c3438d062945e55fe52c72a7877e6905c6b6b86359e5813",
+        "initial_xml_sha256": "e7cd9ec6009c92664747c45d7f75436052c009bff32de06a812277422b326aaf",
+        "paired_catalog_identity_sha256": "fe9744a1107a7fec45e60f8e105b797f9c8163c5f06b7b573daeda46cf017353",
+        "task_description": "Pick the avocado from the counter and place it in the cabinet.",
+        "task_horizon": 750,
+        "task_id": 4,
+        "task_name": "PickPlaceCounterToCabinet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "fd4c60a00ec3d96a70e70b5b9ab4054bed9359a4a6ddba17bdd3531110166f3a",
+        "episode_index": 0,
+        "episode_seed": 270070000,
+        "initial_observation_sha256": "b64c9f1361ed5332e2cdc226f70a307f718379c9da5a22c9eba33b11b2e0fcea",
+        "initial_state_sha256": "6785045e64c65b0e6d33e90cfa4f0f0966581c70f778ec19288eed3bcbaf7716",
+        "initial_xml_comparison_sha256": "c640c7303658a8c691f74190334fe658292482760729aedbf73045dd536b0bf0",
+        "initial_xml_sha256": "ad17b0ef4060d5f79c09f7b8937bf6549276498e1b15c37c39bc63375a629de3",
+        "paired_catalog_identity_sha256": "a9f2ac0b01771450662af3ff5739297934d934ff1604598c825ad1bb452c3fa3",
+        "task_description": "Turn off the front left burner of the stove.",
+        "task_horizon": 750,
+        "task_id": 7,
+        "task_name": "TurnOffStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "0bfe97ab92c31f8dff26af6673c6b78173c425e80c00784b8f9d399a84888e9a",
+        "episode_index": 1,
+        "episode_seed": 270070001,
+        "initial_observation_sha256": "d919ce967f20ee1e4cf25ead18da5bd789387aa4fdeaa3e9dba729fcfabfc210",
+        "initial_state_sha256": "510b526c6d4d2e88bfeed684343ac169b12d8ffe37862e557692910a227c0915",
+        "initial_xml_comparison_sha256": "129247659ee5a7a2152ac282891616bb59897ae97a3743887733c302e3dba42f",
+        "initial_xml_sha256": "2cab6f68705d82d4dfc4d93b43a387d7c943eaa3e5b703fe5b33c0e4aa1c3bc0",
+        "paired_catalog_identity_sha256": "8d49ca36a0ca304b8df604e87b992e0baffc43a0a52b6ebfe802a218e016bc90",
+        "task_description": "Turn off the front left burner of the stove.",
+        "task_horizon": 750,
+        "task_id": 7,
+        "task_name": "TurnOffStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "bdb956fd6f2b314179da527b332db9bd1df8e38ec5ba339713c5365bf8dd483c",
+        "episode_index": 2,
+        "episode_seed": 270070002,
+        "initial_observation_sha256": "c539cc3fa5af096ca385199f9bc88cf7e313f93bc24a36b1f45febe8a7b85175",
+        "initial_state_sha256": "d4060ae9774ebda44712b673bf0b433c016833cf6d4d5e5d13c41b1f813cb1d3",
+        "initial_xml_comparison_sha256": "8f7198b8d82dfa1f88cdbea2f1fdd631b3e55d9e427edebbde7efc0a1a5a614d",
+        "initial_xml_sha256": "5e8dfd08df95fbee1400e3c4b5004a7880dccb3d8c5d831bc035748b1b02e3c8",
+        "paired_catalog_identity_sha256": "aa11ac0dc2c6afd6e727e265ed35cdd98d8e0e20db54e5da1f4c9a36e017434a",
+        "task_description": "Turn off the front right burner of the stove.",
+        "task_horizon": 750,
+        "task_id": 7,
+        "task_name": "TurnOffStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "77c3a4c6549c66091c5151158f3d391c5b3a95ad487c6b85d0628649744e4563",
+        "episode_index": 3,
+        "episode_seed": 270070003,
+        "initial_observation_sha256": "6a66e1265ba74afc9b6de0e0e209d3a13745805da5efe6bf0bce665c0fe09d89",
+        "initial_state_sha256": "942d1d94c801fbe1efc11768b418d0b9a38dc79b6003747cdbe7be4fc2374584",
+        "initial_xml_comparison_sha256": "f4ef46b6ccc0bfe5bfe024d5335b4215eb5eac109d9b6c3f1b363741fcabf1d0",
+        "initial_xml_sha256": "4183c66e780869577386ff0a439fdfa6a4d2eb89e3a0ce80cc65f5ee7c015647",
+        "paired_catalog_identity_sha256": "5be82777b73664fe6b4963f0e4ece9b6a353c11a7b535128be7fe10fed0dad10",
+        "task_description": "Turn off the front right burner of the stove.",
+        "task_horizon": 750,
+        "task_id": 7,
+        "task_name": "TurnOffStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "4fb1700a08be1dc0a27addc25285299cd39244b6fc8c4f7f2faf266a877fcf8f",
+        "episode_index": 4,
+        "episode_seed": 270070004,
+        "initial_observation_sha256": "fcd87fe1ad31f82548c85ddeb91c6e8c9d7980ad573008580e5a29996f3c40d2",
+        "initial_state_sha256": "b9b60a4ccf62497d9f25a6235267ba249874da0bb41bcf4ae782bff9a695255e",
+        "initial_xml_comparison_sha256": "e7fe1819f207b39f675cde9036ab0337c387494142bc0089e0aadb11e36de359",
+        "initial_xml_sha256": "69e8e77bb0ef7b68e68d0d0240f62c44e6c46a6581abd272632f60737c57f127",
+        "paired_catalog_identity_sha256": "e0028d76b337f5ade50a325d3b26978f27840a30b77fd91bbc2808978d39e4b9",
+        "task_description": "Turn off the front right burner of the stove.",
+        "task_horizon": 750,
+        "task_id": 7,
+        "task_name": "TurnOffStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "8c2b84401031bd58ad2c68994358513beb87db0a3ffc2077e256dc7bdcf5c17f",
+        "episode_index": 5,
+        "episode_seed": 270070005,
+        "initial_observation_sha256": "acf935e2df103ad02624d8fd63149968761313290b19f49addd7ffee2964a0eb",
+        "initial_state_sha256": "6b4190c839efd845102476473cde3e2a5c08d5aecae6ab2d10365a65d0bdd60d",
+        "initial_xml_comparison_sha256": "796b77177e1a4bb3487b4e7a6ad72b41888a8e61c740f212892a950057320a6c",
+        "initial_xml_sha256": "1784e142552769e1201011da2faa802047a8558688fcdb4546aae0676e3f0a58",
+        "paired_catalog_identity_sha256": "1b4d8ae25a5226dede1c593d375cb1cb02f9bbd559fc68a26eca28715819764a",
+        "task_description": "Turn off the front left burner of the stove.",
+        "task_horizon": 750,
+        "task_id": 7,
+        "task_name": "TurnOffStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "ed3fb08864cd1a113189c3d995e9b4b215a49e6635cdd84eb237022e8734ec4e",
+        "episode_index": 6,
+        "episode_seed": 270070006,
+        "initial_observation_sha256": "9f774c9db74401f5252b22a155027b95494cdb4a3f1573d528fe190228b47a39",
+        "initial_state_sha256": "d99f31a22ded072692365bd247bf3e422a05682bfc460ff3576fde16a94c41d8",
+        "initial_xml_comparison_sha256": "a7364558117ee55f852d880d51aa0c8aaacd307474f2e2560b87bb44da0f397a",
+        "initial_xml_sha256": "e2d70f32b4df4ec874fd9f817588d871fbd6aa20f11f48022bc2fca916b3b072",
+        "paired_catalog_identity_sha256": "62c48a6d9bed232a2a9fac30b5874d749eae1194bce9a3f5f00745df43f7619d",
+        "task_description": "Turn off the rear left burner of the stove.",
+        "task_horizon": 750,
+        "task_id": 7,
+        "task_name": "TurnOffStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "343bc40ec88c3b77f39076b034279b0d4ae5f457c6caa77613620f89c9ebdf13",
+        "episode_index": 7,
+        "episode_seed": 270070007,
+        "initial_observation_sha256": "6b90e7d5a2889753b1912189bf34b7bf8eb3058c904177456ac921b7f45d2769",
+        "initial_state_sha256": "25567c26e2258992331927dfe45a1653ed4d6137acf5474129aa667c6a1cd20f",
+        "initial_xml_comparison_sha256": "a7e11c375fbe9136708b91fc8af1b9d9cbbd6c5f4b9f9137a415b79033590eff",
+        "initial_xml_sha256": "4e4d79fdabca1fcb1e511da51bbb0c061a447bb512ac26dc77d0181f2c8dd6c9",
+        "paired_catalog_identity_sha256": "c8007838a0bc5002f39f4b871c1f7c88f09e58fd6610fa89f3d4c29d908787e8",
+        "task_description": "Turn off the rear center burner of the stove.",
+        "task_horizon": 750,
+        "task_id": 7,
+        "task_name": "TurnOffStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "cbac5ec7ca3f65347b1c5e1d16894106beba35329ed154548b0abe8b4178c2d2",
+        "episode_index": 8,
+        "episode_seed": 270070008,
+        "initial_observation_sha256": "8e047013ca847070c5bef47b50b89fa077aef36e91396ef2be9f400ff2ba7ec4",
+        "initial_state_sha256": "b802ce6492d06e0615af50d77c85b518c901502ed0bb512e0e4a71b38451f2ae",
+        "initial_xml_comparison_sha256": "f464e35ad53438ed8da8a28908a6293ecb6e5d328e717ecf7ad86671845bd6db",
+        "initial_xml_sha256": "603b8a9e213acbe29ec77aab0302357d8c12bcee65679168a168b61f0eade108",
+        "paired_catalog_identity_sha256": "5b6725491c3b5f9f278ff1e1e32fcdd4982aa2f526edf945b696bfd71e0ac764",
+        "task_description": "Turn off the front left burner of the stove.",
+        "task_horizon": 750,
+        "task_id": 7,
+        "task_name": "TurnOffStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "3d89101fe89b395b89d8d1ce01aa7c8d03e1c11f2a5af0abc0fb8f6e29a95f67",
+        "episode_index": 9,
+        "episode_seed": 270070009,
+        "initial_observation_sha256": "0aba8eff2a8eef4f5e2a03159963a6ede667b324666976f84e0e0532cfb73395",
+        "initial_state_sha256": "6049cea2cf759135cf0b81bfd97019d47aa2502ad66b744a07aa7ef30449a8cf",
+        "initial_xml_comparison_sha256": "605e2df8e8105a2da7b6d7839240ad5fcc3c1f38edfb6bcfb0f3f3accd6cfb39",
+        "initial_xml_sha256": "b6f74af5497784b3a260eefdf7fd65f8ff2847955e964f2e2b2e6bc0cc1d904b",
+        "paired_catalog_identity_sha256": "ac18fd32f48c16a76499606736111a354b36222df5aa1d318328bf17667424ce",
+        "task_description": "Turn off the front left burner of the stove.",
+        "task_horizon": 750,
+        "task_id": 7,
+        "task_name": "TurnOffStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "d4cb911efd816451379513c7d739d777696e81f03c5ffab27e81afa38f68d89c",
+        "episode_index": 1,
+        "episode_seed": 270050001,
+        "initial_observation_sha256": "c3cf6b6fab3441ae4209e38c9a2d34f37c1f26e163438e2aa86b34f9331c7166",
+        "initial_state_sha256": "dc6dc56d27a01b55dfe8bbc5e83724a2f8e3245b703bf15eebeea8b7a1f63cf5",
+        "initial_xml_comparison_sha256": "e95b588345e559da008d0d3f69698a44e9f8b3ee0f2c773e7213c0553f309b68",
+        "initial_xml_sha256": "d3ac9443dfa552d3bfab85812656925e3d07edbca94e095671b57389228cb557",
+        "paired_catalog_identity_sha256": "ddd9c0209ebabd44e2e9741e46d44f5c7c8e3fd59dcdb88789f021e6851f486b",
+        "task_description": "Pick the hotdog bun from the plate and place it in the pan.",
+        "task_horizon": 600,
+        "task_id": 5,
+        "task_name": "PickPlaceCounterToStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "0c7c20257bfea62321c9e80b24e278151b05036ad64684f110406f6ae17deb07",
+        "episode_index": 2,
+        "episode_seed": 270050002,
+        "initial_observation_sha256": "ed95575f3235e8e776eac8ffef3ff5eea4822d0380b409301a35acb8175f34c1",
+        "initial_state_sha256": "fb237e4eb3487d41425cebd014cc0c4f98c7c30b425ee90c4f598ec5fc982751",
+        "initial_xml_comparison_sha256": "27b65f98434548237f56b915785713d50fbd6e5aa3e45c3f40fb4d8aed0209f5",
+        "initial_xml_sha256": "4db7ba5f34f979aabed0357802a178eb688bf52c0ebce4da46fd9c5a28d9aad8",
+        "paired_catalog_identity_sha256": "103229c1221c3867d8b9525456603a75eae072b40ea08c29cad01fa441fce94a",
+        "task_description": "Pick the lime from the plate and place it in the pan.",
+        "task_horizon": 600,
+        "task_id": 5,
+        "task_name": "PickPlaceCounterToStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "bf743cdf05bf4d686bb1b06403b4b6eb52cff6857c13aea54dadc7de7be61b61",
+        "episode_index": 3,
+        "episode_seed": 270050003,
+        "initial_observation_sha256": "f278b2bd0d7fc48df413f9e8e53c4e11cb3d3acd86eafcd9f92be4deed88e826",
+        "initial_state_sha256": "0afab49e4a42ecfc172cc5f16d8d62c57490bc89d9a7ea2a1b49841a4985e4f1",
+        "initial_xml_comparison_sha256": "c7370a4c6239ccdd020856998d6bbe2ecfa983cf279eb0c3c3f337fdbe392ea3",
+        "initial_xml_sha256": "ca7645036f04987d7a6432772b0dc8b9ac0b812085a0c6c97f6c33fe599812c8",
+        "paired_catalog_identity_sha256": "ff086703abf85a3d80ca2bb2afe393b352fdd4ce50471d4ea2b2f0960bc2af2d",
+        "task_description": "Pick the mango from the plate and place it in the pan.",
+        "task_horizon": 600,
+        "task_id": 5,
+        "task_name": "PickPlaceCounterToStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "dbd270ef787d9a4bb6758f17ce32ec3ac81b0871d0eb59f38c68bc8b03f7125b",
+        "episode_index": 4,
+        "episode_seed": 270050004,
+        "initial_observation_sha256": "ffb2b3106fd1adfff58b365afc58a1895b125a10c0bcd8113213e4601d9fe126",
+        "initial_state_sha256": "cb384dd2acdf8b1ba3b3db0f34da0f66c4b4b5c495bdc7ef76c5246093ace241",
+        "initial_xml_comparison_sha256": "9531e2ec6c1ca2bd3aeffe99ecc4f45e4b1214b64d8f8332bb8dd76611761809",
+        "initial_xml_sha256": "f0822a733b485d078a3a9b352738becc6bdd8a1128ddcb0016a0dee310bc927e",
+        "paired_catalog_identity_sha256": "2cd7a93857183f75cdf01a7671734802ddb7f169be80a79ec2ab41b85a126fe1",
+        "task_description": "Pick the bell pepper from the plate and place it in the pan.",
+        "task_horizon": 600,
+        "task_id": 5,
+        "task_name": "PickPlaceCounterToStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "f2f54256ffe8f4588380971d73d09672fd3f77a15b38db0356fb9ed5b0efa1f0",
+        "episode_index": 5,
+        "episode_seed": 270050005,
+        "initial_observation_sha256": "9a76ec7cc10ef27278f05adff5bfea69b4d68f5894d1929e299e3b6257b78ea6",
+        "initial_state_sha256": "f3a151a818a255e3955c5f408c6ba483737bac83ae0813e5527a3ea59a21ac40",
+        "initial_xml_comparison_sha256": "b457072b5f7133d307e084f23967c77e6fd2f13e749e20525b8777aa66156e5e",
+        "initial_xml_sha256": "d641f4fd406c27d08b16216f08548510937d3ed9058f34bc6bfead153e969de4",
+        "paired_catalog_identity_sha256": "9101af768d0ea671345cd9d7978c24f06379506c219fee69ecf1548ef60705dc",
+        "task_description": "Pick the lemon wedge from the plate and place it in the pan.",
+        "task_horizon": 600,
+        "task_id": 5,
+        "task_name": "PickPlaceCounterToStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "c27e0624b974a3889ab2c403e1c47ad30dbf20025e19d08ed5ac9c9227f73bee",
+        "episode_index": 6,
+        "episode_seed": 270050006,
+        "initial_observation_sha256": "febcb7fa7ed4214e697dfb34bbb803c5f95aa4720e338d487a105529e1d3c784",
+        "initial_state_sha256": "0a7b840d8cb98fd091c2ec3e9709eaafc025848da08fdd0f172e79bb1f1226b7",
+        "initial_xml_comparison_sha256": "8e5f17ae208a45dce2cbd6833fcf43738b75e548ccc7d18d0e668d9509a7eeb7",
+        "initial_xml_sha256": "76532290bc8c6d95e0e8209ef676f301b9f98259c5cf7f0d62819b2a14189cf0",
+        "paired_catalog_identity_sha256": "a2b4996baf3c1d42188d3e1d607831d96121b1d8f55443a2aab38fab39afde77",
+        "task_description": "Pick the corn from the plate and place it in the pan.",
+        "task_horizon": 600,
+        "task_id": 5,
+        "task_name": "PickPlaceCounterToStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "4f6d21cda0fccf87d8e2f1efc45ce1704687358d568ad18f3a5c8221f7c423d2",
+        "episode_index": 7,
+        "episode_seed": 270050007,
+        "initial_observation_sha256": "551390ade7b35e879ce057d093476fc249c5d388760135eb3f317eb30e6f4850",
+        "initial_state_sha256": "271f661f3f430b412e9e5be87f2befa2be90281df339f0c73780544bd69f155d",
+        "initial_xml_comparison_sha256": "3215e9b326c603b9e283ef9244d8f53d55e2d40e3cc6e2496bd8adb8bc3e1bb8",
+        "initial_xml_sha256": "90d8d9f7f44cdd03a1617cb6d9dfa37df40a2df6d5a0edb112ab33b32d4f0caa",
+        "paired_catalog_identity_sha256": "c46b047d4b2c183b19803514506ecafef5f8bd9b8eda8155810b9814324c7841",
+        "task_description": "Pick the carrot from the plate and place it in the pan.",
+        "task_horizon": 600,
+        "task_id": 5,
+        "task_name": "PickPlaceCounterToStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "59fe9f55711253f1a6953e25b1b8b2fb91dce7a3f3c24b46b6578375c2b1a3ee",
+        "episode_index": 8,
+        "episode_seed": 270050008,
+        "initial_observation_sha256": "7420351c74317bc6e56b0d04d3b4256bf3eb0b39118cc40ffd9d472a55f32c57",
+        "initial_state_sha256": "5473bb2123d5174e50614556eb6e478478ed50b6c9bba6be9c3ccdff5cf9b909",
+        "initial_xml_comparison_sha256": "50e4b1a65d31d25c89353aec92deeaeebc7b14254b2fb1d8f6a3f55c461bed57",
+        "initial_xml_sha256": "4465b7268be07ba6cb33e2db23345a636fbd8f0536340d73a5cc97bba38ed02b",
+        "paired_catalog_identity_sha256": "83f4a38486926b2bfdd9fbb952e396e852756ee1967d27627cf9742f0a409d7c",
+        "task_description": "Pick the cheese from the plate and place it in the pan.",
+        "task_horizon": 600,
+        "task_id": 5,
+        "task_name": "PickPlaceCounterToStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "33bd2a4a74f66be9b9e90fc1eca2dbb04b0dd2bb49efee80fa64ca8c2571e0c8",
+        "episode_index": 9,
+        "episode_seed": 270050009,
+        "initial_observation_sha256": "5fed3a526e65c19e7548c939acc9296e12c2b71e66af5223d90458990ab08a4f",
+        "initial_state_sha256": "ef0ac8231c3af4d2ff6b979d8a450d8ae953bfdc26a975bc6193c5cb8e0316f2",
+        "initial_xml_comparison_sha256": "4ac63421de4c485d8ab29630e82ad9f8c10c2e0e72f058a851e3c6c5392395b1",
+        "initial_xml_sha256": "dfa9b0aecddeed4ce9b7e6bcaac4af47668ae9de7edf61d9bdf905ce9d8b90d3",
+        "paired_catalog_identity_sha256": "eb816f7ac578386fb6367a52cf60c7d530eefa87506f2f4dea806d6c4442cb90",
+        "task_description": "Pick the onion from the plate and place it in the pan.",
+        "task_horizon": 600,
+        "task_id": 5,
+        "task_name": "PickPlaceCounterToStove",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "604f714118bf7b64880f653fba6161fa27bb63d12fdebddb60f535d3534dd5de",
+        "episode_index": 0,
+        "episode_seed": 270060000,
+        "initial_observation_sha256": "7336871cdaa52bc23e034333d468ee758aee6f40092c9d44e20ffa10e92b2119",
+        "initial_state_sha256": "f7cb40f1bf8419c27b26e808719ba1180722d2e34e74fd05045d573a5035482c",
+        "initial_xml_comparison_sha256": "cb3cb67b069183f41b4e6055aafc75e0c5175f0636463b209fcabf8338c6aace",
+        "initial_xml_sha256": "aa8abc07bd53698204e0945c174b012587f71b38909c3dd02e9de0de65eaf5ca",
+        "paired_catalog_identity_sha256": "67bf50c12bce28fa140bf56a70412b62d9971572e29043b529fe188ddbd27cb8",
+        "task_description": "Pick the broccoli from the sink and place it on the plate located on the counter.",
+        "task_horizon": 900,
+        "task_id": 6,
+        "task_name": "PickPlaceSinkToCounter",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "counter_1_main_group",
+          "location": "left_right",
+          "reference": "sink_1_main_group",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_1_main_group",
+          "location": "left_right",
+          "reference": "sink_1_main_group",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "43b4eb2ee555612f488813ed2feecf8532ff5e9358ae1836a7b26d0210d4e604",
+        "episode_index": 1,
+        "episode_seed": 270060001,
+        "initial_observation_sha256": "1be74d78efb992973945bcf087ec122756d32e5e022aca263a4e931ab7b3648b",
+        "initial_state_sha256": "e4c0bbf8be0c1e3d3fb0f1675381f396db39afc78c45a7a0b26624b5b56ebcb1",
+        "initial_xml_comparison_sha256": "8959487cf1144ea746d105cfc4a3d19c73549262e370d40a043f4bf6a055161c",
+        "initial_xml_sha256": "ccddd12eb4ef68877eb69636a765d76c0e0e9d94255e2e86bc474163ee08730a",
+        "paired_catalog_identity_sha256": "0a75db02dcfef1e7eb97044fc1d68704c042d73b0d7de27e21a056c95d75b44a",
+        "task_description": "Pick the carrot from the sink and place it on the plate located on the counter.",
+        "task_horizon": 900,
+        "task_id": 6,
+        "task_name": "PickPlaceSinkToCounter",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "08a6edec958e1ed4901888362a7dc6a20e97bfa00bc521e53ad07f3554ba6f83",
+        "episode_index": 2,
+        "episode_seed": 270060002,
+        "initial_observation_sha256": "0b5382ef3b911ac702c71e3bda314cd5e56b1f89f799e68e4cb3deff515e45ee",
+        "initial_state_sha256": "0f43ec655048d7c192b4dcfad8c18b8cc51adb99a4249f4a026539922e6e1584",
+        "initial_xml_comparison_sha256": "b78103a357f4f013fab0ae1dcd27464e882722831e5e5c6c8d5642992e42e59c",
+        "initial_xml_sha256": "295850af37871182fb76302f55a70f2db78ebeba7f222191a7c0f82ddfed7ba9",
+        "paired_catalog_identity_sha256": "ea5c7c32f05256a9431524902eb3a0975471b7a19c87ce39285de5abccb5759e",
+        "task_description": "Pick the orange from the sink and place it on the plate located on the counter.",
+        "task_horizon": 900,
+        "task_id": 6,
+        "task_name": "PickPlaceSinkToCounter",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "5e965fe3b7e020141cae8d695e0814429e555e705dd25b8e0958ec795b5aa949",
+        "episode_index": 3,
+        "episode_seed": 270060003,
+        "initial_observation_sha256": "b01bf219d453c5da32d1fcc0507c7e3f410440d0bfddff812d86075309624025",
+        "initial_state_sha256": "09b2483bddc913a93fb284e91b2ec0826d204372113454211abee7c2486a034d",
+        "initial_xml_comparison_sha256": "810d698a24ede43d86b31644a8b1a28e78e2faf45db68fbedea7208e84c4062c",
+        "initial_xml_sha256": "30cf6c0c7fd2fd5f57ae052d956f2dca335c38f87a0c7fcacb42a3a7ce397a25",
+        "paired_catalog_identity_sha256": "49c0048b3cae30822f0f79a1943751f68468642eb58c5e9f33b70e42fb869def",
+        "task_description": "Pick the chicken drumstick from the sink and place it on the plate located on the counter.",
+        "task_horizon": 900,
+        "task_id": 6,
+        "task_name": "PickPlaceSinkToCounter",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "counter_1_main_group_1",
+          "location": "left_right",
+          "reference": "sink_main_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_1_main_group_1",
+          "location": "left_right",
+          "reference": "sink_main_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "aeb58e30cb9971df027857da0e8be0560fa964ea2d3f99fd3e4559b98a9cb9aa",
+        "episode_index": 4,
+        "episode_seed": 270060004,
+        "initial_observation_sha256": "05cfd820452274142b975507a60b5477c6a24ff19ef7541dcf7e4b4c09a00d7d",
+        "initial_state_sha256": "bc6f97887eecc8fea04e40169d1e574535bd88dfe4da40680218db7078d8bbc0",
+        "initial_xml_comparison_sha256": "dff245f3e6a6fb368f87bc5cdb8974b392529848d474f215723098476a4574eb",
+        "initial_xml_sha256": "865e7abecde1c125d01c04ba3d39e87be859223f0909fe036b576e26a0497d02",
+        "paired_catalog_identity_sha256": "df7cac464672a8e6b0216899a1c7858c62ac93c689b217906a45ae8878b043fa",
+        "task_description": "Pick the garlic from the sink and place it on the plate located on the counter.",
+        "task_horizon": 900,
+        "task_id": 6,
+        "task_name": "PickPlaceSinkToCounter",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "island_island_group_1",
+          "location": "left_right",
+          "reference": "sink_island_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "island_island_group_1",
+          "location": "left_right",
+          "reference": "sink_island_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "56dfc945f3960275422e36366c3b0570177d4639e8f3d226e8410691ad0b0646",
+        "episode_index": 5,
+        "episode_seed": 270060005,
+        "initial_observation_sha256": "85b04e66b51686fd1fcecfeb6c1143206c3ce3cb386f0322abc4694476b147e6",
+        "initial_state_sha256": "ece6a28c89d4009d686a36f9f8a94ab4a0e780a6680de1a803856d330814933b",
+        "initial_xml_comparison_sha256": "2118ceb5687f4a3d297e16060fbd8fcf33f0e475fca531a73b1493bf20550f7f",
+        "initial_xml_sha256": "efe7480e1bec1f6ffb20b77cbe2e2168fedb00d96fd5c3b4218358496579c282",
+        "paired_catalog_identity_sha256": "432cf419210e7c6a7bed2799a4cf362d328d7ba46e1f59b2dc0589a5cf93a795",
+        "task_description": "Pick the corn from the sink and place it on the plate located on the counter.",
+        "task_horizon": 900,
+        "task_id": 6,
+        "task_name": "PickPlaceSinkToCounter",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "counter_1_main_group_1",
+          "location": "left_right",
+          "reference": "sink_main_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_1_main_group_1",
+          "location": "left_right",
+          "reference": "sink_main_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "43d4259f66234559418bc8cd38071e14dbac860c520e8523d753dac162ce7e49",
+        "episode_index": 6,
+        "episode_seed": 270060006,
+        "initial_observation_sha256": "d340942ee8f77e5083bbbdad7e551c2e176c1f8977e3b19d4053d4d3ef8a066d",
+        "initial_state_sha256": "226c8cac777b610c0f14f9721a838e114f0f73c9b0351892a41b6988dcf2054a",
+        "initial_xml_comparison_sha256": "1853d836f82722cb91b3374351d8a57cc3e448c5e0e2604d6e415944f00f1099",
+        "initial_xml_sha256": "db9f3ddaaac0818bd0f6979fd8a4dc67baefe2b8c1c8ef66ced611a0f148a6cc",
+        "paired_catalog_identity_sha256": "d9c2831a71bd3a1d519956d8f123065802483916ec192c9090387b0995982fdb",
+        "task_description": "Pick the pear from the sink and place it on the plate located on the counter.",
+        "task_horizon": 900,
+        "task_id": 6,
+        "task_name": "PickPlaceSinkToCounter",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "fd8102cb5ae4ea6f7eafa398e495817e536f819c06e037d350fd3feba99dfdff",
+        "episode_index": 7,
+        "episode_seed": 270060007,
+        "initial_observation_sha256": "b83f0cba683a3ae038c536f845a94518a96be797deb1ec8e86056a8fc82daaa5",
+        "initial_state_sha256": "4624dc5d2d5488de56b4d90a95ba2cabf4353fd4e43077c2d77f9924424c83fc",
+        "initial_xml_comparison_sha256": "14722735be2c2b4e8d06c14e875410db42a7b9bc1f7e1ef7e93db3f4e392f3a9",
+        "initial_xml_sha256": "a5fdcb631e691699b102ef0635468b8c07bd32c44adaaa5933763048737579f0",
+        "paired_catalog_identity_sha256": "341d54de02c1848ac978431f322e25f818a7d5aebc554dc0b364d66330844165",
+        "task_description": "Pick the squash from the sink and place it on the plate located on the counter.",
+        "task_horizon": 900,
+        "task_id": 6,
+        "task_name": "PickPlaceSinkToCounter",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "counter_1_right_group_1",
+          "location": "left_right",
+          "reference": "sink_right_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_1_right_group_1",
+          "location": "left_right",
+          "reference": "sink_right_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_1_right_group_1",
+          "location": "left_right",
+          "reference": "sink_right_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_1_right_group_1",
+          "location": "left_right",
+          "reference": "sink_right_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "df2895e2f959ea29f69c40efbcdb7605cde3ce77c9be023e8ba44d0bacba330e",
+        "episode_index": 8,
+        "episode_seed": 270060008,
+        "initial_observation_sha256": "897cb80956f994c72f5ac618823a9f304591ad4cb33f21c35d943c441ce1ad0f",
+        "initial_state_sha256": "fbffea323a0470a3d0129c89511ee2b87ca6fa55959b8e45002d93fa38cea32c",
+        "initial_xml_comparison_sha256": "e16d46df42ed44eb4a983d8a3f94308e065d17836ad5659fe99b6f352063ed0b",
+        "initial_xml_sha256": "5d9bd1368e6a1532cd0f29c531349db2f4a4afb812d272317c19faa67ede0bbe",
+        "paired_catalog_identity_sha256": "26b6e93b2f50436e403e90542a20b2925913ee554c36532047f8e95f2226697f",
+        "task_description": "Pick the lemon from the sink and place it on the plate located on the counter.",
+        "task_horizon": 900,
+        "task_id": 6,
+        "task_name": "PickPlaceSinkToCounter",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "c0552d83d0817561de83d2bbd073a91641c4a019ba4ea34e10533f7a5cecb649",
+        "episode_index": 9,
+        "episode_seed": 270060009,
+        "initial_observation_sha256": "bd8b9d32157a8a5685c648e112b63cc1cb73379b4dff878f78874157947d85d8",
+        "initial_state_sha256": "094b7ac40783df08484cbba21553455e73dab52fa2103ae575c3932bafdbbdc3",
+        "initial_xml_comparison_sha256": "e2f26da308075e9cc0edc2bcb616a68bb7e28aaa74d072cd1ba4c0d160031a8a",
+        "initial_xml_sha256": "6f6c4e5615de3c3cd6bfc3344e1e657e5235cca7c8301542c3f3fdd1403f8edd",
+        "paired_catalog_identity_sha256": "4779fc21593e1819ee188007a4a67e73eb9810238749ff6a208182fb40ebf468",
+        "task_description": "Pick the bell pepper from the sink and place it on the plate located on the counter.",
+        "task_horizon": 900,
+        "task_id": 6,
+        "task_name": "PickPlaceSinkToCounter",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "50329bacefd46f3846d1a150773237fd8cf3834b53ff1333391456bcd52642a4",
+        "episode_index": 0,
+        "episode_seed": 270080000,
+        "initial_observation_sha256": "95dde6839e3e897d358689c3f7019058d38151bbbfd1762392a033d05da3e8f7",
+        "initial_state_sha256": "6f1f04a865151de4f3dfbf5c6aa3ac685070b3368586ea71a0b1a32b5ff6dc73",
+        "initial_xml_comparison_sha256": "7659d93dbbfd5891bd1280ed73c42e7e76019c7f5a50ada8516481071398293a",
+        "initial_xml_sha256": "cbc8914c5a2989d78efe54ada87bf41cd37bf350e61ee00a46976ccd4a877775",
+        "paired_catalog_identity_sha256": "da223031c4bb2a1f2ce1d7b997cf2ecb39af94d91eaf85688f3de92b69f7bfba",
+        "task_description": "Press the start button on the microwave.",
+        "task_horizon": 450,
+        "task_id": 8,
+        "task_name": "TurnOnMicrowave",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "a4cec529ccf6d854866920bd5a5ef205748fc84f09353c39a03c2586b8034f6f",
+        "episode_index": 1,
+        "episode_seed": 270080001,
+        "initial_observation_sha256": "2f4e49bdbc0ae806701ccc692a8d15e19ab02bf744f607fe351dff90dcdc53a2",
+        "initial_state_sha256": "3cb84959f111f1bfeb7a0514dcfe1280aaf0c616c19022dd3e2783f3e59df889",
+        "initial_xml_comparison_sha256": "463164ddd4fe905f91760bfb99a778b9cee7ac73085915cb9c96d776a5920b49",
+        "initial_xml_sha256": "5ad3f47013594c1fc7bcc55f36da7dafbe94b911c4ed24325aeea7d998964e4e",
+        "paired_catalog_identity_sha256": "836ccc807d1610209153f887d64c4bfba4a72e46377eaad3a9b239208dd68567",
+        "task_description": "Press the start button on the microwave.",
+        "task_horizon": 450,
+        "task_id": 8,
+        "task_name": "TurnOnMicrowave",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "35cc63421025d6e4f4ca488b88b82ffb4756f93a3e80fe89fdb106fe5b553e00",
+        "episode_index": 2,
+        "episode_seed": 270080002,
+        "initial_observation_sha256": "e5ea734ac279c4961fe9e391031db82be66a0b6e7c1fdeaf2facc26d13681e82",
+        "initial_state_sha256": "1b98e87384a9d5f09751b809b3ceb0fb946b6dbb62de279a02fe046f21fed6f8",
+        "initial_xml_comparison_sha256": "7b497c1357b1851eaf5a603402a4928042221f6af99aef42a7161c3932641880",
+        "initial_xml_sha256": "84e48334afda6900da2f97b51b7ca04ff4b64d6bf938812b2c34752d34399668",
+        "paired_catalog_identity_sha256": "ff47afd55184d3b64c45f8117a16c8c0ef66e50a61d3e8ec1567d0611b53482e",
+        "task_description": "Press the start button on the microwave.",
+        "task_horizon": 450,
+        "task_id": 8,
+        "task_name": "TurnOnMicrowave",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "4edb551e3b2c67ec50e7e60cad7a58fbe0f99151b56bf24e48415640fcefeb96",
+        "episode_index": 3,
+        "episode_seed": 270080003,
+        "initial_observation_sha256": "9a7c9c8c62a15332a99b371e5c3ff3ba6762a854c4970705568be13c646ba461",
+        "initial_state_sha256": "d888f64fc43df077392c2ae2bbf49b2753d6a5643aa0e4ff33fbae1411441f22",
+        "initial_xml_comparison_sha256": "32d022848e3a6374b818ea92b8a66968e56c86f71aca388b398632a449dc5d74",
+        "initial_xml_sha256": "3d98d2b2ddabf98931444251dec08cba6eeeb36659f0ae4376ec3db1b210815e",
+        "paired_catalog_identity_sha256": "ca31d311126662772a1e142dd5c1f410e15187ac7a4d2d1ef593b4dea777182e",
+        "task_description": "Press the start button on the microwave.",
+        "task_horizon": 450,
+        "task_id": 8,
+        "task_name": "TurnOnMicrowave",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "a37a3eb5407bf2bc6903909280b9c94e20045030f082a1b1fdbdac577dffda32",
+        "episode_index": 4,
+        "episode_seed": 270080004,
+        "initial_observation_sha256": "3a717827a7ef058acb64ee43048032f1e59b65963e9089318e135f9e8a02dcdc",
+        "initial_state_sha256": "7e2b2e10c2ee11fd1d6c08859fc3560ae8d98fc0b74b44d4fa0cdbbf956f6f23",
+        "initial_xml_comparison_sha256": "560ac27531c17f3b971c7a9b89e4325b9bac5db1528086f0a418553d0e78d8b9",
+        "initial_xml_sha256": "b291b5281412c40f6ca3581158b3a226028703865c80fde620fddbefd216c6bd",
+        "paired_catalog_identity_sha256": "89448e8219f3980295dfc914e2bf7c5c2089bb3c0429afde2bc92a2869bed58d",
+        "task_description": "Press the start button on the microwave.",
+        "task_horizon": 450,
+        "task_id": 8,
+        "task_name": "TurnOnMicrowave",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "baf4d31efce12ed5d2a94512092cf6923dc2ad0a2503dbd2fab47026b3c82c8f",
+        "episode_index": 5,
+        "episode_seed": 270080005,
+        "initial_observation_sha256": "ad2605bda014241b11c1310b2f1f92b87970ab53abd49d4b3fb6889545d34cc2",
+        "initial_state_sha256": "629238f5f0d4fa3aed8349b8a318079cd97a7ac7838755f2130a9a09b5b6ad59",
+        "initial_xml_comparison_sha256": "be440db9f821ed1c664854e85535a9912f38dab34be75eaa4a2cb94458673421",
+        "initial_xml_sha256": "d5cac61c261ebfb7c4a68b445e95066cd02967e8b1da0cdb09ad9d7b1d9ebdd4",
+        "paired_catalog_identity_sha256": "2d3e539b2faab9864eada99dc7fb05376afb8dd09e1c88d64580d45a5b71cb2e",
+        "task_description": "Press the start button on the microwave.",
+        "task_horizon": 450,
+        "task_id": 8,
+        "task_name": "TurnOnMicrowave",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "5a96fe8405e7a0f9e65575a59ab05757f46f78bfd70de2a309684c2c41ca547f",
+        "episode_index": 6,
+        "episode_seed": 270080006,
+        "initial_observation_sha256": "555e384f32395f1e858a13f5dbe3a3f91669ac46f9fe61d9107c272ecd9c7abf",
+        "initial_state_sha256": "4c92ce039da0f316301dc6bc1e591cdeb71a181635c8b13974894f896aeee54e",
+        "initial_xml_comparison_sha256": "12b3862702f24bc5836214930ee0a196ce2fb0e34ddbf2d48b87f4cfaac77735",
+        "initial_xml_sha256": "e0adfe359a33a41de68447572f618eab867c5bf7b5dc422b0be0f809d80dea72",
+        "paired_catalog_identity_sha256": "831759c5b43e7d05fb0efd1dcf9431456d0ea915d94111f084c8f0d57d96e018",
+        "task_description": "Press the start button on the microwave.",
+        "task_horizon": 450,
+        "task_id": 8,
+        "task_name": "TurnOnMicrowave",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "29f4f0c5411bbd4145fd0a13d4c5e504f04ab3229cc6a50db75d749b41edae8a",
+        "episode_index": 7,
+        "episode_seed": 270080007,
+        "initial_observation_sha256": "47a00282c579fdc1e07787d945b0da43798cd2ed5c42097b1e605fceb0394c38",
+        "initial_state_sha256": "16f3638fd38c3e20dd5843169b312d177d5e5fb79a3a568f28b3eece5061a917",
+        "initial_xml_comparison_sha256": "209b1cd7ac7196d2f21abb40c5c10e195acf57586208254dd408867ecd69c03c",
+        "initial_xml_sha256": "ff1ce3851fb7bca6e9a9ff37820478fe2bc74354f803b8f99fbf6abd6365c34f",
+        "paired_catalog_identity_sha256": "f5b66645d662c313c2b86a16d6b3a2eb8d5094bbfb99dbe2d13552044117e689",
+        "task_description": "Press the start button on the microwave.",
+        "task_horizon": 450,
+        "task_id": 8,
+        "task_name": "TurnOnMicrowave",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "34caefc04e1536146a3d48d6b344942c3878d7a1704cb78b8560a9a652d1bf81",
+        "episode_index": 8,
+        "episode_seed": 270080008,
+        "initial_observation_sha256": "e9b879f575155f074216e7858205238706ad214502baec4d42bba90890aec3e0",
+        "initial_state_sha256": "35d1df3b2927da1c480a42edbf3c7ededc5d3c12f2ec3a715bcc80f6ea7a5035",
+        "initial_xml_comparison_sha256": "e873aaf44378d3e9f79c06edeb718d3b56a48e39c87085d433910437de5da978",
+        "initial_xml_sha256": "4df56d2c9f2918853451102ca91ccfb64e70b9c58fe3af64f89e35dc01ac901a",
+        "paired_catalog_identity_sha256": "aa6bc3b83b2023a0f3cb90bde4033d7338e950b069d172afdfb234408b2a6664",
+        "task_description": "Press the start button on the microwave.",
+        "task_horizon": 450,
+        "task_id": 8,
+        "task_name": "TurnOnMicrowave",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "490ddd745cc8206febf7d99ef833ccdbcdd513e1e3752118e4b85fea0aee40d9",
+        "episode_index": 9,
+        "episode_seed": 270080009,
+        "initial_observation_sha256": "8117f8ad28de9e7cf2a9e767e22e75a14431949d6a501ad841c5f7b290183390",
+        "initial_state_sha256": "712b0a5257d89e62534eecb3a5545ffcc08cda6df97eed1238d7d7736ce8b167",
+        "initial_xml_comparison_sha256": "83f4e276c8212615efd044874bc9736e79b1a0b641888e4311b144cdf154ea79",
+        "initial_xml_sha256": "2895aaf902afa405193237bd9c7d33e5d7061f65ca33343e74859c02933c7bc2",
+        "paired_catalog_identity_sha256": "48f392acf11a285a3a63332deadd4283c894088c481a93ca495a39042c0a925b",
+        "task_description": "Press the start button on the microwave.",
+        "task_horizon": 450,
+        "task_id": 8,
+        "task_name": "TurnOnMicrowave",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "f953feb9e24a5aaa7bc87efc4519796709c79614c7e0b34761f45c5fbae4b425",
+        "episode_index": 0,
+        "episode_seed": 270090000,
+        "initial_observation_sha256": "8967528ad2fb161f96e379a5c22382323b11413af833a7cb925e7b244fff8509",
+        "initial_state_sha256": "f15e870870709bc8b3d5d74f3e9460da2460695a6fd6545189cf252115099f28",
+        "initial_xml_comparison_sha256": "ffb5cb17d2b4fd10a0651ddc71c6f8262322681786c57dc6c0e5e869a2afb930",
+        "initial_xml_sha256": "de8e1c4fbe5db86a23b6626a1f0e767bbcb8c220f4bca01a8380c20f31bc5bd1",
+        "paired_catalog_identity_sha256": "904aa7c44762a1a3472b2c7e63b1f9f454dcf2af957fc7d7ff12bd0233543765",
+        "task_description": "Turn on the sink faucet.",
+        "task_horizon": 600,
+        "task_id": 9,
+        "task_name": "TurnOnSinkFaucet",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "counter_1_main_group_1",
+          "location": "left_right",
+          "reference": "sink_main_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_1_main_group_1",
+          "location": "left_right",
+          "reference": "sink_main_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_1_main_group_1",
+          "location": "left_right",
+          "reference": "sink_main_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "67d3a2df4e70afd929d5f9924f1805533d90376672edfc971632d25936b82220",
+        "episode_index": 1,
+        "episode_seed": 270090001,
+        "initial_observation_sha256": "bd0009a09b05923bc26f13d10f44b7d43db588b428d69de90a79f9c86e131007",
+        "initial_state_sha256": "52613d09198969553cf6c0e32d7fb4e7301529bf1c778580eae7b0fbce82b553",
+        "initial_xml_comparison_sha256": "c2fdfd2897f9be8fc6a38957f58a402e825e7e154573f996a42d78d0075f6f49",
+        "initial_xml_sha256": "c2b5a7471ca5c90f9b165a04a69a045786a79d91060a909841781a5ef8bc6e75",
+        "paired_catalog_identity_sha256": "7f75fc0f44ec731d625c00b14b28d213baa970daea4f32a29976db0bcb01a56b",
+        "task_description": "Turn on the sink faucet.",
+        "task_horizon": 600,
+        "task_id": 9,
+        "task_name": "TurnOnSinkFaucet",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "counter_1_main_group_1",
+          "location": "left_right",
+          "reference": "sink_main_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_1_main_group_1",
+          "location": "left_right",
+          "reference": "sink_main_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_1_main_group_1",
+          "location": "left_right",
+          "reference": "sink_main_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "b71469b5914d0b6e253a303e2a56f176dc600d9ea58220a01982c15c7b2fa98a",
+        "episode_index": 2,
+        "episode_seed": 270090002,
+        "initial_observation_sha256": "928f1db1a1f6ccf42be9665bf17a07d48509c060aded6d33c2dd396f09f1eb42",
+        "initial_state_sha256": "0177909f0a5bf66954ffc5e93dfc0ef083d63c32a0d6043c82c2e76652dbd624",
+        "initial_xml_comparison_sha256": "c95c3474a691a90872d18da82168701c10012438c05f40e1d85c0f42091c8d36",
+        "initial_xml_sha256": "f71aebc7e232b1a48c170ed9fee4b20f062561afaf182189ee3c93aee1f77915",
+        "paired_catalog_identity_sha256": "cf9987d53c938c97c53ba64ae0104eacd4cb27a3d8b90a07e05d06d203c66491",
+        "task_description": "Turn on the sink faucet.",
+        "task_horizon": 600,
+        "task_id": 9,
+        "task_name": "TurnOnSinkFaucet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "b297130c09b61a15f1aa6661f87cd48971b68ab9016a23e09cbf754ec26fd049",
+        "episode_index": 3,
+        "episode_seed": 270090003,
+        "initial_observation_sha256": "541633f1207c52b8a367d3ac0e89fa9f0716b9d74e350e2dc2aa1d1b78f9d66b",
+        "initial_state_sha256": "3e2a887779715216c96e445783f7f4fed6dab44915ae2f508e3c733adb099069",
+        "initial_xml_comparison_sha256": "84cf520cdb85909cf2780955024391525b978f042ce6d336fd4dbd264d14f675",
+        "initial_xml_sha256": "12311bda10753b88fb7478e4077b1a67999fe0e7790df7d6018e0373a081586a",
+        "paired_catalog_identity_sha256": "f233dedcdebeafeedcd15e09e1564663ee1f6d58cbeb5f6ca729fd19a61f42d2",
+        "task_description": "Turn on the sink faucet.",
+        "task_horizon": 600,
+        "task_id": 9,
+        "task_name": "TurnOnSinkFaucet",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "counter_2_main_group",
+          "location": "left_right",
+          "reference": "sink_main_group",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "ccdc93cb5ea7db3493ed3b1a3cc5728efa9d2866027377ef060fa5686fa74b45",
+        "episode_index": 4,
+        "episode_seed": 270090004,
+        "initial_observation_sha256": "1d5e1d290e71446a35fc1e7c65307e4ff054ccbef9ac9bbc0dcd7f29faf0ac46",
+        "initial_state_sha256": "fa16a3918b31d7db8df45e8b7f43def53f60349f02e986855c2a649aa62cc17d",
+        "initial_xml_comparison_sha256": "b9234723fb6e599442b77e94d95d07cf3f85d683ad7c38fa3e554387df99c8a3",
+        "initial_xml_sha256": "74363fe56833b41a8c98737f75b71148b7a9e69ae219a80fbeef60c669086c2e",
+        "paired_catalog_identity_sha256": "85f2068e5d2ffc118ccd016f16dadae8660563d43115e97fb8bc4999554dc968",
+        "task_description": "Turn on the sink faucet.",
+        "task_horizon": 600,
+        "task_id": 9,
+        "task_name": "TurnOnSinkFaucet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "4e7db0a8cd7dcce57659662b8b2911d4f3e416220fd234f7c67bbbec60480c5b",
+        "episode_index": 5,
+        "episode_seed": 270090005,
+        "initial_observation_sha256": "d166d0cb41dd95da173ac48e781e711298f4aead50b4c90c3f35ca0fd5ea79ba",
+        "initial_state_sha256": "420eec510a62963b905e13aca5d293c3a63e48ac9697a5e3624de20dfee1fe87",
+        "initial_xml_comparison_sha256": "05152f9ef6b7e8a202fb444e754f249cee2b6896446dfbfc019c1ea29c7b2fda",
+        "initial_xml_sha256": "5de38fbf6ddbbb6116fb8e7189679e30fc4ecb5d9234e6ea44be139f0cee848d",
+        "paired_catalog_identity_sha256": "66393a88d0f761f4e8b05dad7881ca4e0b3d5b18eb7b33ad5c73005ba8b7ac70",
+        "task_description": "Turn on the sink faucet.",
+        "task_horizon": 600,
+        "task_id": 9,
+        "task_name": "TurnOnSinkFaucet",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "counter_2_main_group",
+          "location": "left_right",
+          "reference": "sink_main_group",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        },
+        {
+          "fixture": "counter_2_main_group",
+          "location": "left_right",
+          "reference": "sink_main_group",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "2341b99b94864d823ee0c1edea81a123d200a8726579d38e3d2d22e0477fdd55",
+        "episode_index": 6,
+        "episode_seed": 270090006,
+        "initial_observation_sha256": "4530a48bcd8ae67b8054ee4f224047df54e96aa021f178677ee1649c00af8f85",
+        "initial_state_sha256": "82da298127bd365013aba6ee70fd805a64718b7b65cf6bee7640f63e43e3e4d8",
+        "initial_xml_comparison_sha256": "1f2fe16f9890a97444e5aae3e328563aa23074bd811b04572f076b20daf7feaf",
+        "initial_xml_sha256": "b026608423db47636a433ddd5c6a1cfe10881ac00f29e26a153d19b05aa046d4",
+        "paired_catalog_identity_sha256": "235279215a16940087de8fdc83d088ca9d131e7cbb8ebcd713e9730d3d4736e1",
+        "task_description": "Turn on the sink faucet.",
+        "task_horizon": 600,
+        "task_id": 9,
+        "task_name": "TurnOnSinkFaucet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "7668a0221eeed2e986969d268242b3ac9cad78e4f344eea427c7395b8357fe0b",
+        "episode_index": 7,
+        "episode_seed": 270090007,
+        "initial_observation_sha256": "2429e8d6b1f55ee6d13e2cba9c4edced1e1446ffa5be9a170230ef78525bbf57",
+        "initial_state_sha256": "25a8761ef29735fcd3020187ecf843679189444e6436ae4722fb96e848cbfb7a",
+        "initial_xml_comparison_sha256": "0bd3fae901babc79ce5925a1e222ecc151084c16eae38153860302488d33ba86",
+        "initial_xml_sha256": "d7c4208eea1e31f16c45249ba4721dc114e6cb07e61e61a5b2502345badd0fe3",
+        "paired_catalog_identity_sha256": "ed969e8f52545fc9c751137d5d095448f445ac363a85a24753a1af35f23aa4b2",
+        "task_description": "Turn on the sink faucet.",
+        "task_horizon": 600,
+        "task_id": 9,
+        "task_name": "TurnOnSinkFaucet",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "counter_1_right_group",
+          "location": "left_right",
+          "reference": "sink_1_right_group",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "e8e53397d8e382c8ebdba9963cb084df1bc3ec3a4a7e16ad058d73a5506cfac0",
+        "episode_index": 8,
+        "episode_seed": 270090008,
+        "initial_observation_sha256": "0c8d2f30a54eaa56b1947632c358cd6a0dabe037c621a4257506d2782060ecb9",
+        "initial_state_sha256": "ac6a81a2320e0b4fb61e9fd0eec8f5e66993b4b36c3bde6b67b0cccd593d9aba",
+        "initial_xml_comparison_sha256": "9938aa81a59796cab8b15a7182c1d3385d9e03d0feff5de4cd75fd677a4aabeb",
+        "initial_xml_sha256": "d4d8ab259b7aa55b0014c728d7cc6564a506fcd24c8cda0cf7d81b16eedf24e7",
+        "paired_catalog_identity_sha256": "da664372af5279f09015ef8b6973f1a722b14cad640ff2fa257ef762b55750e6",
+        "task_description": "Turn on the sink faucet.",
+        "task_horizon": 600,
+        "task_id": 9,
+        "task_name": "TurnOnSinkFaucet",
+        "training": false
+      },
+      "region_relabels": []
+    },
+    {
+      "identity": {
+        "environment_metadata_sha256": "ff9a0b2c0529d2aa9cbca6cb7cd844f48c17e0948c47a33401242cc14db92f1a",
+        "episode_index": 9,
+        "episode_seed": 270090009,
+        "initial_observation_sha256": "04a2603f0d8a7ee9ff0aed4b14d878cbdd6a4671282f40cb6fddd8341253b24c",
+        "initial_state_sha256": "b67d9d79d57d98268f711abbb5e9cc81ee5c50ac71e92da0c51e36c86d22554f",
+        "initial_xml_comparison_sha256": "4795b6af44705a093c440da51d31b6a3c1f82252598fb68cd292df7896008b93",
+        "initial_xml_sha256": "58bc597b242840fe35e7cf2a414985795486e811cd4d84119fdbe707d17bfc08",
+        "paired_catalog_identity_sha256": "6d8cc9723e33dac4d7b6649f5027ece72b32d799630b89f84ce0a7c0e3295e82",
+        "task_description": "Turn on the sink faucet.",
+        "task_horizon": 600,
+        "task_id": 9,
+        "task_name": "TurnOnSinkFaucet",
+        "training": false
+      },
+      "region_relabels": [
+        {
+          "fixture": "counter_1_right_group_1",
+          "location": "left_right",
+          "reference": "sink_right_group_1",
+          "restored_labels": [
+            "geom_0",
+            "geom_1"
+          ]
+        }
+      ]
+    }
+  ],
+  "xml_replay_used": false
+}

@@ -1,0 +1,26 @@
+{
+  "metadata_sha256": "80aeb1f6f8f62cde7c0069e6fcb0d1bdba12876b5527561d6bdcb2fae57f1dec",
+  "model_sha256": "ae0b7fc1c44813d6bb9be76b5ff125ff2b8c94472d1e0977fd903cc34e7fb424",
+  "note": "Third-party Bridge-adapted pi0.5. The HF model card calls it RL, whereas ProphRL's release README calls it SFT. Training stage is unresolved. Released metadata records P=5 and global_step=200000. Current ProphRL config says P=6; this experiment preserves the saved checkpoint P=5. Published ProphRL scores are not reproduction targets for this artifact.",
+  "prophrl_commit": "6deaf18631fc5db2d4029acec8837d502f343e4a",
+  "repo": "Fleurrr/OpenPI05-Bridge-RL",
+  "revision": "241ab13fe84ae2d547b64076ad6e172e2a963691",
+  "saved_global_step": 200000,
+  "saved_model_config": {
+    "action_dim": 32,
+    "action_expert_variant": "gemma_300m",
+    "action_horizon": 5,
+    "discrete_state_input": false,
+    "dtype": "bfloat16",
+    "max_token_len": 200,
+    "paligemma_variant": "gemma_2b",
+    "pi05": true
+  },
+  "supporting_source_sha256": {
+    "ProphRL_README.md": "e653bfec8559bb812ee2c3bf78f79b55b644632b241d0e13ada15225fc94e05a",
+    "ProphRL_bridge_policy.py": "93dba5957db2643db5c4015f3131883729dc0ff98da4d28995d5ef840b7844a1",
+    "ProphRL_config.py": "a2eab0751ec39884f2f41b795e3231a126c643d17fb87471cfdf69f14855d2c4",
+    "norm_stats.json": "58fbebd8b563d0a7490f03184363369125df5e4c82c26f8b8c594ac680933cac"
+  },
+  "training_stage": "unresolved_SFT_vs_RL"
+}

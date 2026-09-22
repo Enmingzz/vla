@@ -1,0 +1,30 @@
+# Evaluation only. P is read from the released checkpoint, not enlarged for H.
+benchmark: simpler_widowx
+checkpoint_repo: Fleurrr/OpenPI05-Bridge-RL
+checkpoint_revision: 241ab13fe84ae2d547b64076ad6e172e2a963691
+checkpoint_sha256: ae0b7fc1c44813d6bb9be76b5ff125ff2b8c94472d1e0977fd903cc34e7fb424
+native_prediction_horizon: 5
+prediction_horizon: 5
+horizons: [1, 2, 5]
+teacher_horizon: 1
+flow_steps: 10
+normalization: quantiles
+seed: 7
+control_frequency_hz: 5
+tasks:
+  - widowx_spoon_on_towel
+  - widowx_carrot_on_plate
+  - widowx_stack_cube
+  - widowx_put_eggplant_in_basket
+episodes_per_task:
+  probe: 1
+  smoke: 2
+  main: 24
+bootstrap_replicates: 10000
+analysis_seed: 20260921
+provenance_note: >-
+  Third-party Bridge-adapted pi0.5. The HF model card calls it RL, whereas
+  ProphRL's release README calls it SFT. Training stage is unresolved.
+  Released metadata records P=5 and global_step=200000. Current ProphRL
+  config says P=6; this experiment preserves the saved checkpoint P=5.
+  Published ProphRL scores are not reproduction targets for this artifact.

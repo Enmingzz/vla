@@ -223,12 +223,13 @@ def plots(summaries, gaps, output, suite, mode, native_p, config):
         gx = [g["student_H"] for g in gaps]
         gy = [100 * g["replanning_gap"] for g in gaps]
         # Percentile intervals can exclude a discrete point estimate; render bounds directly.
-        ax.plot([5] + gx, [0] + gy, "o-", label="Paired gap; 95% bootstrap CI")
+        ax.plot([config["teacher_horizon"]] + gx, [0] + gy, "o-", label="Paired gap; 95% bootstrap CI")
         ax.vlines(gx, [100 * g["gap_ci95_low"] for g in gaps], [100 * g["gap_ci95_high"] for g in gaps])
         ax.legend(fontsize=8, loc="upper right")
     else:
         ax.text(0.5, 0.5, "No paired comparison measured yet", ha="center", transform=ax.transAxes)
-    ax.set(xlabel="Replanning horizon H (actions)", ylabel="Success(5) − Success(H) (percentage points)", title=title)
+    ax.set(xlabel="Replanning horizon H (actions)",
+           ylabel="Success({}) − Success(H) (percentage points)".format(config["teacher_horizon"]), title=title)
     ax.set_xticks(config["horizons"])
     ax.set_xlim(min(config["horizons"]) - 2, max(config["horizons"]) + 2)
     ax.grid(alpha=0.25)

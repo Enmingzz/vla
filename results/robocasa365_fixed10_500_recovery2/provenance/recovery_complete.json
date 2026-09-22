@@ -1,0 +1,25 @@
+{
+  "diagnostic_complete": false,
+  "gpu_memory": {
+    "bytes_in_use": 13588444416,
+    "bytes_limit": 68013995816,
+    "bytes_reserved": 0,
+    "largest_alloc_size": 2415919104,
+    "largest_free_block_bytes": 0,
+    "num_allocs": 323661,
+    "peak_bytes_in_use": 20643149056,
+    "peak_bytes_reserved": 0,
+    "peak_pool_bytes": 68013995776,
+    "pool_bytes": 68013995776
+  },
+  "phase": "step_500",
+  "saved_snapshots": [
+    0,
+    500
+  ],
+  "server_timing": {
+    "infer_ms": 0.30118699942249805,
+    "prev_total_ms": 1552.3373859996354
+  },
+  "step": 0
+}

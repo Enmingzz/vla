@@ -1,0 +1,4 @@
+JobID|State|Elapsed|AllocTRES|ExitCode
+60920522|COMPLETED|00:02:46|billing=4000,cpu=4,mem=12G,node=1|0:0
+60920522.batch|COMPLETED|00:02:46|cpu=4,mem=12G,node=1|0:0
+60920522.extern|COMPLETED|00:02:46|billing=4000,cpu=4,mem=12G,node=1|0:0

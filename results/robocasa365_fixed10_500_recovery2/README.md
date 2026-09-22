@@ -1,4 +1,23 @@
-# Finish the remaining 57 trained H=5 episodes
+# Completed RoboCasa recovery: all 400 evaluation episodes
+
+Job `60918340` completed successfully in **23m27s**. All 57 outstanding native
+reset preflight checks passed. The existing 343 measured outcomes were reused
+without alteration, and the remaining 57 trained-H5 episodes completed with
+15 additional successes: **step-500 H5 = 17/100**. No optimizer updates ran.
+
+| Condition | Success | Mean calls | Mean actions | Rollout seconds |
+|---|---:|---:|---:|---:|
+| Original H5 | 54/100 | 111.29 | 555.48 | 31.52 |
+| Original H20 | 58/100 | 25.42 | 501.04 | 20.13 |
+| Step-500 H20 | 35/100 | 32.02 | 633.53 | 25.49 |
+| Step-500 H5 | 17/100 | 137.96 | 689.48 | 38.97 |
+
+The paired H5 retention change is **−37 percentage points**, 95% bootstrap CI
+[−47, −27], McNemar p=1.455e-10. The frequency premise was not established on
+these ten tasks and the 500-step OPSD run degraded both H settings. These
+negative results are retained when moving to SimplerEnv. See [FINDINGS.md](FINDINGS.md).
+
+## Submission record
 
 Slurm job **60918340**, `rc365_finish_eval`: one H100, eight CPUs, 64 GiB memory,
 `def-btaati`, 45-minute scheduler cap. Submitted after 15 CPU tests passed and

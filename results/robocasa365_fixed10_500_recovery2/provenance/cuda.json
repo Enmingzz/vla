@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "hostname": "fc10512",
+  "environment": {
+    "SLURM_JOB_ID": "60918340",
+    "SLURM_JOB_GPUS": "2",
+    "SLURM_STEP_GPUS": null,
+    "SLURM_GPUS_ON_NODE": "1",
+    "CUDA_VISIBLE_DEVICES": "0",
+    "NVIDIA_VISIBLE_DEVICES": null
+  },
+  "name": "NVIDIA H100 80GB HBM3",
+  "total_memory_bytes": 85017493504,
+  "visible_device_count": 1
+}

@@ -1,0 +1,35 @@
+{
+  "h5_retention": {
+    "difference_b_minus_a": -0.37,
+    "episodes": 100,
+    "mcnemar_exact_p_unadjusted": 1.4551915228366852e-10,
+    "paired_bootstrap_ci95": [
+      -0.47,
+      -0.27
+    ],
+    "recoveries": 1,
+    "regressions": 38
+  },
+  "opsd_recovery": {
+    "difference_b_minus_a": -0.23,
+    "episodes": 100,
+    "mcnemar_exact_p_unadjusted": 0.0002940768754342571,
+    "paired_bootstrap_ci95": [
+      -0.34,
+      -0.12
+    ],
+    "recoveries": 8,
+    "regressions": 31
+  },
+  "replanning": {
+    "difference_b_minus_a": 0.04,
+    "episodes": 100,
+    "mcnemar_exact_p_unadjusted": 0.5966148958541453,
+    "paired_bootstrap_ci95": [
+      -0.07,
+      0.15
+    ],
+    "recoveries": 18,
+    "regressions": 14
+  }
+}

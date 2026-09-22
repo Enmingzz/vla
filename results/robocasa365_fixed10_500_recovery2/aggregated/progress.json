@@ -1,0 +1,25 @@
+{
+  "conditions": {
+    "original_h20": {
+      "complete": true,
+      "completed_episodes": 100,
+      "successes": 58
+    },
+    "original_h5": {
+      "complete": true,
+      "completed_episodes": 100,
+      "successes": 54
+    },
+    "step500_h20": {
+      "complete": true,
+      "completed_episodes": 100,
+      "successes": 35
+    },
+    "step500_h5": {
+      "complete": true,
+      "completed_episodes": 100,
+      "successes": 17
+    }
+  },
+  "partial_comparisons": {}
+}

@@ -1,0 +1,4 @@
+JobID|State|Elapsed|AllocTRES|ExitCode
+60918340|COMPLETED|00:23:27|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0
+60918340.batch|COMPLETED|00:23:27|cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0
+60918340.extern|COMPLETED|00:23:27|billing=12200,cpu=8,gres/gpu:h100=1,gres/gpu=1,mem=64G,node=1|0:0

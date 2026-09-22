@@ -1,0 +1,9 @@
+{
+  "model_tensors": 813,
+  "checkpoint_tensors": 812,
+  "missing": [
+    "paligemma_with_expert.paligemma.model.language_model.embed_tokens.weight"
+  ],
+  "unexpected": [],
+  "shape_mismatches": {}
+}
