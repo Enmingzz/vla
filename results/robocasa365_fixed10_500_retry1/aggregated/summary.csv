@@ -1,0 +1,1 @@
+condition,H,episodes,successes,success_rate,ci95_low,ci95_high,mean_policy_calls,mean_actions,mean_seconds,successful_mean_actions,successful_mean_seconds

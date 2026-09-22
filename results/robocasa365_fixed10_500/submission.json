@@ -1,0 +1,30 @@
+{
+  "baseline_episodes_per_condition": 100,
+  "cpu_setup_job": "60905099",
+  "cpu_tests": "10 passed; tests/test_robocasa_protocol.py",
+  "cpus_per_job": 8,
+  "gpu_account": "def-btaati_gpu",
+  "gpu_type": "H100",
+  "gpus_per_job": 1,
+  "jobs": {
+    "h20": "60905772",
+    "h5": "60905771",
+    "train500": "60905773"
+  },
+  "memory_gib": 64,
+  "model": "RoboCasa pi0.5; pi05_pretrain_human300",
+  "post_training_eval_episodes_per_condition": 100,
+  "reason": "CPU check assumed unpadded statistics; official stats are 32-dimensional with neutral padding. Corrected without changing checkpoint or transforms.",
+  "renderer": "egl",
+  "setup_first_attempt_failure": "Slurm spool-relative path; fixed before successful dependency submission; no GPU used",
+  "source_commit": "39051b13106a766f38c8ba4abc730374b98d5a33",
+  "status": "cancelled_before_gpu_allocation",
+  "submitted_utc": "2026-09-22T03:36:23.896641+00:00",
+  "superseded_cpu_setup_job": "60905025",
+  "training_optimizer_updates": 500,
+  "walltime_caps": {
+    "h20": "01:00:00",
+    "h5": "01:00:00",
+    "train500": "02:00:00"
+  }
+}

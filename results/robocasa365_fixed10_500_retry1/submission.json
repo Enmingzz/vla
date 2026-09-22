@@ -1,0 +1,29 @@
+{
+  "baseline_episodes_per_condition": 100,
+  "cpu_preflight_job": "60905859",
+  "cpu_preflight_status": "COMPLETED",
+  "cpu_tests": "10 passed; tests/test_robocasa_protocol.py",
+  "cpus_per_job": 8,
+  "download_install_job": "60905099",
+  "gpu_account": "def-btaati_gpu",
+  "gpu_type": "H100",
+  "gpus_per_job": 1,
+  "jobs": {
+    "h20": "60905913",
+    "h5": "60905909",
+    "train500": "60905918"
+  },
+  "memory_gib": 64,
+  "model": "RoboCasa pi0.5; pi05_pretrain_human300",
+  "post_training_eval_episodes_per_condition": 100,
+  "renderer": "egl",
+  "source_commit": "28cd704eae021b82c2b9327da91f8eff6393e1d0",
+  "submitted_utc": "2026-09-22T03:39:02.691630+00:00",
+  "superseded_archive": "results/robocasa365_fixed10_500",
+  "training_optimizer_updates": 500,
+  "walltime_caps": {
+    "h20": "01:00:00",
+    "h5": "01:00:00",
+    "train500": "02:00:00"
+  }
+}

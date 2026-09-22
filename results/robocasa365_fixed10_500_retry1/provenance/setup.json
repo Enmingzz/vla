@@ -1,0 +1,35 @@
+{
+  "GPU_checks_pending": true,
+  "config_sha256": "cf1e315128c91094b25706f0ee7f2aea696e29b6c609af861429819abed5f6a3",
+  "model_config": {
+    "action_dim": 32,
+    "action_expert_variant": "gemma_300m",
+    "action_horizon": 50,
+    "discrete_state_input": true,
+    "dtype": "bfloat16",
+    "max_token_len": 200,
+    "paligemma_variant": "gemma_2b",
+    "pi05": true
+  },
+  "native_task_horizons": {
+    "CloseFridge": 900,
+    "CoffeeSetupMug": 600,
+    "OpenCabinet": 1050,
+    "OpenDrawer": 750,
+    "PickPlaceCounterToCabinet": 750,
+    "PickPlaceCounterToStove": 600,
+    "PickPlaceSinkToCounter": 900,
+    "TurnOffStove": 750,
+    "TurnOnMicrowave": 450,
+    "TurnOnSinkFaucet": 600
+  },
+  "normalization_dimensions": 32,
+  "passed": true,
+  "physical_action_dimensions": 12,
+  "quantile_normalization": false,
+  "revisions": {
+    "openpi": "5a6beda9ff99da30b4e1b59320f6a32971d7c397",
+    "robocasa": "4f8a2980def75a55dff96b990745b83540425f09",
+    "robosuite": "5ce6643f3092639d08f7b0f90ed1c6a84f50552c"
+  }
+}
