@@ -7,6 +7,14 @@ RoboCasa `pi05_pretrain_human300` checkpoint, native P=50 and EGL throughout.
 Each evaluation contains 100 episodes. Its installation, checkpoints and results
 are separate from the completed LIBERO experiments below.
 
+The [RoboCasa pilot results](results/robocasa365_fixed10_500_recovery1/FINDINGS.md)
+are negative: on the same 100 episodes, original H=5/H=20 scored **54% / 58%**,
+and step-500 H=20 scored **35%**. The H=20 training change is **−23 pp** (paired
+95% CI **[−34, −12] pp**, exploratory exact p=0.000294). These ten tasks do not
+establish an H5 advantage. The trained H5 retention check is incomplete at 2/43;
+its remaining 57 episodes are being recovered from a saved-state pairing issue.
+The first three conditions are complete and are preserved regardless of outcome.
+
 The [EGL pipeline](EGL_PIPELINE.md) is complete: a fresh official checkpoint,
 1500 updates, and all five evaluations used EGL on one H100/server with four
 simulator workers. On the same 100 LIBERO-10 episodes per condition, original
